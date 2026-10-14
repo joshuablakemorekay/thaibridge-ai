@@ -292,7 +292,10 @@
 {% endblock %}
 
 {% block content %}
+{% from "_page_banner.html" import page_banner %}
 <h1>📿 Digital Chanting Book <span class="thai">บทสวดมนต์</span></h1>
+
+{{ page_banner('img/banners/chanting.webp', 'A golden Buddha image in the painted ordination hall of Wat Arun', 'Ordination hall of Wat Arun', 'Christophe95', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Interior_of_the_ordination_hall_of_Wat_Arun.jpg') }}
 
 <!-- Front matter. Doubles as the layer control — see the CSS note above. -->
 <div class="layer-panel">

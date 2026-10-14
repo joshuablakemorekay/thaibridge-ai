@@ -148,10 +148,13 @@
 {% endblock %}
 
 {% block content %}
+{% from "_page_banner.html" import page_banner %}
 <h1>
     🎭 Thai Culture & Etiquette
     <span class="thai">วัฒนธรรมและมารยาทไทย</span>
 </h1>
+
+{{ page_banner('img/banners/culture.webp', 'The three chedis of Wat Phra Si Sanphet in Ayutthaya under a blue sky', 'Three chedis of Wat Phra Si Sanphet', 'Supanut Arunoprayote', 'CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0', 'https://commons.wikimedia.org/wiki/File:Three_Chedi(s)_of_Wat_Phra_Si_Sanphet.jpg') }}
 
 <p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 1.5rem;">
     Understanding Thai culture enriches your language learning and helps you connect more deeply with Thai people.

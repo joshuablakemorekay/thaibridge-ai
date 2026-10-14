@@ -257,10 +257,13 @@
 {% endblock %}
 
 {% block content %}
+{% from "_page_banner.html" import page_banner %}
 <h1>
     🧘 Meditation Practice
     <span class="thai">การปฏิบัติสมาธิ</span>
 </h1>
+
+{{ page_banner('img/banners/meditation.webp', 'Misty sunrise over the forest of Thung Salaeng Luang', 'Misty sunrise over Thung Salaeng Luang', 'Maipraewa', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Misty_Sunrise_over_Thung_Salaeng_Luang_Savannah.jpg') }}
 
 <div class="meditation-hero">
     Samatha (calm) and Vipassana (insight) meditation as taught in the Theravāda tradition.

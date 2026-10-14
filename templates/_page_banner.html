@@ -1,0 +1,43 @@
+{# A wide photo under a page's <h1>, with its credit printed on the photo.
+   The CC BY and BY-SA licences require the credit, and keeping it on the
+   image means no page needs a separate credits section.
+   Usage: {% from "_page_banner.html" import page_banner %}
+          {{ page_banner('img/banners/x.webp', alt, title, artist, licence, licence_url, source) }} #}
+{% macro page_banner(file, alt, title, artist, license, license_url, source) %}
+<figure class="page-banner">
+    <img src="{{ url_for('static', filename=file) }}" alt="{{ alt }}" width="1600" height="560">
+    <figcaption>
+        Photo: <a href="{{ source }}" target="_blank" rel="noopener">{{ title }}</a>
+        by {{ artist }}, <a href="{{ license_url }}" target="_blank" rel="noopener">{{ license }}</a>,
+        via Wikimedia Commons
+    </figcaption>
+</figure>
+<style>
+    .page-banner {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto 2rem;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 8px 28px rgba(74, 26, 107, 0.18);
+    }
+    .page-banner img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        height: clamp(150px, 26vw, 280px);
+        object-fit: cover;
+    }
+    .page-banner figcaption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0.25rem 0.7rem;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 0.72rem;
+        border-top-left-radius: 10px;
+    }
+    .page-banner figcaption a { color: #fff; text-decoration: underline; }
+</style>
+{% endmacro %}
