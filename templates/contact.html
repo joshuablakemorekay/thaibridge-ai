@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-
 {% block title %}Contact — ThaiBridge AI{% endblock %}
-
 {% block content %}
 <h1>
     ✉️ Contact
@@ -9,17 +7,24 @@
 </h1>
 
 <div class="card">
-    <p>
-        ThaiBridge AI is a personal learning project. The best way to get in touch about
-        it — questions, feedback, or collaboration — is through GitHub:
+    <p style="line-height: 1.8;">
+        For anything about ThaiBridge — your account, a payment or a
+        <a href="/policies">refund</a>, a question about your data, a mistake in the Thai,
+        or just feedback — email me:
     </p>
-    <p>
-        <a href="https://github.com/joshuablakemorekay/thaibridge-ai">
-            github.com/joshuablakemorekay/thaibridge-ai
-        </a>
+    <p style="font-size: 1.25rem; margin: 1rem 0;">
+        <a href="mailto:joshua@smoald.com"><strong>joshua@smoald.com</strong></a>
     </p>
-    <p style="color:#666;">
-        (A proper contact form may be added later, once the app is deployed for real users.)
+    <p style="line-height: 1.8; color: #666;">
+        I read every message myself. For a refund, please include the email address on your
+        account so I can find the payment.
+    </p>
+</div>
+
+<div class="card">
+    <p style="line-height: 1.8; margin: 0;">
+        Developers: the code is on GitHub at
+        <a href="https://github.com/joshuablakemorekay/thaibridge-ai" target="_blank" rel="noopener">github.com/joshuablakemorekay/thaibridge-ai</a>.
     </p>
 </div>
 {% endblock %}

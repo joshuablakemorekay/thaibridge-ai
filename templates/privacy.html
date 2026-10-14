@@ -1,6 +1,13 @@
 {% extends "base.html" %}
-
 {% block title %}Privacy — ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .pv ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.9; }
+    .pv p { line-height: 1.8; }
+    .pv-updated { color: #888; font-size: 0.9rem; }
+</style>
+{% endblock %}
 
 {% block content %}
 <h1>
@@ -8,23 +15,86 @@
     <span class="thai">ความเป็นส่วนตัว</span>
 </h1>
 
-<div class="card">
+<div class="card pv">
     <p>
-        ThaiBridge AI is a learning project that currently runs locally. This page is an
-        honest summary of how it handles data — not a formal legal policy.
+        ThaiBridge is run by Joshua Kay. This page explains, in plain English, what
+        information the app keeps, why, who else handles it, and what you can ask for.
+        The short version: I keep only what the app needs to work, I never sell it, and
+        there are no adverts or tracking.
     </p>
+    <p class="pv-updated">Last updated 14 October 2026.</p>
+</div>
+
+<h2>What is kept, and why</h2>
+<div class="card pv">
     <ul>
-        <li><strong>Accounts:</strong> if you sign up, the app stores your username,
-            email, and a securely <em>hashed</em> password (never the password itself).</li>
-        <li><strong>Learning progress:</strong> your level, XP and unlocked sections are
-            kept in your browser session.</li>
-        <li><strong>AI tutor:</strong> messages you send to the AI tutor are processed by
-            the Anthropic Claude API to generate replies.</li>
-        <li><strong>No tracking or ads:</strong> the app does not use advertising or
-            third-party tracking.</li>
+        <li><strong>Your account</strong> — username, email address, sign-up date, and your password
+            stored only as a secure <em>hash</em> (the password itself is never kept). Needed so you can log in.</li>
+        <li><strong>Your learning progress</strong> — level, XP, the sections you've unlocked and whether
+            you've finished the alphabet. Needed so you pick up where you left off.</li>
+        <li><strong>Your plan</strong> — which plan you're on, whether it's active, when the paid period ends,
+            and the reference numbers Stripe gives your subscription. Needed so you get what you paid for.</li>
+        <li><strong>Payments</strong> — a record of each payment: what it was for, the amount, the date and
+            Stripe's reference. Needed for receipts, refunds and business records.</li>
+        <li><strong>AI usage</strong> — for each AI message: the time, which mode, which model, how much text it
+            used and whether it worked. Needed to keep the AI affordable and the daily limits fair.</li>
     </ul>
-    <p style="color:#666;">
-        A full privacy policy will be written before the app is deployed for real users.
+</div>
+
+<h2>🤖 Your AI conversations</h2>
+<div class="card pv">
+    <p>
+        <strong>ThaiBridge never stores what you write to the AI, or what it writes back.</strong> The
+        conversation lives in your own browser. When you send a message, it is passed to Anthropic, the
+        company that makes the Claude AI, to write the reply. Under its commercial terms, Anthropic does
+        not use these messages to train its models. This matters most for Dhamma questions: what you ask
+        about your own practice is not filed away anywhere.
+    </p>
+</div>
+
+<h2>🍪 Cookies and your browser</h2>
+<div class="card pv">
+    <ul>
+        <li><strong>A login cookie</strong> keeps you signed in, and a session cookie remembers your progress
+            and today's AI allowance. They are needed for the app to work.</li>
+        <li><strong>Settings saved on your device</strong> — Learning Support options, meditation music and your
+            AI chat are kept in your browser's own storage and are never sent to me.</li>
+        <li><strong>No advertising or tracking cookies.</strong> No analytics company watches what you do.</li>
+    </ul>
+</div>
+
+<h2>🤝 Who else handles your information</h2>
+<div class="card pv">
+    <ul>
+        <li><strong>Stripe</strong> — takes payments. Your card details go to Stripe only; ThaiBridge never sees or stores them.</li>
+        <li><strong>Anthropic</strong> — writes the AI's replies, as above.</li>
+        <li><strong>Render</strong> — hosts the app, in Frankfurt (EU).</li>
+        <li><strong>Neon</strong> — hosts the database where your account is kept.</li>
+        <li><strong>Google Fonts</strong> — your browser downloads the page's fonts from Google, which sees your IP address when it does.</li>
+    </ul>
+    <p style="margin-top: 0.75rem;">
+        Each only receives what it needs to do that job. Your information is never sold or shared for marketing.
+    </p>
+</div>
+
+<h2>🗂️ How long it's kept</h2>
+<div class="card pv">
+    <p>
+        Your account and progress are kept until you ask me to delete them. Payment records are kept for as
+        long as the law requires for business and tax records, even after an account is deleted.
+    </p>
+</div>
+
+<h2>✋ Your rights</h2>
+<div class="card pv">
+    <p>
+        You can ask to see the information held about you, to correct it, or to have your account deleted.
+        Email <a href="mailto:joshua@smoald.com">joshua@smoald.com</a> from the address on your account and I'll
+        sort it out. If you're unhappy with how your information has been handled, you can also complain to the
+        UK Information Commissioner's Office (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>).
+    </p>
+    <p>
+        See also: <a href="/policies">what's free, what's paid, cancelling and refunds</a>.
     </p>
 </div>
 {% endblock %}
