@@ -165,7 +165,7 @@
 
 .abc-cell-name {
     font-size: 0.7rem;
-    color: var(--monsoon-grey);
+    color: #5a6573;
     overflow-wrap: anywhere;      /* keep cells square; names are long */
 }
 
@@ -232,7 +232,7 @@
 .abc-detail-text { flex: 1 1 12rem; }
 .abc-detail-name { font-weight: 700; color: var(--dark-text); font-size: 1.05rem; }
 .abc-detail-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.15rem; color: var(--teak-wood); }
-.abc-detail-meta { font-size: 0.9rem; color: var(--monsoon-grey); }
+.abc-detail-meta { font-size: 0.9rem; color: #5a6573; }
 
 /* The two obsolete letters (ฃ, ฅ) are still shown in the grid — they are part
    of the 44 — but marked so they read as different: a dashed border and a small
@@ -296,11 +296,11 @@
 
 .abc-card-name { font-size: 1.4rem; font-weight: 700; color: var(--dark-text); }
 .abc-card-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.5rem; color: var(--teak-wood); }
-.abc-card-meaning { color: var(--monsoon-grey); }
+.abc-card-meaning { color: #5a6573; }
 
 .abc-counter {
     font-size: 0.95rem;
-    color: var(--monsoon-grey);
+    color: #5a6573;
     min-width: 6rem;
     text-align: center;
 }
@@ -327,7 +327,7 @@
     background: var(--coconut-white);
 }
 
-.abc-question-prompt { color: var(--monsoon-grey); margin-bottom: 0.5rem; }
+.abc-question-prompt { color: #5a6573; margin-bottom: 0.5rem; }
 
 .abc-question-letter {
     font-family: 'Noto Serif Thai', serif;
@@ -440,14 +440,14 @@
 
 .abc-hint {
     font-size: 0.9rem;
-    color: var(--monsoon-grey);
+    color: #5a6573;
     margin: 0 0 0.5rem;
 }
 
 .abc-footnote {
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: var(--monsoon-grey);
+    color: #5a6573;
 }
 
 @media (max-width: 640px) {

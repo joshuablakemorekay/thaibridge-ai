@@ -24,6 +24,13 @@
             --cream:   #FFF8DC;   /* = --silk-cream  */
             --temple-red: #8B0000;
             --temple-orange: #FF6B35;
+            /* Darker shades for WORDS only. Saffron and gold are too pale to
+               read as text on the white and cream cards (about 2:1 contrast,
+               where 4.5:1 is the accessibility minimum). These keep the same
+               colour family at 5:1 or better. Keep using the bright ones for
+               borders, backgrounds and text on the dark purple bars. */
+            --saffron-text: #A85300;
+            --gold-text: #8A6D1B;
             
             /* Lotus & Natural Pinks */
             --lotus-pink: #E75480;
@@ -564,7 +571,7 @@
         h1 .thai {
             display: block;
             font-size: 1.8rem;
-            color: var(--deep-gold);
+            color: var(--gold-text);
             margin-top: 0.75rem;
             font-weight: 600;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
@@ -801,7 +808,7 @@
         
         .btn-saffron {
             background: linear-gradient(135deg, var(--monk-saffron) 0%, var(--temple-orange) 100%);
-            color: white;
+            color: var(--dark-text);
             border: 2px solid var(--temple-orange);
             box-shadow: 
                 0 4px 15px rgba(255, 153, 51, 0.4),
@@ -1295,6 +1302,30 @@
     font-size: 1.1rem;
 }
 .sidebar-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+/* The sidebar is a <nav>, so it also picks up the top bar's plain `nav` rule:
+   the dark purple background, sticky position, padding and gold border. That
+   left dark purple links on a dark purple panel. Undo all of it here. */
+.layout-sidebar nav.sidebar-nav {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+    position: static;
+    z-index: auto;
+}
+/* Same for the links: drop the top bar's dark text shadow and hover lift. */
+.layout-sidebar .sidebar-nav a {
+    text-shadow: none;
+    letter-spacing: normal;
+    transform: none;
+}
+.layout-sidebar .sidebar-nav a:hover {
+    border: 0;
+    border-left: 3px solid transparent;
+    box-shadow: none;
+    transform: none;
+}
+.layout-sidebar .sidebar-nav a.active:hover { border-left-color: var(--royal-gold); }
 .sidebar-nav a {
     display: block;
     padding: 0.6rem 0.9rem;
@@ -1407,7 +1438,7 @@ body {
 }
 .monk-mode-toggle.active {
     background: var(--monk-saffron);
-    color: #fff;
+    color: var(--dark-text);
     box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.25);
 }
 
@@ -1420,7 +1451,7 @@ body {
 
 .monk-mode-banner {
     background: linear-gradient(90deg, var(--monk-saffron), var(--temple-orange));
-    color: #fff;
+    color: var(--dark-text);
     text-align: center;
     padding: 0.7rem 1rem;
     font-size: 0.95rem;
@@ -1496,7 +1527,7 @@ body {
 }
 .monk-dir-btn.active {
     background: var(--monk-saffron);
-    color: #fff;
+    color: var(--dark-text);
 }
 .monk-dir-btn.active .monk-dir-sub { opacity: 0.9; }
 
@@ -1528,7 +1559,7 @@ body {
 }
 .monk-accent-btn.active {
     background: var(--monk-saffron);
-    color: #fff;
+    color: var(--dark-text);
     font-weight: 600;
 }
 /* Marks a play button that is about to sound British audio to a learner who
@@ -1566,7 +1597,7 @@ body {
 .monk-topic-num {
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--monk-saffron);
+    color: var(--saffron-text);
 }
 .monk-topic-title { font-size: 1.1rem; font-weight: 700; }
 .monk-topic-sub { opacity: 0.75; }
@@ -1596,7 +1627,7 @@ body {
     display: block;
     font-family: "Roboto Mono", monospace;
     font-size: 0.9rem;
-    color: var(--mekong-blue);
+    color: #1565c0;
 }
 /* Must come after the display:block above, or it loses to it and the browser's
    own [hidden] rule never gets a look in. */
@@ -1621,7 +1652,7 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.03em;
-    color: var(--mekong-blue);
+    color: #1565c0;
 }
 .monk-entry-tip {
     margin: 0.45rem 0 0;
@@ -1695,7 +1726,7 @@ body {
 .monk-pron-table code {
     font-family: "Roboto Mono", monospace;
     font-weight: 600;
-    color: var(--mekong-blue);
+    color: #1565c0;
 }
 .monk-pron-table td.thai { line-height: 1.7; }
 
@@ -2005,7 +2036,7 @@ html.rs-picking main figcaption:hover {
    the total payable, so the page says so rather than leaving it to checkout. */
 .price-tax {
     display: block;
-    color: #8a7f95;
+    color: #666;
     font-size: 0.78rem;
     margin-top: 0.15rem;
     letter-spacing: 0.01em;

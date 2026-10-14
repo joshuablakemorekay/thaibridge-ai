@@ -42,9 +42,9 @@
     <h3 style="margin-top: 0; color: var(--royal-purple);">
         Your Current Setting: 
         {% if gender == 'male' %}
-            <span style="color: #2196F3;">👨 Male</span>
+            <span style="color: #1565c0;">👨 Male</span>
         {% elif gender == 'female' %}
-            <span style="color: #E91E63;">👩 Female</span>
+            <span style="color: #c2185b;">👩 Female</span>
         {% else %}
             <span style="color: #9C27B0;">👤 Show Both (Neutral)</span>
         {% endif %}
@@ -55,7 +55,7 @@
 <!-- How Gender Affects Thai -->
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 style="color: var(--saffron); margin-top: 2rem;">🎯 How Gender Affects Thai Language</h2>
+        <h2 style="color: var(--saffron-text); margin-top: 2rem;">🎯 How Gender Affects Thai Language</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -149,7 +149,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 style="color: var(--saffron); margin-top: 2rem;">🎭 Politeness Particles</h2>
+        <h2 style="color: var(--saffron-text); margin-top: 2rem;">🎭 Politeness Particles</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -249,7 +249,7 @@
         <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: {% if not loop.last %}0.75rem{% else %}0{% endif %};">
             <div class="thai-text" style="font-size: 1.4rem;">{{ example.thai }}</div>
             <div class="paiboon" style="font-size: 1.2rem; margin-top: 0.5rem; color: #666;">{{ example.paiboon }}</div>
-            <div style="margin-top: 0.5rem; color: #888;">{{ example.english }}</div>
+            <div style="margin-top: 0.5rem; color: #666;">{{ example.english }}</div>
         </div>
         {% endfor %}
     </div>
@@ -262,7 +262,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 style="color: var(--lotus-pink); margin-top: 2rem;">💡 Learning Tips</h2>
+        <h2 style="color: #c2185b; margin-top: 2rem;">💡 Learning Tips</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -319,7 +319,7 @@
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
         <div style="background: white; padding: 1rem; border-radius: 8px;">
-            <h4 style="color: var(--saffron);">How to say "I":</h4>
+            <h4 style="color: var(--saffron-text);">How to say "I":</h4>
             <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
                 {{ gender_variants.pronouns.first_person[gender if gender != 'neutral' else 'male'].polite.thai }}
             </div>
@@ -329,7 +329,7 @@
         </div>
         
         <div style="background: white; padding: 1rem; border-radius: 8px;">
-            <h4 style="color: var(--saffron);">Polite ending:</h4>
+            <h4 style="color: var(--saffron-text);">Polite ending:</h4>
             <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
                 {{ gender_variants.particles[gender if gender != 'neutral' else 'male'].statement.thai }}
             </div>
@@ -339,7 +339,7 @@
         </div>
         
         <div style="background: white; padding: 1rem; border-radius: 8px;">
-            <h4 style="color: var(--saffron);">Say "Hello":</h4>
+            <h4 style="color: var(--saffron-text);">Say "Hello":</h4>
             <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
                 {{ greetings.hello.polite.thai }}
             </div>
@@ -486,7 +486,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 style="color: var(--lotus-pink); margin-top: 2rem;">⚠️ Common Mistakes to Avoid</h2>
+        <h2 style="color: #c2185b; margin-top: 2rem;">⚠️ Common Mistakes to Avoid</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">

@@ -47,7 +47,7 @@
     
     .vowel-paiboon {
         font-size: 1.5rem;
-        color: var(--saffron);
+        color: var(--saffron-text);
         font-family: 'Courier New', monospace;
         font-weight: bold;
     }
@@ -57,7 +57,7 @@
         top: 1rem;
         right: 1rem;
         background: var(--gold);
-        color: white;
+        color: var(--dark-text);
         width: 35px;
         height: 35px;
         border-radius: 50%;
@@ -153,7 +153,7 @@
     
     .type-badge.short {
         background: var(--saffron);
-        color: white;
+        color: var(--dark-text);
     }
 </style>
 {% endblock %}
@@ -169,7 +169,7 @@
     <p style="line-height: 1.8; font-size: 1.1rem;">
         The Thai alphabet contains <strong>32 distinct vowel sounds</strong> formed from 21 basic vowel symbols.
         These include <strong style="color: var(--royal-purple);">14 long vowels</strong> and 
-        <strong style="color: var(--saffron);">18 short vowels</strong>.
+        <strong style="color: var(--saffron-text);">18 short vowels</strong>.
     </p>
     <p style="line-height: 1.8; font-size: 1.1rem; margin-top: 1rem;">
         <strong>⚠️ CRITICAL:</strong> The <strong>length of the vowel can completely change the meaning</strong> of a word!
@@ -229,7 +229,7 @@
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
                     <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
-                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
+                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text);">
                             {{ vowel.example_word.paiboon }}
                         </div>
                         <div style="color: #666;">{{ vowel.example_word.english }}</div>
@@ -271,13 +271,13 @@
             </div>
             
             <div class="example-word">
-                <div style="font-weight: bold; color: var(--saffron); margin-bottom: 0.5rem;">
+                <div style="font-weight: bold; color: var(--saffron-text); margin-bottom: 0.5rem;">
                     📝 Example Word:
                 </div>
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
                     <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
-                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
+                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text);">
                             {{ vowel.example_word.paiboon }}
                         </div>
                         <div style="color: #666;">{{ vowel.example_word.english }}</div>
@@ -306,11 +306,11 @@
                 {{ pair.short.thai }}
             </div>
             {% if thai_audio_url(pair.short.thai) %}<button type="button" class="th-audio" style="margin-bottom: 0.5rem;" data-audio="{{ thai_audio_url(pair.short.thai) }}" aria-label="Play {{ pair.short.paiboon }}">🔊</button>{% endif %}
-            <div class="paiboon" style="font-size: 1.3rem; color: var(--saffron); margin-bottom: 0.25rem;">
+            <div class="paiboon" style="font-size: 1.3rem; color: var(--saffron-text); margin-bottom: 0.25rem;">
                 {{ pair.short.paiboon }}
             </div>
             <div style="color: #666; font-size: 1.1rem;">{{ pair.short.english }}</div>
-            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
                 Vowel: {{ pair.short.vowel }}
             </div>
         </div>
@@ -331,7 +331,7 @@
                 {{ pair.long.paiboon }}
             </div>
             <div style="color: #666; font-size: 1.1rem;">{{ pair.long.english }}</div>
-            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
                 Vowel: {{ pair.long.vowel }}
             </div>
         </div>
@@ -375,7 +375,7 @@
                 <div class="thai-text" style="font-size: 3rem; margin-bottom: 0.5rem;">
                     {{ example.thai }}
                 </div>
-                <div class="paiboon" style="font-size: 1.5rem; color: var(--saffron);">
+                <div class="paiboon" style="font-size: 1.5rem; color: var(--saffron-text);">
                     {{ example.paiboon }}
                 </div>
                 {% if thai_audio_url(example.thai) %}<button type="button" class="th-audio" style="margin-top: 0.5rem;" data-audio="{{ thai_audio_url(example.thai) }}" aria-label="Play {{ example.paiboon }}">🔊</button>{% endif %}
@@ -444,18 +444,18 @@
         <div style="background: #e8eaf6; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
             <strong>Example:</strong><br>
             <span class="thai-text" style="font-size: 1.3rem;">ภาษา</span>
-            <span class="paiboon" style="color: var(--saffron); font-size: 1.2rem;">paa-sǎa</span><br>
+            <span class="paiboon" style="color: var(--saffron-text); font-size: 1.2rem;">paa-sǎa</span><br>
             <span style="color: #666;">Last syllable "sǎa" is stressed → pronounced clearly with its full rising tone</span>
         </div>
     </div>
     
     <div class="card" style="border-left: 5px solid var(--saffron);">
-        <h4 style="margin-top: 0; color: var(--saffron);">
+        <h4 style="margin-top: 0; color: var(--saffron-text);">
             💨 Unstressed Syllables (~)
         </h4>
         <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0;">
             <div style="font-size: 1.5rem; font-family: 'Courier New', monospace; text-align: center;">
-                syllable<strong style="color: var(--saffron);">~</strong>
+                syllable<strong style="color: var(--saffron-text);">~</strong>
             </div>
         </div>
         <p style="line-height: 1.8;">
@@ -467,7 +467,7 @@
         <div style="background: #fff8e1; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
             <strong>Example:</strong><br>
             <span class="thai-text" style="font-size: 1.3rem;">สนาม</span>
-            <span class="paiboon" style="color: var(--saffron); font-size: 1.2rem;">sà~nǎam</span><br>
+            <span class="paiboon" style="color: var(--saffron-text); font-size: 1.2rem;">sà~nǎam</span><br>
             <span style="color: #666;">First syllable "sà" is unstressed → in natural speech its tone and vowel reduce</span>
         </div>
     </div>
@@ -579,12 +579,12 @@
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #9c27b0;">📖 Written (Careful Speech):</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">หนังสือ</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">nǎŋ<span style="color: var(--saffron);">~</span>sʉ̌ʉ</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">nǎŋ<span style="color: var(--saffron-text);">~</span>sʉ̌ʉ</span><br>
                 <span style="color: #666;">rising tone + rising tone (book)</span>
             </div>
             <div style="border-top: 2px dashed #9c27b0; padding-top: 1rem;">
                 <strong style="color: #9c27b0;">🗣️ Spoken (Natural Speed):</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">naŋ<span style="color: var(--saffron);">~</span>sʉ̌ʉ</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">naŋ<span style="color: var(--saffron-text);">~</span>sʉ̌ʉ</span><br>
                 <span style="color: #666;">First syllable becomes unstressed → tone flattens to mid tone</span>
             </div>
         </div>
@@ -593,12 +593,12 @@
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #9c27b0;">📖 Written:</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">กระเทียม</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">grà<span style="color: var(--saffron);">~</span>tiam</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">grà<span style="color: var(--saffron-text);">~</span>tiam</span><br>
                 <span style="color: #666;">low tone + mid tone (garlic)</span>
             </div>
             <div style="border-top: 2px dashed #9c27b0; padding-top: 1rem;">
                 <strong style="color: #9c27b0;">🗣️ Spoken:</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">gra<span style="color: var(--saffron);">~</span>tiam</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">gra<span style="color: var(--saffron-text);">~</span>tiam</span><br>
                 <span style="color: #666;">First syllable is unstressed → low tone flattens to mid</span>
             </div>
         </div>
@@ -606,7 +606,7 @@
     
     <!-- Transformation 2 -->
     <div class="card" style="border-left: 5px solid #ff9800;">
-        <h4 style="margin-top: 0; color: #ff9800;">
+        <h4 style="margin-top: 0; color: var(--saffron-text);">
             2️⃣ Vowel Reduction → Schwa (ə)
         </h4>
         <p style="line-height: 1.8;">
@@ -617,28 +617,28 @@
         
         <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
             <div style="margin-bottom: 1rem;">
-                <strong style="color: #ff9800;">📖 Written (Careful Speech):</strong><br>
+                <strong style="color: var(--saffron-text);">📖 Written (Careful Speech):</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">มหาวิทยาลัย</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">má<span style="color: var(--saffron);">~</span>hǎa-wít-tá<span style="color: var(--saffron);">~</span>yaa-lai</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">má<span style="color: var(--saffron-text);">~</span>hǎa-wít-tá<span style="color: var(--saffron-text);">~</span>yaa-lai</span><br>
                 <span style="color: #666;">university (6 syllables)</span>
             </div>
             <div style="border-top: 2px dashed #ff9800; padding-top: 1rem;">
-                <strong style="color: #ff9800;">🗣️ Spoken (Natural Speed):</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">mə<span style="color: var(--saffron);">~</span>hǎa-wít-tə<span style="color: var(--saffron);">~</span>yaa-lai</span><br>
+                <strong style="color: var(--saffron-text);">🗣️ Spoken (Natural Speed):</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">mə<span style="color: var(--saffron-text);">~</span>hǎa-wít-tə<span style="color: var(--saffron-text);">~</span>yaa-lai</span><br>
                 <span style="color: #666;">"má" → "mə", "tá" → "tə" (vowels reduce to schwa)</span>
             </div>
         </div>
         
         <div style="background: #fff3e0; padding: 1rem; border-radius: 8px;">
             <div style="margin-bottom: 1rem;">
-                <strong style="color: #ff9800;">📖 Written:</strong><br>
+                <strong style="color: var(--saffron-text);">📖 Written:</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">ขอบคุณ</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">kɔ̀ɔp-kun</span><br>
                 <span style="color: #666;">thank you (2 syllables)</span>
             </div>
             <div style="border-top: 2px dashed #ff9800; padding-top: 1rem;">
-                <strong style="color: #ff9800;">🗣️ Spoken:</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">kɔp<span style="color: var(--saffron);">~</span>kun</span><br>
+                <strong style="color: var(--saffron-text);">🗣️ Spoken:</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">kɔp<span style="color: var(--saffron-text);">~</span>kun</span><br>
                 <span style="color: #666;">In fast speech the first syllable goes soft and shortens: "ɔɔ" → "ɔ", low tone → mid</span>
             </div>
         </div>
@@ -646,7 +646,7 @@
     
     <!-- Transformation 3 -->
     <div class="card" style="border-left: 5px solid #4caf50;">
-        <h4 style="margin-top: 0; color: #4caf50;">
+        <h4 style="margin-top: 0; color: #2e7d32;">
             3️⃣ Syllable Flow → No Glottal Stop
         </h4>
         <p style="line-height: 1.8;">
@@ -657,29 +657,29 @@
         
         <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
             <div style="margin-bottom: 1rem;">
-                <strong style="color: #4caf50;">📖 Written (Careful Speech):</strong><br>
+                <strong style="color: #2e7d32;">📖 Written (Careful Speech):</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">แสดง</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron);">~</span>dɛɛŋ</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron-text);">~</span>dɛɛŋ</span><br>
                 <span style="color: #666;">to show/perform</span>
             </div>
             <div style="border-top: 2px dashed #4caf50; padding-top: 1rem;">
-                <strong style="color: #4caf50;">🗣️ Spoken (Natural Speed):</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">sa<span style="color: var(--saffron);">~</span>dɛɛŋ</span><br>
+                <strong style="color: #2e7d32;">🗣️ Spoken (Natural Speed):</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">sa<span style="color: var(--saffron-text);">~</span>dɛɛŋ</span><br>
                 <span style="color: #666;">"sà" flows directly into "dɛɛng" - no throat closure</span><br>
-                <span style="color: #4caf50; font-style: italic;">Like English "a dang" said quickly</span>
+                <span style="color: #2e7d32; font-style: italic;">Like English "a dang" said quickly</span>
             </div>
         </div>
         
         <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px;">
             <div style="margin-bottom: 1rem;">
-                <strong style="color: #4caf50;">📖 Written:</strong><br>
+                <strong style="color: #2e7d32;">📖 Written:</strong><br>
                 <span class="thai-text" style="font-size: 1.4rem;">คดี</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">ká<span style="color: var(--saffron);">~</span>dii</span><br>
+                <span class="paiboon" style="font-size: 1.3rem;">ká<span style="color: var(--saffron-text);">~</span>dii</span><br>
                 <span style="color: #666;">law case</span>
             </div>
             <div style="border-top: 2px dashed #4caf50; padding-top: 1rem;">
-                <strong style="color: #4caf50;">🗣️ Spoken:</strong><br>
-                <span class="paiboon" style="font-size: 1.3rem;">ka<span style="color: var(--saffron);">~</span>dii</span><br>
+                <strong style="color: #2e7d32;">🗣️ Spoken:</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">ka<span style="color: var(--saffron-text);">~</span>dii</span><br>
                 <span style="color: #666;">"ká" blends into "dii" without separation</span>
             </div>
         </div>
@@ -688,7 +688,7 @@
             <strong style="color: #1b5e20;">⚡ Compare with DEAD SYLLABLE:</strong><br><br>
             <div style="background: white; padding: 0.75rem; border-radius: 5px;">
                 <span class="thai-text" style="font-size: 1.4rem;">สหภาพ</span> 
-                <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron);">~</span>hà-pâap</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron-text);">~</span>hà-pâap</span> 
                 <span style="color: #666;">(labour union)</span><br>
                 <span style="font-size: 0.95rem; color: #d84315;">
                     "sà" is followed by <strong>~</strong> → soft, it flows straight into "hà".<br>

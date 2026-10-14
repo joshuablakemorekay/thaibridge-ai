@@ -251,7 +251,7 @@
             <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.25rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--saffron);">
                 <h4 style="color: var(--temple-red); margin-top: 0;">🙏 Greeting Monks</h4>
                 <div class="thai-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.thai }}</div>
-                <div class="paiboon" style="font-size: 1.2rem; color: #e65100; margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.paiboon }}</div>
+                <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text); margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.paiboon }}</div>
                 <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Breakdown:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.breakdown }}</p>
                 <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Usage:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.usage }}</p>
                 <div style="background: white; padding: 0.5rem; border-radius: 5px; margin-top: 0.5rem;">
@@ -278,11 +278,11 @@
 
         <!-- Casual Hi Section -->
         <div class="card" style="border-left: 5px solid #FF9800;">
-            <h3 style="color: #FF9800;">{{ cultural_info.greetings_hello_goodbye.hi_casual.title }}</h3>
+            <h3 style="color: var(--saffron-text);">{{ cultural_info.greetings_hello_goodbye.hi_casual.title }}</h3>
             
             <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
                 <div class="thai-text" style="font-size: 2rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.thai }}</div>
-                <div class="paiboon" style="font-size: 1.3rem; color: #e65100; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.paiboon }}</div>
+                <div class="paiboon" style="font-size: 1.3rem; color: var(--saffron-text); margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.paiboon }}</div>
                 <p style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Meaning:</strong> {{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.meaning }}</p>
                 <p style="font-size: 0.9rem; color: #666;"><em>{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.origin }}</em></p>
             </div>
@@ -447,7 +447,7 @@
             <!-- Level 3 - Highest -->
             <div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--saffron);">
                 <h4 style="color: var(--temple-red); margin-top: 0;">Level 3: {{ cultural_info.wai_gesture.three_levels.level_3_highest.name }}</h4>
-                <div class="paiboon" style="font-size: 1.2rem; color: #e65100; margin-bottom: 1rem;">{{ cultural_info.wai_gesture.three_levels.level_3_highest.paiboon }}</div>
+                <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text); margin-bottom: 1rem;">{{ cultural_info.wai_gesture.three_levels.level_3_highest.paiboon }}</div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
                     <div style="background: white; padding: 0.75rem; border-radius: 5px;">
                         <strong>Hand Position:</strong> {{ cultural_info.wai_gesture.three_levels.level_3_highest.hand_position }}
@@ -475,7 +475,7 @@
 
         <!-- Who Wais Whom -->
         <div class="card" style="border-left: 5px solid #ff9800;">
-            <h3 style="color: #ff9800;">Who Wais Whom?</h3>
+            <h3 style="color: var(--saffron-text);">Who Wais Whom?</h3>
             <p style="font-size: 1.05rem; margin-bottom: 1rem;"><strong>Golden Rule:</strong> {{ cultural_info.wai_gesture.who_wais_whom.rule }}</p>
             <div style="background: #fff3e0; padding: 1.25rem; border-radius: 8px;">
                 <strong>Social Hierarchy:</strong>
@@ -560,7 +560,7 @@
             {% if key not in ['greetings_hello_goodbye', 'wai_gesture'] %}
             <div class="card">
                 <h3>{{ festival.name }}</h3>
-                <p style="color: var(--saffron); font-weight: bold; margin-bottom: 0.5rem;">
+                <p style="color: var(--saffron-text); font-weight: bold; margin-bottom: 0.5rem;">
                     📅 {{ festival.date }}
                 </p>
                 <p style="line-height: 1.8;">{{ festival.description }}</p>
