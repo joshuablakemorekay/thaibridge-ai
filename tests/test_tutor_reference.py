@@ -94,7 +94,8 @@ def test_the_reference_rides_with_the_question(agent):
     agent.chat('s1', 'Explain ตัว', mode='tutor')
     content = _sent(agent)
     assert 'REFERENCE' in content[0]['text'] and 'dtuua' in content[0]['text']
-    assert content[1]['text'] == 'Explain ตัว'
+    # Labelled, so a message that is only Thai is not taken for the list.
+    assert content[1]['text'] == "THE STUDENT'S MESSAGE (answer this):\nExplain ตัว"
 
 
 @pytest.mark.parametrize('lens', ['universal', 'neutral', None])

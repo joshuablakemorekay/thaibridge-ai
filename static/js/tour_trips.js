@@ -183,6 +183,10 @@
             if (!state.tried && state.trip.scenes[state.i].choices[k].verdict !== 'miss') state.firsts++;
             state.tried = true;
             state.picked = k;
+            if (window.ThaiSounds) {
+                if (state.trip.scenes[state.i].choices[k].verdict === 'miss') ThaiSounds.wrong();
+                else ThaiSounds.correct();
+            }
             return render();
         }
         var act = b.dataset.act;

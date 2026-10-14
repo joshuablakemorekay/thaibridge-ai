@@ -142,7 +142,9 @@ def test_the_agent_streams_and_remembers_the_reply():
     events, failure = a.start_chat_stream('s1', 'What is mettā?', mode='tutor')
     assert failure is None
     out = list(events)
-    assert [e['text'] for e in out if e['type'] == 'text'] == ['Mettā ', 'is goodwill.']
+    # A reply this short arrives in one piece: the opening words are held back
+    # until they are clearly the answer (see HELD_BACK_CHARS in ai_agent).
+    assert [e['text'] for e in out if e['type'] == 'text'] == ['Mettā is goodwill.']
     assert out[-1]['tokens_used']['cache_read'] == 9
     assert a.conversations['s1'][-1] == {'role': 'assistant', 'content': 'Mettā is goodwill.'}
     assert manager.closed

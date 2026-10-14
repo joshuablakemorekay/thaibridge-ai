@@ -224,6 +224,123 @@
             });
         })();
 
+        // Quiz sounds
+        // ===========
+        // A short chime for a right answer, a soft low note for a wrong one, and
+        // a little rising run of notes when an answer levels the learner up.
+        // Feedback only — no music, no sound on ordinary clicks, because the
+        // learner's ears are needed for the Thai audio and its tones.
+        //
+        // The notes are made in the browser (Web Audio), like the meditation
+        // bell, so there are no audio files and nothing to license. On by
+        // default, with an off switch in Learning Support saved on this device.
+        // Phones on silent stay silent: iOS mutes Web Audio with the ringer.
+        //
+        // Quizzes call ThaiSounds.result(serverReply) or .correct() / .wrong().
+        window.ThaiSounds = (function () {
+            var KEY = 'tb-quiz-sounds';
+            var ctx = null;
+
+            function enabled() {
+                try { return localStorage.getItem(KEY) !== 'off'; }
+                catch (e) { return true; }
+            }
+            function setEnabled(on) {
+                try { localStorage.setItem(KEY, on ? 'on' : 'off'); }
+                catch (e) { /* storage off: the choice just won't persist */ }
+            }
+            function context() {
+                var Ctx = window.AudioContext || window.webkitAudioContext;
+                if (!Ctx) return null;
+                if (!ctx) ctx = new Ctx();
+                if (ctx.state === 'suspended') ctx.resume();
+                return ctx;
+            }
+
+            // One note: a sine (or triangle) that fades out, so nothing clicks.
+            function note(freq, start, length, volume, type, endFreq) {
+                var c = context();
+                if (!c) return;
+                var t = c.currentTime + start;
+                var osc = c.createOscillator();
+                var gain = c.createGain();
+                osc.type = type || 'sine';
+                osc.frequency.setValueAtTime(freq, t);
+                if (endFreq) osc.frequency.exponentialRampToValueAtTime(endFreq, t + length);
+                gain.gain.setValueAtTime(0.0001, t);
+                gain.gain.exponentialRampToValueAtTime(volume, t + 0.015);
+                gain.gain.exponentialRampToValueAtTime(0.0001, t + length);
+                osc.connect(gain);
+                gain.connect(c.destination);
+                osc.start(t);
+                osc.stop(t + length + 0.05);
+            }
+
+            function play(fn) {
+                if (!enabled()) return;
+                try { fn(); } catch (e) { /* no audio here: quizzes still work */ }
+            }
+
+            var api = {
+                correct: function () {
+                    play(function () {
+                        note(660, 0, 0.18, 0.12);
+                        note(880, 0.09, 0.28, 0.12);
+                    });
+                },
+                // Deliberately gentle, not a buzzer: a wrong answer is part of learning.
+                wrong: function () {
+                    play(function () { note(247, 0, 0.32, 0.09, 'triangle', 196); });
+                },
+                levelUp: function () {
+                    play(function () {
+                        [523, 659, 784, 1047].forEach(function (f, i) {
+                            note(f, i * 0.11, i === 3 ? 0.6 : 0.22, 0.12);
+                        });
+                    });
+                },
+                // Takes a marked answer from the server ({correct, level_up}).
+                result: function (res) {
+                    if (!res) return;
+                    if (res.level_up) api.levelUp();
+                    else if (res.correct) api.correct();
+                    else api.wrong();
+                },
+                enabled: enabled
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Browsers only allow sound after the user has interacted, and
+                // some quiz results arrive after a server round trip. Waking the
+                // audio on the first tap means those results can still chime.
+                function wake() {
+                    if (enabled()) context();
+                    document.removeEventListener('pointerdown', wake);
+                    document.removeEventListener('keydown', wake);
+                }
+                document.addEventListener('pointerdown', wake);
+                document.addEventListener('keydown', wake);
+
+                var box = document.getElementById('rs-sounds');
+                if (box) {
+                    box.checked = enabled();
+                    box.addEventListener('change', function () {
+                        setEnabled(box.checked);
+                        if (box.checked) api.correct();   // a sample, so you know what you turned on
+                    });
+                }
+                var reset = document.getElementById('rs-reset');
+                if (reset) {
+                    reset.addEventListener('click', function () {
+                        setEnabled(false);
+                        if (box) box.checked = false;
+                    });
+                }
+            });
+
+            return api;
+        })();
+
         // Read aloud (text-to-speech)
         // ===========================
         // Reads ENGLISH text aloud using the browser's built-in voice (the Web

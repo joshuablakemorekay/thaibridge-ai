@@ -238,3 +238,16 @@ def test_the_tone_level_filter_still_narrows_the_pool(client):
     for _ in range(25):
         seen.add(client.get("/api/drill/tone_calc?level=1").get_json()["sub"])
     assert seen == {"MID class"}, f"level 1 leaked other classes: {seen}"
+
+
+def test_the_answer_that_crosses_a_level_says_so(client):
+    """The page plays a level-up sound from this flag, so it must be true on
+    exactly the answer that crosses a level, and on no other."""
+    flags = []
+    while xp(client) < 100:          # level 2 starts at 100 XP
+        flags.append(answer(client)["level_up"])
+
+    assert flags[-1] is True
+    assert not any(flags[:-1])
+    assert answer(client)["level_up"] is False
+    assert answer(client, correctly=False)["level_up"] is False
