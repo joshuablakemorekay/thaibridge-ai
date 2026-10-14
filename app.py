@@ -2091,7 +2091,7 @@ FORMALITY_LEVELS = {
         'color': '#D4AF37',
         'examples': [
             {'thai': 'เสวย', 'paiboon': 'sà-wəəi', 'english': 'to eat (royal)'},
-            {'thai': 'ตรัส', 'paiboon': 'dtrát', 'english': 'to speak (royal)'},
+            {'thai': 'ตรัส', 'paiboon': 'dtràt', 'english': 'to speak (royal)'},
             {'thai': 'เสด็จ', 'paiboon': 'sà-dèt', 'english': 'to go (royal)'},
             {'thai': 'บรรทม', 'paiboon': 'ban-tom', 'english': 'to sleep (royal)'},
             {'thai': 'สวรรคต', 'paiboon': 'sà-wǎn-ká-dtà', 'english': 'to die (royal)'},
