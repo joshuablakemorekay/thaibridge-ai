@@ -360,7 +360,6 @@
         <button class="btn" onclick="resetTimer()">↺ Reset</button>
         <select class="ambient-btn" id="musicSelect" onchange="setMusic(this.value)" aria-label="Background music">
             <option value="off">🔔 Bell only</option>
-            <option value="tranquil">🎵 Tranquil music</option>
             <option value="golden">🎧 Golden binaural beat (headphones)</option>
         </select>
     </div>
@@ -910,8 +909,8 @@ function playBell(times = 1) {
 
 // ── Background music ─────────────────────────────────────────────────────
 // Generated live by the browser, so there are no audio files to host and no
-// licence to check. "Tranquil" is a slow, swelling drone with an occasional
-// singing bowl. "Golden" is a binaural beat: a C at 131 Hz in the left ear
+// licence to check. The one music option (Josh's choice, 2026-10-14) is a
+// binaural beat: a C at 131 Hz in the left ear
 // and 132.618 Hz in the right, so the brain hears a slow 1.618 Hz pulse - the
 // golden number - over a soft C drone. It needs headphones. The note under
 // the picker says what it may help with and that the evidence is mixed; no
@@ -959,12 +958,9 @@ function startMusic() {
         soft.connect(master);
 
         const nodes = [];
-        const golden = musicMode === 'golden';
-        // Tranquil: an open A chord (A2, E3, A3, C#4). Golden: a low C chord
-        // (C2, G2, E3, G3) that sits under the 131 Hz C without beating
+        // A low C chord (C2, G2, E3, G3) under the 131 Hz C, without beating
         // against it - C3 itself is left out for that reason.
-        const chord = golden ? [65.41, 98.00, 164.81, 196.00] : [110, 164.81, 220, 277.18];
-        chord.forEach((freq, i) => {
+        [65.41, 98.00, 164.81, 196.00].forEach((freq, i) => {
             const osc = ctx.createOscillator();
             osc.type = i === 0 ? 'triangle' : 'sine';
             osc.frequency.value = freq;
@@ -981,7 +977,7 @@ function startMusic() {
             nodes.push(osc, lfo);
         });
 
-        if (golden && ctx.createStereoPanner) {
+        if (ctx.createStereoPanner) {
             // 131 Hz left, 132.618 Hz right: a 1.618 Hz binaural beat
             [[131, -1], [132.618, 1]].forEach(([freq, pan]) => {
                 const osc = ctx.createOscillator();
@@ -1044,7 +1040,7 @@ function singingBowl(dest) {
 updateDisplay();
 try {
     let saved = localStorage.getItem('meditationMusic');
-    if (saved === 'alpha') saved = 'golden';
+    if (saved === 'alpha' || saved === 'tranquil') saved = 'golden';   // retired options
     if (saved && saved !== 'off') {
         document.getElementById('musicSelect').value = saved;
         setMusic(saved);
