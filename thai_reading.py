@@ -194,7 +194,7 @@ STORIES = [
                 _tok('ตัวหนึ่ง', 'dtua nʉ̀ŋ', 'one (of them)'),
             ],
             [
-                _tok('ลิง', 'liŋ', 'the monkey'),
+                _tok('ลิงตัวนั้น', 'liŋ dtua nán', 'that monkey'),
                 _tok('อยู่', 'yùu', 'lived'),
                 _tok('ใน', 'nai', 'in'),
                 _tok('ป่า', 'bpàa', 'the forest'),
@@ -204,13 +204,14 @@ STORIES = [
                 _tok('เป็น', 'bpen', 'was'),
                 _tok('ราชา', 'raa-chaa', 'the king'),
                 _tok('ของ', 'kɔ̌ɔŋ', 'of'),
-                _tok('ฝูง', 'fǔuŋ', 'the troop'),
+                _tok('ฝูงลิง', 'fǔuŋ liŋ', 'the monkey troop'),
             ],
             [
                 _tok('วันหนึ่ง', 'wan nʉ̀ŋ', 'one day'),
-                _tok('คน', 'kon', 'people'),
+                _tok('นายพราน', 'naai-praan', 'hunters'),
                 _tok('มา', 'maa', 'came'),
                 _tok('ล่า', 'lâa', 'to hunt'),
+                _tok('ฝูงลิง', 'fǔuŋ liŋ', 'the monkey troop'),
             ],
             [
                 _tok('ราชาลิง', 'raa-chaa liŋ', 'the monkey king'),
@@ -220,7 +221,8 @@ STORIES = [
             ],
             [
                 _tok('เขา', 'kǎo', 'he'),
-                _tok('เสียสละ', 'sǐa-sà-là', 'sacrificed himself'),
+                _tok('เสียสละ', 'sǐa-sà-là', 'sacrificed'),
+                _tok('ตัวเอง', 'dtua-eeŋ', 'himself'),
                 _tok('เพื่อ', 'pʉ̂a', 'for'),
                 _tok('ฝูง', 'fǔuŋ', 'the troop'),
             ],
@@ -269,7 +271,8 @@ STORIES = [
                         'จึงไม่อาจออกหาอาหารด้วยตนเองได้อีก '
                         'ทุกวันพญาช้างจะเก็บผลไม้ที่สุกที่สุดเท่าที่หาได้ '
                         'แล้วฝากบริวารนำไปให้มารดา '
-                        'คิดว่าเป็นเรื่องเล็กน้อยที่งวงช้างแปดหมื่นงวงย่อมทำได้ง่ายดาย',
+                        'พญาช้างคิดว่าเป็นเรื่องเล็กน้อย '
+                        'ที่งวงช้างแปดหมื่นงวงย่อมทำได้ง่ายดาย',
                 'english': 'But his mother, old and gentle, had been blind for '
                            'years and could no longer forage on her own. Each day '
                            'he gathered the ripest fruit he could find and sent it '
