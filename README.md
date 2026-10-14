@@ -36,7 +36,13 @@
 
 ## The problem
 
-I'm learning Thai, and the popular apps fail Thai learners in a specific way. **They don't teach Thai well, and none of them connect the language to its culture** — which, in Thai, is half the language. How polite you are literally changes the words you use, and a lot of everyday speech is rooted in Buddhism.
+**Thailand is full of English speakers who want to learn Thai and keep getting stuck.** Expats, long-stay visitors and foreign Buddhist monks living in Thai temples all hit the same wall, and a lot of them give up frustrated. I'm one of them: an Englishman learning Thai.
+
+Thai is notoriously hard for English speakers, and the reasons pile up. It's **tonal**, so the same sound can mean five different things depending on pitch. It has its **own script**, written with no spaces between words. **How polite you are changes the words themselves**, not just your tone. And much of everyday speech is rooted in **Thai culture and Buddhism**, so learning the words isn't enough without the meaning behind them. The popular apps teach Thai thinly, and none of them connect the language to its culture, which in Thai is half the language.
+
+**What made Thai learnable for me was the Paiboon romanisation system**: a way of writing Thai sounds, tones included, in English letters, so you can say a word correctly before you can read the script. ThaiBridge AI is built around it, with an AI tutor that answers *your* questions at *your* pace, so every learner gets lessons shaped to them rather than one fixed course. The aim is a working system for practical Thai: a bridge between Thai people and the English speakers living among them.
+
+It's personal, too. I'm of Thai and English heritage, and this is where my interest in AI and my own Thai roots meet.
 
 I also set myself a harder problem than "make a website." **As a beginner, I wanted to prove I could build the parts a real online product actually needs** — proper accounts, real payments, and a genuinely useful feature — not another to-do-list demo. The risk: those are exactly the parts that are easy to fake and hard to get right.
 
