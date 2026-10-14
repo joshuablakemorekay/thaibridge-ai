@@ -53,6 +53,13 @@
     </div>
     <div class="monk-entry-target">
         <span class="thai">{{ e.thai }}</span>
+        {# Native Thai voice, the same as the rest of the site. Drawn only when
+           the clip exists, like the English side. #}
+        {% set th_audio = thai_audio_url(e.thai) %}
+        {% if th_audio %}
+        <button type="button" class="monk-audio-btn" data-audio="{{ th_audio }}"
+                aria-label="Listen">🔊</button>
+        {% endif %}
         {% if e.paiboon %}<span class="monk-entry-pron">{{ e.paiboon }}</span>{% endif %}
     </div>
     {% endif %}

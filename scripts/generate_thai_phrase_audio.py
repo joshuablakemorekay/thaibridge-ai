@@ -236,6 +236,18 @@ def collect_meditation():
     return app.pure_thai_strings(app.MEDITATION_TECHNIQUES)
 
 
+def collect_monk():
+    """Monk Mode, learning-Thai direction — the Thai of every word and phrase.
+
+    Only values under a 'thai' key: the lessons also hold long Thai tips and
+    notes written FOR Thai monks learning English, which are not for speaking.
+    """
+    import app
+    found = []
+    _walk_thai(app._load_monk_topics(), found)
+    return found
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -256,6 +268,7 @@ PAGES = {
     'culture': collect_culture,
     'theravada': collect_theravada,
     'meditation': collect_meditation,
+    'monk': collect_monk,
 }
 
 
