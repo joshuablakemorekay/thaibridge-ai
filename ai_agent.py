@@ -213,6 +213,85 @@ def _student_section(user_context: Optional[Dict]) -> str:
             f"- Total XP: {ctx.get('xp', 0)}\n")
 
 
+# How many times one answer may stop to look words up before it must answer.
+# One lookup covers a whole answer; the extra rounds are for a word it missed.
+MAX_TOOL_ROUNDS = 3
+# A streamed answer's opening is held back until it is this long, so a
+# "let me look that up" line before a lookup is never shown (see
+# start_chat_stream). Longer than such a line; short enough not to be felt.
+HELD_BACK_CHARS = 200
+
+SPELLING_TOOL_RULE = f"""
+SPELLING TOOL — use it before writing Thai:
+- If your answer will contain ANY Thai, call {tutor_reference.SPELLING_TOOL_NAME}
+  FIRST, once, with every Thai word and phrase you plan to write. The call is
+  your very first output: no sentence before it, not even "let me check".
+- Words marked CHECKED: write the spelling exactly as given, over your memory.
+- Words NOT IN THE LESSONS: work each syllable out from the consonant classes
+  the tool gives, the vowel length, a live or dead ending and the tone mark.
+  Never guess from how the word looks in English. Do this working silently:
+  your answer shows only the result, never the working, unless the student
+  asked how a tone is worked out.
+- If your answer has no Thai, do not call the tool.
+"""
+
+
+class _Usage:
+    """Token counts added up across the requests one answer took."""
+
+    def __init__(self):
+        self.input_tokens = self.output_tokens = 0
+        self.cache_creation_input_tokens = self.cache_read_input_tokens = 0
+
+    def add(self, usage):
+        self.input_tokens += usage.input_tokens or 0
+        self.output_tokens += usage.output_tokens or 0
+        self.cache_creation_input_tokens += getattr(usage, 'cache_creation_input_tokens', 0) or 0
+        self.cache_read_input_tokens += getattr(usage, 'cache_read_input_tokens', 0) or 0
+
+
+class _Answer:
+    """What _finish_turn reads off a response, for an answer that took several:
+    the last one's stop reason and everyone's tokens."""
+
+    def __init__(self):
+        self.usage = _Usage()
+        self.stop_reason = None
+
+    def add(self, response):
+        self.usage.add(response.usage)
+        self.stop_reason = response.stop_reason
+
+
+def _tool_results(response) -> List[Dict]:
+    """Answer every lookup the model asked for in `response`."""
+    results = []
+    for block in response.content:
+        if block.type != 'tool_use':
+            continue
+        try:
+            if block.name != tutor_reference.SPELLING_TOOL_NAME:
+                raise ValueError(f'unknown tool {block.name}')
+            content = tutor_reference.look_up((block.input or {}).get('words', []))
+        except Exception as e:
+            # A lookup that fails costs the lookup, never the answer.
+            results.append({'type': 'tool_result', 'tool_use_id': block.id,
+                            'content': f'Lookup failed ({e}). Answer from the rules.',
+                            'is_error': True})
+            continue
+        results.append({'type': 'tool_result', 'tool_use_id': block.id, 'content': content})
+    return results
+
+
+def _checked(text: str) -> str:
+    """`text` with every spelling the lessons know corrected (a safety net
+    for a lookup the model skipped). A failure here leaves the text as is."""
+    try:
+        return tutor_reference.check_spellings(text)[0]
+    except Exception:
+        return text
+
+
 def thinking_off(model: str) -> Optional[Dict]:
     """The setting that stops a model thinking before it answers, or None.
 
@@ -367,6 +446,7 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 
 {REGISTER_RULES_FOR_AI}
 {tutor_reference.consonant_classes()}
+{SPELLING_TOOL_RULE}
 TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level
@@ -539,14 +619,18 @@ scene moving. Open the scene yourself with a natural first line in character.
         return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
     def _request(self, model: str, system: List[Dict], messages: List[Dict],
-                 max_tokens: int) -> Dict:
+                 max_tokens: int, last_round: bool = False) -> Dict:
         """The request every feature sends, set up the same way.
 
         Thinking is switched off where the model would otherwise spend the
-        reply budget on it.
+        reply budget on it. The spelling tool is always offered; on the
+        `last_round` it may not be called, so the model has to answer.
         """
         request = dict(model=model, max_tokens=max_tokens,
-                       system=system, messages=messages)
+                       system=system, messages=messages,
+                       tools=[tutor_reference.SPELLING_TOOL])
+        if last_round:
+            request['tool_choice'] = {'type': 'none'}
         thinking = thinking_off(model)
         if thinking:
             request['thinking'] = thinking
@@ -560,15 +644,29 @@ scene moving. Open the scene yourself with a natural first line in character.
 
     def _ask(self, model: str, system: List[Dict], messages: List[Dict],
              max_tokens: int):
-        """One request to the API. Returns (reply text, response).
+        """Get one finished answer. Returns (reply text, answer).
+
+        The model may stop to look up spellings (up to MAX_TOOL_ROUNDS times);
+        each lookup is answered and the request sent again until it answers.
+        The reply is the last request's text, checked against the lessons.
 
         The text blocks are joined rather than reading content[0]: a model that
         can think puts a thinking block first, so content[0].text comes back
         empty or raises.
         """
-        response = self.client.messages.create(
-            **self._request(model, system, messages, max_tokens))
-        return ''.join(b.text for b in response.content if b.type == 'text'), response
+        answer = _Answer()
+        for round_no in range(MAX_TOOL_ROUNDS + 1):
+            response = self.client.messages.create(**self._request(
+                model, system, messages, max_tokens,
+                last_round=round_no == MAX_TOOL_ROUNDS))
+            answer.add(response)
+            if response.stop_reason != 'tool_use':
+                break
+            messages = messages + [
+                {'role': 'assistant', 'content': response.content},
+                {'role': 'user', 'content': _tool_results(response)}]
+        text = ''.join(b.text for b in response.content if b.type == 'text')
+        return _checked(text), answer
 
     def _reference(self, message: str, mode: str, lens: Optional[str]) -> str:
         """Checked entries for this message, or '' (see tutor_reference).
@@ -600,8 +698,11 @@ scene moving. Open the scene yourself with a natural first line in character.
         browser's history is byte-for-byte what was sent the first time, and
         the cached conversation still matches."""
         reference = self._reference(message, mode, lens)
+        # Labelled, because a message that is only Thai looked like part of
+        # the reference list: the translator answered กินข้าวรึยัง with "your
+        # message only contained reference words" (2026-10-14).
         return ([{'type': 'text', 'text': reference},
-                 {'type': 'text', 'text': message}]
+                 {'type': 'text', 'text': "THE STUDENT'S MESSAGE (answer this):\n" + message}]
                 if reference else message)
 
     def _history_from_browser(self, history: List, mode: str,
@@ -762,27 +863,68 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         `events` yields {'type': 'text', 'text': ...} as the reply is written,
         then one {'type': 'done', ...} carrying what chat() would have returned.
+        If what the page was shown differs from the finished answer (a spelling
+        corrected against the lessons, or words written before a lookup), a
+        {'type': 'replace', 'text': ...} comes just before 'done' with the
+        answer the page should show instead.
         """
         model, system, messages = self._start_turn(
             session_id, message, mode, user_context, scenario, lens, history)
-        manager = self.client.messages.stream(
-            **self._request(model, system, messages, max_tokens))
+
+        def open_stream(msgs, round_no):
+            manager = self.client.messages.stream(**self._request(
+                model, system, msgs, max_tokens,
+                last_round=round_no == MAX_TOOL_ROUNDS))
+            return manager, manager.__enter__()
+
         try:
-            stream = manager.__enter__()
+            first = open_stream(messages, 0)
         except Exception as e:
             return None, self._failure(e)
 
         def events():
-            parts = []
-            try:
-                # text_stream carries only the answer, never a thinking block.
-                for text in stream.text_stream:
-                    parts.append(text)
-                    yield {'type': 'text', 'text': text}
-                final = stream.get_final_message()
-            finally:
-                manager.__exit__(None, None, None)
-            done = self._finish_turn(session_id, mode, model, ''.join(parts), final,
+            nonlocal messages
+            shown, answer, opened = [], _Answer(), first
+            for round_no in range(MAX_TOOL_ROUNDS + 1):
+                manager, stream = opened
+                parts, held = [], ''
+                try:
+                    # text_stream carries only the answer, never a thinking
+                    # block or a lookup. The opening words are held back: a
+                    # model about to look words up sometimes says so first
+                    # ("Let me check those spellings"), and that line is for
+                    # no one. Once the text is longer than any such line, it
+                    # is the answer, and it streams as normal.
+                    for text in stream.text_stream:
+                        parts.append(text)
+                        if held is not None:
+                            held += text
+                            if len(held) < HELD_BACK_CHARS:
+                                continue
+                            text, held = held, None
+                        shown.append(text)
+                        yield {'type': 'text', 'text': text}
+                    final = stream.get_final_message()
+                finally:
+                    manager.__exit__(None, None, None)
+                answer.add(final)
+                looked_up = final.stop_reason == 'tool_use' and round_no < MAX_TOOL_ROUNDS
+                if held and not looked_up:
+                    # A short answer, all of it still held back.
+                    shown.append(held)
+                    yield {'type': 'text', 'text': held}
+                if not looked_up:
+                    break
+                messages = messages + [
+                    {'role': 'assistant', 'content': final.content},
+                    {'role': 'user', 'content': _tool_results(final)}]
+                opened = open_stream(messages, round_no + 1)
+            # The answer is the last request's words: anything written before
+            # a lookup was the model talking to itself, not to the student.
+            text = _checked(''.join(parts))
+            if text != ''.join(shown):
+                yield {'type': 'replace', 'text': text}
+            done = self._finish_turn(session_id, mode, model, text, answer,
                                      remember=history is None)
             yield {'type': 'done', **done}
 

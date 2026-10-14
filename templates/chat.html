@@ -951,6 +951,16 @@
                     text += event.text;
                     bubble.innerHTML = formatMessage(text);
                     chatBody.scrollTop = chatBody.scrollHeight;
+                } else if (event.type === 'replace') {
+                    // The finished answer differs from what was shown: a
+                    // spelling corrected against the lessons. Show the
+                    // corrected one, and remember that one too.
+                    if (!bubble) {
+                        document.getElementById('thinking').classList.remove('active');
+                        bubble = addMessage('assistant', '');
+                    }
+                    text = event.text;
+                    bubble.innerHTML = formatMessage(text);
                 } else if (event.type === 'done') {
                     finished = true;
                     if (event.tokens_used) {
