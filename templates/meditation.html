@@ -448,6 +448,17 @@
 <div class="card">
     <h3>{{ technique.name }}</h3>
     <p class="thai-text" style="margin-bottom:1rem;">{{ technique.thai }}</p>
+    {% if technique.about %}
+    <p style="line-height:1.8;">{{ technique.about }}</p>
+    {% endif %}
+    {% if technique.contemplations %}
+    <h4>What you contemplate:</h4>
+    <ul style="line-height:1.8; padding-left:1.2rem;">
+        {% for c in technique.contemplations %}
+        <li><strong>{{ c.name }}</strong> (<em>{{ c.pali }}</em>, <span lang="th">{{ c.thai }}</span>) — {{ c.text }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     <h4>Instructions:</h4>
     {% for step in technique.instructions %}
     <div class="instruction-step">

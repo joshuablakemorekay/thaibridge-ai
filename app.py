@@ -3221,7 +3221,43 @@ MEDITATION_TECHNIQUES = {
                     'See all phenomena as "not-self"',
                     'Rest in awareness itself',
                 ],
-                'benefits': 'Direct insight into reality'
+                'benefits': 'Direct insight into reality',
+                # The fourth foundation is a set of frameworks, not one object,
+                # so it names them. Order and lists follow the Satipatthana Sutta
+                # (MN 10); British spelling, Pali in brackets.
+                'about': ('Dhammanupassana is mindfulness directed at dhammas: '
+                          'mental qualities, phenomena and the teachings themselves. '
+                          'It is the fourth and final foundation of mindfulness in the '
+                          'Satipatthana Sutta, after mindfulness of the body, of '
+                          'feelings and of the mind.'),
+                'contemplations': [
+                    {'name': 'The Five Hindrances', 'pali': 'nīvaraṇa',
+                     'thai': 'นิวรณ์ ๕',
+                     'text': 'Sensual desire, ill will, sloth and torpor, restlessness '
+                             'and worry, and doubt. Know when each is present or absent, '
+                             'how it arises, how it is let go, and how it stays away.'},
+                    {'name': 'The Five Aggregates', 'pali': 'khandha',
+                     'thai': 'ขันธ์ ๕',
+                     'text': 'Form, feeling, perception, mental formations and '
+                             'consciousness: the parts that make up a person. See '
+                             'each one arise and pass away.'},
+                    {'name': 'The Six Sense Bases', 'pali': 'āyatana',
+                     'thai': 'อายตนะ ๖',
+                     'text': 'Eye, ear, nose, tongue, body and mind, with their objects. '
+                             'Know each sense door, its object, and the fetter that '
+                             'arises dependent on both.'},
+                    {'name': 'The Seven Factors of Awakening', 'pali': 'bojjhaṅga',
+                     'thai': 'โพชฌงค์ ๗',
+                     'text': 'Mindfulness, investigation of dhammas, energy, joy, '
+                             'tranquillity, concentration and equanimity. Know when each '
+                             'is present, how it arises, and how it is brought to '
+                             'fulfilment.'},
+                    {'name': 'The Four Noble Truths', 'pali': 'ariya-sacca',
+                     'thai': 'อริยสัจ ๔',
+                     'text': 'Know as it really is: this is suffering, this is its origin, '
+                             'this is its cessation, and this is the path leading to its '
+                             'cessation.'},
+                ],
             },
         ]
     },
