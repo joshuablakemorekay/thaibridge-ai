@@ -409,6 +409,49 @@
                 setHint(HINTS[scope()] || HINTS.page);
             }
 
+            // A calm female voice, not whatever the browser lists first (on
+            // Windows that is often a robotic male voice). Each browser and
+            // device has different voices, so this is a ranked wish list: the
+            // natural-sounding online voices first, then good built-in ones.
+            // British first, to match the rest of the site.
+            var PREFERRED_VOICES = [
+                'Sonia', 'Libby', 'Maisie',            // Edge, natural, British
+                'Google UK English Female',             // Chrome
+                'Serena', 'Kate', 'Martha', 'Stephanie', // Apple, British
+                'Aria', 'Jenny', 'Michelle', 'Emma',    // Edge, natural, other English
+                'Hazel', 'Susan',                       // Windows, British
+                'Samantha', 'Karen', 'Moira', 'Tessa', 'Fiona', // Apple, other English
+                'Zira'                                  // Windows, American
+            ];
+            var chosenVoice = null;
+            function pickVoice() {
+                if (!synth || !synth.getVoices) return null;
+                var voices = synth.getVoices().filter(function (v) {
+                    return /^en/i.test(v.lang);
+                });
+                for (var i = 0; i < PREFERRED_VOICES.length; i++) {
+                    for (var j = 0; j < voices.length; j++) {
+                        if (voices[j].name.indexOf(PREFERRED_VOICES[i]) !== -1) {
+                            return voices[j];
+                        }
+                    }
+                }
+                // Nothing on the list: any voice that says it is female.
+                for (var k = 0; k < voices.length; k++) {
+                    if (/female/i.test(voices[k].name)) return voices[k];
+                }
+                return null;   // leave it to the browser's default
+            }
+            if (synth) {
+                chosenVoice = pickVoice();
+                // Most browsers load their voice list a moment after the page.
+                if ('onvoiceschanged' in synth) {
+                    synth.addEventListener('voiceschanged', function () {
+                        chosenVoice = pickVoice();
+                    });
+                }
+            }
+
             function speak(source) {
                 var text = stripThai(source || '');
                 if (!text) {
@@ -422,7 +465,8 @@
                     if (!part) return;
                     var u = new SpeechSynthesisUtterance(part);
                     u.lang = 'en-GB';
-                    u.rate = 0.95;
+                    if (chosenVoice) { u.voice = chosenVoice; u.lang = chosenVoice.lang; }
+                    u.rate = 0.9;   // a touch slower: calmer, and easier to follow
                     if (i === chunks.length - 1) u.onend = function () { setSpeaking(false); };
                     u.onerror = function () { setSpeaking(false); };
                     synth.speak(u);
