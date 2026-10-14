@@ -733,7 +733,13 @@ SECTION_REQUIREMENTS = {
 # cookies to reset it), which is fine for a portfolio/demo app. Defined here,
 # above SUBSCRIPTION_TIERS, so the Free tier's feature list can quote the real
 # number instead of a hardcoded one that goes stale.
-FREE_AI_DAILY_LIMIT = 15                       # messages/day for free & basic tiers
+# 15 was set on 2026-06-06, when the tutor ran on Haiku. On Sonnet 5.5 a
+# message costs about three times as much, and Thai Reader subscribers were
+# getting exactly what Free got — paying bought no extra tutor at all. Free is
+# now a real taste (5), and Thai Reader keeps the old 15. Settled with Josh
+# 2026-10-14. Dhamma questions are a separate pool and are not affected.
+FREE_AI_DAILY_LIMIT = 5                        # tutor messages/day, free tier
+BASIC_AI_DAILY_LIMIT = 15                      # tutor messages/day, Thai Reader
 
 # Ceiling on XP earned from practice drills in one day.
 #
@@ -760,8 +766,8 @@ FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 # it sat behind a language-study budget — the same line, reached by a side
 # door.
 #
-# This is added ON TOP of the tutor's 15 rather than reserved out of it.
-# Reserving would have cut everyone's tutor allowance from 15 to 10 to fund a
+# This is added ON TOP of the tutor allowance rather than reserved out of it.
+# Reserving would have cut everyone's tutor allowance (then 15) to 10 to fund a
 # fix for a promise we had already made; nobody should lose something so that
 # we can keep our word. At about 0.85p a message on Sonnet 5.5 it is about 4p
 # a day for someone who exhausts it daily, which almost nobody will.
@@ -788,8 +794,13 @@ def ai_pool_for(mode):
     return 'dhamma' if mode in DHAMMA_AI_MODES else 'tutor'
 
 
-def ai_pool_limit(pool_name):
-    """Today's allowance for a pool, read from the constant at call time."""
+def ai_pool_limit(pool_name, tier=None):
+    """Today's allowance for a pool, read from the constant at call time.
+
+    Thai Reader (basic) gets a bigger tutor allowance than Free; the Dhamma
+    pool is the same for everyone, because the teaching is not tiered."""
+    if pool_name == 'tutor' and tier == 'basic':
+        return BASIC_AI_DAILY_LIMIT
     return globals()[AI_POOLS[pool_name]['limit_name']]
 
 # The longest reply the AI may write. At the old 500, half the answers in a
@@ -849,6 +860,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Culture, formality, register & gender guides',
             '✓ Themed exercise sets',
             '✓ Tour Guide & Business Thai',
+            f'✓ AI Thai tutor — {BASIC_AI_DAILY_LIMIT} messages a day',
             '✓ 2x points multiplier',
         ],
         'max_level_access': 7,
@@ -1593,7 +1605,7 @@ def ai_limits_status():
     usage = _ai_usage_today()
     pools = {}
     for name, pool in AI_POOLS.items():
-        limit = ai_pool_limit(name)
+        limit = ai_pool_limit(name, tier)
         used = usage.get(pool['key'], 0)
         pools[name] = {
             'limit': limit,
@@ -9334,7 +9346,7 @@ def _ai_chat_gate(tier, mode):
         usage = _ai_usage_today()
         pool_name = ai_pool_for(mode)
         pool = AI_POOLS[pool_name]
-        pool_limit = ai_pool_limit(pool_name)
+        pool_limit = ai_pool_limit(pool_name, tier)
         if usage.get(pool['key'], 0) >= pool_limit:
             log_ai_usage('chat', 'blocked_cap', mode=mode)
             if pool_name == 'dhamma':
@@ -9352,7 +9364,8 @@ def _ai_chat_gate(tier, mode):
                 # left is the kind of nudge that reads as a trick.
                 dhamma_left = max(0, ai_pool_limit('dhamma')
                                   - usage.get(AI_POOLS['dhamma']['key'], 0))
-                message = (f"You’ve used your {pool_limit} free Thai tutor "
+                message = (f"You’ve used your {pool_limit} "
+                           f"{'' if tier == 'basic' else 'free '}Thai tutor "
                            "messages for today. ")
                 if dhamma_left:
                     message += (f"You still have {dhamma_left} Dhamma question"
