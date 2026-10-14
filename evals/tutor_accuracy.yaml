@@ -215,10 +215,12 @@ cases:
     mode: translator
     question: "Translate: I would like to offer this food to the monk."
     must_include: [ถวาย]
-    must_not_include: [ให้พระ]
+    must_not_include: [ให้พระ, no wait, clean version, "actually,"]
     why: >
       The commonest temple mistake is ให้ for giving to a monk. A translator
       that hands it to a learner teaches the mistake with no one to catch it.
+      Sonnet 5.5 also once began ผมอยากถวาย..., wrote "no wait, here is the
+      clean version" and started again, so a restart fails too.
 
   - id: translate-polite-particle
     mode: translator
