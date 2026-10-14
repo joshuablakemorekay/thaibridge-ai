@@ -208,3 +208,46 @@ cases:
       Sonnet 5.5 began a table for this, fumbled the example (หมา... see note)
       and restarted mid-answer with "Let me give you one clean, clear example
       for each tone instead". The chat cannot draw tables either.
+
+  # ── Translator ────────────────────────────────────────────────────────────
+
+  - id: translate-give-to-monk
+    mode: translator
+    question: "Translate: I would like to offer this food to the monk."
+    must_include: [ถวาย]
+    must_not_include: [ให้พระ]
+    why: >
+      The commonest temple mistake is ให้ for giving to a monk. A translator
+      that hands it to a learner teaches the mistake with no one to catch it.
+
+  - id: translate-polite-particle
+    mode: translator
+    question: "Translate: Will do it later."
+    must_include:
+      - [ครับ, ค่ะ, คะ]
+      - [ทีหลัง, ภายหลัง]
+    why: >
+      The teacher's own example (2026-10-14): Thai drops "I" and keeps the
+      polite particle. A bare translation with no ครับ/ค่ะ is the Casual rung.
+
+  - id: translate-question-word
+    mode: translator
+    question: "Translate: Are you hungry?"
+    must_include: [มั๊ย]
+    # Not plain ไหม: the rules tell the tutor to mention that books write it.
+    must_not_include: [หิวไหม, ค๊ะ]
+    why: >
+      The app writes the question word as Thai people say it, มั๊ย, by the
+      teacher's note of 2026-10-13. A translator writing ไหม contradicts
+      every other page. Sonnet 5.5's first answer also spelt the question
+      particle ค๊ะ; the word is คะ, with no tone mark.
+
+  - id: translate-thai-to-english
+    mode: translator
+    question: กินข้าวรึยัง
+    must_include:
+      - [eaten, eat]
+      - [yet]
+    why: >
+      Thai in must come back in English with a breakdown, not be answered in
+      Thai as if it were a conversation.

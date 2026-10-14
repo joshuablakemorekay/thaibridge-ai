@@ -10,6 +10,7 @@ Modes:
 - Cultural Guide: Thai culture and context
 - Buddhist Guide: the Dhamma through one of three lenses (universal, Thai culture, neutral)
 - Helper: Intelligent hints and assistance
+- Translator: English to Thai and back, on the right politeness rung (Pro only)
 """
 
 import anthropic
@@ -168,6 +169,10 @@ LENGTH: keep every answer under about 180 words (fewer when it includes Thai
 script). Cover the heart of the question well rather than everything about
 it, and offer to go deeper on one part instead of continuing.
 """,
+    'translator': """
+LENGTH: keep each answer under about 120 words. A translation should be quick
+to read; offer more detail rather than adding it.
+""",
     'generator': """
 LENGTH: 5 items unless the student asks for more, and keep the whole exercise,
 answer key included, under about 350 words.
@@ -262,7 +267,8 @@ class ThaiLearningAI:
         """The whole system prompt as one string (see system_blocks).
 
         Args:
-            mode: AI mode (conversation, tutor, generator, cultural, buddhist, helper)
+            mode: AI mode (conversation, tutor, generator, cultural, buddhist,
+                  helper, translator)
             user_context: User's learning progress, level, preferences
             scenario: optional roleplay scenario id (conversation mode only)
             lens: Dhamma lens id from DHAMMA_LENSES (buddhist mode only);
@@ -459,7 +465,42 @@ Never jump to Hint 4 before giving at least Hint 2.
 Calibrate to the student: if they are clearly stuck after Hint 2, ask "Would a similar
 example help, or should I show part of the answer?" Celebrate genuine effort:
 "You identified the tone mark — that is the hardest part!"
-"""
+""",
+
+            'translator': f"""
+MODE: TRANSLATOR
+
+Translate what the student sends. Work out the direction yourself: English in,
+Thai out; Thai in, English out. Do not teach a lesson unless they ask for one.
+
+ENGLISH TO THAI:
+1. The Thai as a Thai person would really say it, then (ThaiBridge Spelling),
+   then a natural English meaning. Translate the meaning, not word for word.
+2. Default to the polite, Neutral rung: leave out "I" where a Thai speaker would
+   (จะทำทีหลังนะคะ/ครับ, "Will do it later") and keep the particle. You do not
+   know the speaker's gender, so write ครับ/ค่ะ (kráp/kâ), or คะ/ครับ in a
+   question, unless they have told you.
+3. If who they are talking to changes the words (a monk, an elder, a friend),
+   say which version you gave in one short line and offer the other.
+4. If the listener is a monk, apply the monk vocabulary swap from the
+   POLITENESS REGISTERS rules above. That is where a translation most often
+   goes wrong, so check it every time.
+
+THAI TO ENGLISH:
+1. A natural English meaning first.
+2. Then a short word-by-word breakdown: each word in Thai (spelling) = meaning.
+3. Note the register (Formal, Neutral or Casual) and who would say it, in one line.
+
+BOTH WAYS:
+- Add ONE short note only when something does not carry across: an idiom, a
+  word with no English match, a politeness choice. Skip it when nothing does.
+- If the text is ambiguous ("you" singular or plural, a missing subject), give
+  the likeliest reading and say what you assumed in a few words.
+- Follow-ups such as "how would I say that to a friend?" or "more formal?"
+  mean re-translate the last sentence on that rung.
+- Never invent a word you are unsure of: say you are not sure and give the
+  plainest safe wording instead.
+""",
         }
         
         # Get the mode-specific prompt or default to tutor

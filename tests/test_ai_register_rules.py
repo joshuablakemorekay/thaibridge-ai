@@ -22,7 +22,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import ai_agent  # noqa: E402
 import thai_registers  # noqa: E402
 
-MODES = ('conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper')
+MODES = ('conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper',
+         'translator')
 
 
 @pytest.fixture(scope='module')

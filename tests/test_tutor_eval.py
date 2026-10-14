@@ -19,7 +19,8 @@ import tutor_eval  # noqa: E402
 import ai_agent  # noqa: E402
 
 CASES = tutor_eval.load_cases()
-MODES = {'conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper'}
+MODES = {'conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper',
+         'translator'}
 
 
 def by_id(case_id):

@@ -36,7 +36,8 @@ def test_consonant_classes_come_from_the_alphabet_data():
 
 def test_every_mode_carries_the_consonant_classes():
     agent = ai_agent.ThaiLearningAI(api_key='test-key-not-used')
-    for mode in ('conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper'):
+    for mode in ('conversation', 'tutor', 'generator', 'cultural', 'buddhist', 'helper',
+                 'translator'):
         assert tutor_reference.consonant_classes() in agent.get_system_prompt(mode, {})
 
 
