@@ -36,6 +36,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`annual-billing-option`](./annual-billing-option/) | code-generation | Adds yearly billing to existing tiers — after checking the codebase and finding the requested "new Premium tier" already existed, so building it as written would have been a price cut | Yes (v1 rejected → v2 built) |
 | [`social-media-coursework`](./social-media-coursework/) | content / agent-workflow | Rebuilds four marketing-course submissions one at a time, each fed into the next — and the screenshot step found the live AI tutor teaching the wrong word for "give" to a monk, fixed in `a1df2f9` | Yes (v1 chain → v3 live screenshots) |
 | [`meta-ai-post-prompts`](./meta-ai-post-prompts/) | content | Fills the course's two Meta AI templates (post text + image) from the settled coursework facts and the app's real stylesheet colours — and its own rubric caught the CTA pointing at the hosting URL instead of the live domain | Yes (v1 run → v2 domain fixed) |
+| [`translator-mode`](./translator-mode/) | agent-workflow | Adds a Pro translator to the AI tutor as a seventh chat mode built on the politeness rules it already had — and recording a real answer for CI caught it restarting mid-reply ("no wait, here is the clean version"), fixed by fixing the answer's shape | Yes (v1 → v2 no restarts) |
 
 ## Featured iterations
 

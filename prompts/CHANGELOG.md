@@ -372,3 +372,12 @@ Each entry follows this format:
 **Impact:** Would have made simple info and full-width pages look wrong; corrected by matching the layout to each page's job.
 
 <!-- Add more entries above as the library grows. -->
+
+---
+
+## translator-mode
+
+### 2026-10-14 — v1 → v2
+**Change:** v1 asked for *"a proficient translator feature"*, planned as a Pro chat mode and built in four steps. v2 rewrote the start of the mode's instructions so the reply opens with the one finished Thai sentence, after a real answer restarted partway through.
+**Reason:** A mode inherits the spelling rules, the politeness rules, the checked word list and the Pro lock. A new page would have had to rebuild all of them.
+**Impact:** `b7c2f10` (mode) and `dd07264` (chat page, Pro lock wording). An existing test rejected the first draft for copying the monk vocabulary out of `thai_registers.py`. The exam's first ไหม check was too strict and was narrowed, which also caught a misspelt ค๊ะ. The restart showed up about one run in three before the fix and in none of six after it.

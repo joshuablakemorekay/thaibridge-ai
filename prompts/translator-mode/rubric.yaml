@@ -1,0 +1,56 @@
+# Evaluation rubric for: Translator Mode
+#
+# Scores a translator reply. The real-model checks for this mode live in
+# evals/tutor_accuracy.yaml (the translate-* cases); this rubric keeps the
+# portfolio's prompt library consistent and runs in CI on mock output.
+
+prompt: translator-mode
+version: 1
+# A real run would send the build request in prompt.md, which asks for a
+# feature, not a translation. The real-model checks are the translate-* cases.
+real_run_skip: "Scored by the translate-* cases in evals/tutor_accuracy.yaml against the live tutor, not by one message"
+
+criteria:
+  - name: includes_thai_script
+    description: The translation is in real Thai script
+    weight: 5
+    pass_condition: "any('\u0e00' <= c <= '\u0e7f' for c in output)"
+
+  - name: includes_thaibridge_spelling
+    description: ThaiBridge Spelling with tone marks accompanies the Thai
+    weight: 4
+    pass_condition: "any(c in output for c in ['à', 'â', 'á', 'ǎ', 'ɔ', 'ʉ'])"
+
+  - name: keeps_the_polite_particle
+    description: Default is the Neutral level, so ครับ/ค่ะ (or คะ) stays on
+    weight: 5
+    pass_condition: "any(s in output for s in ['ครับ', 'ค่ะ', 'คะ'])"
+
+  - name: uses_thawai_for_a_monk
+    description: Giving to a monk uses ถวาย, never ให้พระ
+    weight: 5
+    pass_condition: "'ถวาย' in output and 'ให้พระ' not in output"
+
+  - name: spells_the_particle_correctly
+    description: คะ, never the misspelt ค๊ะ
+    weight: 3
+    pass_condition: "'ค๊ะ' not in output"
+
+  - name: does_not_restart
+    description: One finished translation, never a draft replaced partway through
+    weight: 4
+    pass_condition: "not any(s in output.lower() for s in ['no wait', 'clean version', 'actually,'])"
+
+  - name: stays_short
+    description: A translation, not a lesson
+    weight: 2
+    pass_condition: "len(output.split()) <= 160"
+
+test_cases:
+  - input:
+      task: "Translate: I would like to offer this food to the monk."
+    expected_traits:
+      - Thai script with ThaiBridge Spelling
+      - ถวาย for giving to a monk
+      - ครับ/ค่ะ kept, "I" dropped where Thai drops it
+      - under about 120 words
