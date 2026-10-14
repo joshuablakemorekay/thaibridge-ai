@@ -361,7 +361,7 @@
         <select class="ambient-btn" id="musicSelect" onchange="setMusic(this.value)" aria-label="Background music">
             <option value="off">🔔 Bell only</option>
             <option value="tranquil">🎵 Tranquil music</option>
-            <option value="alpha">🎧 Alpha waves (headphones)</option>
+            <option value="golden">🎧 Golden binaural beat (headphones)</option>
         </select>
     </div>
 
@@ -911,9 +911,11 @@ function playBell(times = 1) {
 // ── Background music ─────────────────────────────────────────────────────
 // Generated live by the browser, so there are no audio files to host and no
 // licence to check. "Tranquil" is a slow, swelling drone with an occasional
-// singing bowl. "Alpha" adds two tones 10 Hz apart, one per ear - the
-// alpha-wave style many meditators like. It needs headphones to work, and we
-// make no health claims for it.
+// singing bowl. "Golden" is a binaural beat: a C at 131 Hz in the left ear
+// and 132.618 Hz in the right, so the brain hears a slow 1.618 Hz pulse - the
+// golden number - over a soft C drone. It needs headphones. The note under
+// the picker says what it may help with and that the evidence is mixed; no
+// stronger claim is made, on purpose (see /policies: no selling with tricks).
 let _ctx = null;
 let musicMode = 'off';
 let music = null;          // { master, nodes, bowlTimer } while playing
@@ -931,8 +933,12 @@ function setMusic(mode) {
     sel.classList.toggle('active', mode !== 'off');
     const note = document.getElementById('musicNote');
     note.style.display = mode === 'off' ? 'none' : 'block';
-    note.textContent = mode === 'alpha'
-        ? '🎧 Use headphones - each ear hears a slightly different tone. On iPhone, turn the silent switch off.'
+    note.textContent = mode === 'golden'
+        ? '🎧 Use headphones: your left ear hears a C at 131 Hz and your right ear 132.618 Hz, '
+          + 'so you hear a slow 1.618 Hz pulse - the golden number. A beat this slow sits in the '
+          + 'delta range, the rhythm of deep rest, and many meditators find it helps them settle and '
+          + 'let go of busy thoughts. Research on binaural beats is mixed, so treat it as a gentle aid, '
+          + 'not a promise. On iPhone, turn the silent switch off.'
         : 'On iPhone, turn the silent switch off to hear the music.';
     stopMusic();
     if (isRunning) startMusic();
@@ -953,8 +959,12 @@ function startMusic() {
         soft.connect(master);
 
         const nodes = [];
-        // A open chord, low and quiet: A2, E3, A3, C#4
-        [110, 164.81, 220, 277.18].forEach((freq, i) => {
+        const golden = musicMode === 'golden';
+        // Tranquil: an open A chord (A2, E3, A3, C#4). Golden: a low C chord
+        // (C2, G2, E3, G3) that sits under the 131 Hz C without beating
+        // against it - C3 itself is left out for that reason.
+        const chord = golden ? [65.41, 98.00, 164.81, 196.00] : [110, 164.81, 220, 277.18];
+        chord.forEach((freq, i) => {
             const osc = ctx.createOscillator();
             osc.type = i === 0 ? 'triangle' : 'sine';
             osc.frequency.value = freq;
@@ -971,12 +981,13 @@ function startMusic() {
             nodes.push(osc, lfo);
         });
 
-        if (musicMode === 'alpha' && ctx.createStereoPanner) {
-            [[200, -1], [210, 1]].forEach(([freq, pan]) => {
+        if (golden && ctx.createStereoPanner) {
+            // 131 Hz left, 132.618 Hz right: a 1.618 Hz binaural beat
+            [[131, -1], [132.618, 1]].forEach(([freq, pan]) => {
                 const osc = ctx.createOscillator();
                 osc.frequency.value = freq;
                 const g = ctx.createGain();
-                g.gain.value = 0.12;
+                g.gain.value = 0.16;
                 const p = ctx.createStereoPanner();
                 p.pan.value = pan;
                 osc.connect(g).connect(p).connect(master);
@@ -1032,7 +1043,8 @@ function singingBowl(dest) {
 // ── Init ──────────────────────────────────────────────────────────────────
 updateDisplay();
 try {
-    const saved = localStorage.getItem('meditationMusic');
+    let saved = localStorage.getItem('meditationMusic');
+    if (saved === 'alpha') saved = 'golden';
     if (saved && saved !== 'off') {
         document.getElementById('musicSelect').value = saved;
         setMusic(saved);
