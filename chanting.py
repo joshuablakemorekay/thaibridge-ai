@@ -12206,7 +12206,7 @@ CHANTS = [
             {
                 'number': 27,
                 'pali': 'วุฏฐะหิ จายัส๎มา มะหากัสสะโป ตัมหา อาพาธา, ตะถาปะหีโน จายัส๎มะโต มะหากัสสะปัสสะ โส (ลากเสียง) อาพาโธ อะโหสีติ.',
-                'pali_roman': 'vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐiaŋ) ābādho ahosīti.',
+                'pali_roman': 'vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐaŋ) ābādho ahosīti.',
                 'thai': '',
                 'paiboon': '',
                 'english': "And the venerable Mahākassapa rose up from that illness, and in that way the venerable Mahākassapa's illness was abandoned.",
@@ -21207,12 +21207,12 @@ CHANTS = [
         # ‼ CHECK [IMG_0329.PNG]: The title is THAI, not Pali, so title_pali
         #   is empty and title_roman carries the romanisation the book's own
         #   contents already prints for this line — kam tà-wǎai dɔ̀ɔk-máai
-        #   tûup tiian nai wan wí-sǎa-kà-buu-chaa — rather than a fresh one,
+        #   tûup tian nai wan wí-sǎa-kà-buu-chaa — rather than a fresh one,
         #   so a reader meets one spelling in the contents and on the page.
         'id': 'kham-tawai-dokmai-thup-thian-visakha',
         'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา',
         'title_pali': '',
-        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan wí-sǎa-kà-buu-chaa',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan wí-sǎa-kà-buu-chaa',
         'title_english': 'The Words for Offering Flowers, Incense and Candles on Visākha Pūjā Day',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -22226,7 +22226,7 @@ CHANTS = [
         'id': 'kham-tawai-dokmai-thup-thian-atthami',
         'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันอัฏฐมีบูชา',
         'title_pali': '',
-        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan àt-tà-mii-buu-chaa',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan àt-tà-mii-buu-chaa',
         'title_english': 'The Words for Offering Flowers, Incense and Candles on Aṭṭhamī Pūjā Day',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -23354,7 +23354,7 @@ CHANTS = [
         'id': 'kham-tawai-dokmai-thup-thian-magha',
         'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา',
         'title_pali': '',
-        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan maa-ká-buu-chaa',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan maa-ká-buu-chaa',
         'title_english': 'The Words for Offering Flowers, Incense and Candles on Māgha Pūjā Day',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -24994,7 +24994,7 @@ CHANTS = [
         'id': 'kham-tawai-dokmai-thup-thian-asalha',
         'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา',
         'title_pali': '',
-        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan aa-sǎan-hà-buu-chaa',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan aa-sǎan-hà-buu-chaa',
         'title_english': 'The Words for Offering Flowers, Incense and Candles on Āsāḷha Pūjā Day',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -55615,7 +55615,7 @@ CHANTS = [
         'id': 'gatha-jut-thian-chai-plae',
         'title_thai': 'คาถาจุดเทียนชัย',
         'title_pali': '',
-        'title_roman': 'kaa-tǎa jùt tiian-chai',
+        'title_roman': 'kaa-tǎa jùt tian-chai',
         'title_english': 'The Verse for Lighting the Victory Candle',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -56746,7 +56746,7 @@ CHANTS = [
                 'pali': 'ตะมะหัง ภะคะวันตัง สิระสา นะมามิ.',
                 'pali_roman': 'Tamahaṃ bhagavantaṃ sirasā namāmi.',
                 'thai': 'ข้าพเจ้านอบน้อมพระผู้มีพระภาคเจ้าพระองค์นั้น, ด้วยเศียรเกล้า.',
-                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-pûu-mii-prá-pâak-jâo prá-oŋ nán, dûay sǐian-glâo.',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-pûu-mii-prá-pâak-jâo prá-oŋ nán, dûay sǐan-glâo.',
                 'english': 'I bow to that Blessed One with my head.',
             },
         ],
@@ -56894,7 +56894,7 @@ CHANTS = [
                 'pali': 'ตะมะหัง ธัมมัง สิระสา นะมามิ.',
                 'pali_roman': 'Tamahaṃ dhammaṃ sirasā namāmi.',
                 'thai': 'ข้าพเจ้านอบน้อมพระธรรมนั้น ด้วยเศียรเกล้า.',
-                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-tam nán dûay sǐian-glâo.',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-tam nán dûay sǐan-glâo.',
                 'english': 'I bow to that Dhamma with my head.',
             },
         ],
@@ -57554,7 +57554,7 @@ CHANTS = [
                 'pali': 'จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
                 'pali_roman': 'Cattāri purisayugāni aṭṭha purisapuggalā,',
                 'thai': 'คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,',
-                'paiboon': 'kûu hɛ̀ŋ bù-rùt sìi kûu, náp riiaŋ dtua bù-rùt dâai bpɛ̀ɛt bù-rùt,',
+                'paiboon': 'kûu hɛ̀ŋ bù-rùt sìi kûu, náp riaŋ dtua bù-rùt dâai bpɛ̀ɛt bù-rùt,',
                 'english': 'four pairs of persons, eight individuals counted singly,',
             },
             {
@@ -57646,7 +57646,7 @@ CHANTS = [
                 'pali': 'ตะมะหัง สังฆัง สิระสา นะมามิ.',
                 'pali_roman': 'Tamahaṃ saṅghaṃ sirasā namāmi.',
                 'thai': 'ข้าพเจ้านอบน้อมพระสงฆ์หมู่นั้น ด้วยเศียรเกล้า,',
-                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-sǒŋ mùu nán dûay sǐian-glâo,',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-sǒŋ mùu nán dûay sǐan-glâo,',
                 'english': 'I bow to that Sangha with my head.',
             },
         ],
@@ -57744,7 +57744,7 @@ CHANTS = [
                 'pali': 'วันทามิ พุทธัง อะหะมาทะเรนะ ตัง,',
                 'pali_roman': 'Vandāmi buddhaṃ ahamādarena taṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระพุทธเจ้าพระองค์นั้น, โดยใจเคารพเอื้อเฟื้อ,',
-                'paiboon': 'kâa-pá-jâo wâai prá-pút-tá-jâo prá-oŋ nán, dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'paiboon': 'kâa-pá-jâo wâai prá-pút-tá-jâo prá-oŋ nán, dooy jai kao-róp ʉ́a-fʉ́a,',
                 'english': 'I revere that Buddha with a heart of respect and care,',
             },
             {
@@ -57753,7 +57753,7 @@ CHANTS = [
                 'pali': 'ธัมโม ปะทีโป วิยะ ตัสสะ สัตถุโน,',
                 'pali_roman': 'Dhammo padīpo viya tassa satthuno,',
                 'thai': 'พระธรรมของพระศาสดา สว่างรุ่งเรืองเปรียบดวงประทีป,',
-                'paiboon': 'prá-tam kɔ̌ɔŋ prá-sàat-sà-daa sà-wàaŋ rûŋ-rʉaŋ bpriiap duaŋ bprà-tîip,',
+                'paiboon': 'prá-tam kɔ̌ɔŋ prá-sàat-sà-daa sà-wàaŋ rûŋ-rʉaŋ bpriap duaŋ bprà-tîip,',
                 'english': 'The Dhamma of that Teacher shines bright as a lamp,',
             },
             # ‼ CHECK [IMG_0468.PNG]: CUT AT THE PAGE TURN. Verse 6 is the
@@ -57784,7 +57784,7 @@ CHANTS = [
                 'pali': 'วันทามิ ธัมมัง อะหะมาทะเรนะ ตัง,',
                 'pali_roman': 'Vandāmi dhammaṃ ahamādarena taṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระธรรมนั้น โดยใจเคารพเอื้อเฟื้อ,',
-                'paiboon': 'kâa-pá-jâo wâai prá-tam nán dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'paiboon': 'kâa-pá-jâo wâai prá-tam nán dooy jai kao-róp ʉ́a-fʉ́a,',
                 'english': 'I revere that Dhamma with a heart of respect and care,',
             },
             {
@@ -57820,7 +57820,7 @@ CHANTS = [
                 'pali': 'วันทามิ สังฆัง อะหะมาทะเรนะ ตัง,',
                 'pali_roman': 'Vandāmi saṅghaṃ ahamādarena taṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระสงฆ์หมู่นั้น โดยใจเคารพเอื้อเฟื้อ,',
-                'paiboon': 'kâa-pá-jâo wâai prá-sǒŋ mùu nán dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'paiboon': 'kâa-pá-jâo wâai prá-sǒŋ mùu nán dooy jai kao-róp ʉ́a-fʉ́a,',
                 'english': 'I revere that Sangha with a heart of respect and care,',
             },
             # ‼ CHECK [IMG_0469.PNG]: ‼ VERSE 13'S PALI IS SET FULL WIDTH, not
@@ -59013,7 +59013,7 @@ CHANTS = [
                 'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค๎รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ, Dānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะพญามารผู้เนรมิตแขนมากตั้งพัน, ถืออาวุธครบมือ ขี่คชสารครีเมขละ, พร้อมด้วยเสนามารโห่ร้องก้องกึก, ด้วยธรรมวิธีมีทานบารมีเป็นต้น, ขอชัยมงคลทั้งหลาย จงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
-                'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan kriimeekálá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan krii-mee-kà-lá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages defeated Mara, who conjured a thousand arms, each with a weapon, riding the elephant Girimekhala with his roaring army - defeated him by the way of Dhamma, giving and the rest. By that power may the blessings of victory be yours.',
             },
             # ‼ CHECK [IMG_0473.PNG]: ‼ ฬ POSITIVELY PROVEN ON THIS PAGE, not
@@ -61962,7 +61962,7 @@ CHANTS = [
                 'pali': 'สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร อัปปะสัยโห วะ สัตตูหิ เหยยัง อะมันทะมุยหะโก,',
                 'pali_roman': 'Saddhāsatihirottappā- tāpakkhantiguṇākaro appasayho va sattūhi heyyaṃ amandamuyhako,',
                 'thai': 'ขอให้ข้าพเจ้าเป็นบ่อที่เกิดแห่งคุณ, คือ ศรัทธา สติ หิริ โอตตัปปะ ความเพียร และขันติ, พึงเป็นผู้ที่ศัตรูครอบงำไม่ได้, ไม่เป็นคนเขลา คนหลงงมงาย,',
-                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen bɔ̀ɔ tîi gə̀ət hɛ̀ŋ kun, kʉʉ sàt-taa sà-dtì hì-rí oo-dtàt-dtà-bpà kwaam-piian lɛ́ kǎn-dtì, pʉŋ bpen pûu tîi sàt-dtruu krɔ̂ɔp-ŋam mâi dâai, mâi bpen kon klǎo kon lǒŋ ŋom-ŋaai,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen bɔ̀ɔ tîi gə̀ət hɛ̀ŋ kun, kʉʉ sàt-taa sà-dtì hì-rí oo-dtàt-dtà-bpà kwaam-pian lɛ́ kǎn-dtì, pʉŋ bpen pûu tîi sàt-dtruu krɔ̂ɔp-ŋam mâi dâai, mâi bpen kon klǎo kon lǒŋ ŋom-ŋaai,',
                 'english': 'may I be a mine of good qualities - faith, mindfulness, moral shame and dread, energy and patience - unconquerable by enemies, neither dull nor deluded,',
             },
             # ‼ CHECK [IMG_0484.PNG]: YAMAKKAN AGAIN, on วัตตัต๎วะสัชชัง at
@@ -78679,7 +78679,7 @@ _CONTENTS_PAIBOON = {
     'ทำวัตรเย็น':
         'tam-wát yen',
     'ระเบียบทำวัตรสวดมนต์ ภาคเย็น':
-        'rá-bìiap tam-wát sùat-mon pâak yen',
+        'rá-bìap tam-wát sùat-mon pâak yen',
     'คาถาบูชาพระรัตนตรัย':
         'kaa-tǎa buu-chaa prá-rát-dtà-ná-dtrai',
     'คำเชิญบูชาสวดนะโม และพระพุทธคุณ':
@@ -78703,21 +78703,21 @@ _CONTENTS_PAIBOON = {
     'คาถาอาราธนาธรรม':
         'kaa-tǎa aa-râat-tá-naa tam',
     'คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา':
-        'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan wí-sǎa-kà-buu-chaa',
+        'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan wí-sǎa-kà-buu-chaa',
     'สะระภัญญะคาถา สำหรับสวดในวันวิสาขบูชา':
         'sà-rá-pan-yá-kaa-tǎa sǎm-ràp sùat nai wan wí-sǎa-kà-buu-chaa',
     'คำถวายดอกไม้ ธูป เทียน ในวันอัฏฐมีบูชา':
-        'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan àt-tà-mii-buu-chaa',
+        'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan àt-tà-mii-buu-chaa',
     'สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา':
         'sà-rá-pan-yá-kaa-tǎa sǎm-ràp sùat nai wan àt-tà-mii-buu-chaa',
     'คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา':
-        'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan maa-ká-buu-chaa',
+        'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan maa-ká-buu-chaa',
     'สะระภัญญะคาถา สำหรับสวดในวันมาฆบูชา':
         'sà-rá-pan-yá-kaa-tǎa sǎm-ràp sùat nai wan maa-ká-buu-chaa',
     'บทขัดโอวาทะปาติโมกขาทิปาฐะ':
         'bòt-kàt oo-waa-tà-bpaa-dtì-môok-kǎa-tí-bpaa-tà',
     'คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา':
-        'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan aa-sǎan-hà-buu-chaa',
+        'kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan aa-sǎan-hà-buu-chaa',
     'พระสูตร พระปริตร ปาฐะ และคาถาที่กำหนดสวดในภาคเย็น':
         'prá-sùut prá-bpà-rìt bpaa-tà lɛ́ kaa-tǎa tîi gam-nòt sùat nai pâak yen',
     'บทขัดชุมนุมเทวดา':
@@ -78849,33 +78849,33 @@ _CONTENTS_PAIBOON = {
     'คำอนุโมทนาของพระมหาเถระ':
         'kam à-nú-moo-tá-naa kɔ̌ɔŋ prá-má-hǎa-těe-rá',
     'คาถาจุดเทียนชัย':
-        'kaa-tǎa jùt tiian-chai',
+        'kaa-tǎa jùt tian-chai',
     'คาถาดับเทียนชัย':
-        'kaa-tǎa dàp tiian-chai',
+        'kaa-tǎa dàp tian-chai',
     'อธิบายระเบียบสวดมนต์ในพิธีต่าง ๆ':
-        'à-tí-baai rá-bìiap sùat-mon nai pí-tii dtàaŋ-dtàaŋ',
+        'à-tí-baai rá-bìap sùat-mon nai pí-tii dtàaŋ-dtàaŋ',
     'ระเบียบสวดมนต์งานพิธีมงคล':
-        'rá-bìiap sùat-mon ŋaan pí-tii moŋ-kon',
+        'rá-bìap sùat-mon ŋaan pí-tii moŋ-kon',
     'ระเบียบสวดมนต์งานพิธีมงคลอื่น ๆ':
-        'rá-bìiap sùat-mon ŋaan pí-tii moŋ-kon ʉ̀ʉn-ʉ̀ʉn',
+        'rá-bìap sùat-mon ŋaan pí-tii moŋ-kon ʉ̀ʉn-ʉ̀ʉn',
     'ระเบียบสวดเจ็ดตำนานอย่างเต็มที่':
-        'rá-bìiap sùat jèt dtam-naan yàaŋ dtem-tîi',
+        'rá-bìap sùat jèt dtam-naan yàaŋ dtem-tîi',
     'ระเบียบสวดเจ็ดตำนานอย่างปานกลาง':
-        'rá-bìiap sùat jèt dtam-naan yàaŋ bpaan-glaaŋ',
+        'rá-bìap sùat jèt dtam-naan yàaŋ bpaan-glaaŋ',
     'ระเบียบสวดเจ็ดตำนานอย่างย่อ':
-        'rá-bìiap sùat jèt dtam-naan yàaŋ yɔ̂ɔ',
+        'rá-bìap sùat jèt dtam-naan yàaŋ yɔ̂ɔ',
     'ระเบียบสวดถวายพรพระก่อนฉัน':
-        'rá-bìiap sùat tà-wǎai pɔɔn prá gɔ̀ɔn chǎn',
+        'rá-bìap sùat tà-wǎai pɔɔn prá gɔ̀ɔn chǎn',
     'ระเบียบสวดในงานพิธีอวมงคล':
-        'rá-bìiap sùat nai ŋaan pí-tii à-wá-moŋ-kon',
+        'rá-bìap sùat nai ŋaan pí-tii à-wá-moŋ-kon',
     'อธิบายระเบียบสวดมนต์พิเศษ':
-        'à-tí-baai rá-bìiap sùat-mon pí-sèet',
+        'à-tí-baai rá-bìap sùat-mon pí-sèet',
     'ระเบียบสวดมนต์นพเคราะห์':
-        'rá-bìiap sùat-mon nóp-pá-krɔ́',
+        'rá-bìap sùat-mon nóp-pá-krɔ́',
     'ระเบียบถวายพรพระ':
-        'rá-bìiap tà-wǎai pɔɔn prá',
+        'rá-bìap tà-wǎai pɔɔn prá',
     'ระเบียบอนุโมทนา':
-        'rá-bìiap à-nú-moo-tá-naa',
+        'rá-bìap à-nú-moo-tá-naa',
     'อนุโมทนาวิธี':
         'à-nú-moo-tá-naa-wí-tii',
     'มงคลจักรวาฬน้อย (ย่อ)':
@@ -78885,7 +78885,7 @@ _CONTENTS_PAIBOON = {
     'อาฏานาฏิยะปะริตตัง (ย่อ)':
         'aa-dtaa-naa-dtì-yá-bpà-rít-dtaŋ (yɔ̂ɔ)',
     'ระเบียบบังสุกุล':
-        'rá-bìiap baŋ-sù-gun',
+        'rá-bìap baŋ-sù-gun',
     'คาถาศราทธพรต':
         'kaa-tǎa sà-râat-tá-pá-rót',
     'คำอธิบายประกอบ':
@@ -78905,15 +78905,15 @@ _CONTENTS_PAIBOON = {
     'คำบอกอนุศาสน์':
         'kam bɔ̀ɔk à-nú-sǎat',
     'แบบสวดกรรมวาจาในอุปสมบทกรรม สำหรับนาคเดี่ยว':
-        'bɛ̀ɛp sùat gam-má-waa-jaa nai ù-bpà-sǒm-bòt-gam sǎm-ràp nâak-dìiao',
+        'bɛ̀ɛp sùat gam-má-waa-jaa nai ù-bpà-sǒm-bòt-gam sǎm-ràp nâak-dìao',
     'คำสมมติตนเพื่อสอนซ้อม':
         'kam sǒm-mút dton pʉ̂a sɔ̌ɔn-sɔ́ɔm',
     'คำสอนซ้อม':
         'kam sɔ̌ɔn-sɔ́ɔm',
     'คำเรียกอุปสัมปทาเปกขะเข้ามา':
-        'kam rîiak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
+        'kam rîak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
     'คำพระอุปัชฌายะกล่าวเผดียงสงฆ์':
-        'kam prá-ù-bpàt-chaa-yá glàao pà-diiaŋ sǒŋ',
+        'kam prá-ù-bpàt-chaa-yá glàao pà-diaŋ sǒŋ',
     'คำสมมติตนเพื่อถามอันตรายิกธรรม':
         'kam sǒm-mút dton pʉ̂a tǎam an-dtà-raa-yí-gà-tam',
     'คำถามอันตรายิกธรรม':
@@ -78923,11 +78923,11 @@ _CONTENTS_PAIBOON = {
     'คำสวดสมมติและคำสอนซ้อม (นาคคู่)':
         'kam sùat sǒm-mút lɛ́ kam sɔ̌ɔn-sɔ́ɔm (nâak-kûu)',
     'คำขอเรียกอุปสัมปทาเปกขะเข้ามา':
-        'kam kɔ̌ɔ rîiak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
+        'kam kɔ̌ɔ rîak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
     'คำสมมติตนและคำถามอันตรายิกธรรม':
         'kam sǒm-mút dton lɛ́ kam tǎam an-dtà-raa-yí-gà-tam',
     'คำพระอุปัชฌาย์กล่าวเผดียงสงฆ์':
-        'kam prá-ù-bpàt-chaa glàao pà-diiaŋ sǒŋ',
+        'kam prá-ù-bpàt-chaa glàao pà-diaŋ sǒŋ',
     'คำสวดกรรมวาจาอุปสมบท':
         'kam sùat gam-má-waa-jaa ù-bpà-sǒm-bòt',
     'คำขอบวชชี':
@@ -78945,7 +78945,7 @@ _CONTENTS_PAIBOON = {
     'คำอธิษฐาน':
         'kam à-tít-tǎan',
     'คำเสียสละ':
-        'kam sǐia-sà-là',
+        'kam sǐa-sà-là',
     'คำคืน':
         'kam kʉʉn',
     'คำวิกัปป์':

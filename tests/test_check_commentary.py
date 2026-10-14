@@ -17,7 +17,8 @@ sys.path.insert(0, os.path.join(
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from check_commentary import (  # noqa: E402
-    against, own_text, prose, script, shape, strip_commentary)
+    against, book_spelling_changes, own_text, prose, script, shape,
+    shorten_diphthongs, strip_commentary)
 
 
 def chant(**overrides):
@@ -136,9 +137,20 @@ def test_the_real_book_is_unchanged_since_before_stage_3():
     non-commentary field of every chant must still be identical to it: no
     verse, title, page number, invitation, section label or rubric moved while
     77,000 words of prose were written around them.
+
+    The deliberate changes since are romanisation only, made 2026-10-14: the
+    long diphthongs (riian, tuua) moved to the app's ia/ua standard, plus the
+    single-word fixes in BOOK_CORRECTIONS. Those are applied to both sides, so
+    anything else that moved still fails.
     """
     import chanting
-    assert against('5d53f50~1', chanting.CHANTS) == []
+    assert against('5d53f50~1', chanting.CHANTS,
+                   normalise=book_spelling_changes) == []
+
+
+def test_the_spelling_rule_only_touches_long_diphthongs():
+    assert shorten_diphthongs('rá-bìiap sùuat rʉ̂ʉa') == 'rá-bìap sùat rʉ̂a'
+    assert shorten_diphthongs({'pali': 'sīlaṃ', 'thai': 'เรียน'}) == {'pali': 'sīlaṃ', 'thai': 'เรียน'}
 
 
 def test_every_chant_in_the_real_book_has_its_commentary():

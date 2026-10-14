@@ -300,7 +300,7 @@ PAIBOON_INITIALS = [
     '',                       # a syllable may begin with its vowel (an, ùu)
 ]
 PAIBOON_VOWELS = [
-    'ʉʉa', 'uua', 'iia', 'aao', 'aai', 'ɔɔi', 'ooi', 'ɛɛo', 'eeo', 'iao',
+    'aao', 'aai', 'ɔɔi', 'ooi', 'ɛɛo', 'eeo', 'iao',
     'ɔɔ', 'əə', 'ɛɛ', 'ʉʉ', 'aa', 'ii', 'uu', 'ee', 'oo',
     'ia', 'ʉa', 'ua', 'ai', 'ao', 'ui', 'ɔi', 'oi',
     'a', 'i', 'ʉ', 'u', 'e', 'ɛ', 'o', 'ɔ', 'ə',

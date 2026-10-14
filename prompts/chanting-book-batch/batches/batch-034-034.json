@@ -148,7 +148,7 @@
         {
           "number": 27,
           "pali": "วุฏฐะหิ จายัส๎มา มะหากัสสะโป ตัมหา อาพาธา, ตะถาปะหีโน จายัส๎มะโต มะหากัสสะปัสสะ โส (ลากเสียง) อาพาโธ อะโหสีติ.",
-          "pali_roman": "vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐiaŋ) ābādho ahosīti.",
+          "pali_roman": "vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐaŋ) ābādho ahosīti.",
           "thai": "",
           "paiboon": "",
           "english": "And the venerable Mahākassapa rose up from that illness, and in that way the venerable Mahākassapa's illness was abandoned."
@@ -260,7 +260,7 @@
     "resume_from_file": "IMG_0298.PNG",
     "resume_from": "mahamoggallana-bojjhanga-suttam",
     "unreadable": [],
-    "paiboon_scan": "clean — no kh/th/ph/ng hits. The only Paiboon+ on this page is the bracketed instruction lâak sǐiaŋ in verse 27, which uses ŋ, not ng.",
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. The only Paiboon+ on this page is the bracketed instruction lâak sǐaŋ in verse 27, which uses ŋ, not ng.",
     "pali_untouched": "Confirmed. No pali value was run through Paiboon+; every pali line is the Thai script exactly as printed, and every pali_roman is IAST.",
     "page_scan": "agrees — both rows name page 34, the first claims verses 16-27 and the entry holds exactly those, the second claims verses 1-4 and the entry holds exactly those. No verse is orphaned or claimed twice.",
     "notes": "One image, one page. The resume_from_file is the expected next filename and is not a page number claim — page 35's number must be read off its own photograph."
