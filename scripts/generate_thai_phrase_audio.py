@@ -133,9 +133,11 @@ def collect_paiboon():
     reuse the Alphabet recordings (the template splits the ข/ค-style groups and
     looks each letter up), the tone markers are bare combining marks with
     nothing to say, and the tones table is romanisation only. The
-    vowel_examples data is not rendered on the page, so it is left out too."""
+    vowel_examples data is not rendered on the page, so it is left out too.
+    The five tone words (TONE_REFERENCE) are real words and are recorded."""
     import app
-    return [v['thai'] for v in app.PAIBOON_GUIDE['vowels']]
+    return ([v['thai'] for v in app.PAIBOON_GUIDE['vowels']]
+            + [t['thai'] for t in app.TONE_REFERENCE])
 
 
 def collect_grammar():

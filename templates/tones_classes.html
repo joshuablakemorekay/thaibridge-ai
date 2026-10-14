@@ -281,7 +281,8 @@
     <div class="example-row">
         {% for t in data.reference_tones %}
         <div class="example-chip">
-            <span class="e-thai">{{ t.example }}</span>
+            <span class="e-thai">{{ t.thai }}</span>{{ listen(t.thai) }}
+            <div style="font-size: 0.95rem;">{{ t.paiboon }} · “{{ t.english }}”</div>
             <span class="e-tone">{{ tone_shape(t.name) }}{{ t.name }}</span>
             <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ t.description }}</div>
         </div>

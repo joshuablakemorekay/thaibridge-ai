@@ -4119,6 +4119,33 @@ GRAMMAR = {
 # chart with 'obsolete': True so the template can grey them out and the drills
 # can skip them. Never include an obsolete letter as a drill question.
 
+# The five tones, taught with ONE set of real words. Both the Tones page and the
+# ThaiBridge Spelling guide read this, so they cannot drift apart again (they
+# had: one said the rising tone starts "mid-low", the other "low"). The words
+# are the classic kh- set — same consonant sound, same vowel, five different
+# words — so the only thing that changes when you play them is the tone. The
+# old examples (gaa, gàa, gâa…) were not words at all, so they had no meaning
+# and nothing a Thai voice could say. High and rising are described by where
+# they START, because "slightly rising" for high and "like a question" for
+# rising made the two sound the same to English ears.
+TONE_REFERENCE = [
+    {'name': 'Mid', 'symbol': 'no mark', 'thai': 'คา', 'paiboon': 'kaa', 'english': 'to be stuck',
+     'description': 'Level, in the middle of your normal speaking voice. Hold it flat.',
+     'tip': 'Like a calm, flat "hmm" - one steady note.'},
+    {'name': 'Low', 'symbol': 'à', 'thai': 'ข่า', 'paiboon': 'kàa', 'english': 'galangal',
+     'description': 'Starts below your normal voice and stays low and level.',
+     'tip': 'Like a deep, flat "oh" when you are unimpressed - drop down and stay there.'},
+    {'name': 'Falling', 'symbol': 'â', 'thai': 'ค่า', 'paiboon': 'kâa', 'english': 'value, cost',
+     'description': 'Starts high, then drops sharply.',
+     'tip': 'Like a firm "No!" - begin up high and come straight down.'},
+    {'name': 'High', 'symbol': 'á', 'thai': 'ค้า', 'paiboon': 'káa', 'english': 'to trade',
+     'description': 'Starts above your normal voice and stays high, tense, often lifting a touch at the end.',
+     'tip': 'Like an excited, high "Hi!" - start high and keep it up; never dip first.'},
+    {'name': 'Rising', 'symbol': 'ǎ', 'thai': 'ขา', 'paiboon': 'kǎa', 'english': 'leg',
+     'description': 'Starts LOW, dips a little, then climbs up high.',
+     'tip': 'Like a surprised "Really?" - start low and let it climb.'},
+]
+
 TONES_AND_CLASSES = {
     'core_concept': {
         'title': 'How Thai tones actually work',
@@ -4324,13 +4351,7 @@ TONES_AND_CLASSES = {
         ],
     },
 
-    'reference_tones': [
-        {'name': 'Mid', 'symbol': 'no mark', 'example': 'gaa', 'description': 'Flat, neutral pitch.'},
-        {'name': 'Low', 'symbol': 'à', 'example': 'gàa', 'description': 'Start low, stay low.'},
-        {'name': 'Falling', 'symbol': 'â', 'example': 'gâa', 'description': 'Start high, fall down.'},
-        {'name': 'High', 'symbol': 'á', 'example': 'gáa', 'description': 'Higher pitched, pushed up.'},
-        {'name': 'Rising', 'symbol': 'ǎ', 'example': 'gǎa', 'description': 'Start low, rise up (like a question).'},
-    ],
+    'reference_tones': TONE_REFERENCE,
     'tone_marks': [
         {'thai': ' ่', 'name': 'ไม้เอก (mai ek)', 'effect': 'Mid/High → low · Low → falling'},
         {'thai': ' ้', 'name': 'ไม้โท (mai tho)', 'effect': 'Mid/High → falling · Low → high'},
@@ -4394,13 +4415,7 @@ PAIBOON_GUIDE = {
         }
     },
     
-    'tones': [
-        {'name': 'Mid Tone', 'symbol': 'no mark', 'example': 'gaa', 'description': 'Flat, neutral pitch.'},
-        {'name': 'Low Tone', 'symbol': 'à', 'example': 'gàa', 'description': 'Start low, stay low.'},
-        {'name': 'Falling Tone', 'symbol': 'â', 'example': 'gâa', 'description': 'Start high, fall down.'},
-        {'name': 'High Tone', 'symbol': 'á', 'example': 'gáa', 'description': 'Higher pitched, slightly rising.'},
-        {'name': 'Rising Tone', 'symbol': 'ǎ', 'example': 'gǎa', 'description': 'Start mid-low, rise up.'},
-    ],
+    'tones': TONE_REFERENCE,
     
     'consonants': [
         {'thai': 'ก', 'paiboon': 'g', 'sound': 'unaspirated k (between g and k), like the k in "skin" - no puff of air'},

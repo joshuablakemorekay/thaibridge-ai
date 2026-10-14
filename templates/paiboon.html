@@ -192,7 +192,7 @@
 <div class="card-grid">
     {% for tone in guide.tones %}
     <div class="card" style="text-align: center;">
-        <h3 style="color: var(--royal-purple);">{{ tone.name }}</h3>
+        <h3 style="color: var(--royal-purple);">{{ tone.name }} Tone</h3>
         <p style="font-size: 2rem; margin: 0.5rem 0;">
             {% if tone.symbol == 'no mark' %}
             <span style="color: #666;">(no mark)</span>
@@ -200,7 +200,9 @@
             <span style="color: var(--temple-red);">{{ tone.symbol }}</span>
             {% endif %}
         </p>
-        <p class="paiboon" style="font-size: 1.5rem;">{{ tone.example }}</p>
+        <p style="font-size: 1.6rem; margin: 0.25rem 0;"><span class="thai">{{ tone.thai }}</span>{{ listen(tone.thai) }}</p>
+        <p class="paiboon" style="font-size: 1.4rem; margin: 0;">{{ tone.paiboon }}</p>
+        <p style="color: #444; margin: 0.25rem 0 0;">"{{ tone.english }}"</p>
         <p style="color: #666; margin-top: 0.5rem;">{{ tone.description }}</p>
     </div>
     {% endfor %}
@@ -209,12 +211,14 @@
 <div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: var(--bodhi-green);">
     <h3>💡 Tone Learning Tips</h3>
     <ul style="margin-left: 1.5rem; line-height: 2;">
-        <li><strong>Mid tone:</strong> Think of saying "hmm" thoughtfully - flat and neutral</li>
-        <li><strong>Low tone:</strong> Like a disappointed "oh" - start low, stay low</li>
-        <li><strong>Falling tone:</strong> Like an emphatic "NO!" - start high, fall sharply</li>
-        <li><strong>High tone:</strong> Like asking "huh?" - higher pitched, slightly rising</li>
-        <li><strong>Rising tone:</strong> Like asking "yeah?" uncertainly - rise from mid to high</li>
+        {% for tone in guide.tones %}
+        <li><strong>{{ tone.name }} tone:</strong> {{ tone.tip }}</li>
+        {% endfor %}
     </ul>
+    <p style="margin-top: 0.75rem; color: #555;">
+        Play the five words above one after another: the consonant and vowel never change,
+        so the only difference you hear is the tone - and each one is a different word.
+    </p>
 </div>
 
 <!-- Consonants -->
