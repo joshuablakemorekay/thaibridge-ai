@@ -642,6 +642,7 @@ function makeDrill(rootId, cfg) {
             return;
         }
 
+        if (window.ThaiSounds) ThaiSounds.result(result);
         const correct = result.correct_answer;
         buttons.forEach(b => { if (b.textContent === correct) b.classList.add('correct'); });
 

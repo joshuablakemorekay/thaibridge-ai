@@ -178,6 +178,7 @@ async function checkAnswer(answer) {
     });
     
     const result = await response.json();
+    if (window.ThaiSounds) ThaiSounds.result(result);
     
     if (result.correct) {
         score++;

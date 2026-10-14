@@ -509,6 +509,7 @@
 
         var correct = chosen.char === q.letter.char;
         if (correct) { score++; }
+        if (window.ThaiSounds) { correct ? ThaiSounds.correct() : ThaiSounds.wrong(); }
 
         // Mark every option, so the right answer is shown even when the guess
         // was wrong. The ✓/✗ matters as much as the colour — colour alone would

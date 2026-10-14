@@ -7960,6 +7960,7 @@ def pay_drill_answer(is_correct, scored):
     user = session['user_progress']
     xp_earned = 0
     new_level = user['level']
+    level_up = False
     capped = False
     
     if is_correct and scored:
@@ -7969,6 +7970,7 @@ def pay_drill_answer(is_correct, scored):
                             'Correct answer')
             xp_earned = result.get('points_earned', 0)
             new_level = result.get('level')
+            level_up = result.get('level_up', False)
             # Count what was actually paid, multiplier included, so a Pro
             # subscriber's 3x does not quietly buy three times the ceiling.
             user['drill_xp_today'] = user.get('drill_xp_today', 0) + xp_earned
@@ -7990,6 +7992,8 @@ def pay_drill_answer(is_correct, scored):
         # the browser's word and no XP was paid for it.
         'scored': scored,
         'new_level': new_level,
+        # True when this answer crossed a level, so the page can celebrate it.
+        'level_up': level_up,
         'total_xp': user['xp']
     }
 
