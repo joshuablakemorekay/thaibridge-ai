@@ -152,8 +152,8 @@ VARIANTS = {
     },
     'ขอบคุณครับ ผมกำลังเรียนอยู่ครับ': {
         'neutral': {'thai': 'ขอบคุณครับ กำลังเรียนอยู่ครับ',
-                    'paiboon': 'kɔ̀ɔp-kun kráp, gam-laŋ riian yùu kráp'},
-        'casual': {'thai': 'ขอบใจ ยังเรียนอยู่', 'paiboon': 'kɔ̀ɔp-jai, yaŋ riian yùu',
+                    'paiboon': 'kɔ̀ɔp-kun kráp, gam-laŋ rian yùu kráp'},
+        'casual': {'thai': 'ขอบใจ ยังเรียนอยู่', 'paiboon': 'kɔ̀ɔp-jai, yaŋ rian yùu',
                    'note': 'ขอบใจ is thanks to a friend or someone younger — never upward.'},
     },
 
@@ -162,7 +162,7 @@ VARIANTS = {
     # ---------------------------------------------------------------
     'ขอดูเสื้อตัวนี้หน่อยค่ะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ขอดูตัวนี้หน่อย', 'paiboon': 'kɔ̌ɔ duu dtuua níi nɔ̀ɔi',
+        'casual': {'thai': 'ขอดูตัวนี้หน่อย', 'paiboon': 'kɔ̌ɔ duu dtua níi nɔ̀ɔi',
                    'note': 'เสื้อ dropped — the classifier ตัว already tells them it is clothing.'},
     },
     'ได้ครับ ขนาดอะไรครับ': {
@@ -649,7 +649,7 @@ VARIANTS = {
     },
     'ขอคิดแป๊บนึงครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ขอคิดแป๊บนึง', 'paiboon': 'kɔ̌ɔ kít bpáep nʉ̀ŋ',
+        'casual': {'thai': 'ขอคิดแป๊บนึง', 'paiboon': 'kɔ̌ɔ kít bpɛ́p nʉ̀ŋ',
                    'note': 'แป๊บนึง ("a sec") is already colloquial — it never sounds formal.'},
     },
     'จริงเหรอครับ': {

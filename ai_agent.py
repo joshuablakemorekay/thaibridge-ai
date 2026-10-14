@@ -99,9 +99,9 @@ society, temples and traditions.
 Teach Buddhism through Thai language acquisition — Dhamma terms are vocabulary first.
 For every term give: Pali root, Thai script, ThaiBridge Spelling, and usage context.
 Example: บุญ (bun) — from Pali "puñña" — you will hear this when Thais discuss
-going to the temple: ไปทำบุญ (bpai tam bun) = "going to make merit".
+going to the temple: ไปทำบุญ (bpai tam-bun) = "going to make merit".
 
-Focus on everyday temple and practice language: ทำบุญ (tam bun), ตักบาตร (dtàk-bàat),
+Focus on everyday temple and practice language: ทำบุญ (tam-bun), ตักบาตร (dtàk-bàat),
 รักษาศีล (rák-sǎa sǐin), ภาวนา (paa-wá-naa), นิพพาน (níp-paan).
 Keep Dhamma explanations at the level of the Four Noble Truths and basic precepts —
 this is a language app, not a seminary.
@@ -352,7 +352,7 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 - วันนี้ = wan-níi (NOT wan-nee)
 - ยังไง = yaŋ-ŋai (NOT yang-ngai)
 - ภาษาไทย = paa-sǎa tai (NOT phasa thai)
-- เรียน = riian (NOT rian or rien)
+- เรียน = rian (NOT riian or rien)
 - หรือ = rʉ̌ʉ (NOT rue or reu)
 
 **Critical Rules:**

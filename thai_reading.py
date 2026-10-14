@@ -188,7 +188,7 @@ STORIES = [
         'draft': True,
         'sentences': [
             [
-                _tok('นานมาแล้ว', 'naan maa láew', 'long ago'),
+                _tok('นานมาแล้ว', 'naan maa lɛ́ɛo', 'long ago'),
                 _tok('มี', 'mii', 'there was'),
                 _tok('ลิง', 'liŋ', 'a monkey'),
                 _tok('ตัวหนึ่ง', 'dtua nʉ̀ŋ', 'one (of them)'),

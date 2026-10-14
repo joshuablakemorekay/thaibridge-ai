@@ -1958,12 +1958,12 @@ GENDER_VARIANTS = {
         'please': {
             'male': {
                 'formal': {'thai': 'กรุณา...ครับ', 'paiboon': 'gà-rú-naa... kráp', 'english': 'Please...'},
-                'polite': {'thai': 'ช่วย...หน่อยครับ', 'paiboon': 'chûuai... nɔ̀ɔi kráp', 'english': 'Please help...'},
+                'polite': {'thai': 'ช่วย...หน่อยครับ', 'paiboon': 'chûai... nɔ̀ɔi kráp', 'english': 'Please help...'},
                 'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔi', 'english': 'Please (informal)'},
             },
             'female': {
                 'formal': {'thai': 'กรุณา...ค่ะ', 'paiboon': 'gà-rú-naa... kâ', 'english': 'Please...'},
-                'polite': {'thai': 'ช่วย...หน่อยค่ะ', 'paiboon': 'chûuai... nɔ̀ɔi kâ', 'english': 'Please help...'},
+                'polite': {'thai': 'ช่วย...หน่อยค่ะ', 'paiboon': 'chûai... nɔ̀ɔi kâ', 'english': 'Please help...'},
                 'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔi', 'english': 'Please (informal)'},
             }
         }
@@ -2056,14 +2056,14 @@ FORMALITY_LEVELS = {
         'symbol': '☸',
         'name': 'Monastic',
         'thai': 'ภาษาพระสงฆ์',
-        'paiboon': 'paa-sǎa prá sǒŋ',
+        'paiboon': 'paa-sǎa prá-sǒŋ',
         'description': 'Used exclusively by monks, about monks, or in monastic contexts',
         'color': '#FF9933',
         'examples': [
             {'thai': 'ฉัน', 'paiboon': 'chǎn', 'english': 'to eat (monks only)'},
             {'thai': 'จีวร', 'paiboon': 'jii-won', 'english': 'monastic robes'},
             {'thai': 'บิณฑบาต', 'paiboon': 'bin-tá-bàat', 'english': 'alms round'},
-            {'thai': 'พระสงฆ์', 'paiboon': 'prá sǒŋ', 'english': 'Buddhist monk'},
+            {'thai': 'พระสงฆ์', 'paiboon': 'prá-sǒŋ', 'english': 'Buddhist monk'},
             {'thai': 'วิหาร', 'paiboon': 'wí-hǎan', 'english': 'temple hall'},
         ]
     },
@@ -2162,7 +2162,7 @@ FORMALITY_LEVELS = {
             {'thai': 'คุณ', 'paiboon': 'kun', 'english': 'you (polite)'},
             {'thai': 'กิน', 'paiboon': 'gin', 'english': 'to eat'},
             {'thai': 'สวัสดี', 'paiboon': 'sà-wàt-dii', 'english': 'hello/goodbye'},
-            {'thai': 'ขอบคุณ', 'paiboon': 'kɔ̀ɔp kun', 'english': 'thank you'},
+            {'thai': 'ขอบคุณ', 'paiboon': 'kɔ̀ɔp-kun', 'english': 'thank you'},
         ]
     },
     'casual': {
@@ -2349,7 +2349,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ua',
             'type': 'long',
             'sound': 'long "ua" - gliding vowel',
-            'example_word': {'thai': 'ตัว', 'paiboon': 'dtuua', 'english': 'body / classifier'},
+            'example_word': {'thai': 'ตัว', 'paiboon': 'dtua', 'english': 'body / classifier'},
             'length_note': 'Diphthong: "uu" + "a"'
         },
         {
@@ -2673,7 +2673,7 @@ TOUR_VOCAB = {
         {'english': 'Bill / Check', 'thai': 'เช็คบิล', 'paiboon': 'chék-bin', 'note': 'Used to request the bill'},
     ],
     'emergencies': [
-        {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai-dûai', 'note': 'Emergency cry for help'},
+        {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai dûai', 'note': 'Emergency cry for help'},
         {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'rooŋ-pá-yaa-baan', 'note': 'Important for emergencies'},
         {'english': 'Police', 'thai': 'ตำรวจ', 'paiboon': 'dam-rùat', 'note': 'For reporting issues'},
     ],
@@ -2739,7 +2739,7 @@ VOCABULARY = {
         {'thai': 'วันฉัตรมงคล', 'paiboon': 'wan chàt-moŋ-kon', 'english': 'Coronation Day', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'วันพืชมงคล', 'paiboon': 'wan pʉ̂ʉt-moŋ-kon', 'english': 'Royal Ploughing Ceremony', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'ผีตาโขน', 'paiboon': 'pǐi dtaa kǒon', 'english': 'Phi Ta Khon (masked festival, Loei)', 'category': 'festivals', 'formality': 'casual'},
-        {'thai': 'เทศกาลกินเจ', 'paiboon': 'tâyt-sà-gaan gin jee', 'english': 'Vegetarian Festival', 'category': 'festivals', 'formality': 'neutral'},
+        {'thai': 'เทศกาลกินเจ', 'paiboon': 'têet-sà-gaan gin jee', 'english': 'Vegetarian Festival', 'category': 'festivals', 'formality': 'neutral'},
         {'thai': 'งานบุญ', 'paiboon': 'ŋaan bun', 'english': 'Merit-making ceremony', 'category': 'festivals', 'formality': 'neutral'},
     ],
     
@@ -2767,7 +2767,7 @@ VOCABULARY = {
     ],
     
     'nature': [
-        {'thai': 'ดอกบัว', 'paiboon': 'dɔ̀ɔk buua', 'english': 'Lotus flower', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดอกบัว', 'paiboon': 'dɔ̀ɔk bua', 'english': 'Lotus flower', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ต้นโพธิ์', 'paiboon': 'dtôn poo', 'english': 'Bodhi tree', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ช้าง', 'paiboon': 'cháaŋ', 'english': 'Elephant', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'มะพร้าว', 'paiboon': 'má-práao', 'english': 'Coconut', 'category': 'nature', 'formality': 'neutral'},
@@ -2781,20 +2781,20 @@ VOCABULARY = {
         {'thai': 'นก', 'paiboon': 'nók', 'english': 'Bird', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ปลา', 'paiboon': 'bplaa', 'english': 'Fish', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ผีเสื้อ', 'paiboon': 'pǐi sʉ̂a', 'english': 'Butterfly', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ดวงจันทร์', 'paiboon': 'duuaŋ jan', 'english': 'Moon', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ดวงอาทิตย์', 'paiboon': 'duuaŋ aa-tít', 'english': 'Sun', 'category': 'nature', 'formality': 'literary'},
+        {'thai': 'ดวงจันทร์', 'paiboon': 'duaŋ jan', 'english': 'Moon', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดวงอาทิตย์', 'paiboon': 'duaŋ aa-tít', 'english': 'Sun', 'category': 'nature', 'formality': 'literary'},
         {'thai': 'ดาว', 'paiboon': 'daao', 'english': 'Star', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ฝน', 'paiboon': 'fǒn', 'english': 'Rain', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ลม', 'paiboon': 'lom', 'english': 'Wind', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'เมฆ', 'paiboon': 'mâyk', 'english': 'Cloud', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'เมฆ', 'paiboon': 'mêek', 'english': 'Cloud', 'category': 'nature', 'formality': 'neutral'},
     ],
     
     'buddhist_formal': [
         {'thai': 'พระพุทธเจ้า', 'paiboon': 'prá-pút-tá-jâo', 'english': 'The Buddha', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'พระสงฆ์', 'paiboon': 'prá-sǒŋ', 'english': 'Buddhist monks', 'category': 'buddhist_formal', 'formality': 'monastic'},
-        {'thai': 'ทำบุญ', 'paiboon': 'tam bun', 'english': 'Make merit', 'category': 'buddhist_formal', 'formality': 'neutral'},
+        {'thai': 'ทำบุญ', 'paiboon': 'tam-bun', 'english': 'Make merit', 'category': 'buddhist_formal', 'formality': 'neutral'},
         {'thai': 'วัด', 'paiboon': 'wát', 'english': 'Temple', 'category': 'buddhist_formal', 'formality': 'neutral'},
-        {'thai': 'สวดมนต์', 'paiboon': 'sùuat mon', 'english': 'Chant prayers', 'category': 'buddhist_formal', 'formality': 'formal'},
+        {'thai': 'สวดมนต์', 'paiboon': 'sùat-mon', 'english': 'Chant prayers', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'กราบ', 'paiboon': 'gràap', 'english': 'Prostrate', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'พระธรรม', 'paiboon': 'prá-tam', 'english': 'The Dhamma', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'พระไตรปิฎก', 'paiboon': 'prá-dtrai-bpì-dòk', 'english': 'Tripitaka', 'category': 'buddhist_formal', 'formality': 'formal'},
@@ -2805,7 +2805,7 @@ VOCABULARY = {
         {'thai': 'สมาธิ', 'paiboon': 'sà-maa-tí', 'english': 'Concentration (Samadhi)', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'ปัญญา', 'paiboon': 'bpan-yaa', 'english': 'Wisdom (Panna)', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'อริยสัจสี่', 'paiboon': 'à-rí-yá-sàt sìi', 'english': 'Four Noble Truths', 'category': 'buddhist_formal', 'formality': 'formal'},
-        {'thai': 'มรรคมีองค์แปด', 'paiboon': 'mák mii oŋ bpàet', 'english': 'Eightfold Path', 'category': 'buddhist_formal', 'formality': 'formal'},
+        {'thai': 'มรรคมีองค์แปด', 'paiboon': 'mák mii oŋ bpɛ̀ɛt', 'english': 'Eightfold Path', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'บิณฑบาต', 'paiboon': 'bin-tá-bàat', 'english': 'Alms round', 'category': 'buddhist_formal', 'formality': 'monastic'},
         {'thai': 'อุโบสถ', 'paiboon': 'ù-boo-sòt', 'english': 'Ordination hall', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'เจดีย์', 'paiboon': 'jee-dii', 'english': 'Stupa/Pagoda', 'category': 'buddhist_formal', 'formality': 'neutral'},
@@ -2837,12 +2837,12 @@ VOCABULARY = {
     
     'everyday': [
         {'thai': 'สวัสดี', 'paiboon': 'sà-wàt-dii', 'english': 'Hello/Goodbye', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'ขอบคุณ', 'paiboon': 'kɔ̀ɔp kun', 'english': 'Thank you', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'ขอโทษ', 'paiboon': 'kɔ̌ɔ tôot', 'english': 'Sorry/Excuse me', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'ขอบคุณ', 'paiboon': 'kɔ̀ɔp-kun', 'english': 'Thank you', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'ขอโทษ', 'paiboon': 'kɔ̌ɔ-tôot', 'english': 'Sorry/Excuse me', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ใช่', 'paiboon': 'châi', 'english': 'Yes', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ไม่ใช่', 'paiboon': 'mâi châi', 'english': 'No (not so)', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ไม่เป็นไร', 'paiboon': 'mâi bpen rai', 'english': "It's okay", 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'เท่าไหร่', 'paiboon': 'tâo rài', 'english': 'How much?', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'เท่าไหร่', 'paiboon': 'tâo-rài', 'english': 'How much?', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ร้อน', 'paiboon': 'rɔ́ɔn', 'english': 'Hot', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เย็น', 'paiboon': 'yen', 'english': 'Cold/Cool', 'category': 'everyday', 'formality': 'neutral'},
@@ -3311,9 +3311,9 @@ GRAMMAR = {
                         'category': 'Plural: "We"',
                         'entries': [
                             {'thai': 'เรา', 'paiboon': 'rao', 'formality': 'neutral', 'context': 'We (informal)', 'usage': 'Common plural form'},
-                            {'thai': 'พวกเรา', 'paiboon': 'pûuak rao', 'formality': 'neutral', 'context': 'We (emphasizing group)', 'usage': 'Our group/us'},
-                            {'thai': 'พวกผม', 'paiboon': 'pûuak pǒm', 'formality': 'polite', 'context': 'We (male speaker, polite)', 'usage': 'Professional settings'},
-                            {'thai': 'พวกดิฉัน', 'paiboon': 'pûuak dì-chǎn', 'formality': 'formal', 'context': 'We (female speaker, formal)', 'usage': 'Formal settings'},
+                            {'thai': 'พวกเรา', 'paiboon': 'pûak rao', 'formality': 'neutral', 'context': 'We (emphasizing group)', 'usage': 'Our group/us'},
+                            {'thai': 'พวกผม', 'paiboon': 'pûak pǒm', 'formality': 'polite', 'context': 'We (male speaker, polite)', 'usage': 'Professional settings'},
+                            {'thai': 'พวกดิฉัน', 'paiboon': 'pûak dì-chǎn', 'formality': 'formal', 'context': 'We (female speaker, formal)', 'usage': 'Formal settings'},
                         ]
                     }
                 ]
@@ -3351,8 +3351,8 @@ GRAMMAR = {
                     {
                         'category': 'Plural: "You all"',
                         'entries': [
-                            {'thai': 'พวกคุณ', 'paiboon': 'pûuak kun', 'formality': 'polite', 'context': 'You (plural, polite)', 'usage': 'You all (polite)'},
-                            {'thai': 'พวกเธอ', 'paiboon': 'pûuak təə', 'formality': 'casual', 'context': 'You (plural, casual)', 'usage': 'You guys'},
+                            {'thai': 'พวกคุณ', 'paiboon': 'pûak kun', 'formality': 'polite', 'context': 'You (plural, polite)', 'usage': 'You all (polite)'},
+                            {'thai': 'พวกเธอ', 'paiboon': 'pûak təə', 'formality': 'casual', 'context': 'You (plural, casual)', 'usage': 'You guys'},
                         ]
                     }
                 ]
@@ -3382,16 +3382,16 @@ GRAMMAR = {
                         'category': 'Objects / Animals - "It"',
                         'entries': [
                             {'thai': 'มัน', 'paiboon': 'man', 'formality': 'neutral', 'context': 'It (animals, objects)', 'usage': 'Not for humans'},
-                            {'thai': 'ตัว', 'paiboon': 'dtuua', 'formality': 'neutral', 'context': 'It (animals)', 'usage': 'Specific animal'},
+                            {'thai': 'ตัว', 'paiboon': 'dtua', 'formality': 'neutral', 'context': 'It (animals)', 'usage': 'Specific animal'},
                             {'thai': 'อัน', 'paiboon': 'an', 'formality': 'neutral', 'context': 'It (objects)', 'usage': 'Specific object'},
                         ]
                     },
                     {
                         'category': 'Plural - "They"',
                         'entries': [
-                            {'thai': 'พวกเขา', 'paiboon': 'pûuak kǎo', 'formality': 'neutral', 'context': 'They (people)', 'usage': 'Group of people'},
-                            {'thai': 'เขาเหล่านั้น', 'paiboon': 'kǎo làu nán', 'formality': 'formal', 'context': 'Those people', 'usage': 'Formal plural'},
-                            {'thai': 'พวกมัน', 'paiboon': 'pûuak man', 'formality': 'neutral', 'context': 'They (animals/objects)', 'usage': 'Group of things'},
+                            {'thai': 'พวกเขา', 'paiboon': 'pûak kǎo', 'formality': 'neutral', 'context': 'They (people)', 'usage': 'Group of people'},
+                            {'thai': 'เขาเหล่านั้น', 'paiboon': 'kǎo lào nán', 'formality': 'formal', 'context': 'Those people', 'usage': 'Formal plural'},
+                            {'thai': 'พวกมัน', 'paiboon': 'pûak man', 'formality': 'neutral', 'context': 'They (animals/objects)', 'usage': 'Group of things'},
                         ]
                     },
                     {
@@ -3469,7 +3469,7 @@ GRAMMAR = {
                         'examples': ['นักเรียน (students)', 'คนไทย (Thai people)', 'เพื่อน (friends)'],
                         'sample_sentence': {
                             'thai': 'นักเรียนสามคน',
-                            'paiboon': 'nák-riian sǎam kon',
+                            'paiboon': 'nák-rian sǎam kon',
                             'english': 'three students'
                         }
                     },
@@ -3515,12 +3515,12 @@ GRAMMAR = {
                 'classifiers': [
                     {
                         'thai': 'ตัว',
-                        'paiboon': 'dtuua',
+                        'paiboon': 'dtua',
                         'usage': 'General classifier for animals, insects, clothing, furniture',
                         'examples': ['สุนัข (dogs)', 'แมว (cats)', 'ปลา (fish)', 'เสื้อ (shirts)', 'โต๊ะ (tables)'],
                         'sample_sentence': {
                             'thai': 'แมวสามตัว',
-                            'paiboon': 'mɛɛo sǎam dtuua',
+                            'paiboon': 'mɛɛo sǎam dtua',
                             'english': 'three cats'
                         }
                     },
@@ -3582,7 +3582,7 @@ GRAMMAR = {
                         'examples': ['คอมพิวเตอร์ (computers)', 'เครื่องบิน (airplanes)', 'เครื่องดนตรี (musical instruments)'],
                         'sample_sentence': {
                             'thai': 'คอมพิวเตอร์สองเครื่อง',
-                            'paiboon': 'kɔɔm-piu-dtəə sɔ̌ɔŋ krʉ̂aŋ',
+                            'paiboon': 'kɔm-piu-dtə̂ə sɔ̌ɔŋ krʉ̂aŋ',
                             'english': 'two computers'
                         }
                     },
@@ -3777,12 +3777,12 @@ GRAMMAR = {
                 'classifiers': [
                     {
                         'thai': 'ตัว',
-                        'paiboon': 'dtuua',
+                        'paiboon': 'dtua',
                         'usage': 'Shirts, upper body clothing',
                         'examples': ['เสื้อ (shirts)', 'เสื้อโค้ท (coats)'],
                         'sample_sentence': {
                             'thai': 'เสื้อสามตัว',
-                            'paiboon': 'sʉ̂a sǎam dtuua',
+                            'paiboon': 'sʉ̂a sǎam dtua',
                             'english': 'three shirts'
                         }
                     },
@@ -3868,21 +3868,21 @@ GRAMMAR = {
                     {
                         'pattern': 'Noun + Number + Classifier',
                         'thai': 'นักเรียนสามคน',
-                        'paiboon': 'nák-riian sǎam kon',
+                        'paiboon': 'nák-rian sǎam kon',
                         'english': 'three students',
                         'note': 'The standard order for counting anything'
                     },
                     {
                         'pattern': 'Noun + Classifier + นี้ / นั้น',
                         'thai': 'เสื้อตัวนี้',
-                        'paiboon': 'sʉ̂a dtuua níi',
+                        'paiboon': 'sʉ̂a dtua níi',
                         'english': 'this shirt',
                         'note': 'How you point at one specific thing'
                     },
                     {
                         'pattern': 'Classifier alone = "one"',
                         'thai': 'แมวตัวหนึ่ง = แมวตัว',
-                        'paiboon': 'mɛɛo dtuua nʉ̀ŋ = mɛɛo dtuua',
+                        'paiboon': 'mɛɛo dtua nʉ̀ŋ = mɛɛo dtua',
                         'english': 'one cat (หนึ่ง optional)',
                         'note': 'Can omit หนึ่ง (one) when obvious'
                     },
@@ -3946,7 +3946,7 @@ GRAMMAR = {
         {
             'name': 'Adverbs (คำกริยาวิเศษณ์)',
             'thai': 'คำกริยาวิเศษณ์',
-            'paiboon': 'kam grì-yaa wí-sàyt',
+            'paiboon': 'kam grì-yaa wí-sèet',
             'explanation': 'Adverbs typically come after verbs.',
             'examples': [
                 {'thai': 'เร็ว', 'paiboon': 'reo', 'english': 'quickly'},
@@ -3972,7 +3972,7 @@ GRAMMAR = {
             'paiboon': 'kam sǎn-taan',
             'explanation': 'Words connecting clauses or sentences.',
             'examples': [
-                {'thai': 'และ', 'paiboon': 'láe', 'english': 'and'},
+                {'thai': 'และ', 'paiboon': 'lɛ́', 'english': 'and'},
                 {'thai': 'หรือ', 'paiboon': 'rʉ̌ʉ', 'english': 'or'},
                 {'thai': 'แต่', 'paiboon': 'dtɛ̀ɛ', 'english': 'but'},
                 {'thai': 'เพราะ', 'paiboon': 'prɔ́', 'english': 'because'},
@@ -4053,11 +4053,11 @@ GRAMMAR = {
     'questions': [
         {'type': 'What', 'thai': 'อะไร', 'paiboon': 'à-rai', 'example': 'นี่คืออะไร'},
         {'type': 'Who', 'thai': 'ใคร', 'paiboon': 'krai', 'example': 'นี่คือใคร'},
-        {'type': 'Where', 'thai': 'ที่ไหน', 'paiboon': 'tîi nǎi', 'example': 'คุณไปที่ไหน'},
+        {'type': 'Where', 'thai': 'ที่ไหน', 'paiboon': 'tîi-nǎi', 'example': 'คุณไปที่ไหน'},
         {'type': 'When', 'thai': 'เมื่อไหร่', 'paiboon': 'mʉ̂a rài', 'example': 'คุณมาเมื่อไหร่'},
         {'type': 'Why', 'thai': 'ทำไม', 'paiboon': 'tam-mai', 'example': 'ทำไมคุณไป'},
         {'type': 'How', 'thai': 'อย่างไร', 'paiboon': 'yàaŋ rai', 'example': 'ทำอย่างไร'},
-        {'type': 'How much', 'thai': 'เท่าไหร่', 'paiboon': 'tâo rài', 'example': 'ราคาเท่าไหร่'},
+        {'type': 'How much', 'thai': 'เท่าไหร่', 'paiboon': 'tâo-rài', 'example': 'ราคาเท่าไหร่'},
         {'type': 'How many', 'thai': 'กี่', 'paiboon': 'gìi', 'example': 'กี่คน'},
     ],
     
@@ -4080,7 +4080,7 @@ GRAMMAR = {
         'examples': [
             {'thai': 'สามคน', 'paiboon': 'sǎam kon', 'english': 'three people'},
             {'thai': 'สองเล่ม', 'paiboon': 'sɔ̌ɔŋ lêm', 'english': 'two books'},
-            {'thai': 'ห้าตัว', 'paiboon': 'hâa dtuua', 'english': 'five animals'},
+            {'thai': 'ห้าตัว', 'paiboon': 'hâa dtua', 'english': 'five animals'},
         ]
     },
     
@@ -4156,7 +4156,7 @@ TONES_AND_CLASSES = {
             'memory_tip': 'Mostly the breathy / aspirated sounds. ฃ is obsolete — you will never meet it in real writing.',
             'consonants': [
                 {'thai': 'ข', 'paiboon': 'k', 'name': 'kɔɔ kài (egg)'},
-                {'thai': 'ฃ', 'paiboon': 'k', 'name': 'kɔɔ kùuat (bottle)', 'obsolete': True},
+                {'thai': 'ฃ', 'paiboon': 'k', 'name': 'kɔɔ kùat (bottle)', 'obsolete': True},
                 {'thai': 'ฉ', 'paiboon': 'ch', 'name': 'chɔɔ chǐŋ (cymbal)'},
                 {'thai': 'ฐ', 'paiboon': 't', 'name': 'tɔɔ tǎan (base)'},
                 {'thai': 'ถ', 'paiboon': 't', 'name': 'tɔɔ tǔŋ (bag)'},
@@ -4382,49 +4382,56 @@ PAIBOON_GUIDE = {
     ],
     
     'consonants': [
-        {'thai': 'ก', 'paiboon': 'g', 'sound': 'g as in "go"'},
-        {'thai': 'ข/ค', 'paiboon': 'k', 'sound': 'k as in "sky"'},
-        {'thai': 'ง', 'paiboon': 'ŋ', 'sound': 'ŋ as in \"sing\"'},
-        {'thai': 'จ', 'paiboon': 'j', 'sound': 'j as in "jam"'},
-        {'thai': 'ช/ฉ', 'paiboon': 'ch', 'sound': 'ch as in "church"'},
+        {'thai': 'ก', 'paiboon': 'g', 'sound': 'unaspirated k (between g and k), like the k in "skin" - no puff of air'},
+        {'thai': 'ข/ค/ฆ', 'paiboon': 'k', 'sound': 'k as in "kite" - with a puff of air'},
+        {'thai': 'ง', 'paiboon': 'ŋ', 'sound': 'ŋ as in "sing" - also starts syllables in Thai'},
+        {'thai': 'จ', 'paiboon': 'j', 'sound': 'j as in "jam", but softer - no puff of air'},
+        {'thai': 'ฉ/ช/ฌ', 'paiboon': 'ch', 'sound': 'ch as in "church"'},
         {'thai': 'ด/ฎ', 'paiboon': 'd', 'sound': 'd as in "day"'},
-        {'thai': 'ต/ฏ', 'paiboon': 'dt', 'sound': 'unaspirated t (between d and t)'},
-        {'thai': 'ท/ธ/ถ', 'paiboon': 't', 'sound': 't as in "top"'},
+        {'thai': 'ต/ฏ', 'paiboon': 'dt', 'sound': 'unaspirated t (between d and t), like the t in "stop" - no puff of air'},
+        {'thai': 'ถ/ท/ธ/ฐ/ฑ/ฒ', 'paiboon': 't', 'sound': 't as in "top" - with a puff of air'},
         {'thai': 'น/ณ', 'paiboon': 'n', 'sound': 'n as in "no"'},
         {'thai': 'บ', 'paiboon': 'b', 'sound': 'b as in "boy"'},
-        {'thai': 'ป', 'paiboon': 'bp', 'sound': 'unaspirated p (between b and p)'},
-        {'thai': 'พ/ภ/ผ', 'paiboon': 'p', 'sound': 'p as in "pan"'},
-        {'thai': 'ฟ/ฝ', 'paiboon': 'f', 'sound': 'f as in "fun"'},
-        {'thai': 'ม', 'paiboon': 'm', 'sound': 'm as in "mom"'},
-        {'thai': 'ย', 'paiboon': 'y', 'sound': 'y as in "yes"'},
+        {'thai': 'ป', 'paiboon': 'bp', 'sound': 'unaspirated p (between b and p), like the p in "spin" - no puff of air'},
+        {'thai': 'ผ/พ/ภ', 'paiboon': 'p', 'sound': 'p as in "pan" - with a puff of air'},
+        {'thai': 'ฝ/ฟ', 'paiboon': 'f', 'sound': 'f as in "fun"'},
+        {'thai': 'ม', 'paiboon': 'm', 'sound': 'm as in "mum"'},
+        {'thai': 'ย/ญ', 'paiboon': 'y', 'sound': 'y as in "yes"'},
         {'thai': 'ร', 'paiboon': 'r', 'sound': 'r (rolled)'},
         {'thai': 'ล/ฬ', 'paiboon': 'l', 'sound': 'l as in "love"'},
         {'thai': 'ว', 'paiboon': 'w', 'sound': 'w as in "way"'},
-        {'thai': 'ส/ศ/ษ', 'paiboon': 's', 'sound': 's as in "sun"'},
+        {'thai': 'ซ/ศ/ษ/ส', 'paiboon': 's', 'sound': 's as in "sun"'},
         {'thai': 'ห/ฮ', 'paiboon': 'h', 'sound': 'h as in "hat"'},
     ],
     
     'vowels': [
         # Note: Short vowels are pronounced as phonic sounds. There is a distinct Thai accent not to be confused with the many English accents!
-        {'thai': 'อะ', 'paiboon': 'a', 'sound': 'short "a" as in "bat"'},
-        {'thai': 'อา', 'paiboon': 'aa', 'sound': 'long "aa" as in "naa" (น้า)'},
+        {'thai': 'อะ', 'paiboon': 'a', 'sound': 'short "a", like the u in "cup"'},
+        {'thai': 'อา', 'paiboon': 'aa', 'sound': 'long "aa" as in "náa" (น้า)'},
         {'thai': 'อิ', 'paiboon': 'i', 'sound': 'short "i" as in "bit"'},
         {'thai': 'อี', 'paiboon': 'ii', 'sound': 'long "ee" as in "see"'},
-        {'thai': 'อึ', 'paiboon': 'ʉ', 'sound': 'short "er" - Bite molar teeth & exaggerate saying "er"'},
-        {'thai': 'อื', 'paiboon': 'ʉʉ', 'sound': 'Long "churrr" or Thai chʉʉ - Bite molar teeth & exaggerate saying "churrr"'},
+        {'thai': 'อึ', 'paiboon': 'ʉ', 'sound': 'short - say "oo" with lips spread, not rounded. Bite molar teeth & exaggerate it'},
+        {'thai': 'อื', 'paiboon': 'ʉʉ', 'sound': 'long ʉ, as in Thai chʉ̂ʉ (ชื่อ, name) - Bite molar teeth, lips spread & exaggerate it'},
         {'thai': 'อุ', 'paiboon': 'u', 'sound': 'short "u" as in "tuk tuk"'},
         {'thai': 'อู', 'paiboon': 'uu', 'sound': 'long "oo" as in "moon" - Pronounced "muuun"'},
         {'thai': 'เอะ', 'paiboon': 'e', 'sound': 'short "e" as in "ed"'},
-        {'thai': 'เอ', 'paiboon': 'ee', 'sound': 'long "ay" as in "day"'},
-        {'thai': 'แอะ', 'paiboon': 'ɛ', 'sound': 'short "e" as in "bed" - Stretch mouth wide like a smile, open slightly, tongue on bottom lip, more exaggerated than "e"'},
-        {'thai': 'แอ', 'paiboon': 'ɛɛ', 'sound': 'long "ɛɛ" as in "mɛɛ" meaning Mother or like how a sheep goes "mɛɛ!"'},
-        {'thai': 'โอะ', 'paiboon': 'o', 'sound': 'short "o"'},
+        {'thai': 'เอ', 'paiboon': 'ee', 'sound': 'long "ay" as in "day", held steady without the "y" glide at the end'},
+        {'thai': 'แอะ', 'paiboon': 'ɛ', 'sound': 'short, like the "a" in "bat" - Stretch mouth wide like a smile, open slightly, tongue on bottom lip, more exaggerated than "e"'},
+        {'thai': 'แอ', 'paiboon': 'ɛɛ', 'sound': 'long "ɛɛ" as in "mɛ̂ɛ" (แม่) meaning Mother, or like how a sheep goes "mɛɛ!"'},
+        {'thai': 'โอะ', 'paiboon': 'o', 'sound': 'short "o", like "go" cut short'},
         {'thai': 'โอ', 'paiboon': 'oo', 'sound': 'long "o" as in "go"'},
         {'thai': 'เอาะ', 'paiboon': 'ɔ', 'sound': 'short "aw"'},
         {'thai': 'ออ', 'paiboon': 'ɔɔ', 'sound': 'long "aw" as in "awwww"'},
         {'thai': 'เออะ', 'paiboon': 'ə', 'sound': 'short "er" as in "bird"'},
         {'thai': 'เออ', 'paiboon': 'əə', 'sound': 'long "errr" as in "birrrd"'},
-        # Note: If a word ends with a short vowel (eg, "gɔ!" or "a!-ray" or "aa-dta!-maa"), the (!) represents a hard stop on the vowel similar to a stressed syllable.
+        # Combined vowels. Paiboon writes these the same whether short or long.
+        {'thai': 'เอีย', 'paiboon': 'ia', 'sound': '"ee-a" as in "Mia", as in mia (เมีย, wife)'},
+        {'thai': 'เอือ', 'paiboon': 'ʉa', 'sound': 'ʉ sliding into "a", as in rʉa (เรือ, boat)'},
+        {'thai': 'อัว', 'paiboon': 'ua', 'sound': '"oo-a" as in "tuna", as in wua (วัว, cow)'},
+        {'thai': 'ไอ/ใอ', 'paiboon': 'ai', 'sound': '"ai" as in "Thai"'},
+        {'thai': 'เอา', 'paiboon': 'ao', 'sound': '"ow" as in "now"'},
+        {'thai': 'อำ', 'paiboon': 'am', 'sound': 'short a + m, like "um" in "hum", as in nám (น้ำ, water)'},
+        # Note: If a syllable ends with a short vowel (eg, "gɔ̀!" or "à!-rai" or "àat-dtà!-maa"), the (!) marks a hard stop - the vowel is cut off sharply. Teaching aid only, not part of the spelling.
     ],
     
     'vowel_examples': [
@@ -4701,10 +4708,10 @@ PAIBOON_GUIDE = {
     
     
     'tone_markers': [
-        {'thai': '่', 'name': 'Mai Ek', 'effect': 'Usually low tone'},
-        {'thai': '้', 'name': 'Mai Tho', 'effect': 'Usually falling tone'},
-        {'thai': '๊', 'name': 'Mai Tri', 'effect': 'Usually high tone'},
-        {'thai': '๋', 'name': 'Mai Jattawa', 'effect': 'Usually rising tone'},
+        {'thai': '่', 'name': 'Mai Ek', 'effect': 'Low tone on mid- and high-class consonants; falling tone on low-class'},
+        {'thai': '้', 'name': 'Mai Tho', 'effect': 'Falling tone on mid- and high-class consonants; high tone on low-class'},
+        {'thai': '๊', 'name': 'Mai Tri', 'effect': 'High tone (used with mid-class consonants)'},
+        {'thai': '๋', 'name': 'Mai Jattawa', 'effect': 'Rising tone (used with mid-class consonants)'},
     ],
 }
 
@@ -4723,10 +4730,10 @@ LESSONS = [
         'sentences': {
             'short': [
                 {'thai': 'สวัสดีครับ', 'paiboon': 'sà-wàt-dii kráp', 'english': 'Hello (male)'},
-                {'thai': 'ขอบคุณค่ะ', 'paiboon': 'kɔ̀ɔp kun kâ', 'english': 'Thank you (female)'},
+                {'thai': 'ขอบคุณค่ะ', 'paiboon': 'kɔ̀ɔp-kun kâ', 'english': 'Thank you (female)'},
             ],
             'long': [
-                {'thai': 'ผมชื่อโจชัว ยินดีที่ได้รู้จักครับ', 'paiboon': 'pǒm chʉ̂ʉ joo-chuua yin-dii tîi dâi rúu-jàk kráp', 'english': 'My name is Joshua, nice to meet you'},
+                {'thai': 'ผมชื่อโจชัว ยินดีที่ได้รู้จักครับ', 'paiboon': 'pǒm chʉ̂ʉ joo-chua yin-dii tîi dâi rúu-jàk kráp', 'english': 'My name is Joshua, nice to meet you'},
             ]
         }
     },
@@ -4772,7 +4779,7 @@ LESSONS = [
                 {'thai': 'เลี้ยวขวา', 'paiboon': 'líao kwǎa', 'english': 'Turn right'},
             ],
             'long': [
-                {'thai': 'ห้องน้ำอยู่ที่ไหนครับ', 'paiboon': 'hɔ̂ɔŋ-náam yùu tîi nǎi kráp', 'english': 'Where is the bathroom?'},
+                {'thai': 'ห้องน้ำอยู่ที่ไหนครับ', 'paiboon': 'hɔ̂ɔŋ-náam yùu tîi-nǎi kráp', 'english': 'Where is the bathroom?'},
             ]
         }
     },
@@ -4817,7 +4824,7 @@ LESSONS = [
                 {'thai': 'มีพี่น้องมั๊ย', 'paiboon': 'mii pîi-nɔ́ɔŋ mái', 'english': 'Do you have siblings?'},
             ],
             'long': [
-                {'thai': 'ครอบครัวผมมีสี่คน', 'paiboon': 'krɔ̂ɔp-kruua pǒm mii sìi kon', 'english': 'My family has four people'},
+                {'thai': 'ครอบครัวผมมีสี่คน', 'paiboon': 'krɔ̂ɔp-krua pǒm mii sìi kon', 'english': 'My family has four people'},
             ]
         }
     },
@@ -4832,7 +4839,7 @@ LESSONS = [
                 {'thai': 'ไม่สบาย', 'paiboon': 'mâi sà-baai', 'english': "I don't feel well"},
             ],
             'long': [
-                {'thai': 'ผมปวดหัวมาก', 'paiboon': 'pǒm bpùuat hǔua mâak', 'english': 'I have a bad headache'},
+                {'thai': 'ผมปวดหัวมาก', 'paiboon': 'pǒm bpùat hǔa mâak', 'english': 'I have a bad headache'},
             ]
         }
     },
@@ -4892,7 +4899,7 @@ LESSONS = [
                 {'thai': 'ทำดีได้ดี', 'paiboon': 'tam dii dâi dii', 'english': 'Do good, receive good'},
             ],
             'long': [
-                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûuai hâi mii sà-dtì', 'english': 'Practising Dhamma helps develop mindfulness'},
+                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûai hâi mii sà-dtì', 'english': 'Practising Dhamma helps develop mindfulness'},
             ]
         }
     },
@@ -4922,7 +4929,7 @@ LESSONS = [
                 {'thai': 'อ่านได้มั๊ย', 'paiboon': 'àan dâi mái', 'english': 'Can you read?'},
             ],
             'long': [
-                {'thai': 'ภาษาไทยมีพยัญชนะสี่สิบสี่ตัว', 'paiboon': 'paa-sǎa tai mii pá-yan-chá-ná sìi-sìp-sìi dtuua', 'english': 'Thai has 44 consonants'},
+                {'thai': 'ภาษาไทยมีพยัญชนะสี่สิบสี่ตัว', 'paiboon': 'paa-sǎa tai mii pá-yan-chá-ná sìi-sìp-sìi dtua', 'english': 'Thai has 44 consonants'},
             ]
         }
     },
@@ -4938,7 +4945,7 @@ LESSONS = [
                 {'thai': 'หายใจออก', 'paiboon': 'hǎai-jai ɔ̀ɔk', 'english': 'Breathe out'},
             ],
             'long': [
-                {'thai': 'นั่งสมาธิทุกวันช่วยให้จิตใจสงบ', 'paiboon': 'nâŋ sà-maa-tí túk wan chûuai hâi jìt-jai sà-ŋòp', 'english': 'Meditating daily helps calm the mind'},
+                {'thai': 'นั่งสมาธิทุกวันช่วยให้จิตใจสงบ', 'paiboon': 'nâŋ sà-maa-tí túk wan chûai hâi jìt-jai sà-ŋòp', 'english': 'Meditating daily helps calm the mind'},
             ]
         }
     },
@@ -5462,7 +5469,7 @@ CULTURAL_INFO = {
             'level_2_respect': {
                 'name': 'Respectful Greeting (ผู้ใหญ่ - Elders/Superiors)',
                 'thai': 'การไหว้ด้วยความเคารพ',
-                'paiboon': 'gaan wâi dûuai kwaam kao-róp',
+                'paiboon': 'gaan wâi dûai kwaam kao-róp',
                 'hand_position': 'Palms together with fingertips touching nose',
                 'fingertips': 'At nose tip level',
                 'bow': 'Moderate bow, clearly visible',
@@ -5480,7 +5487,7 @@ CULTURAL_INFO = {
             'level_3_highest': {
                 'name': 'Highest Respect (พระ - Monks/Royalty)',
                 'thai': 'การไหว้ด้วยความเคารพสูงสุด',
-                'paiboon': 'gaan wâi dûuai kwaam kao-róp sǔuŋ-sùt',
+                'paiboon': 'gaan wâi dûai kwaam kao-róp sǔuŋ-sùt',
                 'hand_position': 'Palms together with thumbs touching between eyebrows, fingertips at hairline',
                 'fingertips': 'At forehead/hairline level',
                 'bow': 'Deep bow, sometimes to the point of kneeling',
@@ -6472,10 +6479,10 @@ SENTENCE_PATTERNS = {
                 'tip': 'There is no past tense — ตอนที่ already tells the listener when.',
                 'examples': {
                     'male': [
-                        {'thai': 'ตอนที่ผมอยู่เมืองไทย ผมเรียนภาษาไทยทุกวันครับ', 'paiboon': 'dtɔɔn-tîi pǒm yùu mʉaŋ-tai pǒm riian paa-sǎa tai túk wan kráp', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ผมอยู่เมืองไทย (I was in Thailand) + ผมเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ครับ (polite)'},
+                        {'thai': 'ตอนที่ผมอยู่เมืองไทย ผมเรียนภาษาไทยทุกวันครับ', 'paiboon': 'dtɔɔn-tîi pǒm yùu mʉaŋ-tai pǒm rian paa-sǎa tai túk wan kráp', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ผมอยู่เมืองไทย (I was in Thailand) + ผมเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ครับ (polite)'},
                     ],
                     'female': [
-                        {'thai': 'ตอนที่ดิฉันอยู่เมืองไทย ดิฉันเรียนภาษาไทยทุกวันค่ะ', 'paiboon': 'dtɔɔn-tîi dì-chǎn yùu mʉaŋ-tai dì-chǎn riian paa-sǎa tai túk wan kâ', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ดิฉันอยู่เมืองไทย (I was in Thailand) + ดิฉันเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ค่ะ (polite)'},
+                        {'thai': 'ตอนที่ดิฉันอยู่เมืองไทย ดิฉันเรียนภาษาไทยทุกวันค่ะ', 'paiboon': 'dtɔɔn-tîi dì-chǎn yùu mʉaŋ-tai dì-chǎn rian paa-sǎa tai túk wan kâ', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ดิฉันอยู่เมืองไทย (I was in Thailand) + ดิฉันเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ค่ะ (polite)'},
                     ],
                 },
             },
@@ -6543,11 +6550,11 @@ SENTENCE_PATTERNS = {
                 'future': {'thai': 'จะทำงาน', 'paiboon': 'jà tam ŋaan', 'english': 'will work'}
             },
             {
-                'verb': 'เรียน (riian) - study',
-                'present': {'thai': 'เรียน', 'paiboon': 'riian'},
-                'progressive': {'thai': 'กำลังเรียน', 'paiboon': 'gam-laŋ riian', 'english': 'am/is/are studying'},
-                'completed': {'thai': 'เรียนแล้ว', 'paiboon': 'riian lɛ́ɛo', 'english': 'already studied / have studied'},
-                'future': {'thai': 'จะเรียน', 'paiboon': 'jà riian', 'english': 'will study'}
+                'verb': 'เรียน (rian) - study',
+                'present': {'thai': 'เรียน', 'paiboon': 'rian'},
+                'progressive': {'thai': 'กำลังเรียน', 'paiboon': 'gam-laŋ rian', 'english': 'am/is/are studying'},
+                'completed': {'thai': 'เรียนแล้ว', 'paiboon': 'rian lɛ́ɛo', 'english': 'already studied / have studied'},
+                'future': {'thai': 'จะเรียน', 'paiboon': 'jà rian', 'english': 'will study'}
             }
         ]
     }
@@ -6661,7 +6668,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'person1_male',
                 'thai': 'ขอบคุณครับ ผมกำลังเรียนอยู่ครับ',
-                'paiboon': 'kɔ̀ɔp-kun kráp, pǒm gam-laŋ riian yùu kráp',
+                'paiboon': 'kɔ̀ɔp-kun kráp, pǒm gam-laŋ rian yùu kráp',
                 'english': "Thank you, I'm still learning",
                 'note': 'Using progressive + อยู่'
             }
@@ -6676,7 +6683,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'customer_female',
                 'thai': 'ขอดูเสื้อตัวนี้หน่อยค่ะ',
-                'paiboon': 'kɔ̌ɔ duu sʉ̂a dtuua níi nɔ̀ɔi kâ',
+                'paiboon': 'kɔ̌ɔ duu sʉ̂a dtua níi nɔ̀ɔi kâ',
                 'english': 'Can I see this shirt please?',
                 'note': 'Polite request with หน่อย'
             },
@@ -6733,7 +6740,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'tourist_male',
                 'thai': 'ขอโทษครับ วัดพระแก้วอยู่ที่ไหนครับ',
-                'paiboon': 'kɔ̌ɔ-tôot kráp, wát prá-gɛ̂ɛo yùu tîi nǎi kráp',
+                'paiboon': 'kɔ̌ɔ-tôot kráp, wát prá-gɛ̂ɛo yùu tîi-nǎi kráp',
                 'english': 'Excuse me, where is Wat Phra Kaew?',
                 'note': 'Polite question'
             },
@@ -6818,7 +6825,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'friend2_female',
                 'thai': 'ไปกินด้วยกันมั๊ยคะ',
-                'paiboon': 'bpai gin dûuai gan mái ká',
+                'paiboon': 'bpai gin dûai gan mái ká',
                 'english': 'Want to eat together?',
                 'note': 'Invitation'
             },
@@ -6884,7 +6891,7 @@ CONVERSATIONS = {
         'dialogue': [
             {'speaker': 'layperson_female', 'thai': 'นิมนต์ค่ะ', 'paiboon': 'ní-mon kâ', 'english': 'Please receive (inviting the monk).', 'note': 'นิมนต์ = the respectful word for inviting a monk'},
             {'speaker': 'layperson_female', 'thai': 'ดิฉันขอถวายอาหารค่ะ', 'paiboon': 'dì-chǎn kɔ̌ɔ tà-wǎai aa-hǎan kâ', 'english': 'I would like to offer food.', 'note': 'ถวาย = to offer (to a monk)'},
-            {'speaker': 'monk', 'thai': 'เจริญพร', 'paiboon': 'jà-rəən pɔɔn', 'english': 'Blessings.', 'note': 'A monk answers with เจริญพร, not ครับ/ค่ะ'},
+            {'speaker': 'monk', 'thai': 'เจริญพร', 'paiboon': 'jà-rəən-pɔɔn', 'english': 'Blessings.', 'note': 'A monk answers with เจริญพร, not ครับ/ค่ะ'},
             {'speaker': 'layperson_female', 'thai': 'ขอให้พระอาจารย์สุขภาพแข็งแรงค่ะ', 'paiboon': 'kɔ̌ɔ hâi prá aa-jaan sùk-kà-pâap kɛ̌ŋ-rɛɛŋ kâ', 'english': 'May you be in good health, Ajahn.', 'note': 'A good wish while offering'},
             {'speaker': 'monk', 'thai': 'ขอให้โยมมีความสุข มีอายุยืน', 'paiboon': 'kɔ̌ɔ hâi yoom mii kwaam-sùk, mii aa-yú yʉʉn', 'english': 'May you be happy and live long.', 'note': "The monk's blessing in return; โยม = layperson"}
         ]
@@ -6896,7 +6903,7 @@ CONVERSATIONS = {
         'difficulty': 'intermediate',
         'dialogue': [
             {'speaker': 'layperson_male', 'thai': 'กราบนมัสการครับ พระอาจารย์', 'paiboon': 'gràap ná-mát-sà-gaan kráp, prá aa-jaan', 'english': 'I pay respect, Ajahn.', 'note': 'Greeting a monk — not สวัสดี'},
-            {'speaker': 'monk', 'thai': 'เจริญพร โยม', 'paiboon': 'jà-rəən pɔɔn, yoom', 'english': 'Blessings, layperson.', 'note': 'โยม = how a monk addresses a lay person'},
+            {'speaker': 'monk', 'thai': 'เจริญพร โยม', 'paiboon': 'jà-rəən-pɔɔn, yoom', 'english': 'Blessings, layperson.', 'note': 'โยม = how a monk addresses a lay person'},
             {'speaker': 'layperson_male', 'thai': 'ผมอยากเริ่มนั่งสมาธิครับ ควรเริ่มยังไงดีครับ', 'paiboon': 'pǒm yàak rə̂əm nâŋ sà-maa-tí kráp, kuan rə̂əm yaŋ-ŋai dii kráp', 'english': 'I would like to start meditating. How should I begin?', 'note': 'นั่งสมาธิ = to meditate'},
             {'speaker': 'monk', 'thai': 'เริ่มจากลมหายใจ หายใจเข้าก็รู้ หายใจออกก็รู้', 'paiboon': 'rə̂əm jàak lom hǎai-jai, hǎai-jai kâo gɔ̂ɔ rúu, hǎai-jai ɔ̀ɔk gɔ̂ɔ rúu', 'english': 'Begin with the breath. Breathing in, know it; breathing out, know it.', 'note': 'Mindfulness of breathing (ānāpānasati)'},
             {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานมั๊ยครับ', 'paiboon': 'dtɔ̂ŋ nâŋ naan mái kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
@@ -6933,7 +6940,7 @@ CONVERSATIONAL_PHRASES = [
             {'thai': 'คือว่า...', 'paiboon': 'kʉʉ wâa...', 'english': 'The thing is… / Well…'},
             {'thai': 'แบบว่า...', 'paiboon': 'bɛ̀ɛp wâa...', 'english': 'Like… / Sort of…'},
             {'thai': 'เดี๋ยวนะครับ', 'paiboon': 'dǐao ná kráp', 'english': 'Hold on a second.'},
-            {'thai': 'ขอคิดแป๊บนึงครับ', 'paiboon': 'kɔ̌ɔ kít bpáep nʉ̀ŋ kráp', 'english': 'Let me think for a moment.'}
+            {'thai': 'ขอคิดแป๊บนึงครับ', 'paiboon': 'kɔ̌ɔ kít bpɛ́p nʉ̀ŋ kráp', 'english': 'Let me think for a moment.'}
         ]
     },
     {
