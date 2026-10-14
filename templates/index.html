@@ -44,6 +44,8 @@
         </p>
         <div class="track-grid">
             <a href="/theravada" class="track-card track-dhamma">
+                <img class="track-photo" src="{{ url_for('static', filename='img/tour/doi-suthep.webp') }}"
+                     alt="The golden chedi of Wat Phra That Doi Suthep under a blue sky" loading="lazy" width="640" height="400">
                 <div class="track-icon">☸️</div>
                 <h3>Buddhism &amp; the Dhamma</h3>
                 <p>
@@ -60,6 +62,8 @@
                the survival page hands them straight to it — but it is no longer
                the first thing in the door. #}
             <a href="/survival" class="track-card track-language">
+                <img class="track-photo" src="{{ url_for('static', filename='img/home/door-language.webp') }}"
+                     alt="A Thai street food stall with a red sign reading som tam, laap and nam tok" loading="lazy" width="640" height="400">
                 <div class="track-icon">🗣️</div>
                 <h3>The Thai language</h3>
                 <p>
@@ -71,6 +75,8 @@
             </a>
 
             <a href="/culture" class="track-card track-culture">
+                <img class="track-photo" src="{{ url_for('static', filename='img/home/door-culture.webp') }}"
+                     alt="Crowds by a river at night during Loy Krathong, candle-lit krathongs floating on the water" loading="lazy" width="640" height="400">
                 <div class="track-icon">🎭</div>
                 <h3>Buddhism in Thailand</h3>
                 <p>
@@ -81,6 +87,8 @@
             </a>
 
             <a href="/chanting" class="track-card track-chanting">
+                <img class="track-photo" src="{{ url_for('static', filename='img/home/door-chanting.webp') }}"
+                     alt="A handwritten Pali manuscript in Khom Thai script" loading="lazy" width="640" height="400">
                 <div class="track-icon">📿</div>
                 <h3>Chanting &amp; texts</h3>
                 <p>
@@ -95,6 +103,22 @@
             on a culture at all?
             <a href="/dhamma-and-culture">🪷 Read the short explanation →</a>
         </p>
+        {# BY and BY-SA licences require the credit, same as the Tour Guide photos. #}
+        <details class="home-photo-credits">
+            <summary>📷 Photo credits</summary>
+            <ul>
+                <li>Wat Arun at sunset: <a href="https://commons.wikimedia.org/wiki/File:Wat_Arun_Sunset.jpg" target="_blank" rel="noopener">photo</a>
+                    by miketnorton, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, via Wikimedia Commons</li>
+                <li>Wat Phra That Doi Suthep: <a href="https://commons.wikimedia.org/wiki/File:Phra_That_Doi_Suthep_01.jpg" target="_blank" rel="noopener">photo</a>
+                    by เทวประภาส มากคล้าย, <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>, via Wikimedia Commons</li>
+                <li>Street food stall: <a href="https://commons.wikimedia.org/wiki/File:DFC_1265_Street_food_stall_in_Thailand_with_a_colorful_sign_advertising_som_tam_larb_and_nam_tok_and_a_motorcyclist_pausing_on_the_sidewalk.jpg" target="_blank" rel="noopener">photo</a>
+                    by PattayaPatrol, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</li>
+                <li>Loy Krathong: <a href="https://commons.wikimedia.org/wiki/File:Loi-Krathong-09631_(23513660545).jpg" target="_blank" rel="noopener">photo</a>
+                    by Visions of Domino, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, via Wikimedia Commons</li>
+                <li>Pali manuscript: <a href="https://commons.wikimedia.org/wiki/File:Pali_manuscript_in_Khom_Thai_script.jpg" target="_blank" rel="noopener">photo</a>
+                    by Metaknowledge, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, via Wikimedia Commons</li>
+            </ul>
+        </details>
     </div>
 
     <!-- Quick Access Cards -->
@@ -288,6 +312,25 @@
         transform: translateY(-4px);
         box-shadow: 0 10px 24px rgba(74, 26, 107, 0.18);
     }
+    /* Photo bleeds to the card's edges, under the coloured top border. */
+    .track-photo {
+        display: block;
+        width: calc(100% + 2.6rem);
+        max-width: none; /* base.css caps images at 100%, which stops the bleed */
+        height: 150px;
+        margin: -1.5rem -1.3rem 1rem;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+    }
+    .home-photo-credits {
+        margin: 1rem auto 0;
+        max-width: 44rem;
+        font-size: 0.82rem;
+        color: #6b5d45;
+        text-align: center;
+    }
+    .home-photo-credits summary { cursor: pointer; }
+    .home-photo-credits ul { text-align: left; margin: 0.5rem 0 0; padding-left: 1.2rem; }
     .track-icon { font-size: 2.4rem; line-height: 1; margin-bottom: 0.6rem; }
     .track-card h3 { margin: 0 0 0.5rem; font-size: 1.2rem; color: var(--royal-purple); }
     .track-card p { margin: 0 0 1rem; color: #55483a; font-size: 0.95rem; line-height: 1.55; }
@@ -328,8 +371,13 @@
         font-size: 0.95rem;
     }
 
+    /* The photo sits under a purple wash so the gold and white text keep
+       their contrast; the wash is the old gradient, made see-through. */
     .hero-section {
-        background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
+        background:
+            linear-gradient(135deg, rgba(74, 26, 107, 0.66) 0%, rgba(45, 27, 78, 0.74) 100%),
+            url("{{ url_for('static', filename='img/home/hero-wat-arun.webp') }}") center 40% / cover no-repeat,
+            var(--deep-purple);
         border-radius: 25px;
         padding: 4rem 2rem;
         margin: 2rem 0 3rem 0;
