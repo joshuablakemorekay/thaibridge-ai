@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}Our Policies — ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .pol-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1rem 0; }
+    .pol-value { background: #FFF8E7; border-left: 4px solid var(--saffron); border-radius: 8px; padding: 1rem; }
+    .pol-value h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .pol-value p { margin: 0; line-height: 1.6; }
+    .pol-why { color: #555; font-style: italic; margin-top: 0.75rem; line-height: 1.7; }
+    .pol-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
+    .pol-table th, .pol-table td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid #eee; vertical-align: top; }
+    .pol-table th { color: var(--royal-purple); }
+    .pol-card ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.9; }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    📜 Our Policies
+    <span class="thai">นโยบาย</span>
+</h1>
+
+<div class="card">
+    <p style="line-height: 1.8;">
+        ThaiBridge is run on Buddhist principles, and this page is where I put them in
+        writing: what is free, what costs money, why, and what happens if you change your
+        mind. No small print — if something here isn't clear, <a href="/contact">ask me</a>.
+    </p>
+</div>
+
+<h2>🪷 The values behind ThaiBridge</h2>
+<div class="pol-values">
+    <div class="pol-value">
+        <h3>Right livelihood <span class="thai" style="font-size:0.9rem;">สัมมาอาชีวะ</span></h3>
+        <p>Earn honestly. Prices are shown in full, there are no hidden fees, and nothing is sold with pressure or tricks.</p>
+    </div>
+    <div class="pol-value">
+        <h3>Generosity <span class="thai" style="font-size:0.9rem;">ทาน</span></h3>
+        <p>The Buddha's teaching is a gift, so it is never sold. Everything about the Dhamma on this site is free for everyone.</p>
+    </div>
+    <div class="pol-value">
+        <h3>Non-harm <span class="thai" style="font-size:0.9rem;">อหิงสา</span></h3>
+        <p>No adverts, no tracking, and your information is never sold. You are a learner here, not a product.</p>
+    </div>
+    <div class="pol-value">
+        <h3>Fairness</h3>
+        <p>What you pay for is what keeps the app running — the AI, the lessons and the native speakers who check the Thai. Nothing more.</p>
+    </div>
+</div>
+
+<h2>🎁 Free for everyone, always</h2>
+<div class="card pol-card">
+    <ul>
+        <li><strong>Theravada Buddhism</strong> — teachings, Dhamma talks and Pra Kru Bob's articles</li>
+        <li><strong>The Digital Chanting Book</strong></li>
+        <li><strong>Meditation</strong> — guided sessions, the timer and every technique guide</li>
+        <li><strong>Dhamma & Culture</strong> and <strong>Practising Anywhere</strong></li>
+        <li><strong>Dhamma questions to the AI</strong> — {{ free_dhamma_daily_limit }} a day, on their own allowance</li>
+        <li><strong>The Thai alphabet</strong> — chart, flashcards and quiz</li>
+        <li><strong>Survival Thai</strong> and the <strong>ThaiBridge Spelling guide</strong></li>
+        <li><strong>AI Thai tutor</strong> — {{ tiers.free_ai }} messages a day to try it properly</li>
+    </ul>
+    <p class="pol-why">
+        Why: the Dhamma and meditation are practice, not a product, and charging for them would
+        be selling the teaching. The alphabet, Survival Thai and the spelling guide are the way in
+        to everything else — putting a price on the front door would shut out the people who most
+        need it.
+    </p>
+</div>
+
+<h2>💳 What costs money, and why</h2>
+<div class="card pol-card">
+    <table class="pol-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>What it adds</th></tr></thead>
+        <tbody>
+            <tr>
+                <td><strong>{{ tiers.basic.name }}</strong></td>
+                <td>£{{ '%.2f'|format(tiers.basic.price) }} a month<br>or £{{ '%.0f'|format(tiers.basic.price_year) }} a year</td>
+                <td>Every Thai lesson: reading and writing, tones, vocabulary, grammar, sentences with audio,
+                    culture and register guides, Tour Guide and Business Thai — plus {{ tiers.basic_ai }} AI tutor messages a day.</td>
+            </tr>
+            <tr>
+                <td><strong>{{ tiers.pro.name }}</strong></td>
+                <td>£{{ '%.2f'|format(tiers.pro.price) }} a month<br>or £{{ '%.0f'|format(tiers.pro.price_year) }} a year</td>
+                <td>Everything in {{ tiers.basic.name }}, every AI mode (conversation partner, culture Q&A,
+                    exercise generator, translator) up to {{ tiers.pro_ai }} messages a day, and the dictionary.</td>
+            </tr>
+            <tr>
+                <td><strong>{{ addon.name }}</strong></td>
+                <td>£{{ '%.2f'|format(addon.price) }} once</td>
+                <td>Optional, for {{ tiers.pro.name }} members: opens every Thai section straight away instead of
+                    levelling up to it. It never touches the Dhamma, which is already open to all.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="pol-why">
+        Why: the Thai course takes real work to build, and every lesson is being checked by a paid
+        native-speaking teacher so you are not taught a mistake. Every AI message also costs money to run. Your
+        subscription pays for exactly those things — it is what lets the free parts stay free.
+    </p>
+</div>
+
+<h2>🤖 Why the AI has daily limits</h2>
+<div class="card pol-card">
+    <p style="line-height: 1.8;">
+        Every reply from the AI is paid for, one message at a time. A daily allowance keeps that cost
+        fair for everyone and means the free tier can exist at all. The {{ tiers.pro.name }} limit is
+        set far above what a day of real study needs — if you ever reach it, get in touch.
+    </p>
+    <p style="line-height: 1.8; margin-top: 0.75rem;">
+        Dhamma questions have their own allowance, kept separate from the tutor, and running out of
+        it never asks you for money. The limit is only what it costs to run the model.
+    </p>
+</div>
+
+<h2>🧡 Monastics practise free</h2>
+<div class="card">
+    <p style="line-height: 1.8;">
+        Monastics use the whole of ThaiBridge free of charge, every section and every plan, through
+        <a href="/monk-mode">Monk Mode</a>. No payment is ever asked of the Sangha.
+    </p>
+</div>
+
+<h2>🙏 Dāna — giving</h2>
+<div class="card">
+    <p style="line-height: 1.8;">
+        You can <a href="/premium#dana">make a gift</a> to support ThaiBridge. A gift is exactly that:
+        it unlocks nothing and buys nothing, because generosity given in exchange for something isn't
+        dāna. Every gift is received with gratitude.
+    </p>
+</div>
+
+<h2>↩️ Cancelling and refunds</h2>
+<div class="card pol-card">
+    <ul>
+        <li><strong>Cancel any time</strong> from your <a href="/progress">progress page</a> — one button, no emails needed.</li>
+        <li><strong>You keep what you paid for.</strong> After you cancel you keep full access until the end of
+            the month or year you have already paid for. You won't be charged again.</li>
+        <li><strong>14-day refunds.</strong> If you're not happy, <a href="/contact">contact me</a> within 14 days of any
+            payment and you'll get a full refund — no questions asked.</li>
+        <li><strong>Prices include tax.</strong> The price you see is the price you pay.</li>
+        <li><strong>Secure payments.</strong> Payments are handled by Stripe. ThaiBridge never sees or stores your card details.</li>
+    </ul>
+</div>
+
+<div class="card" style="background: #fffbf0;">
+    <p style="line-height: 1.8; margin: 0;">
+        How your data is handled is set out in the <a href="/privacy">privacy page</a>.
+        Questions about any of this? <a href="/contact">Contact me</a> — I read every message.
+    </p>
+</div>
+{% endblock %}

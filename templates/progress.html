@@ -81,9 +81,13 @@
                 Please try again in a minute, or email us and we'll do it by hand.
             </p>
             {% endif %}
-            {% if current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
+            {% if current_user.is_authenticated and current_user.subscription_status == 'canceling' and current_user.current_period_end %}
+            <p class="expires">Cancelled — you keep full access until
+                {{ current_user.current_period_end.strftime('%d %B %Y').lstrip('0') }},
+                and you won't be charged again.</p>
+            {% elif current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
             <form action="/subscribe/cancel-subscription" method="post"
-                  onsubmit="return confirm('Cancel your subscription? You will be moved back to the free plan.');"
+                  onsubmit="return confirm('Cancel your subscription? You keep everything until the end of the period you have paid for, then move to the free plan.');"
                   style="margin-top:0.75rem;">
                 <button type="submit" class="btn" style="background:#c0392b;color:#fff;">Cancel subscription</button>
             </form>
