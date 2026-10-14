@@ -354,7 +354,7 @@ def test_a_failed_cancel_tells_the_learner_instead_of_bouncing(user):
         db.session.commit()
     c = signed_in(user["id"])
     with patch("app.stripe.api_key", "sk_test_fake"), \
-         patch("app.stripe.Subscription.cancel", side_effect=RuntimeError("stripe down")):
+         patch("app.stripe.Subscription.modify", side_effect=RuntimeError("stripe down")):
         resp = c.post("/subscribe/cancel-subscription")
     assert resp.status_code == 302
     assert resp.headers["Location"].endswith("/progress?cancel=failed")
@@ -364,16 +364,42 @@ def test_a_failed_cancel_tells_the_learner_instead_of_bouncing(user):
         assert db.session.get(User, user["id"]).subscription_status == "active"
 
 
-def test_a_successful_cancel_still_goes_to_the_goodbye_page(user):
+def test_a_successful_cancel_keeps_access_until_the_paid_period_ends(user):
+    """Cancelling stops renewal; it must not take away days already paid for."""
+    from datetime import datetime, timedelta
+    end = datetime.utcnow().replace(microsecond=0) + timedelta(days=27)
     with app.app_context():
         u = db.session.get(User, user["id"])
         u.subscription_tier, u.subscription_status = "basic", "active"
         u.stripe_subscription_id = "sub_ok"
         db.session.commit()
     c = signed_in(user["id"])
+    stripe_sub = {"status": "active", "cancel_at_period_end": True,
+                  "current_period_end": int((end - datetime(1970, 1, 1)).total_seconds())}
     with patch("app.stripe.api_key", "sk_test_fake"), \
-         patch("app.stripe.Subscription.cancel", return_value={"status": "canceled"}):
+         patch("app.stripe.Subscription.modify", return_value=stripe_sub) as modify:
         resp = c.post("/subscribe/cancel-subscription")
+    modify.assert_called_once_with("sub_ok", cancel_at_period_end=True)
     assert resp.headers["Location"].endswith("/subscription-goodbye")
     with app.app_context():
-        assert db.session.get(User, user["id"]).subscription_status == "canceled"
+        u = db.session.get(User, user["id"])
+        assert u.subscription_status == "canceling"
+        assert u.effective_tier == "basic"
+    assert "you won't be charged again" in c.get("/progress").get_data(as_text=True)
+
+
+def test_a_cancelled_plan_ends_when_its_period_does(user):
+    from datetime import datetime, timedelta
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.subscription_tier, u.subscription_status = "basic", "canceling"
+        u.current_period_end = datetime.utcnow() - timedelta(minutes=1)
+        db.session.commit()
+        assert db.session.get(User, user["id"]).effective_tier == "free"
+
+
+def test_stripe_cancel_at_period_end_is_recorded_as_canceling():
+    import app as appmod
+    assert appmod._subscription_status({"status": "active", "cancel_at_period_end": True}) == "canceling"
+    assert appmod._subscription_status({"status": "active"}) == "active"
+    assert appmod._subscription_status({"status": "canceled", "cancel_at_period_end": True}) == "canceled"

@@ -9,6 +9,9 @@
         <h1>Sorry to see you go</h1>
         <p class="lead">
             Your subscription has been cancelled and you won't be charged again.
+            {% if current_user.current_period_end %}You keep full access until
+            {{ current_user.current_period_end.strftime('%d %B %Y').lstrip('0') }} — the time you've
+            already paid for is yours.{% endif %}
             Thank you so much for supporting ThaiBridge AI — it genuinely means a lot.
         </p>
         <p class="metta">May you be happy!</p>

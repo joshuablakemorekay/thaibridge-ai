@@ -250,7 +250,9 @@ class User(UserMixin, db.Model):
         """
         if self.subscription_tier == 'free':
             return 'free'
-        if self.subscription_status not in ('active', 'trialing'):
+        # 'canceling' = cancelled, but the period already paid for has not run
+        # out yet. They keep what they paid for; current_period_end ends it.
+        if self.subscription_status not in ('active', 'trialing', 'canceling'):
             return 'free'
         if self.current_period_end is not None and self.current_period_end < utcnow():
             return 'free'
@@ -7697,6 +7699,20 @@ def privacy():
     return render_template('privacy.html')
 
 
+@app.route('/policies')
+def policies():
+    """What is free, what is paid and why, cancelling and refunds.
+
+    Every price and limit is passed in from the constants that enforce it, so
+    the page cannot promise a number the app no longer gives."""
+    tiers = dict(SUBSCRIPTION_TIERS)
+    tiers.update(free_ai=FREE_AI_DAILY_LIMIT, basic_ai=BASIC_AI_DAILY_LIMIT,
+                 pro_ai=PRO_FAIR_USE_DAILY)
+    return render_template('policies.html', tiers=tiers,
+                           addon=INSTANT_ACCESS_ADDON,
+                           free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT)
+
+
 @app.route('/instructions')
 def instructions():
     return render_template('instructions.html')
@@ -8682,6 +8698,19 @@ def _ts_to_dt(unix_ts):
     return datetime.utcfromtimestamp(int(unix_ts))
 
 
+def _subscription_status(sub, default='canceled'):
+    """Our status for a Stripe subscription.
+
+    Stripe keeps a subscription 'active' until the end of the period after it
+    is set to cancel_at_period_end. We record that as 'canceling' so the
+    learner keeps access but the page can say when it ends and stop offering
+    a second cancel."""
+    status = sub.get('status', default)
+    if status == 'active' and sub.get('cancel_at_period_end'):
+        return 'canceling'
+    return status
+
+
 def _subscription_period_end(sub):
     """Read a subscription's current-period-end as a datetime.
 
@@ -8807,7 +8836,7 @@ def _sync_checkout_session(cs):
     if sub_id and stripe.api_key:
         try:
             sub = stripe.Subscription.retrieve(sub_id)
-            status = sub.get('status', 'active')
+            status = _subscription_status(sub, default='active')
             period_end = _subscription_period_end(sub)
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
@@ -8864,7 +8893,7 @@ def _sync_subscription_object(sub):
 
     _apply_subscription(user,
                         tier=meta.get('tier', user.subscription_tier),
-                        status=sub.get('status', 'canceled'),
+                        status=_subscription_status(sub),
                         customer_id=sub.get('customer'),
                         subscription_id=sub.get('id'),
                         current_period_end=_subscription_period_end(sub))
@@ -8885,7 +8914,7 @@ def _sync_invoice_paid(invoice):
     if sub_id and stripe.api_key:
         try:
             sub = stripe.Subscription.retrieve(sub_id)
-            status = sub.get('status', 'active')
+            status = _subscription_status(sub, default='active')
             period_end = _subscription_period_end(sub)
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
@@ -9088,14 +9117,13 @@ def subscribe_cancel():
 def cancel_subscription():
     """Let a logged-in user cancel their own paid Stripe subscription.
 
-    We cancel it immediately in Stripe. Stripe then fires
-    customer.subscription.deleted, which the webhook turns into a downgrade — but
-    we also write that downgrade to the database here (safe to do twice) so the
-    change shows up straight away, without waiting for the webhook to arrive.
-
-    To instead let the user keep access until the period they've already paid for
-    runs out, swap the cancel call for:
-        stripe.Subscription.modify(sub_id, cancel_at_period_end=True)
+    The subscription stops renewing, but the learner keeps everything until the
+    end of the period they have already paid for (settled with Josh 2026-10-14:
+    cancelling used to cut access the same moment, so a learner who cancelled
+    on day 3 lost the 27 days they had paid for). Stripe fires
+    customer.subscription.deleted when the period ends, and the webhook turns
+    that into the downgrade. We write 'canceling' here too, so the page shows
+    the end date straight away without waiting for the webhook.
     """
     sub_id = current_user.stripe_subscription_id
     if not sub_id or not stripe.api_key:
@@ -9103,7 +9131,7 @@ def cancel_subscription():
         return redirect('/progress')
 
     try:
-        stripe.Subscription.cancel(sub_id)
+        sub = stripe.Subscription.modify(sub_id, cancel_at_period_end=True)
     except Exception:
         app.logger.exception("Failed to cancel subscription %s", sub_id)
         # Say so on the page. A silent bounce back to /progress looks exactly
@@ -9111,9 +9139,10 @@ def cancel_subscription():
         # log-reading to tell the two apart when this was first tested live.
         return redirect('/progress?cancel=failed')
 
-    # Mark them canceled now (the webhook will also do this — both are idempotent).
+    # Record it now (the webhook will also do this — both are idempotent).
     _apply_subscription(current_user, tier=current_user.subscription_tier,
-                        status='canceled')
+                        status='canceling',
+                        current_period_end=_subscription_period_end(sub))
     _mirror_tier_to_session(current_user)
     app.logger.info("User %s cancelled subscription %s", current_user.id, sub_id)
     # Send them to a warm goodbye page (PRG pattern: redirect after the POST).
