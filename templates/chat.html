@@ -531,6 +531,13 @@
                     Creates custom quizzes and practice exercises on demand. Tailored to your exact level and chosen topic, so you always have fresh material to drill weak spots.
                 </span>
             </button>
+            <button class="mode-btn" data-mode="translator" onclick="switchMode('translator')">
+                🔤 Translator
+                <span class="mode-tooltip">
+                    <strong>🔤 Translator</strong>
+                    Type English or Thai and get the translation with its spelling and meaning, at the right politeness for who you're talking to. Ask "to a friend?" or "to a monk?" to change it.
+                </span>
+            </button>
             <button class="mode-btn" data-mode="helper" onclick="switchMode('helper')">
                 💡 Helper
                 <span class="mode-tooltip">
@@ -540,6 +547,10 @@
             </button>
         </div>
         <div id="limit-hint" class="limit-hint" style="display:none;"></div>
+        {# Only shown in Translator mode: its Thai is AI output nobody has checked. #}
+        <p id="translator-note" class="limit-hint" hidden>
+            🔤 AI translation, may not be perfect. Check anything important with a Thai speaker.
+        </p>
     </div>
 
     {% if roleplay_scenarios %}
@@ -778,7 +789,7 @@
         // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
         if (!AI_LIMITS.unlimited && !AI_LIMITS.allowed_modes.includes(mode)) {
             showUpgradeNote("🔒 That AI mode is a Pro feature. Upgrade to unlock "
-                + "Conversation, Culture and the Exercise Generator.");
+                + "Conversation, Culture, the Translator and the Exercise Generator.");
             return;
         }
         // Leaving conversation mode ends any roleplay in progress.
@@ -791,6 +802,7 @@
         });
         document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
         showLensBar();
+        document.getElementById('translator-note').hidden = mode !== 'translator';
 
         // The two modes have separate allowances, so the hint has to be redrawn
         // on every switch — not just after a message is sent.
@@ -803,7 +815,8 @@
             'cultural': '🌏 Cultural Guide - Learn Thai customs',
             'buddhist': '☸️ Buddhist Guide - Explore the Dhamma. Choose your approach above',
             'generator': '📝 Generator Mode - Create custom exercises',
-            'helper': '💡 Helper Mode - Get smart hints'
+            'helper': '💡 Helper Mode - Get smart hints',
+            'translator': '🔤 Translator - Type English or Thai to translate'
         };
         
         addMessage('system', `Switched to ${modeNames[mode]}`);

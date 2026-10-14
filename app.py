@@ -864,6 +864,7 @@ SUBSCRIPTION_TIERS = {
             '✓ AI conversation partner with roleplay scenarios',
             '✓ Culture AI Q&A',
             '✓ AI exercise generator',
+            '✓ AI translator, English to Thai and back',
             '✓ Thai–English dictionary',
             '✓ 3x points multiplier',
             '✓ Priority support',
@@ -9313,7 +9314,8 @@ def _ai_chat_gate(tier, mode):
                 'gate': 'mode_locked',
                 'message': "This AI mode is a Pro feature. Free and Basic plans "
                            "include the Tutor and Dhamma modes — upgrade to Pro to "
-                           "unlock Conversation, Culture and the Exercise Generator.",
+                           "unlock Conversation, Culture, the Translator and the "
+                           "Exercise Generator.",
             })
         usage = _ai_usage_today()
         pool_name = ai_pool_for(mode)
