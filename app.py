@@ -579,6 +579,7 @@ except Exception as e:
 # ============================================
 
 import hashlib
+import threading
 from functools import wraps
 
 # Developer password — loaded from environment.
@@ -7891,13 +7892,57 @@ def password_problem(password, confirm_password):
     return None
 
 
-def send_password_reset_email(user, link):
-    """Email the reset link. Never raises: the caller's reply must be the same
-    whether or not an account exists, so a delivery failure is logged, not shown."""
+def send_email(to, subject, text):
+    """Send one plain-text email through Resend. Never raises: every caller's
+    reply must be the same whether or not the email went, so a delivery failure
+    is logged, not shown. With no key the whole email goes to the log instead."""
     if not RESEND_API_KEY:
-        app.logger.warning("RESEND_API_KEY not set; password reset link for user %s: %s",
-                           user.id, link)
+        app.logger.warning("RESEND_API_KEY not set; email to %s not sent.\n%s\n\n%s",
+                           to, subject, text)
         return
+    try:
+        resp = httpx.post(
+            "https://api.resend.com/emails",
+            headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
+            json={"from": PASSWORD_RESET_FROM, "to": [to],
+                  "subject": subject, "text": text},
+            timeout=20,
+        )
+        resp.raise_for_status()
+    except Exception:
+        app.logger.exception("Email to %s (%s) failed", to, subject)
+
+
+def _send_in_background(to, subject, text):
+    """Send without making the request wait for Resend.
+
+    This is what keeps /forgot-password honest. Its reply text is the same for
+    known and unknown emails, but if a known email also waited half a second
+    for Resend, timing the reply would still reveal who has an account. A
+    thread is enough here: Render runs one worker, and a lost email is
+    recoverable — the person just asks again."""
+    threading.Thread(target=send_email, args=(to, subject, text), daemon=True).start()
+
+
+def _public_base_url():
+    return PUBLIC_BASE_URL or request.host_url.rstrip('/')
+
+
+def send_password_changed_email(user):
+    """Tell the owner their password changed, so a change they didn't make is
+    noticed by the one person able to act on it."""
+    _send_in_background(user.email, "Your ThaiBridge AI password was changed", (
+        f"Hi {user.username},\n\n"
+        "The password for your ThaiBridge AI account was just changed.\n\n"
+        "If that was you, there's nothing more to do.\n\n"
+        "If it wasn't, reset it now at "
+        f"{_public_base_url()}{url_for('forgot_password')} "
+        "and email joshua@smoald.com so we can help.\n\n"
+        "ThaiBridge AI"
+    ))
+
+
+def send_password_reset_email(user, link):
     text = (
         f"Hi {user.username},\n\n"
         "Someone asked to reset the password for your ThaiBridge AI account. "
@@ -7908,21 +7953,7 @@ def send_password_reset_email(user, link):
         "Your password hasn't changed.\n\n"
         "ThaiBridge AI"
     )
-    try:
-        resp = httpx.post(
-            "https://api.resend.com/emails",
-            headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
-            json={
-                "from": PASSWORD_RESET_FROM,
-                "to": [user.email],
-                "subject": "Reset your ThaiBridge AI password",
-                "text": text,
-            },
-            timeout=20,
-        )
-        resp.raise_for_status()
-    except Exception:
-        app.logger.exception("Password reset email to user %s failed", user.id)
+    _send_in_background(user.email, "Reset your ThaiBridge AI password", text)
 
 
 @app.route('/forgot-password', methods=['GET', 'POST'])
@@ -7942,8 +7973,7 @@ def forgot_password():
     user = User.query.filter_by(email=email).first()
     if user is not None:
         token = make_password_reset_token(user)
-        base = PUBLIC_BASE_URL or request.host_url.rstrip('/')
-        send_password_reset_email(user, f"{base}{url_for('reset_password', token=token)}")
+        send_password_reset_email(user, f"{_public_base_url()}{url_for('reset_password', token=token)}")
 
     # Identical reply either way, so this page can't be used to find out
     # whether an email address has an account here.
@@ -7976,6 +8006,7 @@ def reset_password(token):
 
     user.set_password(data['password'])
     db.session.commit()
+    send_password_changed_email(user)
 
     # Proving you own the inbox is as good as knowing the old password.
     login_user(user, remember=True)
@@ -8001,6 +8032,7 @@ def change_password():
 
     current_user.set_password(data['new_password'])
     db.session.commit()
+    send_password_changed_email(current_user)
     return jsonify({'success': True, 'message': 'Your password has been changed.'})
 
 

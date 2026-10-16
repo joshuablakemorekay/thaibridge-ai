@@ -27,6 +27,15 @@ OLD_PASSWORD = "OldPass123"
 NEW_PASSWORD = "NewPass456"
 
 
+@pytest.fixture(autouse=True)
+def outbox():
+    """Every email the app hands off, as (to, subject, text), instead of a
+    background thread trying to send it."""
+    sent = []
+    with patch.object(A, "_send_in_background", side_effect=lambda *m: sent.append(m)):
+        yield sent
+
+
 @pytest.fixture
 def user():
     tag = uuid.uuid4().hex[:8]
@@ -140,19 +149,41 @@ def test_reset_keeps_the_signup_password_rules(user, password, confirm, expected
 
 # ── Sending the email ─────────────────────────────────────────────────────
 
-def test_no_resend_key_logs_the_link_instead_of_sending(user):
-    with app.app_context(), patch.object(A, "RESEND_API_KEY", None), \
-         patch("app.httpx.post") as post:
-        A.send_password_reset_email(db.session.get(User, user["id"]), "https://x/reset-password/t")
+def test_no_resend_key_logs_instead_of_sending():
+    with patch.object(A, "RESEND_API_KEY", None), patch("app.httpx.post") as post:
+        A.send_email("a@example.com", "Subject", "Body")
     post.assert_not_called()
 
 
-def test_resend_failure_never_reaches_the_user(user):
+def test_a_resend_failure_is_swallowed():
     with patch.object(A, "RESEND_API_KEY", "re_test"), \
          patch("app.httpx.post", side_effect=RuntimeError("Resend is down")) as post:
-        r = app.test_client().post("/forgot-password", json={"email": user["email"]})
+        A.send_email("a@example.com", "Subject", "Body")   # must not raise
     assert post.called
-    assert r.status_code == 200 and r.get_json()["success"]
+
+
+def test_forgot_password_never_waits_for_resend(user, outbox):
+    """The reply must not wait on the send, or its timing would reveal which
+    emails have accounts even though the text is identical."""
+    with patch.object(A, "RESEND_API_KEY", "re_test"), patch("app.httpx.post") as post:
+        r = app.test_client().post("/forgot-password", json={"email": user["email"]})
+    assert r.status_code == 200
+    post.assert_not_called()                  # nothing sent inside the request…
+    assert [m[0] for m in outbox] == [user["email"]]   # …it was handed to the background
+
+
+def test_reset_and_change_both_tell_the_owner(user, outbox):
+    _, link = request_reset(app.test_client(), user["email"])
+    app.test_client().post(path_of(link), json={"password": NEW_PASSWORD,
+                                                "confirm_password": NEW_PASSWORD})
+    c = app.test_client()
+    c.post("/login", json={"identifier": user["username"], "password": NEW_PASSWORD})
+    c.post("/change-password", json={"current_password": NEW_PASSWORD,
+                                     "new_password": "Third789x",
+                                     "confirm_password": "Third789x"})
+    notices = [m for m in outbox if m[1] == "Your ThaiBridge AI password was changed"]
+    assert len(notices) == 2 and all(m[0] == user["email"] for m in notices)
+    assert "/forgot-password" in notices[0][2]
 
 
 # ── Changing it while logged in ───────────────────────────────────────────
