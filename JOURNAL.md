@@ -4223,3 +4223,52 @@ worked, but the way to rebuild it existed only on my laptop.
 
 **References / Conversations**
 Commit `47a26ac` (accounts.py); this session's script and journal commits.
+
+
+## 16 October 2026 (late) — The account routes get their own Blueprint
+
+**TL;DR:** Sign-up, login, logout and the password routes moved out of
+`app.py` into a Flask Blueprint, `auth.py`, in two tested stages. It's live
+and checked on the real site, and `app.py` is about 580 lines shorter than
+this morning.
+
+> move the account routes into a Blueprint
+
+### How we did it
+
+Stage one moved the database object and the `User` model into `models.py`,
+so other files could use them without importing `app.py`. Stage two moved
+the routes into `auth.py`, and the login manager and rate limiter into
+`extensions.py`. Each stage was committed only once all the tests passed. I
+chose to merge straight to main:
+
+> merge to main
+
+and the live pages were checked straight after.
+
+### The bit worth keeping
+
+Logging in restores a learner's saved XP, but that belongs to the points
+system, not to accounts. So `auth.py` doesn't do it. `app.py` listens for
+Flask-Login's "someone logged in" signal instead.
+
+My first test for that failed for the wrong reason. Editing a dictionary
+inside the session doesn't count as changing the session, so the test's
+setup was never saved. Fixing the test, then switching the safeguard off to
+watch it fail, is what showed the safeguard really matters.
+
+**Engineering Contribution**
+
+- *Decisions made:* staged commits on a branch rather than one big move. A
+  signal rather than auth.py calling back into app.py. AiUsage and Payment
+  left for later, as they need the price lists moved first.
+- *Improvements made to generated code:* the engineering pass removed an
+  import the move left behind. I chose to rename three helpers whose leading
+  `_` claimed they were private when they're now shared.
+- *Roughly how much was accepted as-is vs engineered on:* the move went in as
+  drafted. The test bug, the safeguard check and the clean-ups came from
+  checking it over.
+
+**References / Conversations**
+Commits `303edb5` and `10e3778` (the move); this session's clean-up and
+journal commits.
