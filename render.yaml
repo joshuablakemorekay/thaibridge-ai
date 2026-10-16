@@ -68,6 +68,18 @@ services:
       - key: MONK_MODE_CODES
         sync: false
 
+      # Password-reset emails go out through Resend (resend.com). sync:false:
+      # the key is typed into the Render dashboard, never into this public file.
+      # Unset = no email is sent; the reset link is written to the Render log
+      # instead, so the page still answers normally and nothing crashes.
+      - key: RESEND_API_KEY
+        sync: false
+
+      # The address reset links point at. Without it a link could carry the
+      # internal .onrender.com name the request arrived on.
+      - key: PUBLIC_BASE_URL
+        value: "https://thaibridge-ai.smoald.com"
+
       # Stripe. sync:false throughout — the NAME is declared here so the
       # Blueprint re-sync stops wiping it, and the VALUE is typed into the
       # Render dashboard. Never put a key value in this file: the repo is

@@ -85,6 +85,13 @@
     .signup-link a:hover {
         text-decoration: underline;
     }
+
+    .forgot-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--royal-purple);
+    }
 </style>
 {% endblock %}
 
@@ -121,6 +128,7 @@
                        autocomplete="current-password"
                        placeholder="Your password"
                        required>
+                <a href="/forgot-password" class="forgot-link">Forgot password?</a>
             </div>
 
             <button type="submit"

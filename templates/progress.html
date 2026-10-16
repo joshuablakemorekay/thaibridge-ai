@@ -144,6 +144,55 @@
     </div>
     {% endif %}
 
+    {% if current_user.is_authenticated %}
+    <div class="receipts-section">
+        <h2>🔑 Change password</h2>
+        <form id="change-password-form" class="change-password-form">
+            <label for="current_password">Current password</label>
+            <input type="password" id="current_password" autocomplete="current-password" required>
+            <label for="new_password">New password</label>
+            <input type="password" id="new_password" autocomplete="new-password" required>
+            <p class="receipts-note">Minimum 8 characters with at least one letter and one number.</p>
+            <label for="confirm_new_password">Type the new password again</label>
+            <input type="password" id="confirm_new_password" autocomplete="new-password" required>
+            <button type="submit" class="btn btn-saffron" id="change-password-btn">Change password</button>
+        </form>
+        <p id="change-password-message" class="change-password-message" role="alert"></p>
+    </div>
+    <script>
+    (function () {
+        'use strict';
+        var form = document.getElementById('change-password-form');
+        var msg  = document.getElementById('change-password-message');
+        var btn  = document.getElementById('change-password-btn');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            btn.disabled = true;
+            try {
+                var response = await fetch('/change-password', {
+                    method:  'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body:    JSON.stringify({
+                        current_password: document.getElementById('current_password').value,
+                        new_password:     document.getElementById('new_password').value,
+                        confirm_password: document.getElementById('confirm_new_password').value
+                    })
+                });
+                var result = await response.json();
+                msg.textContent = result.message;
+                msg.className = 'change-password-message ' + (result.success ? 'ok' : 'bad');
+                if (result.success) { form.reset(); }
+            } catch (err) {
+                msg.textContent = 'A network error occurred. Please try again.';
+                msg.className = 'change-password-message bad';
+            }
+            btn.disabled = false;
+        });
+    }());
+    </script>
+    {% endif %}
+
     <!-- Achievements -->
     <div class="achievements-section">
         <h2>🏆 Achievements</h2>
@@ -364,6 +413,17 @@
     .receipts-table th { padding: 0.75rem; font-size: 0.85rem; }
     .receipts-ref { font-family: monospace; font-size: 0.85rem; color: #666; }
     .receipts-note { margin: 1rem 0 0; font-size: 0.9rem; color: #666; line-height: 1.5; }
+    .change-password-form { display: grid; gap: 0.5rem; max-width: 420px; }
+    .change-password-form label { font-weight: 600; margin-top: 0.5rem; }
+    .change-password-form input {
+        padding: 0.65rem 0.9rem; font-size: 1rem; font-family: inherit;
+        border: 2px solid #ddd; border-radius: 8px;
+    }
+    .change-password-form .receipts-note { margin: 0; font-size: 0.85rem; }
+    .change-password-form button { margin-top: 1rem; justify-self: start; }
+    .change-password-message { margin: 1rem 0 0; font-weight: 600; }
+    .change-password-message.ok { color: #228B22; }
+    .change-password-message.bad { color: #8B0000; }
 
     .achievements-grid {
         display: grid;
