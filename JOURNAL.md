@@ -4074,3 +4074,57 @@ is a claim about the answer, and it needs testing too.
 Commits `f484036` (script: prompt extraction, thinking off, `context/`,
 `real_run_skip`) and `039227b` (snapshots and skip reasons); real eval run
 37990539228.
+
+
+## 16 October 2026 — Forgot password, after my teacher forgot his
+
+**TL;DR:** My Thai teacher couldn't log in, and the only way back in was an
+edit to the live database. Now anyone can reset their password by email or
+change it on their Progress page, and it's live and tested with a real email.
+
+It started with a message about my teacher:
+
+> [my teacher] cannot remember his password for log in is there a forgot
+> password feature for the app?
+
+There wasn't. Claude isn't allowed to touch the live database, so it wrote a
+small script and I ran it myself, after asking:
+
+> take me through all this step by step
+
+### How we did it
+
+The script looked first, read-only, then set a temporary password on his one
+account. Then we planned the real feature. I chose the email service:
+
+> go with Resend
+
+I verified smoald.com in Resend and added the key to Render. Claude built
+the pages, the signed reset link and 16 tests. I merged it to main and tested
+it on my own account:
+
+> the email arrived and the reset worked
+
+### The bit worth keeping
+
+The page gave the same reply for every email, but a real account took longer
+to answer, because it waited for the email to send. The timing gave away what
+the words were hiding.
+
+**Engineering Contribution**
+
+- *Decisions made:* Resend over Google Workspace SMTP or Cloudflare Email
+  (simple HTTP, no new packages). A signed token with a password-hash
+  fingerprint instead of a tokens table, so there was no database change.
+  Logging out other devices left for later, because it needs its own
+  database change.
+- *Improvements made to generated code:* in the engineering pass I chose all
+  three fixes. Emails now send in the background to close the timing leak.
+  The Resend code became a reusable `send_email()`. A new "your password was
+  changed" notice tells the owner, and the docs explain the flow and the key.
+- *Roughly how much was accepted as-is vs engineered on:* the first draft went
+  in mostly unchanged. The security pass reworked how emails send, and I made
+  the provider, merge and scope calls.
+
+**References / Conversations**
+Commit `20c166f` (feature); this session's follow-up commits.
