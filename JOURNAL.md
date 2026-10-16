@@ -4175,3 +4175,51 @@ and passes with it.
 
 **References / Conversations**
 Commit `2c493b6` (sign out everywhere); this session's fix commit.
+
+
+## 16 October 2026 (night) — Account code gets its own file, and the review setup gets checked
+
+**TL;DR:** The password and email logic moved out of the 10,000-line
+`app.py` into `accounts.py`. Then I had every part of my teacher's review
+setup checked, from the spreadsheet to his account, and all of it works.
+
+> move the account code into its own module
+
+### How we did it
+
+Claude explained the catch first. Every module here is used by `app.py` and
+never uses it back, and moving the routes would break that rule. I chose the
+smaller job:
+
+> go with option 1
+
+`accounts.py` now holds the password rules, reset links and emails. The
+routes stay in `app.py`. Moving those is planned as its own staged job.
+
+Then I asked:
+
+> could we ensure the whole system of my teacher doing reviews, filling in
+> the spreadsheet and using the app is all connected and working?
+
+It checked that he can edit the sheet, that all 71 links work, and that the
+sheet still matches the app (only 2 new lines). It also walked every page as a
+copy of his account, and I ran a read-only check of his real one. He's
+already on level 2.
+
+### The bit worth keeping
+
+The script that builds his spreadsheet had never been committed. The review
+worked, but the way to rebuild it existed only on my laptop.
+
+**Engineering Contribution**
+
+- *Decisions made:* the smaller refactor over a risky Blueprint move on a
+  live site. Reviewer names are kept out of the public repo.
+- *Improvements made to generated code:* settings are read when an email is
+  sent, not at import, because `app.py` loads modules before `.env`. A new
+  test proves the no-key log fallback the docs had only promised.
+- *Roughly how much was accepted as-is vs engineered on:* the module split
+  went in as drafted. The scope choice and the account check were mine.
+
+**References / Conversations**
+Commit `47a26ac` (accounts.py); this session's script and journal commits.
