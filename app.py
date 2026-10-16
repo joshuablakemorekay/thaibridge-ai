@@ -26,6 +26,7 @@ import sentence_builder  # tap-the-tiles drill on /sentences
 import tour_trips  # the playable trips on the Tour Guide page
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
+import accounts  # password rules, reset links and account emails
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -617,7 +618,6 @@ except Exception as e:
 # ============================================
 
 import hashlib
-import threading
 from functools import wraps
 
 # Developer password — loaded from environment.
@@ -7869,129 +7869,13 @@ def logout():
 #
 # Forgotten passwords are reset by emailed link; logged-in users can change
 # theirs on /progress. Before this, a forgotten password meant Josh editing the
-# live database by hand.
-#
-# The reset link is a signed, timed token (itsdangerous, which ships with Flask)
-# rather than a row in a tokens table. It carries the user id plus a short
-# fingerprint of their CURRENT password hash. Setting a new password changes the
-# hash, so the fingerprint stops matching and every outstanding link dies at
-# once. That gives "works only once" — and "changing your password cancels any
-# reset link someone else requested" — with no schema change.
-
-from itsdangerous import URLSafeTimedSerializer, BadSignature
-
-PASSWORD_RESET_MAX_AGE = 30 * 60   # seconds: long enough to find the email, short enough to be stale soon
-
-# Resend (resend.com) sends the email over HTTPS. No key = no email: the link is
-# written to the server log instead, so the flow still works on a laptop and
-# nothing crashes on a deploy where the key hasn't been added yet.
-RESEND_API_KEY = os.environ.get("RESEND_API_KEY")
-PASSWORD_RESET_FROM = os.environ.get("PASSWORD_RESET_FROM",
-                                     "ThaiBridge AI <no-reply@smoald.com>")
-
-# Links in emails must point at the public address, not whatever Host header
-# the request arrived with (behind Render's proxy that can be the internal
-# .onrender.com name, or plain http). Unset locally, where the request's own
-# host is exactly right.
-PUBLIC_BASE_URL = (os.environ.get("PUBLIC_BASE_URL") or "").rstrip('/')
-
-_reset_serializer = URLSafeTimedSerializer(app.secret_key, salt='password-reset')
+# live database by hand. The rules, reset links and emails live in accounts.py;
+# these routes only handle the web side.
 
 
-def _password_fingerprint(user):
-    return hashlib.sha256(user.password_hash.encode()).hexdigest()[:16]
-
-
-def make_password_reset_token(user):
-    return _reset_serializer.dumps({'uid': user.id, 'fp': _password_fingerprint(user)})
-
-
-def user_from_reset_token(token):
-    """The user a reset link belongs to, or None if it is forged, expired or used."""
-    try:
-        data = _reset_serializer.loads(token, max_age=PASSWORD_RESET_MAX_AGE)
-    except BadSignature:   # SignatureExpired is a subclass, so this covers both
-        return None
-    user = db.session.get(User, data.get('uid'))
-    if user is None or not hmac.compare_digest(data.get('fp', ''), _password_fingerprint(user)):
-        return None
-    return user
-
-
-def password_problem(password, confirm_password):
-    """The sign-up password rules, shared by every place a password is chosen.
-    Returns the message to show, or None when the password is acceptable."""
-    if len(password) < 8:
-        return 'Password must be at least 8 characters.'
-    if not re.search(r'[a-zA-Z]', password) or not re.search(r'[0-9]', password):
-        return 'Password must contain at least one letter and one number.'
-    if password != confirm_password:
-        return 'Passwords do not match.'
-    return None
-
-
-def send_email(to, subject, text):
-    """Send one plain-text email through Resend. Never raises: every caller's
-    reply must be the same whether or not the email went, so a delivery failure
-    is logged, not shown. With no key the whole email goes to the log instead."""
-    if not RESEND_API_KEY:
-        app.logger.warning("RESEND_API_KEY not set; email to %s not sent.\n%s\n\n%s",
-                           to, subject, text)
-        return
-    try:
-        resp = httpx.post(
-            "https://api.resend.com/emails",
-            headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
-            json={"from": PASSWORD_RESET_FROM, "to": [to],
-                  "subject": subject, "text": text},
-            timeout=20,
-        )
-        resp.raise_for_status()
-    except Exception:
-        app.logger.exception("Email to %s (%s) failed", to, subject)
-
-
-def _send_in_background(to, subject, text):
-    """Send without making the request wait for Resend.
-
-    This is what keeps /forgot-password honest. Its reply text is the same for
-    known and unknown emails, but if a known email also waited half a second
-    for Resend, timing the reply would still reveal who has an account. A
-    thread is enough here: Render runs one worker, and a lost email is
-    recoverable — the person just asks again."""
-    threading.Thread(target=send_email, args=(to, subject, text), daemon=True).start()
-
-
-def _public_base_url():
-    return PUBLIC_BASE_URL or request.host_url.rstrip('/')
-
-
-def send_password_changed_email(user):
-    """Tell the owner their password changed, so a change they didn't make is
-    noticed by the one person able to act on it."""
-    _send_in_background(user.email, "Your ThaiBridge AI password was changed", (
-        f"Hi {user.username},\n\n"
-        "The password for your ThaiBridge AI account was just changed.\n\n"
-        "If that was you, there's nothing more to do.\n\n"
-        "If it wasn't, reset it now at "
-        f"{_public_base_url()}{url_for('forgot_password')} "
-        "and email joshua@smoald.com so we can help.\n\n"
-        "ThaiBridge AI"
-    ))
-
-
-def send_password_reset_email(user, link):
-    text = (
-        f"Hi {user.username},\n\n"
-        "Someone asked to reset the password for your ThaiBridge AI account. "
-        "If that was you, choose a new password here:\n\n"
-        f"{link}\n\n"
-        "The link works once and expires in 30 minutes.\n\n"
-        "If you didn't ask for this, you can ignore this email. "
-        "Your password hasn't changed.\n\n"
-        "ThaiBridge AI"
-    )
-    _send_in_background(user.email, "Reset your ThaiBridge AI password", text)
+def _tell_owner_password_changed(user):
+    accounts.send_changed_email(
+        user, accounts.public_base_url() + url_for('forgot_password'))
 
 
 @app.route('/forgot-password', methods=['GET', 'POST'])
@@ -8010,8 +7894,9 @@ def forgot_password():
 
     user = User.query.filter_by(email=email).first()
     if user is not None:
-        token = make_password_reset_token(user)
-        send_password_reset_email(user, f"{_public_base_url()}{url_for('reset_password', token=token)}")
+        token = accounts.make_reset_token(user)
+        accounts.send_reset_email(
+            user, accounts.public_base_url() + url_for('reset_password', token=token))
 
     # Identical reply either way, so this page can't be used to find out
     # whether an email address has an account here.
@@ -8027,7 +7912,7 @@ def forgot_password():
 @limiter.limit("10 per 15 minutes; 40 per hour", key_func=_rate_limit_key,
                methods=["POST"], deduct_when=_failed_attempt_only)
 def reset_password(token):
-    user = user_from_reset_token(token)
+    user = accounts.user_from_reset_token(token, lambda uid: db.session.get(User, uid))
 
     if request.method == 'GET':
         return render_template('reset_password.html', token_valid=user is not None)
@@ -8038,13 +7923,13 @@ def reset_password(token):
                                    'Please ask for a new one.'}), 400
 
     data = request.get_json(silent=True) or {}
-    problem = password_problem(data.get('password', ''), data.get('confirm_password', ''))
+    problem = accounts.password_problem(data.get('password', ''), data.get('confirm_password', ''))
     if problem:
         return jsonify({'success': False, 'message': problem}), 400
 
     user.set_password(data['password'])
     db.session.commit()
-    send_password_changed_email(user)
+    _tell_owner_password_changed(user)
 
     # Proving you own the inbox is as good as knowing the old password.
     login_user(user, remember=True)
@@ -8064,7 +7949,7 @@ def change_password():
     if not current_user.check_password(data.get('current_password', '')):
         return jsonify({'success': False, 'message': 'Your current password is not right.'}), 400
 
-    problem = password_problem(data.get('new_password', ''), data.get('confirm_password', ''))
+    problem = accounts.password_problem(data.get('new_password', ''), data.get('confirm_password', ''))
     if problem:
         return jsonify({'success': False, 'message': problem}), 400
 
@@ -8074,7 +7959,7 @@ def change_password():
     # The new password signed out every device, this one included. Re-issue
     # this device's cookies so the person who just changed it stays signed in.
     login_user(user, remember=True)
-    send_password_changed_email(user)
+    _tell_owner_password_changed(user)
     return jsonify({'success': True, 'message': 'Your password has been changed.'})
 
 
@@ -8594,7 +8479,7 @@ def signup():
         return jsonify({'success': False, 'message': 'Username must be 3\u201320 characters: letters, numbers, and underscores only.'}), 400
     if not re.match(r'^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$', email):
         return jsonify({'success': False, 'message': 'Please enter a valid email address.'}), 400
-    problem = password_problem(password, confirm_password)
+    problem = accounts.password_problem(password, confirm_password)
     if problem:
         return jsonify({'success': False, 'message': problem}), 400
     if User.query.filter_by(username=username).first():

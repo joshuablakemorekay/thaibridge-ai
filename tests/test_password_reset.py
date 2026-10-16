@@ -20,7 +20,7 @@ import pytest
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
-import app as A  # noqa: E402
+import accounts  # noqa: E402
 from app import app, db, User  # noqa: E402
 
 OLD_PASSWORD = "OldPass123"
@@ -32,7 +32,7 @@ def outbox():
     """Every email the app hands off, as (to, subject, text), instead of a
     background thread trying to send it."""
     sent = []
-    with patch.object(A, "_send_in_background", side_effect=lambda *m: sent.append(m)):
+    with patch.object(accounts, "send_in_background", side_effect=lambda *m: sent.append(m)):
         yield sent
 
 
@@ -54,7 +54,7 @@ def user():
 def request_reset(client, email):
     """POST the forgot-password form; return (response, link that would be emailed)."""
     sent = []
-    with patch.object(A, "send_password_reset_email",
+    with patch.object(accounts, "send_reset_email",
                       side_effect=lambda u, link: sent.append(link)):
         r = client.post("/forgot-password", json={"email": email})
     return r, (sent[0] if sent else None)
@@ -84,9 +84,9 @@ def test_known_and_unknown_emails_get_the_same_reply(user):
     assert known.get_json() == unknown.get_json()
 
 
-def test_link_uses_the_public_address_when_set(user):
-    with patch.object(A, "PUBLIC_BASE_URL", "https://thaibridge-ai.smoald.com"):
-        _, link = request_reset(app.test_client(), user["email"])
+def test_link_uses_the_public_address_when_set(user, monkeypatch):
+    monkeypatch.setenv("PUBLIC_BASE_URL", "https://thaibridge-ai.smoald.com")
+    _, link = request_reset(app.test_client(), user["email"])
     assert link.startswith("https://thaibridge-ai.smoald.com/reset-password/")
 
 
@@ -120,7 +120,7 @@ def test_link_works_only_once(user):
 
 def test_expired_link_is_refused(user):
     _, link = request_reset(app.test_client(), user["email"])
-    with patch.object(A, "PASSWORD_RESET_MAX_AGE", -1):
+    with patch.object(accounts, "PASSWORD_RESET_MAX_AGE", -1):
         r = app.test_client().post(path_of(link), json={"password": NEW_PASSWORD,
                                                         "confirm_password": NEW_PASSWORD})
     assert r.status_code == 400
@@ -149,23 +149,26 @@ def test_reset_keeps_the_signup_password_rules(user, password, confirm, expected
 
 # ── Sending the email ─────────────────────────────────────────────────────
 
-def test_no_resend_key_logs_instead_of_sending():
-    with patch.object(A, "RESEND_API_KEY", None), patch("app.httpx.post") as post:
-        A.send_email("a@example.com", "Subject", "Body")
+def test_no_resend_key_logs_instead_of_sending(monkeypatch, caplog):
+    monkeypatch.delenv("RESEND_API_KEY", raising=False)
+    with patch("accounts.httpx.post") as post:
+        accounts.send_email("a@example.com", "Subject", "https://x/reset-password/t")
     post.assert_not_called()
+    assert "https://x/reset-password/t" in caplog.text   # the link is still findable
 
 
-def test_a_resend_failure_is_swallowed():
-    with patch.object(A, "RESEND_API_KEY", "re_test"), \
-         patch("app.httpx.post", side_effect=RuntimeError("Resend is down")) as post:
-        A.send_email("a@example.com", "Subject", "Body")   # must not raise
+def test_a_resend_failure_is_swallowed(monkeypatch):
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    with patch("accounts.httpx.post", side_effect=RuntimeError("Resend is down")) as post:
+        accounts.send_email("a@example.com", "Subject", "Body")   # must not raise
     assert post.called
 
 
-def test_forgot_password_never_waits_for_resend(user, outbox):
+def test_forgot_password_never_waits_for_resend(user, outbox, monkeypatch):
     """The reply must not wait on the send, or its timing would reveal which
     emails have accounts even though the text is identical."""
-    with patch.object(A, "RESEND_API_KEY", "re_test"), patch("app.httpx.post") as post:
+    monkeypatch.setenv("RESEND_API_KEY", "re_test")
+    with patch("accounts.httpx.post") as post:
         r = app.test_client().post("/forgot-password", json={"email": user["email"]})
     assert r.status_code == 200
     post.assert_not_called()                  # nothing sent inside the request…
