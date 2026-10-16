@@ -296,11 +296,20 @@ developing. `/developer-logout` ends it.
 - **One big `app.py`.** Simple to run and follow; harder to maintain as it grows. The
   natural next step is splitting it into modules.
 - **Modules never import `app.py`.** `app.py` imports them, never the other way round,
-  so there is no import loop and `python app.py` loads the app once. `accounts.py`
-  (password rules, reset links, account emails) shows what that costs. It needs to
-  look users up but can't import the `User` model, so the route passes in a lookup
-  function instead. Moving the account *routes* out as well means first moving the
-  database and `User` into their own module, so that's a separate, planned step.
+  so there is no import loop and `python app.py` loads the app once. The account code
+  shows how that works in practice:
+  - `models.py` holds the database object (`db`, created unbound and attached with
+    `db.init_app(app)`) and the `User` model.
+  - `extensions.py` holds the login manager and the rate limiter, attached the same way.
+  - `accounts.py` holds the password rules, reset links and account emails.
+  - `auth.py` is a Flask **Blueprint**: the sign-up, login, logout, forgot, reset and
+    change-password routes, registered with `app.register_blueprint(auth.bp)`.
+  - Logging in restores a learner's saved XP, but that's gamification, so `auth.py`
+    doesn't do it. `app.py` listens for Flask-Login's `user_logged_in` signal instead.
+    It skips the restore when the session already belongs to that user, so re-signing
+    in after a password change can't rewind progress.
+  - `AiUsage` and `Payment` are still in `app.py`, because `Payment` reads the price
+    lists that live there.
 - **Content as Python data, not a database/CMS.** Vocabulary and lessons are written
   directly into Python dictionaries. Easy to edit by hand, but it mixes content with code.
 - **Progress in the session, not the database.** Lightweight and quick, but not synced

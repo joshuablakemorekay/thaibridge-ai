@@ -309,3 +309,29 @@ def test_a_signed_out_device_keeps_what_it_earns_as_a_guest(user):
     phone.get("/")
     with phone.session_transaction() as s:
         assert s["user_progress"]["xp"] == 42
+
+
+def test_changing_password_keeps_progress_earned_this_visit(user):
+    """Re-signing-in after a password change must not reload the saved copy of
+    progress over the session, or anything not yet saved would be rewound."""
+    c = logged_in(user)
+    with c.session_transaction() as s:
+        # Reassigned, not edited in place: an in-place edit of a nested dict
+        # doesn't mark the session as changed, so it would never be saved.
+        s["user_progress"] = {**s["user_progress"], "xp": 500}
+    c.post("/change-password", json={"current_password": OLD_PASSWORD,
+                                     "new_password": NEW_PASSWORD,
+                                     "confirm_password": NEW_PASSWORD})
+    with c.session_transaction() as s:
+        assert s["user_progress"]["xp"] == 500
+
+
+def test_logging_in_restores_saved_progress(user):
+    """auth.py never touches progress; app.py restores it on the login signal."""
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.progress = {"xp": 321, "level": 3}
+        db.session.commit()
+    c = logged_in(user)
+    with c.session_transaction() as s:
+        assert s["user_progress"]["xp"] == 321
