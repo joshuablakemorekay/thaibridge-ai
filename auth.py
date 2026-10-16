@@ -6,9 +6,9 @@ models.py, the limiter and login manager from extensions.py, and the password
 rules and emails from accounts.py.
 
 The one thing it deliberately does NOT do is restore a learner's saved XP and
-level when they log in. That is gamification, and it lives in app.py. app.py
-listens for Flask-Login's user_logged_in signal instead, so these routes only
-have to call login_user() and the progress follows.
+level when they log in. That is gamification, and it lives in progress.py,
+which listens for Flask-Login's user_logged_in signal instead, so these routes
+only have to call login_user() and the progress follows.
 """
 
 import re

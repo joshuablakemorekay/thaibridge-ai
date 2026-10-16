@@ -26,9 +26,8 @@ import pytest
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
-from app import (  # noqa: E402
-    app, db, User, _PROGRESS_NOT_SAVED, rate_limit_key, get_user_level,
-)
+from app import app, db, User, rate_limit_key, get_user_level  # noqa: E402
+from progress import _PROGRESS_NOT_SAVED  # noqa: E402
 
 PASSWORD = "TestPass123"
 

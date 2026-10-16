@@ -304,10 +304,17 @@ developing. `/developer-logout` ends it.
   - `accounts.py` holds the password rules, reset links and account emails.
   - `auth.py` is a Flask **Blueprint**: the sign-up, login, logout, forgot, reset and
     change-password routes, registered with `app.register_blueprint(auth.bp)`.
+  - `progress.py` holds a learner's progress: its starting values, saving it to the
+    account (minus the keys that must never be saved, such as subscription flags),
+    loading it back at login, and the XP-to-level maths. `app.py` calls
+    `progress.init_app(app)` once, and that sets up both hooks.
   - Logging in restores a learner's saved XP, but that's gamification, so `auth.py`
-    doesn't do it. `app.py` listens for Flask-Login's `user_logged_in` signal instead.
-    It skips the restore when the session already belongs to that user, so re-signing
-    in after a password change can't rewind progress.
+    doesn't do it. `progress.py` listens for Flask-Login's `user_logged_in` signal
+    instead. It skips the restore when the session already belongs to that user, so
+    re-signing in after a password change can't rewind progress.
+  - What progress *unlocks* (section gates, subscriptions, Monk Mode's paywall waiver,
+    the earned unlock) stays in `app.py`. Those rules depend on billing and on each
+    other, so moving them would only move the tangle.
   - `AiUsage` and `Payment` are still in `app.py`, because `Payment` reads the price
     lists that live there.
 - **Content as Python data, not a database/CMS.** Vocabulary and lessons are written
