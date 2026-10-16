@@ -288,3 +288,21 @@ def test_a_malformed_session_id_is_just_signed_out():
     with c.session_transaction() as s:
         s["_user_id"] = "not-a-number:x"
     assert not is_signed_in(c)
+
+
+def test_a_signed_out_device_keeps_what_it_earns_as_a_guest(user):
+    """The dead login is cleared once, on the first page after the change.
+    Before, it came back on every page and wiped the guest's progress each time."""
+    phone = logged_in(user)
+    logged_in(user).post("/change-password", json={"current_password": OLD_PASSWORD,
+                                                   "new_password": NEW_PASSWORD,
+                                                   "confirm_password": NEW_PASSWORD})
+    assert not is_signed_in(phone)
+    assert phone.get_cookie("remember_token") is None
+    with phone.session_transaction() as s:
+        assert "_user_id" not in s
+        s["user_progress"] = {**s.get("user_progress", {}), "xp": 42}
+
+    phone.get("/")
+    with phone.session_transaction() as s:
+        assert s["user_progress"]["xp"] == 42

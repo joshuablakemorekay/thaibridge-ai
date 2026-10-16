@@ -487,6 +487,14 @@ def load_user(user_id):
     except ValueError:
         return None
     if user is None or (user.session_version or 0) != version:
+        # Sign this device out properly, once. Flask-Login leaves a rejected id
+        # in the session and keeps the remember-me cookie, so without this the
+        # dead id came back on every page — and each time, the line below wiped
+        # whatever the visitor had earned since as a guest. '_remember': 'clear'
+        # tells Flask-Login to delete that cookie on this response.
+        session.pop('_user_id', None)
+        session.pop('_fresh', None)
+        session['_remember'] = 'clear'
         # Same as /logout: don't leave this account's cached progress behind.
         session.pop('user_progress', None)
         return None
