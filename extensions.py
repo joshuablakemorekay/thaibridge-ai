@@ -28,7 +28,7 @@ login_manager.login_message = "Please log in to continue."
 # no real learner will ever notice, low enough that an automated caller cannot
 # empty the API credits before anyone spots it.
 
-def _rate_limit_key():
+def rate_limit_key():
     """Identify the visitor for rate limiting.
 
     request.remote_addr is useless here: Render serves through Cloudflare, so
@@ -62,12 +62,12 @@ def _rate_limit_key():
 # ever scales beyond one worker, this needs a shared store — Postgres is already
 # available — so the assumption is written down rather than left implicit.
 limiter = Limiter(
-    key_func=_rate_limit_key,
+    key_func=rate_limit_key,
     storage_uri="memory://",
     strategy="fixed-window",
 )
 
-def _failed_attempt_only(response):
+def failed_attempt_only(response):
     """Count a request against its limit only when the attempt failed.
 
     Used on the sign-in routes. A successful login must not consume anyone's

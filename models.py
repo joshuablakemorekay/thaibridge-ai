@@ -127,7 +127,7 @@ class User(UserMixin, db.Model):
         return self.subscription_tier
 
 
-def _ensure_user_columns():
+def ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
     exists, so add any missing ones by hand. Idempotent — each ALTER is skipped
     once its column is present — so this keeps an older database (local or live)

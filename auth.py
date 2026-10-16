@@ -18,7 +18,7 @@ from flask import (Blueprint, jsonify, redirect, render_template, request,
 from flask_login import current_user, login_required, login_user, logout_user
 
 import accounts
-from extensions import _failed_attempt_only, _rate_limit_key, limiter, login_manager
+from extensions import failed_attempt_only, rate_limit_key, limiter, login_manager
 from models import User, db
 
 bp = Blueprint('auth', __name__)
@@ -57,8 +57,8 @@ def load_user(user_id):
 @bp.route('/login', methods=['GET', 'POST'])
 # Brute-force protection. POST only, so viewing the form is never limited, and
 # failures only, so a real learner signing in is never charged for it.
-@limiter.limit("10 per 15 minutes; 40 per hour", key_func=_rate_limit_key,
-               methods=["POST"], deduct_when=_failed_attempt_only)
+@limiter.limit("10 per 15 minutes; 40 per hour", key_func=rate_limit_key,
+               methods=["POST"], deduct_when=failed_attempt_only)
 def login():
     """Real sign-in. GET shows the form; POST verifies the password.
 
@@ -126,7 +126,7 @@ def _tell_owner_password_changed(user):
 @bp.route('/forgot-password', methods=['GET', 'POST'])
 # Counts every request: each one can send an email, so this guards against
 # someone flooding a stranger's inbox as much as against probing for accounts.
-@limiter.limit("5 per 15 minutes; 20 per hour", key_func=_rate_limit_key,
+@limiter.limit("5 per 15 minutes; 20 per hour", key_func=rate_limit_key,
                methods=["POST"])
 def forgot_password():
     if request.method == 'GET':
@@ -154,8 +154,8 @@ def forgot_password():
 
 
 @bp.route('/reset-password/<token>', methods=['GET', 'POST'])
-@limiter.limit("10 per 15 minutes; 40 per hour", key_func=_rate_limit_key,
-               methods=["POST"], deduct_when=_failed_attempt_only)
+@limiter.limit("10 per 15 minutes; 40 per hour", key_func=rate_limit_key,
+               methods=["POST"], deduct_when=failed_attempt_only)
 def reset_password(token):
     user = accounts.user_from_reset_token(token, lambda uid: db.session.get(User, uid))
 
@@ -186,8 +186,8 @@ def reset_password(token):
 @bp.route('/change-password', methods=['POST'])
 @login_required
 # Asks for the current password, so it is a password-guessing door like /login.
-@limiter.limit("10 per 15 minutes; 40 per hour", key_func=_rate_limit_key,
-               deduct_when=_failed_attempt_only)
+@limiter.limit("10 per 15 minutes; 40 per hour", key_func=rate_limit_key,
+               deduct_when=failed_attempt_only)
 def change_password():
     data = request.get_json(silent=True) or {}
     if not current_user.check_password(data.get('current_password', '')):
@@ -216,7 +216,7 @@ def change_password():
 # account creation, which succeeds each time, so counting only failures would
 # never see it. Generous enough for a group signing up on one shared
 # connection, which is a realistic evening at a monastery.
-@limiter.limit("10 per hour; 30 per day", key_func=_rate_limit_key,
+@limiter.limit("10 per hour; 30 per day", key_func=rate_limit_key,
                methods=["POST"])
 def signup():
     if request.method == 'GET':

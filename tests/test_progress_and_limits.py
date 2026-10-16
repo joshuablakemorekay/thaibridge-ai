@@ -27,7 +27,7 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
 from app import (  # noqa: E402
-    app, db, User, _PROGRESS_NOT_SAVED, _rate_limit_key, get_user_level,
+    app, db, User, _PROGRESS_NOT_SAVED, rate_limit_key, get_user_level,
 )
 
 PASSWORD = "TestPass123"
@@ -314,19 +314,19 @@ def test_rate_limit_key_prefers_the_cloudflare_header():
         "CF-Connecting-IP": "9.9.9.9",
         "X-Forwarded-For": "1.1.1.1, 2.2.2.2",
     }):
-        assert _rate_limit_key() == "9.9.9.9"
+        assert rate_limit_key() == "9.9.9.9"
 
 
 def test_rate_limit_key_falls_back_to_forwarded_for():
     with app.test_request_context("/", headers={
         "X-Forwarded-For": "1.1.1.1, 2.2.2.2",
     }):
-        assert _rate_limit_key() == "1.1.1.1"
+        assert rate_limit_key() == "1.1.1.1"
 
 
 def test_rate_limit_key_falls_back_to_remote_addr():
     with app.test_request_context("/"):
-        assert _rate_limit_key() is not None
+        assert rate_limit_key() is not None
 
 
 def test_two_visitors_get_separate_buckets():
@@ -334,9 +334,9 @@ def test_two_visitors_get_separate_buckets():
     both calls would return the same string and one visitor could lock out
     everybody else."""
     with app.test_request_context("/", headers={"CF-Connecting-IP": "203.0.113.1"}):
-        first = _rate_limit_key()
+        first = rate_limit_key()
     with app.test_request_context("/", headers={"CF-Connecting-IP": "198.51.100.1"}):
-        second = _rate_limit_key()
+        second = rate_limit_key()
     assert first != second
 
 

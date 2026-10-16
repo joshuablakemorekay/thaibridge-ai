@@ -26,7 +26,6 @@ import sentence_builder  # tap-the-tiles drill on /sentences
 import tour_trips  # the playable trips on the Tour Guide page
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
-import accounts  # password rules, reset links and account emails
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -41,8 +40,8 @@ load_dotenv()  # Load .env file before anything else reads environment variables
 from urllib.parse import urlparse  # only-our-own-host check on redirect targets
 from flask import (Flask, render_template, request, jsonify, session, redirect,
                    url_for, abort, Response, stream_with_context)
-from models import db, utcnow, User, _ensure_user_columns  # the database and the account model
-from extensions import limiter, login_manager, _rate_limit_key, _failed_attempt_only
+from models import db, utcnow, User, ensure_user_columns  # the database and the account model
+from extensions import limiter, login_manager, rate_limit_key, failed_attempt_only
 from sqlalchemy.exc import IntegrityError
 from flask_login import login_required, current_user, user_logged_in
 import random
@@ -294,7 +293,7 @@ class Payment(db.Model):
 
 with app.app_context():
     db.create_all()          # creates whole tables, e.g. ai_usage on first run
-    _ensure_user_columns()   # backfills columns onto tables that already exist
+    ensure_user_columns()   # backfills columns onto tables that already exist
 
 # ============================================
 # LOGIN MANAGER AND RATE LIMITING
@@ -7711,7 +7710,7 @@ def get_drill_question(kind):
 
 
 @app.route('/api/check_answer', methods=['POST'])
-@limiter.limit("120 per hour; 600 per day", key_func=_rate_limit_key)
+@limiter.limit("120 per hour; 600 per day", key_func=rate_limit_key)
 def check_answer():
     """Score one drill answer and pay the XP for it.
 
@@ -7829,7 +7828,7 @@ def sentence_builder_question():
 
 
 @app.route('/api/sentence-builder/check', methods=['POST'])
-@limiter.limit("120 per hour; 600 per day", key_func=_rate_limit_key)
+@limiter.limit("120 per hour; 600 per day", key_func=rate_limit_key)
 def sentence_builder_check():
     """Mark a sentence-builder answer and show the right order if it was wrong.
 
@@ -8003,8 +8002,8 @@ def progress_dashboard():
 @app.route('/developer-login', methods=['GET', 'POST'])
 # Tighter than the user login: this is a single-person door that grants a full
 # bypass of every gate, so there is no legitimate reason to fail at it often.
-@limiter.limit("5 per 15 minutes; 20 per hour", key_func=_rate_limit_key,
-               methods=["POST"], deduct_when=_failed_attempt_only)
+@limiter.limit("5 per 15 minutes; 20 per hour", key_func=rate_limit_key,
+               methods=["POST"], deduct_when=failed_attempt_only)
 def developer_login():
     """Developer mode login.
 
@@ -8247,7 +8246,7 @@ def addon_instant_access_stripe():
 
 
 @app.route('/dana', methods=['POST'])
-@limiter.limit("10 per hour; 30 per day", key_func=_rate_limit_key)
+@limiter.limit("10 per hour; 30 per day", key_func=rate_limit_key)
 def dana_stripe():
     """One-time Stripe Checkout for a dāna gift.
 
@@ -9234,7 +9233,7 @@ def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, le
 # ~30 messages an hour is far more than a learner types and far less than a
 # script manages in a second. The per-session daily cap still does the real
 # product work; this only stops something that ignores cookies entirely.
-@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
+@limiter.limit("30 per hour; 200 per day", key_func=rate_limit_key)
 def ai_chat():
     """Send message to AI and get response"""
     if not ai_agent:
@@ -9327,7 +9326,7 @@ def ai_chat():
         }), 500
 
 @app.route('/api/ai/hint', methods=['POST'])
-@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
+@limiter.limit("30 per hour; 200 per day", key_func=rate_limit_key)
 def ai_hint():
     """Get a progressive hint for a quiz question"""
     if not ai_agent:
@@ -9350,7 +9349,7 @@ def ai_hint():
         return jsonify({'error': str(e)}), 500
 
 @app.route('/api/ai/explain', methods=['POST'])
-@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
+@limiter.limit("30 per hour; 200 per day", key_func=rate_limit_key)
 def ai_explain():
     """Explain why an answer is correct/incorrect"""
     if not ai_agent:
@@ -9376,7 +9375,7 @@ def ai_explain():
 # Tighter than the rest on purpose: the exercise generator runs to 3,000 output
 # tokens, roughly six times a chat reply, making it the most expensive call in
 # the app by some distance.
-@limiter.limit("10 per hour; 40 per day", key_func=_rate_limit_key)
+@limiter.limit("10 per hour; 40 per day", key_func=rate_limit_key)
 def ai_generate():
     """Generate custom content (quizzes, flashcards, etc.)"""
     if not ai_agent:
