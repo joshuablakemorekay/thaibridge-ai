@@ -271,6 +271,14 @@ developing. `/developer-logout` ends it.
   saved.
 - **Sign-in is handled by Flask-Login** — only the user's id is kept in the signed
   session cookie; the full account is loaded from the database each request.
+- **Forgotten passwords are reset by email** (`/forgot-password`). The link is a signed
+  token that expires in 30 minutes and carries a fingerprint of the current password
+  hash, so it works once and any password change cancels it, with no tokens table. The
+  reply is the same whether or not the email has an account, and the email is sent in a
+  background thread so the reply's *timing* doesn't give that away either. Emails go
+  through Resend (`RESEND_API_KEY`); with no key, the email is written to the server log
+  instead. Logged-in users change their password on `/progress`, and every reset or
+  change sends the owner a "your password was changed" notice.
 - **Subscriptions are verified server-side** — the Stripe webhook checks the event
   signature, and paid access is read from the database, never from the cookie, so a
   user can't edit a cookie to unlock paid content.
