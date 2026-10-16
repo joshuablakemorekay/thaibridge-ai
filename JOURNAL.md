@@ -4128,3 +4128,50 @@ the words were hiding.
 
 **References / Conversations**
 Commit `20c166f` (feature); this session's follow-up commits.
+
+
+## 16 October 2026 (evening) — A new password now signs out every other device
+
+**TL;DR:** Changing or resetting a password now logs that account out on every
+other device. Checking the work afterwards found it was quietly wiping
+logged-out visitors' progress, which is now fixed.
+
+Straight after the forgot-password work, I asked:
+
+> log users out everywhere when their password changes
+
+### How we did it
+
+Every account got a "session version" number, which goes into the login
+cookie. A new password raises the number, so older cookies stop matching. The
+device that made the change is logged straight back in. Cookies from before
+this count as version 0, so putting it live logged nobody out. Five tests
+cover it, including a "remember me" login that survives closing the browser.
+
+### The bit worth keeping
+
+The engineering pass afterwards found a bug the tests had missed. A
+logged-out device kept its dead cookie, so the app rejected it again on every
+page, and each time it wiped whatever the visitor had earned since. A test
+showed 42 XP vanishing after one click. I said:
+
+> yes fix it, then do the write-up
+
+The dead cookie is now cleared once. The test for it fails without the fix
+and passes with it.
+
+**Engineering Contribution**
+
+- *Decisions made:* the version check lives inside `set_password()`, so no
+  route can forget it. Old cookies count as version 0 rather than logging
+  everyone out on deploy. Clearing the dead cookie properly was chosen over
+  no longer clearing cached progress, which could have left an account's
+  data on a device that had been logged out.
+- *Improvements made to generated code:* the engineering pass caught the
+  progress-wiping bug in code that had already shipped with passing tests.
+  The regression test was checked to fail on the old code.
+- *Roughly how much was accepted as-is vs engineered on:* the first version
+  shipped as drafted. The fix came from going back over it.
+
+**References / Conversations**
+Commit `2c493b6` (sign out everywhere); this session's fix commit.
