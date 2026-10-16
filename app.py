@@ -234,8 +234,21 @@ class User(UserMixin, db.Model):
     # added. JSONB on Postgres, JSON-in-TEXT on SQLite; SQLAlchemy handles both.
     progress               = db.Column(db.JSON)
 
+    # --- Signing out everywhere ---
+    # Part of the id Flask-Login puts in the session and remember-me cookies
+    # (see get_id). A new password bumps it, so every cookie issued before the
+    # change stops matching and that device is signed out — including whoever
+    # had the account if it was taken over, which is the point of changing it.
+    session_version        = db.Column(db.Integer, default=0, nullable=False)
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
+        # Here rather than in each route, so no route that sets a password can
+        # forget to sign the old sessions out.
+        self.session_version = (self.session_version or 0) + 1
+
+    def get_id(self):
+        return f"{self.id}:{self.session_version or 0}"
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
@@ -416,6 +429,7 @@ def _ensure_user_columns():
         'alphabet_completed':     f"BOOLEAN NOT NULL DEFAULT {false}",
         'alphabet_completed_at':  dt,
         'progress':               json_,
+        'session_version':        "INTEGER NOT NULL DEFAULT 0",
     }
     _ensure_columns('users', wanted)
     _ensure_columns('ai_usage', {'cache_write_tokens': 'INTEGER',
@@ -459,8 +473,24 @@ login_manager.login_message = "Please log in to continue."
 
 @login_manager.user_loader
 def load_user(user_id):
-    """Given the id stored in the session, return the matching User (or None)."""
-    return db.session.get(User, int(user_id))
+    """Given the id stored in the session, return the matching User (or None).
+
+    The id is "<user id>:<session version>" (User.get_id). A version that no
+    longer matches means the password has changed since this cookie was issued,
+    so the visitor is treated as signed out. A bare "<user id>" is a cookie from
+    before versions existed: it counts as version 0, so shipping this signed
+    nobody out — only a later password change does."""
+    uid, _, version = str(user_id).partition(':')
+    try:
+        user = db.session.get(User, int(uid))
+        version = int(version or 0)
+    except ValueError:
+        return None
+    if user is None or (user.session_version or 0) != version:
+        # Same as /logout: don't leave this account's cached progress behind.
+        session.pop('user_progress', None)
+        return None
+    return user
 
 # ============================================
 # RATE LIMITING (protects the AI spend)
@@ -8030,9 +8060,13 @@ def change_password():
     if problem:
         return jsonify({'success': False, 'message': problem}), 400
 
-    current_user.set_password(data['new_password'])
+    user = current_user._get_current_object()
+    user.set_password(data['new_password'])
     db.session.commit()
-    send_password_changed_email(current_user)
+    # The new password signed out every device, this one included. Re-issue
+    # this device's cookies so the person who just changed it stays signed in.
+    login_user(user, remember=True)
+    send_password_changed_email(user)
     return jsonify({'success': True, 'message': 'Your password has been changed.'})
 
 

@@ -223,3 +223,68 @@ def test_change_password_cancels_an_outstanding_reset_link(user):
 def test_change_password_requires_login():
     r = app.test_client().post("/change-password", json={})
     assert r.status_code in (302, 401)
+
+
+# ── Signing out everywhere ────────────────────────────────────────────────
+
+def is_signed_in(client):
+    return "Change password" in client.get("/progress").get_data(as_text=True)
+
+
+def remember_cookie_only(client):
+    """Drop the session cookie, as if the browser had been closed, so only the
+    long-lived remember-me cookie is left to sign this device in."""
+    client.delete_cookie("session")
+    return client
+
+
+def test_changing_password_signs_out_other_devices_but_not_this_one(user):
+    phone, laptop = logged_in(user), logged_in(user)
+    assert is_signed_in(phone) and is_signed_in(laptop)
+
+    laptop.post("/change-password", json={"current_password": OLD_PASSWORD,
+                                          "new_password": NEW_PASSWORD,
+                                          "confirm_password": NEW_PASSWORD})
+    assert is_signed_in(laptop)
+    assert not is_signed_in(phone)
+
+
+def test_changing_password_also_kills_remember_me_cookies(user):
+    tablet = remember_cookie_only(logged_in(user))
+    assert is_signed_in(tablet)          # the remember-me cookie alone is enough…
+
+    logged_in(user).post("/change-password", json={"current_password": OLD_PASSWORD,
+                                                   "new_password": NEW_PASSWORD,
+                                                   "confirm_password": NEW_PASSWORD})
+    assert not is_signed_in(remember_cookie_only(tablet))   # …until the password changes
+
+
+def test_a_reset_signs_out_every_other_device(user):
+    phone = logged_in(user)
+    resetter = app.test_client()
+    _, link = request_reset(resetter, user["email"])
+    resetter.post(path_of(link), json={"password": NEW_PASSWORD,
+                                       "confirm_password": NEW_PASSWORD})
+    assert is_signed_in(resetter)
+    assert not is_signed_in(phone)
+
+
+def test_cookies_from_before_versions_still_work(user):
+    """A bare user id is what every cookie held before this shipped. It must
+    count as version 0, or deploying it would sign everybody out."""
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.session_version = 0
+        db.session.commit()
+    old = app.test_client()
+    with old.session_transaction() as s:
+        s["_user_id"] = str(user["id"])
+        s["_fresh"] = True
+    assert is_signed_in(old)
+
+
+def test_a_malformed_session_id_is_just_signed_out():
+    c = app.test_client()
+    with c.session_transaction() as s:
+        s["_user_id"] = "not-a-number:x"
+    assert not is_signed_in(c)

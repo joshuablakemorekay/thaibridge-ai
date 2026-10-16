@@ -279,6 +279,11 @@ developing. `/developer-logout` ends it.
   through Resend (`RESEND_API_KEY`); with no key, the email is written to the server log
   instead. Logged-in users change their password on `/progress`, and every reset or
   change sends the owner a "your password was changed" notice.
+- **A new password signs out every other device.** The id in the login cookies is
+  `<user id>:<session version>`, and setting a password bumps the version, so older
+  session and remember-me cookies stop matching. The device that made the change is
+  signed straight back in. Cookies from before versions existed count as version 0, so
+  shipping this signed nobody out.
 - **Subscriptions are verified server-side** — the Stripe webhook checks the event
   signature, and paid access is read from the database, never from the cookie, so a
   user can't edit a cookie to unlock paid content.
