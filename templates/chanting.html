@@ -71,7 +71,9 @@
 
     @media (max-width: 600px) {
         .open-at-page form { width: 100%; }
-        .open-at-page input { flex: 1; width: auto; }
+        /* min-width: 0 — a number box won't shrink below its built-in width
+           otherwise, which pushed Open off a 320px screen. */
+        .open-at-page input { flex: 1; width: auto; min-width: 0; }
     }
 
     /* ── Find a chant by name ────────────────────────────────────────
