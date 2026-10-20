@@ -7814,6 +7814,9 @@ def progress_dashboard():
 
     return render_template('progress.html',
                          user=user,
+                         # The plan comes from the database, not the session
+                         # copy, which resets to 'free' at every login.
+                         tier=active_tier(),
                          receipts=receipts,
                          next_level_xp=next_level_xp,
                          progress_to_next=progress_to_next,

@@ -63,12 +63,12 @@
             <h3><span class="monk-free">FREE</span> 🧡</h3>
             <p class="expires">Monk Mode — every section free of charge</p>
             {% else %}
-            <h3>{{ subscription_tiers[user.subscription_tier].name }}</h3>
-            {% if user.subscription_tier != 'free' and user.subscription_expires %}
-            <p class="expires">Expires: {{ user.subscription_expires[:10] }}</p>
+            <h3>{{ subscription_tiers[tier].name }}</h3>
+            {% if tier != 'free' and current_user.is_authenticated and current_user.current_period_end %}
+            <p class="expires">Expires: {{ current_user.current_period_end.strftime('%Y-%m-%d') }}</p>
             {% endif %}
             <a href="#subscriptions" class="btn">
-                {% if user.subscription_tier == 'free' %}
+                {% if tier == 'free' %}
                     Upgrade Now
                 {% else %}
                     Manage Subscription
@@ -262,7 +262,7 @@
         <h2>💎 Subscription Plans</h2>
         <div class="subscription-grid">
             {% for tier_id, tier_info in subscription_tiers.items() %}
-            <div class="subscription-card {% if user.subscription_tier == tier_id %}current{% endif %}">
+            <div class="subscription-card {% if tier == tier_id %}current{% endif %}">
                 <h3>{{ tier_info.name }}</h3>
                 <p class="price">
                     {% if tier_info.price == 0 %}
@@ -285,7 +285,7 @@
                     <li>{{ feature }}</li>
                     {% endfor %}
                 </ul>
-                {% if user.subscription_tier == tier_id %}
+                {% if tier == tier_id %}
                 <button class="btn btn-current" disabled>Current Plan</button>
                 {% else %}
                 <a href="/subscribe/{{ tier_id }}" class="btn btn-subscribe">
@@ -333,7 +333,12 @@
         color: white;
         box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
-    
+    /* The site-wide heading colours (purple h3, red h2) vanish on these dark
+       cards, so the level and plan names use the bright gold instead. */
+    .level-card h2, .tier-card h3 {
+        color: var(--gold-shimmer);
+    }
+
     .earned-unlock-note {
         margin: 1rem 0 0;
         padding: 0.75rem 1rem;
