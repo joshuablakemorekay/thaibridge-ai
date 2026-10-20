@@ -18,6 +18,7 @@ from flask import (Blueprint, jsonify, redirect, render_template, request,
 from flask_login import current_user, login_required, login_user, logout_user
 
 import accounts
+import signup_source
 from extensions import failed_attempt_only, rate_limit_key, limiter, login_manager
 from models import User, db
 
@@ -247,6 +248,7 @@ def signup():
 
     new_user = User(username=username, email=email)
     new_user.set_password(password)
+    signup_source.stamp(new_user)   # which ad, if any, brought them
     try:
         db.session.add(new_user)
         db.session.commit()

@@ -43,6 +43,7 @@ from flask import (Flask, render_template, request, jsonify, session, redirect,
 from models import db, utcnow, User, ensure_user_columns  # the database and the account model
 from extensions import limiter, login_manager, rate_limit_key, failed_attempt_only
 import progress  # saving a learner's progress, and the XP-to-level maths
+import signup_source  # which ad, if any, a new account came from
 from progress import (XP_LEVELS, MONK_DIRECTIONS, MONK_DIRECTION_DEFAULT,
                       MONK_ACCENTS, MONK_ACCENT_DEFAULT, init_user_progress,
                       get_user_level, get_xp_for_next_level)
@@ -323,6 +324,7 @@ login_manager.init_app(app)
 import auth  # noqa: E402  (needs db, limiter and login_manager set up first)
 app.register_blueprint(auth.bp)
 progress.init_app(app)
+signup_source.init_app(app)
 
 
 @app.errorhandler(429)
