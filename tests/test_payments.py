@@ -339,6 +339,21 @@ def test_receipts_in_the_same_second_keep_a_stable_order(user):
     assert body.index("in_second") < body.index("cs_first")
 
 
+def test_the_plan_card_shows_the_plan_from_the_database(user):
+    """The session copy of the tier resets to 'free' at every login, so a Pro
+    member used to see "Free Explorer" and an Upgrade button on /progress."""
+    from datetime import datetime, timedelta
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.subscription_tier = "pro"
+        u.subscription_status = "active"
+        u.current_period_end = datetime.utcnow() + timedelta(days=30)
+        db.session.commit()
+    body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
+    assert "<h3>Thai Master (Pro)</h3>" in body
+    assert "Upgrade Now" not in body
+
+
 # ---------------------------------------------------------------------------
 # Cancelling: a failure must say so, not bounce silently
 # ---------------------------------------------------------------------------
