@@ -6,7 +6,10 @@ The trips (tour_trips.py) teach Thai with places as the setting. This section
 does the other half of the job: it points people at real things to do, and at
 places to book them. Josh asked for it on 2026-10-20 so the Tour Guide page
 can promote Thailand as well as teach the language. Off-road expeditions
-and quad biking were added the same day at his request.
+and quad biking were added the same day at his request, and later that day
+he asked for the cards to be grouped as Travel, Food, Family and Outdoors
+(CATEGORIES below), with new cards for food, family days out and getting
+around.
 
 Each activity still carries a few Thai words you would need there, so the
 section teaches too.
@@ -85,9 +88,20 @@ def _photo(file, alt, artist, license, source):
             'source': 'https://commons.wikimedia.org/wiki/File:' + source}
 
 
+# The page shows the activities under these headings, in this order. Each
+# activity's 'category' must be one of these keys.
+CATEGORIES = [
+    ('travel', '✈️', 'Travel'),
+    ('food', '🍜', 'Food'),
+    ('family', '👨‍👩‍👧', 'Family'),
+    ('outdoors', '🌿', 'Outdoors'),
+    ('temples', '🛕', 'Temples'),
+]
+
 ACTIVITIES = [
     {
         'key': 'flights',
+        'category': 'travel',
         'title': 'Getting to Thailand',
         'emoji': '✈️',
         'where': 'Bangkok Suvarnabhumi (BKK) for most long-haul flights, or Phuket and Chiang Mai to land closer to the beach or the mountains.',
@@ -108,6 +122,7 @@ ACTIVITIES = [
     },
     {
         'key': 'temples',
+        'category': 'temples',
         'title': 'A temple route across Thailand',
         'emoji': '🛕',
         'where': 'Bangkok (Wat Pho, Wat Arun, the Emerald Buddha at Wat Phra Kaew) → Nakhon Pathom '
@@ -134,6 +149,7 @@ ACTIVITIES = [
     },
     {
         'key': 'climbing',
+        'category': 'outdoors',
         'title': 'Rock climbing',
         'emoji': '🧗',
         'where': 'Railay and Tonsai in Krabi, where limestone cliffs rise straight out of the sea. '
@@ -152,6 +168,7 @@ ACTIVITIES = [
     },
     {
         'key': 'diving',
+        'category': 'outdoors',
         'title': 'Scuba diving and snorkelling',
         'emoji': '🤿',
         'where': 'Koh Tao is one of the world’s busiest places to learn to dive. The Similan and '
@@ -171,6 +188,7 @@ ACTIVITIES = [
     },
     {
         'key': 'sea-fishing',
+        'category': 'outdoors',
         'title': 'Sea fishing',
         'emoji': '🎣',
         'where': 'Day and night trips leave from Phuket, Krabi, Koh Samui and Pattaya. Night squid '
@@ -188,6 +206,7 @@ ACTIVITIES = [
     },
     {
         'key': 'freshwater-fishing',
+        'category': 'outdoors',
         'title': 'Freshwater fishing',
         'emoji': '🐟',
         'where': 'Fishing parks near Bangkok, Pattaya, Phuket and Chiang Mai are stocked with '
@@ -205,6 +224,7 @@ ACTIVITIES = [
     },
     {
         'key': 'hiking',
+        'category': 'outdoors',
         'title': 'Hiking and trekking',
         'emoji': '🥾',
         'where': 'Doi Inthanon, Thailand’s highest mountain, has short nature trails. Chiang Mai '
@@ -225,14 +245,15 @@ ACTIVITIES = [
     },
     {
         'key': 'wildlife',
+        'category': 'family',
         'title': 'Wildlife, zoos and national parks',
-        'emoji': '🐘',
+        'emoji': '🐒',
         'where': 'Khao Yai, a few hours from Bangkok, has wild elephants, gibbons and hornbills. '
                  'Kaeng Krachan is for birdwatchers. Khao Kheow Open Zoo and Chiang Mai Zoo suit families.',
         'blurb': 'See elephants in the wild, take a night safari with a ranger, or spend a day '
                  'at an open zoo.',
-        'tip': 'Choose elephant sanctuaries with no riding and no shows. If a place lets you ride, '
-               'bathe or hold wild animals for photos, give it a miss.',
+        'tip': 'If you meet wild elephants on a park road, stay in the car, keep your distance '
+               'and let them pass. Never feed wild animals.',
         'photo': _photo('do-wildlife.webp', 'A herd of wild Asian elephants grazing in Khao Yai National Park',
                         'Pailoolom', 'CC BY-SA 4.0', 'Asian_elephant_herd_in_Khao_Yai_National_Park.jpg'),
         'phrases': [('ช้าง', 'cháaŋ', 'Elephant'),
@@ -244,6 +265,7 @@ ACTIVITIES = [
     },
     {
         'key': 'road-trip',
+        'category': 'travel',
         'title': 'Road trips',
         'emoji': '🛣️',
         'where': 'The Mae Hong Son Loop from Chiang Mai, through Pai, is famous for its curves. '
@@ -263,6 +285,7 @@ ACTIVITIES = [
     },
     {
         'key': 'off-road',
+        'category': 'outdoors',
         'title': 'Off-road expeditions',
         'emoji': '🚙',
         'where': 'The mountains around Chiang Mai, Mae Hong Son and Chiang Rai have the best dirt '
@@ -283,6 +306,7 @@ ACTIVITIES = [
     },
     {
         'key': 'quad-biking',
+        'category': 'outdoors',
         'title': 'Quad biking',
         'emoji': '🏍️',
         'where': 'ATV parks and jungle trails around Chiang Mai, Phuket, Krabi, Koh Samui and Pattaya. '
@@ -300,6 +324,113 @@ ACTIVITIES = [
                   ('getyourguide', 'Quad biking in Chiang Mai', _gyg('Chiang Mai ATV')),
                   ('klook', 'ATV tours', _klook('Thailand ATV'))],
     },
+    {
+        'key': 'trains-ferries',
+        'category': 'travel',
+        'title': 'Trains, buses and island ferries',
+        'emoji': '⛴️',
+        'where': 'Overnight sleeper trains run from Bangkok to Chiang Mai and down to the south. '
+                 'Ferries link the mainland with Koh Samui, Koh Phangan, Koh Tao, Koh Chang and the '
+                 'Andaman islands.',
+        'blurb': 'Thailand is easy to cross without flying. A sleeper train is an adventure in '
+                 'itself, and a bus-and-boat ticket gets you to most islands in one booking.',
+        'tip': 'Book sleeper berths a few days ahead, especially at weekends and Thai holidays. '
+               'Lower berths are a little wider.',
+        'photo': _photo('do-trains-ferries.webp', 'A white passenger ferry moored at Haad Rin pier on Koh Phangan',
+                        'Fabio Achilli', 'CC BY 2.0', 'Koh_Phangan,_Haadrin_Queen_Ferry_(6218499944).jpg'),
+        'phrases': [('รถไฟ', 'rót-fai', 'Train'),
+                    ('ท่าเรือ', 'tâa-rʉa', 'Pier'),
+                    ('รถไฟออกกี่โมง', 'rót-fai ɔ̀ɔk gìi mooŋ', 'What time does the train leave?')],
+        'links': [('12go', 'Sleeper train to Chiang Mai', 'https://12go.asia/en/travel/bangkok/chiang-mai'),
+                  ('12go', 'Bangkok to Koh Samui', 'https://12go.asia/en/travel/bangkok/koh-samui'),
+                  ('12go', 'Bangkok to Koh Tao', 'https://12go.asia/en/travel/bangkok/koh-tao')],
+    },
+    {
+        'key': 'street-food',
+        'category': 'food',
+        'title': 'Street food and night markets',
+        'emoji': '🍢',
+        'where': 'Yaowarat (Chinatown) in Bangkok, the Sunday Walking Street in Chiang Mai, and '
+                 'the night market in almost every Thai town.',
+        'blurb': 'Some of the best food in Thailand costs a few coins from a cart. Wander on your '
+                 'own, or join a guided food tour to try dishes you wouldn’t know to order.',
+        'tip': 'Pick the busy stalls: a queue of locals means fresh food. Say “mâi pèt” if you '
+               'can’t take chilli.',
+        'photo': _photo('do-street-food.webp', 'Sausages and skewers grilling at a street food stall in Chiang Mai',
+                        'David McKelvey', 'CC BY 2.0', 'Street_Food_Stall,_Chiang_Mai,_Thailand_(7113967189).jpg'),
+        'phrases': [('อาหารข้างทาง', 'aa-hǎan kâaŋ taaŋ', 'Street food'),
+                    ('ไม่เผ็ด', 'mâi pèt', 'Not spicy'),
+                    ('อร่อยมาก', 'à-rɔ̀i mâak', 'Delicious')],
+        'links': [('getyourguide', 'Bangkok food tours', _gyg('Bangkok street food tour')),
+                  ('getyourguide', 'Chiang Mai food tours', _gyg('Chiang Mai food tour')),
+                  ('klook', 'Food tours', _klook('Thailand food tour'))],
+    },
+    {
+        'key': 'cooking-class',
+        'category': 'food',
+        'title': 'Thai cooking classes',
+        'emoji': '🧑‍🍳',
+        'where': 'Chiang Mai is the cooking-class capital, often with a market visit and a farm '
+                 'kitchen. Bangkok, Sukhothai, Krabi and the islands have good ones too.',
+        'blurb': 'Shop for ingredients at a local market, then cook four or five dishes, such as '
+                 'pad thai, green curry and tom yum, and eat everything you make.',
+        'tip': 'Tell the school about allergies or a vegetarian diet when you book. Most will '
+               'change the recipes for you.',
+        'photo': _photo('do-cooking-class.webp', 'Two plates of freshly cooked pad thai at a cooking school in Sukhothai',
+                        'Elmschrat', 'CC BY-SA 4.0', 'Pad_Thai_in_Thai_Cooking_School_in_Sukhothai.jpg'),
+        'phrases': [('ทำอาหาร', 'tam aa-hǎan', 'To cook'),
+                    ('ผัดไทย', 'pàt-tai', 'Pad thai'),
+                    ('ใส่พริกนิดเดียว', 'sài prík nít diao', 'Just a little chilli')],
+        'links': [('getyourguide', 'Cooking classes in Chiang Mai', _gyg('Chiang Mai cooking class')),
+                  ('getyourguide', 'Cooking classes in Bangkok', _gyg('Bangkok cooking class')),
+                  ('klook', 'Cooking classes', _klook('Thai cooking class'))],
+    },
+    {
+        'key': 'elephant-sanctuary',
+        'category': 'family',
+        'title': 'Ethical elephant sanctuaries',
+        'emoji': '🐘',
+        'where': 'Most are in the hills around Chiang Mai, with others near Phuket, Kanchanaburi '
+                 'and Koh Samui. Many look after elephants rescued from logging and tourist camps.',
+        'blurb': 'Walk with elephants through the forest, help prepare their food and watch them '
+                 'being elephants. A day most children never forget.',
+        'tip': 'Choose a sanctuary with no riding, no shows and no bathing with the elephants. If a '
+               'place lets you ride or hold animals for photos, give it a miss.',
+        'photo': _photo('do-elephant-sanctuary.webp', 'Visitors walking with elephants along a forest track near Chiang Mai',
+                        'Nina R', 'CC BY 2.0', 'Elephant_Nature_Park_(49418413298).jpg'),
+        'phrases': [('ปางช้าง', 'bpaaŋ cháaŋ', 'Elephant camp'),
+                    ('ให้อาหาร', 'hâi aa-hǎan', 'To feed'),
+                    ('ห้ามขี่', 'hâam kìi', 'No riding')],
+        'links': [('getyourguide', 'Sanctuaries near Chiang Mai', _gyg('Chiang Mai ethical elephant sanctuary')),
+                  ('getyourguide', 'Sanctuaries near Phuket', _gyg('Phuket ethical elephant sanctuary')),
+                  ('klook', 'Elephant sanctuaries', _klook('elephant sanctuary Thailand'))],
+    },
+    {
+        'key': 'aquarium',
+        'category': 'family',
+        'title': 'Aquariums and water parks',
+        'emoji': '🐠',
+        'where': 'SEA LIFE Bangkok Ocean World sits under a shopping centre in the middle of '
+                 'Bangkok. Phuket and Pattaya have big aquariums and water parks.',
+        'blurb': 'A cool, easy day out with children on a hot afternoon: sharks, rays and turtles '
+                 'behind the glass, or slides and wave pools.',
+        'tip': 'Water parks get busy at weekends and in school holidays. Go on a weekday and '
+               'bring a rash vest: the sun is strong even on cloudy days.',
+        'photo': _photo('do-aquarium.webp', 'A queen angelfish swimming over rocks in a tank at SEA LIFE Bangkok Ocean World',
+                        'กสิณธร ราชโอรส', 'CC BY-SA 4.0', 'SEA_LIFE_Bangkok_Ocean_World_in_2018_(11).jpg'),
+        'phrases': [('พิพิธภัณฑ์สัตว์น้ำ', 'pí-pít-tá-pan sàt-náam', 'Aquarium'),
+                    ('ปลาฉลาม', 'bplaa chà-lǎam', 'Shark'),
+                    ('เต่าทะเล', 'dtào tá-lee', 'Sea turtle')],
+        'links': [('getyourguide', 'SEA LIFE Bangkok', _gyg('SEA LIFE Bangkok Ocean World')),
+                  ('klook', 'Aquariums', _klook('Thailand aquarium')),
+                  ('klook', 'Water parks', _klook('Thailand water park'))],
+    },
+]
+
+ACTIVITIES_BY_CATEGORY = [
+    {'key': key, 'emoji': emoji, 'title': title,
+     'activities': [a for a in ACTIVITIES if a['category'] == key]}
+    for key, emoji, title in CATEGORIES
 ]
 
 ACTIVITIES_BY_KEY = {a['key']: a for a in ACTIVITIES}

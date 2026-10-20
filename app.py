@@ -6783,8 +6783,10 @@ def things_to_do():
     """What partials/things_to_do.html needs. A template global rather than a
     route argument, because the locked Tour Guide page shows the section too
     and require_access renders that page without going through the route."""
-    return {'activities': [dict(a, booking=tour_activities.links_for(a))
-                           for a in tour_activities.ACTIVITIES],
+    return {'activities': tour_activities.ACTIVITIES,
+            'groups': [dict(g, activities=[dict(a, booking=tour_activities.links_for(a))
+                                           for a in g['activities']])
+                       for g in tour_activities.ACTIVITIES_BY_CATEGORY],
             'affiliate_note': tour_activities.any_affiliate(),
             'trips_by_key': tour_trips.TRIPS_BY_KEY}
 
