@@ -6775,11 +6775,21 @@ def tour_guide():
     audio_map = _audio_map_for(
         [w['thai'] for words in TOUR_VOCAB.values() for w in words]
         + tour_trips.thai_strings() + tour_activities.thai_strings())
-    activities = [dict(a, booking=tour_activities.links_for(a)) for a in tour_activities.ACTIVITIES]
     return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map,
-                           trips=tour_trips.TRIPS, particles=tour_trips.PARTICLES,
-                           trips_by_key=tour_trips.TRIPS_BY_KEY, activities=activities,
-                           affiliate_note=tour_activities.any_affiliate())
+                           trips=tour_trips.TRIPS, particles=tour_trips.PARTICLES)
+
+
+def things_to_do():
+    """What partials/things_to_do.html needs. A template global rather than a
+    route argument, because the locked Tour Guide page shows the section too
+    and require_access renders that page without going through the route."""
+    return {'activities': [dict(a, booking=tour_activities.links_for(a))
+                           for a in tour_activities.ACTIVITIES],
+            'affiliate_note': tour_activities.any_affiliate(),
+            'trips_by_key': tour_trips.TRIPS_BY_KEY}
+
+
+app.jinja_env.globals.update(things_to_do=things_to_do)
 
 
 @app.route('/business-thai')

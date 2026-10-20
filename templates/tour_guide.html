@@ -45,52 +45,8 @@
         <div id="trip-player" hidden></div>
     </section>
 
-    {# ── Things to do: real activities with places to book them. Links and
-       affiliate ids come from tour_activities.py; see the note there. #}
-    <section id="things-to-do" class="things-to-do" aria-label="Things to do in Thailand">
-        <h2 class="section-header">🌴 Things to do in Thailand</h2>
-        <p class="trips-intro">Ideas for your time in Thailand, with places to book them and a few Thai words for each.
-            We recommend these; we don't run them. Check the details with the company before you book.</p>
-        {% if affiliate_note %}
-        <p class="affiliate-note">Links marked <span class="ad-label">affiliate</span> may earn ThaiBridge a small
-            commission if you book, at no extra cost to you. It never changes what we recommend.</p>
-        {% endif %}
-        <div class="activity-grid">
-            {% for a in activities %}
-            <article class="activity-card" id="do-{{ a.key }}">
-                <img class="trip-photo" src="{{ url_for('static', filename=a.photo.file) }}"
-                     alt="{{ a.photo.alt }}" loading="lazy" decoding="async" width="1000" height="667">
-                <div class="activity-body">
-                    <h3 class="activity-title">{{ a.emoji }} {{ a.title }}</h3>
-                    <p class="activity-blurb">{{ a.blurb }}</p>
-                    <p class="activity-where"><strong>Where:</strong> {{ a.where }}</p>
-                    <ul class="activity-phrases">
-                        {% for thai, paiboon, english in a.phrases %}
-                        <li><span class="thai-text">{{ thai }}</span>
-                            <span class="vocab-paiboon">{{ paiboon }}</span>
-                            <span class="activity-english">{{ english }}</span></li>
-                        {% endfor %}
-                    </ul>
-                    <p class="activity-tip">💡 {{ a.tip }}</p>
-                    {% if a.trips %}
-                    <p class="activity-trips">Play it first:
-                        {% for key in a.trips %}<a href="#trips">{{ trips_by_key[key].title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
-                    </p>
-                    {% endif %}
-                    <div class="activity-links">
-                        {% for link in a.booking %}
-                        <a class="activity-link" href="{{ link.url }}" target="_blank"
-                           rel="{{ 'sponsored noopener' if link.affiliate else 'noopener' }}">{{ link.label }}{% if link.partner %} <span class="partner">on {{ link.partner }}</span>{% endif %}{% if link.affiliate %} <span class="ad-label">affiliate</span>{% endif %}</a>
-                        {% endfor %}
-                    </div>
-                    {% if a.see_also %}
-                    <p class="activity-trips"><a href="{{ a.see_also[0] }}">{{ a.see_also[1] }} →</a></p>
-                    {% endif %}
-                </div>
-            </article>
-            {% endfor %}
-        </div>
-    </section>
+    {% set trip_links = true %}
+    {% include 'partials/things_to_do.html' %}
 
     <h2 id="phrasebook" class="phrasebook-header">📖 Phrasebook</h2>
 
@@ -139,12 +95,6 @@
             <li>{{ trip.title }}: <a href="{{ trip.photo.source }}" target="_blank" rel="noopener">photo</a>
                 by {{ trip.photo.artist }},
                 <a href="{{ trip.photo.license_url }}" target="_blank" rel="noopener">{{ trip.photo.license }}</a>,
-                via Wikimedia Commons</li>
-            {% endfor %}
-            {% for a in activities %}
-            <li>{{ a.title }}: <a href="{{ a.photo.source }}" target="_blank" rel="noopener">photo</a>
-                by {{ a.photo.artist }},
-                <a href="{{ a.photo.license_url }}" target="_blank" rel="noopener">{{ a.photo.license }}</a>,
                 via Wikimedia Commons</li>
             {% endfor %}
         </ul>

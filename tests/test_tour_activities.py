@@ -92,6 +92,7 @@ class TestThePage:
     def test_the_activities_are_on_the_page(self, unlocked_client):
         body = unlocked_client.get('/tour-guide').get_data(as_text=True)
         assert 'id="things-to-do"' in body
+        assert 'Play it first' in body, 'the temple route links to the trips here'
         for a in tour_activities.ACTIVITIES:
             assert a['title'] in body
             assert a['photo']['source'] in body
@@ -116,3 +117,31 @@ class TestThePage:
         import app as appmod
         body = appmod.app.test_client().get('/policies').get_data(as_text=True)
         assert 'Booking links' in body and 'affiliate' in body
+
+
+class TestFreeToRead:
+    """The trips stay paid; the travel ideas are on the locked page too, so
+    people without a plan, and search engines, can find the booking links."""
+
+    @pytest.fixture
+    def free_client(self, make_client):
+        return make_client(subscription_tier='free', is_developer=False, full_unlock=False,
+                           level=1, xp=0)
+
+    def test_the_locked_tour_guide_page_shows_the_activities(self, free_client):
+        body = free_client.get('/tour-guide').get_data(as_text=True)
+        assert '<h1>Section Locked</h1>' in body, 'the trips must stay paid'
+        assert 'id="things-to-do"' in body
+        assert 'id="trip-player"' not in body
+        for a in tour_activities.ACTIVITIES:
+            assert a['title'] in body
+            assert a['photo']['source'] in body, 'photo credits must come along'
+
+    def test_no_play_it_first_links_where_there_are_no_trips(self, free_client):
+        body = free_client.get('/tour-guide').get_data(as_text=True)
+        assert 'Play it first' not in body
+
+    def test_other_locked_pages_do_not_show_it(self, free_client):
+        body = free_client.get('/business-thai').get_data(as_text=True)
+        assert '<h1>Section Locked</h1>' in body
+        assert 'id="things-to-do"' not in body

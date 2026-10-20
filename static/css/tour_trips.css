@@ -215,3 +215,14 @@ a.tp-btn { text-decoration: none; display: inline-block; }
 @media (max-width: 600px) {
     .activity-grid { grid-template-columns: 1fr; }
 }
+
+/* The section also sits on the locked page, which has neither the Tour Guide
+   page's width nor its inline heading styles. */
+.locked-container ~ .things-to-do { max-width: 960px; margin: 0 auto 3rem; }
+.things-to-do .section-header {
+    font-size: 1.15rem; font-weight: 700; color: #f0f0f0;
+    border-bottom: 2px solid var(--royal-gold); padding-bottom: 0.4rem; margin-bottom: 1rem;
+}
+.things-to-do .vocab-paiboon { color: var(--gold-text); font-style: italic; letter-spacing: 0.02em; }
+.activity-credits { font-size: 0.75rem; color: #777; margin: 1rem 0 0; line-height: 1.6; }
+.activity-credits a { color: inherit; }
