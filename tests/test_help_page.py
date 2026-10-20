@@ -38,7 +38,11 @@ def page():
 ORIGINAL_SENTENCES = [
     "A quick guide to finding your way around.",
     "Getting started in 3 steps",
-    "Tones &amp; Consonant Classes and ThaiBridge Spelling are good places to begin.",
+    # Two original lines were corrected on purpose (2026-10-20, Josh agreed):
+    # Tones needs Level 3 + Thai Reader, so it is no beginner's starting point,
+    # and the tutor gained a seventh mode, Translator, on 2026-10-14.
+    "the Alphabet and ThaiBridge Spelling are good places to begin.",
+    "seven modes of help",
     "Learn tones early — it really matters",
     "If you learn tones from the very beginning, correct pronunciation becomes a habit",
     "What you can do",
