@@ -54,7 +54,7 @@ from urllib.parse import quote, urlencode, urlsplit, urlunsplit, parse_qsl
 AFFILIATES = {
     'getyourguide': {'name': 'GetYourGuide', 'id': '', 'param': 'partner_id'},
     'klook':        {'name': 'Klook',        'id': '', 'param': 'aid'},
-    '12go':         {'name': '12Go',         'id': '', 'param': 'z'},
+    '12go':         {'name': '12Go',         'id': '17263196', 'param': 'z'},
     'skyscanner':   {'name': 'Skyscanner',   'id': '', 'param': None},  # Impact tracking link
 }
 
