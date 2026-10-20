@@ -24,6 +24,7 @@ import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
 import sentence_builder  # tap-the-tiles drill on /sentences
 import tour_trips  # the playable trips on the Tour Guide page
+import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -6769,12 +6770,26 @@ def lesson_detail(lesson_id):
 @app.route('/tour-guide')
 @require_access('tour_guide')
 def tour_guide():
-    """Thai for anyone exploring Thailand: six playable trips, then the phrasebook."""
+    """Thai for anyone exploring Thailand: seven playable trips, things to do
+    with booking links, then the phrasebook."""
     audio_map = _audio_map_for(
         [w['thai'] for words in TOUR_VOCAB.values() for w in words]
-        + tour_trips.thai_strings())
+        + tour_trips.thai_strings() + tour_activities.thai_strings())
     return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map,
                            trips=tour_trips.TRIPS, particles=tour_trips.PARTICLES)
+
+
+def things_to_do():
+    """What partials/things_to_do.html needs. A template global rather than a
+    route argument, because the locked Tour Guide page shows the section too
+    and require_access renders that page without going through the route."""
+    return {'activities': [dict(a, booking=tour_activities.links_for(a))
+                           for a in tour_activities.ACTIVITIES],
+            'affiliate_note': tour_activities.any_affiliate(),
+            'trips_by_key': tour_trips.TRIPS_BY_KEY}
+
+
+app.jinja_env.globals.update(things_to_do=things_to_do)
 
 
 @app.route('/business-thai')

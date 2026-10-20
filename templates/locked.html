@@ -94,6 +94,11 @@
             <p>🪷 Keep learning! Every step brings you closer to mastering Thai.</p>
         </div>
     </div>
+
+    {# The trips stay paid, but the travel ideas are free to read. #}
+    {% if section == 'tour_guide' %}
+    {% include 'partials/things_to_do.html' %}
+    {% endif %}
 </div>
 
 <style>
