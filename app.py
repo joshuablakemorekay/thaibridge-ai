@@ -7363,7 +7363,29 @@ def policies():
 
 @app.route('/instructions')
 def instructions():
-    return render_template('instructions.html')
+    """Help: how to use ThaiBridge AI — the user guide.
+
+    Every price, limit and level on the page is passed in from the constants
+    that enforce it, never typed into the template. A guide that quotes "5
+    messages a day" while the app allows 15 is worse than no guide, and the
+    tier and limit numbers here have each changed at least once already.
+
+    The page used to end with a table of the site's four page layouts. That
+    was a note for whoever builds the site, not for a learner; it is gone from
+    the guide. In short: each page uses the layout that fits its job —
+    landing, 3-column reference, simple centred, or full-width tool.
+    """
+    return render_template('instructions.html',
+                           tiers=SUBSCRIPTION_TIERS,
+                           sections=SECTION_REQUIREMENTS,
+                           free_ai_limit=FREE_AI_DAILY_LIMIT,
+                           basic_ai_limit=BASIC_AI_DAILY_LIMIT,
+                           dhamma_limit=FREE_DHAMMA_DAILY_LIMIT,
+                           pro_fair_use=PRO_FAIR_USE_DAILY,
+                           earned_unlock_level=EARNED_UNLOCK_LEVEL,
+                           earned_unlock_xp=XP_LEVELS[EARNED_UNLOCK_LEVEL],
+                           alphabet_pass_mark=ALPHABET_QUIZ_PASS_MARK,
+                           addon=INSTANT_ACCESS_ADDON)
 
 
 # ============================================

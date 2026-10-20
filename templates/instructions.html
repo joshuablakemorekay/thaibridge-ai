@@ -1,185 +1,426 @@
 {% extends "base.html" %}
 
-{% block title %}How to use - ThaiBridge AI{% endblock %}
+{% block title %}Help: how to use ThaiBridge AI{% endblock %}
 
 {% block content %}
+{# Every section after the overview follows the same four parts — what it's
+   for, where to start, step by step, in short — so a reader always knows
+   where to look, and each section can become one training slide. Prices,
+   limits and levels come from the route, never typed here. #}
+<style>
+    .guide-contents { columns: 2; column-gap: 2rem; padding-left: 1.2rem; margin: 0.5rem 0 0; }
+    .guide-contents li { margin-bottom: 0.3rem; }
+    .guide-part { margin: 0.9rem 0 0.3rem; font-weight: 700; color: var(--saffron-text); }
+    .guide-short { margin-top: 1rem; padding: 0.6rem 0.9rem; border-left: 4px solid var(--monk-saffron);
+                   background: #fff8ec; border-radius: 4px; }
+    .guide-short strong { color: var(--saffron-text); }
+    @media (max-width: 640px) { .guide-contents { columns: 1; } }
+</style>
+
 <h1>
-    📖 How to use ThaiBridge AI
+    📖 Help: how to use ThaiBridge AI
     <span class="thai">วิธีใช้งาน</span>
 </h1>
 
 <p style="text-align:center; color:#666; max-width:720px; margin:0 auto 2rem;">
-    A quick guide to finding your way around. ThaiBridge AI teaches the Thai
-    language through Thai culture and Theravada Buddhism — with an AI tutor,
-    a dictionary, structured lessons and a meditation timer.
+    ThaiBridge AI helps English speakers understand the Thai language, Thai
+    culture and the Theravada teachings together, so you can follow the chanting
+    at the temple and speak to Thai people with confidence and respect.
 </p>
 
-<!-- GETTING STARTED -->
-<div class="card">
-    <h2 style="margin-top:0;">🚀 Getting started in 3 steps</h2>
+<!-- OVERVIEW: the whole guide in one minute -->
+<div class="card" id="approach">
+    <h2 style="margin-top:0;">🧭 How to approach ThaiBridge AI</h2>
+
+    <p class="guide-part">How to approach it</p>
+    <p>Start with what you need first. If you go to the temple, that's the
+        chanting book. If you want to speak, that's the alphabet and
+        ThaiBridge Spelling. A few minutes a day goes further than a long
+        session once a week.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Open the <a href="/chanting">Digital Chanting Book</a>. It's free and
+        needs no account.</p>
+
+    <p class="guide-part">Step by step</p>
     <ol>
-        <li><strong>Pick a starting point.</strong> Use the <strong>Learn</strong>
-            menu — Tones &amp; Consonant Classes and ThaiBridge Spelling are good
-            places to begin.</li>
-        <li><strong>Explore a topic.</strong> Use the <strong>Learn</strong> menu
-            for vocabulary, grammar, lessons and more — or dip into
-            <a href="/culture">Culture</a> and <a href="/theravada">Buddhism</a>.</li>
-        <li><strong>Ask the AI tutor.</strong> Stuck on anything? The
-            <a href="/chat">AI Tutor</a> can explain, give hints, and answer
-            questions in plain English.</li>
+        <li><strong>Follow a chant</strong> in the chanting book, in Thai, Pali and English.</li>
+        <li><strong>Make a free account</strong> with <a href="/signup">Sign up</a>
+            (no card), so your progress is saved.</li>
+        <li><strong>Learn the alphabet and ThaiBridge Spelling</strong>, so you can
+            read and say Thai words correctly.</li>
+        <li><strong>Follow the learning path</strong> below, one section at a time,
+            and ask the <a href="/chat">AI tutor</a> whenever you're stuck.</li>
     </ol>
-</div>
 
-<!-- TONES TIP -->
-<div class="card" style="border-left: 5px solid var(--monk-saffron); background: linear-gradient(135deg, #fff8ec 0%, #ffe9c7 100%);">
-    <h2 style="margin-top:0;">🔊 Learn tones early — it really matters</h2>
-    <p style="line-height:1.8;">
-        Thai is a <strong>tonal language</strong>: the same syllable said with a different
-        tone becomes a completely different word (มา “come” vs หมา “dog”). If you learn tones
-        from the very beginning, correct pronunciation becomes a habit — leave them until later
-        and they're much harder to un-learn.
-    </p>
-    <p style="line-height:1.8;">
-        The good news: tones aren't guesswork — they follow clear rules based on
-        <strong>consonant class</strong>. Our
-        <a href="/tones-classes"><strong>Tones &amp; Consonant Classes</strong></a> section
-        teaches the whole system with practice drills.
-    </p>
-</div>
+    <div class="guide-short"><strong>In short:</strong> chanting book first, then a
+        free account, the alphabet and ThaiBridge Spelling, then the learning path.</div>
 
-<!-- WHAT YOU CAN DO -->
-<div class="card">
-    <h2 style="margin-top:0;">✨ What you can do</h2>
-    <ul>
-        <li>🔤 <strong>Learn the script</strong> — vowels and ThaiBridge Spelling</li>
-        <li>📖 <strong>Build vocabulary</strong> — themed word sets with practice quizzes</li>
-        <li>📕 <strong>Look up words</strong> — the Thai ↔ English dictionary</li>
-        <li>🤖 <strong>Chat with the AI tutor</strong> — six modes of help</li>
-        <li>☸️ <strong>Study Buddhism</strong> — Theravada teachings and articles</li>
-        <li>🧘 <strong>Meditate</strong> — a Samatha &amp; Vipassana timer</li>
-        <li>🏆 <strong>Track progress</strong> — earn XP, level up and unlock new sections</li>
+    <p class="guide-part">In this guide</p>
+    <ul class="guide-contents">
+        <li><a href="#chanting">📿 The Digital Chanting Book</a></li>
+        <li><a href="#account">✍️ Your free account</a></li>
+        <li><a href="#learning-path">🔤 Learning Thai, in order</a></li>
+        <li><a href="#buddhism">☸️ Buddhism and meditation</a></li>
+        <li><a href="#ai-tutor">🤖 The AI tutor</a></li>
+        <li><a href="#levels">🏆 Levels, XP and unlocking</a></li>
+        <li><a href="#plans">⭐ Plans and prices</a></li>
+        <li><a href="#monk-mode">🧡 Monk Mode</a></li>
+        <li><a href="#learning-support">♿ Learning Support and Read aloud</a></li>
+        <li><a href="#tips">💡 Handy tips</a></li>
     </ul>
+</div>
+
+<!-- CHANTING BOOK -->
+<div class="card" id="chanting">
+    <h2 style="margin-top:0;">📿 The Digital Chanting Book</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Following the chanting at the temple and understanding what it means. The
+        whole chanting book is here, page by page, with the same page numbers as
+        the printed book. It's free for everyone, with no account needed.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Open the <a href="/chanting">Digital Chanting Book</a> from the Buddhism menu.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li><strong>Type the page number</strong> the monk calls out into
+            <em>Page</em> and press <em>Open</em>.</li>
+        <li><strong>Tap <em>Verse by verse</em></strong> to see every layer.
+            <em>As the book prints it</em> shows only what the printed page shows.</li>
+        <li><strong>Choose your layers.</strong> There are five: the Pali in Thai
+            script, the Pali in Roman letters, the Thai translation, the Thai in
+            ThaiBridge Spelling, and the English meaning. Untick any you don't need.</li>
+        <li><strong>Search</strong> for a chant by its name in Thai, Pali or English,
+            or browse the contents.</li>
+        <li><strong>Read about the chant.</strong> Each one explains when it's
+            chanted and what it means.</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> same page numbers as the
+        printed book; <em>Verse by verse</em> shows all five layers. You don't need
+        to read Thai to chant along.</div>
+</div>
+
+<!-- ACCOUNT -->
+<div class="card" id="account">
+    <h2 style="margin-top:0;">✍️ Your free account</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Saving your progress on every device. The free <strong>{{ tiers.free.name.split(' (')[0] }}</strong>
+        account needs no card.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Tap <a href="/signup">✍️ Sign up</a> in the top menu.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li>Choose a username, enter your email and pick a password.</li>
+        <li>You're signed in straight away. Your XP and level are saved to your account.</li>
+        <li>Forgotten your password? Use <a href="/forgot-password">Forgot password?</a>
+            on the Log in page.</li>
+        <li>See your level, XP and what's next on <a href="/progress">🏆 My Progress</a>.</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> one minute, no card, and
+        your progress is never lost.</div>
+</div>
+
+<!-- LEARNING PATH -->
+<div class="card" id="learning-path">
+    <h2 style="margin-top:0;">🔤 Learning Thai, in order</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Building real Thai step by step: reading, sounds, polite speech and everyday
+        conversation, with audio on Thai words and sentences.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>The <a href="/alphabet">🔤 Alphabet</a> and
+        <a href="/paiboon">ThaiBridge Spelling</a>, both free. ThaiBridge Spelling
+        writes Thai sounds in English letters, so you can say Thai words correctly
+        from the first day.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li><strong>Pass the alphabet quiz</strong> ({{ alphabet_pass_mark }} of the
+            44 consonants). It opens the rest of the Learn menu.</li>
+        <li><strong>Learn ThaiBridge Spelling</strong> and try
+            <a href="/survival">🗣️ Survival Thai</a>, the free starter phrases.</li>
+        <li><strong>Work down the path below.</strong> Each section opens at its
+            level, as you earn XP.</li>
+    </ol>
+
+    {% set plan_name = {'free': 'Free', 'basic': 'Thai Reader', 'pro': 'Thai Master'} %}
+    {% set path = [
+        ('alphabet', '🔤 Alphabet', '/alphabet'),
+        ('paiboon', '🔤 ThaiBridge Spelling', '/paiboon'),
+        ('survival', '🗣️ Survival Thai', '/survival'),
+        ('learn', '📖 Vocabulary', '/learn'),
+        ('vowels_syllables', '🗣️ Vowels & Syllables', '/vowels_syllables'),
+        ('read_write', '✍️ Read & Write Script', '/read_write'),
+        ('tones_classes', '🔊 Tones & Consonant Classes', '/tones-classes'),
+        ('grammar', '✏️ Grammar Guide', '/grammar'),
+        ('culture', '🎭 Thai Culture', '/culture'),
+        ('lessons', '📝 Lessons', '/lessons'),
+        ('formality', '🎭 Formality Levels', '/formality'),
+        ('gender_examples', '👤 Gender Guide', '/gender-examples'),
+        ('tour_guide', '🗺️ Tour Guide Thai', '/tour-guide'),
+        ('sentences', '💬 Sentences & Conversations', '/sentences'),
+        ('business_thai', '💼 Business Thai', '/business-thai'),
+        ('dictionary', '📕 Dictionary', '/dictionary'),
+    ] %}
+    <table>
+        <thead>
+            <tr><th>Section</th><th>Opens at</th><th>Plan</th></tr>
+        </thead>
+        <tbody>
+        {% for key, label, url in path %}
+            <tr>
+                <td><a href="{{ url }}">{{ label }}</a></td>
+                <td>Level {{ sections[key].level }}</td>
+                <td>{{ plan_name[sections[key].tier] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <p><strong>Learn tones early.</strong> Thai is a tonal language: the same
+        syllable with a different tone is a different word (มา “come”, หมา “dog”).
+        Tones follow clear rules based on consonant class, taught in
+        <a href="/tones-classes">Tones &amp; Consonant Classes</a>.</p>
+
+    <div class="guide-short"><strong>In short:</strong> alphabet and ThaiBridge
+        Spelling first, then down the table as your level rises.</div>
+</div>
+
+<!-- BUDDHISM -->
+<div class="card" id="buddhism">
+    <h2 style="margin-top:0;">☸️ Buddhism and meditation</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Understanding the Theravada teachings and practising them. All of it is
+        free for everyone, always: the Dhamma is never behind a paywall.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p><a href="/dhamma-and-culture">🪷 Dhamma, Culture &amp; Thailand</a>, which
+        explains what is universal teaching and what is Thai custom.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li><a href="/practising-anywhere">🌏 Practising the Dhamma Anywhere</a>:
+            the practice itself, wherever you live.</li>
+        <li><a href="/theravada">☸️ Theravada Dhamma</a> and its
+            <a href="/theravada#dhamma-talks">🪷 Dhamma Talks</a>.</li>
+        <li><a href="/bob-writings">📿 Pra Kru Bob's Writings</a> and the
+            <a href="/journal">📖 Journal</a>.</li>
+        <li><a href="/meditation">🧘 Meditation</a>: guided sessions, techniques
+            and a timer.</li>
+        <li>Questions? Ask the AI tutor in <strong>☸️ Buddhist</strong> mode
+            ({{ dhamma_limit }} questions a day, on their own allowance).</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> every Buddhism page and
+        the meditation timer are free, with or without an account.</div>
+</div>
+
+<!-- AI TUTOR -->
+<div class="card" id="ai-tutor">
+    <h2 style="margin-top:0;">🤖 The AI tutor</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Help at any time of day: explaining <em>why</em>, not just <em>what</em>,
+        in plain English.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Open the <a href="/chat">🤖 AI Tutor</a> and choose a mode.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li>Pick the mode that fits what you need (table below).</li>
+        <li>Type your question in English or Thai.</li>
+        <li>Ask follow-up questions in the same chat. It remembers the conversation.</li>
+    </ol>
+
+    <table>
+        <thead>
+            <tr><th>Mode</th><th>Use it for</th><th>Plan</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>🎓 Tutor</td><td>Clear explanations of grammar, tones and word choice</td>
+                <td>All plans: Free {{ free_ai_limit }} a day, Thai Reader {{ basic_ai_limit }} a day</td></tr>
+            <tr><td>☸️ Buddhist</td><td>Questions about the Dhamma, in the approach you choose</td>
+                <td>All plans: {{ dhamma_limit }} a day, on their own allowance</td></tr>
+            <tr><td>🗣️ Conversation</td><td>Back-and-forth Thai practice, like a real dialogue</td><td>Thai Master</td></tr>
+            <tr><td>🌏 Culture</td><td>Customs, etiquette and when to be polite or casual</td><td>Thai Master</td></tr>
+            <tr><td>📝 Generator</td><td>Fresh quizzes and exercises at your level</td><td>Thai Master</td></tr>
+            <tr><td>🔤 Translator</td><td>English to Thai and back, right for who you're talking to</td><td>Thai Master</td></tr>
+            <tr><td>💡 Helper</td><td>Gentle hints instead of full answers</td><td>Thai Master</td></tr>
+        </tbody>
+    </table>
+    <p style="color:#666;">Thai Master has every mode, with fair use up to
+        {{ pro_fair_use }} messages a day.</p>
+
+    <div class="guide-short"><strong>In short:</strong> Tutor and Buddhist modes
+        are free each day; Thai Master opens all seven.</div>
+</div>
+
+<!-- LEVELS -->
+<div class="card" id="levels">
+    <h2 style="margin-top:0;">🏆 Levels, XP and unlocking</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Showing your progress and opening new sections in a sensible order, so
+        nothing arrives before you're ready for it.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Check <a href="/progress">🏆 My Progress</a> to see your level, your XP
+        and what opens next.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li><strong>Earn XP</strong> by visiting new sections and answering quiz
+            questions correctly.</li>
+        <li><strong>Level up</strong> as your XP grows. Each section in the
+            learning path opens at its level.</li>
+        <li><strong>Pass the alphabet quiz first.</strong> Most Learn sections need it.</li>
+        <li><strong>Claim your free section at Level {{ earned_unlock_level }}</strong>
+            ({{ earned_unlock_xp }} XP): open one Thai Reader section of your choice,
+            free and for good. My Progress shows when it's ready.</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> a section needs its level,
+        and for most of the Learn menu its plan. Level {{ earned_unlock_level }} earns
+        you one Thai Reader section free.</div>
+</div>
+
+<!-- PLANS -->
+<div class="card" id="plans">
+    <h2 style="margin-top:0;">⭐ Plans and prices</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Choosing how much of the language course you want. Everything about the
+        Dhamma stays free whichever plan you're on.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Compare the plans on <a href="/premium">⭐ Premium</a>. You can see every
+        section, including the paid ones, before you pay anything.</p>
+
+    <table>
+        <thead>
+            <tr><th>Plan</th><th>Price</th><th>Highlights</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>{{ tiers.free.name.split(' (')[0] }}</td><td>Free, no card</td>
+                <td>Chanting book, all Buddhism content, alphabet, ThaiBridge Spelling,
+                    Survival Thai, AI tutor ({{ free_ai_limit }} a day)</td></tr>
+            <tr><td>{{ tiers.basic.name.split(' (')[0] }}</td>
+                <td>£{{ '%.2f' % tiers.basic.price }} a month, or £{{ '%.0f' % tiers.basic.price_year }} a year</td>
+                <td>The full Learn menu, culture and exercises, AI tutor ({{ basic_ai_limit }} a day)</td></tr>
+            <tr><td>{{ tiers.pro.name.split(' (')[0] }}</td>
+                <td>£{{ '%.2f' % tiers.pro.price }} a month, or £{{ '%.0f' % tiers.pro.price_year }} a year</td>
+                <td>Everything, all seven AI modes and the dictionary</td></tr>
+        </tbody>
+    </table>
+    <p style="color:#666;">The yearly price is ten months, so you save two. Thai
+        Master members can also buy the one-off <strong>{{ addon.name }}</strong>
+        (£{{ '%.2f' % addon.price }}), which opens every section without levelling.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li>Choose a plan on <a href="/premium">Premium</a> and pay securely.</li>
+        <li>Cancel any time. You keep what you've paid for until the end of the period.</li>
+        <li>Not happy? <a href="/contact">Contact me</a> within 14 days of any payment
+            for a full refund. See <a href="/policies">Policies</a>.</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> free to start, no card;
+        pay only for the deeper language course, and cancel any time.</div>
 </div>
 
 <!-- MONK MODE -->
-<div class="card">
+<div class="card" id="monk-mode">
     <h2 style="margin-top:0;">🧡 Monk Mode (for monastics)</h2>
-    <p>
-        Monk Mode is a <strong>free track for monks and nuns</strong> — written
-        for Thai monastics learning English and Western monastics learning Thai.
-        When it's on, every lesson is unlocked at no cost. 🙏
-    </p>
-    <ul>
-        <li><strong>It starts switched off.</strong> Everyone begins with Monk
-            Mode off — it's only ever on if you turn it on yourself.</li>
-        <li><strong>To turn it on,</strong> open <a href="/monk-mode">Monk Mode</a>
-            in the menu and enter the access code shared by your temple or teacher.</li>
-        <li><strong>To turn it off,</strong> click the <em>"🧡 Monk Mode: ON"</em>
-            button in the top menu at any time — no code needed.</li>
-    </ul>
+
+    <p class="guide-part">What it's for</p>
+    <p>A <strong>free track for monks and nuns</strong>, written for Thai monastics
+        learning English and Western monastics learning Thai. When it's on, every
+        lesson is free. You still open sections by levelling, like everyone else. 🙏</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Get the access code from your temple or teacher.</p>
+
+    <p class="guide-part">Step by step</p>
+    <ol>
+        <li><strong>It starts switched off.</strong> It's only ever on if you turn it on yourself.</li>
+        <li><strong>To turn it on,</strong> open <a href="/monk-mode">Monk Mode</a> in the
+            menu and enter the code.</li>
+        <li><strong>To turn it off,</strong> click <em>"🧡 Monk Mode: ON"</em> in the top
+            menu at any time. No code needed.</li>
+    </ol>
+
+    <div class="guide-short"><strong>In short:</strong> a code from your temple
+        makes every lesson free.</div>
 </div>
 
-<!-- LEARNING SUPPORT -->
+<!-- LEARNING SUPPORT: keep this id — base.html's Learning Support box links to it -->
 <div class="card" id="learning-support">
-    <h2 style="margin-top:0;">♿ Learning Support (easier reading &amp; read aloud)</h2>
-    <p>
-        <strong>♿ Learning Support</strong> in the top menu is for learners with
-        <strong>dyslexia, ADHD, autism, low vision or visual stress</strong> — and
-        anyone who finds long stretches of English tiring. Switch on only what
-        helps you; everything is saved on your own device and never sent to us.
-    </p>
+    <h2 style="margin-top:0;">♿ Learning Support and Read aloud</h2>
+
+    <p class="guide-part">What it's for</p>
+    <p>Learners with <strong>dyslexia, ADHD, autism, low vision or visual
+        stress</strong>, and anyone who finds long stretches of English tiring.
+        Everything is saved on your own device and never sent to us.</p>
+
+    <p class="guide-part">Where to start</p>
+    <p>Open <strong>♿ Learning Support</strong> in the top menu and switch on only
+        what helps you.</p>
+
     <ul>
-        <li><strong>Easy-to-read font</strong> — swaps in Atkinson Hyperlegible, a
-            font designed so similar letters can't be mistaken for each other.</li>
-        <li><strong>Bigger text</strong> — scales the whole site up.</li>
-        <li><strong>Extra letter &amp; line spacing</strong> — gives words room to
-            breathe, which many dyslexic readers find easier to follow.</li>
-        <li><strong>Quiz sounds</strong> — a short chime for a right answer, a soft
-            note for a wrong one, and a few rising notes when you level up. On to
-            start with; untick it for silent quizzes.</li>
+        <li><strong>Easy-to-read font</strong>: Atkinson Hyperlegible, designed so
+            similar letters can't be mistaken for each other.</li>
+        <li><strong>Bigger text</strong>: scales the whole site up.</li>
+        <li><strong>Extra letter &amp; line spacing</strong>: gives words room to
+            breathe, which many dyslexic readers find easier.</li>
+        <li><strong>Quiz sounds</strong>: a short chime for a right answer, a soft
+            note for a wrong one, and rising notes when you level up. On to start
+            with; untick it for silent quizzes.</li>
     </ul>
 
-    <h3>🔊 How to use Read aloud</h3>
-    <p>
-        Read aloud uses your browser's own voice to speak the
-        <strong>English</strong> text — Thai keeps its own recorded audio buttons.
-        <strong>You choose what gets read</strong> using the "what should I read?"
-        dropdown, so you're never stuck listening to a whole page:
-    </p>
+    <p class="guide-part">Step by step: Read aloud</p>
+    <p>Read aloud uses your browser's own voice for the <strong>English</strong>
+        text; Thai keeps its own recorded audio buttons. Choose what gets read in
+        the "what should I read?" dropdown:</p>
     <ol>
-        <li><strong>The whole page</strong> — press <em>🔊 Read aloud</em> and it
-            reads the page from the top.</li>
-        <li><strong>A part I click on</strong> — press <em>🔊 Read aloud</em>, then
-            click any paragraph or heading on the page. It highlights as you point
-            at it, and only that part is read. Press <kbd>Esc</kbd> to cancel.</li>
-        <li><strong>Text I have highlighted</strong> — highlight the text you want
-            with your mouse <em>first</em>, then press <em>🔊 Read aloud</em>.</li>
+        <li><strong>The whole page</strong>: press <em>🔊 Read aloud</em> and it reads
+            from the top.</li>
+        <li><strong>A part I click on</strong>: press <em>🔊 Read aloud</em>, then click
+            any paragraph or heading. Press <kbd>Esc</kbd> to cancel.</li>
+        <li><strong>Text I have highlighted</strong>: highlight the text first, then
+            press <em>🔊 Read aloud</em>.</li>
     </ol>
-    <p>
-        Press the button again at any time to <strong>stop</strong> — it changes to
-        <em>⏹ Stop reading</em> while it's speaking. The line underneath the button
-        always tells you what to do next, and <strong>Turn all off</strong> clears
-        every setting and silences the voice.
-    </p>
+    <p>Press the button again to <strong>stop</strong> (it shows <em>⏹ Stop
+        reading</em> while speaking). <strong>Turn all off</strong> clears every
+        setting and silences the voice.</p>
+
+    <div class="guide-short"><strong>In short:</strong> switch on only what helps;
+        it stays on your device.</div>
 </div>
 
 <!-- TIPS -->
-<div class="card">
+<div class="card" id="tips">
     <h2 style="margin-top:0;">💡 Handy tips</h2>
     <ul>
-        <li><strong>Zoom freely.</strong> The pages adjust to your browser zoom
-            (anywhere from 25% to 500%) — tables fill the space when there's room
-            and scroll sideways when there isn't, so nothing gets cut off.</li>
-        <li><strong>Use the side menu.</strong> On learning pages, the menu on the
-            left stays in view as you scroll, so you can jump between topics easily.</li>
-        <li><strong>Some sections are locked.</strong> Reach the required level
-            (and, for some areas, subscribe) to open everything up.</li>
+        <li><strong>It works on your phone.</strong> Nothing to install: open
+            thaibridge-ai.smoald.com in your browser.</li>
+        <li><strong>Zoom freely.</strong> Pages adjust to your browser zoom, from 25%
+            to 500%, so nothing gets cut off.</li>
+        <li><strong>Use the side menu.</strong> On learning pages it stays in view as
+            you scroll, so you can jump between topics.</li>
+        <li><strong>A locked section tells you why.</strong> It shows the level and
+            plan it needs, so you always know what to do next.</li>
+        <li><strong>Still stuck?</strong> <a href="/contact">Contact me</a>.</li>
     </ul>
-</div>
-
-<!-- HOW THE SITE IS ORGANISED -->
-<div class="card">
-    <h2 style="margin-top:0;">🧭 How the pages are laid out</h2>
-    <p>
-        ThaiBridge AI doesn't force one layout on every page. Instead, each page
-        uses the <strong>shape that fits its job</strong> — which is why a reading
-        page looks different from a tool or a short info page. There are four:
-    </p>
-    <table>
-        <thead>
-            <tr>
-                <th>Layout</th>
-                <th>For</th>
-                <th>Example pages</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Landing</strong></td>
-                <td>The front door</td>
-                <td>Home</td>
-            </tr>
-            <tr>
-                <td><strong>3-column content</strong></td>
-                <td>Reference learning with sub-pages</td>
-                <td>All the Learn pages, Culture, Buddhism</td>
-            </tr>
-            <tr>
-                <td><strong>Simple centered</strong></td>
-                <td>Small info pages + short forms</td>
-                <td>About, Contact, Privacy, Login, Premium</td>
-            </tr>
-            <tr>
-                <td><strong>Full-width tool</strong></td>
-                <td>App-like interactive areas</td>
-                <td>Dictionary, AI Tutor, Meditation, Quizzes</td>
-            </tr>
-        </tbody>
-    </table>
-    <p style="color:#666; margin-bottom:0;">
-        Matching each page to its purpose keeps things clear: you get a menu and
-        extras where they help, and a clean, uncluttered page where they don't.
-    </p>
 </div>
 
 {% endblock %}
