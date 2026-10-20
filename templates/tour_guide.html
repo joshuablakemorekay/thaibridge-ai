@@ -13,7 +13,8 @@
 
     <div class="info-banner">
         💡 Thai for anyone exploring Thailand: on holiday, travelling through, or living here.
-        Take a trip below and speak Thai at every stop, or jump to the <a href="#phrasebook">phrasebook</a>.
+        Take a trip below and speak Thai at every stop, find <a href="#things-to-do">things to do</a>,
+        or jump to the <a href="#phrasebook">phrasebook</a>.
     </div>
 
     {# ── Trips: the page's main event. The picker is rendered here; the
@@ -43,6 +44,9 @@
         </div>
         <div id="trip-player" hidden></div>
     </section>
+
+    {% set trip_links = true %}
+    {% include 'partials/things_to_do.html' %}
 
     <h2 id="phrasebook" class="phrasebook-header">📖 Phrasebook</h2>
 
