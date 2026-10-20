@@ -96,6 +96,14 @@ class User(UserMixin, db.Model):
     # had the account if it was taken over, which is the point of changing it.
     session_version        = db.Column(db.Integer, default=0, nullable=False)
 
+    # --- Where the account came from ---
+    # The utm_source / utm_campaign tag of the ad link that brought this learner
+    # (see signup_source.py), so paid ads can be judged by the sign-ups each
+    # platform brought. NULL means no tag: they found the site another way, or
+    # signed up before this was recorded.
+    signup_source          = db.Column(db.String(64), index=True)
+    signup_campaign        = db.Column(db.String(64))
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
         # Here rather than in each route, so no route that sets a password can
@@ -155,6 +163,8 @@ def ensure_user_columns():
         'alphabet_completed_at':  dt,
         'progress':               json_,
         'session_version':        "INTEGER NOT NULL DEFAULT 0",
+        'signup_source':          "VARCHAR(64)",
+        'signup_campaign':        "VARCHAR(64)",
     }
     _ensure_columns('users', wanted)
     _ensure_columns('ai_usage', {'cache_write_tokens': 'INTEGER',
