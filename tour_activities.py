@@ -5,7 +5,8 @@ WHY THIS EXISTS
 The trips (tour_trips.py) teach Thai with places as the setting. This section
 does the other half of the job: it points people at real things to do, and at
 places to book them. Josh asked for it on 2026-10-20 so the Tour Guide page
-can promote Thailand as well as teach the language.
+can promote Thailand as well as teach the language. Off-road expeditions
+and quad biking were added the same day at his request.
 
 Each activity still carries a few Thai words you would need there, so the
 section teaches too.
@@ -77,7 +78,7 @@ def _klook(search):
 
 
 def _photo(file, alt, artist, license, source):
-    licence_paths = {'CC BY 2.0': 'by/2.0', 'CC BY 4.0': 'by/4.0', 'CC BY-SA 2.0': 'by-sa/2.0',
+    licence_paths = {'CC BY 2.0': 'by/2.0', 'CC BY 3.0': 'by/3.0', 'CC BY 4.0': 'by/4.0', 'CC BY-SA 2.0': 'by-sa/2.0',
                      'CC BY-SA 3.0': 'by-sa/3.0', 'CC BY-SA 4.0': 'by-sa/4.0'}
     return {'file': 'img/tour/' + file, 'alt': alt, 'artist': artist, 'license': license,
             'license_url': 'https://creativecommons.org/licenses/' + licence_paths[license],
@@ -259,6 +260,45 @@ ACTIVITIES = [
         'links': [('12go', 'Bus: Chiang Mai to Pai', 'https://12go.asia/en/travel/chiang-mai/pai'),
                   ('12go', 'Bangkok to Chiang Mai', 'https://12go.asia/en/travel/bangkok/chiang-mai'),
                   ('klook', 'Car hire', _klook('Thailand car rental'))],
+    },
+    {
+        'key': 'off-road',
+        'title': 'Off-road expeditions',
+        'emoji': '🚙',
+        'where': 'The mountains around Chiang Mai, Mae Hong Son and Chiang Rai have the best dirt '
+                 'tracks, up to hill-tribe villages and viewpoints. Khao Kho and the Isan hills are '
+                 'quieter.',
+        'blurb': 'Ride in a 4x4 convoy on jungle tracks and river crossings, or join a guided '
+                 'dirt-bike tour if you already ride.',
+        'tip': 'Go with a guide who knows the tracks: they turn to deep mud in the rainy season, '
+               'roughly May to October.',
+        'photo': _photo('do-off-road.webp', 'A convoy of 4x4 vehicles lined up on a dirt track near Chiang Mai',
+                        'Maxim Cruiser', 'CC BY 3.0', 'Chiang_mai_trip_2011_-_panoramio.jpg'),
+        'phrases': [('ทางลูกรัง', 'taaŋ lûuk-raŋ', 'Dirt road'),
+                    ('รถโฟร์วีล', 'rót foo-wiil', '4x4'),
+                    ('โคลน', 'kloon', 'Mud')],
+        'links': [('getyourguide', '4x4 tours from Chiang Mai', _gyg('Chiang Mai jeep tour')),
+                  ('getyourguide', 'Dirt-bike tours', _gyg('Chiang Mai dirt bike tour')),
+                  ('klook', 'Off-road tours', _klook('Thailand off road tour'))],
+    },
+    {
+        'key': 'quad-biking',
+        'title': 'Quad biking',
+        'emoji': '🏍️',
+        'where': 'ATV parks and jungle trails around Chiang Mai, Phuket, Krabi, Koh Samui and Pattaya. '
+                 'Most trips include a short practice lap first.',
+        'blurb': 'Drive your own quad bike along jungle and farm tracks, often with a waterfall '
+                 'or viewpoint stop. No experience needed.',
+        'tip': 'Wear the helmet, check that the brakes work before you set off, and make sure your '
+               'travel insurance covers quad bikes. Many policies don’t.',
+        'photo': _photo('do-quad-biking.webp', 'A line of quad bikes on a jungle dirt road in Mae Taeng, Chiang Mai',
+                        'Maxim Cruiser', 'CC BY 3.0', 'Follow_THE_PEACK_ATV_adventure_-_panoramio.jpg'),
+        'phrases': [('หมวกกันน็อค', 'mùak gan-nɔ́k', 'Helmet'),
+                    ('เบรก', 'brèek', 'Brake'),
+                    ('ช้าลงหน่อย', 'cháa loŋ nɔ̀i', 'Slow down a bit')],
+        'links': [('getyourguide', 'Quad biking in Phuket', _gyg('Phuket ATV')),
+                  ('getyourguide', 'Quad biking in Chiang Mai', _gyg('Chiang Mai ATV')),
+                  ('klook', 'ATV tours', _klook('Thailand ATV'))],
     },
 ]
 

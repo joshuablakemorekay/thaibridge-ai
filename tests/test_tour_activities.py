@@ -59,7 +59,7 @@ class TestTheLinks:
     def test_the_activities_josh_asked_for_are_there(self):
         keys = set(tour_activities.ACTIVITIES_BY_KEY)
         assert {'flights', 'temples', 'climbing', 'diving', 'sea-fishing', 'freshwater-fishing',
-                'hiking', 'wildlife', 'road-trip'} <= keys
+                'hiking', 'wildlife', 'road-trip', 'off-road', 'quad-biking'} <= keys
 
     def test_temple_route_links_to_real_trips(self):
         for key in tour_activities.ACTIVITIES_BY_KEY['temples']['trips']:
