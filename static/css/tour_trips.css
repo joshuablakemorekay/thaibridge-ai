@@ -171,6 +171,20 @@ a.tp-btn { text-decoration: none; display: inline-block; }
     color: #6b5a2e;
     vertical-align: middle;
 }
+.activity-jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+.activity-jump a {
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(212,175,55,0.5);
+    border-radius: 999px;
+    background: #fffaf0;
+    color: var(--royal-purple);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.activity-jump a:hover { background: #f6ecd2; }
+.activity-group { margin: 2rem 0 0.75rem; font-size: 1.3rem; color: var(--royal-purple); scroll-margin-top: 220px; }
+.activity-group-note { font-size: 0.85rem; color: #666; margin: -0.4rem 0 0.75rem; }
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

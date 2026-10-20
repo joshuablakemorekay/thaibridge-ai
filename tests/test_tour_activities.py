@@ -61,6 +61,19 @@ class TestTheLinks:
         assert {'flights', 'temples', 'climbing', 'diving', 'sea-fishing', 'freshwater-fishing',
                 'hiking', 'wildlife', 'road-trip', 'off-road', 'quad-biking'} <= keys
 
+    def test_the_new_cards_josh_asked_for_are_there(self):
+        keys = set(tour_activities.ACTIVITIES_BY_KEY)
+        assert {'trains-ferries', 'street-food', 'cooking-class', 'elephant-sanctuary', 'aquarium'} <= keys
+
+    def test_every_activity_sits_under_one_heading(self):
+        known = {key for key, _, _ in tour_activities.CATEGORIES}
+        assert [key for key, _, _ in tour_activities.CATEGORIES][:4] == ['travel', 'food', 'family', 'outdoors']
+        for a in tour_activities.ACTIVITIES:
+            assert a['category'] in known, a['key']
+        grouped = [a['key'] for g in tour_activities.ACTIVITIES_BY_CATEGORY for a in g['activities']]
+        assert sorted(grouped) == sorted(tour_activities.ACTIVITIES_BY_KEY)
+        assert all(g['activities'] for g in tour_activities.ACTIVITIES_BY_CATEGORY), 'no empty headings'
+
     def test_temple_route_links_to_real_trips(self):
         for key in tour_activities.ACTIVITIES_BY_KEY['temples']['trips']:
             assert key in tour_trips.TRIPS_BY_KEY
@@ -93,6 +106,8 @@ class TestThePage:
         body = unlocked_client.get('/tour-guide').get_data(as_text=True)
         assert 'id="things-to-do"' in body
         assert 'Play it first' in body, 'the temple route links to the trips here'
+        for key, _, title in tour_activities.CATEGORIES:
+            assert f'id="do-group-{key}"' in body and f'href="#do-group-{key}"' in body
         for a in tour_activities.ACTIVITIES:
             assert a['title'] in body
             assert a['photo']['source'] in body

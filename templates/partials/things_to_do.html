@@ -15,8 +15,14 @@
     <p class="affiliate-note">Links marked <span class="ad-label">affiliate</span> may earn ThaiBridge a small
         commission if you book, at no extra cost to you. It never changes what we recommend.</p>
     {% endif %}
+    <div class="activity-jump" role="navigation" aria-label="Jump to a type of activity">
+        {% for g in ttd.groups %}<a href="#do-group-{{ g.key }}">{{ g.emoji }} {{ g.title }}</a>{% endfor %}
+    </div>
+    {% for g in ttd.groups %}
+    <h3 class="activity-group" id="do-group-{{ g.key }}">{{ g.emoji }} {{ g.title }}</h3>
+    {% if g.key == 'temples' %}<p class="activity-group-note">Commission-free: these link only to official pages.</p>{% endif %}
     <div class="activity-grid">
-        {% for a in ttd.activities %}
+        {% for a in g.activities %}
         <article class="activity-card" id="do-{{ a.key }}">
             <img class="trip-photo" src="{{ url_for('static', filename=a.photo.file) }}"
                  alt="{{ a.photo.alt }}" loading="lazy" decoding="async" width="1000" height="667">
@@ -50,6 +56,7 @@
         </article>
         {% endfor %}
     </div>
+    {% endfor %}
     <p class="activity-credits">Photos via Wikimedia Commons:
         {% for a in ttd.activities %}<a href="{{ a.photo.source }}" target="_blank" rel="noopener">{{ a.title }}</a>
         by {{ a.photo.artist }} (<a href="{{ a.photo.license_url }}" target="_blank" rel="noopener">{{ a.photo.license }}</a>){% if not loop.last %} · {% endif %}{% endfor %}
