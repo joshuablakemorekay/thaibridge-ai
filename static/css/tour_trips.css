@@ -153,3 +153,65 @@ a.tp-btn { text-decoration: none; display: inline-block; }
 /* Headings and feedback take focus from the player script (for keyboard and
    screen-reader users); no ring on them unless the visitor is using a keyboard. */
 .tp-title:focus:not(:focus-visible), .tp-feedback:focus:not(:focus-visible) { outline: none; }
+
+/* ── Things to do ────────────────────────────────────────── */
+/* Activity cards share the trip photo style; the links are what make
+   them different, so they get the strongest colour on the card. */
+.things-to-do { margin-bottom: 3rem; scroll-margin-top: 220px; }
+.affiliate-note { font-size: 0.82rem; color: #666; margin: -0.5rem 0 1rem; }
+.ad-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.05rem 0.4rem;
+    border-radius: 4px;
+    background: #f1ece0;
+    color: #6b5a2e;
+    vertical-align: middle;
+}
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.9rem;
+    align-items: start;   /* short cards don't stretch into a gap above their links */
+}
+.activity-card {
+    background: white;
+    border: 1px solid #ece4d4;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    scroll-margin-top: 220px;
+}
+.activity-body { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.9rem 1.15rem 1.1rem; flex: 1; }
+.activity-title { margin: 0; font-size: 1.1rem; color: var(--royal-purple); }
+.activity-blurb, .activity-where, .activity-tip, .activity-trips { margin: 0; font-size: 0.88rem; color: #444; line-height: 1.55; }
+.activity-tip { color: #555; background: #faf6ec; border-radius: 8px; padding: 0.5rem 0.7rem; }
+.activity-trips a { color: var(--royal-purple); font-weight: 600; }
+.activity-phrases { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.25rem; }
+.activity-phrases li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; font-size: 0.88rem; }
+.activity-phrases .thai-text { font-family: 'Sarabun', sans-serif; font-size: 1.15rem; color: var(--royal-purple); }
+.activity-phrases .vocab-paiboon { font-size: 0.88rem; }
+.activity-english { color: #555; }
+.activity-links { display: flex; flex-direction: column; gap: 0.4rem; padding-top: 0.3rem; }
+.activity-link {
+    display: block;
+    padding: 0.55rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--royal-gold);
+    color: var(--royal-purple);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.activity-link:hover { background: #fbf5e4; }
+.activity-link:focus-visible { outline: 3px solid var(--royal-gold); outline-offset: 2px; }
+.activity-link .partner { font-weight: 400; color: #666; font-size: 0.8rem; }
+
+@media (max-width: 600px) {
+    .activity-grid { grid-template-columns: 1fr; }
+}
