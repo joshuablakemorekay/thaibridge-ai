@@ -7378,7 +7378,28 @@ def policies():
 
 @app.route('/instructions')
 def instructions():
-    return render_template('instructions.html')
+    """Help: how to use ThaiBridge AI — the user guide.
+
+    The guide sections were ADDED around the page's original cards, which are
+    kept word for word (tests/test_help_page.py holds them to it): the guide
+    must not cost any of what the page already said.
+
+    Every price, limit and level in the added sections is passed in from the
+    constants that enforce it, never typed into the template. A guide that
+    quotes "5 messages a day" while the app allows 15 is worse than no guide,
+    and the tier and limit numbers here have each changed at least once.
+    """
+    return render_template('instructions.html',
+                           tiers=SUBSCRIPTION_TIERS,
+                           sections=SECTION_REQUIREMENTS,
+                           free_ai_limit=FREE_AI_DAILY_LIMIT,
+                           basic_ai_limit=BASIC_AI_DAILY_LIMIT,
+                           dhamma_limit=FREE_DHAMMA_DAILY_LIMIT,
+                           pro_fair_use=PRO_FAIR_USE_DAILY,
+                           earned_unlock_level=EARNED_UNLOCK_LEVEL,
+                           earned_unlock_xp=XP_LEVELS[EARNED_UNLOCK_LEVEL],
+                           alphabet_pass_mark=ALPHABET_QUIZ_PASS_MARK,
+                           addon=INSTANT_ACCESS_ADDON)
 
 
 # ============================================
