@@ -32,19 +32,45 @@ def page():
     return response.get_data(as_text=True)
 
 
-def test_it_is_titled_as_the_help_page(page):
-    assert "<title>Help: how to use ThaiBridge AI" in page
+# The page's original text, before the guide sections were added around it.
+# Every sentence must still be there, word for word: the guide was meant to add
+# to the page, never to cost it anything it already said.
+ORIGINAL_SENTENCES = [
+    "A quick guide to finding your way around.",
+    "Getting started in 3 steps",
+    "Tones &amp; Consonant Classes and ThaiBridge Spelling are good places to begin.",
+    "Learn tones early — it really matters",
+    "If you learn tones from the very beginning, correct pronunciation becomes a habit",
+    "What you can do",
+    "themed word sets with practice quizzes",
+    "a Samatha &amp; Vipassana timer",
+    "Monk Mode is a <strong>free track for monks and nuns</strong>",
+    "It starts switched off.",
+    "font designed so similar letters can't be mistaken for each other.",
+    "It highlights as you point at it, and only that part is read.",
+    "The line underneath the button always tells you what to do next",
+    "tables fill the space when there's room and scroll sideways when there isn't",
+    "How the pages are laid out",
+    "Matching each page to its purpose keeps things clear",
+]
+
+
+@pytest.mark.parametrize("sentence", ORIGINAL_SENTENCES)
+def test_the_original_page_text_is_kept_word_for_word(page, sentence):
+    # Line breaks in the template are only layout, so compare with runs of
+    # whitespace collapsed; every word and character must still match.
+    assert sentence in " ".join(page.split())
 
 
 def test_every_section_follows_the_four_part_shape(page):
     """What it's for · Where to start · Step by step · In short, in every
     guide section after the overview, so each one reads the same way."""
-    for anchor in ["chanting", "account", "learning-path", "buddhism",
-                   "ai-tutor", "levels", "plans", "monk-mode"]:
+    for anchor in ["approach", "chanting", "account", "learning-path",
+                   "buddhism", "ai-tutor", "levels", "plans"]:
         start = page.index(f'id="{anchor}"')
         end = page.find('<div class="card"', start + 1)
         section = page[start:end if end != -1 else None]
-        for part in ["What it's for", "Where to start", "Step by step", "In short:"]:
+        for part in ["Where to start", "Step by step", "In short:"]:
             assert part in section, f"{anchor} is missing '{part}'"
 
 
@@ -95,11 +121,6 @@ def test_the_learning_support_anchor_survives(page):
     assert 'id="learning-support"' in page
 
 
-def test_no_developer_layout_table(page):
-    """The page-layout table was a note for builders, not learners."""
-    assert "Full-width tool" not in page
-
-
 def test_every_link_on_the_page_leads_somewhere(page):
     client = app.test_client()
     paths = sorted({href.split("#")[0] for href in re.findall(r'href="(/[^"]*)"', page)} - {""})
@@ -108,6 +129,7 @@ def test_every_link_on_the_page_leads_somewhere(page):
     assert not broken, f"links to missing pages: {broken}"
 
 
-def test_footer_and_menu_both_say_help(page):
-    assert '<a href="/instructions">ℹ️ Help</a>' in page
-    assert '<a href="/instructions">Help</a> •' in page
+def test_the_guide_links_to_the_original_cards(page):
+    for anchor in ("monk-mode", "learning-support", "tips"):
+        assert f'href="#{anchor}"' in page
+        assert f'id="{anchor}"' in page

@@ -7365,15 +7365,14 @@ def policies():
 def instructions():
     """Help: how to use ThaiBridge AI — the user guide.
 
-    Every price, limit and level on the page is passed in from the constants
-    that enforce it, never typed into the template. A guide that quotes "5
-    messages a day" while the app allows 15 is worse than no guide, and the
-    tier and limit numbers here have each changed at least once already.
+    The guide sections were ADDED around the page's original cards, which are
+    kept word for word (tests/test_help_page.py holds them to it): the guide
+    must not cost any of what the page already said.
 
-    The page used to end with a table of the site's four page layouts. That
-    was a note for whoever builds the site, not for a learner; it is gone from
-    the guide. In short: each page uses the layout that fits its job —
-    landing, 3-column reference, simple centred, or full-width tool.
+    Every price, limit and level in the added sections is passed in from the
+    constants that enforce it, never typed into the template. A guide that
+    quotes "5 messages a day" while the app allows 15 is worse than no guide,
+    and the tier and limit numbers here have each changed at least once.
     """
     return render_template('instructions.html',
                            tiers=SUBSCRIPTION_TIERS,
