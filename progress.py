@@ -9,8 +9,8 @@ cleared cookies and a second device. This module owns that round trip:
   * load_user_progress()  — database → session at login;
   * get_user_level() and get_xp_for_next_level() — the XP table's maths.
 
-What progress UNLOCKS — the section gates, subscriptions, Monk Mode's paywall
-waiver, the earned unlock — stays in app.py. Those rules are tied to billing
+What progress UNLOCKS — the section gates, subscriptions, the earned
+unlock — stays in app.py. Those rules are tied to billing
 and to each other, and moving them would only move the tangle.
 
 Like every other module this never imports app.py. app.py calls init_app(app)
@@ -80,7 +80,7 @@ def init_user_progress():
             'subscription_tier': 'free',
             'subscription_expires': None,
             'is_developer': False,
-            'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
+            'monk_mode': False,   # opens the free monk lesson track only (code-gated)
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
             'monk_accent': MONK_ACCENT_DEFAULT,   # 'uk' or 'us' (English-side accent)
             'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level grind

@@ -30,11 +30,9 @@
                 {% endif %}
             </p>
 
-            {# What the bar is FOR. Monks already have every section without
-               paying, so an unlock would be a reward for nothing — say nothing
-               to them. Everyone else is told where the levelling leads, because
-               a progress bar with an unnamed destination is what this replaced. #}
-            {% if not monk_mode %}
+            {# What the bar is FOR. Every learner is told where the levelling
+               leads, because a progress bar with an unnamed destination is what
+               this replaced. #}
                 {% if earned_unlock.state == 'locked' %}
                 <p class="earned-unlock-note">
                     🔑 Reach <strong>Level {{ earned_unlock.level }}</strong> to earn
@@ -51,18 +49,10 @@
                     <strong>{{ earned_unlock.section_name }}</strong> — it's yours for good.
                 </p>
                 {% endif %}
-            {% endif %}
         </div>
         
         <!-- Subscription Tier -->
         <div class="tier-card">
-            {# Monk Mode waives payment on every section, so a monk is shown their
-               real status — free, in full — instead of a plan name and an upgrade
-               button for a tier they never need to buy. #}
-            {% if monk_mode %}
-            <h3><span class="monk-free">FREE</span> 🧡</h3>
-            <p class="expires">Monk Mode — every section free of charge</p>
-            {% else %}
             <h3>{{ subscription_tiers[tier].name }}</h3>
             {% if tier != 'free' and current_user.is_authenticated and current_user.current_period_end %}
             <p class="expires">Expires: {{ current_user.current_period_end.strftime('%Y-%m-%d') }}</p>
@@ -74,7 +64,6 @@
                     Manage Subscription
                 {% endif %}
             </a>
-            {% endif %}
             {% if request.args.get('cancel') == 'failed' %}
             <p class="earned-unlock-note cancel-failed" role="alert">
                 Sorry — we couldn't cancel your subscription just now. Nothing has changed.
@@ -215,9 +204,7 @@
             {% for section in available_sections %}
             <div class="section-card available">
                 <h3>{{ section.name }}</h3>
-                {# Monk Mode waives payment, so show "Free" rather than a plan
-                   name a monastic will never be charged for. #}
-                <p>Level {{ section.level_required }} • {% if monk_mode %}<span class="monk-free">FREE</span> <span title="Free while Monk Mode is on">🧡</span>{% else %}{{ subscription_tiers[section.tier_required].name }}{% endif %}</p>
+                <p>Level {{ section.level_required }} • {{ subscription_tiers[section.tier_required].name }}</p>
                 <span class="reward">+{{ section.points_reward }} XP</span>
                 {% if section.unlocked %}
                 <span class="badge unlocked">✓ Unlocked</span>
@@ -235,7 +222,7 @@
                 <h3>{{ section.name }}</h3>
                 <p>{{ section.message }}</p>
                 <span class="requirement">Requires: Level {{ section.level_required }}
-                    {% if section.tier_required != 'free' and not monk_mode %}
+                    {% if section.tier_required != 'free' %}
                         + {{ subscription_tiers[section.tier_required].name }}
                     {% endif %}
                 </span>
@@ -245,19 +232,6 @@
     </div>
     
     <!-- Subscription Options -->
-    {# Monk Mode removes the tiers entirely: no plan names, no prices, no buy
-       buttons. Sections stay gated by level and the alphabet, never by payment. #}
-    {% if monk_mode %}
-    <div id="subscriptions" class="subscriptions-section">
-        <h2>🧡 Monk Mode — no subscription needed</h2>
-        <p style="max-width:640px; margin:0 auto; text-align:center; line-height:1.7;">
-            Every section of ThaiBridge is <span class="monk-free">free of charge</span> while
-            Monk Mode is on. There is no Basic or Pro tier to buy and nothing to pay.
-            Sections still open as you level up and finish the Thai alphabet — that
-            gate is about progress, not money.
-        </p>
-    </div>
-    {% else %}
     <div id="subscriptions" class="subscriptions-section">
         <h2>💎 Subscription Plans</h2>
         <div class="subscription-grid">
@@ -300,7 +274,6 @@
             {% endfor %}
         </div>
     </div>
-    {% endif %}
 </div>
 
 <style>

@@ -210,9 +210,9 @@ def test_the_dashboard_says_where_a_spent_unlock_went(account):
     assert SPENDABLE.replace("_", " ").title() in page
 
 
-def test_a_monk_is_not_offered_a_reward_they_already_have(account):
-    """Monk Mode already waives payment on every section, so an unlock would be
-    a prize for nothing."""
+def test_a_monk_is_offered_the_unlock_like_anyone_else(account):
+    """Monk Mode no longer waives payment, so the earned unlock is worth the
+    same to a monk as to any learner."""
     client, _ = account
     set_level(client, EARNED_UNLOCK_LEVEL)
     with client.session_transaction() as session_data:
@@ -220,4 +220,4 @@ def test_a_monk_is_not_offered_a_reward_they_already_have(account):
         progress["monk_mode"] = True
         session_data["user_progress"] = progress
 
-    assert "You've earned an unlock" not in dashboard(client)
+    assert "You've earned an unlock" in dashboard(client)

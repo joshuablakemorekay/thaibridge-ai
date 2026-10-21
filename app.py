@@ -480,7 +480,7 @@ SECTION_REQUIREMENTS = {
 
     # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
     # The premium power tools. Unlimited AI is enforced separately in the
-    # /api/ai/chat route, and Monk Mode never lifts the AI cap.
+    # /api/ai/chat route.
     'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
     # No requires_alphabet here, deliberately. /premium is the PRICING page: it
     # carries no @require_access, so the flag never fired — but it read as "pass
@@ -859,13 +859,12 @@ def has_full_unlock():
 
 
 def monk_mode_active():
-    """Monk Mode: a free, all-content-unlocked mode offered to Buddhist monks
-    and the Thai diaspora.
+    """Monk Mode: a code-gated, free lesson track written for monastics.
 
-    When it's on, every content gate (level and
-    subscription tier) is bypassed at no charge. It intentionally does NOT lift
-    the AI daily usage cap, because AI calls cost real money — unlimited free AI
-    is a separate decision, kept out of scope on purpose.
+    Turning it on opens the monk pages (/monk/lessons and friends) and nothing
+    else. Every other section is gated exactly as it is with Monk Mode off: the
+    Buddhist pages are already free to everyone, and the Thai language course
+    and the AI cap apply to monks the same as to any learner.
     """
     if 'user_progress' not in session:
         return False
@@ -1151,7 +1150,7 @@ def inject_static_version():
 @app.context_processor
 def inject_monk_mode():
     """Expose Monk Mode's state to every template, so the nav toggle, the
-    'everything unlocked' banner and the direction switch can render on any page
+    'Monk Mode is on' banner and the direction switch can render on any page
     without each route having to pass them in."""
     return {
         'monk_mode': monk_mode_active(),
@@ -1326,11 +1325,9 @@ def tier_still_owed(required_tier, user):
     """Does this user still have to pay for a section on `required_tier`?
 
     Pulled out of gate 3 so gate 2 can ask the same question without repeating
-    the hierarchy. Monk Mode answers no to everything — it waives payment and
-    only payment.
+    the hierarchy. Monk Mode does not change the answer — it opens the monk
+    track only, never a paid section.
     """
-    if user.get('monk_mode', False):
-        return False
     tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
     return tier_hierarchy[active_tier()] < tier_hierarchy[required_tier]
 
@@ -1341,11 +1338,8 @@ def check_section_access(section_id):
     Three independent gates, checked in order: alphabet completion, level/XP,
     and subscription tier. Developer mode bypasses all of them.
 
-    Monk Mode waives ONLY the subscription-tier gate — every content section
-    becomes free — while still requiring alphabet completion and the right
-    level. Monks earn their way up by levelling like everyone else; they just
-    never hit the paywall. (The AI usage cap is enforced separately in the
-    chat route, so Monk Mode never makes the costly AI tutor unlimited.)
+    Monk Mode plays no part here: it opens the monk track (its own routes)
+    and leaves every section below gated exactly as it is with Monk Mode off.
     """
     init_user_progress()
     user = session['user_progress']
@@ -1384,8 +1378,7 @@ def check_section_access(section_id):
             message += f" + {tier['name']} (£{tier['price']:.2f}/mo)"
         return False, message
 
-    # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
-    # this, free of charge. Everyone else is held to their real tier.
+    # Gate 3 — subscription tier (payment). Everyone is held to their real tier.
     if tier_still_owed(requirements['tier'], user):
         # ...unless this is the one section they opened by levelling. It waives
         # payment for that section alone and never the level gate above it.
@@ -7791,7 +7784,6 @@ def progress_dashboard():
     
     new_achievements = check_achievements(user)
     
-    monk_on = user.get('monk_mode', False)
     available_sections = []
     locked_sections = []
 
@@ -7800,9 +7792,7 @@ def progress_dashboard():
 
         tier = requirements['tier']
         level = requirements['level']
-        # Monk Mode waives payment, so a monk only ever needs the level — never a
-        # subscription. Don't quote them a "£/mo" requirement they don't owe.
-        if tier != 'free' and not monk_on:
+        if tier != 'free':
             tier_info = SUBSCRIPTION_TIERS[tier]
             requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (£{tier_info['price']:.2f}/mo)"
         elif level > 1:

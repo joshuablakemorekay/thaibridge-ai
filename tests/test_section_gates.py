@@ -59,12 +59,13 @@ def test_a_subscriber_below_the_level_is_told_only_the_level():
     assert "Thai Reader" not in message
 
 
-def test_a_monk_below_the_level_is_never_quoted_a_price():
-    """Monk Mode waives payment entirely, so a monk owes only the level."""
-    allowed, message = access(LEVEL_AND_TIER, monk_mode=True)
+def test_monk_mode_does_not_waive_payment():
+    """Monk Mode opens the monk track only. Every other section is gated
+    exactly as it is with Monk Mode off, price included."""
+    assert access(LEVEL_AND_TIER, monk_mode=True) == access(LEVEL_AND_TIER)
+    allowed, message = access(LEVEL_AND_TIER, monk_mode=True, level=5)
     assert not allowed
-    assert "Level 5" in message
-    assert "£" not in message
+    assert "Thai Reader" in message
 
 
 def test_the_payment_message_still_stands_alone_at_the_right_level():
