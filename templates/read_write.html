@@ -122,14 +122,27 @@
             </ol>
             <p class="rw-principle-tip">Pick a letter below, then trace over the
                faded guide with your finger or mouse. Start at its loop and keep
-               the pen moving.</p>
+               the pen moving. Your line stays purple on the letter and turns
+               red the moment it strays, so you can correct as you go. Once you
+               know a letter, hide the guide and write it from memory.</p>
         </div>
 
         <div class="rw-trace">
             <div class="rw-trace-stage">
-                <div class="rw-trace-guide" id="rw-guide" lang="th" aria-hidden="true"></div>
+                {# The guide is drawn on a canvas (read_write.js), not set as
+                   text, so the letter the learner sees is pixel for pixel the
+                   one their tracing is checked against. #}
+                <canvas class="rw-trace-guide" id="rw-guide" aria-hidden="true"></canvas>
                 <canvas id="rw-canvas" class="rw-trace-canvas"
                         aria-label="Tracing area"></canvas>
+            </div>
+            <div class="rw-trace-feedback" aria-live="polite">
+                <div class="rw-meter">
+                    <span class="rw-meter-label">Letter covered</span>
+                    <span class="rw-meter-bar"><span class="rw-meter-fill" id="rw-cover-fill"></span></span>
+                    <span class="rw-meter-pct" id="rw-cover-pct">0%</span>
+                </div>
+                <p class="rw-feedback-msg" id="rw-feedback-msg">Trace over the faded letter with your finger or mouse.</p>
             </div>
             <div class="rw-trace-meta">
                 <span class="rw-trace-name" id="rw-trace-name" lang="th"></span>
@@ -144,6 +157,7 @@
                 <button class="rw-btn" id="rw-clear" type="button">🧽 Clear</button>
                 <button class="rw-btn rw-btn--ghost" id="rw-toggle-guide" type="button"
                         aria-pressed="true">👁️ Hide guide</button>
+                <button class="rw-btn" id="rw-check" type="button" hidden>✔ Check my letter</button>
                 <button class="rw-audio th-audio" id="rw-listen" type="button">🔊 Listen</button>
             </div>
         </div>
@@ -161,5 +175,6 @@
     consonantAudioBase: "{{ url_for('static', filename='audio/th/') }}"
   };
 </script>
+<script src="{{ static_v('js/trace_check.js') }}" defer></script>
 <script src="{{ static_v('js/read_write.js') }}" defer></script>
 {% endblock %}

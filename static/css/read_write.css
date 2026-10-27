@@ -555,14 +555,13 @@
     touch-action: none;               /* let the canvas own touch drags */
 }
 
+/* A canvas the letter is drawn onto (read_write.js reads its colour and font
+   from here), so the guide matches the grid the tracing is checked against. */
 .rw-trace-guide {
     position: absolute;
     inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14rem;
-    line-height: 1;
+    width: 100%;
+    height: 100%;
     color: rgba(74, 26, 107, 0.18);   /* faint royal purple guide */
     user-select: none;
     pointer-events: none;
@@ -576,6 +575,47 @@
     width: 100%;
     height: 100%;
     cursor: crosshair;
+}
+
+/* How much of the letter is traced, and what to do next. */
+.rw-trace-feedback {
+    max-width: 320px;
+    margin: 0.75rem auto 0;
+    text-align: center;
+}
+
+.rw-meter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.rw-meter-bar {
+    flex: 1;
+    height: 10px;
+    border-radius: 5px;
+    background: #eee5d3;
+    overflow: hidden;
+}
+
+.rw-meter-fill {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--royal-gold, #D4AF37);
+    transition: width 0.2s;
+}
+
+.rw-meter-fill.is-done { background: var(--bodhi-green, #1B6E1B); }
+
+.rw-meter-pct { min-width: 2.5rem; text-align: right; font-weight: 600; }
+
+.rw-feedback-msg {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+    min-height: 2.6em;
 }
 
 .rw-trace-meta {
@@ -638,5 +678,5 @@
 
 @media (min-width: 700px) {
     .rw-trace-stage { max-width: 360px; }
-    .rw-trace-guide { font-size: 16rem; }
+    .rw-trace-feedback { max-width: 360px; }
 }
