@@ -598,6 +598,23 @@ AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
 # invites them to get in touch rather than treating them as an abuser.
 PRO_FAIR_USE_DAILY = 75
 
+# Pronunciation Analysis (🎤 Say it) is built but HIDDEN until a native speaker
+# has tried it (docs/pronunciation-review-*.xlsx): it cannot yet tell the mid
+# tone from the low one, and it should not be sold in Pro before someone who
+# hears Thai tones natively says its scores are fair. Two Render settings:
+#   PRONUNCIATION_TESTERS  usernames (comma-separated) who see it meanwhile,
+#                          so the reviewer can test it on their Pro account
+#   PRONUNCIATION_LIVE=1   on for every Pro learner, with its Premium card and
+#                          Pro feature line
+# Render restarts the app when a setting changes, so no code change is needed.
+PRONUNCIATION_LIVE = os.environ.get('PRONUNCIATION_LIVE', '').strip() == '1'
+
+
+def pronunciation_testers():
+    raw = os.environ.get('PRONUNCIATION_TESTERS', '')
+    return {name.strip().lower() for name in raw.split(',') if name.strip()}
+
+
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
@@ -649,6 +666,8 @@ SUBSCRIPTION_TIERS = {
             '✓ Culture AI Q&A',
             '✓ AI exercise generator',
             '✓ AI translator, English to Thai and back',
+            *(['✓ Pronunciation Analysis — see your tone next to the model\'s']
+              if PRONUNCIATION_LIVE else []),
             '✓ Thai–English dictionary',
             '✓ 3x points multiplier',
             '✓ Priority support',
@@ -5649,6 +5668,21 @@ EXERCISE_SECTION_NAMES = {'buddhist_formal': 'exercise_formal'}
 OPEN_EXERCISE_TOPICS = {}
 
 
+def can_use_pronunciation():
+    """Whether to offer 🎤 Say it. A Thai Master (Pro) feature, and while it is
+    hidden (see PRONUNCIATION_LIVE) only for the named testers. Developer mode
+    always sees it. It runs entirely in the browser, so this only decides
+    whether the button is offered."""
+    if session.get('user_progress', {}).get('is_developer', False):
+        return True
+    if active_tier() != 'pro':
+        return False
+    if PRONUNCIATION_LIVE:
+        return True
+    return (current_user.is_authenticated
+            and current_user.username.lower() in pronunciation_testers())
+
+
 def exercise_section(category):
     """The SECTION_REQUIREMENTS key that locks /exercise/<category>."""
     return EXERCISE_SECTION_NAMES.get(category, f'exercise_{category}')
@@ -5693,7 +5727,12 @@ def exercise(category):
     return render_template('exercise.html', category=category, vocab=vocab_list,
                          story=story, beginner_mode=beginner_mode,
                          audio_map=audio_map,
-                         listening_ready=len(audio_map) >= LISTENING_MIN_WORDS)
+                         listening_ready=len(audio_map) >= LISTENING_MIN_WORDS,
+                         can_pronounce=can_use_pronunciation(),
+                         pronunciation_live=PRONUNCIATION_LIVE,
+                         pron_words=[{'thai': w['thai'], 'paiboon': w['paiboon'],
+                                      'english': w['english'], 'audio': audio_map[w['thai']]}
+                                     for w in vocab_list if w['thai'] in audio_map])
 
 
 
@@ -7359,6 +7398,7 @@ def premium():
                            current_tier=active_tier(),
                            addon=INSTANT_ACCESS_ADDON,
                            has_addon=has_full_unlock(),
+                           pronunciation_live=PRONUNCIATION_LIVE,
                            dana=DANA,
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
                            free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,

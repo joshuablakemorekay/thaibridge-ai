@@ -20,6 +20,36 @@
     .ex-listen:hover, .ex-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
     .ex-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
 
+    /* Pronunciation Analysis (🎤 Say it) — built by static/js/pronounce.js */
+    .pron-word { text-align: center; }
+    .pron-thai { font-size: 2.5rem; margin: 0.5rem 0; }
+    .pron-english { color: #666; }
+    .pron-controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .pron-privacy { color: #777; font-size: 0.8rem; text-align: center; max-width: 560px; margin: 0.5rem auto; }
+    .pron-status { text-align: center; font-weight: 600; color: var(--temple-red); min-height: 1.4em; }
+    .pron-results { text-align: center; }
+    .pron-score { font-size: 1.2rem; font-weight: 600; color: var(--royal-purple); }
+    .pron-chart {
+        width: 100%;
+        max-width: 420px;
+        background: #faf7f0;
+        border-radius: 8px;
+    }
+    .pron-chart polyline { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .pron-mid { stroke: #ddd; stroke-dasharray: 4 4; }
+    .pron-model { stroke: var(--royal-purple); }
+    .pron-yours { stroke: var(--saffron, #F4A460); }
+    .pron-key { font-size: 0.85rem; }
+    .pron-key-model { color: var(--royal-purple); font-weight: 600; }
+    .pron-key-yours { color: var(--saffron-text, #a0522d); font-weight: 600; }
+    .pron-advice { max-width: 520px; margin: 0.5rem auto; }
+    .pron-heard { color: #555; }
+    .pron-heard.is-right { color: var(--bodhi-green); font-weight: 600; }
 </style>
 {% endblock %}
 
@@ -51,10 +81,23 @@
             {% if listening_ready %}
             <button class="btn" onclick="loadListening()">🎧 Listening Quiz</button>
             {% endif %}
+            {% if can_pronounce and pron_words %}
+            <button class="btn" id="pronounceStart" onclick="loadPronounce()">🎤 Say it</button>
+            {% endif %}
         </p>
         {% if listening_ready %}
         <p style="text-align: center; color: #666; font-size: 0.9rem;">
             Listening Quiz: hear a word without seeing it, then pick what it means.
+        </p>
+        {% endif %}
+        {% if can_pronounce and pron_words %}
+        <p style="text-align: center; color: #666; font-size: 0.9rem;">
+            Say it: speak a word and see your tone next to the model's.
+        </p>
+        {% elif pron_words and pronunciation_live %}
+        <p style="text-align: center; color: #666; font-size: 0.9rem;">
+            🎤 Pronunciation Analysis — say a word and see your tone next to the
+            model's — is part of <a href="/premium">Thai Master (Pro)</a>.
         </p>
         {% endif %}
     </div>
@@ -104,6 +147,22 @@
 {% endblock %}
 
 {% block extra_js %}
+{% if can_pronounce and pron_words %}
+<script src="{{ static_v('js/pronounce_core.js') }}"></script>
+<script src="{{ static_v('js/pronounce.js') }}"></script>
+<script>
+// Pronunciation Analysis (Pro). The words are the ones with a model clip.
+const PRON_WORDS = {{ pron_words|tojson }};
+function loadPronounce() {
+    const box = document.getElementById('quizContent');
+    if (!window.Pronounce || !Pronounce.supported) {
+        box.innerHTML = '<p style="text-align: center;">Pronunciation practice needs a microphone and a current browser (Chrome, Edge, Safari or Firefox).</p>';
+        return;
+    }
+    Pronounce.mount(box, PRON_WORDS);
+}
+</script>
+{% endif %}
 <script>
 const category = "{{ category }}";
 const beginnerMode = {{ 'true' if beginner_mode else 'false' }};

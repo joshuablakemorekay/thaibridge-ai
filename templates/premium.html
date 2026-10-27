@@ -86,6 +86,17 @@
            <a href="/progress#path">Progress</a> page.</p>
     </div>
 
+    {# Hidden until a native speaker has tested it — see PRONUNCIATION_LIVE in app.py. #}
+    {% if pronunciation_live %}
+    <div class="feature-card">
+        <span class="feat-badge is-pro">Pro</span>
+        <h4>🎤 Pronunciation Analysis</h4>
+        <p>Say a word and see your tone as a pitch line next to the model's,
+           with a match score and a tip on what to change. Speech recognition
+           checks you said the right word.</p>
+    </div>
+    {% endif %}
+
     <div class="feature-card">
         <span class="feat-badge is-live">Thai Reader</span>
         <h4>🎧 Listening Exercises</h4>
