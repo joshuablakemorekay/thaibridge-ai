@@ -456,6 +456,8 @@ SECTION_REQUIREMENTS = {
     'read_write': {'level': 2, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_everyday': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_theravada_dhamma': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     # Consonant classes + tone rules. Its content was moved here from the Grammar
     # page, so it's gated the same way — Basic tier, level 3.
@@ -5630,16 +5632,37 @@ def culture():
                            audio_map=audio_map)
 
 
+# A quiz topic whose lock is named differently from the topic itself. Before
+# this map, /exercise/buddhist_formal checked a section called
+# 'exercise_buddhist_formal', which has no requirements — so a paid quiz was
+# open to everyone, and nothing looked wrong. The key stays 'exercise_formal'
+# because it may already be saved as a learner's earned-unlock choice.
+EXERCISE_SECTION_NAMES = {'buddhist_formal': 'exercise_formal'}
+
+# Quiz topics left open to everyone on purpose, each with the reason.
+# tests/test_exercise_locks.py fails if any other topic has no lock.
+# (Theravada Dhamma vocabulary was considered and locked, 2026-10-27: it is
+# language tooling built on the teaching, which the policy says is paid; the
+# Dhamma itself stays free on /theravada.)
+OPEN_EXERCISE_TOPICS = {}
+
+
+def exercise_section(category):
+    """The SECTION_REQUIREMENTS key that locks /exercise/<category>."""
+    return EXERCISE_SECTION_NAMES.get(category, f'exercise_{category}')
+
+
 @app.route('/exercise/<category>')
 def exercise(category):
     # Check category-specific access
-    has_access, message = check_section_access(f'exercise_{category}')
+    section = exercise_section(category)
+    has_access, message = check_section_access(section)
     if not has_access:
-        return render_template('locked.html', 
-                             section=f'exercise_{category}',
+        return render_template('locked.html',
+                             section=section,
                              message=message,
-                             requirements=SECTION_REQUIREMENTS.get(f'exercise_{category}', {}),
-                             earned_unlock_offered=earned_unlock_offer(f'exercise_{category}'),
+                             requirements=SECTION_REQUIREMENTS.get(section, {}),
+                             earned_unlock_offered=earned_unlock_offer(section),
                              earned_unlock_level=EARNED_UNLOCK_LEVEL,
                              user_progress=session['user_progress'])
     

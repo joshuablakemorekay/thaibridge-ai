@@ -73,6 +73,8 @@ SECTION_TITLES = {
     'exercise_nature': 'Nature Vocabulary',
     'exercise_formal': 'Buddhist Formal Vocabulary',
     'exercise_isan_dialect': 'Isan Dialect',
+    'exercise_everyday': 'Everyday Vocabulary',
+    'exercise_theravada_dhamma': 'Theravada Dhamma Vocabulary',
 }
 
 # Sections whose URL cannot be discovered from a decorator.
@@ -88,6 +90,8 @@ UNDISCOVERABLE_URLS = {
     'exercise_nature': '/exercise/nature',
     'exercise_formal': '/exercise/buddhist_formal',
     'exercise_isan_dialect': '/exercise/isan_dialect',
+    'exercise_everyday': '/exercise/everyday',
+    'exercise_theravada_dhamma': '/exercise/theravada_dhamma',
 }
 
 # The order tiers are shown in. Their NAMES and prices are not repeated here:
