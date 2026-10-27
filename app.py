@@ -28,6 +28,7 @@ import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 import learning_path  # the Personalized Learning Path (IEP) on the Progress page
+import listening  # comprehension questions for the Sentences conversations
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -7256,6 +7257,7 @@ def sentences():
 
     return render_template('sentences.html',
                          roleplay_ids=set(ROLEPLAY_SCENARIOS),
+                         listening_ids=set(listening.QUESTIONS),
                          gender=gender,
                          patterns=SENTENCE_PATTERNS,
                          aspect_examples=aspect_examples,
@@ -7580,6 +7582,29 @@ def _listening_question(vocab_list, category):
             word['english'], learning_path.question_suffix(category, listening=True)),
         'options': _meaning_options(word, vocab_list),
     })
+
+
+@app.route('/api/listening/<conv_id>')
+def get_listening_questions(conv_id):
+    """The comprehension questions for one Sentences-page conversation.
+
+    Gated like the page they belong to, since the questions give away what the
+    dialogue says. Each answer is kept server-side behind a question id and
+    marked by /api/check_answer, so it pays drill XP under the same daily cap.
+    """
+    if not check_section_access('sentences')[0]:
+        return jsonify({'error': 'This conversation is locked.'}), 403
+    questions = listening.QUESTIONS.get(conv_id)
+    if conv_id not in CONVERSATIONS or not questions:
+        return jsonify({'error': f'No listening questions for {conv_id}.'}), 404
+
+    dealt = []
+    for q in questions:
+        options = q['wrong'] + [q['answer']]
+        random.shuffle(options)
+        dealt.append({'question': q['question'], 'options': options,
+                      'question_id': issue_question(q['answer'])})
+    return jsonify({'questions': dealt})
 
 
 TONE_OPTIONS = ['Mid', 'Low', 'Falling', 'High', 'Rising']
