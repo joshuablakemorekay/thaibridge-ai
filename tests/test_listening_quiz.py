@@ -12,7 +12,8 @@ import pytest
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
-from app import app, VOCABULARY, POINT_REWARDS, LISTENING_MIN_WORDS, listening_words  # noqa: E402
+from app import app, VOCABULARY, POINT_REWARDS  # noqa: E402
+from quizzes import LISTENING_MIN_WORDS, listening_words  # noqa: E402
 
 CATEGORY = "festivals"
 
@@ -76,9 +77,12 @@ def test_wrong_meaning_is_shown_the_right_one(client):
 
 def test_every_topic_with_enough_clips_offers_listening():
     """If this fails after adding a topic, record its audio before shipping it."""
-    for category, words in VOCABULARY.items():
-        assert len(listening_words(words)) >= LISTENING_MIN_WORDS, (
-            f"'{category}' has too few recorded words for the Listening Quiz")
+    # listening_words() finds the clips through Flask's current_app, which a
+    # request normally provides; outside one, the app context stands in.
+    with app.app_context():
+        for category, words in VOCABULARY.items():
+            assert len(listening_words(words)) >= LISTENING_MIN_WORDS, (
+                f"'{category}' has too few recorded words for the Listening Quiz")
 
 
 def test_unknown_topic_is_refused(client):

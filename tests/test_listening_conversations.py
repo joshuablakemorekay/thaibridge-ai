@@ -14,6 +14,7 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
 import app as app_module  # noqa: E402
+import quizzes  # noqa: E402  (the /api/listening route lives here)
 import listening  # noqa: E402
 
 
@@ -24,7 +25,10 @@ def client():
 
 @pytest.fixture
 def open_sentences(monkeypatch):
-    monkeypatch.setattr(app_module, "check_section_access", lambda section: (True, ""))
+    # Two places ask: the Sentences page (in app.py) and its questions route
+    # (in the quizzes Blueprint), so both are opened.
+    for module in (app_module, quizzes):
+        monkeypatch.setattr(module, "check_section_access", lambda section: (True, ""))
 
 
 def test_every_conversation_has_listening_questions():
@@ -42,7 +46,7 @@ def test_question_sets_are_well_formed():
 
 
 def test_listening_questions_are_locked_with_the_page(client, monkeypatch):
-    monkeypatch.setattr(app_module, "check_section_access", lambda section: (False, "Locked"))
+    monkeypatch.setattr(quizzes, "check_section_access", lambda section: (False, "Locked"))
     assert client.get("/api/listening/restaurant").status_code == 403
 
 

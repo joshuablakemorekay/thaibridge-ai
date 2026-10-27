@@ -43,6 +43,8 @@ from access import (SECTION_REQUIREMENTS, EARNED_UNLOCK_LEVEL, EARNED_UNLOCK_TIE
                     earned_unlock_spent_on, earned_unlock_status, earned_unlock_offer,
                     tier_still_owed, check_section_access)
 from rewards import POINT_REWARDS, DRILL_XP_DAILY_CAP, drill_xp_today, add_xp
+from beginner_mode import apply_beginner_mode, get_vocab_with_mode
+from questions import issue_question, redeem_question, meaning_options, pay_drill_answer
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -69,7 +71,6 @@ from flask_login import login_required, current_user
 import random
 import re
 import uuid
-import hmac
 from datetime import date, datetime, timedelta
 
 app = Flask(__name__)
@@ -340,6 +341,8 @@ login_manager.init_app(app)
 
 import auth  # noqa: E402  (needs db, limiter and login_manager set up first)
 app.register_blueprint(auth.bp)
+import quizzes  # noqa: E402  (the quiz and listening routes; needs the limiter set up first)
+app.register_blueprint(quizzes.bp)
 progress.init_app(app)
 signup_source.init_app(app)
 
@@ -1432,10 +1435,6 @@ app.jinja_env.filters['verse_paragraphs'] = chanting.verse_paragraphs
 
 
 
-
-
-
-
 # ============================================
 # THAI VOWELS & SYLLABLES - COMPLETE 32 VOWELS
 # ============================================
@@ -1799,42 +1798,6 @@ THAI_VOWELS_32 = {
 
 
 # ============================================
-# BEGINNER MODE HELPER FUNCTIONS
-# ============================================
-
-def apply_beginner_mode(text):
-    """
-    Apply beginner-friendly romanization:
-    - Final 'i' becomes 'y' (if only one 'i' in word)
-    - Final 'o' becomes 'w' (if only one 'o' in word)
-    """
-    words = text.split()
-    converted_words = []
-    
-    for word in words:
-        if word.count('i') == 1 and word.endswith('i'):
-            word = word[:-1] + 'y'
-        if word.count('o') == 1 and word.endswith('o'):
-            word = word[:-1] + 'w'
-        converted_words.append(word)
-    
-    return ' '.join(converted_words)
-
-
-def get_vocab_with_mode(vocab_list, beginner_mode=False):
-    """Return vocabulary with optional beginner mode applied"""
-    if not beginner_mode:
-        return vocab_list
-    
-    converted = []
-    for item in vocab_list:
-        new_item = item.copy()
-        new_item['paiboon'] = apply_beginner_mode(item['paiboon'])
-        converted.append(new_item)
-    return converted
-
-
-# ============================================
 # VOCABULARY DATA - EXPANDED (20 words per category except Tour/Business_Vocab = 25 words each)
 # ============================================
 
@@ -1917,7 +1880,6 @@ BUSINESS_VOCAB = {
         {'english': 'Employee / Staff', 'thai': 'พนักงาน', 'paiboon': 'pá-nák-ŋaan', 'note': 'General staff member'},
     ],
 }
-
 
 
 
@@ -4711,88 +4673,6 @@ def culture():
                            audio_map=audio_map)
 
 
-# A quiz topic whose lock is named differently from the topic itself. Before
-# this map, /exercise/buddhist_formal checked a section called
-# 'exercise_buddhist_formal', which has no requirements — so a paid quiz was
-# open to everyone, and nothing looked wrong. The key stays 'exercise_formal'
-# because it may already be saved as a learner's earned-unlock choice.
-EXERCISE_SECTION_NAMES = {'buddhist_formal': 'exercise_formal'}
-
-# Quiz topics left open to everyone on purpose, each with the reason.
-# tests/test_exercise_locks.py fails if any other topic has no lock.
-# (Theravada Dhamma vocabulary was considered and locked, 2026-10-27: it is
-# language tooling built on the teaching, which the policy says is paid; the
-# Dhamma itself stays free on /theravada.)
-OPEN_EXERCISE_TOPICS = {}
-
-
-def can_use_pronunciation():
-    """Whether to offer 🎤 Say it. A Thai Master (Pro) feature, and while it is
-    hidden (see PRONUNCIATION_LIVE) only for the named testers. Developer mode
-    always sees it. It runs entirely in the browser, so this only decides
-    whether the button is offered."""
-    if session.get('user_progress', {}).get('is_developer', False):
-        return True
-    if active_tier() != 'pro':
-        return False
-    if PRONUNCIATION_LIVE:
-        return True
-    return (current_user.is_authenticated
-            and current_user.username.lower() in pronunciation_testers())
-
-
-def exercise_section(category):
-    """The SECTION_REQUIREMENTS key that locks /exercise/<category>."""
-    return EXERCISE_SECTION_NAMES.get(category, f'exercise_{category}')
-
-
-@app.route('/exercise/<category>')
-def exercise(category):
-    # Check category-specific access
-    section = exercise_section(category)
-    has_access, message = check_section_access(section)
-    if not has_access:
-        return render_template('locked.html',
-                             section=section,
-                             message=message,
-                             requirements=SECTION_REQUIREMENTS.get(section, {}),
-                             earned_unlock_offered=earned_unlock_offer(section),
-                             earned_unlock_level=EARNED_UNLOCK_LEVEL,
-                             user_progress=session['user_progress'])
-    
-    beginner_mode = request.args.get('beginner', 'false').lower() == 'true'
-    
-    if category not in VOCABULARY:
-        return f"Category '{category}' not found. <a href='/learn'>Back to Learn</a>", 404
-    
-    vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
-    story = CULTURAL_STORIES.get(category)
-    
-    session['current_vocab'] = vocab_list
-    session['current_category'] = category
-    session['beginner_mode'] = beginner_mode
-
-    # thai -> MP3 URL for every word in this category (only ones with a clip).
-    # Covers both the vocab table and the JS quiz, which draw the same words.
-    # Keyed on the raw VOCABULARY word, whose 'thai' is unchanged by beginner
-    # mode (that only rewrites the romanisation), so the keys stay stable.
-    audio_map = {
-        w['thai']: url_for('static', filename=thai_audio.audio_static_path(w['thai']))
-        for w in VOCABULARY[category]
-        if thai_audio.audio_exists(app.static_folder, w['thai'])
-    }
-
-    return render_template('exercise.html', category=category, vocab=vocab_list,
-                         story=story, beginner_mode=beginner_mode,
-                         audio_map=audio_map,
-                         listening_ready=len(audio_map) >= LISTENING_MIN_WORDS,
-                         can_pronounce=can_use_pronunciation(),
-                         pronunciation_live=PRONUNCIATION_LIVE,
-                         pron_words=[{'thai': w['thai'], 'paiboon': w['paiboon'],
-                                      'english': w['english'], 'audio': audio_map[w['thai']]}
-                                     for w in vocab_list if w['thai'] in audio_map])
-
-
 
 def grammar_thai_strings():
     """Every pronounceable Thai string in GRAMMAR, de-duplicated in order.
@@ -5565,329 +5445,6 @@ def instructions():
 # API ROUTES
 # ============================================
 
-# ── Server-issued drill questions ────────────────────────────────────────────
-#
-# A drill used to send the correct answer to the browser and then trust the
-# browser to send it back: /api/check_answer received BOTH halves and compared
-# them to each other. That is not a check, and it paid XP — which mattered more
-# once levelling started earning a free paid section.
-#
-# So the server issues each question with an id and remembers what the answer
-# was. It remembers it as an HMAC, not as text, because Flask's session cookie
-# is SIGNED BUT NOT ENCRYPTED — it is base64, and anyone can read their own.
-# Storing the answer there would just move the leak from the response body into
-# the cookie. An HMAC needs the secret key to produce, so a browser can neither
-# read the answer out of it nor forge one for an answer of its choosing.
-#
-# Redeeming consumes the id, so one question can be scored exactly once. A
-# scripted loop can still send guesses; it just cannot send the same correct
-# guess twice, and cannot know which guess is correct before sending it.
-_PENDING_ANSWER_LIMIT = 30   # plenty for a drill session, and keeps the cookie small
-
-
-def _answer_token(question_id, answer):
-    """A value that proves what the answer was without revealing it."""
-    return hmac.new(
-        app.secret_key.encode() if isinstance(app.secret_key, str) else app.secret_key,
-        f"{question_id}:{answer}".encode(),
-        hashlib.sha256,
-    ).hexdigest()
-
-
-def issue_question(answer, suffix=''):
-    """Register the answer to a question about to be sent out; return its id.
-
-    `suffix` tags the id with the quiz topic (learning_path.question_suffix), so
-    a marked answer can be counted against that topic for the Learning Path.
-    """
-    question_id = uuid.uuid4().hex + suffix
-    pending = dict(session.get('pending_answers') or {})
-    pending[question_id] = _answer_token(question_id, answer)
-    # Oldest first out. Dicts keep insertion order, so this drops the questions
-    # a learner has long since scrolled past rather than the one in front of them.
-    while len(pending) > _PENDING_ANSWER_LIMIT:
-        pending.pop(next(iter(pending)))
-    session['pending_answers'] = pending
-    session.modified = True
-    return question_id
-
-
-def redeem_question(question_id, answer, options=None):
-    """Mark an answer against the question the server actually issued.
-
-    Returns (scored, is_correct, correct_answer). `scored` is False when there
-    is no matching outstanding question — an expired one, a replayed one, or a
-    drill the server never issued. Those still get marked by the caller, but
-    they must never pay XP: the server has no idea whether they are true.
-
-    `correct_answer` is recovered by testing the options against the stored
-    token, so the right answer can be shown after a guess without it ever having
-    been stored in readable form.
-    """
-    pending = dict(session.get('pending_answers') or {})
-    token = pending.pop(question_id, None)
-    if token is None:
-        return False, False, None
-
-    session['pending_answers'] = pending
-    session.modified = True
-
-    is_correct = hmac.compare_digest(token, _answer_token(question_id, answer))
-
-    correct_answer = answer if is_correct else None
-    if not is_correct:
-        for option in (options or []):
-            if hmac.compare_digest(token, _answer_token(question_id, option)):
-                correct_answer = option
-                break
-    return True, is_correct, correct_answer
-
-
-@app.route('/api/quiz/<category>')
-def get_quiz(category):
-    beginner_mode = request.args.get('beginner', 'false').lower() == 'true'
-    
-    if category not in VOCABULARY:
-        return jsonify({'error': f'Invalid category: {category}'}), 400
-    
-    vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
-
-    if request.args.get('listen', 'false').lower() == 'true':
-        return _listening_question(vocab_list, category)
-
-    word = random.choice(vocab_list)
-
-    wrong = [v['paiboon'] for v in vocab_list if v['paiboon'] != word['paiboon']]
-    wrong = random.sample(wrong, min(3, len(wrong)))
-    options = wrong + [word['paiboon']]
-    random.shuffle(options)
-    
-    return jsonify({
-        'thai': word['thai'],
-        'english': word['english'],
-        # No 'correct_answer' — that is the whole point. The browser gets an id
-        # and the server keeps what it means.
-        'question_id': issue_question(word['paiboon'],
-                                      learning_path.question_suffix(category)),
-        'options': options,
-        'beginner_mode': beginner_mode
-    })
-
-
-# A listening question needs this many words with a recording behind it, or the
-# "pick the meaning" choice is too small to be a test. The exercise page reads
-# the same number to decide whether to offer the Listen button at all.
-LISTENING_MIN_WORDS = 4
-
-
-def listening_words(vocab_list):
-    """The words in a category that have a recorded clip, so can be heard."""
-    return [w for w in vocab_list
-            if thai_audio.audio_exists(app.static_folder, w['thai'])]
-
-
-def _meaning_options(word, vocab_list):
-    """The right English meaning plus up to three others, shuffled.
-
-    Deduplicated on the English, because two words can share a meaning and a
-    duplicate button would be "wrong" while saying the same thing.
-    """
-    wrong = list(dict.fromkeys(
-        v['english'] for v in vocab_list if v['english'] != word['english']))
-    options = random.sample(wrong, min(3, len(wrong))) + [word['english']]
-    random.shuffle(options)
-    return options
-
-
-def _listening_question(vocab_list, category):
-    """Hear a word, pick its English meaning.
-
-    The Thai is not shown on the page until the learner has answered — that is
-    the whole exercise — but it still travels in the JSON so the result card can
-    show it afterwards. The marking stays server-side, same as the reading quiz.
-    """
-    heard = listening_words(vocab_list)
-    if len(heard) < LISTENING_MIN_WORDS:
-        return jsonify({'error': 'Not enough recorded words here to listen to yet.'}), 404
-
-    word = random.choice(heard)
-    return jsonify({
-        'thai': word['thai'],
-        'paiboon': word['paiboon'],
-        'audio': url_for('static', filename=thai_audio.audio_static_path(word['thai'])),
-        'question_id': issue_question(
-            word['english'], learning_path.question_suffix(category, listening=True)),
-        'options': _meaning_options(word, vocab_list),
-    })
-
-
-@app.route('/api/listening/<conv_id>')
-def get_listening_questions(conv_id):
-    """The comprehension questions for one Sentences-page conversation.
-
-    Gated like the page they belong to, since the questions give away what the
-    dialogue says. Each answer is kept server-side behind a question id and
-    marked by /api/check_answer, so it pays drill XP under the same daily cap.
-    """
-    if not check_section_access('sentences')[0]:
-        return jsonify({'error': 'This conversation is locked.'}), 403
-    questions = listening.QUESTIONS.get(conv_id)
-    if conv_id not in CONVERSATIONS or not questions:
-        return jsonify({'error': f'No listening questions for {conv_id}.'}), 404
-
-    dealt = []
-    for q in questions:
-        options = q['wrong'] + [q['answer']]
-        random.shuffle(options)
-        dealt.append({'question': q['question'], 'options': options,
-                      'question_id': issue_question(q['answer'])})
-    return jsonify({'questions': dealt})
-
-
-TONE_OPTIONS = ['Mid', 'Low', 'Falling', 'High', 'Rising']
-
-
-@app.route('/api/drill/<kind>')
-def get_drill_question(kind):
-    """Issue one tones/consonant-classes drill question.
-
-    These four drills used to be dealt entirely in the browser: the pool was
-    rendered into the page and the widget marked itself, then told
-    /api/check_answer what the answer had been. Same flaw as the vocabulary
-    quiz, so the same fix — the server picks the question and keeps the answer.
-    """
-    drills = TONES_AND_CLASSES['drills']
-
-    if kind == 'classid':
-        pool = [
-            {'thai': consonant['thai'], 'sub': consonant['name'], 'answer': group['label']}
-            for group in TONES_AND_CLASSES['classes']
-            for consonant in group['consonants']
-            if not consonant.get('obsolete')
-        ]
-        options = ['MID', 'HIGH', 'LOW']
-    elif kind == 'tone_calc':
-        level = request.args.get('level', type=int) or 0
-        source = drills['tone_calc']
-        # level 0 is the mixed set; anything else filters to that stage.
-        if level:
-            source = [q for q in source if q['level'] == level]
-        pool = [{'thai': q['thai'], 'sub': f"{q['class']} class", 'answer': q['tone']}
-                for q in source]
-        options = TONE_OPTIONS
-    elif kind in ('contrast', 'leading_h'):
-        pool = [{'thai': q['thai'], 'sub': q['english'], 'answer': q['tone']}
-                for q in drills[kind]]
-        options = TONE_OPTIONS
-    else:
-        return jsonify({'error': f'Unknown drill: {kind}'}), 404
-
-    if not pool:
-        return jsonify({'error': 'No questions here yet.'}), 404
-
-    question = random.choice(pool)
-    return jsonify({
-        'question_id': issue_question(question['answer']),
-        'thai': question['thai'],
-        'sub': question['sub'],
-        'options': options,
-    })
-
-
-@app.route('/api/check_answer', methods=['POST'])
-@limiter.limit("120 per hour; 600 per day", key_func=rate_limit_key)
-def check_answer():
-    """Score one drill answer and pay the XP for it.
-
-    This endpoint cannot verify anything. The drills are built in the browser,
-    so the page already holds the answer and the request carries BOTH halves of
-    the comparison — a script can send a matching pair as easily as a learner
-    can answer correctly. That is not fixable without rebuilding the drills
-    server-side, so the reward is bounded instead: DRILL_XP_DAILY_CAP a day,
-    plus the rate limit above. Marking still works past the cap; only the XP
-    stops, because a learner who wants to keep drilling should be able to.
-    """
-    data = request.get_json()
-    if not data:
-        return jsonify({'error': 'No data'}), 400
-
-    # A question the server issued can be marked properly. Anything else is
-    # marked on the browser's say-so and must not pay: client-built drills, a
-    # question already scored, or one that aged out of the pending list.
-    question_id = data.get('question_id')
-    scored, is_correct, correct_answer = redeem_question(
-        question_id, data.get('answer'), data.get('options')
-    ) if question_id else (False, False, None)
-
-    if not scored:
-        is_correct = data.get('answer') == data.get('correct')
-        correct_answer = data.get('correct')
-
-    payment = pay_drill_answer(is_correct, scored)
-
-    # Only a server-issued question counts toward a topic's score: the Learning
-    # Path sets its targets from these, so they must be as honest as the XP.
-    topic, by_ear = learning_path.topic_from_question(question_id)
-    if scored and topic:
-        learning_path.record_answer(session['user_progress'], topic, is_correct, by_ear)
-        session.modified = True
-
-    return jsonify({
-        'correct': is_correct,
-        'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
-        'correct_answer': correct_answer,
-        **payment,
-    })
-
-
-def pay_drill_answer(is_correct, scored):
-    """Count one marked drill answer and pay its XP, under the daily cap.
-
-    Shared by every drill that marks answers, so the cap and the counters
-    can't drift apart between them. `scored` must be False for anything the
-    server didn't issue itself: those are counted but never paid.
-    """
-    # Gamification: Award points for correct answers
-    init_user_progress()
-    user = session['user_progress']
-    xp_earned = 0
-    new_level = user['level']
-    level_up = False
-    capped = False
-    
-    if is_correct and scored:
-        remaining = max(0, DRILL_XP_DAILY_CAP - drill_xp_today())
-        if remaining > 0:
-            result = add_xp(min(POINT_REWARDS['quiz_correct'], remaining),
-                            'Correct answer')
-            xp_earned = result.get('points_earned', 0)
-            new_level = result.get('level')
-            level_up = result.get('level_up', False)
-            # Count what was actually paid, multiplier included, so a Pro
-            # subscriber's 3x does not quietly buy three times the ceiling.
-            user['drill_xp_today'] = user.get('drill_xp_today', 0) + xp_earned
-        else:
-            capped = True
-
-    if is_correct:
-        user['correct_answers'] = user.get('correct_answers', 0) + 1
-        user['words_learned'] = user.get('words_learned', 0) + 1
-    
-    user['total_answers'] = user.get('total_answers', 0) + 1
-    user['quizzes_completed'] = user.get('quizzes_completed', 0) + 1
-    session.modified = True
-
-    return {
-        'xp_earned': xp_earned,
-        'daily_cap_reached': capped,
-        # False when the server did not issue this question, so the marking is
-        # the browser's word and no XP was paid for it.
-        'scored': scored,
-        'new_level': new_level,
-        # True when this answer crossed a level, so the page can celebrate it.
-        'level_up': level_up,
-        'total_xp': user['xp']
-    }
 
 
 def _sentence_builder_gate():
@@ -6094,7 +5651,7 @@ def _outline_sections():
 def _can_open_topic(topic):
     # The same check the /exercise/<topic> route makes, so the plan never sets a
     # target on a quiz the learner would find locked.
-    return check_section_access(exercise_section(topic))[0]
+    return check_section_access(quizzes.exercise_section(topic))[0]
 
 
 def _start_path_week(plan, user):
@@ -6155,7 +5712,7 @@ def path_placement():
                           if thai_audio.audio_exists(app.static_folder, word['thai']) else None),
                 'question_id': issue_question(word['english'],
                                               learning_path.question_suffix(topic)),
-                'options': _meaning_options(word, words),
+                'options': meaning_options(word, words),
             })
         return jsonify({'questions': questions})
 
