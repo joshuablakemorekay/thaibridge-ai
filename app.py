@@ -27,6 +27,7 @@ import tour_trips  # the playable trips on the Tour Guide page
 import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
+import learning_path  # the Personalized Learning Path (IEP) on the Progress page
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -54,7 +55,7 @@ import random
 import re
 import uuid
 import hmac
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 app = Flask(__name__)
 
@@ -7454,9 +7455,13 @@ def _answer_token(question_id, answer):
     ).hexdigest()
 
 
-def issue_question(answer):
-    """Register the answer to a question about to be sent out; return its id."""
-    question_id = uuid.uuid4().hex
+def issue_question(answer, suffix=''):
+    """Register the answer to a question about to be sent out; return its id.
+
+    `suffix` tags the id with the quiz topic (learning_path.question_suffix), so
+    a marked answer can be counted against that topic for the Learning Path.
+    """
+    question_id = uuid.uuid4().hex + suffix
     pending = dict(session.get('pending_answers') or {})
     pending[question_id] = _answer_token(question_id, answer)
     # Oldest first out. Dicts keep insertion order, so this drops the questions
@@ -7509,7 +7514,7 @@ def get_quiz(category):
     vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
 
     if request.args.get('listen', 'false').lower() == 'true':
-        return _listening_question(vocab_list)
+        return _listening_question(vocab_list, category)
 
     word = random.choice(vocab_list)
 
@@ -7523,7 +7528,8 @@ def get_quiz(category):
         'english': word['english'],
         # No 'correct_answer' — that is the whole point. The browser gets an id
         # and the server keeps what it means.
-        'question_id': issue_question(word['paiboon']),
+        'question_id': issue_question(word['paiboon'],
+                                      learning_path.question_suffix(category)),
         'options': options,
         'beginner_mode': beginner_mode
     })
@@ -7554,7 +7560,7 @@ def _meaning_options(word, vocab_list):
     return options
 
 
-def _listening_question(vocab_list):
+def _listening_question(vocab_list, category):
     """Hear a word, pick its English meaning.
 
     The Thai is not shown on the page until the learner has answered — that is
@@ -7570,7 +7576,8 @@ def _listening_question(vocab_list):
         'thai': word['thai'],
         'paiboon': word['paiboon'],
         'audio': url_for('static', filename=thai_audio.audio_static_path(word['thai'])),
-        'question_id': issue_question(word['english']),
+        'question_id': issue_question(
+            word['english'], learning_path.question_suffix(category, listening=True)),
         'options': _meaning_options(word, vocab_list),
     })
 
@@ -7654,11 +7661,20 @@ def check_answer():
         is_correct = data.get('answer') == data.get('correct')
         correct_answer = data.get('correct')
 
+    payment = pay_drill_answer(is_correct, scored)
+
+    # Only a server-issued question counts toward a topic's score: the Learning
+    # Path sets its targets from these, so they must be as honest as the XP.
+    topic, by_ear = learning_path.topic_from_question(question_id)
+    if scored and topic:
+        learning_path.record_answer(session['user_progress'], topic, is_correct, by_ear)
+        session.modified = True
+
     return jsonify({
         'correct': is_correct,
         'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
         'correct_answer': correct_answer,
-        **pay_drill_answer(is_correct, scored),
+        **payment,
     })
 
 
@@ -7858,38 +7874,13 @@ def progress_dashboard():
     
     new_achievements = check_achievements(user)
     
-    available_sections = []
-    locked_sections = []
+    # The Learning Path replaces the old Available / Locked lists: it shows the
+    # same sections, but ranked for this learner and marked done/next/locked.
+    plan = user.get('learning_path')
+    path = learning_path.build_path(plan, user, _outline_sections(), check_section_access)
+    targets = ([learning_path.target_status(t, user) for t in plan.get('targets', [])]
+               if plan and plan.get('status') == 'active' else [])
 
-    for section_id, requirements in SECTION_REQUIREMENTS.items():
-        has_access, message = check_section_access(section_id)
-
-        tier = requirements['tier']
-        level = requirements['level']
-        if tier != 'free':
-            tier_info = SUBSCRIPTION_TIERS[tier]
-            requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (£{tier_info['price']:.2f}/mo)"
-        elif level > 1:
-            requirement_message = f"Requires Level {level} to unlock"
-        else:
-            requirement_message = "Complete Thai Alphabet first"
-
-        section_info = {
-            'id': section_id,
-            'name': section_id.replace('_', ' ').title(),
-            'level_required': requirements['level'],
-            'tier_required': requirements['tier'],
-            'points_reward': requirements['points_reward'],
-            'unlocked': section_id in user['sections_unlocked'],
-            'has_access': has_access,
-            'message': requirement_message
-        }
-        
-        if has_access or section_id in user['sections_unlocked']:
-            available_sections.append(section_info)
-        else:
-            locked_sections.append(section_info)
-    
     # Receipts come from the payments table, so only an account can have any —
     # a cookie-only visitor has never been through Checkout with a user_id.
     receipts = []
@@ -7907,13 +7898,145 @@ def progress_dashboard():
                          receipts=receipts,
                          next_level_xp=next_level_xp,
                          progress_to_next=progress_to_next,
-                         available_sections=available_sections,
-                         locked_sections=locked_sections,
+                         plan=plan,
+                         path=path,
+                         targets=targets,
+                         review_due=learning_path.review_due(plan, user, date.today()),
+                         review_opens=learning_path.review_opens(plan),
+                         path_goals=learning_path.GOALS,
+                         path_practice=learning_path.PRACTICE,
+                         path_minutes=learning_path.MINUTES,
+                         topic_titles=learning_path.TOPIC_TITLES,
                          subscription_tiers=SUBSCRIPTION_TIERS,
                          achievements=ACHIEVEMENTS,
                          earned_unlock=earned_unlock_status(),
                          earned_unlock_level=EARNED_UNLOCK_LEVEL,
                          new_achievements=new_achievements)
+
+
+# ============================================
+# PERSONALIZED LEARNING PATH (IEP) — the plan's actions
+#
+# The plan itself is shown on /progress; these only change it. All rules live
+# in learning_path.py — these routes fetch the learner's record, call the rule,
+# and save. Each one answers JSON and the page reloads to show the result.
+# ============================================
+
+def _outline_sections():
+    """Every curriculum section in outline order, flattened across the tiers."""
+    return [s for group in curriculum.build_outline(sys.modules[__name__])
+            for s in group['sections']]
+
+
+def _can_open_topic(topic):
+    # The same check the /exercise/<topic> route makes, so the plan never sets a
+    # target on a quiz the learner would find locked.
+    return check_section_access(exercise_section(topic))[0]
+
+
+def _start_path_week(plan, user):
+    path = learning_path.build_path(plan, user, _outline_sections(), check_section_access)
+    learning_path.start_week(plan, user, path, _can_open_topic, date.today())
+
+
+@app.route('/api/path/start', methods=['POST'])
+def path_start():
+    """Save the learner's goals. The plan then waits for its starting check."""
+    init_user_progress()
+    user = session['user_progress']
+    data = request.get_json(silent=True) or {}
+    try:
+        minutes = int(data.get('minutes'))
+    except (TypeError, ValueError):
+        minutes = None
+    old = user.get('learning_path') or {}
+    plan = learning_path.new_plan(data.get('goal'), data.get('practice'), minutes,
+                                  history=old.get('history'))
+    if plan is None:
+        return jsonify({'error': 'Please choose a goal, a way to practise and a time.'}), 400
+
+    user['learning_path'] = plan
+    session.modified = True
+    # One log line per plan started — the simple usage count, readable in the
+    # Render logs, with no tracking table and nothing personal in it.
+    app.logger.info('learning_path started goal=%s practice=%s minutes=%s',
+                    plan['goal'], plan['practice'], plan['minutes'])
+    return jsonify({'ok': True})
+
+
+@app.route('/api/path/placement', methods=['GET', 'POST'])
+def path_placement():
+    """The starting check: one meaning question per vocabulary topic.
+
+    GET deals the questions; POST marks them. Marked here, not through
+    /api/check_answer, so the check pays no XP — it is a measurement, not a
+    drill — but each answer is still counted against its topic, which is what
+    the first week's targets are drawn from. Thai, romanisation and a clip are
+    all sent, so someone who cannot read Thai yet can still take it.
+    """
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path')
+    if not plan or plan.get('status') != 'placement':
+        return jsonify({'error': 'Set your goals first.'}), 400
+
+    if request.method == 'GET':
+        questions = []
+        for topic, words in VOCABULARY.items():
+            word = random.choice(words)
+            questions.append({
+                'topic': learning_path.TOPIC_TITLES.get(topic, topic),
+                'thai': word['thai'],
+                'paiboon': word['paiboon'],
+                'audio': (url_for('static', filename=thai_audio.audio_static_path(word['thai']))
+                          if thai_audio.audio_exists(app.static_folder, word['thai']) else None),
+                'question_id': issue_question(word['english'],
+                                              learning_path.question_suffix(topic)),
+                'options': _meaning_options(word, words),
+            })
+        return jsonify({'questions': questions})
+
+    data = request.get_json(silent=True) or {}
+    right = 0
+    for item in (data.get('answers') or [])[:len(VOCABULARY)]:
+        question_id = item.get('question_id')
+        scored, is_correct, _ = redeem_question(question_id, item.get('answer'))
+        topic, _ = learning_path.topic_from_question(question_id)
+        if scored and topic:
+            learning_path.record_answer(user, topic, is_correct)
+            right += is_correct
+    # Skipping the check (no answers) is allowed: the plan just starts from the
+    # goal's own topic order instead of from scores.
+    _start_path_week(plan, user)
+    session.modified = True
+    return jsonify({'ok': True, 'right': right})
+
+
+@app.route('/api/path/review', methods=['POST'])
+def path_review():
+    """Close the week: record how many targets were met, then set new ones."""
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path')
+    if not learning_path.review_due(plan, user, date.today()):
+        return jsonify({'error': 'Your review opens after a week, or once every target is met.'}), 400
+    learning_path.close_week(plan, user, date.today())
+    _start_path_week(plan, user)
+    session.modified = True
+    return jsonify({'ok': True})
+
+
+@app.route('/api/path/reset', methods=['POST'])
+def path_reset():
+    """Change goals: drop the plan but keep its history of past weeks."""
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path') or {}
+    user['learning_path'] = ({'status': 'none', 'history': plan['history']}
+                             if plan.get('history') else None)
+    session.modified = True
+    return jsonify({'ok': True})
+
 
 @app.route('/developer-login', methods=['GET', 'POST'])
 # Tighter than the user login: this is a single-person door that grants a full
