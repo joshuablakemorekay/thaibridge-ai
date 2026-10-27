@@ -350,7 +350,7 @@
     /* ── Trace canvas ──────────────────────────────────────────
        A faded letter behind a canvas; drawing over it practises the shape,
        and is checked as you go (trace_check.js):
-         * each bit of line is purple on the letter and RED the moment it
+         * each bit of line is purple on the letter and ORANGE the moment it
            leaves it — the instant correction;
          * after each stroke, how much of the letter is covered, and which
            part still isn't;
@@ -362,7 +362,10 @@
 
     var GRID = 48;                     // the letter and the ink are compared on a 48×48 grid
     var INK = '#4A1A6B';               // royal purple: on the letter
-    var STRAY = '#C62828';             // red: off it
+    // Off the letter: a BRIGHT orange, not red. Red and dark purple are both
+    // dark, so to a colour-blind learner they can look the same; light against
+    // dark still reads when the hue doesn't.
+    var STRAY = '#F57C00';
 
     /* Draw `char` centred in a w×h box. Used for BOTH the visible guide and
        the hidden grid it is checked against, so the two can never disagree.
@@ -506,7 +509,7 @@
         canvas.addEventListener('pointermove', function (event) {
             if (!drawing) { return; }
             var p = pointFrom(event);
-            // Red only while tracing: with the guide hidden the learner is
+            // Orange only while tracing: with the guide hidden the learner is
             // writing from memory, and colouring the line would give it away.
             var stray = nearGrid && !guideHidden() && !nearGrid[cellOf(p)];
             ctx.strokeStyle = stray ? STRAY : INK;
