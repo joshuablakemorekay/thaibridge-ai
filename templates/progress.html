@@ -197,39 +197,264 @@
         </div>
     </div>
     
-    <!-- Available Sections -->
-    <div class="sections-overview">
-        <h2>📚 Available Sections</h2>
-        <div class="sections-list">
-            {% for section in available_sections %}
-            <div class="section-card available">
-                <h3>{{ section.name }}</h3>
-                <p>Level {{ section.level_required }} • {{ subscription_tiers[section.tier_required].name }}</p>
-                <span class="reward">+{{ section.points_reward }} XP</span>
-                {% if section.unlocked %}
-                <span class="badge unlocked">✓ Unlocked</span>
-                {% else %}
-                <span class="badge locked">🔓 Available</span>
-                {% endif %}
-            </div>
-            {% endfor %}
+    <!-- Personalized Learning Path (IEP) — rules in learning_path.py -->
+    <div class="path-section" id="path">
+        <h2>📊 Personalized Learning Path (IEP)</h2>
+        <p class="path-intro">An individualized plan built around your goals, your
+            progress and how you like to practise, like an IEP for language
+            learning: a starting check, a few measurable targets each week, and a
+            weekly review that sets the next ones.</p>
+
+        {% if not plan or plan.status == 'none' %}
+        <form id="path-start" class="path-box">
+            <fieldset>
+                <legend>What do you want Thai for?</legend>
+                {% for key, goal in path_goals.items() %}
+                <label class="path-choice"><input type="radio" name="goal" value="{{ key }}" required> {{ goal.label }}</label>
+                {% endfor %}
+            </fieldset>
+            <fieldset>
+                <legend>How do you like to practise?</legend>
+                {% for key, label in path_practice.items() %}
+                <label class="path-choice"><input type="radio" name="practice" value="{{ key }}" required> {{ label }}</label>
+                {% endfor %}
+            </fieldset>
+            <fieldset>
+                <legend>How long can you study most days?</legend>
+                {% for minutes in path_minutes %}
+                <label class="path-choice"><input type="radio" name="minutes" value="{{ minutes }}" required> {{ minutes }} minutes</label>
+                {% endfor %}
+            </fieldset>
+            <button type="submit" class="btn btn-saffron">Build my plan</button>
+            <p class="path-message" role="alert"></p>
+        </form>
+
+        {% elif plan.status == 'placement' %}
+        <div class="path-box" id="placement">
+            <h3>Step 1 of 2: your starting check</h3>
+            <p>Six quick questions, one from each vocabulary topic, so your first
+               targets start from what you already know. It doesn't affect your XP,
+               and it's fine to guess.</p>
+            <p>
+                <button type="button" class="btn btn-saffron" id="placement-go">Start the check</button>
+                <button type="button" class="btn btn-secondary" id="placement-skip">Skip it — start from my goal</button>
+            </p>
+            <div id="placement-quiz"></div>
+            <p class="path-message" role="alert"></p>
         </div>
-        
-        <h2 class="locked-header">🔒 Locked Sections</h2>
-        <div class="sections-list">
-            {% for section in locked_sections %}
-            <div class="section-card locked">
-                <h3>{{ section.name }}</h3>
-                <p>{{ section.message }}</p>
-                <span class="requirement">Requires: Level {{ section.level_required }}
-                    {% if section.tier_required != 'free' %}
-                        + {{ subscription_tiers[section.tier_required].name }}
-                    {% endif %}
-                </span>
-            </div>
-            {% endfor %}
+
+        {% else %}
+        <div class="path-box">
+            <p class="path-summary">
+                <strong>Goal:</strong> {{ path_goals[plan.goal].label }} ·
+                <strong>Practising by:</strong> {{ plan.practice|capitalize }} ·
+                <strong>{{ plan.minutes }} minutes</strong> a day
+            </p>
+            <h3>Week {{ plan.week }} targets</h3>
+            <ul class="path-targets">
+                {% for t in targets %}
+                <li class="{{ 'is-met' if t.met else '' }}">
+                    <span class="path-tick">{{ '✅' if t.met else '⬜' }}</span>
+                    {% if t.url %}<a href="{{ t.url }}">{{ t.label }}</a>{% else %}{{ t.label }}{% endif %}
+                    <span class="path-detail">{{ t.detail }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            {# How they like to practise points at the tools built for it. #}
+            {% if plan.practice == 'speaking' %}
+            <p class="path-tip">🗣️ You like to practise by speaking: say every answer
+               out loud{% if pronunciation_live %}, try 🎤 Say it on the vocabulary pages
+               to check your tones (Thai Master),{% endif %} and chat with the
+               <a href="/chat">AI Tutor</a>.</p>
+            {% elif plan.practice == 'listening' %}
+            <p class="path-tip">🎧 You like to practise by listening: your quiz target
+               uses the Listening Quiz, and the conversations on the Sentences page
+               have 🎧 Listen &amp; answer, with a slow speed when you need it.</p>
+            {% else %}
+            <p class="path-tip">📖 You like to practise by reading: your path brings
+               <a href="/read_write">Read &amp; Write</a> forward, where you can also
+               trace each letter and write it from memory.</p>
+            {% endif %}
+            {% if review_due %}
+            <p><button type="button" class="btn btn-saffron" id="path-review">📝 Review my week and set new targets</button></p>
+            {% else %}
+            <p class="path-note">Your weekly review opens on {{ review_opens }}, or
+               as soon as every target is met.</p>
+            {% endif %}
+
+            {% set stats = user.topic_stats or {} %}
+            {% if stats %}
+            <h3>Your topic scores</h3>
+            <ul class="path-scores">
+                {% for topic, row in stats.items() if topic in topic_titles %}
+                {% set right = row[0] + row[2] %}{% set total = row[1] + row[3] %}
+                <li>{{ topic_titles[topic] }}: {{ right }} of {{ total }} right
+                    ({{ (right * 100 / total)|round|int if total else 0 }}%)</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <p><button type="button" class="btn btn-secondary" id="path-reset">Change my goals</button></p>
+            <p class="path-message" role="alert"></p>
         </div>
+        {% endif %}
+
+        {% if plan and plan.history %}
+        <h3>Past weeks</h3>
+        <ul class="path-history">
+            {% for week in plan.history|reverse %}
+            <li>Week {{ week.week }} (ended {{ week.ended }}): {{ week.met }} of {{ week.of }} targets met</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h3>{{ 'Your path' if plan and plan.goal else 'Everything to learn' }}</h3>
+        {% if not (plan and plan.goal) %}
+        <p class="path-note">Set your goals above and this list is put in the best order for you.</p>
+        {% endif %}
+        <ol class="path-list">
+            {% for s in path %}
+            <li class="path-step is-{{ s.state }}">
+                <span class="path-icon">{{ {'done': '✅', 'next': '▶️', 'open': '○', 'locked': '🔒'}[s.state] }}</span>
+                {% if s.state == 'locked' %}{{ s.title }}{% else %}<a href="{{ s.url }}">{{ s.title }}</a>{% endif %}
+                {% if s.state == 'next' %}<span class="path-flag">Next up</span>{% endif %}
+                <span class="path-detail">Level {{ s.level }}{% if s.why_locked %} · {{ s.why_locked }}{% endif %}</span>
+            </li>
+            {% endfor %}
+        </ol>
     </div>
+
+    <script>
+    (function () {
+        'use strict';
+        var box = document.getElementById('path');
+        var message = box.querySelector('.path-message');
+
+        async function post(url, body) {
+            var response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body || {})
+            });
+            var result = await response.json();
+            if (!response.ok) { throw new Error(result.error || 'Something went wrong.'); }
+            return result;
+        }
+
+        function reloadAtPath() {
+            window.location.hash = 'path';
+            window.location.reload();
+        }
+
+        async function run(action) {
+            try { await action(); reloadAtPath(); }
+            catch (err) { if (message) { message.textContent = err.message; } }
+        }
+
+        var form = document.getElementById('path-start');
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var data = new FormData(form);
+                run(function () {
+                    return post('/api/path/start', {
+                        goal: data.get('goal'),
+                        practice: data.get('practice'),
+                        minutes: data.get('minutes')
+                    });
+                });
+            });
+        }
+
+        var review = document.getElementById('path-review');
+        if (review) {
+            review.addEventListener('click', function () { run(function () { return post('/api/path/review'); }); });
+        }
+
+        var reset = document.getElementById('path-reset');
+        if (reset) {
+            reset.addEventListener('click', function () { run(function () { return post('/api/path/reset'); }); });
+        }
+
+        // The starting check: all six questions are fetched at once and
+        // answered one at a time, then marked together in a single POST.
+        var go = document.getElementById('placement-go');
+        if (go) {
+            var skip = document.getElementById('placement-skip');
+            var quiz = document.getElementById('placement-quiz');
+            var questions = [], answers = [];
+
+            skip.addEventListener('click', function () {
+                run(function () { return post('/api/path/placement', { answers: [] }); });
+            });
+
+            go.addEventListener('click', async function () {
+                go.disabled = true;
+                try {
+                    var response = await fetch('/api/path/placement');
+                    var result = await response.json();
+                    if (!response.ok) { throw new Error(result.error); }
+                    questions = result.questions;
+                } catch (err) {
+                    message.textContent = err.message || 'Could not load the check. Please try again.';
+                    go.disabled = false;
+                    return;
+                }
+                show(0);
+            });
+
+            // Built from elements, not an HTML string: the options are English
+            // meanings and may contain apostrophes or other characters.
+            function show(i) {
+                if (i >= questions.length) {
+                    quiz.textContent = 'Marking…';
+                    run(function () { return post('/api/path/placement', { answers: answers }); });
+                    return;
+                }
+                var q = questions[i];
+                quiz.innerHTML = '';
+
+                var count = document.createElement('p');
+                count.className = 'path-note';
+                count.textContent = 'Question ' + (i + 1) + ' of ' + questions.length + ' · ' + q.topic;
+                quiz.appendChild(count);
+
+                var word = document.createElement('p');
+                word.className = 'thai-text path-word';
+                word.textContent = q.thai + ' ';
+                if (q.audio) {
+                    var play = document.createElement('button');
+                    play.type = 'button';
+                    play.className = 'th-audio';
+                    play.setAttribute('data-audio', q.audio);
+                    play.setAttribute('aria-label', 'Listen');
+                    play.textContent = '🔊';
+                    word.appendChild(play);
+                }
+                quiz.appendChild(word);
+
+                var spelling = document.createElement('p');
+                spelling.className = 'paiboon';
+                spelling.textContent = q.paiboon;
+                quiz.appendChild(spelling);
+
+                var grid = document.createElement('div');
+                grid.className = 'path-options';
+                q.options.concat(["I don't know"]).forEach(function (option) {
+                    var b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'btn';
+                    b.textContent = option;
+                    b.addEventListener('click', function () {
+                        answers.push({ question_id: q.question_id, answer: option });
+                        show(i + 1);
+                    });
+                    grid.appendChild(b);
+                });
+                quiz.appendChild(grid);
+            }
+        }
+    }());
+    </script>
     
     <!-- Subscription Options -->
     <div id="subscriptions" class="subscriptions-section">
@@ -432,46 +657,124 @@
         margin-bottom: 0.5rem;
     }
     
-    .sections-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1.5rem;
+    /* ---- Personalized Learning Path (IEP) ---- */
+    .path-section {
         margin: 2rem 0;
     }
-    
-    .section-card {
+
+    .path-intro,
+    .path-note {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .path-box {
         background: white;
         border-radius: 12px;
         padding: 1.5rem;
         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        position: relative;
+        margin: 1.25rem 0;
     }
-    
-    .section-card.locked {
-        opacity: 0.6;
-        background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+
+    .path-box fieldset {
+        border: none;
+        padding: 0;
+        margin: 0 0 1.25rem;
     }
-    
-    .badge {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        padding: 0.3rem 0.8rem;
-        border-radius: 20px;
-        font-size: 0.85rem;
+
+    .path-box legend {
         font-weight: bold;
+        color: var(--royal-purple);
+        margin-bottom: 0.4rem;
     }
-    
-    .badge.unlocked {
-        background: var(--royal-gold);
-        color: var(--dark-text);
+
+    .path-choice {
+        display: block;
+        padding: 0.35rem 0;
+        cursor: pointer;
     }
-    
-    .badge.locked {
-        background: #ccc;
+
+    .path-targets,
+    .path-scores,
+    .path-history {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .path-targets li {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .path-tick,
+    .path-icon {
+        display: inline-block;
+        width: 1.8rem;
+    }
+
+    .path-detail {
+        display: block;
+        margin-left: 1.8rem;
         color: #666;
+        font-size: 0.9rem;
     }
-    
+
+    .path-tip {
+        background: #f3f8ec;
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+    }
+
+    .path-message {
+        color: var(--temple-red);
+    }
+
+    .path-word {
+        font-size: 2.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .path-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .path-list {
+        list-style: none;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 0.6rem;
+    }
+
+    .path-step {
+        background: white;
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .path-step.is-next {
+        border: 2px solid var(--royal-gold);
+    }
+
+    .path-step.is-locked {
+        opacity: 0.65;
+        background: #f3f3f3;
+    }
+
+    .path-flag {
+        background: var(--royal-gold);
+        color: var(--deep-purple);
+        border-radius: 10px;
+        padding: 0.1rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+        margin-left: 0.4rem;
+    }
+
     .subscription-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

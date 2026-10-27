@@ -15,7 +15,8 @@
 </p>
 
 <!-- ============================================================
-     FEATURE SHOWCASE — what you get (live now) + what's coming
+     FEATURE SHOWCASE — what you get (live features only, no "coming soon"
+     promises on the page people decide to pay from)
      ============================================================ -->
 <h2 style="text-align:center; color:var(--royal-purple); margin-bottom:0.4rem;">
     🎯 What you unlock
@@ -76,33 +77,42 @@
            everyone — the Dhamma is not ours to sell.</p>
     </div>
 
-    <!-- ---- Coming soon (display only — greyed out & non-clickable) ---- -->
-    <div class="feature-card is-soon-card">
-        <span class="feat-badge is-soon">Coming soon</span>
+    <div class="feature-card">
+        <span class="feat-badge is-taste">FREE for everyone</span>
         <h4>📊 Personalized Learning Path (IEP)</h4>
-        <p>An individualized curriculum built around your goals, progress and
-           learning style — like an IEP for language learning.</p>
+        <p>An individualized curriculum built around your goals, your progress
+           and how you like to practise (listening, reading or speaking), like an
+           IEP for language learning: a starting check, measurable weekly targets
+           and a weekly review. Find it on your
+           <a href="/progress#path">Progress</a> page.</p>
     </div>
 
-    <div class="feature-card is-soon-card">
-        <span class="feat-badge is-soon">Coming soon</span>
+    {# Hidden until a native speaker has tested it — see PRONUNCIATION_LIVE in app.py. #}
+    {% if pronunciation_live %}
+    <div class="feature-card">
+        <span class="feat-badge is-pro">Pro</span>
         <h4>🎤 Pronunciation Analysis</h4>
-        <p>AI-powered tone and pronunciation feedback to help you perfect your
-           spoken Thai.</p>
+        <p>Say a word and see your tone as a pitch line next to the model's,
+           with a match score and a tip on what to change. Speech recognition
+           checks you said the right word.</p>
     </div>
+    {% endif %}
 
-    <div class="feature-card is-soon-card">
-        <span class="feat-badge is-soon">Coming soon</span>
+    <div class="feature-card">
+        <span class="feat-badge is-live">Thai Reader</span>
         <h4>🎧 Listening Exercises</h4>
-        <p>Native-speaker audio with comprehension quizzes and adjustable
-           playback speed.</p>
+        <p>Listen to real-life conversations with the words hidden, then answer
+           questions about what was said, at slow, normal or fast speed. Plus a
+           word-by-ear quiz on every vocabulary topic, in a natural Thai voice.</p>
     </div>
 
-    <div class="feature-card is-soon-card">
-        <span class="feat-badge is-soon">Coming soon</span>
+    <div class="feature-card">
+        <span class="feat-badge is-live">Thai Reader</span>
         <h4>✍️ Writing Practice</h4>
-        <p>Learn Thai script with guided practice and instant correction as you
-           write.</p>
+        <p>Learn Thai script by tracing each consonant over a guide, with instant
+           correction: your line turns red the moment it strays, and you're told
+           which part is still missing. Then hide the guide, write it from memory
+           and check the shape. On the <a href="/read_write">Read &amp; Write</a> page.</p>
     </div>
 </div>
 
@@ -357,19 +367,6 @@
         box-shadow: 0 9px 26px rgba(0,0,0,0.11);
     }
 
-    /* Coming-soon cards: display only — greyed out, no hover lift, not clickable */
-    .feature-card.is-soon-card {
-        opacity: 0.55;
-        filter: grayscale(35%);
-        pointer-events: none;
-        box-shadow: none;
-    }
-
-    .feature-card.is-soon-card:hover {
-        transform: none;
-        box-shadow: none;
-    }
-
     .feature-card h4 {
         margin: 0.6rem 0 0.4rem;
         color: var(--royal-purple);
@@ -397,11 +394,6 @@
     .feat-badge.is-live {
         background: var(--bodhi-green, #6b8e23);
         color: #fff;
-    }
-
-    .feat-badge.is-soon {
-        background: #efe6cc;
-        color: #8a6d1b;
     }
 
     .feat-badge.is-pro {

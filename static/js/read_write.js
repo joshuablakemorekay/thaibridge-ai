@@ -348,9 +348,36 @@
     }
 
     /* ── Trace canvas ──────────────────────────────────────────
-       A faded letter behind a canvas; drawing over it practises the shape. No
-       stroke-order data is claimed here — the guide is the whole glyph and the
-       principles above the canvas teach where to start. */
+       A faded letter behind a canvas; drawing over it practises the shape,
+       and is checked as you go (trace_check.js):
+         * each bit of line is purple on the letter and RED the moment it
+           leaves it — the instant correction;
+         * after each stroke, how much of the letter is covered, and which
+           part still isn't;
+         * with the guide hidden, "Check" compares the SHAPE written from
+           memory, wherever and however big it was written.
+       No stroke-order data is claimed here — the app has none, so the check
+       is about shape and coverage only, and the principles above the canvas
+       teach where to start. */
+
+    var GRID = 48;                     // the letter and the ink are compared on a 48×48 grid
+    var INK = '#4A1A6B';               // royal purple: on the letter
+    var STRAY = '#C62828';             // red: off it
+
+    /* Draw `char` centred in a w×h box. Used for BOTH the visible guide and
+       the hidden grid it is checked against, so the two can never disagree.
+       Centred on the ink itself (measureText's bounding box), not the font's
+       line box, because Thai letters sit at very different heights in it. */
+    function drawGlyph(g, char, w, h, family) {
+        var size = Math.min(w, h) * 0.7;
+        g.font = size + 'px ' + family;
+        g.textAlign = 'left';
+        g.textBaseline = 'alphabetic';
+        var m = g.measureText(char);
+        var left = m.actualBoundingBoxLeft || 0, right = m.actualBoundingBoxRight || m.width;
+        var up = m.actualBoundingBoxAscent || size * 0.7, down = m.actualBoundingBoxDescent || 0;
+        g.fillText(char, w / 2 - (right - left) / 2, h / 2 + (up - down) / 2);
+    }
 
     function setupTrace() {
         var consonants = (readJSON('rw-consonants') || []).filter(function (c) {
@@ -361,43 +388,79 @@
         if (!canvas || !guide || !consonants.length) { return; }
 
         var ctx = canvas.getContext('2d');
+        var guideCtx = guide.getContext('2d');
+        var checking = !!window.TraceCheck;     // drawing still works without it
         var index = 0;
         var drawing = false;
         var last = null;
+        var letterGrid = null;                  // the letter, as GRID×GRID cells
+        var nearGrid = null;                    // the letter plus a pen's width
+        var inkGrid = new Array(GRID * GRID).fill(false);
+        var cssW = 0, cssH = 0;
 
         function audioUrlFor(c) {
             var file = (c.audio || '').split('/').pop();
             return file ? (CONFIG.consonantAudioBase || '') + file : '';
         }
 
+        function guideHidden() { return guide.classList.contains('is-hidden'); }
+
         function render() {
             var c = consonants[index];
-            guide.textContent = c.char;
             byId('rw-trace-name').textContent = c.name_thai || c.char;
             byId('rw-trace-sound').textContent = c.name || '';
             byId('rw-counter').textContent = (index + 1) + ' / ' + consonants.length;
             byId('rw-listen').setAttribute('data-audio', audioUrlFor(c));
+            drawGuide();
             clear();
         }
 
-        // Size the canvas backing store to its on-screen size, allowing for
-        // high-DPI screens so lines are crisp. Called when the Write tab first
-        // becomes visible (a hidden panel reports a size of 0) and on resize.
+        /* The faded guide on screen, and the same letter as a grid to check
+           against. Redrawn on every letter change and resize. */
+        function drawGuide() {
+            if (!cssW) { return; }
+            var c = consonants[index];
+            var style = getComputedStyle(guide);
+            guideCtx.clearRect(0, 0, cssW, cssH);
+            guideCtx.fillStyle = style.color;
+            drawGlyph(guideCtx, c.char, cssW, cssH, style.fontFamily);
+
+            var grid = document.createElement('canvas');
+            grid.width = grid.height = GRID;
+            var g = grid.getContext('2d');
+            g.scale(GRID / cssW, GRID / cssH);
+            g.fillStyle = '#000';
+            drawGlyph(g, c.char, cssW, cssH, style.fontFamily);
+            var pixels = g.getImageData(0, 0, GRID, GRID).data;
+            letterGrid = [];
+            for (var i = 3; i < pixels.length; i += 4) { letterGrid.push(pixels[i] > 96); }
+            nearGrid = checking ? TraceCheck.zone(letterGrid, GRID) : null;
+        }
+
+        // Size both canvases' backing stores to their on-screen size, allowing
+        // for high-DPI screens so lines are crisp. Called when the Write tab
+        // first becomes visible (a hidden panel reports a size of 0) and on resize.
         function sizeCanvas() {
             var rect = canvas.getBoundingClientRect();
             if (!rect.width) { return; }               // still hidden — try later
             var dpr = window.devicePixelRatio || 1;
-            canvas.width = Math.round(rect.width * dpr);
-            canvas.height = Math.round(rect.height * dpr);
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            cssW = rect.width;
+            cssH = rect.height;
+            [canvas, guide].forEach(function (c) {
+                c.width = Math.round(cssW * dpr);
+                c.height = Math.round(cssH * dpr);
+                c.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
+            });
             ctx.lineWidth = 8;
             ctx.lineCap = 'round';
             ctx.lineJoin = 'round';
-            ctx.strokeStyle = '#4A1A6B';
+            drawGuide();
         }
 
         function clear() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+            inkGrid = new Array(GRID * GRID).fill(false);
+            showFeedback(null);
         }
 
         function pointFrom(event) {
@@ -405,25 +468,79 @@
             return { x: event.clientX - rect.left, y: event.clientY - rect.top };
         }
 
+        function cellOf(p) {
+            var x = Math.min(GRID - 1, Math.max(0, Math.floor(p.x * GRID / cssW)));
+            var y = Math.min(GRID - 1, Math.max(0, Math.floor(p.y * GRID / cssH)));
+            return y * GRID + x;
+        }
+
+        // Mark every grid cell the segment passes through, stepping finely
+        // enough that a fast stroke leaves no gaps.
+        function inkSegment(a, b) {
+            var steps = Math.max(1, Math.ceil(Math.hypot(b.x - a.x, b.y - a.y) / 2));
+            for (var s = 0; s <= steps; s++) {
+                inkGrid[cellOf({ x: a.x + (b.x - a.x) * s / steps,
+                                 y: a.y + (b.y - a.y) * s / steps })] = true;
+            }
+        }
+
+        function showFeedback(result) {
+            var fill = byId('rw-cover-fill'), pct = byId('rw-cover-pct'), msg = byId('rw-feedback-msg');
+            if (!fill) { return; }
+            var covered = result ? Math.round(result.covered * 100) : 0;
+            fill.style.width = covered + '%';
+            fill.classList.toggle('is-done', !!(result && result.done));
+            pct.textContent = covered + '%';
+            msg.textContent = result ? result.message
+                : (guideHidden() ? 'Write the letter from memory, then tap Check.'
+                                 : 'Trace over the faded letter with your finger or mouse.');
+        }
+
         canvas.addEventListener('pointerdown', function (event) {
             event.preventDefault();
             drawing = true;
             last = pointFrom(event);
+            inkSegment(last, last);
             if (canvas.setPointerCapture) { canvas.setPointerCapture(event.pointerId); }
         });
         canvas.addEventListener('pointermove', function (event) {
             if (!drawing) { return; }
             var p = pointFrom(event);
+            // Red only while tracing: with the guide hidden the learner is
+            // writing from memory, and colouring the line would give it away.
+            var stray = nearGrid && !guideHidden() && !nearGrid[cellOf(p)];
+            ctx.strokeStyle = stray ? STRAY : INK;
             ctx.beginPath();
             ctx.moveTo(last.x, last.y);
             ctx.lineTo(p.x, p.y);
             ctx.stroke();
+            inkSegment(last, p);
             last = p;
         });
-        function stop() { drawing = false; last = null; }
+        function stop() {
+            if (!drawing) { return; }
+            drawing = false;
+            last = null;
+            if (checking && letterGrid && !guideHidden()) {
+                showFeedback(TraceCheck.assess(letterGrid, inkGrid, GRID));
+            }
+        }
         canvas.addEventListener('pointerup', stop);
         canvas.addEventListener('pointercancel', stop);
         canvas.addEventListener('pointerleave', stop);
+
+        var check = byId('rw-check');
+        check.addEventListener('click', function () {
+            if (checking && letterGrid) {
+                showFeedback(TraceCheck.assessFromMemory(letterGrid, inkGrid, GRID));
+            }
+        });
+
+        // The guide letter depends on the Thai web font; redraw once it has
+        // loaded, or the first letter would be drawn in a fallback face.
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(drawGuide);
+        }
 
         byId('rw-clear').addEventListener('click', clear);
         byId('rw-prev').addEventListener('click', function () {
@@ -440,6 +557,8 @@
             var hidden = guide.classList.toggle('is-hidden');
             toggle.setAttribute('aria-pressed', hidden ? 'false' : 'true');
             toggle.textContent = hidden ? '👁️ Show guide' : '👁️ Hide guide';
+            check.hidden = !hidden || !checking;
+            clear();
         });
 
         window.addEventListener('resize', sizeCanvas);

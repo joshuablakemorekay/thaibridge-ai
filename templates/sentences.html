@@ -56,6 +56,68 @@
     color: var(--bodhi-green);
     text-decoration: none;
 }
+/* ── Listen & answer ─────────────────────────────────────────
+   While on, the conversation's lines are hidden (not just blurred — the
+   English would give the answers away) until "Show the conversation". The
+   listen buttons keep their own colours whatever practice mode is doing. */
+.conv-card .practice-toggle.listen-toggle,
+.conv-card .practice-toggle.listen-reveal {
+    border-color: var(--royal-purple);
+    background: #fff;
+    color: var(--royal-purple);
+}
+.conv-card.listen-on .practice-toggle.listen-toggle {
+    background: var(--royal-purple);
+    color: #fff;
+}
+.conv-card.listen-on:not(.listen-revealed) .conv-line { display: none; }
+.listen-panel {
+    background: #f6f2fb;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.listen-speed {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+.listen-rate {
+    padding: 0.35rem 0.8rem;
+    border: 2px solid var(--royal-purple);
+    border-radius: 16px;
+    background: #fff;
+    color: var(--royal-purple);
+    font-family: inherit;
+    cursor: pointer;
+}
+.listen-rate[aria-pressed="true"] {
+    background: var(--royal-purple);
+    color: #fff;
+}
+.listen-q { margin-top: 1rem; }
+.listen-q-title { font-weight: 600; margin-bottom: 0.5rem; }
+.listen-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.5rem;
+}
+.listen-option {
+    padding: 0.6rem 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-align: left;
+    cursor: pointer;
+}
+.listen-option:disabled { cursor: default; }
+.listen-option.is-right { border-color: var(--bodhi-green); background: #eef6e4; }
+.listen-option.is-wrong { border-color: var(--temple-red); background: #fbeaea; }
+.listen-score { margin-top: 1rem; font-weight: 600; color: var(--royal-purple); }
 /* Sentence builder: tap tiles from the pool into the answer row. */
 .sb-prompt { margin: 1rem 0; font-size: 1.25rem; }
 .sb-english { font-weight: 600; color: #333; }
@@ -843,8 +905,31 @@
     {% endif %}
     <p class="practice-hint" hidden>Read the English, say the Thai out loud, then tap the grey bar to check yourself. Use 🔊 to hear the line any time.</p>
 
+    {% set ns = namespace(urls=[]) %}
+    {% for line in conv.dialogue %}{% if thai_audio_url(line.thai) %}{% set ns.urls = ns.urls + [thai_audio_url(line.thai)] %}{% endif %}{% endfor %}
+    {% if ns.urls and conv_id in listening_ids %}
+    <button type="button" class="practice-toggle listen-toggle" onclick="toggleConvListening(this, '{{ conv_id }}')">
+        🎧 Listen &amp; answer: <span class="listen-state">off</span>
+    </button>
+    <div class="listen-panel" hidden>
+        <p class="practice-hint">The words are hidden. Play the conversation as
+            many times as you like, then answer the questions. When you're done,
+            show the conversation to check what was said.</p>
+        <div class="listen-speed" role="group" aria-label="Playback speed">
+            <span>Speed:</span>
+            <button type="button" class="listen-rate" data-rate="0.75" aria-pressed="false">🐢 Slow</button>
+            <button type="button" class="listen-rate" data-rate="1" aria-pressed="true">Normal</button>
+            <button type="button" class="listen-rate" data-rate="1.25" aria-pressed="false">🐇 Fast</button>
+        </div>
+        <button type="button" class="btn btn-saffron th-audio listen-play"
+                data-audio-sequence="{{ ns.urls|join(' ') }}" data-audio-rate="1">▶️ Play the conversation</button>
+        <div class="listen-questions"></div>
+        <button type="button" class="practice-toggle listen-reveal" onclick="revealConversation(this)">👀 Show the conversation</button>
+    </div>
+    {% endif %}
+
     {% for line in conv.dialogue %}
-    <div style="background: {% if 'male' in line.speaker %}#e3f2fd{% elif 'female' in line.speaker %}#fce4ec{% else %}#f5f5f5{% endif %}; padding: 1.25rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %};">
+    <div class="conv-line" style="background: {% if 'male' in line.speaker %}#e3f2fd{% elif 'female' in line.speaker %}#fce4ec{% else %}#f5f5f5{% endif %}; padding: 1.25rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %};">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
             <span style="background: {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
                 {% if 'male' in line.speaker %}👨{% elif 'female' in line.speaker %}👩{% else %}👤{% endif %}
@@ -961,6 +1046,105 @@
         card.querySelectorAll('.answer.revealed').forEach(function (a) {
             a.classList.remove('revealed');
         });
+    }
+
+    // ── Listen & answer ─────────────────────────────────────────────
+    // Hides a conversation's lines, plays it as one sequence through the
+    // site-wide player (base.js, data-audio-sequence), and asks comprehension
+    // questions the server deals and marks. The chosen speed is remembered on
+    // this device for every conversation.
+    var LISTEN_RATE_KEY = 'listenRate';
+
+    function toggleConvListening(button, convId) {
+        var card = button.closest('.conv-card');
+        var on = card.classList.toggle('listen-on');
+        card.classList.remove('listen-revealed');
+        card.querySelector('.listen-state').textContent = on ? 'on' : 'off';
+        card.querySelector('.listen-panel').hidden = !on;
+        if (on && !card.dataset.listenLoaded) { loadListening(card, convId); }
+    }
+
+    function revealConversation(button) {
+        button.closest('.conv-card').classList.add('listen-revealed');
+    }
+
+    function setListenRate(card, rate) {
+        card.querySelector('.listen-play').setAttribute('data-audio-rate', rate);
+        card.querySelectorAll('.listen-rate').forEach(function (b) {
+            b.setAttribute('aria-pressed', b.dataset.rate === rate ? 'true' : 'false');
+        });
+    }
+
+    document.addEventListener('click', function (event) {
+        var b = event.target.closest('.listen-rate');
+        if (!b) { return; }
+        setListenRate(b.closest('.conv-card'), b.dataset.rate);
+        try { localStorage.setItem(LISTEN_RATE_KEY, b.dataset.rate); } catch (e) { /* private window */ }
+    });
+
+    async function loadListening(card, convId) {
+        var box = card.querySelector('.listen-questions');
+        var saved = null;
+        try { saved = localStorage.getItem(LISTEN_RATE_KEY); } catch (e) { /* private window */ }
+        if (saved) { setListenRate(card, saved); }
+
+        var data;
+        try {
+            var response = await fetch('/api/listening/' + encodeURIComponent(convId));
+            data = await response.json();
+            if (!response.ok) { throw new Error(data.error); }
+        } catch (err) {
+            box.textContent = 'Could not load the questions. Please try again.';
+            return;
+        }
+        card.dataset.listenLoaded = '1';
+        box.innerHTML = '';
+
+        var right = 0, answered = 0;
+        var score = document.createElement('p');
+        score.className = 'listen-score';
+
+        // Built from elements, not an HTML string: the options are English
+        // and may contain apostrophes.
+        data.questions.forEach(function (q, i) {
+            var block = document.createElement('div');
+            block.className = 'listen-q';
+            var title = document.createElement('p');
+            title.className = 'listen-q-title';
+            title.textContent = (i + 1) + '. ' + q.question;
+            block.appendChild(title);
+
+            var grid = document.createElement('div');
+            grid.className = 'listen-options';
+            q.options.forEach(function (option) {
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'listen-option';
+                b.textContent = option;
+                b.addEventListener('click', async function () {
+                    grid.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
+                    var response = await fetch('/api/check_answer', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ question_id: q.question_id, answer: option, options: q.options })
+                    });
+                    var result = await response.json();
+                    if (window.ThaiSounds) { ThaiSounds.result(result); }
+                    grid.querySelectorAll('button').forEach(function (x) {
+                        if (x.textContent === result.correct_answer) { x.classList.add('is-right'); }
+                    });
+                    if (!result.correct) { b.classList.add('is-wrong'); }
+                    answered++;
+                    if (result.correct) { right++; }
+                    score.textContent = right + ' of ' + answered + ' right' +
+                        (answered === data.questions.length ? ' — now show the conversation to check.' : '');
+                });
+                grid.appendChild(b);
+            });
+            block.appendChild(grid);
+            box.appendChild(block);
+        });
+        box.appendChild(score);
     }
 
     function revealAnswer(answer) {

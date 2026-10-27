@@ -27,6 +27,8 @@ import tour_trips  # the playable trips on the Tour Guide page
 import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
+import learning_path  # the Personalized Learning Path (IEP) on the Progress page
+import listening  # comprehension questions for the Sentences conversations
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -54,7 +56,7 @@ import random
 import re
 import uuid
 import hmac
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 app = Flask(__name__)
 
@@ -456,6 +458,8 @@ SECTION_REQUIREMENTS = {
     'read_write': {'level': 2, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_everyday': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_theravada_dhamma': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     # Consonant classes + tone rules. Its content was moved here from the Grammar
     # page, so it's gated the same way — Basic tier, level 3.
@@ -594,6 +598,23 @@ AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
 # invites them to get in touch rather than treating them as an abuser.
 PRO_FAIR_USE_DAILY = 75
 
+# Pronunciation Analysis (🎤 Say it) is built but HIDDEN until a native speaker
+# has tried it (docs/pronunciation-review-*.xlsx): it cannot yet tell the mid
+# tone from the low one, and it should not be sold in Pro before someone who
+# hears Thai tones natively says its scores are fair. Two Render settings:
+#   PRONUNCIATION_TESTERS  usernames (comma-separated) who see it meanwhile,
+#                          so the reviewer can test it on their Pro account
+#   PRONUNCIATION_LIVE=1   on for every Pro learner, with its Premium card and
+#                          Pro feature line
+# Render restarts the app when a setting changes, so no code change is needed.
+PRONUNCIATION_LIVE = os.environ.get('PRONUNCIATION_LIVE', '').strip() == '1'
+
+
+def pronunciation_testers():
+    raw = os.environ.get('PRONUNCIATION_TESTERS', '')
+    return {name.strip().lower() for name in raw.split(',') if name.strip()}
+
+
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
@@ -645,6 +666,8 @@ SUBSCRIPTION_TIERS = {
             '✓ Culture AI Q&A',
             '✓ AI exercise generator',
             '✓ AI translator, English to Thai and back',
+            *(['✓ Pronunciation Analysis — see your tone next to the model\'s']
+              if PRONUNCIATION_LIVE else []),
             '✓ Thai–English dictionary',
             '✓ 3x points multiplier',
             '✓ Priority support',
@@ -5630,16 +5653,52 @@ def culture():
                            audio_map=audio_map)
 
 
+# A quiz topic whose lock is named differently from the topic itself. Before
+# this map, /exercise/buddhist_formal checked a section called
+# 'exercise_buddhist_formal', which has no requirements — so a paid quiz was
+# open to everyone, and nothing looked wrong. The key stays 'exercise_formal'
+# because it may already be saved as a learner's earned-unlock choice.
+EXERCISE_SECTION_NAMES = {'buddhist_formal': 'exercise_formal'}
+
+# Quiz topics left open to everyone on purpose, each with the reason.
+# tests/test_exercise_locks.py fails if any other topic has no lock.
+# (Theravada Dhamma vocabulary was considered and locked, 2026-10-27: it is
+# language tooling built on the teaching, which the policy says is paid; the
+# Dhamma itself stays free on /theravada.)
+OPEN_EXERCISE_TOPICS = {}
+
+
+def can_use_pronunciation():
+    """Whether to offer 🎤 Say it. A Thai Master (Pro) feature, and while it is
+    hidden (see PRONUNCIATION_LIVE) only for the named testers. Developer mode
+    always sees it. It runs entirely in the browser, so this only decides
+    whether the button is offered."""
+    if session.get('user_progress', {}).get('is_developer', False):
+        return True
+    if active_tier() != 'pro':
+        return False
+    if PRONUNCIATION_LIVE:
+        return True
+    return (current_user.is_authenticated
+            and current_user.username.lower() in pronunciation_testers())
+
+
+def exercise_section(category):
+    """The SECTION_REQUIREMENTS key that locks /exercise/<category>."""
+    return EXERCISE_SECTION_NAMES.get(category, f'exercise_{category}')
+
+
 @app.route('/exercise/<category>')
 def exercise(category):
     # Check category-specific access
-    has_access, message = check_section_access(f'exercise_{category}')
+    section = exercise_section(category)
+    has_access, message = check_section_access(section)
     if not has_access:
-        return render_template('locked.html', 
-                             section=f'exercise_{category}',
+        return render_template('locked.html',
+                             section=section,
                              message=message,
-                             requirements=SECTION_REQUIREMENTS.get(f'exercise_{category}', {}),
-                             earned_unlock_offered=earned_unlock_offer(f'exercise_{category}'),
+                             requirements=SECTION_REQUIREMENTS.get(section, {}),
+                             earned_unlock_offered=earned_unlock_offer(section),
                              earned_unlock_level=EARNED_UNLOCK_LEVEL,
                              user_progress=session['user_progress'])
     
@@ -5667,7 +5726,13 @@ def exercise(category):
 
     return render_template('exercise.html', category=category, vocab=vocab_list,
                          story=story, beginner_mode=beginner_mode,
-                         audio_map=audio_map)
+                         audio_map=audio_map,
+                         listening_ready=len(audio_map) >= LISTENING_MIN_WORDS,
+                         can_pronounce=can_use_pronunciation(),
+                         pronunciation_live=PRONUNCIATION_LIVE,
+                         pron_words=[{'thai': w['thai'], 'paiboon': w['paiboon'],
+                                      'english': w['english'], 'audio': audio_map[w['thai']]}
+                                     for w in vocab_list if w['thai'] in audio_map])
 
 
 
@@ -7231,6 +7296,7 @@ def sentences():
 
     return render_template('sentences.html',
                          roleplay_ids=set(ROLEPLAY_SCENARIOS),
+                         listening_ids=set(listening.QUESTIONS),
                          gender=gender,
                          patterns=SENTENCE_PATTERNS,
                          aspect_examples=aspect_examples,
@@ -7332,6 +7398,7 @@ def premium():
                            current_tier=active_tier(),
                            addon=INSTANT_ACCESS_ADDON,
                            has_addon=has_full_unlock(),
+                           pronunciation_live=PRONUNCIATION_LIVE,
                            dana=DANA,
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
                            free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,
@@ -7430,9 +7497,13 @@ def _answer_token(question_id, answer):
     ).hexdigest()
 
 
-def issue_question(answer):
-    """Register the answer to a question about to be sent out; return its id."""
-    question_id = uuid.uuid4().hex
+def issue_question(answer, suffix=''):
+    """Register the answer to a question about to be sent out; return its id.
+
+    `suffix` tags the id with the quiz topic (learning_path.question_suffix), so
+    a marked answer can be counted against that topic for the Learning Path.
+    """
+    question_id = uuid.uuid4().hex + suffix
     pending = dict(session.get('pending_answers') or {})
     pending[question_id] = _answer_token(question_id, answer)
     # Oldest first out. Dicts keep insertion order, so this drops the questions
@@ -7483,8 +7554,12 @@ def get_quiz(category):
         return jsonify({'error': f'Invalid category: {category}'}), 400
     
     vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
+
+    if request.args.get('listen', 'false').lower() == 'true':
+        return _listening_question(vocab_list, category)
+
     word = random.choice(vocab_list)
-    
+
     wrong = [v['paiboon'] for v in vocab_list if v['paiboon'] != word['paiboon']]
     wrong = random.sample(wrong, min(3, len(wrong)))
     options = wrong + [word['paiboon']]
@@ -7495,10 +7570,81 @@ def get_quiz(category):
         'english': word['english'],
         # No 'correct_answer' — that is the whole point. The browser gets an id
         # and the server keeps what it means.
-        'question_id': issue_question(word['paiboon']),
+        'question_id': issue_question(word['paiboon'],
+                                      learning_path.question_suffix(category)),
         'options': options,
         'beginner_mode': beginner_mode
     })
+
+
+# A listening question needs this many words with a recording behind it, or the
+# "pick the meaning" choice is too small to be a test. The exercise page reads
+# the same number to decide whether to offer the Listen button at all.
+LISTENING_MIN_WORDS = 4
+
+
+def listening_words(vocab_list):
+    """The words in a category that have a recorded clip, so can be heard."""
+    return [w for w in vocab_list
+            if thai_audio.audio_exists(app.static_folder, w['thai'])]
+
+
+def _meaning_options(word, vocab_list):
+    """The right English meaning plus up to three others, shuffled.
+
+    Deduplicated on the English, because two words can share a meaning and a
+    duplicate button would be "wrong" while saying the same thing.
+    """
+    wrong = list(dict.fromkeys(
+        v['english'] for v in vocab_list if v['english'] != word['english']))
+    options = random.sample(wrong, min(3, len(wrong))) + [word['english']]
+    random.shuffle(options)
+    return options
+
+
+def _listening_question(vocab_list, category):
+    """Hear a word, pick its English meaning.
+
+    The Thai is not shown on the page until the learner has answered — that is
+    the whole exercise — but it still travels in the JSON so the result card can
+    show it afterwards. The marking stays server-side, same as the reading quiz.
+    """
+    heard = listening_words(vocab_list)
+    if len(heard) < LISTENING_MIN_WORDS:
+        return jsonify({'error': 'Not enough recorded words here to listen to yet.'}), 404
+
+    word = random.choice(heard)
+    return jsonify({
+        'thai': word['thai'],
+        'paiboon': word['paiboon'],
+        'audio': url_for('static', filename=thai_audio.audio_static_path(word['thai'])),
+        'question_id': issue_question(
+            word['english'], learning_path.question_suffix(category, listening=True)),
+        'options': _meaning_options(word, vocab_list),
+    })
+
+
+@app.route('/api/listening/<conv_id>')
+def get_listening_questions(conv_id):
+    """The comprehension questions for one Sentences-page conversation.
+
+    Gated like the page they belong to, since the questions give away what the
+    dialogue says. Each answer is kept server-side behind a question id and
+    marked by /api/check_answer, so it pays drill XP under the same daily cap.
+    """
+    if not check_section_access('sentences')[0]:
+        return jsonify({'error': 'This conversation is locked.'}), 403
+    questions = listening.QUESTIONS.get(conv_id)
+    if conv_id not in CONVERSATIONS or not questions:
+        return jsonify({'error': f'No listening questions for {conv_id}.'}), 404
+
+    dealt = []
+    for q in questions:
+        options = q['wrong'] + [q['answer']]
+        random.shuffle(options)
+        dealt.append({'question': q['question'], 'options': options,
+                      'question_id': issue_question(q['answer'])})
+    return jsonify({'questions': dealt})
 
 
 TONE_OPTIONS = ['Mid', 'Low', 'Falling', 'High', 'Rising']
@@ -7580,11 +7726,20 @@ def check_answer():
         is_correct = data.get('answer') == data.get('correct')
         correct_answer = data.get('correct')
 
+    payment = pay_drill_answer(is_correct, scored)
+
+    # Only a server-issued question counts toward a topic's score: the Learning
+    # Path sets its targets from these, so they must be as honest as the XP.
+    topic, by_ear = learning_path.topic_from_question(question_id)
+    if scored and topic:
+        learning_path.record_answer(session['user_progress'], topic, is_correct, by_ear)
+        session.modified = True
+
     return jsonify({
         'correct': is_correct,
         'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
         'correct_answer': correct_answer,
-        **pay_drill_answer(is_correct, scored),
+        **payment,
     })
 
 
@@ -7784,38 +7939,13 @@ def progress_dashboard():
     
     new_achievements = check_achievements(user)
     
-    available_sections = []
-    locked_sections = []
+    # The Learning Path replaces the old Available / Locked lists: it shows the
+    # same sections, but ranked for this learner and marked done/next/locked.
+    plan = user.get('learning_path')
+    path = learning_path.build_path(plan, user, _outline_sections(), check_section_access)
+    targets = ([learning_path.target_status(t, user) for t in plan.get('targets', [])]
+               if plan and plan.get('status') == 'active' else [])
 
-    for section_id, requirements in SECTION_REQUIREMENTS.items():
-        has_access, message = check_section_access(section_id)
-
-        tier = requirements['tier']
-        level = requirements['level']
-        if tier != 'free':
-            tier_info = SUBSCRIPTION_TIERS[tier]
-            requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (£{tier_info['price']:.2f}/mo)"
-        elif level > 1:
-            requirement_message = f"Requires Level {level} to unlock"
-        else:
-            requirement_message = "Complete Thai Alphabet first"
-
-        section_info = {
-            'id': section_id,
-            'name': section_id.replace('_', ' ').title(),
-            'level_required': requirements['level'],
-            'tier_required': requirements['tier'],
-            'points_reward': requirements['points_reward'],
-            'unlocked': section_id in user['sections_unlocked'],
-            'has_access': has_access,
-            'message': requirement_message
-        }
-        
-        if has_access or section_id in user['sections_unlocked']:
-            available_sections.append(section_info)
-        else:
-            locked_sections.append(section_info)
-    
     # Receipts come from the payments table, so only an account can have any —
     # a cookie-only visitor has never been through Checkout with a user_id.
     receipts = []
@@ -7833,13 +7963,146 @@ def progress_dashboard():
                          receipts=receipts,
                          next_level_xp=next_level_xp,
                          progress_to_next=progress_to_next,
-                         available_sections=available_sections,
-                         locked_sections=locked_sections,
+                         plan=plan,
+                         path=path,
+                         targets=targets,
+                         review_due=learning_path.review_due(plan, user, date.today()),
+                         review_opens=learning_path.review_opens(plan),
+                         path_goals=learning_path.GOALS,
+                         pronunciation_live=PRONUNCIATION_LIVE,
+                         path_practice=learning_path.PRACTICE,
+                         path_minutes=learning_path.MINUTES,
+                         topic_titles=learning_path.TOPIC_TITLES,
                          subscription_tiers=SUBSCRIPTION_TIERS,
                          achievements=ACHIEVEMENTS,
                          earned_unlock=earned_unlock_status(),
                          earned_unlock_level=EARNED_UNLOCK_LEVEL,
                          new_achievements=new_achievements)
+
+
+# ============================================
+# PERSONALIZED LEARNING PATH (IEP) — the plan's actions
+#
+# The plan itself is shown on /progress; these only change it. All rules live
+# in learning_path.py — these routes fetch the learner's record, call the rule,
+# and save. Each one answers JSON and the page reloads to show the result.
+# ============================================
+
+def _outline_sections():
+    """Every curriculum section in outline order, flattened across the tiers."""
+    return [s for group in curriculum.build_outline(sys.modules[__name__])
+            for s in group['sections']]
+
+
+def _can_open_topic(topic):
+    # The same check the /exercise/<topic> route makes, so the plan never sets a
+    # target on a quiz the learner would find locked.
+    return check_section_access(exercise_section(topic))[0]
+
+
+def _start_path_week(plan, user):
+    path = learning_path.build_path(plan, user, _outline_sections(), check_section_access)
+    learning_path.start_week(plan, user, path, _can_open_topic, date.today())
+
+
+@app.route('/api/path/start', methods=['POST'])
+def path_start():
+    """Save the learner's goals. The plan then waits for its starting check."""
+    init_user_progress()
+    user = session['user_progress']
+    data = request.get_json(silent=True) or {}
+    try:
+        minutes = int(data.get('minutes'))
+    except (TypeError, ValueError):
+        minutes = None
+    old = user.get('learning_path') or {}
+    plan = learning_path.new_plan(data.get('goal'), data.get('practice'), minutes,
+                                  history=old.get('history'))
+    if plan is None:
+        return jsonify({'error': 'Please choose a goal, a way to practise and a time.'}), 400
+
+    user['learning_path'] = plan
+    session.modified = True
+    # One log line per plan started — the simple usage count, readable in the
+    # Render logs, with no tracking table and nothing personal in it.
+    app.logger.info('learning_path started goal=%s practice=%s minutes=%s',
+                    plan['goal'], plan['practice'], plan['minutes'])
+    return jsonify({'ok': True})
+
+
+@app.route('/api/path/placement', methods=['GET', 'POST'])
+def path_placement():
+    """The starting check: one meaning question per vocabulary topic.
+
+    GET deals the questions; POST marks them. Marked here, not through
+    /api/check_answer, so the check pays no XP — it is a measurement, not a
+    drill — but each answer is still counted against its topic, which is what
+    the first week's targets are drawn from. Thai, romanisation and a clip are
+    all sent, so someone who cannot read Thai yet can still take it.
+    """
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path')
+    if not plan or plan.get('status') != 'placement':
+        return jsonify({'error': 'Set your goals first.'}), 400
+
+    if request.method == 'GET':
+        questions = []
+        for topic, words in VOCABULARY.items():
+            word = random.choice(words)
+            questions.append({
+                'topic': learning_path.TOPIC_TITLES.get(topic, topic),
+                'thai': word['thai'],
+                'paiboon': word['paiboon'],
+                'audio': (url_for('static', filename=thai_audio.audio_static_path(word['thai']))
+                          if thai_audio.audio_exists(app.static_folder, word['thai']) else None),
+                'question_id': issue_question(word['english'],
+                                              learning_path.question_suffix(topic)),
+                'options': _meaning_options(word, words),
+            })
+        return jsonify({'questions': questions})
+
+    data = request.get_json(silent=True) or {}
+    right = 0
+    for item in (data.get('answers') or [])[:len(VOCABULARY)]:
+        question_id = item.get('question_id')
+        scored, is_correct, _ = redeem_question(question_id, item.get('answer'))
+        topic, _ = learning_path.topic_from_question(question_id)
+        if scored and topic:
+            learning_path.record_answer(user, topic, is_correct)
+            right += is_correct
+    # Skipping the check (no answers) is allowed: the plan just starts from the
+    # goal's own topic order instead of from scores.
+    _start_path_week(plan, user)
+    session.modified = True
+    return jsonify({'ok': True, 'right': right})
+
+
+@app.route('/api/path/review', methods=['POST'])
+def path_review():
+    """Close the week: record how many targets were met, then set new ones."""
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path')
+    if not learning_path.review_due(plan, user, date.today()):
+        return jsonify({'error': 'Your review opens after a week, or once every target is met.'}), 400
+    learning_path.close_week(plan, user, date.today())
+    _start_path_week(plan, user)
+    session.modified = True
+    return jsonify({'ok': True})
+
+
+@app.route('/api/path/reset', methods=['POST'])
+def path_reset():
+    """Change goals: drop the plan but keep its history of past weeks."""
+    init_user_progress()
+    user = session['user_progress']
+    plan = user.get('learning_path') or {}
+    user['learning_path'] = ({'status': 'none', 'history': plan['history']}
+                             if plan.get('history') else None)
+    session.modified = True
+    return jsonify({'ok': True})
+
 
 @app.route('/developer-login', methods=['GET', 'POST'])
 # Tighter than the user login: this is a single-person door that grants a full

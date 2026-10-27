@@ -104,36 +104,73 @@
         // Any element with class "th-audio" and a data-audio="<url>" plays that
         // clip when tapped. This is delegated on the document, so it works for
         // buttons added to any page (present now or rendered later) without each
-        // page wiring up its own player.
+        // page wiring up its own player. An optional data-audio-rate="0.7"
+        // plays that button's clip slower (pitch is kept, so tones still sound
+        // right); without it every clip plays at normal speed.
         //
         // Rules borrowed from the alphabet page, each learned from a real iOS
         // failure: ONE Audio object for the whole page (a fresh one per play
         // leaks decoders on iOS until sound dies), and every play follows a tap
         // (iOS refuses to play sound nobody asked for). A rejected play() is
         // swallowed — a quiet button beats an unhandled console error.
+        //
+        // A button can instead carry data-audio-sequence="<url> <url> ..." to
+        // play several clips one after another (a whole conversation), with a
+        // short pause between them like a real exchange. A sequence always
+        // stops on a second tap, the same as data-audio-toggle.
         (function () {
             var player = null;            // created on first tap, then reused
             var playingButton = null;
+            var queue = [];               // clips still to play in a sequence
+            var gapTimer = null;
+            var GAP_MS = 500;             // pause between lines of a conversation
 
             function clearPlaying() {
+                queue = [];
+                clearTimeout(gapTimer);
                 if (playingButton) {
                     playingButton.classList.remove('is-playing');
                     playingButton = null;
                 }
             }
 
+            function playClip(url, rate) {
+                player.src = url;
+                // Set AFTER src: loading a new source resets playbackRate to
+                // defaultPlaybackRate, so setting it first would be undone.
+                player.defaultPlaybackRate = rate;
+                player.playbackRate = rate;
+                player.preservesPitch = true;
+                var attempt = player.play();
+                if (attempt && typeof attempt.catch === 'function') {
+                    attempt.catch(clearPlaying);
+                }
+            }
+
+            function onEnded() {
+                if (!queue.length) { clearPlaying(); return; }
+                var next = queue.shift();
+                // The SAME Audio object plays on, so iOS still counts it as
+                // the play the learner tapped for.
+                gapTimer = setTimeout(function () {
+                    playClip(next, player.defaultPlaybackRate);
+                }, GAP_MS);
+            }
+
             document.addEventListener('click', function (event) {
                 var button = event.target.closest('.th-audio');
                 if (!button) return;
 
-                var url = button.getAttribute('data-audio');
+                var sequence = (button.getAttribute('data-audio-sequence') || '')
+                    .split(' ').filter(Boolean);
+                var url = button.getAttribute('data-audio') || sequence[0];
                 if (!url) return;
 
                 event.preventDefault();
 
                 if (!player) {
                     player = new Audio();
-                    player.addEventListener('ended', clearPlaying);
+                    player.addEventListener('ended', onEnded);
                     player.addEventListener('error', clearPlaying);
                 }
 
@@ -144,7 +181,7 @@
                 // for a clip tens of seconds long (a whole read-aloud paragraph)
                 // — otherwise there is no way to stop it but to leave the page.
                 if (button === playingButton &&
-                    button.hasAttribute('data-audio-toggle')) {
+                    (button.hasAttribute('data-audio-toggle') || sequence.length)) {
                     player.pause();
                     clearPlaying();
                     return;
@@ -153,12 +190,10 @@
                 clearPlaying();
                 button.classList.add('is-playing');
                 playingButton = button;
+                queue = button.getAttribute('data-audio') ? [] : sequence.slice(1);
 
-                player.src = url;
-                var attempt = player.play();
-                if (attempt && typeof attempt.catch === 'function') {
-                    attempt.catch(clearPlaying);
-                }
+                var rate = parseFloat(button.getAttribute('data-audio-rate'));
+                playClip(url, rate > 0 ? rate : 1);
             });
         })();
 

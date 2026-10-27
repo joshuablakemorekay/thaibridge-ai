@@ -29,7 +29,10 @@ permissions:
 jobs:
   lint:
     name: Lint prompt structure
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest: on 2026-10-27 latest became 26.04, whose
+    # Python list has no 3.12.8 (.python-version, what Render builds with),
+    # so setup-python failed before a single test ran.
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
 
@@ -96,7 +99,10 @@ jobs:
 
   eval:
     name: Run prompt evaluations
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest: on 2026-10-27 latest became 26.04, whose
+    # Python list has no 3.12.8 (.python-version, what Render builds with),
+    # so setup-python failed before a single test ran.
+    runs-on: ubuntu-24.04
     needs: lint
     steps:
       - uses: actions/checkout@v7
