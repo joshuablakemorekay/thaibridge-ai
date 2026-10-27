@@ -15,8 +15,8 @@ import pytest
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
-from app import (app, VOCABULARY, SECTION_REQUIREMENTS, OPEN_EXERCISE_TOPICS,  # noqa: E402
-                 exercise_section)
+from app import app, VOCABULARY, SECTION_REQUIREMENTS  # noqa: E402
+from quizzes import OPEN_EXERCISE_TOPICS, exercise_section  # noqa: E402
 
 
 def test_every_quiz_topic_has_a_lock_or_a_reason():

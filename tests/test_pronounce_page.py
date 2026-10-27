@@ -16,6 +16,7 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
 import app as app_module  # noqa: E402
+import quizzes  # noqa: E402  (the /exercise route and its Pro check live here)
 
 SAY_IT = 'id="pronounceStart"'
 SCRIPT = "/static/js/pronounce.js?v="
@@ -23,11 +24,11 @@ PRO_NOTE = 'part of <a href="/premium">Thai Master (Pro)</a>'
 
 
 def exercise_page(monkeypatch, tier, live=False, username=None, testers=""):
-    monkeypatch.setattr(app_module, "check_section_access", lambda section: (True, ""))
-    monkeypatch.setattr(app_module, "active_tier", lambda: tier)
-    monkeypatch.setattr(app_module, "PRONUNCIATION_LIVE", live)
+    monkeypatch.setattr(quizzes, "check_section_access", lambda section: (True, ""))
+    monkeypatch.setattr(quizzes, "active_tier", lambda: tier)
+    monkeypatch.setattr(quizzes, "PRONUNCIATION_LIVE", live)
     monkeypatch.setenv("PRONUNCIATION_TESTERS", testers)
-    monkeypatch.setattr(app_module, "current_user", SimpleNamespace(
+    monkeypatch.setattr(quizzes, "current_user", SimpleNamespace(
         is_authenticated=username is not None, username=username or ""))
     return app_module.app.test_client().get("/exercise/festivals").get_data(as_text=True)
 
