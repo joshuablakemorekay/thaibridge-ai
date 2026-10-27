@@ -5690,7 +5690,8 @@ def exercise(category):
 
     return render_template('exercise.html', category=category, vocab=vocab_list,
                          story=story, beginner_mode=beginner_mode,
-                         audio_map=audio_map)
+                         audio_map=audio_map,
+                         listening_ready=len(audio_map) >= LISTENING_MIN_WORDS)
 
 
 
@@ -7506,8 +7507,12 @@ def get_quiz(category):
         return jsonify({'error': f'Invalid category: {category}'}), 400
     
     vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
+
+    if request.args.get('listen', 'false').lower() == 'true':
+        return _listening_question(vocab_list)
+
     word = random.choice(vocab_list)
-    
+
     wrong = [v['paiboon'] for v in vocab_list if v['paiboon'] != word['paiboon']]
     wrong = random.sample(wrong, min(3, len(wrong)))
     options = wrong + [word['paiboon']]
@@ -7521,6 +7526,52 @@ def get_quiz(category):
         'question_id': issue_question(word['paiboon']),
         'options': options,
         'beginner_mode': beginner_mode
+    })
+
+
+# A listening question needs this many words with a recording behind it, or the
+# "pick the meaning" choice is too small to be a test. The exercise page reads
+# the same number to decide whether to offer the Listen button at all.
+LISTENING_MIN_WORDS = 4
+
+
+def listening_words(vocab_list):
+    """The words in a category that have a recorded clip, so can be heard."""
+    return [w for w in vocab_list
+            if thai_audio.audio_exists(app.static_folder, w['thai'])]
+
+
+def _meaning_options(word, vocab_list):
+    """The right English meaning plus up to three others, shuffled.
+
+    Deduplicated on the English, because two words can share a meaning and a
+    duplicate button would be "wrong" while saying the same thing.
+    """
+    wrong = list(dict.fromkeys(
+        v['english'] for v in vocab_list if v['english'] != word['english']))
+    options = random.sample(wrong, min(3, len(wrong))) + [word['english']]
+    random.shuffle(options)
+    return options
+
+
+def _listening_question(vocab_list):
+    """Hear a word, pick its English meaning.
+
+    The Thai is not shown on the page until the learner has answered — that is
+    the whole exercise — but it still travels in the JSON so the result card can
+    show it afterwards. The marking stays server-side, same as the reading quiz.
+    """
+    heard = listening_words(vocab_list)
+    if len(heard) < LISTENING_MIN_WORDS:
+        return jsonify({'error': 'Not enough recorded words here to listen to yet.'}), 404
+
+    word = random.choice(heard)
+    return jsonify({
+        'thai': word['thai'],
+        'paiboon': word['paiboon'],
+        'audio': url_for('static', filename=thai_audio.audio_static_path(word['thai'])),
+        'question_id': issue_question(word['english']),
+        'options': _meaning_options(word, vocab_list),
     })
 
 

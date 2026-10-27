@@ -104,7 +104,9 @@
         // Any element with class "th-audio" and a data-audio="<url>" plays that
         // clip when tapped. This is delegated on the document, so it works for
         // buttons added to any page (present now or rendered later) without each
-        // page wiring up its own player.
+        // page wiring up its own player. An optional data-audio-rate="0.7"
+        // plays that button's clip slower (pitch is kept, so tones still sound
+        // right); without it every clip plays at normal speed.
         //
         // Rules borrowed from the alphabet page, each learned from a real iOS
         // failure: ONE Audio object for the whole page (a fresh one per play
@@ -155,6 +157,12 @@
                 playingButton = button;
 
                 player.src = url;
+                // Set AFTER src: loading a new source resets playbackRate to
+                // defaultPlaybackRate, so setting it first would be undone.
+                var rate = parseFloat(button.getAttribute('data-audio-rate'));
+                player.defaultPlaybackRate = rate > 0 ? rate : 1;
+                player.playbackRate = player.defaultPlaybackRate;
+                player.preservesPitch = true;
                 var attempt = player.play();
                 if (attempt && typeof attempt.catch === 'function') {
                     attempt.catch(clearPlaying);

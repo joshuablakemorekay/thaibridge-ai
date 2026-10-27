@@ -19,6 +19,7 @@
     }
     .ex-listen:hover, .ex-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
     .ex-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+
 </style>
 {% endblock %}
 
@@ -47,7 +48,15 @@
     <div id="quizContent">
         <p style="text-align: center;">
             <button class="btn btn-saffron" onclick="loadQuiz()">Start Quiz</button>
+            {% if listening_ready %}
+            <button class="btn" onclick="loadListening()">🎧 Listening Quiz</button>
+            {% endif %}
         </p>
+        {% if listening_ready %}
+        <p style="text-align: center; color: #666; font-size: 0.9rem;">
+            Listening Quiz: hear a word without seeing it, then pick what it means.
+        </p>
+        {% endif %}
     </div>
 </div>
 
@@ -126,6 +135,7 @@ let score = 0;
 let total = 0;
 
 async function loadQuiz() {
+    listening = false;
     const url = `/api/quiz/${category}${beginnerMode ? '?beginner=true' : ''}`;
     
     try {
@@ -158,6 +168,52 @@ async function loadQuiz() {
     } catch (error) {
         document.getElementById('quizContent').innerHTML = '<p style="color: red;">Error loading quiz. Please try again.</p>';
     }
+}
+
+// Listening Quiz: the word is heard, never shown, until it has been answered.
+// The options are English meanings, so they can hold apostrophes ("don't") —
+// the buttons are built as elements with their own click handler rather than
+// as an onclick="..." string, which an apostrophe would break.
+let listening = false;
+const SLOW_RATE = 0.7;   // the clips are already a touch slow; this is "really slow"
+
+async function loadListening() {
+    listening = true;
+    const box = document.getElementById('quizContent');
+    try {
+        const response = await fetch(`/api/quiz/${category}?listen=true`);
+        if (!response.ok) { throw new Error('no listening question'); }
+        currentQuestion = await response.json();
+    } catch (error) {
+        box.innerHTML = '<p style="color: red;">Error loading the listening quiz. Please try again.</p>';
+        return;
+    }
+
+    box.innerHTML = `
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+            <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
+            <p style="margin: 1rem 0;">
+                <button type="button" class="btn btn-saffron th-audio" id="listenPlay">▶️ Play</button>
+                <button type="button" class="btn th-audio" id="listenSlow"
+                        data-audio-rate="${SLOW_RATE}">🐢 Slower</button>
+            </p>
+            <p style="margin-top: 1rem; color: var(--royal-purple);">What does it mean?</p>
+        </div>
+        <div id="listenOptions" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 500px; margin: 0 auto;"></div>
+    `;
+    document.getElementById('listenPlay').setAttribute('data-audio', currentQuestion.audio);
+    document.getElementById('listenSlow').setAttribute('data-audio', currentQuestion.audio);
+
+    const options = document.getElementById('listenOptions');
+    currentQuestion.options.forEach(option => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'btn';
+        b.style.width = '100%';
+        b.textContent = option;
+        b.addEventListener('click', () => checkAnswer(option));
+        options.appendChild(b);
+    });
 }
 
 async function checkAnswer(answer) {
@@ -195,9 +251,10 @@ async function checkAnswer(answer) {
                 ${result.message}
             </p>
             <p class="thai-text" style="font-size: 2rem;">${currentQuestion.thai}</p>
-            <p class="paiboon" style="font-size: 1.3rem;">${result.correct_answer ?? ''}</p>
+            <p class="paiboon" style="font-size: 1.3rem;">${listening ? currentQuestion.paiboon : (result.correct_answer ?? '')}</p>
+            ${listening ? `<p style="font-size: 1.2rem; color: #666;">${result.correct_answer ?? ''}</p>` : ''}
             <p style="margin-top: 1.5rem;">
-                <button class="btn btn-saffron" onclick="loadQuiz()">Next Question</button>
+                <button class="btn btn-saffron" onclick="${listening ? 'loadListening()' : 'loadQuiz()'}">Next Question</button>
             </p>
         </div>
     `;
