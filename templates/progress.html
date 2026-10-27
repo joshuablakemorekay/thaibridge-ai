@@ -200,9 +200,10 @@
     <!-- Personalized Learning Path (IEP) — rules in learning_path.py -->
     <div class="path-section" id="path">
         <h2>📊 Personalized Learning Path (IEP)</h2>
-        <p class="path-intro">An individualized plan built around your goals and
-            progress, like an IEP for language learning: a starting check, a few
-            measurable targets each week, and a weekly review that sets the next ones.</p>
+        <p class="path-intro">An individualized plan built around your goals, your
+            progress and how you like to practise, like an IEP for language
+            learning: a starting check, a few measurable targets each week, and a
+            weekly review that sets the next ones.</p>
 
         {% if not plan or plan.status == 'none' %}
         <form id="path-start" class="path-box">
@@ -259,9 +260,20 @@
                 </li>
                 {% endfor %}
             </ul>
+            {# How they like to practise points at the tools built for it. #}
             {% if plan.practice == 'speaking' %}
-            <p class="path-tip">🗣️ Say every answer out loud as you go, and practise
-               speaking with the <a href="/chat">AI Tutor</a>.</p>
+            <p class="path-tip">🗣️ You like to practise by speaking: say every answer
+               out loud{% if pronunciation_live %}, try 🎤 Say it on the vocabulary pages
+               to check your tones (Thai Master),{% endif %} and chat with the
+               <a href="/chat">AI Tutor</a>.</p>
+            {% elif plan.practice == 'listening' %}
+            <p class="path-tip">🎧 You like to practise by listening: your quiz target
+               uses the Listening Quiz, and the conversations on the Sentences page
+               have 🎧 Listen &amp; answer, with a slow speed when you need it.</p>
+            {% else %}
+            <p class="path-tip">📖 You like to practise by reading: your path brings
+               <a href="/read_write">Read &amp; Write</a> forward, where you can also
+               trace each letter and write it from memory.</p>
             {% endif %}
             {% if review_due %}
             <p><button type="button" class="btn btn-saffron" id="path-review">📝 Review my week and set new targets</button></p>

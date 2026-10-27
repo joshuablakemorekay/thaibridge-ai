@@ -93,7 +93,7 @@ GOALS = {
 
 PRACTICE = {
     'listening': 'Listening — hearing Thai and picking out what it means',
-    'reading':   'Reading — seeing the words written down',
+    'reading':   'Reading — seeing the words written down, and writing them',
     'speaking':  'Speaking — trying it out loud and chatting',
 }
 

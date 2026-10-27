@@ -7969,6 +7969,7 @@ def progress_dashboard():
                          review_due=learning_path.review_due(plan, user, date.today()),
                          review_opens=learning_path.review_opens(plan),
                          path_goals=learning_path.GOALS,
+                         pronunciation_live=PRONUNCIATION_LIVE,
                          path_practice=learning_path.PRACTICE,
                          path_minutes=learning_path.MINUTES,
                          topic_titles=learning_path.TOPIC_TITLES,
