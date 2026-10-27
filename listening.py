@@ -6,16 +6,16 @@ the learner understood what they HEARD, not whether they can read the answer
 off the page.
 
 Every question is answerable from the audio alone, and the right answer is
-always something actually said in the dialogue (app.CONVERSATIONS). The wrong
-options are plausible for the setting but are not said, so a learner who caught
-the key word can tell them apart.
+always something actually said in the dialogue (sentence_content.CONVERSATIONS).
+The wrong options are plausible for the setting but are not said, so a learner
+who caught the key word can tell them apart.
 
 ⚠️ Waiting for native-speaker review: the questions and answers are checked
 against the English glosses in CONVERSATIONS, which are themselves part of the
 review. A correction to a line's meaning may change a question here too.
 """
 
-# conversation id (a key of app.CONVERSATIONS) -> its questions.
+# conversation id (a key of sentence_content.CONVERSATIONS) -> its questions.
 # 'answer' is the right option; 'wrong' are the three distractors.
 QUESTIONS = {
     'restaurant': [
