@@ -34,6 +34,15 @@ import listening  # comprehension questions for the Sentences conversations
 from vocabulary import VOCABULARY, CULTURAL_STORIES
 from tones import TONE_REFERENCE, TONES_AND_CLASSES
 from sentence_content import SENTENCE_PATTERNS, CONVERSATIONS, CONVERSATIONAL_PHRASES
+# The plan, access and points rules, imported back under the same names.
+from plans import (FREE_AI_DAILY_LIMIT, BASIC_AI_DAILY_LIMIT, FREE_DHAMMA_DAILY_LIMIT,
+                   PRO_FAIR_USE_DAILY, PRONUNCIATION_LIVE, pronunciation_testers,
+                   SUBSCRIPTION_TIERS)
+from access import (SECTION_REQUIREMENTS, EARNED_UNLOCK_LEVEL, EARNED_UNLOCK_TIER,
+                    active_tier, has_full_unlock, check_alphabet_completion,
+                    earned_unlock_spent_on, earned_unlock_status, earned_unlock_offer,
+                    tier_still_owed, check_section_access)
+from rewards import POINT_REWARDS, DRILL_XP_DAILY_CAP, drill_xp_today, add_xp
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -400,156 +409,11 @@ DEVELOPER_MODE_ENABLED, DEVELOPER_PASSWORD_HASH = _developer_credentials(
     os.environ.get("DEVELOPER_PASSWORD")
 )
 
-# Section unlock requirements (level and/or subscription tier)
-SECTION_REQUIREMENTS = {
-    # ── FREE for everyone (whether Monk Mode is on or off) ────────────────
-    # The free foundation: the Theravada Dhamma teachings — the Dhamma itself
-    # is freely given.
-    # Every other content section sits behind a paid tier (see below), on TOP
-    # of its level/XP requirement.
-    #
-    # Meditation moved to 'basic' for a while, on the reasoning that the page had
-    # grown from a bare timer into practice *tooling*. It is back here now: sitting
-    # in meditation is not tooling, it is the practice the teachings are for, and
-    # splitting "the Dhamma is free but learning to practise it costs £9.99" was a
-    # line that could not be defended. Dhamma Talks sit here for the same reason.
-    'home': {'level': 1, 'tier': 'free', 'points_reward': 0},
-    # The alphabet is free on purpose. It is the prerequisite for every
-    # section below, so charging for it would put the whole site behind the
-    # paywall with no way in.
-    'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
-    # Survival Thai is the free tier's answer to "I want to SPEAK Thai". Free
-    # and, crucially, requires_alphabet=False: every other language section
-    # demands the alphabet quiz first, which is the right prerequisite for
-    # reading and the wrong one for saying hello. Gating a starter set behind
-    # 44 consonants is how a beginner leaves.
-    'survival': {'level': 1, 'tier': 'free', 'points_reward': 60, 'requires_alphabet': False},
-    # The page that separates the universal teaching from the Thai
-    # expression of it. It is the answer to "do I have to become Thai to
-    # learn Buddhism here?", so it must never itself be behind a gate.
-    'dhamma_and_culture': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
-    # The practice itself, with no culture attached — the Canon's own lay
-    # frameworks. Free and ungated for the same reason as the page above it.
-    'practising_anywhere': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
-    'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
-    'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40},
-    # Chanting sits with the other Dhamma pages: the chants and their
-    # translations are not ours to sell, and there is no alphabet
-    # prerequisite — you do not need to read Thai to chant along.
-    'chanting': {'level': 1, 'tier': 'free', 'points_reward': 40},
-    # Paiboon was Basic for a while, filed with the Learn menu it sits in. It is
-    # free now because the free pages already USE it: the chanting layers and the
-    # meditation techniques print Paiboon on screen. Charging for the guide meant
-    # showing a free reader "kam buu-chaa" and then selling them the key to it —
-    # a notation key is not a lesson, it is the legend on the map.
-    # ...and with no alphabet prerequisite, for the same reason it is free. The
-    # pages that print Paiboon — chanting and meditation — have no alphabet gate
-    # themselves ("you do not need to read Thai to chant along"), so requiring
-    # the 44 consonants before the KEY to the notation kept the door shut for
-    # exactly the reader it was freed for.
-    'paiboon': {'level': 1, 'tier': 'free', 'points_reward': 10, 'requires_alphabet': False},
 
-    # ── BASIC — Thai Reader (£9.99) ─────────────────────────────────
-    # The structured language-learning content (the rest of the Learn menu,
-    # Culture, and the exercises). Still gated by level/XP as well as the tier.
-    # Vocabulary sits in the Learn menu alongside the sections below, so it carries
-    # the same alphabet prerequisite. It also earns XP on unlock like every one of
-    # its siblings — a 0 reward made its locked page read "+0 XP upon unlock" while
-    # the rest promised something.
-    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'read_write': {'level': 2, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_everyday': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_theravada_dhamma': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    # Consonant classes + tone rules. Its content was moved here from the Grammar
-    # page, so it's gated the same way — Basic tier, level 3.
-    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    # Culture is the one gated section that never needed the alphabet. It is
-    # about the wai, temple manners and festivals — roughly two-thirds English
-    # prose, and every Thai word on it is printed with its romanisation. Asking
-    # someone to name 35 of 44 consonants before they may read about bowing
-    # gated an English page behind a script exam. Level 3 and the Basic tier
-    # still apply, so the progression and the paywall are untouched; only the
-    # prerequisite that did no teaching work is gone.
-    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': False},
-    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35, 'requires_alphabet': True},
-    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-
-    # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
-    # The premium power tools. Unlimited AI is enforced separately in the
-    # /api/ai/chat route.
-    'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
-    # No requires_alphabet here, deliberately. /premium is the PRICING page: it
-    # carries no @require_access, so the flag never fired — but it read as "pass
-    # a quiz before you may see our prices", and it would have become true the
-    # day someone added the decorator for consistency. The entry itself stays,
-    # because the tier and level are quoted elsewhere.
-    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100},
-}
-
-# Freemium AI limits. Free & Basic get the Tutor mode plus Dhamma, capped at a
-# few messages a day between them. Pro unlocks every mode with no cap. Dhamma is
-# free because the teachings on this site are free — charging for the follow-up
-# question would be selling the Dhamma, the same line we refused to cross when
-# Meditation went back to the free tier. The daily cap isn't a toll on the
-# teaching, it's the honest cost of running the model. The daily counter lives in
-# the SESSION (not the DB) on purpose — it needs no schema change and also works
-# for logged-out visitors. It's a soft limit (a determined user could clear
-# cookies to reset it), which is fine for a portfolio/demo app. Defined here,
-# above SUBSCRIPTION_TIERS, so the Free tier's feature list can quote the real
-# number instead of a hardcoded one that goes stale.
-# 15 was set on 2026-06-06, when the tutor ran on Haiku. On Sonnet 5.5 a
-# message costs about three times as much, and Thai Reader subscribers were
-# getting exactly what Free got — paying bought no extra tutor at all. Free is
-# now a real taste (5), and Thai Reader keeps the old 15. Settled with Josh
-# 2026-10-14. Dhamma questions are a separate pool and are not affected.
-FREE_AI_DAILY_LIMIT = 5                        # tutor messages/day, free tier
-BASIC_AI_DAILY_LIMIT = 15                      # tutor messages/day, Thai Reader
-
-# Ceiling on XP earned from practice drills in one day.
-#
-# The drills are generated in the browser, so the answer is already on the page
-# and /api/check_answer cannot tell a learner from a script — nothing it is
-# sent can prove the question was really faced. Verifying harder is not the
-# answer; bounding the reward is. 200 is twenty correct answers, comfortably
-# more than a real sitting, and it caps a scripted run at a couple of days'
-# honest work rather than an instant level 10.
-#
-# This matters more since levelling started earning a free paid section: XP is
-# no longer only a score, it opens a door. The counter lives in user_progress
-# rather than a bare session key so it is saved with the rest of a learner's
-# progress and a cookie wipe does not hand back a fresh allowance.
-DRILL_XP_DAILY_CAP = 200
+# How the AI allowances are spent. The allowances themselves (how many messages
+# a day each plan gets, and why) are numbers in plans.py, imported at the top.
 FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
-
-# The Dhamma gets its OWN daily allowance, drawn from a separate counter.
-#
-# Sharing one pool quietly broke the promise made just above. Tutor and Dhamma
-# both spent the same 15, so a learner who drilled Thai vocabulary all morning
-# and then asked a question about the precepts was told to come back tomorrow
-# or upgrade. The teaching was never behind the paywall, but the question about
-# it sat behind a language-study budget — the same line, reached by a side
-# door.
-#
-# This is added ON TOP of the tutor allowance rather than reserved out of it.
-# Reserving would have cut everyone's tutor allowance (then 15) to 10 to fund a
-# fix for a promise we had already made; nobody should lose something so that
-# we can keep our word. At about 0.85p a message on Sonnet 5.5 it is about 4p
-# a day for someone who exhausts it daily, which almost nobody will.
-FREE_DHAMMA_DAILY_LIMIT = 5
-DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
+DHAMMA_AI_MODES = {'buddhist'}                 # modes that spend the Dhamma allowance
 
 # Which session key each pool counts in, and which constant sets its size.
 #
@@ -558,8 +422,10 @@ DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
 #
 # The limit is stored as the CONSTANT'S NAME rather than its value. Copying the
 # value here made this dict a second source of truth that silently won: the
-# constants above still looked authoritative, but changing one no longer changed
-# the gate, and the suite's monkeypatch of FREE_AI_DAILY_LIMIT stopped biting.
+# constants still looked authoritative, but changing one no longer changed the
+# gate, and the suite's monkeypatch of FREE_AI_DAILY_LIMIT stopped biting.
+# ai_pool_limit() looks the name up in THIS module's globals — the copy imported
+# from plans.py — so a test must patch app.FREE_AI_DAILY_LIMIT, not plans'.
 AI_POOLS = {
     'tutor':  {'key': 'count',  'limit_name': 'FREE_AI_DAILY_LIMIT'},
     'dhamma': {'key': 'dhamma', 'limit_name': 'FREE_DHAMMA_DAILY_LIMIT'},
@@ -588,99 +454,6 @@ def ai_pool_limit(pool_name, tier=None):
 AI_REPLY_TOKENS = 800
 AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
 
-# Pro is "unlimited" in the sense that matters to a learner, but not literally:
-# without a ceiling, one subscriber could run up more in API costs than they pay.
-# Was 150 on Haiku 4.5 at 0.285p a message. Sonnet 5.5 (2026-10-09) costs about
-# 0.85p for a fresh message and 0.3p for a cached follow-up in the same chat, so
-# 150 a day could cost more than the £16.58 a month annual Pro brings in. At 75,
-# a learner who maxes it out every day costs about £10 a month on a realistic mix
-# of fresh and follow-up messages, so Pro stays profitable. 75 is also the floor
-# test_the_ceiling_is_far_above_the_free_allowance sets (five times free), so
-# Pro stays clearly worth paying for. The Anthropic Console spend limit is the
-# hard backstop if anyone ever finds a pattern that costs more.
-#
-# Anyone who reaches it is not studying, and the reply says so kindly and
-# invites them to get in touch rather than treating them as an abuser.
-PRO_FAIR_USE_DAILY = 75
-
-# Pronunciation Analysis (🎤 Say it) is built but HIDDEN until a native speaker
-# has tried it (docs/pronunciation-review-*.xlsx): it cannot yet tell the mid
-# tone from the low one, and it should not be sold in Pro before someone who
-# hears Thai tones natively says its scores are fair. Two Render settings:
-#   PRONUNCIATION_TESTERS  usernames (comma-separated) who see it meanwhile,
-#                          so the reviewer can test it on their Pro account
-#   PRONUNCIATION_LIVE=1   on for every Pro learner, with its Premium card and
-#                          Pro feature line
-# Render restarts the app when a setting changes, so no code change is needed.
-PRONUNCIATION_LIVE = os.environ.get('PRONUNCIATION_LIVE', '').strip() == '1'
-
-
-def pronunciation_testers():
-    raw = os.environ.get('PRONUNCIATION_TESTERS', '')
-    return {name.strip().lower() for name in raw.split(',') if name.strip()}
-
-
-# Subscription tiers
-SUBSCRIPTION_TIERS = {
-    'free': {
-        'name': 'FREE Explorer (FREE)',
-        'price': 0,
-        'features': [
-            '✓ Thai alphabet — chart, flashcards & quiz',
-            '✓ Theravada Buddhism teachings',
-            '✓ Dhamma talks, in Thai and English wherever a translation exists',
-            '✓ Pra Kru Bob Dhamma articles',
-            '✓ Guided meditation sessions, timer & techniques',
-            f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
-            f'✓ Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
-            '✓ ThaiBridge Spelling guide',
-            '✓ Progress tracking & levelling',
-        ],
-        'max_level_access': 5,
-    },
-    'basic': {
-        'name': 'Thai Reader (Basic)',
-        'price': 9.99,
-        # Annual is priced at ten months, so a year up front saves two. It is a
-        # separate number rather than a computed discount because the round
-        # figure is the offer — £99 reads as a price, £99.90 reads as arithmetic.
-        'price_year': 99.00,
-        'features': [
-            '✓ Everything in FREE',
-            '✓ Vowels, syllables & Read & Write Script',
-            '✓ Tones & consonant classes',
-            '✓ Vocabulary, grammar & lessons',
-            '✓ Sentences & conversations, with audio',
-            '✓ Culture, formality, register & gender guides',
-            '✓ Themed exercise sets',
-            '✓ Tour Guide & Business Thai',
-            f'✓ AI Thai tutor — {BASIC_AI_DAILY_LIMIT} messages a day',
-            '✓ 2x points multiplier',
-        ],
-        'max_level_access': 7,
-        'points_multiplier': 2,
-    },
-    'pro': {
-        'name': 'Thai Master (Pro)',
-        'price': 19.99,
-        'price_year': 199.00,
-        'features': [
-            '✓ Everything in Thai Reader',
-            f'✓ Unlimited AI chat — every mode, fair use up to {PRO_FAIR_USE_DAILY}/day',
-            '✓ AI conversation partner with roleplay scenarios',
-            '✓ Culture AI Q&A',
-            '✓ AI exercise generator',
-            '✓ AI translator, English to Thai and back',
-            *(['✓ Pronunciation Analysis — see your tone next to the model\'s']
-              if PRONUNCIATION_LIVE else []),
-            '✓ Thai–English dictionary',
-            '✓ 3x points multiplier',
-            '✓ Priority support',
-        ],
-        'max_level_access': 10,
-        'points_multiplier': 3,
-    }
-}
 
 # Optional one-time add-on sold on top of Thai Master (Pro): the Instant Access
 # Pass flips full_unlock, skipping the level gates so every section
@@ -740,15 +513,6 @@ DANA = {
     'max_amount': 500,        # £, ceiling — a typo guard, not a judgement
 }
 
-# Points awarded for different actions
-POINT_REWARDS = {
-    'quiz_correct': 10,
-    'quiz_perfect': 50,
-    'first_visit': 5,
-    'daily_login': 15,
-    'complete_lesson': 30,
-    'unlock_section': 25,
-}
 
 # Achievements
 ACHIEVEMENTS = {
@@ -864,26 +628,6 @@ def log_ai_usage(feature, outcome, *, mode=None, model=None,
         db.session.rollback()
         app.logger.exception('Could not log AI usage')
 
-
-def active_tier():
-    """The subscription tier to enforce RIGHT NOW — the single source of truth.
-
-    For a logged-in user this comes from the DATABASE (User.effective_tier,
-    which already accounts for expiry and cancellation). For an anonymous
-    visitor we fall back to the session (which is 'free' by default).
-    """
-    if current_user.is_authenticated:
-        return current_user.effective_tier
-    return session.get('user_progress', {}).get('subscription_tier', 'free')
-
-
-def has_full_unlock():
-    """Whether the current visitor holds the one-time 'Instant Access Pass'
-    add-on. For a logged-in user the DATABASE is the source of truth; anonymous
-    visitors fall back to the session copy."""
-    if current_user.is_authenticated:
-        return bool(getattr(current_user, 'full_unlock', False))
-    return session.get('user_progress', {}).get('full_unlock', False)
 
 
 def monk_mode_active():
@@ -1208,16 +952,6 @@ def _ai_usage_today():
     usage.setdefault('dhamma', 0)
     return usage
 
-def _drill_xp_today():
-    """Today's drill-XP tally for this learner, resetting at midnight."""
-    init_user_progress()
-    user = session['user_progress']
-    today = datetime.now().strftime('%Y-%m-%d')
-    if user.get('drill_xp_date') != today:
-        user['drill_xp_date'] = today
-        user['drill_xp_today'] = 0
-        session.modified = True
-    return user.get('drill_xp_today', 0)
 
 
 def ai_limits_status():
@@ -1248,174 +982,6 @@ def ai_limits_status():
         'dhamma_modes': sorted(DHAMMA_AI_MODES),
     }
 
-def add_xp(points, action_description=""):
-    """Add XP to user and check for level up"""
-    init_user_progress()
-    user = session['user_progress']
-
-    tier = active_tier()
-    multiplier = SUBSCRIPTION_TIERS[tier].get('points_multiplier', 1)
-    points = int(points * multiplier)
-    
-    old_level = user['level']
-    user['xp'] += points
-    user['level'] = get_user_level(user['xp'])
-    
-    level_up = user['level'] > old_level
-    
-    session.modified = True
-    
-    return {
-        'points_earned': points,
-        'total_xp': user['xp'],
-        'level': user['level'],
-        'level_up': level_up,
-        'action': action_description
-    }
-
-# ── The earned unlock ────────────────────────────────────────────────────────
-# One paid section, opened by levelling instead of by paying.
-#
-# Every free-tier section is level 1, so XP earned on the free content unlocked
-# nothing at all: a free learner watched a progress bar fill toward a reward
-# that did not exist. This gives it one. On reaching EARNED_UNLOCK_LEVEL a
-# learner may open a single Thai Reader section, permanently, for nothing.
-#
-# Level 3 is 250 XP and the free sections are worth roughly 360 between them,
-# so it is reached by finishing what is already free rather than by grinding
-# drills. Deliberately ONE section, deliberately Basic only, and deliberately
-# limited to sections whose level they have already met — a door held open, not
-# a tier given away. The section they pick is the one they wanted most, which
-# makes it the best possible thing for them to have read before seeing a price.
-EARNED_UNLOCK_LEVEL = 3
-EARNED_UNLOCK_TIER = 'basic'
-
-
-def earned_unlock_spent_on():
-    """The section this learner spent their earned unlock on, or None.
-
-    Signed-out visitors never have one. Claiming it requires an account, because
-    an entitlement kept in a cookie is one that clearing cookies mints again —
-    a new free section per browser wipe.
-    """
-    if current_user.is_authenticated:
-        return current_user.earned_unlock_section
-    return None
-
-
-def earned_unlock_status():
-    """What to tell this learner about their earned unlock, for the dashboard.
-
-    The progress page is where the XP bar lives, so it is where the bar's
-    destination has to be named. Without this the reward was only discoverable
-    by chance — you found out you had one by opening a locked section and seeing
-    the button.
-    """
-    spent = earned_unlock_spent_on()
-    if spent:
-        return {
-            'state': 'spent',
-            'section': spent,
-            'section_name': spent.replace('_', ' ').title(),
-        }
-    user = session.get('user_progress') or {}
-    if user.get('level', 1) >= EARNED_UNLOCK_LEVEL:
-        return {'state': 'available', 'section': None, 'section_name': None}
-    return {
-        'state': 'locked',
-        'level': EARNED_UNLOCK_LEVEL,
-        'section': None,
-        'section_name': None,
-    }
-
-
-def earned_unlock_offer(section_id):
-    """Can this learner open `section_id` with their earned unlock right now?
-
-    Requires the level they have reached to already cover the section. Offering
-    a Level 5 section to a Level 3 learner would spend their one unlock on a
-    door that stays shut behind the level gate.
-    """
-    if earned_unlock_spent_on():
-        return False
-    user = session.get('user_progress') or {}
-    if user.get('level', 1) < EARNED_UNLOCK_LEVEL:
-        return False
-    requirements = SECTION_REQUIREMENTS.get(section_id)
-    if not requirements or requirements['tier'] != EARNED_UNLOCK_TIER:
-        return False
-    if user.get('level', 1) < requirements['level']:
-        return False
-    return tier_still_owed(requirements['tier'], user)
-
-
-def tier_still_owed(required_tier, user):
-    """Does this user still have to pay for a section on `required_tier`?
-
-    Pulled out of gate 3 so gate 2 can ask the same question without repeating
-    the hierarchy. Monk Mode does not change the answer — it opens the monk
-    track only, never a paid section.
-    """
-    tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
-    return tier_hierarchy[active_tier()] < tier_hierarchy[required_tier]
-
-
-def check_section_access(section_id):
-    """Check whether the current user can open a section.
-
-    Three independent gates, checked in order: alphabet completion, level/XP,
-    and subscription tier. Developer mode bypasses all of them.
-
-    Monk Mode plays no part here: it opens the monk track (its own routes)
-    and leaves every section below gated exactly as it is with Monk Mode off.
-    """
-    init_user_progress()
-    user = session['user_progress']
-
-    # Developer mode bypasses everything
-    if user.get('is_developer', False):
-        return True, "Developer Access"
-
-    if section_id not in SECTION_REQUIREMENTS:
-        return True, "No restrictions"
-
-    requirements = SECTION_REQUIREMENTS[section_id]
-
-    # The optional "full unlock" add-on (a paid extra on top of Thai Master)
-    # removes the progression grind: it skips the alphabet and level gates so
-    # everything opens instantly. It never touches the tier gate (it's sold on
-    # top of Pro, which already grants tier access) nor the AI usage cap.
-    full_unlock = has_full_unlock()
-
-    # Gate 1 — alphabet completion (skipped by the full-unlock add-on)
-    if not full_unlock and requirements.get('requires_alphabet', False):
-        if not check_alphabet_completion():
-            return False, "Complete Thai Alphabet first"
-
-    # Gate 2 — level / XP (skipped by the full-unlock add-on)
-    #
-    # The message names the payment as well, when one is still owed. The gates
-    # are checked in order and only the FIRST failure was ever reported, so a
-    # free learner looking at Level 5 Sentences was told "Requires Level 5",
-    # could grind all the way there, and only then discover a paywall behind
-    # it. The dashboard has always quoted both; the section itself did not.
-    if not full_unlock and user['level'] < requirements['level']:
-        message = f"Requires Level {requirements['level']}"
-        if tier_still_owed(requirements['tier'], user):
-            tier = SUBSCRIPTION_TIERS[requirements['tier']]
-            message += f" + {tier['name']} (£{tier['price']:.2f}/mo)"
-        return False, message
-
-    # Gate 3 — subscription tier (payment). Everyone is held to their real tier.
-    if tier_still_owed(requirements['tier'], user):
-        # ...unless this is the one section they opened by levelling. It waives
-        # payment for that section alone and never the level gate above it.
-        if earned_unlock_spent_on() == section_id:
-            return True, "Opened with your earned unlock"
-        tier_name = SUBSCRIPTION_TIERS[requirements['tier']]['name']
-        return False, f"Requires {tier_name} subscription"
-
-    return True, "Access granted"
 
 def unlock_section(section_id):
     """Unlock a section and award points"""
@@ -2397,30 +1963,6 @@ def fix_romanization_spacing(text):
 ALPHABET_QUIZ_TOTAL = 44
 ALPHABET_QUIZ_PASS_MARK = 35
 
-
-def check_alphabet_completion():
-    """Has this visitor passed the alphabet?
-
-    Same split as active_tier() and has_full_unlock(): for a logged-in user the
-    DATABASE is the source of truth, because the alphabet gates every other
-    section and must survive a cleared cookie or a move to another device.
-    Anonymous visitors have nowhere to persist it, so they fall back to the
-    session and lose it when the cookie goes.
-
-    A logged-in user's session copy is refreshed on the way past, so anything
-    reading session['user_progress'] directly sees the truth too.
-    """
-    init_user_progress()
-    user = session['user_progress']
-
-    if current_user.is_authenticated:
-        done = bool(getattr(current_user, 'alphabet_completed', False))
-        if user.get('alphabet_completed') != done:
-            user['alphabet_completed'] = done
-            session.modified = True
-        return done
-
-    return user.get('alphabet_completed', False)
 
 
 def mark_alphabet_complete():
@@ -6314,7 +5856,7 @@ def pay_drill_answer(is_correct, scored):
     capped = False
     
     if is_correct and scored:
-        remaining = max(0, DRILL_XP_DAILY_CAP - _drill_xp_today())
+        remaining = max(0, DRILL_XP_DAILY_CAP - drill_xp_today())
         if remaining > 0:
             result = add_xp(min(POINT_REWARDS['quiz_correct'], remaining),
                             'Correct answer')
