@@ -49,7 +49,7 @@
         return n;
     }
 
-    /* The near-the-letter zone: the page uses it to colour ink red the
+    /* The near-the-letter zone: the page uses it to colour ink orange the
        moment it leaves the letter. */
     function zone(letter, size) {
         return dilate(letter, size, REACH);
@@ -98,7 +98,7 @@
         if (done) {
             message = '✅ Well done — that\'s the whole letter, neatly on the line.';
         } else if (offShare > OFF_WARN) {
-            message = 'Some of your lines wander off the letter (shown in red). ' +
+            message = 'Some of your lines wander off the letter (shown in orange). ' +
                       'Slow down and stay on the guide.';
         } else if (share >= DONE_COVER) {
             message = 'All of it is covered, but a little ink strays off the line. ' +
