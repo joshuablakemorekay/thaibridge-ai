@@ -4272,3 +4272,63 @@ watch it fail, is what showed the safeguard really matters.
 **References / Conversations**
 Commits `303edb5` and `10e3778` (the move); this session's clean-up and
 journal commits.
+
+## 27 October 2026 — The four "coming soon" features, built for real
+
+**TL;DR:**
+- The Premium page's four greyed-out promises are now real features, merged
+  in PR #32 and live.
+- Pronunciation Analysis is built but hidden until my Thai teacher has tested it.
+- Three paid quizzes were open to everyone. They're locked now.
+
+> before we commit it in three commits, can we complete all 4 of these fully? I have a native speaker who can check the Pronunciation Analysis and Listening Exercises.
+
+### How we did it
+
+I asked whether the first Learning Path was really what the card promised:
+
+> is this teh actual 📊 Personalized Learning Path (IEP)
+
+It wasn't, so it was rebuilt like a real IEP: a starting check, measurable
+weekly targets, a weekly review.
+
+> build the fuller IEP version and keep the name. Is this genuinely going to be an improvement to the app?
+
+Then came Listening, Pronunciation and Writing, each tested in a real browser
+where possible. Eight commits, each tested on its own, went in through a pull
+request.
+
+### The bit worth keeping
+
+> Maybe Pronunciation Analysis isn't good enough to have on the app?
+
+It can't tell the mid tone from the low one, so:
+
+> hide Pronunciation until reviewed, lock the three quizzes, then commit
+
+My teacher gets review sheets, because:
+
+> They could make a note of corrections for each mistake so that I can fix change and fix them.
+
+**Engineering Contribution**
+
+- *Decisions made:* "how you like to practise" replaced "learning style",
+  which isn't backed by research. Kept the name IEP. Hid Pronunciation behind
+  Render settings instead of selling it. Locked Theravada vocabulary as
+  language tooling. Went through a branch and PR, not straight to main.
+  Pinned the CI machine to Ubuntu 24.04 instead of changing Render's Python.
+- *Improvements made to generated code:* a test caught an opposite tone
+  scoring 56/100, so the wrong direction is now capped at 45. Testing the
+  real voice showed octave glitches, and showed that rising tones dip before
+  they climb, and the measuring was changed to handle both. In the
+  engineering pass, stray ink went from red to a bright orange so
+  colour-blind learners can tell it apart, and the conversation tests got
+  their own file.
+- *Roughly how much was accepted as-is vs engineered on:* most of the feature
+  code went in as drafted. The scoring rules, the hiding, the quiz-lock fix
+  and the accessibility change came from checking it against real audio, a
+  browser and my questions.
+
+**References / Conversations**
+PR #32 (`a8a4b2f`…`440921e`, `fb61323`), merge `29255d6`. Review sheets in
+`docs/`.
