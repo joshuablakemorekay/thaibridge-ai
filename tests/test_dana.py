@@ -23,6 +23,7 @@ Run with:  pytest tests/test_dana.py -v
 """
 
 import os
+import re
 import pytest
 from unittest.mock import patch
 from werkzeug.datastructures import MultiDict
@@ -149,9 +150,11 @@ def test_the_thank_you_page_grants_nothing(client):
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)
     assert "Thank you" in body
-    # No entitlement language anywhere on the page.
+    # No entitlement language anywhere on the page. Whole words only: the
+    # site menu's "Expat2000" link contains the letters "xp".
     for forbidden in ("unlocked", "upgraded", "your tier", "XP"):
-        assert forbidden.lower() not in body.lower(), f"thank-you page promises {forbidden!r}"
+        assert not re.search(rf"\b{re.escape(forbidden)}\b", body, re.IGNORECASE), \
+            f"thank-you page promises {forbidden!r}"
 
 
 def test_a_dana_webhook_event_grants_nothing(client):
