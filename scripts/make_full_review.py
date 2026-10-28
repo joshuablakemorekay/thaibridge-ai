@@ -47,6 +47,7 @@ batch1 = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(batch1)
 
 app = batch1.app
+import expat2000  # noqa: E402
 import thai_reading  # noqa: E402
 import tour_trips  # noqa: E402
 
@@ -114,6 +115,8 @@ def checklist():
         add("Tour Guide Thai", "Trip: " + trip.get("title", trip["key"]), "/tour-guide",
             "Play the trip through: what you hear and the answers")
     add("Business Thai", "Whole page", "/business-thai")
+    add("Expat2000", "Every mission: " + ", ".join(m["title"] for m in expat2000.MISSIONS), "/expat2000",
+        "The Thai is in the 'Say it in Thai' cards and their notes")
     add("Monk Mode", "Lesson list", "/monk/lessons", "Needs the Monk Mode code first")
     for topic in app.MONK_TOPICS:
         add("Monk Mode", "Lesson: " + en(topic.get("title")), "/monk/lesson/" + topic["topic"])
@@ -175,6 +178,7 @@ def all_lines():
     for talk in app.DHAMMA_TALKS:
         sheet.walk("Dhamma talk: " + en(talk.get("title")), "/dhamma-talk/" + talk["slug"], talk)
     sheet.walk("Journal", "/journal", app.JOURNAL_ENTRIES)
+    sheet.walk("Expat2000", "/expat2000", expat2000.MISSIONS)
     # The batch-1 pass only lists switcher versions that have a 'thai' field;
     # notes-only versions (e.g. the monastic tips) carry Thai too.
     sheet.walk("Register switcher (shown on several pages)", "/survival",
@@ -217,7 +221,7 @@ FINDING_PAGES = [
     "Grammar Guide", "Formality Levels", "Gender Guide", "Tones & Consonant Classes",
     "Vowels & Syllables", "Read & Write Script", "ThaiBridge Spelling", "Dictionary",
     "Thai Culture", "Theravada Dhamma", "Meditation", "Tour Guide Thai", "Business Thai",
-    "Monk Mode", "AI Tutor", "Other pages",
+    "Expat2000", "Monk Mode", "AI Tutor", "Other pages",
 ]
 TYPES = ["1. Wrong / ผิด", "2. Unnatural / ไม่เป็นธรรมชาติ", "3. Spelling / คำอ่านผิด",
          "4. Culturally off / ไม่เหมาะกับวัฒนธรรม"]
