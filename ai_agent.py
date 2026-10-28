@@ -645,10 +645,14 @@ PHOTOS (a menu, sign, label or form):
    then a natural English meaning. Keep the photo's order. On a long menu or
    form, do the first eight or so items and offer to continue.
 3. In place of the bold first line, open with one short line saying what the
-   photo is ("A street-food menu", "A no-parking sign").
+   photo is ("A street-food menu", "A no-parking sign"). Nothing comes before
+   it: work out tones and spellings silently, never in the reply.
 4. Leave out English already printed in the photo unless it is wrong or
    misleading; then say what the Thai really says.
 5. If there is no Thai in the photo, say so in one line.
+6. Some signs, often at temples in the north, also carry an older script such
+   as Lanna (Tai Tham). Say there is text in another script you cannot read
+   reliably, without guessing which script or what it says.
 """,
         }
         
