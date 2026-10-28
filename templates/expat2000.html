@@ -1,0 +1,452 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Expat2000 — set up your life in Thailand (FREE){% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── Hero ────────────────────────────────────────────────────────────
+       The one page on the site allowed to shout. It is a launch, and the
+       people it is for arrive from a search result deciding in five seconds
+       whether to stay. */
+    .x2k-hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        padding: 2.5rem 1.5rem 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #fff;
+        background: linear-gradient(120deg, #6A1B9A, #C2185B, #FF9800, #6A1B9A);
+        background-size: 300% 300%;
+        animation: x2k-shift 14s ease infinite;
+    }
+    @keyframes x2k-shift {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .x2k-badge {
+        display: inline-block;
+        padding: 0.25rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.2);
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    /* base.css styles every h1 purple, serif and underlined. On this
+       gradient that is purple-on-orange, so the wordmark opts out. */
+    .x2k-hero .x2k-wordmark {
+        color: #fff;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        padding-bottom: 0;
+        font-size: clamp(2.6rem, 9vw, 4.8rem);
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin: 0.6rem 0 0.4rem;
+        text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    .x2k-hero .x2k-wordmark::after { display: none; }
+    .x2k-wordmark span { color: #FFE082; }
+    .x2k-strap { font-size: 1.15rem; max-width: 620px; margin: 0 auto 1.2rem; opacity: 0.95; }
+    .x2k-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+    .x2k-stat {
+        background: rgba(0,0,0,0.18);
+        border-radius: 10px;
+        padding: 0.45rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    .x2k-stat strong { font-size: 1.1rem; }
+
+    /* ── Progress ────────────────────────────────────────────────────────
+       Ticks live in the visitor's own browser. No account needed, which is
+       the point — and nothing breaks if storage is blocked. */
+    .x2k-progress {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.1rem 1.25rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid #eadfca;
+        border-radius: 14px;
+        background: var(--silk-ivory, #fffdf7);
+    }
+    .x2k-ring { width: 84px; height: 84px; flex-shrink: 0; }
+    .x2k-ring circle { fill: none; stroke-width: 9; }
+    .x2k-ring .track { stroke: #eadfca; }
+    .x2k-ring .fill {
+        stroke: var(--royal-purple, #6A1B9A);
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+        transition: stroke-dashoffset 0.5s ease;
+    }
+    .x2k-ring text { font-size: 20px; font-weight: bold; fill: #333; }
+    .x2k-rank-label { font-size: 0.8rem; color: #777; text-transform: uppercase; letter-spacing: 0.06em; }
+    .x2k-rank { font-size: 1.35rem; font-weight: bold; color: var(--royal-purple, #6A1B9A); }
+    .x2k-rank-next { font-size: 0.9rem; color: #666; }
+
+    /* ── Mission picker ──────────────────────────────────────────────── */
+    .x2k-missions {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+        gap: 0.6rem;
+        margin-bottom: 2.5rem;
+    }
+    .x2k-tile {
+        display: block;
+        padding: 0.8rem 0.6rem;
+        border: 2px solid #eadfca;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+        background: var(--silk-ivory, #fffdf7);
+        transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .x2k-tile:hover { transform: translateY(-3px); border-color: var(--royal-purple, #6A1B9A); }
+    .x2k-tile-emoji { font-size: 1.8rem; display: block; }
+    .x2k-tile-title { font-weight: bold; font-size: 0.9rem; display: block; margin: 0.2rem 0; }
+    .x2k-tile-count { font-size: 0.75rem; color: #888; }
+    .x2k-tile.done { border-color: #2e7d32; background: #f1f8e9; }
+    .x2k-tile.done .x2k-tile-count { color: #2e7d32; font-weight: bold; }
+
+    /* ── A mission ───────────────────────────────────────────────────── */
+    .x2k-mission {
+        margin-bottom: 2.5rem;
+        border-radius: 16px;
+        border: 1px solid #eadfca;
+        background: #fff;
+        overflow: hidden;
+        scroll-margin-top: 1rem;
+    }
+    .x2k-mission-head {
+        padding: 1.1rem 1.25rem;
+        background: linear-gradient(90deg, #f3e5f5, #fff8e1);
+        border-bottom: 1px solid #eadfca;
+    }
+    .x2k-mission-head h2 { margin: 0; }
+    .x2k-mission-num { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8e24aa; font-weight: bold; }
+    .x2k-tagline { margin: 0.2rem 0 0; color: #666; }
+    .x2k-body { padding: 1rem 1.25rem 1.25rem; }
+    .x2k-body h3 { font-size: 1rem; margin: 1.1rem 0 0.5rem; }
+    .x2k-body h3:first-child { margin-top: 0; }
+
+    .x2k-know { padding-left: 1.2rem; margin: 0; }
+    .x2k-know li { margin-bottom: 0.5rem; line-height: 1.55; }
+    .x2k-sources { font-size: 0.85rem; margin-top: 0.4rem; }
+    .x2k-sources a { margin-right: 0.8rem; white-space: nowrap; }
+
+    .x2k-do { list-style: none; padding: 0; margin: 0; }
+    .x2k-do li { margin-bottom: 0.35rem; }
+    .x2k-do label {
+        display: flex;
+        gap: 0.6rem;
+        align-items: flex-start;
+        padding: 0.45rem 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .x2k-do label:hover { background: #faf5ff; }
+    .x2k-do input { width: 1.15rem; height: 1.15rem; margin-top: 0.15rem; accent-color: #2e7d32; flex-shrink: 0; }
+    .x2k-do input:checked + span { color: #888; text-decoration: line-through; }
+
+    /* Phrase cards: same look as Survival Thai, so the two read as one course. */
+    .x2k-say {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 0.65rem;
+    }
+    .x2k-phrase {
+        border: 1px solid #eadfca;
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+        background: var(--silk-ivory, #fffdf7);
+    }
+    .x2k-phrase .thai-text { font-size: 1.4rem; line-height: 1.5; }
+    .x2k-paiboon { font-family: 'Courier New', monospace; color: var(--royal-purple, #6A1B9A); font-weight: bold; margin: 0.15rem 0; }
+    .x2k-english { color: #333; }
+    .x2k-note { color: #777; font-size: 0.85rem; margin-top: 0.35rem; font-style: italic; }
+    .x2k-particle { margin-top: 0.45rem; padding-top: 0.45rem; border-top: 1px dotted #eadfca; font-size: 0.82rem; color: #666; }
+
+    .x2k-sos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .x2k-sos a {
+        display: block;
+        text-align: center;
+        padding: 0.6rem;
+        border-radius: 10px;
+        background: #ffebee;
+        color: #b71c1c;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .x2k-sos a span { display: block; font-size: 1.4rem; }
+
+    .x2k-warn {
+        max-width: 760px;
+        margin: 0 auto 1.5rem;
+        padding: 0.9rem 1.1rem;
+        border-left: 4px solid var(--saffron, #FF9800);
+        background: #FFF8DC;
+        border-radius: 8px;
+        color: #6a5520;
+        font-size: 0.9rem;
+    }
+
+    .x2k-finale { text-align: center; margin: 2.5rem 0 1rem; }
+    .x2k-finale .btn { margin: 0.3rem; }
+
+    /* The confetti moment when a mission is finished. Kept small and quick. */
+    .x2k-toast {
+        position: fixed;
+        left: 50%;
+        bottom: 1.5rem;
+        transform: translate(-50%, 1rem);
+        /* Hidden by opacity, not by sliding off-screen: inside the site's
+           layout the slide stopped short and left a green sliver showing. */
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background: #2e7d32;
+        color: #fff;
+        padding: 0.75rem 1.2rem;
+        border-radius: 999px;
+        font-weight: bold;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        transition: transform 0.35s ease, opacity 0.35s ease, visibility 0.35s;
+        z-index: 1000;
+        max-width: calc(100% - 2rem);
+        text-align: center;
+    }
+    .x2k-toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+
+    @media (prefers-reduced-motion: reduce) {
+        .x2k-hero { animation: none; }
+        .x2k-tile, .x2k-toast, .x2k-ring .fill { transition: none; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="x2k-hero">
+    <span class="x2k-badge">✨ New · Free · No account needed</span>
+    <h1 class="x2k-wordmark">EXPAT<span>2000</span></h1>
+    <p class="x2k-strap">
+        Everything you need to set up a life (and a laptop) in Thailand —
+        visas, money, phone, home, health — plus the Thai to sort it all out yourself.
+    </p>
+    <div class="x2k-stats">
+        <div class="x2k-stat"><strong>{{ missions|length }}</strong> missions</div>
+        <div class="x2k-stat"><strong>{{ task_count }}</strong> checklist steps</div>
+        <div class="x2k-stat"><strong>{{ phrase_count }}</strong> Thai phrases</div>
+        <div class="x2k-stat">✅ Facts checked {{ last_checked }}</div>
+    </div>
+</section>
+
+<div class="x2k-progress" aria-live="polite">
+    <svg class="x2k-ring" viewBox="0 0 100 100" aria-hidden="true">
+        <circle class="track" cx="50" cy="50" r="42"></circle>
+        <circle class="fill" id="x2k-ring-fill" cx="50" cy="50" r="42"></circle>
+        <text x="50" y="57" text-anchor="middle" id="x2k-ring-text">0%</text>
+    </svg>
+    <div>
+        <div class="x2k-rank-label">Your rank</div>
+        <div class="x2k-rank" id="x2k-rank">✈️ Just landed</div>
+        <div class="x2k-rank-next" id="x2k-rank-next">Tick off the steps below as you go. Your progress saves in this browser.</div>
+    </div>
+</div>
+
+{# A div, not <nav>: base.css paints every nav as the purple site bar. #}
+<div class="x2k-missions" role="navigation" aria-label="Missions">
+    {% for m in missions %}
+    <a href="#{{ m.key }}" class="x2k-tile" data-mission="{{ m.key }}">
+        <span class="x2k-tile-emoji">{{ m.emoji }}</span>
+        <span class="x2k-tile-title">{{ m.title }}</span>
+        <span class="x2k-tile-count" data-count="{{ m.key }}">0 / {{ m.do|length }}</span>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="x2k-warn">
+    ⚠️ <strong>Rules change.</strong> We checked every fact here on {{ last_checked }},
+    but visa and tax rules in Thailand move fast. Always confirm with the official
+    sources linked in each mission. This is a friendly guide, not legal or tax advice.
+</div>
+
+{% for m in missions %}
+<section class="x2k-mission" id="{{ m.key }}">
+    <div class="x2k-mission-head">
+        <div class="x2k-mission-num">Mission {{ loop.index }} of {{ missions|length }}</div>
+        <h2>{{ m.emoji }} {{ m.title }}</h2>
+        <p class="x2k-tagline">{{ m.tagline }}</p>
+    </div>
+    <div class="x2k-body">
+        <h3>📘 Know</h3>
+        <ul class="x2k-know">
+            {% for fact in m.know %}<li>{{ fact }}</li>{% endfor %}
+        </ul>
+        {% if m.key == 'fit-in' %}
+        <p class="x2k-sources">Go deeper: <a href="/culture">🎭 Thai culture &amp; temple etiquette</a></p>
+        {% endif %}
+        {% if m.links %}
+        <p class="x2k-sources">
+            Official sources:
+            {% for key in m.links %}
+            <a href="{{ links[key].url }}" target="_blank" rel="noopener">🔗 {{ links[key].label }}</a>
+            {% endfor %}
+        </p>
+        {% endif %}
+
+        <h3>✅ Do</h3>
+        <ul class="x2k-do">
+            {% for task in m.do %}
+            <li>
+                <label>
+                    <input type="checkbox" data-task="{{ m.key }}:{{ task.id }}" data-mission="{{ m.key }}">
+                    <span>{{ task.text }}</span>
+                </label>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>🗣️ Say it in Thai</h3>
+        <div class="x2k-say">
+            {% for phrase in m.say %}
+            <div class="x2k-phrase">
+                <div class="thai-text">{{ phrase.thai }}</div>
+                <div class="x2k-paiboon">{{ phrase.paiboon }}</div>
+                <div class="x2k-english">{{ phrase.english }}</div>
+                {% if phrase.note %}<div class="x2k-note">{{ phrase.note }}</div>{% endif %}
+                {% if phrase.particle %}
+                {# Both particles, always — same reasoning as Survival Thai. #}
+                <div class="x2k-particle">
+                    Add <span class="thai-text">{{ particle.male.thai }}</span>
+                    <em>({{ particle.male.paiboon }})</em> if you are male,
+                    <span class="thai-text">{{ particle.female.thai }}</span>
+                    <em>({{ particle.female.paiboon }})</em> if you are female.
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endfor %}
+
+<h2 style="text-align:center;">🆘 Save these numbers now</h2>
+<div class="x2k-sos">
+    <a href="tel:1669"><span>1669</span>Ambulance</a>
+    <a href="tel:191"><span>191</span>Police</a>
+    <a href="tel:1155"><span>1155</span>Tourist police (English)</a>
+    <a href="tel:199"><span>199</span>Fire</a>
+</div>
+
+<div class="x2k-warn">
+    ⚠️ <strong>Draft translations.</strong> The Thai on this page is a first draft
+    and is still being checked by a native-speaker teacher. If something reads
+    oddly to you, please <a href="/contact">tell us</a>.
+</div>
+
+<div class="x2k-finale">
+    <p><strong>Set up? Now make Thailand feel like home.</strong></p>
+    <a href="/survival" class="btn btn-saffron">🗣️ Start Survival Thai (free)</a>
+    <a href="/business-thai" class="btn btn-secondary">💼 Business Thai</a>
+    <a href="/chat" class="btn btn-secondary">🤖 Ask the AI Tutor</a>
+</div>
+
+<div class="x2k-toast" id="x2k-toast" role="status"></div>
+
+<script>
+(function () {
+    // Ticks are a per-visitor convenience, so browser storage is the right
+    // home for them. Every read and write is guarded: a private window or
+    // blocked storage just means the ticks don't survive a reload.
+    var KEY = 'expat2000-ticks';
+    var RANKS = [
+        [0,   '✈️ Just landed'],
+        [15,  '🧳 Finding my feet'],
+        [40,  '🛵 Getting the hang of it'],
+        [70,  '🏠 Settled in'],
+        [100, '🚀 Expat2000 legend']
+    ];
+    var boxes = Array.prototype.slice.call(document.querySelectorAll('.x2k-do input'));
+    var ticks = {};
+    try { ticks = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { ticks = {}; }
+
+    var ring = document.getElementById('x2k-ring-fill');
+    var circumference = 2 * Math.PI * 42;
+    ring.style.strokeDasharray = circumference;
+
+    function rankFor(pct) {
+        var current = RANKS[0], next = null;
+        for (var i = 0; i < RANKS.length; i++) {
+            if (pct >= RANKS[i][0]) { current = RANKS[i]; next = RANKS[i + 1] || null; }
+        }
+        return { current: current, next: next };
+    }
+
+    function missionDone(key) {
+        var mine = boxes.filter(function (b) { return b.dataset.mission === key; });
+        return mine.every(function (b) { return b.checked; });
+    }
+
+    function render() {
+        var done = boxes.filter(function (b) { return b.checked; }).length;
+        var pct = boxes.length ? Math.round(done * 100 / boxes.length) : 0;
+        ring.style.strokeDashoffset = circumference * (1 - pct / 100);
+        document.getElementById('x2k-ring-text').textContent = pct + '%';
+        var r = rankFor(pct);
+        document.getElementById('x2k-rank').textContent = r.current[1];
+        document.getElementById('x2k-rank-next').textContent = r.next
+            ? done + ' of ' + boxes.length + ' steps done. Next rank at ' + r.next[0] + '%: ' + r.next[1]
+            : 'Every step done. Welcome home. 🙏';
+
+        document.querySelectorAll('.x2k-tile').forEach(function (tile) {
+            var key = tile.dataset.mission;
+            var mine = boxes.filter(function (b) { return b.dataset.mission === key; });
+            var n = mine.filter(function (b) { return b.checked; }).length;
+            tile.querySelector('.x2k-tile-count').textContent =
+                n === mine.length ? '✓ Complete' : n + ' / ' + mine.length;
+            tile.classList.toggle('done', n === mine.length);
+        });
+    }
+
+    var toastTimer;
+    function toast(text) {
+        var el = document.getElementById('x2k-toast');
+        el.textContent = text;
+        el.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2600);
+    }
+
+    boxes.forEach(function (box) {
+        box.checked = !!ticks[box.dataset.task];
+        box.addEventListener('change', function () {
+            if (box.checked) { ticks[box.dataset.task] = true; } else { delete ticks[box.dataset.task]; }
+            try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch (e) {}
+            if (box.checked && missionDone(box.dataset.mission)) {
+                var title = document.querySelector('#' + box.dataset.mission + ' h2').textContent.trim();
+                toast('🎉 Mission complete: ' + title);
+            }
+            render();
+        });
+    });
+    render();
+})();
+</script>
+
+{% include 'partials/thai_audio_wiring.html' %}
+{% endblock %}

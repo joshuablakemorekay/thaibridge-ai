@@ -33,6 +33,33 @@
         </div>
     </div>
 
+    {# Expat2000 launch strip. Above Start Here on purpose: it is the one thing
+       on the home page aimed at people who came for practical help rather
+       than the Dhamma or the language, and they decide fast. #}
+    <a href="/expat2000" class="x2k-home-strip">
+        <span class="x2k-home-new">NEW</span>
+        <span class="x2k-home-word">EXPAT<span>2000</span></span>
+        <span class="x2k-home-text">Moving to Thailand to live or work? Visas, banking, SIM, condo, health — and the Thai to sort it. Free.</span>
+        <span class="x2k-home-go">Start your missions →</span>
+    </a>
+    <style>
+        .x2k-home-strip {
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+            gap: 0.4rem 1rem; margin: 1.5rem 0; padding: 1rem 1.25rem;
+            border-radius: 14px; color: #fff; text-decoration: none; text-align: center;
+            background: linear-gradient(120deg, #6A1B9A, #C2185B, #FF9800);
+            box-shadow: 0 6px 20px rgba(106,27,154,0.25);
+            transition: transform 0.15s ease;
+        }
+        .x2k-home-strip:hover { transform: translateY(-2px); color: #fff; }
+        .x2k-home-new { background: #FFE082; color: #6A1B9A; font-weight: bold; font-size: 0.75rem; padding: 0.15rem 0.55rem; border-radius: 999px; }
+        .x2k-home-word { font-weight: 900; font-size: 1.6rem; letter-spacing: -0.02em; }
+        .x2k-home-word span { color: #FFE082; }
+        .x2k-home-text { max-width: 34rem; }
+        .x2k-home-go { font-weight: bold; text-decoration: underline; }
+        @media (prefers-reduced-motion: reduce) { .x2k-home-strip { transition: none; } }
+    </style>
+
     <!-- Start Here: the visitor picks a track before being shown one.
          Previously the only route in was "learn the alphabet", which told
          someone here for the Dhamma that they had to learn Thai first — not
