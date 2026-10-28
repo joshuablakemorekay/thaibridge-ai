@@ -17,6 +17,7 @@ import anthropic
 import base64
 import binascii
 import os
+import re
 from typing import Dict, List, Optional
 import json
 from datetime import datetime
@@ -331,6 +332,52 @@ def _tool_results(response) -> List[Dict]:
             continue
         results.append({'type': 'tool_result', 'tool_use_id': block.id, 'content': content})
     return results
+
+
+# Tone working the model sometimes writes before its answer despite being
+# told not to (see the reminder in tutor_reference.reference_for): a heading
+# such as "Working out the tones:", then lines like
+# "- ถาม: ถ high class, live syllable ..., so rising tone: tǎam".
+_WORKING_HEADING = re.compile(
+    r'^\W*(working out|working through|let me work out|first,? let me work out)'
+    r'[^\n]{0,40}:\W*$', re.IGNORECASE)
+_WORKING_LINE = re.compile(
+    r'^[\s\-*•\d.)]*[฀-๿]+\S*\s*:.*\b(high|middle|mid|low)[- ]class\b.*\btone\b',
+    re.IGNORECASE)
+# A student who asks how a tone works should see the working: it is the answer.
+_ASKED_FOR_WORKING = re.compile(r'tone|class|วรรณยุกต์', re.IGNORECASE)
+
+
+def _without_working(text: str, message: str = '') -> str:
+    """`text` with any tone working cut from its start, unless asked for.
+
+    Only a block at the very start goes, and only when an answer follows it,
+    so a reply can never be emptied or lose anything after its first line.
+    """
+    if _ASKED_FOR_WORKING.search(message or ''):
+        return text
+    lines = text.split('\n')
+    i, working = 0, 0
+    while i < len(lines):
+        line = lines[i]
+        if _WORKING_LINE.match(line):
+            working += 1
+        elif not (line.strip() == '' or (i == 0 and _WORKING_HEADING.match(line))):
+            break
+        i += 1
+    rest = '\n'.join(lines[i:]).strip()
+    return rest if working and rest else text
+
+
+def _all_working(text: str) -> bool:
+    """True while every finished line of a reply so far is tone working
+    (or a blank or heading), so a streamed reply knows to keep holding it."""
+    lines = text.split('\n')[:-1]   # the last line may still be arriving
+    if not any(_WORKING_LINE.match(l) for l in lines):
+        return False
+    return all(l.strip() == '' or _WORKING_LINE.match(l)
+               or (n == 0 and _WORKING_HEADING.match(l))
+               for n, l in enumerate(lines))
 
 
 def _checked(text: str) -> str:
@@ -919,6 +966,7 @@ scene moving. Open the scene yourself with a natural first line in character.
             text, response = self._ask(model, system, messages, max_tokens)
         except Exception as e:
             return self._failure(e)
+        text = _without_working(text, message)
         return self._finish_turn(session_id, mode, model, text, response,
                                  remember=history is None)
 
@@ -975,14 +1023,16 @@ scene moving. Open the scene yourself with a natural first line in character.
                     # model about to look words up sometimes says so first
                     # ("Let me check those spellings"), and that line is for
                     # no one. Once the text is longer than any such line, it
-                    # is the answer, and it streams as normal.
+                    # is the answer, and it streams as normal. Tone working
+                    # at the start is held for as long as it runs, and is
+                    # cut before the answer goes out (see _without_working).
                     for text in stream.text_stream:
                         parts.append(text)
                         if held is not None:
                             held += text
-                            if len(held) < HELD_BACK_CHARS:
+                            if len(held) < HELD_BACK_CHARS or _all_working(held):
                                 continue
-                            text, held = held, None
+                            text, held = _without_working(held, message), None
                         shown.append(text)
                         yield {'type': 'text', 'text': text}
                     final = stream.get_final_message()
@@ -992,6 +1042,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 looked_up = final.stop_reason == 'tool_use' and round_no < MAX_TOOL_ROUNDS
                 if held and not looked_up:
                     # A short answer, all of it still held back.
+                    held = _without_working(held, message)
                     shown.append(held)
                     yield {'type': 'text', 'text': held}
                 if not looked_up:
@@ -1002,7 +1053,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 opened = open_stream(messages, round_no + 1)
             # The answer is the last request's words: anything written before
             # a lookup was the model talking to itself, not to the student.
-            text = _checked(''.join(parts))
+            text = _without_working(_checked(''.join(parts)), message)
             if text != ''.join(shown):
                 yield {'type': 'replace', 'text': text}
             done = self._finish_turn(session_id, mode, model, text, answer,
