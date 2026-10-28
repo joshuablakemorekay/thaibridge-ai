@@ -457,6 +457,9 @@ def ai_pool_limit(pool_name, tier=None):
 # exercise with its answer key is long by nature, so the generator gets more.
 AI_REPLY_TOKENS = 800
 AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
+# A photo of a menu or form lists several items, each with its Thai, spelling
+# and meaning, and Thai script is token-heavy, so it gets more room than a typed reply.
+AI_PHOTO_REPLY_TOKENS = 1500
 
 
 # Optional one-time add-on sold on top of Thai Master (Pro): the Instant Access
@@ -6948,7 +6951,7 @@ def _count_ai_message(mode):
 
 
 def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, lens,
-                     history):
+                     history, photo=None, max_tokens=None):
     """The tutor's reply sent as it is written, one JSON line per piece.
 
     A Sonnet answer takes several seconds; sent in one piece, the page sat on
@@ -6970,10 +6973,11 @@ def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, le
         mode=mode,
         session_id=session_id,
         user_context=user_context,
-        max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
+        max_tokens=max_tokens or AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
         scenario=scenario,
         lens=lens,
         history=history,
+        photo=photo,
     )
     model = ai_agent.model_for(mode)
     if failure:
@@ -7046,6 +7050,25 @@ def ai_chat():
         if blocked:
             return blocked
 
+        # A photo for the Translator to read (a menu, a sign). Checked after
+        # the gate, so Free and Basic still see the Pro lock rather than an
+        # error about the photo. It counts as one message, like a typed one.
+        photo = None
+        if data.get('photo') is not None:
+            from ai_agent import PHOTO_MODES, DEFAULT_PHOTO_MESSAGE, photo_block
+            if mode not in PHOTO_MODES:
+                return jsonify({'success': False,
+                                'message': 'Photos can only be sent in Translator mode.'}), 400
+            try:
+                photo = photo_block(data['photo'])
+            except ValueError:
+                return jsonify({'success': False,
+                                'message': "That photo couldn't be read. Please try "
+                                           "a JPEG or PNG under 4 MB."}), 400
+            message = message.strip() or DEFAULT_PHOTO_MESSAGE
+        max_tokens = (AI_PHOTO_REPLY_TOKENS if photo
+                      else AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS))
+
         # Get user context from session
         user_context = {
             'level': session.get('level', 1),
@@ -7055,7 +7078,7 @@ def ai_chat():
 
         if data.get('stream'):
             return _stream_ai_reply(tier, mode, message, session_id, user_context,
-                                    scenario, lens, history)
+                                    scenario, lens, history, photo, max_tokens)
 
         # Get AI response (max_tokens controls API cost)
         response = ai_agent.chat(
@@ -7063,10 +7086,11 @@ def ai_chat():
             mode=mode,
             session_id=session_id,
             user_context=user_context,
-            max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
+            max_tokens=max_tokens,
             scenario=scenario,
             lens=lens,
-            history=history
+            history=history,
+            photo=photo
         )
 
         # Record what it cost. ai_agent has returned these token counts all

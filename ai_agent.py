@@ -14,7 +14,10 @@ Modes:
 """
 
 import anthropic
+import base64
+import binascii
 import os
+import re
 from typing import Dict, List, Optional
 import json
 from datetime import datetime
@@ -150,6 +153,53 @@ DEFAULT_DHAMMA_LENS = 'universal'
 MAX_HISTORY_MESSAGES = 20
 MAX_HISTORY_CHARS = 16000
 
+# A photo of a menu, sign or form, read by the Translator. Only that mode takes
+# one: it is the mode whose job is "what does this Thai say?", and a photo
+# costs more than a typed message. The page shrinks a photo before sending it
+# (see chat.html), so a real one is well under this; the cap is for a page
+# that has been edited to skip that. The API itself refuses anything over 5 MB.
+PHOTO_MODES = {'translator'}
+PHOTO_MEDIA_TYPES = {'image/jpeg', 'image/png', 'image/webp'}
+MAX_PHOTO_BYTES = 4 * 1024 * 1024
+# What is asked when a photo arrives with nothing typed alongside it.
+DEFAULT_PHOTO_MESSAGE = "Please read the Thai in this photo and translate it."
+# The first bytes of each allowed type, so a file has to be what it claims.
+_PHOTO_SIGNATURES = {
+    'image/jpeg': (b'\xff\xd8\xff',),
+    'image/png': (b'\x89PNG\r\n\x1a\n',),
+    'image/webp': (b'RIFF',),
+}
+
+
+def photo_block(photo) -> Dict:
+    """A photo from the page as an image block for the API, or ValueError.
+
+    `photo` is {'media_type': ..., 'data': <base64>}, as the page sends it.
+    Anything a browser sends is untrusted, so the type, the size and the
+    file's own first bytes are all checked before it goes anywhere.
+    """
+    if not isinstance(photo, dict):
+        raise ValueError('not a photo')
+    media_type, data = photo.get('media_type'), photo.get('data')
+    if media_type not in PHOTO_MEDIA_TYPES or not isinstance(data, str):
+        raise ValueError('photo must be a JPEG, PNG or WebP image')
+    # Base64 is a third bigger than the file, so this rules out a huge string
+    # before decoding it.
+    if len(data) > MAX_PHOTO_BYTES * 4 // 3 + 4:
+        raise ValueError('photo is too large')
+    try:
+        raw = base64.b64decode(data, validate=True)
+    except (binascii.Error, ValueError):
+        raise ValueError('photo is not valid base64')
+    if not raw or len(raw) > MAX_PHOTO_BYTES:
+        raise ValueError('photo is too large')
+    if not raw.startswith(_PHOTO_SIGNATURES[media_type]):
+        raise ValueError('photo does not match its type')
+    if media_type == 'image/webp' and raw[8:12] != b'WEBP':
+        raise ValueError('photo does not match its type')
+    return {'type': 'image',
+            'source': {'type': 'base64', 'media_type': media_type, 'data': data}}
+
 # Length rules for the modes whose answers ran past the reply cap. In a
 # side-by-side test half of Haiku 4.5's replies and two thirds of Sonnet 5.5's
 # were cut off mid-sentence at 500 tokens: Thai script is token-heavy, so 500
@@ -171,7 +221,8 @@ it, and offer to go deeper on one part instead of continuing.
 """,
     'translator': """
 LENGTH: keep each answer under about 120 words. A translation should be quick
-to read; offer more detail rather than adding it.
+to read; offer more detail rather than adding it. A photo of a menu or form
+may run to about 250 words.
 """,
     'generator': """
 LENGTH: 5 items unless the student asks for more, and keep the whole exercise,
@@ -281,6 +332,52 @@ def _tool_results(response) -> List[Dict]:
             continue
         results.append({'type': 'tool_result', 'tool_use_id': block.id, 'content': content})
     return results
+
+
+# Tone working the model sometimes writes before its answer despite being
+# told not to (see the reminder in tutor_reference.reference_for): a heading
+# such as "Working out the tones:", then lines like
+# "- ถาม: ถ high class, live syllable ..., so rising tone: tǎam".
+_WORKING_HEADING = re.compile(
+    r'^\W*(working out|working through|let me work out|first,? let me work out)'
+    r'[^\n]{0,40}:\W*$', re.IGNORECASE)
+_WORKING_LINE = re.compile(
+    r'^[\s\-*•\d.)]*[฀-๿]+\S*\s*:.*\b(high|middle|mid|low)[- ]class\b.*\btone\b',
+    re.IGNORECASE)
+# A student who asks how a tone works should see the working: it is the answer.
+_ASKED_FOR_WORKING = re.compile(r'tone|class|วรรณยุกต์', re.IGNORECASE)
+
+
+def _without_working(text: str, message: str = '') -> str:
+    """`text` with any tone working cut from its start, unless asked for.
+
+    Only a block at the very start goes, and only when an answer follows it,
+    so a reply can never be emptied or lose anything after its first line.
+    """
+    if _ASKED_FOR_WORKING.search(message or ''):
+        return text
+    lines = text.split('\n')
+    i, working = 0, 0
+    while i < len(lines):
+        line = lines[i]
+        if _WORKING_LINE.match(line):
+            working += 1
+        elif not (line.strip() == '' or (i == 0 and _WORKING_HEADING.match(line))):
+            break
+        i += 1
+    rest = '\n'.join(lines[i:]).strip()
+    return rest if working and rest else text
+
+
+def _all_working(text: str) -> bool:
+    """True while every finished line of a reply so far is tone working
+    (or a blank or heading), so a streamed reply knows to keep holding it."""
+    lines = text.split('\n')[:-1]   # the last line may still be arriving
+    if not any(_WORKING_LINE.match(l) for l in lines):
+        return False
+    return all(l.strip() == '' or _WORKING_LINE.match(l)
+               or (n == 0 and _WORKING_HEADING.match(l))
+               for n, l in enumerate(lines))
 
 
 def _checked(text: str) -> str:
@@ -587,6 +684,22 @@ BOTH WAYS:
   mean re-translate the last sentence on that rung.
 - Never invent a word you are unsure of: say you are not sure and give the
   plainest safe wording instead.
+
+PHOTOS (a menu, sign, label or form):
+1. Read only the Thai that is clearly legible. If a word is blurred, cut off or
+   too small, say so instead of guessing what it might be.
+2. For each line or item: the Thai as written, then (ThaiBridge Spelling),
+   then a natural English meaning. Keep the photo's order. On a long menu or
+   form, do the first eight or so items and offer to continue.
+3. In place of the bold first line, open with one short line saying what the
+   photo is ("A street-food menu", "A no-parking sign"). Nothing comes before
+   it: work out tones and spellings silently, never in the reply.
+4. Leave out English already printed in the photo unless it is wrong or
+   misleading; then say what the Thai really says.
+5. If there is no Thai in the photo, say so in one line.
+6. Some signs, often at temples in the north, also carry an older script such
+   as Lanna (Tai Tham). Say there is text in another script you cannot read
+   reliably, without guessing which script or what it says.
 """,
         }
         
@@ -733,12 +846,17 @@ scene moving. Open the scene yourself with a natural first line in character.
 
     def _start_turn(self, session_id: str, message: str, mode: str,
                     user_context: Optional[Dict], scenario: Optional[str],
-                    lens: Optional[str], history: Optional[List] = None):
+                    lens: Optional[str], history: Optional[List] = None,
+                    photo: Optional[Dict] = None):
         """Record the student's message; return (model, system, messages) to send.
 
         `history` is the conversation so far as the browser keeps it. Without
         it (the exam script, older callers) the conversation is remembered in
         this process instead, as it always was.
+
+        `photo` is an image block from photo_block(), sent with this message
+        only. The page keeps the conversation as text, so a follow-up works
+        from the reply (which has the Thai written out), not the photo again.
         """
         if user_context is None:
             user_context = {'level': 1, 'xp': 0, 'name': 'Student'}
@@ -746,7 +864,12 @@ scene moving. Open the scene yourself with a natural first line in character.
         model = self.model_for(mode)
         # The system prompt for this mode, with any roleplay scenario or lens.
         system = self.system_blocks(mode, user_context, scenario, lens)
-        turn = {'role': 'user', 'content': self._user_content(message, mode, lens)}
+        content = self._user_content(message, mode, lens)
+        if photo is not None and mode in PHOTO_MODES:
+            if isinstance(content, str):
+                content = [{'type': 'text', 'text': content}]
+            content = [photo] + content
+        turn = {'role': 'user', 'content': content}
 
         if history is not None:
             return model, system, self._history_from_browser(history, mode, lens) + [turn]
@@ -817,7 +940,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         max_tokens: int = 2000,
         scenario: Optional[str] = None,
         lens: Optional[str] = None,
-        history: Optional[List] = None
+        history: Optional[List] = None,
+        photo: Optional[Dict] = None
     ) -> Dict:
         """
         Send a message and get AI response
@@ -830,16 +954,19 @@ scene moving. Open the scene yourself with a natural first line in character.
             max_tokens: Maximum response length
             history: the conversation so far, as the browser keeps it; None
                      to remember it in this process instead
+            photo: an image block from photo_block(), Translator only
 
         Returns:
             Dict with 'response', 'mode', 'tokens_used'
         """
         model, system, messages = self._start_turn(
-            session_id, message, mode, user_context, scenario, lens, history)
+            session_id, message, mode, user_context, scenario, lens, history,
+            photo)
         try:
             text, response = self._ask(model, system, messages, max_tokens)
         except Exception as e:
             return self._failure(e)
+        text = _without_working(text, message)
         return self._finish_turn(session_id, mode, model, text, response,
                                  remember=history is None)
 
@@ -852,7 +979,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         max_tokens: int = 2000,
         scenario: Optional[str] = None,
         lens: Optional[str] = None,
-        history: Optional[List] = None
+        history: Optional[List] = None,
+        photo: Optional[Dict] = None
     ):
         """Like chat(), but the reply arrives as it is written.
 
@@ -869,7 +997,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         answer the page should show instead.
         """
         model, system, messages = self._start_turn(
-            session_id, message, mode, user_context, scenario, lens, history)
+            session_id, message, mode, user_context, scenario, lens, history,
+            photo)
 
         def open_stream(msgs, round_no):
             manager = self.client.messages.stream(**self._request(
@@ -894,14 +1023,16 @@ scene moving. Open the scene yourself with a natural first line in character.
                     # model about to look words up sometimes says so first
                     # ("Let me check those spellings"), and that line is for
                     # no one. Once the text is longer than any such line, it
-                    # is the answer, and it streams as normal.
+                    # is the answer, and it streams as normal. Tone working
+                    # at the start is held for as long as it runs, and is
+                    # cut before the answer goes out (see _without_working).
                     for text in stream.text_stream:
                         parts.append(text)
                         if held is not None:
                             held += text
-                            if len(held) < HELD_BACK_CHARS:
+                            if len(held) < HELD_BACK_CHARS or _all_working(held):
                                 continue
-                            text, held = held, None
+                            text, held = _without_working(held, message), None
                         shown.append(text)
                         yield {'type': 'text', 'text': text}
                     final = stream.get_final_message()
@@ -911,6 +1042,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 looked_up = final.stop_reason == 'tool_use' and round_no < MAX_TOOL_ROUNDS
                 if held and not looked_up:
                     # A short answer, all of it still held back.
+                    held = _without_working(held, message)
                     shown.append(held)
                     yield {'type': 'text', 'text': held}
                 if not looked_up:
@@ -921,7 +1053,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 opened = open_stream(messages, round_no + 1)
             # The answer is the last request's words: anything written before
             # a lookup was the model talking to itself, not to the student.
-            text = _checked(''.join(parts))
+            text = _without_working(_checked(''.join(parts)), message)
             if text != ''.join(shown):
                 yield {'type': 'replace', 'text': text}
             done = self._finish_turn(session_id, mode, model, text, answer,

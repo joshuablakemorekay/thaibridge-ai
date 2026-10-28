@@ -259,6 +259,50 @@
         opacity: 0.5;
         cursor: not-allowed;
     }
+
+    /* Translator only: send a photo of a menu or sign to be read. */
+    #photo-btn {
+        background: white;
+        border: 2px solid var(--royal-gold);
+        border-radius: 25px;
+        padding: 0 1.1rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+
+    #photo-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    .photo-preview {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--dark-text);
+    }
+
+    .photo-preview[hidden] {
+        display: none;
+    }
+
+    .photo-preview img,
+    .message-photo {
+        max-height: 90px;
+        max-width: 140px;
+        border-radius: 8px;
+        border: 1px solid var(--royal-gold);
+        object-fit: cover;
+    }
+
+    .message-photo {
+        display: block;
+        max-height: 180px;
+        max-width: 100%;
+        margin-bottom: 0.5rem;
+    }
     
     .chat-controls {
         display: flex;
@@ -399,8 +443,13 @@
             flex-direction: column;
         }
 
-        #send-btn {
+        #send-btn,
+        #photo-btn {
             width: 100%;
+        }
+
+        #photo-btn {
+            padding: 0.6rem;
         }
 
         .mode-selector {
@@ -647,7 +696,19 @@
     </div>
 
     <div class="chat-footer">
+        <div id="photo-preview" class="photo-preview" hidden>
+            <img id="photo-preview-img" alt="The photo you're about to send">
+            <span>📷 Photo ready. Add a question if you like, then press Send.</span>
+            <button class="control-btn" onclick="clearPhoto()">✕ Remove</button>
+        </div>
         <div class="input-container">
+            {# No `capture` attribute: on a phone that would force the camera,
+               and a photo already in the gallery is just as likely. #}
+            <input type="file" id="photo-input" accept="image/*" hidden
+                   onchange="onPhotoChosen(this.files[0]); this.value='';">
+            <button id="photo-btn" hidden title="Translate a photo of a menu, sign or form"
+                    aria-label="Translate a photo"
+                    onclick="document.getElementById('photo-input').click()">📷</button>
             <input
                 type="text"
                 id="user-input"
@@ -807,6 +868,8 @@
         document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
         showLensBar();
         document.getElementById('translator-note').hidden = mode !== 'translator';
+        document.getElementById('photo-btn').hidden = mode !== 'translator';
+        if (mode !== 'translator') clearPhoto();
 
         // The two modes have separate allowances, so the hint has to be redrawn
         // on every switch — not just after a message is sent.
@@ -820,7 +883,7 @@
             'buddhist': '☸️ Buddhist Guide - Explore the Dhamma. Choose your approach above',
             'generator': '📝 Generator Mode - Create custom exercises',
             'helper': '💡 Helper Mode - Get smart hints',
-            'translator': '🔤 Translator - Type English or Thai to translate'
+            'translator': '🔤 Translator - Type English or Thai, or tap 📷 for a photo of a menu or sign'
         };
         
         addMessage('system', `Switched to ${modeNames[mode]}`);
@@ -833,10 +896,60 @@
     
     async function sendMessage() {
         const input = document.getElementById('user-input');
-        const message = input.value.trim();
+        const photo = pendingPhoto;
+        // A photo on its own is fine: the server asks for it to be read.
+        const message = input.value.trim() || (photo ? 'Please read the Thai in this photo and translate it.' : '');
         if (!message) return;
         input.value = '';
-        await callAI(message, { showUser: true });
+        clearPhoto();
+        await callAI(message, { showUser: true, photo: photo });
+    }
+
+    // ── Photo for the Translator ───────────────────────────────
+    // The photo is shrunk here, before it is sent: a phone photo is several
+    // megabytes, but Claude reads text just as well at 1568px on the long
+    // side, and a smaller image costs less to read and uploads faster on a
+    // mobile connection. Redrawing it as a JPEG also turns any odd format
+    // the phone hands over into one the server accepts.
+    const PHOTO_MAX_SIDE = 1568;
+    let pendingPhoto = null;   // { media_type, data, preview } or null
+
+    function onPhotoChosen(file) {
+        if (!file) return;
+        if (!file.type.startsWith('image/')) {
+            addMessage('system', 'That file is not a photo. Please choose an image.');
+            return;
+        }
+        const url = URL.createObjectURL(file);
+        const img = new Image();
+        img.onload = () => {
+            const scale = Math.min(1, PHOTO_MAX_SIDE / Math.max(img.width, img.height));
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.round(img.width * scale);
+            canvas.height = Math.round(img.height * scale);
+            canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+            URL.revokeObjectURL(url);
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+            pendingPhoto = {
+                media_type: 'image/jpeg',
+                data: dataUrl.split(',')[1],
+                preview: dataUrl
+            };
+            document.getElementById('photo-preview-img').src = dataUrl;
+            document.getElementById('photo-preview').hidden = false;
+            document.getElementById('user-input').focus();
+        };
+        img.onerror = () => {
+            URL.revokeObjectURL(url);
+            addMessage('system', "That photo couldn't be opened. Please try a JPEG or PNG.");
+        };
+        img.src = url;
+    }
+
+    function clearPhoto() {
+        pendingPhoto = null;
+        document.getElementById('photo-preview').hidden = true;
+        document.getElementById('photo-preview-img').removeAttribute('src');
     }
 
     // Shared network + response handling. Used by a typed message (showUser
@@ -846,9 +959,15 @@
         opts = opts || {};
         const showUser = opts.showUser !== false;
 
+        const photo = opts.photo || null;
+        // The chat is kept as text (see chatHistory), so a photo is sent with
+        // this message only and remembered as a marker in front of it.
+        const remembered = photo ? '📷 ' + message : message;
+
         const input = document.getElementById('user-input');
         input.disabled = true;
         document.getElementById('send-btn').disabled = true;
+        document.getElementById('photo-btn').disabled = true;
 
         // Remove welcome message and placeholder if present
         const welcome = document.querySelector('.welcome-message');
@@ -856,7 +975,16 @@
         const placeholder = document.getElementById('chat-placeholder');
         if (placeholder) placeholder.remove();
 
-        if (showUser) addMessage('user', message);
+        if (showUser) {
+            const bubble = addMessage('user', message);
+            if (photo && bubble) {
+                const img = document.createElement('img');
+                img.className = 'message-photo';
+                img.src = photo.preview;
+                img.alt = 'Your photo';
+                bubble.prepend(img);
+            }
+        }
 
         document.getElementById('thinking').classList.add('active');
 
@@ -873,7 +1001,8 @@
                     stream: true,
                     // The conversation so far. Only role and text: the
                     // `hidden` flag is this page's own business.
-                    history: chatHistory.slice(-20).map(t => ({ role: t.role, content: t.content }))
+                    history: chatHistory.slice(-20).map(t => ({ role: t.role, content: t.content })),
+                    photo: photo ? { media_type: photo.media_type, data: photo.data } : null
                 })
             });
 
@@ -882,7 +1011,7 @@
             const contentType = response.headers.get('Content-Type') || '';
             if (contentType.includes('application/x-ndjson')) {
                 const reply = await readStreamedReply(response);
-                if (reply !== null) rememberTurn(message, reply, !showUser);
+                if (reply !== null) rememberTurn(remembered, reply, !showUser);
                 return;
             }
 
@@ -890,7 +1019,7 @@
 
             if (data.success) {
                 addMessage('assistant', data.response);
-                rememberTurn(message, data.response, !showUser);
+                rememberTurn(remembered, data.response, !showUser);
 
                 if (data.tokens_used) {
                     totalTokens += data.tokens_used.input + data.tokens_used.output;
@@ -919,6 +1048,7 @@
         } finally {
             input.disabled = false;
             document.getElementById('send-btn').disabled = false;
+            document.getElementById('photo-btn').disabled = false;
             document.getElementById('thinking').classList.remove('active');
             input.focus();
         }
@@ -993,6 +1123,8 @@
         }
         // Roleplay runs in conversation mode; select it and reset for a fresh scene.
         currentMode = 'conversation';
+        document.getElementById('photo-btn').hidden = true;
+        clearPhoto();
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
         const convBtn = document.querySelector('[data-mode="conversation"]');
         if (convBtn) convBtn.classList.add('active');
