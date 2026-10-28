@@ -186,3 +186,5 @@ def test_the_chat_page_has_the_photo_button():
     page = app.test_client().get('/chat').get_data(as_text=True)
     assert 'id="photo-btn"' in page
     assert 'id="photo-input"' in page
+    # The photo is when someone relies on the answer for something serious.
+    assert 'visa forms, medical or bank letters' in page
