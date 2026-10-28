@@ -115,6 +115,12 @@ def collect_tones_classes():
     return found
 
 
+def collect_expat2000():
+    """Every phrase on the Expat2000 page, already filtered like Survival's."""
+    import expat2000
+    return expat2000.thai_strings()
+
+
 def collect_survival():
     """Survival Thai — the free starter set.
 
@@ -256,6 +262,7 @@ PAGES = {
     'read_write_passages': collect_read_write_passages,
     'tones_classes': collect_tones_classes,
     'survival': collect_survival,
+    'expat2000': collect_expat2000,
     'paiboon': collect_paiboon,
     'grammar': collect_grammar,
     'formality': collect_formality,

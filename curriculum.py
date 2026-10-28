@@ -48,6 +48,7 @@ NOT_BUILT_YET = {
 # so the outline and the nav agree.
 SECTION_TITLES = {
     'survival': 'Survival Thai',
+    'expat2000': 'Expat2000',
     'alphabet': 'Thai Alphabet',
     'tones_classes': 'Tones & Consonant Classes',
     'vowels_syllables': 'Vowels & Syllables',

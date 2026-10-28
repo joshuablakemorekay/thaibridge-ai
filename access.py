@@ -40,6 +40,10 @@ SECTION_REQUIREMENTS = {
     # reading and the wrong one for saying hello. Gating a starter set behind
     # 44 consonants is how a beginner leaves.
     'survival': {'level': 1, 'tier': 'free', 'points_reward': 60, 'requires_alphabet': False},
+    # Expat2000 is free and alphabet-free for the same reason: it is found by
+    # people searching "Thailand DTV visa", and the course is what they
+    # discover on the way. A paywall here would just send them back to Google.
+    'expat2000': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
     # The page that separates the universal teaching from the Thai
     # expression of it. It is the answer to "do I have to become Thai to
     # learn Buddhism here?", so it must never itself be behind a gate.

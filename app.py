@@ -22,6 +22,7 @@ import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
+import expat2000  # the free expat / digital nomad set-up guide (/expat2000)
 import sentence_builder  # tap-the-tiles drill on /sentences
 import tour_trips  # the playable trips on the Tour Guide page
 import tour_activities  # things to do in Thailand, with booking links
@@ -5304,6 +5305,25 @@ def survival_thai():
                            particle=survival.POLITE_PARTICLE,
                            audio_map=audio_map,
                            phrase_count=len(survival.all_phrases()))
+
+
+@app.route('/expat2000')
+@require_access('expat2000')
+def expat2000_page():
+    """Expat2000 — the free set-up guide for expats and digital nomads.
+
+    Free and alphabet-free for the same reason as Survival Thai: it is a front
+    door for people searching for visas and bank accounts, not for Thai.
+    """
+    audio_map = _audio_map_for(expat2000.thai_strings())
+    return render_template('expat2000.html',
+                           missions=expat2000.MISSIONS,
+                           links=expat2000.OFFICIAL_LINKS,
+                           last_checked=expat2000.LAST_CHECKED,
+                           particle=expat2000.POLITE_PARTICLE,
+                           audio_map=audio_map,
+                           phrase_count=len(expat2000.all_phrases()),
+                           task_count=len(expat2000.all_tasks()))
 
 
 @app.route('/meditation')
