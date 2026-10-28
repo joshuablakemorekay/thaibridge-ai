@@ -38,6 +38,12 @@ class TestItIsActuallyFree:
     def test_the_home_page_points_at_it(self, client):
         assert 'href="/expat2000"' in client.get('/').get_data(as_text=True)
 
+    def test_it_is_in_the_top_menu_on_every_page(self, client):
+        # The top menu lives in base.html, so any other page proves it.
+        body = client.get('/survival').get_data(as_text=True)
+        nav = body.split('id="main-nav"', 1)[1].split('</ul>', 1)[0]
+        assert 'href="/expat2000"' in nav
+
 
 class TestTheContent:
     def test_every_mission_has_know_do_and_say(self):
