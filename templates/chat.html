@@ -698,7 +698,11 @@
     <div class="chat-footer">
         <div id="photo-preview" class="photo-preview" hidden>
             <img id="photo-preview-img" alt="The photo you're about to send">
-            <span>📷 Photo ready. Add a question if you like, then press Send.</span>
+            {# Said here, at the moment of sending, because a photo is when
+               someone is most likely to be relying on the answer. #}
+            <span>📷 Photo ready. Add a question if you like, then press Send.
+                For leases, visa forms, medical or bank letters, have a Thai
+                speaker check the translation too.</span>
             <button class="control-btn" onclick="clearPhoto()">✕ Remove</button>
         </div>
         <div class="input-container">
