@@ -191,6 +191,8 @@ This is the part I care about most — not "I built it," but "here's the proof i
 
 ## What I learned
 
+> 📘 **Want the lessons as a study guide?** [**Thinking Ahead**](./docs/thinking-ahead-study-guide.pdf) (PDF, 14 pages) turns this project's build history into exercises in anticipating problems: real incidents from this repo, set out as "predict first, then read what happened".
+
 - **A missing lock looks exactly like no lock needed.** Three paid vocabulary quizzes were open to anyone, logged out included: one quiz's lock had a different name, and two had none. The access check treats a section it doesn't know as unrestricted, so nothing errored. Now a test fails if any quiz has no lock, or no written reason for being open.
 - **Ask whether it's the real thing, not just whether it works.** My first Learning Path worked, but asking "is this the actual IEP?" showed it was missing the three parts that make one: a starting point, measurable targets and a regular review.
 - **The same words can still give the answer away.** The forgot-password page says exactly the same thing whether or not an email has an account, so strangers can't use it to find out who's signed up. But the reply came back slower when it really sent an email, and that delay told you the same thing. Sending the email in the background made every reply equally quick. Keeping something private means checking *how* the page answers as well as *what* it says.
