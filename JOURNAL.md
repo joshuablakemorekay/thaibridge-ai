@@ -4332,3 +4332,47 @@ My teacher gets review sheets, because:
 **References / Conversations**
 PR #32 (`a8a4b2f`…`440921e`, `fb61323`), merge `29255d6`. Review sheets in
 `docs/`.
+
+## 3 November 2026 — Thinking Ahead: turning the build history into a study guide
+
+**TL;DR:** The journal and 1,075 commits are now a 14-page study guide on
+anticipating problems, linked from the README, with a script that rebuilds it.
+
+I was given some advice:
+
+> My Senior Advisor told me what I need to do as to be flexible in my thinking and be able to anticipate the next few steps.
+
+I had a reusable "senior engineer and mentor" prompt written for new projects,
+so the question was whether it still fits halfway through one:
+
+> since it's not the beginning of this development project. As you can see we've already built much of this app. Would it still be possible to use this pasted reusable prompt as to create a summarised PDF document that I can open for learning independent thinking skills
+
+### How we did it
+
+Read the commit history and the journal → answered the prompt's six planning
+questions with hindsight → wrote up each build stage with the thinking skill it
+taught → set out seven real incidents as "predict first, then read" exercises →
+added a page applying it outside code → linked it from "What I learned".
+
+### What I learned
+
+Hindsight is a training tool. Every surprise in this repo becomes practice once
+it's written as a question before the answer.
+
+### Engineering Contribution
+
+- *Decisions made:* The guide is a committed PDF, not an app page, because it's
+  for me to study rather than for learners. I put the README link under "What I
+  learned", not in a new section.
+- *Improvements made to generated code:* The first build script lived only in a
+  temporary folder. It's now `scripts/build_study_guide.py`, and its header
+  explains why it's Windows-only and has no Thai script. I proved it rebuilds
+  the same text.
+- *Accepted as-is vs engineered on:* The guide's content went in almost
+  unchanged. My contribution was the brief, where it lives, and making it
+  reproducible.
+
+**References / Conversations**
+`docs/thinking-ahead-study-guide.pdf`, README link `17ffd5d`.
+
+---
