@@ -6029,10 +6029,7 @@ def subscribe_stripe(tier):
     # Reuse this user's Stripe customer if we already know it (keeps all their
     # invoices under one customer); otherwise pre-fill their email and let Stripe
     # create the customer — we'll capture and store its id in the webhook.
-    if current_user.stripe_customer_id:
-        checkout_kwargs['customer'] = current_user.stripe_customer_id
-    else:
-        checkout_kwargs['customer_email'] = current_user.email
+    checkout_kwargs.update(_checkout_customer_kwargs(current_user))
 
     try:
         # We build the price inline ("price_data") rather than pre-creating
@@ -6044,6 +6041,28 @@ def subscribe_stripe(tier):
 
     # 303 = "go look over there with a GET" — the correct redirect for this.
     return redirect(checkout_session.url, code=303)
+
+
+def _checkout_customer_kwargs(user):
+    """Customer fields for a Checkout Session: the saved Stripe customer if it
+    still exists, otherwise just the user's email.
+
+    Customer ids belong to ONE Stripe mode. Users who paid in test mode carry a
+    test-mode cus_... id, and the live key answers "No such customer" for it,
+    which used to kill checkout outright. A missing or deleted customer is
+    forgotten here, and the webhook stores the new live one after payment."""
+    cid = user.stripe_customer_id
+    if cid:
+        try:
+            cust = stripe.Customer.retrieve(cid)
+            if not getattr(cust, 'deleted', False):
+                return {'customer': cid}
+        except stripe.error.InvalidRequestError:
+            pass  # not in this Stripe mode/account
+        app.logger.info("Dropping stale Stripe customer %s for user %s", cid, user.id)
+        user.stripe_customer_id = None
+        db.session.commit()
+    return {'customer_email': user.email}
 
 
 @app.route('/addon/instant-access/stripe')
@@ -6087,10 +6106,7 @@ def addon_instant_access_stripe():
         client_reference_id=str(current_user.id),
         metadata=user_meta,
     )
-    if current_user.stripe_customer_id:
-        checkout_kwargs['customer'] = current_user.stripe_customer_id
-    else:
-        checkout_kwargs['customer_email'] = current_user.email
+    checkout_kwargs.update(_checkout_customer_kwargs(current_user))
 
     try:
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
@@ -6173,10 +6189,7 @@ def dana_stripe():
     )
     # Only prefill the email if we already know it — never make an account the price of giving.
     if current_user.is_authenticated:
-        if current_user.stripe_customer_id:
-            checkout_kwargs['customer'] = current_user.stripe_customer_id
-        else:
-            checkout_kwargs['customer_email'] = current_user.email
+        checkout_kwargs.update(_checkout_customer_kwargs(current_user))
 
     try:
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)

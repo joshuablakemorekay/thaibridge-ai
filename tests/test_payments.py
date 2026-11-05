@@ -418,3 +418,32 @@ def test_stripe_cancel_at_period_end_is_recorded_as_canceling():
     assert appmod._subscription_status({"status": "active", "cancel_at_period_end": True}) == "canceling"
     assert appmod._subscription_status({"status": "active"}) == "active"
     assert appmod._subscription_status({"status": "canceled", "cancel_at_period_end": True}) == "canceled"
+
+
+# ---------------------------------------------------------------------------
+# Going live: a customer id saved in test mode must not block checkout
+# ---------------------------------------------------------------------------
+
+def test_a_test_mode_customer_is_dropped_so_live_checkout_still_works(user):
+    """Found going live 2026-11-05: the live key said "No such customer" for a
+    cus_ id saved during test mode, and checkout failed with a 502."""
+    missing = A.stripe.error.InvalidRequestError("No such customer", "id")
+    with app.app_context(), \
+         patch("app.stripe.Customer.retrieve", side_effect=missing):
+        u = db.session.get(User, user["id"])
+        assert A._checkout_customer_kwargs(u) == {"customer_email": u.email}
+        assert db.session.get(User, user["id"]).stripe_customer_id is None
+
+
+def test_a_customer_that_exists_is_still_reused(user):
+    with app.app_context(), \
+         patch("app.stripe.Customer.retrieve", return_value=type("C", (), {})()):
+        u = db.session.get(User, user["id"])
+        assert A._checkout_customer_kwargs(u) == {"customer": user["customer"]}
+
+
+def test_a_deleted_customer_is_dropped(user):
+    gone = type("C", (), {"deleted": True})()
+    with app.app_context(), patch("app.stripe.Customer.retrieve", return_value=gone):
+        u = db.session.get(User, user["id"])
+        assert "customer_email" in A._checkout_customer_kwargs(u)
