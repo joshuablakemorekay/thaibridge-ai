@@ -4457,3 +4457,52 @@ checked at phone width.
 `13cc98e` labels, `87503a7` search; `site_search.py`, `tests/test_site_search.py`.
 
 ---
+
+## 5 November 2026 — Stripe goes live: ThaiBridge takes real payments
+
+**TL;DR:**
+- Stripe switched from test mode to live; a real £3 dāna went through end to end.
+- Going live exposed a bug: test-mode customer IDs blocked checkout. Fixed the same hour.
+
+> I'm ready to go from test mode to live. Test works Live not yet setup
+> This app now needs paying users.
+
+Most of the switch was dashboard work, done one step at a time: check
+activation, check Managed Payments, a fresh secret key, a live webhook, three
+values into Render, one save.
+
+> wait. Should I change the email address from joshkay.projects@gmail.com to joshua@smoald.com or not?
+
+That question found three different email settings in Stripe: login, account
+contact and the public support address. Only the last one is seen by customers.
+
+> no but it's right because the business trading name is SMOALD
+
+So the checkout shows SMOALD as the seller. ThaiBridge goes in the statement
+descriptor and the product name.
+
+My first real payment failed:
+
+> Sorry, we couldn't start checkout: Request req_I05oruwlcDTiGR: No such customer: 'cus_VRJocJAXVTgkqe'
+
+### How we did it
+
+Hid the "no real money" notices by key prefix (PR #44) → swapped the keys and
+webhook → real payment failed → fixed stale customers (PR #45) → paid £3, the
+webhook answered 200 → expired the old key → engineering pass.
+
+### What I learned
+
+Test and live are two separate worlds inside one account. Anything saved
+in one, like a customer ID, doesn't exist in the other.
+
+### Engineering Contribution
+
+- *Decisions made:* The key decides the mode (`sk_live_`), so going live is a Render change with no code edit. I made a new secret key rather than reuse August's, which had once been pasted into Render by mistake. The business name stayed SMOALD, my call. On stale customers I chose "check, then forget" over clearing every saved ID in the live database in one go: it fixes the bug for every user without a risky one-off database change, at the cost of one extra Stripe call per checkout.
+- *Improvements made to generated code:* Three copies of the customer logic became one helper. Customers no longer see Stripe's raw error text (request and customer IDs); they get a plain "you haven't been charged, try again" message, and the details go to the logs. The "test mode" notices, checked only by hand at first, now have tests, including the case of live Stripe next to sandbox PayPal. One test I wrote only repeated the rule. I moved the rule into `stripe_key_is_live()` so the test checks the real code. Three code comments still said "TEST mode"; fixed.
+- *Accepted as-is vs engineered on:* The notice-hiding change went in mostly as drafted. The customer fix, error message and tests came from the live failure and the review pass.
+
+**References / Conversations**
+PR #44, PR #45; `tests/test_payment_mode.py`, `tests/test_payments.py`.
+
+---
