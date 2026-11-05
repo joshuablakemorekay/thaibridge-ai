@@ -88,6 +88,7 @@
                 {% if word.english %}<div class="ss-word-english">{{ word.english }}</div>{% endif %}
                 <div class="ss-word-source">
                     {% if word.url %}Taught in <a href="{{ word.url }}">{{ word.source }}</a>{% else %}{{ word.source }}{% endif %}
+                    {% if word.video %} · <a href="{{ word.video }}" target="_blank" rel="noopener">Watch the festival ▶</a>{% endif %}
                 </div>
             </div>
             {% endfor %}

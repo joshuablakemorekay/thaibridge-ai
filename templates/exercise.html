@@ -119,7 +119,8 @@
         <tr>
             <td class="thai-text">{{ word.thai }}</td>
             <td class="paiboon">{{ word.paiboon }}</td>
-            <td>{{ word.english }}</td>
+            <td>{{ word.english }}{% if word.video %}
+                <br><a href="{{ word.video }}" target="_blank" rel="noopener">Watch the festival ▶</a>{% endif %}</td>
             <td style="text-align: center;">
                 {{ get_formality_badge(word.formality)|safe }}
             </td>

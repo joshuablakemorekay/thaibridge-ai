@@ -28,7 +28,7 @@ VOCABULARY = {
         {'thai': 'วันจักรี', 'paiboon': 'wan jàk-grii', 'english': 'Chakri Day', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'วันฉัตรมงคล', 'paiboon': 'wan chàt-moŋ-kon', 'english': 'Coronation Day', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'วันพืชมงคล', 'paiboon': 'wan pʉ̂ʉt-moŋ-kon', 'english': 'Royal Ploughing Ceremony', 'category': 'festivals', 'formality': 'royal'},
-        {'thai': 'ผีตาโขน', 'paiboon': 'pǐi dtaa kǒon', 'english': 'Phi Ta Khon (masked festival, Loei)', 'category': 'festivals', 'formality': 'casual'},
+        {'thai': 'ผีตาโขน', 'paiboon': 'pǐi dtaa kǒon', 'english': 'Phi Ta Khon (masked festival, Loei)', 'category': 'festivals', 'formality': 'casual', 'video': 'https://www.youtube.com/watch?v=wPz1igTKEOs'},
         {'thai': 'เทศกาลกินเจ', 'paiboon': 'têet-sà-gaan gin jee', 'english': 'Vegetarian Festival', 'category': 'festivals', 'formality': 'neutral'},
         {'thai': 'งานบุญ', 'paiboon': 'ŋaan bun', 'english': 'Merit-making ceremony', 'category': 'festivals', 'formality': 'neutral'},
     ],

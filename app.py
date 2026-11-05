@@ -4413,6 +4413,15 @@ CULTURAL_INFO = {
         'description': "Commemorates Buddha's birth, enlightenment, and death.",
         'date': 'Full moon of May',
     },
+    'phi_ta_khon': {
+        'name': 'Phi Ta Khon - ผีตาโขน',
+        'description': ('A masked ghost festival in Dan Sai, Loei, held during the '
+                        'Bun Luang merit-making festival. Villagers parade in masks '
+                        'made from coconut-palm parts and woven rice steamers, '
+                        'recalling the ghosts who welcomed Prince Vessantara home.'),
+        'date': 'June or July (set each year)',
+        'video': 'https://www.youtube.com/watch?v=wPz1igTKEOs',
+    },
 }
 
 

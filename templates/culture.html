@@ -564,6 +564,9 @@
                     📅 {{ festival.date }}
                 </p>
                 <p style="line-height: 1.8;">{{ festival.description }}</p>
+                {% if festival.video %}
+                <p><a href="{{ festival.video }}" target="_blank" rel="noopener">Watch the festival ▶</a></p>
+                {% endif %}
             </div>
             {% endif %}
             {% endfor %}

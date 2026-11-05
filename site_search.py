@@ -19,6 +19,12 @@ already returns.
 import re
 
 import paiboon_lookup
+from vocabulary import VOCABULARY
+
+# Vocabulary words that carry a video (e.g. Phi Ta Khon), keyed by the Thai,
+# so a search hit for the word can offer the same "Watch" link.
+_VIDEOS = {w['thai']: w['video'] for words in VOCABULARY.values()
+           for w in words if w.get('video')}
 
 # Word results carry a source label from paiboon_lookup; this is where each
 # label lives on the site. A test fails if the index gains a label that is not
@@ -139,7 +145,8 @@ def search_pages(query, outline):
 def search_words(query):
     """Thai words and phrases matching the query, each with a link."""
     return [{'thai': e.thai, 'paiboon': e.paiboon, 'english': e.english,
-             'source': e.source, 'url': SOURCE_URLS.get(e.source)}
+             'source': e.source, 'url': SOURCE_URLS.get(e.source),
+             'video': _VIDEOS.get(e.thai)}
             for e in paiboon_lookup.search(query, limit=MAX_WORDS)]
 
 
