@@ -71,6 +71,9 @@ OTHER_PAGES = [
      'keywords': 'premium pricing price plans subscribe basic pro upgrade'},
     {'title': 'Policies, billing & refunds', 'url': '/policies',
      'keywords': 'policies billing refund refunds cancel terms'},
+    {'title': 'Thai & Buddhist Calendar', 'url': '/calendar',
+     'keywords': 'calendar dates holidays festivals wan phra holy days moon '
+                 'buddhist era songkran christmas easter'},
     {'title': 'About ThaiBridge AI', 'url': '/about', 'keywords': 'about'},
     {'title': 'Contact', 'url': '/contact',
      'keywords': 'contact email feedback report'},

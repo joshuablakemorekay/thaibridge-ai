@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% set buddhist = view == 'buddhist' %}
+{% block title %}{% if buddhist %}Buddhist calendar {{ cal.be_year }}{% else %}Calendar {{ cal.year }}{% endif %} — ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .cal-page { max-width: 1000px; margin: 0 auto; }
+    .cal-intro { color: #555; max-width: 46rem; }
+
+    .cal-switch { display: inline-flex; border: 1px solid #ddd; border-radius: 999px; overflow: hidden; margin: 0.5rem 0 1rem; }
+    .cal-switch a, .cal-switch a:visited { background: #fff; padding: 0.45rem 1rem; text-decoration: none; color: var(--dark-text, #2C1810); font-weight: 600; }
+    .cal-switch a[aria-current="page"] { background: var(--saffron); color: #2C1810; }
+    .cal-switch a:hover { text-decoration: underline; }
+
+    .cal-head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+    .cal-head h2 { margin: 0; font-size: 1.5rem; }
+    .cal-head .thai { font-size: 1.5rem; }
+    .cal-sub { color: var(--gold-text); font-weight: 600; font-size: 0.95rem; }
+    .cal-nav a, .cal-nav span { display: inline-block; padding: 0.35rem 0.8rem; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; }
+    .cal-nav span { color: #aaa; }
+
+    .cal-grid { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 0.75rem; }
+    .cal-grid th { font-size: 0.8rem; padding: 0.35rem 0; color: #fff; text-align: center; }
+    .cal-grid td { border: 1px solid #eee; vertical-align: top; height: 6.2rem; padding: 0.3rem; background: #fff; }
+    .cal-grid td.out { background: #fafafa; color: #bbb; }
+    .cal-grid td.today { outline: 2px solid var(--royal-purple, #4A1A6B); outline-offset: -2px; }
+    .cal-grid td.wanphra { background: #FFF6EA; }
+    .cal-day { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; }
+    .cal-moon { font-size: 0.75rem; font-weight: 400; color: var(--saffron-text); white-space: nowrap; }
+    .cal-ev { display: block; font-size: 0.72rem; line-height: 1.25; margin-top: 0.2rem; padding: 0.1rem 0.3rem; border-radius: 4px; }
+    .cal-ev .thai { font-size: 0.85rem; }
+    .cat-buddhist { background: #FFF0DC; color: #7A3E00; }
+    .cat-thai { background: #EEE6F7; color: var(--royal-purple, #4A1A6B); }
+    .cat-christian { background: #E6F0F8; color: #1B4F72; }
+
+    .cal-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.85rem; margin: 0.75rem 0; }
+    .cal-legend .cal-ev { display: inline-block; font-size: 0.85rem; margin: 0; }
+
+    .cal-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+    .cal-list li { border: 1px solid #eee; border-radius: 8px; padding: 0.65rem 0.85rem; background: #fafafa; }
+    .cal-when { font-weight: 700; }
+    .cal-when small { font-weight: 400; color: var(--saffron-text); }
+    .cal-name .thai { font-size: 1.15rem; }
+    .cal-paiboon { font-family: 'Courier New', monospace; color: var(--royal-purple, #4A1A6B); font-weight: bold; }
+    .cal-note { color: #555; font-size: 0.9rem; margin-top: 0.15rem; }
+    .cal-source { color: #555; font-size: 0.85rem; margin-top: 2rem; }
+
+    /* Phones: the cells are too narrow for names, so they show a coloured
+       bar per event and the list underneath carries the detail. */
+    @media (max-width: 640px) {
+        .cal-grid td { height: 4.2rem; padding: 0.15rem; }
+        .cal-grid .cal-ev { font-size: 0; height: 0.3rem; padding: 0; margin-top: 0.15rem; }
+        .cal-moon { display: block; font-size: 0.62rem; }
+        .cal-day { display: block; font-size: 0.85rem; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+{% macro month_link(ym) %}/calendar?view={{ view }}&year={{ ym[0] }}&month={{ ym[1] }}{% endmacro %}
+{% macro event_label(e) %}{% if buddhist and e.thai %}<span class="thai">{{ e.thai }}</span>{% else %}{{ e.english }}{% endif %}{% endmacro %}
+<div class="cal-page">
+    <h1>📅 Thai &amp; Buddhist Calendar <span class="thai">ปฏิทิน</span></h1>
+    <p class="cal-intro">
+        Thailand runs on two calendars at once. Everyday dates are Gregorian, but
+        the year is counted in the Buddhist Era (พ.ศ., the Gregorian year + 543), and
+        the holy days follow the moon. Switch views to see each one.
+    </p>
+
+    <div class="cal-switch" role="group" aria-label="Calendar view">
+        <a href="/calendar?view=gregorian&year={{ cal.year }}&month={{ cal.month }}" {% if not buddhist %}aria-current="page"{% endif %}>Gregorian</a>
+        <a href="/calendar?view=buddhist&year={{ cal.year }}&month={{ cal.month }}" {% if buddhist %}aria-current="page"{% endif %}>Buddhist (พ.ศ.)</a>
+    </div>
+
+    <div class="cal-head">
+        <div>
+            {% if buddhist %}
+            <h2><span class="thai">{{ cal.thai_month }} พ.ศ. {{ cal.be_year }}</span></h2>
+            <div class="cal-sub">{{ cal.month_name }} {{ cal.year }} · lunar <span class="thai">{{ cal.lunar_months|join(' – ') }}</span>
+                {% if cal.leap_year %}· a leap-month year (เดือน 8 สองหน){% endif %}</div>
+            {% else %}
+            <h2>{{ cal.month_name }} {{ cal.year }}</h2>
+            <div class="cal-sub">Buddhist Era <span class="thai">พ.ศ. {{ cal.be_year }}</span></div>
+            {% endif %}
+        </div>
+        <div class="cal-nav">
+            {% if prev %}<a href="{{ month_link(prev) }}" aria-label="Previous month">← Prev</a>{% else %}<span>← Prev</span>{% endif %}
+            {% if next %}<a href="{{ month_link(next) }}" aria-label="Next month">Next →</a>{% else %}<span>Next →</span>{% endif %}
+        </div>
+    </div>
+
+    <div class="cal-legend" aria-label="Key">
+        <span class="cal-ev cat-buddhist">Buddhist</span>
+        <span class="cal-ev cat-thai">Thai</span>
+        {% if not buddhist %}<span class="cal-ev cat-christian">Christian &amp; Western</span>{% endif %}
+        <span>🌕 🌗 🌑 🌓 Wan Phra (holy day)</span>
+    </div>
+
+    <table class="cal-grid">
+        <thead><tr>{% for w in cal.weekdays %}<th scope="col"{% if buddhist %} class="thai"{% endif %}>{{ w }}</th>{% endfor %}</tr></thead>
+        <tbody>
+        {% for week in cal.weeks %}
+        <tr>
+            {% for cell in week %}
+            {% set m = cell.moon %}
+            <td class="{% if not cell.in_month %}out{% endif %}{% if cell.date == today %} today{% endif %}{% if cell.in_month and m and m.phase %} wanphra{% endif %}"
+                {% if cell.in_month and m %}title="{{ m.label_en }}{% if m.phase %} — Wan Phra{% endif %}"{% endif %}>
+                {% if cell.in_month %}
+                <div class="cal-day">
+                    <span>{{ cell.date.day }}</span>
+                    {% if m and m.phase %}<span class="cal-moon" aria-label="Wan Phra">{{ moon_icon[m.phase] }}</span>
+                    {% elif m and buddhist %}<span class="cal-moon thai">{{ m.short_th }}</span>{% endif %}
+                </div>
+                {% if buddhist and m and m.phase %}<span class="cal-moon thai">{{ m.short_th }}</span>{% endif %}
+                {% for e in cell.events %}<span class="cal-ev cat-{{ e.category }}">{{ event_label(e) }}</span>{% endfor %}
+                {% endif %}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h2 style="margin-top:1.75rem;">This month</h2>
+    {% if cal.events %}
+    <ul class="cal-list">
+        {% for e in cal.events %}
+        <li>
+            <div class="cal-when">
+                {{ e.date.day }} {{ e.date.strftime('%B') }}{% if e.end %} – {{ e.end.day }} {{ e.end.strftime('%B') }}{% endif %}
+                <span class="cal-ev cat-{{ e.category }}" style="display:inline-block;">{{ categories[e.category] }}</span>
+                {% if buddhist and e.date in moon_days %}<small class="thai">{{ moon_days[e.date].label_th }}</small>{% endif %}
+            </div>
+            <div class="cal-name">
+                <strong>{{ e.english }}</strong>
+                {% if e.thai %}· <span class="thai">{{ e.thai }}</span>{% if spellings.get(e.thai) %} <span class="cal-paiboon">{{ spellings[e.thai] }}</span>{% endif %}{% endif %}
+            </div>
+            {% if e.note %}<div class="cal-note">{{ e.note }}</div>{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="cal-intro">No festivals or holidays this month.</p>
+    {% endif %}
+
+    {% if cal.wan_phra %}
+    <h3 style="margin-top:1.5rem;">Wan Phra this month <span class="thai">วันพระ</span></h3>
+    <p class="cal-intro">Buddhist holy days, on the quarter, full and new moons. Many Thais go to the temple,
+        offer food to monks and keep the Eight Precepts.</p>
+    <ul class="cal-list">
+        {% for d, m in cal.wan_phra %}
+        <li><span class="cal-when">{{ moon_icon[m.phase] }} {{ d.day }} {{ d.strftime('%B') }}</span> ·
+            <span class="thai">{{ m.label_th }}</span> · {{ m.label_en }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <p class="cal-source">
+        Covers {{ years[0] }}–{{ years[-1] }} (พ.ศ. {{ years[0] + 543 }}–{{ years[-1] + 543 }}).
+        Wan Phra dates come from the published Thai holy-day calendar, and the lunar
+        holidays are worked out from them. {{ years[-1] }}'s official public holidays
+        haven't been announced yet, and when a holiday falls on a weekend Thailand
+        often adds a substitute day off, which isn't shown here.
+        Read more in <a href="/culture#festivals">Thai Culture → Festivals</a>.
+    </p>
+</div>
+{% endblock %}

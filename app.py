@@ -28,6 +28,7 @@ import tour_trips  # the playable trips on the Tour Guide page
 import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import site_search  # the search box under the top menu, and /search
+import thai_calendar  # the Gregorian / Buddhist calendar on /calendar
 import curriculum  # the public curriculum outline, built from the gated routes
 import learning_path  # the Personalized Learning Path (IEP) on the Progress page
 import listening  # comprehension questions for the Sentences conversations
@@ -5408,6 +5409,33 @@ def search():
     query = request.args.get('q', '').strip()[:site_search.MAX_QUERY]
     results = site_search.search(query, curriculum.build_outline(sys.modules[__name__]))
     return render_template('search.html', query=query, results=results)
+
+
+@app.route('/calendar')
+def calendar_page():
+    """The Thai & Buddhist calendar. Free to everyone, signed in or not: it is
+    reference, like /search, and a useful front door for visitors planning
+    around Songkran or Wan Phra.
+
+    ?view=gregorian (default) shows every event; ?view=buddhist shows Thai
+    and Buddhist ones with BE years and each day's moon day.
+    """
+    view = 'buddhist' if request.args.get('view') == 'buddhist' else 'gregorian'
+    today = date.today()
+    try:
+        year = int(request.args.get('year', today.year))
+        month = int(request.args.get('month', today.month))
+    except ValueError:
+        year, month = today.year, today.month
+    year, month = thai_calendar.clamp(year, month)
+    data = thai_calendar.month_view(year, month, view)
+    prev, nxt = thai_calendar.neighbours(year, month)
+    return render_template('calendar.html', cal=data, view=view, prev=prev,
+                           next=nxt, today=today, years=thai_calendar.YEARS,
+                           categories=thai_calendar.CATEGORIES,
+                           moon_icon=thai_calendar.MOON_ICON,
+                           moon_days=thai_calendar.lunar_days(),
+                           spellings=thai_calendar.spellings(data['events']))
 
 
 @app.route('/premium')
