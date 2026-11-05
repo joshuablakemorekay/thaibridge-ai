@@ -16,6 +16,8 @@ Nothing paid is given away: page results only link (a locked page still shows
 its own lock), and word results are exactly what the free /paiboon lookup
 already returns.
 """
+import re
+
 import paiboon_lookup
 
 # Word results carry a source label from paiboon_lookup; this is where each
@@ -73,6 +75,10 @@ OTHER_PAGES = [
 # every last match for a word.
 MAX_WORDS = 20
 
+# What separates words in a page name: spaces, and the punctuation titles use
+# ("Dhamma, Culture & Thailand", "Thai–English", "Pra Kru Bob's").
+_WORD_BREAK = re.compile(r"[\s,&/'’–—-]+")
+
 # A query this long is not a search; cap it rather than fold a whole essay.
 MAX_QUERY = 100
 
@@ -90,27 +96,41 @@ def _all_pages(outline):
     return pages
 
 
+def _words(text):
+    """Text as a list of folded words, ready to compare.
+
+    Split BEFORE folding: fold() drops spaces (so "khop khun" finds
+    "kɔ̀p-kun"), which would weld the words together.
+    """
+    return [w for w in (paiboon_lookup.fold(part)
+                        for part in _WORD_BREAK.split(text or '')) if w]
+
+
 def search_pages(query, outline):
-    """Pages whose name (or keywords) contain every word of the query.
+    """Pages where every word of the query starts a word in the name or keywords.
 
     Every word, not any word: "thai culture" should find Thai Culture, not
-    every page with "Thai" in its title. Titles that match outrank keyword-only
-    matches, and a shorter title wins a tie, so "Grammar" beats a longer page
-    that happens to mention it.
+    every page with "Thai" in its title.
+
+    The START of a word, not anywhere inside it. Matching anywhere was the
+    first version, and searching "ai" (for the AI Tutor) returned 11 pages,
+    because "Thai" contains "ai"; "art" found the Help page through "start".
+    Prefix matching keeps what people actually type ("gram" still finds
+    Grammar) without the accidental hits. One-letter words are ignored: "a"
+    starts too many words to mean anything.
+
+    Titles that match outrank keyword-only matches, and a shorter title wins a
+    tie, so "Grammar" beats a longer page that happens to mention it.
     """
-    # Split BEFORE folding: fold() drops spaces (so "khop khun" finds
-    # "kɔ̀p-kun"), which would weld the words together. One-letter words are
-    # dropped because "a" is inside nearly every title.
-    words = [w for w in (paiboon_lookup.fold(part) for part in (query or '').split())
-             if len(w) >= 2]
-    if not words:
+    wanted = [w for w in _words(query) if len(w) >= 2]
+    if not wanted:
         return []
     hits = []
     for page in _all_pages(outline):
-        title = paiboon_lookup.fold(page['title'])
-        haystack = title + ' ' + paiboon_lookup.fold(page['keywords'])
-        if all(w in haystack for w in words):
-            in_title = all(w in title for w in words)
+        title = _words(page['title'])
+        everything = title + _words(page['keywords'])
+        if all(any(word.startswith(w) for word in everything) for w in wanted):
+            in_title = all(any(word.startswith(w) for word in title) for w in wanted)
             hits.append((0 if in_title else 1, len(page['title']), page))
     hits.sort(key=lambda h: h[:2])
     return [page for *_, page in hits]

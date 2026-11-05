@@ -185,7 +185,7 @@
         <label for="site-search-q" class="visually-hidden">Search ThaiBridge AI</label>
         <span class="site-search-icon" aria-hidden="true">🔍</span>
         <input type="search" id="site-search-q" name="q" maxlength="100"
-               value="{{ request.args.get('q', '') if request.path == '/search' else '' }}"
+               value="{{ query if request.path == '/search' else '' }}"
                placeholder="Search lessons and Thai words — e.g. grammar, hello, สวัสดี">
         <button type="submit">Search</button>
     </form>

@@ -47,6 +47,17 @@ class TestPages:
         assert titles[0] == 'Thai Culture'
         assert 'Thai Alphabet' not in titles
 
+    def test_a_word_must_start_a_word_not_hide_inside_one(self):
+        """'ai' once matched 11 pages because 'Thai' contains it."""
+        titles = [p['title'] for p in site_search.search_pages('ai', outline())]
+        assert titles[0] == 'AI Tutor'
+        assert 'Thai Culture' not in titles
+        assert site_search.search_pages('art', outline()) == []   # not via 'start'
+
+    def test_the_start_of_a_word_is_enough(self):
+        urls = [p['url'] for p in site_search.search_pages('gram', outline())]
+        assert urls == ['/grammar']
+
     def test_non_lesson_pages_are_found_by_keyword(self):
         urls = [p['url'] for p in site_search.search_pages('refund', outline())]
         assert urls == ['/policies']
@@ -107,6 +118,11 @@ class TestEdges:
         body = client.get('/search?q=<script>alert(1)</script>').get_data(as_text=True)
         assert '<script>alert(1)</script>' not in body
 
-    def test_a_huge_query_is_cut_short(self):
-        assert site_search.search('a' * 5000, outline()) is not None
-        assert len(('x' * 5000)[:site_search.MAX_QUERY]) == site_search.MAX_QUERY
+    def test_a_huge_query_is_cut_short(self, client):
+        """A 5,000-character search still answers, and only the first
+        MAX_QUERY characters are used or echoed back."""
+        response = client.get('/search?q=' + 'k' * 5000)
+        assert response.status_code == 200
+        body = response.get_data(as_text=True)
+        assert 'k' * site_search.MAX_QUERY in body
+        assert 'k' * (site_search.MAX_QUERY + 1) not in body
