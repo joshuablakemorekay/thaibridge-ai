@@ -7,7 +7,7 @@
     "en": "Words for illness, the body and care — for seeing a doctor, describing how one feels, and the requisite of medicine.",
     "th": "คำเกี่ยวกับความเจ็บป่วย ร่างกาย และการรักษา — สำหรับไปหาหมอ บอกอาการ และปัจจัยคือยา"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register (esp. อาพาธ as the monastic word for being ill).",
+  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register (esp. อาพาธ as the monastic word for being ill).",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "อาพาธ", "paiboon": "aa-pâat", "english": "to be ill (monk's word)", "english_respell": "tuh bee IL", "english_tip_th": "IL ท้ายคำ L แตะปลายลิ้นหลังฟันบน ไม่ใช่ ว — สระ I สั้นเหมือน -ิ", "english_ipa": "/tə biː ɪl/", "pali": "ābādha", "note": "The respectful term for a monk being unwell.", "note_th": "ภาษาอังกฤษไม่มีคำเฉพาะสำหรับพระอาพาธ ใช้ ill เหมือนกันทุกคน" },

@@ -7,7 +7,7 @@
     "en": "The shape of a monastic day — chanting, meditation, sweeping, the meal, and observance days.",
     "th": "กิจวัตรของพระในแต่ละวัน — สวดมนต์ ทำสมาธิ กวาดวัด ฉันภัตตาหาร และวันพระ"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "ทำวัตร", "paiboon": "tam-wát", "english": "daily chanting service", "english_respell": "CHAAN-ting SER-vis", "english_tip_th": "CH คล้าย ช แต่หนักกว่า — SER-vis มี V ก้อง ฟันบนแตะริมฝีปากล่าง ไม่ใช่ ว", "english_ipa": "/ˈtʃɑːntɪŋ ˈsɜːvɪs/", "pali": "vatta", "note": "Morning and evening chanting.", "note_th": "ทำวัตรเช้าและทำวัตรเย็น" },

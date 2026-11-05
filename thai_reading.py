@@ -23,9 +23,9 @@ Two conventions, both borrowed from thai_consonants.py:
   * A vowel shown on its own uses the dotted-circle placeholder ◌ (U+25CC) to
     stand in for "any consonant", the way Thai teaching materials print it.
 
-⚠️  DRAFT THAI — every Thai string in the WORDS and STORIES sections below is a
-first draft awaiting review by Josh and teacher Paiboon before it goes live.
-The dharma content especially must be checked. Nothing here is final.
+✅ REVIEWED THAI — the WORDS and STORIES sections below were first drafts,
+then checked by a native Thai teacher (November 2026) with no corrections,
+dharma content included.
 """
 
 # The dotted circle that stands in for "the consonant goes here" when a vowel
@@ -171,8 +171,7 @@ DHARMA_WORDS = [
 # Order matters — the page shows them in this order and the first is the default,
 # so they run easiest-first.
 #
-# ⚠️ DRAFT: Thai and romanisation below are a first pass for Josh + Paiboon to
-# correct before this is shown to learners.
+# Thai and romanisation below began as a first pass and were checked by a native Thai teacher (November 2026).
 
 def _tok(thai, paiboon, english):
     return {'thai': thai, 'paiboon': paiboon, 'english': english}

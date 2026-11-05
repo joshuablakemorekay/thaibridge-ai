@@ -44,9 +44,9 @@ PHOTOS
 Same rule as the trips: Wikimedia Commons, CC BY / BY-SA / CC0 only, credited
 on the page, shrunk to 1000px WebP in static/img/tour/.
 
-⚠️  DRAFT THAI — the phrases below are first drafts awaiting review by Josh
-and teacher Paiboon, like the trips. Their spelling was checked against the
-reviewed lessons on 2026-10-20.
+✅ REVIEWED THAI — first drafted, spelling-checked against the reviewed
+lessons on 2026-10-20, then checked by a native Thai teacher (November 2026) with no
+corrections, like the trips.
 """
 from urllib.parse import quote, urlencode, urlsplit, urlunsplit, parse_qsl
 

@@ -125,7 +125,7 @@
             '<div class="tp-actions">' +
             '<button type="button" class="tp-btn ghost" data-act="exit">All trips</button>' +
             '<a class="tp-btn primary" href="/chat?scenario=' + encodeURIComponent(t.tutor) + '">Practise with the AI tutor</a>' +
-            '</div><p class="tp-draft">The Thai in these trips is a first draft awaiting a teacher’s review.</p></div>';
+            '</div><p class="tp-draft">The Thai in these trips has been checked by a native Thai teacher.</p></div>';
     }
 
     // Each render replaces the player's HTML, so the button that was just

@@ -20,8 +20,8 @@ either forced a paid section free or buried the free taster behind £9.99 and 44
 consonants. The overlap is real and fine: a taster is meant to overlap the thing
 it is a taste of. Tour Guide stays the deeper set for someone already paying.
 
-⚠️  DRAFT THAI — every Thai string below is a first draft awaiting review by
-Josh and teacher Paiboon. Nothing here is final.
+✅ REVIEWED THAI — drafted first, then checked by a native Thai teacher (November 2026)
+with no corrections. A change to any line here makes that line a draft again.
 
 A NOTE ON THE PARTICLES
 -----------------------

@@ -7,7 +7,7 @@
     "en": "The daily alms round — the everyday meeting point between the saṅgha and lay supporters. These are among the first words a monk needs in either language.",
     "th": "การบิณฑบาตประจำวัน — จุดพบกันระหว่างพระสงฆ์กับญาติโยม เป็นคำพื้นฐานที่พระควรรู้"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization (should match the app's existing system), IPA, Pāli, and monastic register on every line.",
+  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization (should match the app's existing system), IPA, Pāli, and monastic register on every line.",
   "_english_pron_note": "PILOT for the English-side pronunciation system (direction = learn_english). Three fields work together: english_respell (roman memory aid, CAPITALS = stressed syllable), english_tip_th (the instruction, written in Thai), english_ipa (optional, for advanced learners/teachers — hidden by default). Tip rule: sounds Thai HAS are anchored to Thai script; sounds Thai LACKS (th/dh/v/z/sh, final -l/-s/-z, consonant clusters) get explicit mouth instructions instead. Audio is the real anchor — the respelling is only a memory aid. Josh to verify every Thai tip.",
   "vocab": [
     { "thai": "บิณฑบาต", "paiboon": "bin-tá-bàat", "english": "alms round", "english_respell": "AAMZ ROWND", "english_tip_th": "R ต้องห่อลิ้นไม่แตะเพดาน ไม่ใช่ ล และไม่ใช่ ร ไทย — สระ OW เหมือน เ-า — ท้ายคำมีเสียง D เบา ๆ อย่าตัดทิ้ง", "english_ipa": "/ɑːmz raʊnd/", "pali": "piṇḍapāta", "note": "The daily round to receive food offerings.", "note_th": "การออกรับบิณฑบาตประจำวัน — สังเกตว่า L ใน \"alms\" ไม่ออกเสียง" },

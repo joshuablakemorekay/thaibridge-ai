@@ -7,7 +7,7 @@
     "en": "The training rules and what is allowable — precepts, the discipline, offences, and how laypeople make things allowable for monks.",
     "th": "สิกขาบทและสิ่งที่สมควร — ศีล วินัย อาบัติ และการที่โยมทำของให้เป็นกัปปิยะแก่พระ"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. This topic is Vinaya-sensitive — please check accuracy carefully.",
+  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. This topic is Vinaya-sensitive — please check accuracy carefully.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "ศีล", "paiboon": "sǐin", "english": "precept / virtue", "english_respell": "PREE-sept", "english_tip_th": "PR ควบกล้ำ ออกติดกัน อย่าเติมสระ — เน้นพยางค์แรก PREE สระยาวเหมือน -ี", "english_ipa": "/ˈpriːsɛpt/", "pali": "sīla", "note": "A training rule of conduct.", "note_th": "ข้อวัตรปฏิบัติทางความประพฤติ" },

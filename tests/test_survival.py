@@ -88,11 +88,12 @@ class TestTheAudioStrings:
 
 
 class TestHowItIsPresented:
-    def test_the_draft_warning_is_shown(self, client):
-        """The Thai here has not been through teacher review yet. A learner
-        repeating a wrong tone to a real person deserves the warning."""
+    def test_the_review_note_is_shown(self, client):
+        """The Thai here was a draft until a native Thai teacher reviewed it
+        (November 2026). The page says so, and no longer says 'draft'."""
         body = client.get('/survival').get_data(as_text=True)
-        assert 'Draft translations' in body
+        assert 'Checked by a native speaker' in body
+        assert 'Draft translations' not in body
 
     def test_both_polite_particles_are_offered(self, client):
         """Picking one would quietly teach half the learners to sound wrong."""

@@ -7,7 +7,7 @@
     "en": "Everyday courtesy — greetings, thanks, apologies and the gestures of respect exchanged between monks and laypeople.",
     "th": "มารยาทประจำวัน — การทักทาย ขอบคุณ ขอโทษ และการแสดงความเคารพระหว่างพระกับโยม"
   },
-  "_review_note": "DRAFT — Josh to verify. NOTE: app romanization is inconsistent on aspiration (dict has both kâao and khai); I've used the no-'h' style throughout — please confirm the standard.",
+  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify. NOTE: app romanization is inconsistent on aspiration (dict has both kâao and khai); I've used the no-'h' style throughout — please confirm the standard.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "สวัสดี", "paiboon": "sà-wàt-dii", "english": "hello", "english_respell": "huh-LOH", "english_tip_th": "เน้นพยางค์หลัง LOH — สระ OH เหมือน โ- — L แตะปลายลิ้นหลังฟันบน", "english_ipa": "/həˈləʊ/", "pali": "", "note": "A lay greeting; monks greet laity with เจริญพร.", "note_th": "คำทักทายของโยม พระใช้ เจริญพร แทน" },

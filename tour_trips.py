@@ -33,8 +33,8 @@ No real prices, fees, opening hours or timetables. Where a character names a
 price, it is story money, and the scene says so. Nothing on this page can go
 out of date.
 
-⚠️  DRAFT THAI — every Thai line below is a first draft awaiting review by Josh
-and teacher Paiboon, like survival.py. Nothing here is final.
+✅ REVIEWED THAI — drafted first, then checked by a native Thai teacher (November 2026)
+with no corrections, like survival.py.
 
 HOW THE POLITE ENDINGS WORK
 ---------------------------
