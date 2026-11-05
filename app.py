@@ -104,7 +104,12 @@ STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
 # True once a live key is in place. Templates use it to hide the
 # "test mode — no real money" notices, which would be false on a live site.
-STRIPE_LIVE = (stripe.api_key or "").startswith(("sk_live_", "rk_live_"))
+def stripe_key_is_live(key):
+    """True for a live secret or restricted key; False for test keys or none."""
+    return (key or "").startswith(("sk_live_", "rk_live_"))
+
+
+STRIPE_LIVE = stripe_key_is_live(stripe.api_key)
 
 # ============================================
 # PAYPAL PAYMENTS (sandbox mode)
@@ -5972,7 +5977,7 @@ def subscribe(tier):
 @app.route('/subscribe/<tier>/stripe')
 @login_required
 def subscribe_stripe(tier):
-    """Send the user to Stripe Checkout (TEST mode) for a paid tier."""
+    """Send the user to Stripe Checkout for a paid tier."""
     if tier not in SUBSCRIPTION_TIERS or tier == 'free':
         return redirect('/progress')
 
@@ -6035,12 +6040,21 @@ def subscribe_stripe(tier):
         # We build the price inline ("price_data") rather than pre-creating
         # Products/Prices in the Stripe dashboard — fewer setup steps for a demo.
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
-    except Exception as e:
+    except Exception:
         app.logger.exception("Stripe checkout session creation failed")
-        return f"Sorry, we couldn't start checkout: {e}", 502
+        return CHECKOUT_FAILED_MESSAGE, 502
 
     # 303 = "go look over there with a GET" — the correct redirect for this.
     return redirect(checkout_session.url, code=303)
+
+
+# Shown when Stripe refuses to start a checkout. Stripe's own error text
+# (request ids, customer ids) goes to the logs via logger.exception, never to
+# the customer: it means nothing to them and exposes internal identifiers.
+CHECKOUT_FAILED_MESSAGE = (
+    "Sorry, we couldn't start checkout just now. You haven't been charged. "
+    "Please try again in a minute, or email joshua@smoald.com if it keeps happening."
+)
 
 
 def _checkout_customer_kwargs(user):
@@ -6068,7 +6082,7 @@ def _checkout_customer_kwargs(user):
 @app.route('/addon/instant-access/stripe')
 @login_required
 def addon_instant_access_stripe():
-    """One-time Stripe Checkout (TEST mode) for the Instant Access Pass.
+    """One-time Stripe Checkout for the Instant Access Pass.
 
     Sold on top of Thai Master (Pro): a single payment that sets full_unlock,
     skipping the level gates so every section opens instantly. It
@@ -6110,9 +6124,9 @@ def addon_instant_access_stripe():
 
     try:
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
-    except Exception as e:
+    except Exception:
         app.logger.exception("Stripe add-on checkout session creation failed")
-        return f"Sorry, we couldn't start checkout: {e}", 502
+        return CHECKOUT_FAILED_MESSAGE, 502
     return redirect(checkout_session.url, code=303)
 
 
@@ -6193,16 +6207,16 @@ def dana_stripe():
 
     try:
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
-    except Exception as e:
+    except Exception:
         app.logger.exception("Stripe dāna checkout session creation failed")
-        return f"Sorry, we couldn't start checkout: {e}", 502
+        return CHECKOUT_FAILED_MESSAGE, 502
     return redirect(checkout_session.url, code=303)
 
 
 @app.route('/subscribe/<tier>/paypal')
 @login_required
 def subscribe_paypal(tier):
-    """Create a PayPal order (sandbox) and send the user to PayPal to approve it."""
+    """Create a PayPal order (sandbox or live, per PAYPAL_MODE) and send the user to PayPal to approve it."""
     if tier not in SUBSCRIPTION_TIERS or tier == 'free':
         return redirect('/progress')
 
