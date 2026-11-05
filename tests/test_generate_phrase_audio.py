@@ -66,3 +66,39 @@ def test_the_next_run_retries_the_phrase(fake_run, monkeypatch):
 
     assert calls == [PHRASE]
     assert os.path.getsize(fake_run) > 0
+
+
+# --- SPOKEN_AS: when the voice is handed a sound-it-out spelling ------------
+#
+# A native speaker heard อริยสัจสี่ read as "a-ri-sat sii", dropping the "ya".
+# The fix hands the voice a respelling but keeps the file named after the real
+# word. Two ways that can go quietly wrong, one test each.
+
+
+def test_the_voice_gets_the_respelling_but_the_file_keeps_the_real_name(
+        fake_run, monkeypatch):
+    spoken = []
+
+    async def works(text, out_path):
+        spoken.append(text)
+        with open(out_path, 'wb') as f:
+            f.write(b'ID3 fake mp3')
+
+    monkeypatch.setattr(gen, 'SPOKEN_AS', {PHRASE: 'ทด-สอบ'})
+    monkeypatch.setattr(gen, 'synthesize', works)
+    asyncio.run(gen.main(['test'], force=False))
+
+    assert spoken == ['ทด-สอบ']
+    assert os.path.getsize(fake_run) > 0   # named after PHRASE, not the respelling
+
+
+def test_every_override_still_matches_a_word_the_app_shows():
+    """If the word is ever respelled, its override silently stops applying and
+    the next re-record brings the old mispronunciation back. Fail instead."""
+    os.environ.setdefault('DATABASE_URL', '')
+    shown = set()
+    for collect in gen.PAGES.values():
+        shown.update(collect())
+    stale = [thai for thai in gen.SPOKEN_AS if thai not in shown]
+    assert not stale, 'SPOKEN_AS entries no page shows any more: {}'.format(
+        [ascii(t) for t in stale])
