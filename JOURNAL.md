@@ -4376,3 +4376,44 @@ it's written as a question before the answer.
 `docs/thinking-ahead-study-guide.pdf`, README link `17ffd5d`.
 
 ---
+
+## 5 November 2026 — My Thai teacher's review: five corrections, now live
+
+**TL;DR:** My teacher Victor checked all the Thai text and audio in the app and
+found five mistakes. All five are fixed and live, and a new test stops the
+audio fix from quietly undoing itself.
+
+Victor's verdict:
+
+> This is the only part I found to be incorect; everything else both the audio and the text is entirely correct.
+
+He sent the five fixes as one image: two Isan words with the wrong tone mark
+(เว้า → เว่า, ข้อย → ข่อย), โตน meaning "Jump, Plunge" not "Waterfall",
+ไหว้ผู้ใหญ่ as "pay respect to elders", and อริยสัจสี่ being read aloud without
+its "yá". My instruction:
+
+> can you do all 5 fixes exactly as appears in [Image #1] and yes fix the audio, delete the old recordings
+
+### How we did it
+
+Found each line → changed the Thai and English exactly as written → recorded
+the two new words → gave the voice a sound-it-out spelling for อริยสัจสี่ →
+deleted the old clips → tests → pushed → confirmed the live site → I listened
+to the new clip myself.
+
+### What I learned
+
+"Exactly as written" still left a gap. A new tone mark changes the
+romanisation, and Victor hadn't given one. The tone test spotted it, and I had
+to make the call.
+
+### Engineering Contribution
+
+- *Decisions made:* For the two Isan words I chose the standard tone rules (wâo, kɔ̀ɔi) over keeping the old romanisation and exempting them from the test, which would have let the test stay quiet about a likely error. The audio fix renames nothing: the file keeps the real spelling and only the voice gets the respelling.
+- *Improvements made to generated code:* Added two tests: the voice gets the respelling while the file keeps its real name, and every override must still match a word the app shows. I broke the override on purpose to watch that second test fail.
+- *Accepted as-is vs engineered on:* The edits themselves were mechanical. The tone decision, the check by ear and the guard test were mine.
+
+**References / Conversations**
+Fixes `2c9eab0`; `SPOKEN_AS` in `scripts/generate_thai_phrase_audio.py`.
+
+---
