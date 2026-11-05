@@ -2041,3 +2041,57 @@ html.rs-picking main figcaption:hover {
     margin-top: 0.15rem;
     letter-spacing: 0.01em;
 }
+
+/* ---- Site search strip (under the top menu, every page) ----
+   A cream band in the site's gold, so it reads as part of the header without
+   competing with the purple menu. Wraps to two lines on a narrow phone rather
+   than shrinking the box until it can't be typed in. */
+.site-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem max(2rem, calc((100% - 1400px) / 2));  /* box lines up with the menu above */
+    background: #FFF8E7;
+    border-bottom: 1px solid var(--royal-gold);
+}
+.site-search-icon { font-size: 1.1rem; }
+.site-search input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    padding: 0.55rem 0.8rem;
+    font-size: 1rem;              /* 16px stops iOS zooming in on focus */
+    border: 2px solid #e2d3a8;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--dark-text);
+}
+.site-search input[type="search"]:focus {
+    outline: 3px solid var(--royal-purple);
+    outline-offset: 1px;
+    border-color: var(--royal-purple);
+}
+.site-search button {
+    padding: 0.55rem 1.1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background: var(--royal-purple);
+    color: #fff;
+    cursor: pointer;
+}
+.site-search button:hover, .site-search button:focus-visible { background: var(--deep-purple); }
+@media (max-width: 768px) {
+    .site-search { padding: 0.5rem 1rem; }
+}
+
+/* For labels a screen reader needs but a sighted reader doesn't. */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}

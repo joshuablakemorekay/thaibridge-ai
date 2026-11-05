@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}{% if query %}Search: {{ query }}{% else %}Search{% endif %} - ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<style>
+    .ss-page { max-width: 960px; margin: 0 auto; }
+    .ss-section { margin-top: 1.75rem; }
+    .ss-section h2 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+    .ss-empty { color: #555; }
+
+    .ss-pages { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+    .ss-page-link {
+        display: flex; justify-content: space-between; align-items: center;
+        gap: 0.75rem; padding: 0.7rem 0.9rem;
+        border: 1px solid #eee; border-radius: 8px; background: #fafafa;
+        text-decoration: none; color: var(--dark-text, #2C1810);
+    }
+    .ss-page-link:hover, .ss-page-link:focus-visible { border-color: var(--royal-purple, #4A1A6B); }
+    .ss-page-title { font-weight: 600; }
+    /* Same idea as the Premium outline: say which plan opens a page, so a
+       click never lands on a lock the visitor didn't see coming. */
+    .ss-tier {
+        flex-shrink: 0; font-size: 0.75rem; padding: 0.15rem 0.55rem;
+        border-radius: 999px; background: #f1e6f7; color: var(--royal-purple, #4A1A6B);
+        white-space: nowrap;
+    }
+    .ss-tier.free { background: #e8f3e8; color: #1E6B1E; }
+
+    .ss-words {
+        display: grid; gap: 0.75rem;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    }
+    .ss-word { border: 1px solid #eee; border-radius: 8px; padding: 0.75rem 0.9rem; background: #fafafa; }
+    .ss-word-thai { font-size: 1.35rem; margin-bottom: 0.2rem; }
+    .ss-word-paiboon {
+        font-family: 'Courier New', monospace; font-size: 1.05rem;
+        color: var(--royal-purple, #4A1A6B); font-weight: bold;
+    }
+    .ss-word-english { color: #555; margin-top: 0.2rem; }
+    .ss-word-source { margin-top: 0.4rem; font-size: 0.8rem; }
+    .ss-listen { background: none; border: none; cursor: pointer; font-size: 1rem; }
+    .ss-more { margin-top: 0.75rem; color: #555; }
+</style>
+{% endblock %}
+
+{% block content %}
+{% macro listen(thai) %}{% set url = thai_audio_url(thai) %}{% if url %}<button type="button" class="th-audio ss-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
+<div class="ss-page">
+    <h1>🔍 Search</h1>
+
+    {% if not query %}
+    <p class="ss-empty">Type in the search box above. You can search for a page
+        by name (<a href="/search?q=grammar">grammar</a>,
+        <a href="/search?q=meditation">meditation</a>) or for a word in English,
+        Thai or romanisation (<a href="/search?q=hello">hello</a>,
+        <a href="/search?q=aroi">aroi</a>, <a href="/search?q=สวัสดี">สวัสดี</a>).</p>
+    {% else %}
+
+    <section class="ss-section" aria-labelledby="ss-pages-h">
+        <h2 id="ss-pages-h">Pages</h2>
+        {% if results.pages %}
+        <ul class="ss-pages">
+            {% for page in results.pages %}
+            <li><a class="ss-page-link" href="{{ page.url }}">
+                <span class="ss-page-title">{{ page.title }}</span>
+                {% if page.tier == 'free' %}
+                <span class="ss-tier free">Free</span>
+                {% else %}
+                <span class="ss-tier">🔒 {{ page.tier_label }} · level {{ page.level }}</span>
+                {% endif %}
+            </a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="ss-empty">No page names match <strong>{{ query }}</strong>.</p>
+        {% endif %}
+    </section>
+
+    <section class="ss-section" aria-labelledby="ss-words-h">
+        <h2 id="ss-words-h">Thai words &amp; phrases</h2>
+        {% if results.words %}
+        <div class="ss-words">
+            {% for word in results.words %}
+            <div class="ss-word">
+                <div class="ss-word-thai"><span class="thai">{{ word.thai }}</span> {{ listen(word.thai) }}</div>
+                <div class="ss-word-paiboon">{{ word.paiboon }}</div>
+                {% if word.english %}<div class="ss-word-english">{{ word.english }}</div>{% endif %}
+                <div class="ss-word-source">
+                    {% if word.url %}Taught in <a href="{{ word.url }}">{{ word.source }}</a>{% else %}{{ word.source }}{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <p class="ss-more">Want every match? The
+            <a href="/paiboon?q={{ query|urlencode }}">ThaiBridge Spelling lookup</a>
+            lists them all.</p>
+        {% else %}
+        <p class="ss-empty">No Thai words match <strong>{{ query }}</strong>. This
+            searches the words taught on ThaiBridge, not every Thai word. Try a
+            shorter spelling, or ask the <a href="/chat">AI tutor</a>.</p>
+        {% endif %}
+    </section>
+    {% endif %}
+</div>
+{% endblock %}

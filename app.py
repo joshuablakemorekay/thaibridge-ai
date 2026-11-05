@@ -27,6 +27,7 @@ import sentence_builder  # tap-the-tiles drill on /sentences
 import tour_trips  # the playable trips on the Tour Guide page
 import tour_activities  # things to do in Thailand, with booking links
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
+import site_search  # the search box under the top menu, and /search
 import curriculum  # the public curriculum outline, built from the gated routes
 import learning_path  # the Personalized Learning Path (IEP) on the Progress page
 import listening  # comprehension questions for the Sentences conversations
@@ -5388,6 +5389,16 @@ def dictionary():
         results=results,
         total_entries=len(YAITRON_ENTRIES),
     )
+
+
+@app.route('/search')
+def search():
+    """Results for the search box under the top menu. Free to everyone: it
+    links to pages (each keeps its own lock) and shows only the words the
+    free /paiboon lookup already shows."""
+    query = request.args.get('q', '').strip()[:site_search.MAX_QUERY]
+    results = site_search.search(query, curriculum.build_outline(sys.modules[__name__]))
+    return render_template('search.html', query=query, results=results)
 
 
 @app.route('/premium')

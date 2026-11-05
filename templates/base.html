@@ -178,6 +178,18 @@
         </div>
     </nav>
 
+    <!-- Site search: one box for page names and Thai words (site_search.py).
+         A plain GET form, so it works with JavaScript off. Not sticky: the
+         menu above already is, and two sticky bars eat a phone screen. -->
+    <form class="site-search" action="/search" method="get" role="search">
+        <label for="site-search-q" class="visually-hidden">Search ThaiBridge AI</label>
+        <span class="site-search-icon" aria-hidden="true">🔍</span>
+        <input type="search" id="site-search-q" name="q" maxlength="100"
+               value="{{ request.args.get('q', '') if request.path == '/search' else '' }}"
+               placeholder="Search lessons and Thai words — e.g. grammar, hello, สวัสดี">
+        <button type="submit">Search</button>
+    </form>
+
     {% if monk_mode %}
     <div class="monk-mode-banner">
         🧡 <strong>Monk Mode is on.</strong> The monk lesson track is open to you. May your study bring wisdom and peace. 🙏
