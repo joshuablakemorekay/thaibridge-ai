@@ -184,10 +184,12 @@
     </div>
 </div>
 
+{% if not payments_live %}
 <p style="text-align:center; color:#666; font-size:0.9rem; margin-top:2rem;">
     🔒 Payments run in <strong>test / sandbox mode</strong> via Stripe &amp; PayPal —
     no real money is charged. You'll choose your payment method after picking a plan.
 </p>
+{% endif %}
 
 <!-- ============================================================
      THE WHOLE CURRICULUM — every page, locked ones included

@@ -32,9 +32,11 @@
             <a href="/theravada" class="btn btn-primary">Read the teachings</a>
             <a href="/chanting" class="btn btn-secondary">Open the chanting book</a>
         </div>
+{% if not stripe_live %}
         <div class="dana-thanks-note">
             <p><strong>Test mode:</strong> this used <strong>Stripe Checkout in sandbox mode</strong> — no real money changed hands. Swap in live keys to receive real gifts.</p>
         </div>
+{% endif %}
     </div>
 </div>
 

@@ -69,9 +69,11 @@
 
         <p class="choose-back"><a href="/progress">← Back to plans</a></p>
 
+{% if not payments_live %}
         <div class="info-note">
             <p><strong>Test mode:</strong> both options use sandbox payments — no real money changes hands.</p>
         </div>
+{% endif %}
     </div>
 </div>
 

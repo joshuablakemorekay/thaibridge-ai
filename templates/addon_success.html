@@ -15,9 +15,11 @@
             <a href="/progress" class="btn btn-primary">View Progress Dashboard</a>
             <a href="/learn" class="btn btn-secondary">Start Learning</a>
         </div>
+{% if not stripe_live %}
         <div class="addon-success-note">
             <p><strong>Test mode:</strong> this used <strong>Stripe Checkout in sandbox mode</strong> — no real money changed hands. Swap in live keys to take real payments.</p>
         </div>
+{% endif %}
     </div>
 </div>
 

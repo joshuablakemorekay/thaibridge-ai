@@ -91,16 +91,20 @@ if not app.secret_key:
     raise ValueError("FLASK_SECRET_KEY is not set. Please set it in your environment.")
 
 # ============================================
-# STRIPE PAYMENTS (test / sandbox mode)
+# STRIPE PAYMENTS
 # ============================================
 # All keys come from environment variables (.env locally — never committed).
-# Use TEST keys only (sk_test_... / pk_test_...) so no real money ever moves.
+# The KEY decides the mode: sk_test_... is sandbox (no real money), sk_live_...
+# takes real payments. Use test keys locally; live keys only on Render.
 # If STRIPE_SECRET_KEY isn't set, the paid-subscription buttons show a friendly
 # "not configured yet" message instead of crashing the app.
 import stripe
 stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
 STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")
 STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
+# True once a live key is in place. Templates use it to hide the
+# "test mode — no real money" notices, which would be false on a live site.
+STRIPE_LIVE = (stripe.api_key or "").startswith(("sk_live_", "rk_live_"))
 
 # ============================================
 # PAYPAL PAYMENTS (sandbox mode)
@@ -124,6 +128,14 @@ PAYPAL_API_BASE = (
 def paypal_configured():
     """True only if both PayPal credentials are present."""
     return bool(PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET)
+
+
+@app.context_processor
+def inject_payment_mode():
+    """stripe_live: Stripe takes real money. payments_live: every payment
+    option on offer does (PayPal is either live or not offered at all)."""
+    paypal_ok = PAYPAL_MODE == "live" or not paypal_configured()
+    return {"stripe_live": STRIPE_LIVE, "payments_live": STRIPE_LIVE and paypal_ok}
 
 
 def _paypal_access_token():
