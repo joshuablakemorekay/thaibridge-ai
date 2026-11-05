@@ -4417,3 +4417,43 @@ to make the call.
 Fixes `2c9eab0`; `SPOKEN_AS` in `scripts/generate_thai_phrase_audio.py`.
 
 ---
+
+## 5 November 2026 — Draft labels retired, and a search bar for the whole site
+
+**TL;DR:**
+- Pages my teacher checked now say "Checked by a native speaker" instead of "draft".
+- A search bar under the top menu finds pages and Thai words.
+
+> update the unreviewed draft labels now
+
+Only material Victor actually saw lost its label. The chanting book, the unused
+nine-registers page, the hidden pronunciation tool and six known-wrong vowel
+rows still say they're unreviewed.
+
+> Add a search tab bar at top of ThaiBridge AI site
+
+I chose what it searches ("Pages + Thai words") and where it sits ("Strip under
+the menu").
+
+### How we did it
+
+Found every draft label → changed only what was reviewed → built `/search` on
+top of the existing section list and word lookup → tests → live → engineering
+pass: fixed the matching, a weak test and the box echoing huge searches →
+checked at phone width.
+
+### What I learned
+
+"Contains" is the wrong test for a short search. "ai" matched every page with
+"Thai" in it.
+
+### Engineering Contribution
+
+- *Decisions made:* The search reuses the Premium page's section list and the free word lookup, not a second index, so it can't drift. Word results are only what the free lookup already shows, so nothing paid leaks.
+- *Improvements made to generated code:* Matching changed from "anywhere in the title" to "the start of a word" ("ai" went from 11 pages to 2). I swapped a test that only checked Python slicing for one that sends a 5,000-character search to the real page. It caught the top box echoing all 5,000 characters, which is now fixed. Checked at 390px and 320px.
+- *Accepted as-is vs engineered on:* Most of the first build went in unchanged. The matching rule, one bug and the tests that pin both were reworked.
+
+**References / Conversations**
+`13cc98e` labels, `87503a7` search; `site_search.py`, `tests/test_site_search.py`.
+
+---
