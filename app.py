@@ -1628,7 +1628,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ɛ',
             'type': 'short',
             'sound': 'short "eh" - wide mouth',
-            'example_word': {'thai': 'แก้ว', 'paiboon': 'gɛ̂ɛo', 'english': 'glass'},
+            'example_word': {'thai': 'และ', 'paiboon': 'lɛ́', 'english': 'and'},
             'length_note': 'Quick "ɛ" - half length of "ɛɛ"'
         },
         {

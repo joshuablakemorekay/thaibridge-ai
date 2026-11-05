@@ -135,20 +135,21 @@ def test_consonant_names_and_sounds_use_the_paiboon_alphabet(letter):
 
 # ── The vowel table ──────────────────────────────────────────────────────
 #
-# Six rows are wrong ON PURPOSE. Fixing them needs Thai that appears nowhere
+# Five rows are wrong ON PURPOSE. Fixing them needs Thai that appears nowhere
 # else in this codebase, so the audit escalated them to a native speaker rather
 # than inventing replacements: docs/vowel-review-2026-09-10.md.
 #
+# Row 20 (แอะ) was fixed 2026-11-05 with และ, already taught on Read & Write.
 # Delete a number from this set the moment its row is corrected. The test
 # directly below makes sure the set cannot quietly rot into an excuse.
-AWAITING_TEACHER = {20, 24, 25, 29, 30, 32}
+AWAITING_TEACHER = {24, 25, 29, 30, 32}
 
-# Of those six, these are the ones this check can actually prove wrong. Rows 24
+# Of those five, these are the ones this check can actually prove wrong. Rows 24
 # and 25 (เอียะ, เอือะ) are held too, but their fault is that the example is the
 # LONG form of the same vowel, and with the length dot stripped the check cannot
 # see the difference. They are excluded above and listed here so nobody reads
 # their absence below as a clean bill of health.
-DETECTABLY_BROKEN = {20, 29, 30, 32}
+DETECTABLY_BROKEN = {29, 30, 32}
 
 VOWEL_ROWS = (app.THAI_VOWELS_32["long_vowels"]
               + app.THAI_VOWELS_32["short_vowels"])
