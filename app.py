@@ -5421,8 +5421,10 @@ def calendar_page():
 
     ?view=gregorian (default) shows every event; ?view=buddhist shows Thai
     and Buddhist ones with BE years and each day's moon day.
+    ?layout=year shows all twelve months at once, like a phone's year screen.
     """
     view = 'buddhist' if request.args.get('view') == 'buddhist' else 'gregorian'
+    layout = 'year' if request.args.get('layout') == 'year' else 'month'
     today = date.today()
     try:
         year = int(request.args.get('year', today.year))
@@ -5430,12 +5432,21 @@ def calendar_page():
     except ValueError:
         year, month = today.year, today.month
     year, month = thai_calendar.clamp(year, month)
-    data = thai_calendar.month_view(year, month, view)
-    prev, nxt = thai_calendar.neighbours(year, month)
-    return render_template('calendar.html', cal=data, view=view, prev=prev,
-                           next=nxt, today=today, years=thai_calendar.YEARS,
+    years = thai_calendar.YEARS
+    if layout == 'year':
+        data = thai_calendar.year_view(year, view)
+        prev = (year - 1, month) if year > years[0] else None
+        nxt = (year + 1, month) if year < years[-1] else None
+    else:
+        data = thai_calendar.month_view(year, month, view)
+        prev, nxt = thai_calendar.neighbours(year, month)
+    data['month'] = month
+    return render_template('calendar.html', cal=data, view=view, layout=layout,
+                           prev=prev, next=nxt, today=today, years=years,
+                           month_names=thai_calendar.ENGLISH_MONTHS,
                            categories=thai_calendar.CATEGORIES,
                            moon_icon=thai_calendar.MOON_ICON,
+                           phase_english=thai_calendar.PHASE_ENGLISH,
                            moon_days=thai_calendar.lunar_days(),
                            spellings=thai_calendar.spellings(data['events']))
 

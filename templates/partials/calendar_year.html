@@ -1,0 +1,46 @@
+{# The whole year: twelve small months, then every event as one list.
+   Included by calendar.html, which sets `buddhist` and `cal`.
+
+   The small grids are aria-hidden: read aloud they are 365 bare numbers.
+   A screen reader gets each month's name as a link, and every event in the
+   list below, which carries the same information in words. #}
+<div class="cal-year">
+    {% for mo in cal.months %}
+    {% set is_current = mo.month == today.month and cal.year == today.year %}
+    <section class="cal-mini{% if is_current %} current{% endif %}" aria-labelledby="cal-mini-{{ mo.month }}">
+        <h3 id="cal-mini-{{ mo.month }}"><a href="{{ cal_link(cal.year, mo.month, lay='month') }}">
+            {%- if buddhist %}<span class="thai">{{ mo.thai_month }}</span>{% else %}{{ mo.month_name }}{% endif -%}
+            {%- if mo.events %}<span class="visually-hidden">, {{ mo.events|length }} event{{ '' if mo.events|length == 1 else 's' }}</span>{% endif -%}
+        </a></h3>
+        <div class="cal-mini-grid" aria-hidden="true">
+            {% for i in cal.initials %}<span class="cal-mini-wd{% if buddhist %} thai{% endif %}">{{ i }}</span>{% endfor %}
+            {% for week in mo.weeks %}{% for c in week %}
+            {% if c.in_month %}
+            <span class="cal-mini-day{% if c.phase %} wp{% endif %}{% if c.date == today %} today{% endif %}"
+                  {% if c.phase or c.names %}title="{{ c.date.day }} {{ mo.month_name }}{% if c.phase %} · Wan Phra{% endif %}{% for n in c.names %} · {{ n }}{% endfor %}"{% endif %}>
+                <b>{{ c.date.day }}</b>
+                {% if c.kinds %}<span class="cal-dots">{% for k in c.kinds %}<i class="cal-dot dot-{{ k }}"></i>{% endfor %}</span>{% endif %}
+            </span>
+            {% else %}<span></span>{% endif %}
+            {% endfor %}{% endfor %}
+        </div>
+    </section>
+    {% endfor %}
+</div>
+
+<h2 style="margin-top:2rem;">Every event in {% if buddhist %}<span class="thai">พ.ศ. {{ cal.be_year }}</span>{% else %}{{ cal.year }}{% endif %}</h2>
+<p class="cal-intro">Plus {{ cal.wan_phra_count }} Wan Phra days, ringed in the calendars
+    above. Open any month to see each one and its moon.</p>
+{% for mo in cal.months if mo.events %}
+<h3 class="cal-list-month"><a href="{{ cal_link(cal.year, mo.month, lay='month') }}">
+    {%- if buddhist %}<span class="thai">{{ mo.thai_month }}</span> · {% endif %}{{ mo.month_name }}</a></h3>
+<ul class="cal-list cal-list-compact">
+    {% for e in mo.events %}
+    <li>
+        <span class="cal-when">{{ e.date.day }}{% if e.end %}–{{ e.end.day }}{% if e.end.month != e.date.month %} {{ e.end.strftime('%b') }}{% endif %}{% endif %}</span>
+        <span class="cal-name"><strong>{{ e.english }}</strong>{% if e.thai %} · <span class="thai">{{ e.thai }}</span>{% endif %}</span>
+        <span class="cal-ev cat-{{ e.category }}">{{ categories[e.category] }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}

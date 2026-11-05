@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% set buddhist = view == 'buddhist' %}
+{% set year_layout = layout == 'year' %}
 {% block title %}{% if buddhist %}Buddhist calendar {{ cal.be_year }}{% else %}Calendar {{ cal.year }}{% endif %} — ThaiBridge AI{% endblock %}
 
 {% block extra_css %}
@@ -8,7 +9,9 @@
     .cal-page { max-width: 1000px; margin: 0 auto; }
     .cal-intro { color: #555; max-width: 46rem; }
 
-    .cal-switch { display: inline-flex; border: 1px solid #ddd; border-radius: 999px; overflow: hidden; margin: 0.5rem 0 1rem; }
+    /* ── Toolbar: which calendar, which layout, where to go ── */
+    .cal-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; margin: 0.5rem 0 1rem; }
+    .cal-switch { display: inline-flex; border: 1px solid #ddd; border-radius: 999px; overflow: hidden; }
     .cal-switch a, .cal-switch a:visited { background: #fff; padding: 0.45rem 1rem; text-decoration: none; color: var(--dark-text, #2C1810); font-weight: 600; }
     .cal-switch a[aria-current="page"] { background: var(--saffron); color: #2C1810; }
     .cal-switch a:hover { text-decoration: underline; }
@@ -17,26 +20,58 @@
     .cal-head h2 { margin: 0; font-size: 1.5rem; }
     .cal-head .thai { font-size: 1.5rem; }
     .cal-sub { color: var(--gold-text); font-weight: 600; font-size: 0.95rem; }
-    .cal-nav a, .cal-nav span { display: inline-block; padding: 0.35rem 0.8rem; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; }
+    .cal-nav { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    .cal-nav a, .cal-nav span { display: inline-block; padding: 0.4rem 0.8rem; border: 1px solid #ddd; border-radius: 8px; text-decoration: none; background: #fff; }
     .cal-nav span { color: #aaa; }
+    .cal-nav .cal-today { font-weight: 700; border-color: var(--royal-purple, #4A1A6B); }
 
+    .cal-jump { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.6rem; margin: 0.75rem 0 0; font-size: 0.9rem; }
+    .cal-jump select { padding: 0.3rem 0.4rem; border: 1px solid #ccc; border-radius: 6px; background: #fff; font: inherit; }
+    .cal-jump button { padding: 0.3rem 0.9rem; border: 0; border-radius: 6px; background: var(--royal-purple, #4A1A6B); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+
+    /* ── Key ── */
+    .cal-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; font-size: 0.85rem; margin: 0.9rem 0 0.25rem; }
+    .cal-legend .cal-ev { display: inline-block; font-size: 0.85rem; margin: 0; }
+    .cal-moons { font-size: 0.85rem; color: #555; margin: 0.25rem 0 0; }
+    .cal-moons span { white-space: nowrap; }
+    .cal-moons .cal-moon-icon { font-size: 1.05rem; }
+
+    /* ── Month grid ── */
     .cal-grid { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 0.75rem; }
-    .cal-grid th { font-size: 0.8rem; padding: 0.35rem 0; color: #fff; text-align: center; }
-    .cal-grid td { border: 1px solid #eee; vertical-align: top; height: 6.2rem; padding: 0.3rem; background: #fff; }
+    /* base.js wraps every table in .table-scroll, which on phones forces a
+       480px minimum and a sideways scroll. A calendar must show all seven
+       days at once, so it opts out and squeezes instead. */
+    .table-scroll .cal-grid { min-width: 0; }
+    .cal-grid th { font-size: 0.8rem; padding: 0.35rem 0; color: #fff; text-align: center; letter-spacing: 0.02em; }
+    .cal-grid td { border: 1px solid #eee; vertical-align: top; height: 6.4rem; padding: 0.3rem; background: #fff; overflow: visible; }
     .cal-grid td.out { background: #fafafa; color: #bbb; }
-    .cal-grid td.today { outline: 2px solid var(--royal-purple, #4A1A6B); outline-offset: -2px; }
     .cal-grid td.wanphra { background: #FFF6EA; }
-    .cal-day { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; }
-    .cal-moon { font-size: 0.75rem; font-weight: 400; color: var(--saffron-text); white-space: nowrap; }
+    .cal-day { display: flex; justify-content: space-between; align-items: center; font-weight: 700; }
+    .cal-num { display: inline-block; min-width: 1.7em; line-height: 1.7em; text-align: center; border-radius: 999px; }
+    .cal-grid td.today .cal-num { background: var(--royal-purple, #4A1A6B); color: #fff; }
+    .cal-moon { font-size: 1.05rem; font-weight: 400; color: var(--saffron-text); white-space: nowrap; }
+    .cal-moon.thai { font-size: 0.75rem; }
+    .cal-wp { display: block; font-size: 0.7rem; font-weight: 600; color: var(--saffron-text); }
+
     .cal-ev { display: block; font-size: 0.72rem; line-height: 1.25; margin-top: 0.2rem; padding: 0.1rem 0.3rem; border-radius: 4px; }
     .cal-ev .thai { font-size: 0.85rem; }
     .cat-buddhist { background: #FFF0DC; color: #7A3E00; }
     .cat-thai { background: #EEE6F7; color: var(--royal-purple, #4A1A6B); }
     .cat-christian { background: #E6F0F8; color: #1B4F72; }
 
-    .cal-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.85rem; margin: 0.75rem 0; }
-    .cal-legend .cal-ev { display: inline-block; font-size: 0.85rem; margin: 0; }
+    /* A multi-day event is ONE bar: each day's piece reaches into the cell
+       padding on the sides that join, and the name, written once, runs
+       across the whole bar (--span cells) instead of wrapping in one cell. */
+    .cal-ev.bar { position: relative; height: 1.3rem; padding: 0; }
+    .cal-ev.joins-prev { margin-left: calc(-0.3rem - 1px); border-top-left-radius: 0; border-bottom-left-radius: 0; }
+    .cal-ev.joins-next { margin-right: calc(-0.3rem - 1px); border-top-right-radius: 0; border-bottom-right-radius: 0; }
+    .cal-ev.bar .cal-ev-text {
+        position: absolute; z-index: 1; left: 0.3rem; top: 0.12rem;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        width: calc(var(--span, 1) * 100% + (var(--span, 1) - 1) * 0.3rem - 0.6rem);
+    }
 
+    /* ── Lists under the grid ── */
     .cal-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
     .cal-list li { border: 1px solid #eee; border-radius: 8px; padding: 0.65rem 0.85rem; background: #fafafa; }
     .cal-when { font-weight: 700; }
@@ -46,20 +81,65 @@
     .cal-note { color: #555; font-size: 0.9rem; margin-top: 0.15rem; }
     .cal-source { color: #555; font-size: 0.85rem; margin-top: 2rem; }
 
+    /* ── Year: twelve small months, like a phone's year screen ── */
+    .cal-year { display: grid; gap: 1.25rem 1.5rem; margin-top: 1rem;
+                grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+    .cal-mini { position: relative; border-radius: 10px; padding: 0.4rem; }
+    .cal-mini:hover, .cal-mini:focus-within { background: #fff; box-shadow: 0 0 0 2px var(--saffron); }
+    .cal-mini h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+    .cal-mini h3 a { text-decoration: none; color: var(--royal-burgundy, #8B1A1A); }
+    .cal-mini h3 a::after { content: ''; position: absolute; inset: 0; }   /* the whole month is the link */
+    .cal-mini.current h3 a { color: var(--royal-purple, #4A1A6B); }
+    .cal-mini-grid { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-size: 0.78rem; row-gap: 1px; }
+    .cal-mini-wd { color: #888; font-size: 0.7rem; padding-bottom: 0.15rem; }
+    .cal-mini-day { position: relative; padding-bottom: 0.4rem; }
+    .cal-mini-day b { display: inline-block; min-width: 1.75em; line-height: 1.75em; border-radius: 999px; font-weight: 400; }
+    .cal-mini-day.wp b { box-shadow: inset 0 0 0 1.5px var(--saffron, #F4A300); font-weight: 600; }
+    .cal-mini-day.today b { background: var(--royal-purple, #4A1A6B); color: #fff; font-weight: 700; }
+    .cal-dots { position: absolute; left: 0; right: 0; bottom: 0.05rem; display: flex; justify-content: center; gap: 2px; }
+    .cal-dot { width: 5px; height: 5px; border-radius: 50%; display: inline-block; }
+    .dot-buddhist { background: #E08A00; }
+    .dot-thai { background: var(--royal-purple, #4A1A6B); }
+    .dot-christian { background: #2E7DB5; }
+    .cal-ring { display: inline-block; width: 1.1em; height: 1.1em; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--saffron, #F4A300); vertical-align: -0.15em; }
+    .cal-ring.today { background: var(--royal-purple, #4A1A6B); box-shadow: none; }
+
+    .cal-list-month { margin: 1.25rem 0 0.4rem; font-size: 1.05rem; }
+    .cal-list-month a { color: var(--royal-burgundy, #8B1A1A); text-decoration: none; }
+    .cal-list-month a:hover { text-decoration: underline; }
+    .cal-legend .cal-dot { width: 8px; height: 8px; }
+    .cal-list-compact li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; padding: 0.45rem 0.75rem; }
+    .cal-list-compact .cal-when { min-width: 3.2rem; }
+    .cal-list-compact .cal-name { flex: 1 1 12rem; }
+    .cal-list-compact .cal-name .thai { font-size: 1rem; }
+    .cal-list-compact .cal-ev { display: inline-block; margin: 0; }
+
     /* Phones: the cells are too narrow for names, so they show a coloured
        bar per event and the list underneath carries the detail. */
     @media (max-width: 640px) {
-        .cal-grid td { height: 4.2rem; padding: 0.15rem; }
-        .cal-grid .cal-ev { font-size: 0; height: 0.3rem; padding: 0; margin-top: 0.15rem; }
-        .cal-moon { display: block; font-size: 0.62rem; }
+        .table-scroll .cal-grid td { height: 4.4rem; padding: 0.15rem; font-size: 0.85rem; }
+        .table-scroll .cal-grid th { padding: 0.3rem 0; font-size: 0.72rem; }
+        .cal-grid .cal-ev, .cal-grid .cal-ev.bar { font-size: 0; height: 0.3rem; padding: 0; margin-top: 0.2rem; }
+        .cal-grid .cal-ev .cal-ev-text, .cal-grid .cal-ev .thai { font-size: 0; }
+        .cal-grid .cal-ev.joins-prev { margin-left: calc(-0.15rem - 1px); }
+        .cal-grid .cal-ev.joins-next { margin-right: calc(-0.15rem - 1px); }
         .cal-day { display: block; font-size: 0.85rem; }
+        .cal-moon { display: block; font-size: 0.85rem; }
+        .cal-moon.thai { font-size: 0.6rem; }
+        .cal-wp { display: none; }
+        .cal-year { grid-template-columns: repeat(2, 1fr); gap: 0.75rem 0.5rem; }
+        .cal-mini { padding: 0.2rem; }
+        .cal-mini-grid { font-size: 0.68rem; }
+        .cal-mini-wd { font-size: 0.6rem; }
+        .cal-dot { width: 4px; height: 4px; }
+        .cal-nav { width: 100%; }
     }
 </style>
 {% endblock %}
 
 {% block content %}
-{% macro month_link(ym) %}/calendar?view={{ view }}&year={{ ym[0] }}&month={{ ym[1] }}{% endmacro %}
-{% macro event_label(e) %}{% if buddhist and e.thai %}<span class="thai">{{ e.thai }}</span>{% else %}{{ e.english }}{% endif %}{% endmacro %}
+{# A link to any year/month in the current calendar, keeping the view. #}
+{% macro cal_link(y, m, lay=layout, v=view) %}/calendar?view={{ v }}{% if lay == 'year' %}&layout=year{% endif %}&year={{ y }}&month={{ m }}{% endmacro %}
 <div class="cal-page">
     <h1>📅 Thai &amp; Buddhist Calendar <span class="thai">ปฏิทิน</span></h1>
     <p class="cal-intro">
@@ -68,92 +148,83 @@
         the holy days follow the moon. Switch views to see each one.
     </p>
 
-    <div class="cal-switch" role="group" aria-label="Calendar view">
-        <a href="/calendar?view=gregorian&year={{ cal.year }}&month={{ cal.month }}" {% if not buddhist %}aria-current="page"{% endif %}>Gregorian</a>
-        <a href="/calendar?view=buddhist&year={{ cal.year }}&month={{ cal.month }}" {% if buddhist %}aria-current="page"{% endif %}>Buddhist (พ.ศ.)</a>
+    <div class="cal-toolbar">
+        <div class="cal-switch" role="group" aria-label="Which calendar">
+            <a href="{{ cal_link(cal.year, cal.month, v='gregorian') }}" {% if not buddhist %}aria-current="page"{% endif %}>Gregorian</a>
+            <a href="{{ cal_link(cal.year, cal.month, v='buddhist') }}" {% if buddhist %}aria-current="page"{% endif %}>Buddhist (พ.ศ.)</a>
+        </div>
+        <div class="cal-switch" role="group" aria-label="Show a month or the whole year">
+            <a href="{{ cal_link(cal.year, cal.month, lay='month') }}" {% if not year_layout %}aria-current="page"{% endif %}>Month</a>
+            <a href="{{ cal_link(cal.year, cal.month, lay='year') }}" {% if year_layout %}aria-current="page"{% endif %}>Year</a>
+        </div>
     </div>
 
     <div class="cal-head">
         <div>
-            {% if buddhist %}
+            {% if year_layout %}
+                {% if buddhist %}
+                <h2><span class="thai">พ.ศ. {{ cal.be_year }}</span></h2>
+                <div class="cal-sub">{{ cal.year }}{% if cal.leap_year %} · a leap-month year (<span class="thai">เดือน 8 สองหน</span>){% endif %}</div>
+                {% else %}
+                <h2>{{ cal.year }}</h2>
+                <div class="cal-sub">Buddhist Era <span class="thai">พ.ศ. {{ cal.be_year }}</span></div>
+                {% endif %}
+            {% elif buddhist %}
             <h2><span class="thai">{{ cal.thai_month }} พ.ศ. {{ cal.be_year }}</span></h2>
             <div class="cal-sub">{{ cal.month_name }} {{ cal.year }} · lunar <span class="thai">{{ cal.lunar_months|join(' – ') }}</span>
-                {% if cal.leap_year %}· a leap-month year (เดือน 8 สองหน){% endif %}</div>
+                {% if cal.leap_year %}· a leap-month year (<span class="thai">เดือน 8 สองหน</span>){% endif %}</div>
             {% else %}
             <h2>{{ cal.month_name }} {{ cal.year }}</h2>
             <div class="cal-sub">Buddhist Era <span class="thai">พ.ศ. {{ cal.be_year }}</span></div>
             {% endif %}
         </div>
-        <div class="cal-nav">
-            {% if prev %}<a href="{{ month_link(prev) }}" aria-label="Previous month">← Prev</a>{% else %}<span>← Prev</span>{% endif %}
-            {% if next %}<a href="{{ month_link(next) }}" aria-label="Next month">Next →</a>{% else %}<span>Next →</span>{% endif %}
+        <div class="cal-nav" role="navigation" aria-label="Move through the calendar">
+            {% set unit = 'year' if year_layout else 'month' %}
+            {% if prev %}<a href="{{ cal_link(prev[0], prev[1]) }}" aria-label="Previous {{ unit }}">← {% if year_layout %}{{ prev[0] }}{% else %}Prev{% endif %}</a>{% else %}<span>← Prev</span>{% endif %}
+            <a class="cal-today" href="/calendar?view={{ view }}{% if year_layout %}&layout=year{% endif %}">Today</a>
+            {% if next %}<a href="{{ cal_link(next[0], next[1]) }}" aria-label="Next {{ unit }}">{% if year_layout %}{{ next[0] }}{% else %}Next{% endif %} →</a>{% else %}<span>Next →</span>{% endif %}
         </div>
     </div>
 
+    {# Jump straight to a month: no clicking Next twelve times to reach
+       Songkran next year. A plain form, so it works without JavaScript. #}
+    <form class="cal-jump" action="/calendar" method="get">
+        <input type="hidden" name="view" value="{{ view }}">
+        {% if year_layout %}
+        <input type="hidden" name="layout" value="year">
+        <input type="hidden" name="month" value="{{ cal.month }}">
+        {% else %}
+        <label for="cal-jump-month">Go to</label>
+        <select id="cal-jump-month" name="month">
+            {% for name in month_names %}<option value="{{ loop.index }}"{% if loop.index == cal.month %} selected{% endif %}>{{ name }}</option>{% endfor %}
+        </select>
+        {% endif %}
+        <label for="cal-jump-year"{% if not year_layout %} class="visually-hidden"{% endif %}>{% if year_layout %}Go to{% else %}Year{% endif %}</label>
+        <select id="cal-jump-year" name="year">
+            {% for y in years %}<option value="{{ y }}"{% if y == cal.year %} selected{% endif %}>{{ y }} (พ.ศ. {{ y + 543 }})</option>{% endfor %}
+        </select>
+        <button type="submit">Go</button>
+    </form>
+
     <div class="cal-legend" aria-label="Key">
-        <span class="cal-ev cat-buddhist">Buddhist</span>
-        <span class="cal-ev cat-thai">Thai</span>
-        {% if not buddhist %}<span class="cal-ev cat-christian">Christian &amp; Western</span>{% endif %}
-        <span>🌕 🌗 🌑 🌓 Wan Phra (holy day)</span>
+        {% for kind, label in categories.items() if not (buddhist and kind == 'christian') %}
+        {% if year_layout %}<span><i class="cal-dot dot-{{ kind }}" aria-hidden="true"></i> {{ label }}</span>
+        {% else %}<span class="cal-ev cat-{{ kind }}">{{ label }}</span>{% endif %}
+        {% endfor %}
+        {% if year_layout %}
+        <span><span class="cal-ring" aria-hidden="true"></span> Wan Phra (holy day)</span>
+        <span><span class="cal-ring today" aria-hidden="true"></span> Today</span>
+        {% endif %}
     </div>
-
-    <table class="cal-grid">
-        <thead><tr>{% for w in cal.weekdays %}<th scope="col"{% if buddhist %} class="thai"{% endif %}>{{ w }}</th>{% endfor %}</tr></thead>
-        <tbody>
-        {% for week in cal.weeks %}
-        <tr>
-            {% for cell in week %}
-            {% set m = cell.moon %}
-            <td class="{% if not cell.in_month %}out{% endif %}{% if cell.date == today %} today{% endif %}{% if cell.in_month and m and m.phase %} wanphra{% endif %}"
-                {% if cell.in_month and m %}title="{{ m.label_en }}{% if m.phase %} — Wan Phra{% endif %}"{% endif %}>
-                {% if cell.in_month %}
-                <div class="cal-day">
-                    <span>{{ cell.date.day }}</span>
-                    {% if m and m.phase %}<span class="cal-moon" aria-label="Wan Phra">{{ moon_icon[m.phase] }}</span>
-                    {% elif m and buddhist %}<span class="cal-moon thai">{{ m.short_th }}</span>{% endif %}
-                </div>
-                {% if buddhist and m and m.phase %}<span class="cal-moon thai">{{ m.short_th }}</span>{% endif %}
-                {% for e in cell.events %}<span class="cal-ev cat-{{ e.category }}">{{ event_label(e) }}</span>{% endfor %}
-                {% endif %}
-            </td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <h2 style="margin-top:1.75rem;">This month</h2>
-    {% if cal.events %}
-    <ul class="cal-list">
-        {% for e in cal.events %}
-        <li>
-            <div class="cal-when">
-                {{ e.date.day }} {{ e.date.strftime('%B') }}{% if e.end %} – {{ e.end.day }} {{ e.end.strftime('%B') }}{% endif %}
-                <span class="cal-ev cat-{{ e.category }}" style="display:inline-block;">{{ categories[e.category] }}</span>
-                {% if buddhist and e.date in moon_days %}<small class="thai">{{ moon_days[e.date].label_th }}</small>{% endif %}
-            </div>
-            <div class="cal-name">
-                <strong>{{ e.english }}</strong>
-                {% if e.thai %}· <span class="thai">{{ e.thai }}</span>{% if spellings.get(e.thai) %} <span class="cal-paiboon">{{ spellings[e.thai] }}</span>{% endif %}{% endif %}
-            </div>
-            {% if e.note %}<div class="cal-note">{{ e.note }}</div>{% endif %}
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p class="cal-intro">No festivals or holidays this month.</p>
+    {% if not year_layout %}
+    <p class="cal-moons"><strong>Wan Phra</strong> (holy day) falls on four moons each month:
+        {% for phase in ['waxing8', 'full', 'waning8', 'new'] %}<span><span class="cal-moon-icon" aria-hidden="true">{{ moon_icon[phase] }}</span> {{ phase_english[phase] }}</span>{% if not loop.last %} · {% endif %}{% endfor %}</p>
     {% endif %}
 
-    {% if cal.wan_phra %}
-    <h3 style="margin-top:1.5rem;">Wan Phra this month <span class="thai">วันพระ</span></h3>
-    <p class="cal-intro">Buddhist holy days, on the quarter, full and new moons. Many Thais go to the temple,
-        offer food to monks and keep the Eight Precepts.</p>
-    <ul class="cal-list">
-        {% for d, m in cal.wan_phra %}
-        <li><span class="cal-when">{{ moon_icon[m.phase] }} {{ d.day }} {{ d.strftime('%B') }}</span> ·
-            <span class="thai">{{ m.label_th }}</span> · {{ m.label_en }}</li>
-        {% endfor %}
-    </ul>
+    {% if year_layout %}
+        {% include 'partials/calendar_year.html' %}
+    {% else %}
+        {% include 'partials/calendar_month.html' %}
     {% endif %}
 
     <p class="cal-source">

@@ -78,6 +78,7 @@ BE_OFFSET = 543  # Buddhist Era year = Gregorian year + 543
 THAI_MONTHS = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
                'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม']
 THAI_WEEKDAYS = ['อา.', 'จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.']      # Sunday first
+ENGLISH_MONTHS = list(_cal.month_name[1:])
 ENGLISH_WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 # The three kinds of event; the Buddhist view leaves out 'christian'.
@@ -359,6 +360,63 @@ def events(year):
 # The month grid the template draws
 # --------------------------------------------------------------------------
 
+SUNDAY_FIRST = _cal.Calendar(firstweekday=6)   # Thai calendars start on Sunday
+
+# Longer than this and an event is a SEASON (Kathina, a month): drawn as a
+# bar it would fill every cell, so it is marked on its first day only.
+LONGEST_BAR_DAYS = 7
+
+
+def _is_wan_phra(e):
+    return e['thai'] == 'วันพระ'
+
+
+def _events_between(first, last, mode):
+    """The events a view shows that touch first..last, in date order.
+
+    'buddhist' leaves out Christian & Western events. Wan Phra is NOT in
+    here: every view draws it as a moon on the day, not as an event, so a
+    month doesn't fill with "Wan Phra" four times.
+    """
+    wanted = ('buddhist', 'thai') if mode == 'buddhist' else tuple(CATEGORIES)
+    return [e for y in range(first.year, last.year + 1) for e in events(y)
+            if e['category'] in wanted and not _is_wan_phra(e)
+            and e['date'] <= last and (e['end'] or e['date']) >= first]
+
+
+def _days_of(e, first, last):
+    """The days, within first..last, an event is drawn on."""
+    end = e['end'] or e['date']
+    if (end - e['date']).days > LONGEST_BAR_DAYS:
+        return [e['date']] if first <= e['date'] <= last else []
+    d, out = max(e['date'], first), []
+    while d <= min(end, last):
+        out.append(d)
+        d += timedelta(days=1)
+    return out
+
+
+def _bar_piece(e, d, last):
+    """How one day's piece of an event joins its neighbours.
+
+    A multi-day event (Songkran) is drawn as ONE bar across its days, like a
+    phone calendar, not as the same name squeezed into three cells. Each
+    cell draws its piece; this says which sides join on, and whether this
+    piece carries the name: the first day, and the first day of each new
+    week row or month, so a bar that wraps to the next line is still named.
+    `span` is how many cells the bar runs on this row, which is how far the
+    name may stretch.
+    """
+    end = e['end'] or e['date']
+    if (end - e['date']).days > LONGEST_BAR_DAYS:
+        end = e['date']
+    row_end = d + timedelta(days=5 - d.weekday() if d.weekday() != 6 else 6)
+    starts_row = d == e['date'] or d.weekday() == 6 or d.day == 1
+    return dict(e, joins_prev=d > e['date'], joins_next=d < end,
+                named=starts_row,
+                span=(min(end, row_end, last) - d).days + 1 if starts_row else 0)
+
+
 def month_view(year, month, mode):
     """Everything the template needs for one month.
 
@@ -366,33 +424,23 @@ def month_view(year, month, mode):
     events only, with Thai names, the BE year and each day's moon day.
     """
     buddhist = mode == 'buddhist'
-    wanted = ('buddhist', 'thai') if buddhist else tuple(CATEGORIES)
     first, last = date(year, month, 1), date(year, month, _cal.monthrange(year, month)[1])
-    month_events = [e for e in events(year) if e['category'] in wanted
-                    and e['date'] <= last and (e['end'] or e['date']) >= first]
+    month_events = _events_between(first, last, mode)
 
     moons = lunar_days()
     by_day = {}
-    for e in month_events:
-        # A month-long season (Kathina) would fill every cell; it goes in the
-        # list under the grid instead, marked on its first day only.
-        if e['end'] and (e['end'] - e['date']).days > 7:
-            if first <= e['date'] <= last:
-                by_day.setdefault(e['date'], []).append(e)
-            continue
-        d = max(e['date'], first)
-        while d <= min(e['end'] or e['date'], last):
-            by_day.setdefault(d, []).append(e)
-            d += timedelta(days=1)
+    # Multi-day bars first in every cell, so a bar stays on one line across
+    # the days it covers instead of stepping down where a cell has more.
+    for e in sorted(month_events, key=lambda e: not e['end']):
+        for d in _days_of(e, first, last):
+            by_day.setdefault(d, []).append(_bar_piece(e, d, last))
 
     weeks = []
-    for week in _cal.Calendar(firstweekday=6).monthdatescalendar(year, month):
+    for week in SUNDAY_FIRST.monthdatescalendar(year, month):
         weeks.append([{
             'date': d, 'in_month': d.month == month,
             'moon': moons.get(d),
-            # Wan Phra shows as the moon icon; leave it out of the cell's
-            # event list so a cell doesn't fill with "Wan Phra" four times.
-            'events': [e for e in by_day.get(d, []) if e['thai'] != 'วันพระ'],
+            'events': by_day.get(d, []),
         } for d in week])
 
     month_moons = [moons[d] for d in sorted(moons) if first <= d <= last]
@@ -409,11 +457,65 @@ def month_view(year, month, mode):
         'thai_month': THAI_MONTHS[month - 1],
         'weekdays': THAI_WEEKDAYS if buddhist else ENGLISH_WEEKDAYS,
         'weeks': weeks,
-        'events': [e for e in month_events if e['thai'] != 'วันพระ'],
+        'events': month_events,
         'wan_phra': [(d, moons[d]) for d in sorted(moons)
                      if first <= d <= last and moons[d]['phase']],
         'lunar_months': ['เดือน {}{}'.format(m, ' หลัง' if s else '')
                          for m, s in lunar_months],
+        'leap_year': (year + BE_OFFSET) in LEAP_MONTH_YEARS,
+    }
+
+
+THAI_WEEKDAY_INITIALS = ['อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส']
+ENGLISH_WEEKDAY_INITIALS = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+
+
+def year_view(year, mode):
+    """The whole year at a glance, like a phone calendar's year screen.
+
+    Twelve small months, each day marked with a coloured dot per kind of
+    event and a moon on Wan Phra, then every event of the year as one list,
+    month by month. Each small month links to its full month view.
+    """
+    first, last = date(year, 1, 1), date(year, 12, 31)
+    year_events = _events_between(first, last, mode)
+    moons = lunar_days()
+    on_day = {}
+    for e in year_events:
+        for d in _days_of(e, first, last):
+            on_day.setdefault(d, []).append(e)
+
+    order = list(CATEGORIES)
+    months = []
+    for m in range(1, 13):
+        weeks = []
+        for week in SUNDAY_FIRST.monthdatescalendar(year, m):
+            row = []
+            for d in week:
+                todays = on_day.get(d, []) if d.month == m else []
+                row.append({
+                    'date': d, 'in_month': d.month == m,
+                    'phase': (moons.get(d) or {}).get('phase') if d.month == m else None,
+                    # One dot per KIND of event, not per event: three dots
+                    # is the most a tiny cell can show legibly.
+                    'kinds': sorted({e['category'] for e in todays}, key=order.index),
+                    'names': [e['english'] for e in todays],
+                })
+            weeks.append(row)
+        months.append({
+            'month': m, 'month_name': _cal.month_name[m],
+            'thai_month': THAI_MONTHS[m - 1], 'weeks': weeks,
+            # A season that started last month is listed where it starts.
+            'events': [e for e in year_events if e['date'].month == m],
+        })
+
+    return {
+        'year': year, 'mode': mode, 'be_year': year + BE_OFFSET,
+        'months': months,
+        'initials': THAI_WEEKDAY_INITIALS if mode == 'buddhist' else ENGLISH_WEEKDAY_INITIALS,
+        'wan_phra_count': sum(1 for d, m in moons.items()
+                              if d.year == year and m['phase']),
+        'events': year_events,
         'leap_year': (year + BE_OFFSET) in LEAP_MONTH_YEARS,
     }
 

@@ -1,0 +1,70 @@
+{# One month: the grid, then this month's events and Wan Phra as lists.
+   Included by calendar.html, which sets `buddhist` and `cal`. #}
+{% macro event_label(e) %}{% if buddhist and e.thai %}<span class="thai">{{ e.thai }}</span>{% else %}{{ e.english }}{% endif %}{% endmacro %}
+<table class="cal-grid">
+    <thead><tr>{% for w in cal.weekdays %}<th scope="col"{% if buddhist %} class="thai"{% endif %}>{{ w }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for week in cal.weeks %}
+    <tr>
+        {% for cell in week %}
+        {% set m = cell.moon %}
+        {% set is_today = cell.in_month and cell.date == today %}
+        <td class="{% if not cell.in_month %}out{% endif %}{% if is_today %} today{% endif %}{% if cell.in_month and m and m.phase %} wanphra{% endif %}"
+            {% if is_today %}aria-current="date"{% endif %}
+            {% if cell.in_month and m %}title="{{ m.label_en }}{% if m.phase %} — Wan Phra{% endif %}"{% endif %}>
+            {% if cell.in_month %}
+            <div class="cal-day">
+                <span class="cal-num">{{ cell.date.day }}</span>{% if is_today %}<span class="visually-hidden"> (today)</span>{% endif %}
+                {% if m and m.phase %}<span class="cal-moon" aria-hidden="true">{{ moon_icon[m.phase] }}</span>
+                {% elif m and buddhist %}<span class="cal-moon thai">{{ m.short_th }}</span>{% endif %}
+            </div>
+            {% if m and m.phase %}<span class="cal-wp">{% if buddhist %}<span class="thai">วันพระ · {{ m.short_th }}</span>{% else %}Wan Phra{% endif %}</span>{% endif %}
+            {% for e in cell.events %}
+            {% set bar = e.joins_prev or e.joins_next %}
+            <span class="cal-ev cat-{{ e.category }}{% if bar %} bar{% endif %}{% if e.joins_prev %} joins-prev{% endif %}{% if e.joins_next %} joins-next{% endif %}"
+                  {% if bar and e.named %}style="--span: {{ e.span }}"{% endif %}>
+                {%- if e.named -%}<span class="cal-ev-text">{{ event_label(e) }}</span>
+                {%- else -%}<span class="visually-hidden">{{ e.english }} (continued)</span>{%- endif -%}
+            </span>
+            {% endfor %}
+            {% endif %}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2 style="margin-top:1.75rem;">This month</h2>
+{% if cal.events %}
+<ul class="cal-list">
+    {% for e in cal.events %}
+    <li>
+        <div class="cal-when">
+            {{ e.date.day }} {{ e.date.strftime('%B') }}{% if e.end %} – {{ e.end.day }} {{ e.end.strftime('%B') }}{% endif %}
+            <span class="cal-ev cat-{{ e.category }}" style="display:inline-block;">{{ categories[e.category] }}</span>
+            {% if buddhist and e.date in moon_days %}<small class="thai">{{ moon_days[e.date].label_th }}</small>{% endif %}
+        </div>
+        <div class="cal-name">
+            <strong>{{ e.english }}</strong>
+            {% if e.thai %}· <span class="thai">{{ e.thai }}</span>{% if spellings.get(e.thai) %} <span class="cal-paiboon">{{ spellings[e.thai] }}</span>{% endif %}{% endif %}
+        </div>
+        {% if e.note %}<div class="cal-note">{{ e.note }}</div>{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p class="cal-intro">No festivals or holidays this month.</p>
+{% endif %}
+
+{% if cal.wan_phra %}
+<h3 style="margin-top:1.5rem;">Wan Phra this month <span class="thai">วันพระ</span></h3>
+<p class="cal-intro">Buddhist holy days, on the quarter, full and new moons. Many Thais go to the temple,
+    offer food to monks and keep the Eight Precepts.</p>
+<ul class="cal-list">
+    {% for d, m in cal.wan_phra %}
+    <li><span class="cal-when">{{ moon_icon[m.phase] }} {{ d.day }} {{ d.strftime('%B') }}</span> ·
+        {{ phase_english[m.phase] }} · <span class="thai">{{ m.label_th }}</span> · {{ m.label_en }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
