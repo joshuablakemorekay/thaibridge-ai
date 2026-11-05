@@ -40,9 +40,9 @@ VOCABULARY = {
         {'thai': 'บักหุ่ง', 'paiboon': 'bàk hùŋ', 'english': 'Papaya (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'อีหลี', 'paiboon': 'ii-lǐi', 'english': 'Really? (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'บ่เป็นหยัง', 'paiboon': 'bɔ̀ɔ bpen yǎŋ', 'english': "No problem (Isan)", 'category': 'isan_dialect', 'formality': 'casual'},
-        {'thai': 'เว้า', 'paiboon': 'wáo', 'english': 'To speak (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
+        {'thai': 'เว่า', 'paiboon': 'wâo', 'english': 'To speak (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'ม่วน', 'paiboon': 'mûan', 'english': 'Fun (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
-        {'thai': 'โตน', 'paiboon': 'dtoon', 'english': 'Waterfall (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
+        {'thai': 'โตน', 'paiboon': 'dtoon', 'english': 'Jump, Plunge (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'คัก', 'paiboon': 'kák', 'english': 'Very/really (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'แม่นบ่', 'paiboon': 'mɛ̂ɛn bɔ̀ɔ', 'english': 'Is that right? (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'เฮ็ด', 'paiboon': 'hét', 'english': 'To do (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
@@ -53,7 +53,7 @@ VOCABULARY = {
         {'thai': 'แหน่', 'paiboon': 'nɛ̀ɛ', 'english': 'Emphasis particle (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'หมู่', 'paiboon': 'mùu', 'english': 'You all (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'เด้อ', 'paiboon': 'dəə', 'english': 'Polite particle (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
-        {'thai': 'ข้อย', 'paiboon': 'kɔ̂ɔi', 'english': 'I/me (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
+        {'thai': 'ข่อย', 'paiboon': 'kɔ̀ɔi', 'english': 'I/me (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
     ],
     
     'nature': [

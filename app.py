@@ -3654,7 +3654,7 @@ LESSONS = [
         'objectives': ['Understand cultural norms', 'Show respect'],
         'sentences': {
             'short': [
-                {'thai': 'ไหว้ผู้ใหญ่', 'paiboon': 'wâai pûu-yài', 'english': 'Wai to elders'},
+                {'thai': 'ไหว้ผู้ใหญ่', 'paiboon': 'wâai pûu-yài', 'english': 'Pay respect to elders'},
             ],
             'long': [
                 {'thai': 'คนไทยเคารพผู้ใหญ่มาก', 'paiboon': 'kon tai kao-róp pûu-yài mâak', 'english': 'Thai people greatly respect elders'},

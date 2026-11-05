@@ -279,6 +279,16 @@ PAGES = {
 }
 
 
+# Words the voice mispronounces from the written Thai. The file is still named
+# after the real spelling (so the page finds it), but the voice is handed a
+# sound-it-out spelling instead. Add an entry only when a native speaker has
+# heard the clip and said it is wrong.
+SPOKEN_AS = {
+    # Victor (2026-11-05): the voice said "a-ri-sat sii", dropping the "ya".
+    'อริยสัจสี่': 'อะริยะสัดสี่',
+}
+
+
 async def synthesize(text, out_path):
     import edge_tts
     await edge_tts.Communicate(text, AUDIO_VOICE, rate=RATE).save(out_path)
@@ -318,7 +328,7 @@ async def main(pages, force):
             continue
 
         try:
-            await synthesize(thai, out_path)
+            await synthesize(SPOKEN_AS.get(thai, thai), out_path)
             made += 1
             # ASCII only in the log — a Windows console is cp1252 and raises
             # UnicodeEncodeError the moment a Thai character reaches stdout,
