@@ -1665,8 +1665,9 @@ THAI_VOWELS_32 = {
             'paiboon': 'iạ',
             'type': 'short',
             'sound': 'short "ia"',
-            'example_word': {'thai': 'เปรี้ยว', 'paiboon': 'bprîao', 'english': 'sour'},
-            'length_note': 'Quick gliding vowel'
+            'example_word': {'thai': 'เดี๋ยวนี้', 'paiboon': 'dǐao-níi', 'english': 'now'},
+            'length_note': 'Spelled with the long เอีย, but said short in everyday speech. '
+                           'Words written with เอียะ itself are very rare.'
         },
         {
             'number': 25,
@@ -1674,8 +1675,9 @@ THAI_VOWELS_32 = {
             'paiboon': 'ʉạ',
             'type': 'short',
             'sound': 'short "uea"',
-            'example_word': {'thai': 'เหนือ', 'paiboon': 'nʉ̌a', 'english': 'above/north'},
-            'length_note': 'Quick gliding vowel'
+            'example_word': {'thai': 'เลือก', 'paiboon': 'lʉ̂ak', 'english': 'to choose'},
+            'length_note': 'Spelled with the long เอือ, but said short in everyday speech. '
+                           'Words written with เอือะ itself are very rare.'
         },
         {
             'number': 26,
@@ -1711,17 +1713,17 @@ THAI_VOWELS_32 = {
             'paiboon': 'io',
             'type': 'short',
             'sound': 'short "io"',
-            'example_word': {'thai': 'เขียว', 'paiboon': 'kǐao', 'english': 'green'},
+            'example_word': {'thai': 'หิว', 'paiboon': 'hǐo', 'english': 'hungry'},
             'length_note': 'Quick gliding vowel'
         },
         {
             'number': 30,
             'thai': 'เอว',
             'paiboon': 'eeo',
-            'type': 'short',
-            'sound': 'short "eo"',
-            'example_word': {'thai': 'แถว', 'paiboon': 'tɛ̌ɛo', 'english': 'row/line'},
-            'length_note': 'Quick gliding vowel'
+            'type': 'long',
+            'sound': 'long "eo" - hold the "ee"',
+            'example_word': {'thai': 'เลว', 'paiboon': 'leeo', 'english': 'bad'},
+            'length_note': 'Long gliding vowel'
         },
         {
             'number': 31,
@@ -1738,7 +1740,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ui',
             'type': 'short',
             'sound': 'short "ui"',
-            'example_word': {'thai': 'ฝุ่น', 'paiboon': 'fùn', 'english': 'dust'},
+            'example_word': {'thai': 'คุย', 'paiboon': 'kui', 'english': 'to chat'},
             'length_note': 'Quick gliding vowel'
         },
     ],
