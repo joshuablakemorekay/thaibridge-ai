@@ -20,6 +20,8 @@ import thai_registers
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
+import chanting_layout  # verse lines in two halves, shared with the printed book
+import chanting_owen  # chants from Ajarn Owen's chanting book, a section of their own
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
 import expat2000  # the free expat / digital nomad set-up guide (/expat2000)
@@ -1455,6 +1457,8 @@ app.jinja_env.globals.update(get_formality_badge=get_formality_badge)
 # a filter rather than a global so the template reads left to right:
 # `entry.verses | verse_paragraphs`.
 app.jinja_env.filters['verse_paragraphs'] = chanting.verse_paragraphs
+app.jinja_env.filters['verse_halves'] = chanting_layout.halves
+app.jinja_env.filters['is_verse_chant'] = chanting_layout.is_verse_chant
 
 
 
@@ -5025,6 +5029,8 @@ def chanting_book():
     spans = chanting.chant_page_spans()
     return render_template('chanting.html',
                            chants=chanting.chants_in_book_order(),
+                           owen_chants=chanting_owen.APP_CHANTS,
+                           owen_book=chanting_owen.OWEN_BOOK,
                            layers=chanting.CHANT_LAYERS,
                            sections=chanting.CHANT_SECTIONS,
                            how_to_use=chanting.HOW_TO_USE,
@@ -5046,7 +5052,9 @@ def _chant_or_404(chant_id):
     are known — they come out of the page index, which is built from every
     chant. Only this chant's are handed on.
     """
-    chant = chanting.get_chant(chant_id)
+    # Ajarn Owen's chants are a section of their own, kept out of CHANTS
+    # (the temple book) so nothing that counts or pages that book sees them.
+    chant = chanting.get_chant(chant_id) or chanting_owen.get_app_chant(chant_id)
     if chant is None:
         abort(404)
     spans = chanting.chant_page_spans()

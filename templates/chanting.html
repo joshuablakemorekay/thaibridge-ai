@@ -141,6 +141,8 @@
     /* A <details> keeps its own display rule in some browsers, so hiding a
        filtered-out card needs saying outright rather than left to `hidden`. */
     .chant-card[hidden] { display: none; }
+    .owen-section-heading { margin: 2.5rem 0 0.5rem; }
+    .owen-section-note { margin: 0 0 1rem; opacity: 0.85; }
 
     /* ── A card waiting for its chant ────────────────────────────────
        Three states in one line of markup. Without JavaScript only the link
@@ -450,6 +452,41 @@
     {% endfor %}
 </div>
 
+{# Chants from Ajarn Owen's chanting book that the temple book does not
+   have (Josh, 2026-11-06). Their own section, so they are never mistaken for
+   pages of the Wat Mahathat book: no book page, no temple-book contents. #}
+{% if owen_chants %}
+<h2 class="owen-section-heading" id="from-ajarn-owen">From {{ owen_book }}</h2>
+<p class="owen-section-note">Chants from {{ owen_book }} that the Wat Mahathat
+United Kingdom book does not include, given in Pali (Thai script), romanised Pali
+and English as he prints them, with thanks to Ajarn Owen. The Thai-script lines
+were converted from his romanised Pali and are still being checked.</p>
+<div class="chant-book chant-grid" id="owen-book">
+    {% for chant in owen_chants %}
+    <details class="chant-card" id="{{ chant.id }}">
+        <summary>
+            {% if chant.title_thai %}<span class="card-thai">{{ chant.title_thai }}</span>{% endif %}
+            {% if chant.title_pali %}<span class="card-pali">{{ chant.title_pali }}</span>{% endif %}
+            <span class="card-english">{{ chant.title_english }}</span>
+            <span class="card-meta">
+                <span class="chant-source">{{ chant.source }}</span>
+                <span class="card-count">{{ chant.verses|length }} verses</span>
+            </span>
+        </summary>
+        <div class="chant-pending"
+             data-chant-url="{{ url_for('chanting_chant_body', chant_id=chant.id) }}">
+            <p class="chant-pending-line">
+                <span class="chant-pending-wait">Fetching the chant…</span>
+                <span class="chant-pending-failed">That did not come through.
+                    It can still be read on its own page:</span>
+                <a href="{{ url_for('chanting_chant', chant_id=chant.id) }}">Read this chant in full →</a>
+            </p>
+        </div>
+    </details>
+    {% endfor %}
+</div>
+{% endif %}
+
 <div class="card" style="border-left: 4px solid var(--monk-saffron);">
     🪷 <strong>Freely given.</strong> In the spirit of <em>dāna</em> (generosity),
     the chants and their translations are free to everyone, always.
@@ -504,8 +541,9 @@
 // Nothing here is required for the page to work: without fetch, or if a
 // request fails, the card shows a link to the chant's own page, which is the
 // same chant from the same template.
-(function () {
-    var grid = document.getElementById('chant-book');
+// The same loader serves both grids: the temple book's and Ajarn Owen's.
+['chant-book', 'owen-book'].forEach(function (gridId) {
+    var grid = document.getElementById(gridId);
     if (!grid || !window.fetch) return;
 
     function load(card) {
@@ -550,7 +588,7 @@
     window.addEventListener('beforeprint', function () {
         [].slice.call(grid.querySelectorAll('.chant-card[open]')).forEach(load);
     });
-})();
+});
 
 // ── Find a chant by name ────────────────────────────────────────────────
 // Pure front end. The whole index is already in the page, so filtering it

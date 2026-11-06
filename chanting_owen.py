@@ -1689,3 +1689,67 @@ def _first_page(chant):
 
 
 OWEN_CHANTS = sorted([SEKHIYA, APATTI_DESANA] + MORE, key=_first_page)
+
+
+# ── The same chants in the app's shape ─────────────────────────────────────
+# The app (/chanting) shows these in their own section, "From Ajarn Owen's
+# chanting book" (Josh, 2026-11-06). Its templates expect a chant like those
+# in chanting.py: a flat list of verses, each with a number and its layers.
+# This turns the print shape (sections of lines) into that, keeping the
+# section headings, the Junior/Senior Monk labels, the closing lines and the
+# English meanings that sit under a run of verses.
+
+def _app_chant(chant):
+    verses = []
+    for section in chant['sections']:
+        for i, line in enumerate(section['lines']):
+            verse = {
+                'number': line['n'],
+                'pali': line.get('pali', ''),
+                'pali_roman': line.get('pali_roman', ''),
+                'thai': '', 'paiboon': '',
+                'english': line.get('english', ''),
+            }
+            if i == 0 and section.get('heading'):
+                verse['section'] = section['heading']
+            if line.get('role') or line.get('label'):
+                verse['label'] = line.get('role') or line.get('label')
+            verses.append(verse)
+        if section.get('closing'):
+            closing = section['closing']
+            verses.append({'number': '', 'pali': closing.get('pali', ''),
+                           'pali_roman': closing.get('pali_roman', ''),
+                           'thai': '', 'paiboon': '', 'english': ''})
+        extra = list(section.get('meaning') or [])
+        if section.get('after'):
+            extra.append(section['after'])
+        if extra and verses:
+            verses[-1]['meaning_after'] = extra
+    if chant.get('meaning') and verses:
+        verses[-1].setdefault('meaning_after', []).extend(chant['meaning'])
+    intro = []
+    for line in chant.get('intro', []):
+        intro.append(line)
+    return {
+        'id': chant['id'],
+        'title_thai': chant.get('title_thai', ''),
+        'title_pali': chant.get('title', ''),
+        'title_english': chant['title_english'],
+        'source': "%s, pages %s" % (OWEN_BOOK, chant['source_pages']),
+        'introduction': chant.get('introduction', []),
+        'invitation': ({'pali': intro[0].get('pali', ''), 'pali_roman': intro[0]['pali_roman'],
+                        'thai': '', 'paiboon': '', 'english': intro[0].get('english', '')}
+                       if intro else None),
+        'verses': verses,
+        'closing': None,
+        'owen': True,
+    }
+
+
+APP_CHANTS = [_app_chant(c) for c in OWEN_CHANTS]
+_APP_BY_ID = {c['id']: c for c in APP_CHANTS}
+
+
+def get_app_chant(chant_id):
+    """One of Ajarn Owen's chants in the app's shape, or None."""
+    return _APP_BY_ID.get(chant_id)
