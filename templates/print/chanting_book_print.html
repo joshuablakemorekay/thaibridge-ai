@@ -199,7 +199,7 @@
     /* Ajarn Owen's chants: a separate book at the back. */
     .owen-title { font-size: 15pt; }
     .owen-note { max-width: 120mm; margin: 6mm auto 0; font-size: 9.5pt; font-style: italic; }
-    .owen-chant { break-before: page; }
+    .owen-chant { }
     .owen-h { font-size: 15pt; font-weight: 700; margin: 0; text-align: center; }
     .owen-sub { font-size: 11.5pt; font-weight: 600; text-align: center; margin-top: 1mm; }
     .owen-src { font-size: 7.5pt; color: #555; text-align: center; margin: 1mm 0 4mm; }
@@ -222,9 +222,10 @@
     .owen-prose .verse { break-inside: auto; grid-template-columns: 7mm minmax(0, 1fr); margin-bottom: 2.6mm; }
     .owen-prose .verse .l-pali_roman { font-size: 9.5pt; }
     .owen-prose .verse .l-english { margin-top: 0.8mm; }
+    .owen-prose .verse p { break-inside: auto; }   /* long prose paragraphs flow on, like book text */
     .owen-after { font-size: 9.5pt; font-style: italic; margin: 3mm 0 0 7mm; }
     /* A verse chant: one full-width column, each verse line in two halves. */
-    .verses-wide { column-count: 1; }
+    .verses-wide { column-count: auto; }
     .verses-wide .verse { max-width: 150mm; }
     .half-pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
     /* A Thai-script Pali word is never broken mid-word; see pali_words(). */
@@ -237,11 +238,16 @@
         grid-template-columns: 6mm minmax(0, 1fr);
         column-gap: 1.5mm;
         margin: 0 0 2.4mm;
-        break-inside: avoid;
+        /* A verse may continue into the next column or page rather than
+           jumping whole and leaving a gap (Josh, 2026-11-06: too much white
+           space). Each line (layer) is still kept together, and a short
+           verse rarely splits because of orphans/widows. */
+        break-inside: auto;
     }
     .verse .num { font-size: 7pt; color: #555; padding-top: 1.2mm; text-align: right; }
     .verse .lines { grid-column: 2; }
-    .verse p { margin: 0; }
+    .verse p { margin: 0; break-inside: avoid; orphans: 2; widows: 2; }
+    .verse .lines > p:first-child { break-after: avoid; }
     .verse.closing { margin-top: 3mm; }
     .verse .label { font-size: 7pt; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
 
