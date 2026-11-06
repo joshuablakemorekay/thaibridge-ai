@@ -40,11 +40,13 @@ import unicodedata
 
 import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup, escape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 import chanting  # noqa: E402
 from chanting_print_short import SHORT  # noqa: E402
+from chanting_owen import OWEN_BOOK, OWEN_CHANTS  # noqa: E402
 
 CHROME_PATHS = [
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
@@ -135,6 +137,107 @@ def book_spelling(text):
     return _WORD.sub(swap, text)
 
 
+# ── Verse layout, after Ajarn Owen's chanting book (Josh, 2026-11-06) ──
+# A verse line of Pali holds two half-lines (pādas). Where a line splits
+# evenly by syllables at a word boundary, the book sets the two halves side
+# by side, left and right, as a printed verse book does; prose lines stay
+# full width. Counting is done on the romanised Pali, whose words match the
+# Thai-script words one for one; a line where they do not is never split.
+_SYLLABLE = re.compile('[aeiouāīū]')
+
+
+def verse_split(v):
+    """The word index splitting a verse line into two even halves, or None."""
+    roman = (v.get('pali_roman') or '').split()
+    thai = (v.get('pali') or '').split()
+    if len(roman) < 2 or len(roman) != len(thai):
+        return None
+    syllables = [len(_SYLLABLE.findall(w.lower())) for w in roman]
+    total = sum(syllables)
+    if not 13 <= total <= 26:          # a śloka line is 16, a triṣṭubh 22
+        return None
+    best, running = None, 0
+    for k in range(1, len(roman)):
+        running += syllables[k - 1]
+        gap = abs(running - (total - running))
+        if best is None or gap < best[0]:
+            best = (gap, k)
+    return best[1] if best[0] <= 1 else None
+
+
+def halves(v):
+    """(thai left, thai right, roman left, roman right), or None for prose."""
+    k = verse_split(v)
+    if k is None:
+        return None
+    thai, roman = v['pali'].split(), v['pali_roman'].split()
+    return (' '.join(thai[:k]), ' '.join(thai[k:]),
+            ' '.join(roman[:k]), ' '.join(roman[k:]))
+
+
+def is_verse_chant(chant):
+    """Most of its lines are verse, so it is set full width in half-lines."""
+    lines = [v for v in chant.get('verses') or [] if v.get('pali_roman')]
+    return bool(lines) and sum(1 for v in lines if verse_split(v)) / len(lines) >= 0.7
+
+
+# Thai script has no spaces inside a word, so the browser will break a Pali
+# word anywhere, and did, mid-word and with no sign of it. Ordinary words are
+# now kept whole. A word too long for a column may break only after a
+# syllable ending in ะ or า, and shows a dash there (a soft hyphen).
+_LONG_WORD = 30
+_SYLLABLE_END = re.compile('([ะา])(?=[ก-ฮเแโใไ])')
+
+
+def pali_words(text):
+    if not text:
+        return text
+    out = []
+    for word in text.split(' '):
+        if len(word) <= _LONG_WORD:
+            out.append('<span class="nw">%s</span>' % escape(word))
+        else:
+            out.append(_SYLLABLE_END.sub(lambda m: m.group(1) + '­', str(escape(word))))
+    return Markup(' '.join(out))
+
+
+# ── Contents, organised like Ajarn Owen's and Ajarn Sujan's books ──
+# (Josh, 2026-11-06.) The parts stay in the temple book's order, so monks
+# chanting from its Thai text can follow; they are numbered and given short,
+# plain English names, keyed by the book's own Thai heading.
+PART_NAMES = {
+    'ทำวัตรเช้า': 'Morning Chanting',
+    'เสขิยวัตร': 'The 75 Training Rules (Sekhiya)',
+    'พระสูตร ปาฐะ และคาถาที่กำหนดสวดในภาคเช้า': 'Morning Suttas and Verses',
+    'สวดแจง': 'Suat Jaeng: the Canon in Summary',
+    'พระอภิธรรมสังเขป': 'The Abhidhamma in Summary',
+    'ทำวัตรเย็น': 'Evening Chanting',
+    'พระสูตร พระปริตร ปาฐะ และคาถาที่กำหนดสวดในภาคเย็น': 'Evening Suttas and Protection Chants',
+    'พระสูตร พระปริตร พระปาฐะที่กำหนดสวดในวันโกน วันพระ เวลาเย็น': 'The Observance Day and its Eve (Evening)',
+    'พระสูตร พระปริตร พระปาฐะที่กำหนดสวดในวันขึ้นหรือแรม ๘ ค่ำ เวลาเย็น': 'The Eighth Day of the Moon (Evening)',
+    'พระสูตรที่กำหนดสวดในวันขึ้น ๑๔ ค่ำ เวลาเย็น': 'The 14th Day of the Waxing Moon (Evening)',
+    'พระสูตรที่กำหนดสวดในวันแรม ๗ ค่ำ เวลาเย็น': 'The 7th Day of the Waning Moon (Evening)',
+    'พระสูตรที่กำหนดสวดในวันแรม ๑๓ ค่ำหรือ ๑๔ ค่ำ เวลาเย็น': 'The 13th or 14th Day of the Waning Moon (Evening)',
+    'บทสวดมนต์ ทำวัตรเช้า-เย็น แปล': 'Morning and Evening Chanting, with Thai Translation',
+    'ภาคปกิณกะ': 'Miscellaneous Chants and Formal Requests',
+    'ภาคผนวก': 'Appendix: Ceremonies and Procedures',
+    '': 'Other Chants',            # chants with no page in the temple book
+}
+
+
+def number_parts(parts):
+    """Give each headed part its number and short name, in book order."""
+    n = 0
+    for part in parts:
+        h = part['heading']
+        if not h:
+            continue
+        n += 1
+        part['number'] = n
+        part['name'] = PART_NAMES.get(h.get('title'), h.get('title_english'))
+    return parts
+
+
 def render_html(template, parts, contents_pages, proof, pad_blank=False):
     return template.render(
         pad_blank=pad_blank,
@@ -144,6 +247,9 @@ def render_html(template, parts, contents_pages, proof, pad_blank=False):
         sections=chanting.CHANT_SECTIONS,
         commentary=commentary,
         parts=parts,
+        owen_chants=OWEN_CHANTS,
+        owen_book=OWEN_BOOK,
+        owen_part=sum(1 for p in parts if p.get('number')) + 1,
         contents_pages=contents_pages,
         locator=locator,
         proof=proof,
@@ -242,14 +348,20 @@ def main():
     env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')),
                       autoescape=True)
     env.filters['book_spelling'] = book_spelling
+    env.filters['pali_words'] = pali_words
+    env.filters['halves'] = halves
+    env.filters['is_verse_chant'] = is_verse_chant
     template = env.get_template('print/chanting_book_print.html')
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     proof = not args.final
 
-    parts = book_parts()
+    parts = number_parts(book_parts())
     chant_ids = [c['id'] for p in parts for c in p['chants']]
     if sorted(chant_ids) != sorted(c['id'] for c in chanting.CHANTS):
         sys.exit('The book does not hold every chant exactly once.')
+    # Ajarn Owen's chants are paged too, for the contents, but they are a
+    # separate Part from another book and are not chants of chanting.py.
+    chant_ids += [c['id'] for c in OWEN_CHANTS]
 
     with tempfile.TemporaryDirectory() as workdir:
         first = os.path.join(workdir, 'pass1.pdf')
@@ -276,7 +388,7 @@ def main():
                  'the contents numbers cannot be trusted. Nothing was fixed up.')
 
     print(f'Done: {total2} A4 pages, {len(chant_ids)} chants -> {args.out}')
-    long_left = sum(1 for cid in chant_ids
+    long_left = sum(1 for cid in chant_ids if chanting.get_chant(cid)
                     if not all(SHORT.get(cid, {}).get(s['key']) for s in chanting.CHANT_SECTIONS
                                if chanting.get_chant(cid).get(s['key'])))
     if long_left:
