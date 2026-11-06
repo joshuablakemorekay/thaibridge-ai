@@ -1183,13 +1183,13 @@ GENDER_VARIANTS = {
         'please': {
             'male': {
                 'formal': {'thai': 'กรุณา...ครับ', 'paiboon': 'gà-rú-naa... kráp', 'english': 'Please...'},
-                'polite': {'thai': 'ช่วย...หน่อยครับ', 'paiboon': 'chûai... nɔ̀ɔi kráp', 'english': 'Please help...'},
-                'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔi', 'english': 'Please (informal)'},
+                'polite': {'thai': 'ช่วย...หน่อยครับ', 'paiboon': 'chûay... nɔ̀ɔy kráp', 'english': 'Please help...'},
+                'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔy', 'english': 'Please (informal)'},
             },
             'female': {
                 'formal': {'thai': 'กรุณา...ค่ะ', 'paiboon': 'gà-rú-naa... kâ', 'english': 'Please...'},
-                'polite': {'thai': 'ช่วย...หน่อยค่ะ', 'paiboon': 'chûai... nɔ̀ɔi kâ', 'english': 'Please help...'},
-                'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔi', 'english': 'Please (informal)'},
+                'polite': {'thai': 'ช่วย...หน่อยค่ะ', 'paiboon': 'chûay... nɔ̀ɔy kâ', 'english': 'Please help...'},
+                'casual': {'thai': 'หน่อย', 'paiboon': 'nɔ̀ɔy', 'english': 'Please (informal)'},
             }
         }
     }
@@ -1301,7 +1301,7 @@ FORMALITY_LEVELS = {
         'description': 'Used exclusively for/about royalty and high-ranking religious figures',
         'color': '#D4AF37',
         'examples': [
-            {'thai': 'เสวย', 'paiboon': 'sà-wəəi', 'english': 'to eat (royal)'},
+            {'thai': 'เสวย', 'paiboon': 'sà-wəəy', 'english': 'to eat (royal)'},
             {'thai': 'ตรัส', 'paiboon': 'dtràt', 'english': 'to speak (royal)'},
             {'thai': 'เสด็จ', 'paiboon': 'sà-dèt', 'english': 'to go (royal)'},
             {'thai': 'บรรทม', 'paiboon': 'ban-tom', 'english': 'to sleep (royal)'},
@@ -1420,7 +1420,7 @@ FORMALITY_LEVELS = {
             {'thai': 'มึง', 'paiboon': 'mʉŋ', 'english': 'you (rude/close friends)'},
             {'thai': 'ไอ้', 'paiboon': 'âi', 'english': 'prefix for males (rude)'},
             {'thai': 'อี', 'paiboon': 'ii', 'english': 'prefix for females (rude)'},
-            {'thai': 'เฮ้ย', 'paiboon': 'hə́əi', 'english': 'hey! (rude)'},
+            {'thai': 'เฮ้ย', 'paiboon': 'hə́əy', 'english': 'hey! (rude)'},
         ]
     },
     'vulgar': {
@@ -1534,7 +1534,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ɔɔ',
             'type': 'long',
             'sound': 'long "aw" as in "saw"',
-            'example_word': {'thai': 'น้อย', 'paiboon': 'nɔ́ɔi', 'english': 'little/few'},
+            'example_word': {'thai': 'น้อย', 'paiboon': 'nɔ́ɔy', 'english': 'little/few'},
             'length_note': 'Open mouth wide, like "aw"'
         },
         {
@@ -1754,10 +1754,10 @@ THAI_VOWELS_32 = {
         {
             'number': 32,
             'thai': 'อุย',
-            'paiboon': 'ui',
+            'paiboon': 'uy',
             'type': 'short',
-            'sound': 'short "ui"',
-            'example_word': {'thai': 'คุย', 'paiboon': 'kui', 'english': 'to chat'},
+            'sound': 'short "ui" (the final y is said like i)',
+            'example_word': {'thai': 'คุย', 'paiboon': 'kuy', 'english': 'to chat'},
             'length_note': 'Quick gliding vowel'
         },
     ],
@@ -1842,7 +1842,7 @@ TOUR_VOCAB = {
     ],
     'sightseeing': [
         {'english': 'Temple', 'thai': 'วัด', 'paiboon': 'wát', 'note': 'Buddhist temples are everywhere in Thailand'},
-        {'english': 'Beautiful', 'thai': 'สวย', 'paiboon': 'sǔai', 'note': 'Common compliment'},
+        {'english': 'Beautiful', 'thai': 'สวย', 'paiboon': 'sǔay', 'note': 'Common compliment'},
         {'english': 'Take a photo', 'thai': 'ถ่ายรูป', 'paiboon': 'tàai-rûup', 'note': 'Literally "take picture"'},
         {'english': 'Entrance fee', 'thai': 'ค่าเข้า', 'paiboon': 'kâa-kâo', 'note': 'Literally "entrance cost"'},
     ],
@@ -1853,14 +1853,14 @@ TOUR_VOCAB = {
         {'english': 'Cheap', 'thai': 'ถูก', 'paiboon': 'tùuk', 'note': 'Can also mean "correct"'},
     ],
     'food': [
-        {'english': 'Delicious', 'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'note': 'Most useful food adjective'},
+        {'english': 'Delicious', 'thai': 'อร่อย', 'paiboon': 'à-rɔ̀y', 'note': 'Most useful food adjective'},
         {'english': 'Spicy', 'thai': 'เผ็ด', 'paiboon': 'pèt', 'note': 'Critical for food preferences'},
         {'english': 'Not spicy', 'thai': 'ไม่เผ็ด', 'paiboon': 'mâi pèt', 'note': 'Essential for many learners'},
         {'english': 'Water', 'thai': 'น้ำ', 'paiboon': 'náam', 'note': 'Also means liquid in general'},
         {'english': 'Bill / Check', 'thai': 'เช็คบิล', 'paiboon': 'chék-bin', 'note': 'Used to request the bill'},
     ],
     'emergencies': [
-        {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai dûai', 'note': 'Emergency cry for help'},
+        {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûay dûay', 'note': 'Emergency cry for help'},
         {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'rooŋ-pá-yaa-baan', 'note': 'Important for emergencies'},
         {'english': 'Police', 'thai': 'ตำรวจ', 'paiboon': 'dam-rùat', 'note': 'For reporting issues'},
     ],
@@ -1877,7 +1877,7 @@ BUSINESS_VOCAB = {
         {'english': 'Meeting', 'thai': 'ประชุม', 'paiboon': 'bpra-chum', 'note': 'Can be used as noun or verb'},
         {'english': 'Appointment', 'thai': 'นัดหมาย', 'paiboon': 'nát-mǎai', 'note': 'Scheduled meeting'},
         {'english': 'Discuss (formal)', 'thai': 'หารือ', 'paiboon': 'hǎa-rʉʉ', 'note': 'Formal discussion — more respectful than พูด'},
-        {'english': 'Agree', 'thai': 'เห็นด้วย', 'paiboon': 'hěn-dûai', 'note': 'To agree with something'},
+        {'english': 'Agree', 'thai': 'เห็นด้วย', 'paiboon': 'hěn-dûay', 'note': 'To agree with something'},
         {'english': 'Consider', 'thai': 'พิจารณา', 'paiboon': 'pí-jaa-rá-naa', 'note': 'Formal deliberation — used in official contexts'},
     ],
     'office': [
@@ -1900,7 +1900,7 @@ BUSINESS_VOCAB = {
         {'english': 'Legal / Law', 'thai': 'กฎหมาย', 'paiboon': 'gòt-mǎai', 'note': 'Literally "law" — used broadly for legal matters'},
     ],
     'hierarchy': [
-        {'english': 'Director', 'thai': 'ผู้อำนวยการ', 'paiboon': 'pûu-am-nuai-gaan', 'note': 'Executive director level'},
+        {'english': 'Director', 'thai': 'ผู้อำนวยการ', 'paiboon': 'pûu-am-nuay-gaan', 'note': 'Executive director level'},
         {'english': 'Manager', 'thai': 'ผู้จัดการ', 'paiboon': 'pûu-jàt-gaan', 'note': 'Department manager'},
         {'english': 'Employee / Staff', 'thai': 'พนักงาน', 'paiboon': 'pá-nák-ŋaan', 'note': 'General staff member'},
     ],
@@ -2705,12 +2705,12 @@ GRAMMAR = {
                     },
                     {
                         'thai': 'ถ้วย',
-                        'paiboon': 'tûai',
+                        'paiboon': 'tûay',
                         'usage': 'Cups, bowls (porcelain/ceramic)',
                         'examples': ['ชา (tea)', 'กาแฟ (coffee)', 'ข้าว (rice in bowl)'],
                         'sample_sentence': {
                             'thai': 'ชาสองถ้วย',
-                            'paiboon': 'chaa sɔ̌ɔŋ tûai',
+                            'paiboon': 'chaa sɔ̌ɔŋ tûay',
                             'english': 'two cups of tea'
                         }
                     },
@@ -2743,7 +2743,7 @@ GRAMMAR = {
                         'examples': ['ซุป (soup)', 'ก๋วยเตี๋ยว (noodles)'],
                         'sample_sentence': {
                             'thai': 'ก๋วยเตี๋ยวสามชาม',
-                            'paiboon': 'gǔai-dtǐao sǎam chaam',
+                            'paiboon': 'gǔay-dtǐao sǎam chaam',
                             'english': 'three bowls of noodles'
                         }
                     }
@@ -2914,7 +2914,7 @@ GRAMMAR = {
                         'examples': ['เงิน (money)'],
                         'sample_sentence': {
                             'thai': 'หนึ่งร้อยบาท',
-                            'paiboon': 'nʉ̀ŋ rɔ́ɔi bàat',
+                            'paiboon': 'nʉ̀ŋ rɔ́ɔy bàat',
                             'english': 'one hundred baht'
                         }
                     }
@@ -3063,7 +3063,7 @@ GRAMMAR = {
             'entries': [
                 {'thai': 'นะ', 'paiboon': 'ná', 'english': 'softener / please'},
                 {'thai': 'สิ', 'paiboon': 'sì', 'english': 'urging / go ahead'},
-                {'thai': 'เลย', 'paiboon': 'ləəi', 'english': 'emphasis / at all'},
+                {'thai': 'เลย', 'paiboon': 'ləəy', 'english': 'emphasis / at all'},
                 {'thai': 'ก็', 'paiboon': 'gɔ̂ɔ', 'english': 'then / also'},
             ]
         },
@@ -3078,7 +3078,7 @@ GRAMMAR = {
         'adjective_position': 'Adjectives come AFTER nouns',
         'adj_examples': [
             {'thai': 'รถสีแดง', 'paiboon': 'rót sǐi dɛɛŋ', 'english': 'red car'},
-            {'thai': 'อาหารอร่อย', 'paiboon': 'aa-hǎan à-rɔ̀i', 'english': 'delicious food'},
+            {'thai': 'อาหารอร่อย', 'paiboon': 'aa-hǎan à-rɔ̀y', 'english': 'delicious food'},
         ]
     },
     
@@ -3131,7 +3131,7 @@ GRAMMAR = {
         {'pattern': 'more than', 'thai': 'กว่า', 'paiboon': 'gwàa', 'example': 'ใหญ่กว่า'},
         {'pattern': 'most', 'thai': 'ที่สุด', 'paiboon': 'tîi sùt', 'example': 'ใหญ่ที่สุด'},
         {'pattern': 'as...as', 'thai': 'เท่ากับ', 'paiboon': 'tâo gàp', 'example': 'ใหญ่เท่ากับ'},
-        {'pattern': 'less than', 'thai': 'น้อยกว่า', 'paiboon': 'nɔ́ɔi gwàa', 'example': 'น้อยกว่า'},
+        {'pattern': 'less than', 'thai': 'น้อยกว่า', 'paiboon': 'nɔ́ɔy gwàa', 'example': 'น้อยกว่า'},
     ],
     
     'classifier_counting': {
@@ -3454,7 +3454,7 @@ PAIBOON_GUIDE = {
                 },
                 {
                     'thai': 'น้อย / น้อง',
-                    'paiboon': 'nɔ́ɔi / nɔ́ɔŋ',
+                    'paiboon': 'nɔ́ɔy / nɔ́ɔŋ',
                     'english': 'little, few / younger sibling',
                     'context': 'Quantity, family',
                     'formality': 'Casual'
@@ -3554,7 +3554,7 @@ LESSONS = [
         'objectives': ['Order food', 'Express taste preferences'],
         'sentences': {
             'short': [
-                {'thai': 'อร่อยมาก', 'paiboon': 'à-rɔ̀i mâak', 'english': 'Very delicious'},
+                {'thai': 'อร่อยมาก', 'paiboon': 'à-rɔ̀y mâak', 'english': 'Very delicious'},
             ],
             'long': [
                 {'thai': 'ขอผัดไทยไม่ใส่ถั่วครับ', 'paiboon': 'kɔ̌ɔ pàt-tai mâi sài tùa kráp', 'english': 'Pad Thai without peanuts'},
@@ -3693,7 +3693,7 @@ LESSONS = [
                 {'thai': 'ทำดีได้ดี', 'paiboon': 'tam dii dâi dii', 'english': 'Do good, receive good'},
             ],
             'long': [
-                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûai hâi mii sà-dtì', 'english': 'Practising Dhamma helps develop mindfulness'},
+                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûay hâi mii sà-dtì', 'english': 'Practising Dhamma helps develop mindfulness'},
             ]
         }
     },
@@ -3739,7 +3739,7 @@ LESSONS = [
                 {'thai': 'หายใจออก', 'paiboon': 'hǎai-jai ɔ̀ɔk', 'english': 'Breathe out'},
             ],
             'long': [
-                {'thai': 'นั่งสมาธิทุกวันช่วยให้จิตใจสงบ', 'paiboon': 'nâŋ sà-maa-tí túk wan chûai hâi jìt-jai sà-ŋòp', 'english': 'Meditating daily helps calm the mind'},
+                {'thai': 'นั่งสมาธิทุกวันช่วยให้จิตใจสงบ', 'paiboon': 'nâŋ sà-maa-tí túk wan chûay hâi jìt-jai sà-ŋòp', 'english': 'Meditating daily helps calm the mind'},
             ]
         }
     },
@@ -4200,7 +4200,7 @@ CULTURAL_INFO = {
             'level_2_respect': {
                 'name': 'Respectful Greeting (ผู้ใหญ่ - Elders/Superiors)',
                 'thai': 'การไหว้ด้วยความเคารพ',
-                'paiboon': 'gaan wâi dûai kwaam kao-róp',
+                'paiboon': 'gaan wâi dûay kwaam kao-róp',
                 'hand_position': 'Palms together with fingertips touching nose',
                 'fingertips': 'At nose tip level',
                 'bow': 'Moderate bow, clearly visible',
@@ -4218,7 +4218,7 @@ CULTURAL_INFO = {
             'level_3_highest': {
                 'name': 'Highest Respect (พระ - Monks/Royalty)',
                 'thai': 'การไหว้ด้วยความเคารพสูงสุด',
-                'paiboon': 'gaan wâi dûai kwaam kao-róp sǔuŋ-sùt',
+                'paiboon': 'gaan wâi dûay kwaam kao-róp sǔuŋ-sùt',
                 'hand_position': 'Palms together with thumbs touching between eyebrows, fingertips at hairline',
                 'fingertips': 'At forehead/hairline level',
                 'bow': 'Deep bow, sometimes to the point of kneeling',

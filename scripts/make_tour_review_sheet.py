@@ -46,7 +46,7 @@ QUESTIONS = [
     ('ตลาดกลางคืนอยู่ที่ไหน', 'dtà-làat glaaŋ-kʉʉn yùu tîi-nǎi', 'Where is the night market?',
      'คนในเมืองกาญจนบุรีเรียกตลาดกลางคืนว่าอะไรครับ เช่น ตลาดโต้รุ่ง หรือ ตลาดนัด',
      'What would locals actually call it: ตลาดกลางคืน, ตลาดโต้รุ่ง, ตลาดนัด?'),
-    ('เก็บเงินด้วย / เช็คบิล', 'gèp ŋən dûai / chék-bin', 'Asking for the bill',
+    ('เก็บเงินด้วย / เช็คบิล', 'gèp ŋən dûay / chék-bin', 'Asking for the bill',
      'แอปสอนว่า "เก็บเงินด้วย" ใช้ที่ร้านข้างทาง "เช็คบิล" ใช้ที่ร้านอาหาร ถูกต้องไหมครับ',
      'The app says เก็บเงินด้วย at street stalls and เช็คบิล in restaurants. Is that right?'),
     ('ใส่อันนี้ครับ', 'sài an-níi kráp', 'Put this on (temple guard lending a wrap)',

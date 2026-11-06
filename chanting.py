@@ -264,7 +264,7 @@ CHANTS = [
                     'เขาอาศัยสรณะนั่นแล้ว ย่อมไม่พ้นจากทุกข์ทั้งปวงได้'
                 ),
                 'paiboon': (
-                    'nân mí châi sà-rá-ná an gà-sěem ləəi, nân mí châi '
+                    'nân mí châi sà-rá-ná an gà-sěem ləəy, nân mí châi '
                     'sà-rá-ná an sǔuŋ-sùt, kǎo aa-sǎi sà-rá-ná nân lɛ́ɛo, '
                     'yɔ̂m mâi pón jàak túk táŋ-bpuaŋ dâai'
                 ),
@@ -291,7 +291,7 @@ CHANTS = [
                 'paiboon': (
                     'sùan pûu dai tʉ̌ʉ ao prá-pút, prá-tam, prá-sǒŋ bpen '
                     'sà-rá-ná lɛ́ɛo, hěn à-rí-yá-sàt kʉʉ kwaam jiŋ an '
-                    'bprà-sə̀ət sìi dûai bpan-yaa an chɔ̂ɔp'
+                    'bprà-sə̀ət sìi dûay bpan-yaa an chɔ̂ɔp'
                 ),
                 'english': (
                     'But whoever goes for refuge to the Buddha, the Dhamma '
@@ -506,7 +506,7 @@ CHANTS = [
                 'pali': 'อะจิรัง วะตะ อะยัง กาโย,',
                 'pali_roman': 'Aciraṃ vata ayaṃ kāyo',
                 'thai': 'ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย',
-                'paiboon': 'râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi',
+                'paiboon': 'râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəy',
                 'english': 'This body, alas, is a thing that does not remain long.',
             },
             {
@@ -8027,7 +8027,7 @@ CHANTS = [
                 'pali': 'เอวะรูโป โข โภนโต ทิวะโส, พุทเธนะ ภะคะวะตา ปัญญัตตัสสะ ธัมมัสสะวะนัสสะ เจวะ ตะทัตถายะ อุปาสะกะอุปาสิกานัง อุโปสะถัสสะ จะ กาโล โหติ,',
                 'pali_roman': 'evarūpo kho bhonto divaso, buddhena bhagavatā paññattassa dhammassavanassa ceva tadatthāya upāsaka-upāsikānaṃ uposathassa ca kālo hoti,',
                 'thai': 'ก็แลมีนิยมเช่นนี้ เป็นกาลที่สาธุชนทั้งอุบาสกอุบาสิกาจะได้ฟังธรรม และรักษาอุโบสถพร้อมด้วยองค์ 8 ประการ เพื่อประโยชน์แก่การฟังธรรมนั้น',
-                'paiboon': 'gɔ̂ɔ lɛɛ mii ní-yom chên-níi bpen gaan tîi sǎa-tú-chon táŋ ù-baa-sòk ù-baa-sì-gaa jà dâai faŋ tam lɛ́ rák-sǎa ù-boo-sòt prɔ́ɔm dûai oŋ bpɛ̀ɛt bprà-gaan pʉ̂a bprà-yòot gɛ̀ɛ gaan faŋ tam nán',
+                'paiboon': 'gɔ̂ɔ lɛɛ mii ní-yom chên-níi bpen gaan tîi sǎa-tú-chon táŋ ù-baa-sòk ù-baa-sì-gaa jà dâai faŋ tam lɛ́ rák-sǎa ù-boo-sòt prɔ́ɔm dûay oŋ bpɛ̀ɛt bprà-gaan pʉ̂a bprà-yòot gɛ̀ɛ gaan faŋ tam nán',
                 'english': 'Such a day as this, venerable sirs, is the time appointed by the Buddha, the Blessed One, for the hearing of the Dhamma, and for that same purpose the time of the Uposatha for laymen and laywomen.',
             },
             {
@@ -8054,7 +8054,7 @@ CHANTS = [
                 'pali': 'กาละปะริจเฉทัง กัต๎วา ตัง ตัง เวระมะณิง อารัมมะณัง กะริต๎วา อะวิกขิตตะจิตตา หุต๎วา สักกัจจัง อุโปสะถัง สะมาทิเยยยามะ.',
                 'pali_roman': 'kālaparicchedaṃ katvā taṃ taṃ veramaṇiṃ ārammaṇaṃ karitvā avikkhittacittā hutvā sakkaccaṃ uposathaṃ samādiyeyyāma.',
                 'thai': 'จงตั้งจิตคิดกำหนดกาลว่า จะรักษาอุโบสถสิ้นราตรีและวันนี้ จงทำความเว้นจากโทษนั้น ๆ ให้เป็นอารมณ์ คือ เว้นจากการฆ่าสัตว์ 1 เว้นจากลักทรัพย์ 1 เว้นจากกรรมอันเป็นข้าศึกแก่พรหมจรรย์ 1 เว้นจากพูดเท็จ 1 เว้นจากดื่มน้ำเมาคือสุราและเมรัย 1 เว้นจากบริโภคอาหารในเวลาวิกาล ตั้งแต่เที่ยงแล้วไป 1 เว้นจากฟ้อนรำขับร้องประโคมดนตรีและดูการเล่นอันเป็นข้าศึกแก่กุศล และทัดทรงประดับตกแต่งร่างกายด้วยระเบียบดอกไม้ของหอมเครื่องย้อมเครื่องทา 1 เว้นจากที่นอนสูงและที่นอนใหญ่ ภายในยัดด้วยนุ่นและสำลี 1 ฉะนี้ อย่าให้จิตฟุ้งซ่านส่งไปที่อื่น จงสมาทานองค์ 5 ประการนั้นโดยเคารพ เพื่อจะบูชาสมเด็จพระผู้มีพระภาคเจ้าพระองค์นั้น ด้วยธรรมานุธรรมปฏิบัติ ตามกำลังของคฤหัสถ์ทั้งหลาย',
-                'paiboon': 'joŋ dtâŋ jìt kít gam-nòt gaan wâa jà rák-sǎa ù-boo-sòt sîn raa-dtrii lɛ́ wan-níi joŋ tam kwaam wén jàak tôot nán-nán hâi bpen aa-rom kʉʉ wén jàak gaan kâa sàt nʉ̀ŋ wén jàak lák sáp nʉ̀ŋ wén jàak gam an bpen kâa-sʉ̀k gɛ̀ɛ prom-má-jan nʉ̀ŋ wén jàak pûut tét nʉ̀ŋ wén jàak dʉ̀ʉm nám-mao kʉʉ sù-raa lɛ́ mee-rai nʉ̀ŋ wén jàak bɔɔ-rí-pôok aa-hǎan nai wee-laa wí-gaan dtâŋ-dtɛ̀ɛ tîaŋ lɛ́ɛo bpai nʉ̀ŋ wén jàak fɔ́ɔn-ram kàp-rɔ́ɔŋ bprà-koom don-dtrii lɛ́ duu gaan-lên an bpen kâa-sʉ̀k gɛ̀ɛ gù-sǒn lɛ́ tát-soŋ bprà-dàp dtòk-dtɛ̀ŋ râaŋ-gaai dûai rá-bìap dɔ̀ɔk-máai kɔ̌ɔŋ-hɔ̌ɔm krʉ̂aŋ-yɔ́ɔm krʉ̂aŋ-taa nʉ̀ŋ wén jàak tîi-nɔɔn sǔuŋ lɛ́ tîi-nɔɔn yài paai-nai yát dûai nûn lɛ́ sǎm-lii nʉ̀ŋ chà-níi yàa hâi jìt fúŋ-sâan sòŋ bpai tîi-ʉ̀ʉn joŋ sà-maa-taan oŋ hâa bprà-gaan nán dooi kao-róp pʉ̂a jà buu-chaa sǒm-dèt prá-pûu-mii-prá-pâak-jâo prá-oŋ nán dûai tam-maa-nú-tam-bpà-dtì-bàt dtaam gam-laŋ kɔ̌ɔŋ ká-rʉ́-hàt táŋ-lǎai',
+                'paiboon': 'joŋ dtâŋ jìt kít gam-nòt gaan wâa jà rák-sǎa ù-boo-sòt sîn raa-dtrii lɛ́ wan-níi joŋ tam kwaam wén jàak tôot nán-nán hâi bpen aa-rom kʉʉ wén jàak gaan kâa sàt nʉ̀ŋ wén jàak lák sáp nʉ̀ŋ wén jàak gam an bpen kâa-sʉ̀k gɛ̀ɛ prom-má-jan nʉ̀ŋ wén jàak pûut tét nʉ̀ŋ wén jàak dʉ̀ʉm nám-mao kʉʉ sù-raa lɛ́ mee-rai nʉ̀ŋ wén jàak bɔɔ-rí-pôok aa-hǎan nai wee-laa wí-gaan dtâŋ-dtɛ̀ɛ tîaŋ lɛ́ɛo bpai nʉ̀ŋ wén jàak fɔ́ɔn-ram kàp-rɔ́ɔŋ bprà-koom don-dtrii lɛ́ duu gaan-lên an bpen kâa-sʉ̀k gɛ̀ɛ gù-sǒn lɛ́ tát-soŋ bprà-dàp dtòk-dtɛ̀ŋ râaŋ-gaai dûay rá-bìap dɔ̀ɔk-máai kɔ̌ɔŋ-hɔ̌ɔm krʉ̂aŋ-yɔ́ɔm krʉ̂aŋ-taa nʉ̀ŋ wén jàak tîi-nɔɔn sǔuŋ lɛ́ tîi-nɔɔn yài paai-nai yát dûay nûn lɛ́ sǎm-lii nʉ̀ŋ chà-níi yàa hâi jìt fúŋ-sâan sòŋ bpai tîi-ʉ̀ʉn joŋ sà-maa-taan oŋ hâa bprà-gaan nán dooy kao-róp pʉ̂a jà buu-chaa sǒm-dèt prá-pûu-mii-prá-pâak-jâo prá-oŋ nán dûay tam-maa-nú-tam-bpà-dtì-bàt dtaam gam-laŋ kɔ̌ɔŋ ká-rʉ́-hàt táŋ-lǎai',
                 'english': 'Having marked out the period of time, and having made each several abstention the object of the mind, with minds undistracted let us respectfully undertake the Uposatha.',
             },
             {
@@ -8062,7 +8062,7 @@ CHANTS = [
                 'pali': 'อีทิสัง หิ อุโปสะถัง สัมปัตตานัง อัมหากัง ชีวิตัง มา นิรัตถะกัง โหตุ.',
                 'pali_roman': 'īdisaṃ hi uposathaṃ sampattānaṃ amhākaṃ jīvitaṃ mā niratthakaṃ hotu.',
                 'thai': 'ชีวิตของเราทั้งหลายที่ได้ดำรงมาจนถึงวันอุโบสถเช่นนี้ อย่าให้ล่วงไปเปล่าปราศจากประโยชน์เลย',
-                'paiboon': 'chii-wít kɔ̌ɔŋ rao táŋ-lǎai tîi dâai dam-roŋ maa jon-tʉ̌ŋ wan ù-boo-sòt chên-níi yàa hâi lûaŋ bpai bplàao bpràat-sà-jàak bprà-yòot ləəi',
+                'paiboon': 'chii-wít kɔ̌ɔŋ rao táŋ-lǎai tîi dâai dam-roŋ maa jon-tʉ̌ŋ wan ù-boo-sòt chên-níi yàa hâi lûaŋ bpai bplàao bpràat-sà-jàak bprà-yòot ləəy',
                 'english': 'For to us who have reached such an Uposatha as this, may our life not be barren of fruit.',
             },
         ],
@@ -15292,7 +15292,7 @@ CHANTS = [
         'id': 'mongkhon-chakkrawan-noi',
         'title_thai': 'มงคลจักรวาฬน้อย',
         'title_pali': '',
-        'title_roman': 'moŋ-kon jàk-grà-waan nɔ́ɔi',
+        'title_roman': 'moŋ-kon jàk-grà-waan nɔ́ɔy',
         'title_english': 'The Lesser Universal Blessing',
         # Left empty on purpose: a composed blessing, the book prints no
         # attribution, and none has been supplied from memory.
@@ -15358,7 +15358,7 @@ CHANTS = [
             'pali': '',
             'pali_roman': '',
             'thai': 'มงคลจักรวาฬน้อย จบ',
-            'paiboon': 'moŋ-kon jàk-grà-waan nɔ́ɔi jòp',
+            'paiboon': 'moŋ-kon jàk-grà-waan nɔ́ɔy jòp',
             'english': 'Here ends the Lesser Universal Blessing.',
         },
         'verses': [
@@ -57844,7 +57844,7 @@ CHANTS = [
                 'pali': 'อิจเจวะเมกันตะภิปูชะเนยยะกัง, วัตถุตตะยัง วันทะยะตาภิสังขะตัง, ปุญญัง มะยา ยัง มะมะ สัพพุปัททะวา, มา โหนตุ เว ตัสสะ ปะภาวะสิทธิยา.',
                 'pali_roman': 'Iccevamekantabhipūjaneyyakaṃ, vatthuttayaṃ vandayatābhisaṅkhataṃ, puññaṃ mayā yaṃ mama sabbupaddavā, mā hontu ve tassa pabhāvasiddhiyā.',
                 'thai': 'บุญใด ที่ข้าพเจ้าผู้ไหว้อยู่ซึ่งวัตถุสาม, คือพระรัตนตรัย อันควรบูชายิ่งโดยส่วนเดียว, ได้กระทำแล้วเป็นอย่างยิ่ง เช่นนี้, ขออุปัทวะทั้งหลาย, จงอย่ามีแก่ข้าพเจ้าเลย, ด้วยอำนาจความสำเร็จ อันเกิดจากบุญนั้น.',
-                'paiboon': 'bun dai tîi kâa-pá-jâo pûu wâai yùu sʉ̂ŋ wát-tù sǎam, kʉʉ prá-rát-dtà-ná-dtrai an kuan buu-chaa yîŋ dooy sùan diao, dâai grà-tam lɛ́ɛo bpen yàaŋ-yîŋ chên-níi, kɔ̌ɔ ù-bpàt-tà-wá táŋ-lǎai, joŋ yàa mii gɛ̀ɛ kâa-pá-jâo ləəi, dûay am-nâat kwaam-sǎm-rèt an gə̀ət jàak bun nán.',
+                'paiboon': 'bun dai tîi kâa-pá-jâo pûu wâai yùu sʉ̂ŋ wát-tù sǎam, kʉʉ prá-rát-dtà-ná-dtrai an kuan buu-chaa yîŋ dooy sùan diao, dâai grà-tam lɛ́ɛo bpen yàaŋ-yîŋ chên-níi, kɔ̌ɔ ù-bpàt-tà-wá táŋ-lǎai, joŋ yàa mii gɛ̀ɛ kâa-pá-jâo ləəy, dûay am-nâat kwaam-sǎm-rèt an gə̀ət jàak bun nán.',
                 'english': 'By whatever merit I, revering the Threefold Object worthy of the highest homage, have thus produced — may no misfortune whatever come to me, by the power of its accomplishment.',
             },
         ],
@@ -59097,7 +59097,7 @@ CHANTS = [
                 'pali': 'สัจจัง วิหายะ มะติสัจจะกะวาทะเกตุง, วาทาภิโรปิตะมะนัง อะติอันธะภูตัง, ปัญญาปะทีปะชะลิโต ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'Saccaṃ vihāya matisaccakavādaketuṃ, Vādābhiropitamanaṃ atiandhabhūtaṃ, Paññāpadīpajalito jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีรุ่งเรืองแล้วด้วยประทีปคือปัญญา, ได้ชนะสัจจกะนิครนถ์ ผู้สละเสียซึ่งความสัตย์, มีใจที่จะยกถ้อยคำของตนให้สูงดุจยกธง, เป็นผู้มืดมนยิ่งนัก, ด้วยเทศนาญาณวิธี, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
-                'paiboon': 'prá-jɔɔm-mú-nii rûŋ-rʉaŋ lɛ́ɛo dûay bprà-tîip kʉʉ bpan-yaa, dâai chá-ná sàt-jà-gá ní-kron pûu sà-là sǐa sʉ̂ŋ kwaam-sàt, mii jai tîi jà yók tɔ̂ɔi-kam kɔ̌ɔŋ dton hâi sǔuŋ dùt yók toŋ, bpen pûu mʉ̂ʉt-mon yîŋ nák, dûay têet-sà-nǎa yaan-wí-tii, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'paiboon': 'prá-jɔɔm-mú-nii rûŋ-rʉaŋ lɛ́ɛo dûay bprà-tîip kʉʉ bpan-yaa, dâai chá-ná sàt-jà-gá ní-kron pûu sà-là sǐa sʉ̂ŋ kwaam-sàt, mii jai tîi jà yók tɔ̂ɔy-kam kɔ̌ɔŋ dton hâi sǔuŋ dùt yók toŋ, bpen pûu mʉ̂ʉt-mon yîŋ nák, dûay têet-sà-nǎa yaan-wí-tii, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages, ablaze with the lamp that is wisdom, defeated Saccaka the Nigantha, who had abandoned truth and set his mind on raising his own words like a banner, a man deep in darkness, by the way of the knowledge that teaches. By that power may the blessings of victory be yours.',
             },
             {
@@ -59639,7 +59639,7 @@ CHANTS = [
                 'pali': 'ปะฏิสังขา โยนิโส เสนาสะนัง ปะฏิเสวามิ,',
                 'pali_roman': 'Paṭisaṅkhā yoniso senāsanaṃ paṭisevāmi,',
                 'thai': 'เราย่อมพิจารณา โดยแยบคายแล้ว ใช้สอยเสนาสนะ,',
-                'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chái-sɔ̌ɔi sěe-naa-sà-ná,',
+                'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chái-sɔ̌ɔy sěe-naa-sà-ná,',
                 'english': 'Reflecting wisely, I make use of the lodging,',
             },
             {
@@ -60217,7 +60217,7 @@ CHANTS = [
                 'pali': 'ยะทิทัง จีวะรัง, ตะทุปะภุญชะโก จะ ปุคคะโล,',
                 'pali_roman': 'Yadidaṃ cīvaraṃ, tadupabhuñjako ca puggalo,',
                 'thai': 'สิ่งเหล่านี้คือจีวร, และคนผู้ใช้สอยจีวรนั้น,',
-                'paiboon': 'sìŋ lào níi kʉʉ jii-wɔɔn, lɛ́ kon pûu chái-sɔ̌ɔi jii-wɔɔn nán,',
+                'paiboon': 'sìŋ lào níi kʉʉ jii-wɔɔn, lɛ́ kon pûu chái-sɔ̌ɔy jii-wɔɔn nán,',
                 'english': 'that is, this robe, and the person using it,',
             },
             {
@@ -60421,7 +60421,7 @@ CHANTS = [
                 'pali': 'ยะทิทัง เสนาสะนัง ตะทุปะภุญชะโก จะ ปุคคะโล,',
                 'pali_roman': 'Yadidaṃ senāsanaṃ tadupabhuñjako ca puggalo,',
                 'thai': 'สิ่งเหล่านี้คือเสนาสนะ, และบุคคลผู้ใช้สอยเสนาสนะนั้น,',
-                'paiboon': 'sìŋ lào níi kʉʉ sěe-naa-sà-ná, lɛ́ bùk-kon pûu chái-sɔ̌ɔi sěe-naa-sà-ná nán,',
+                'paiboon': 'sìŋ lào níi kʉʉ sěe-naa-sà-ná, lɛ́ bùk-kon pûu chái-sɔ̌ɔy sěe-naa-sà-ná nán,',
                 'english': 'that is, this lodging, and the person making use of it,',
             },
             {
@@ -61716,7 +61716,7 @@ CHANTS = [
                 'pali': 'มาตาปิตา จะ อัต๎ระชัง นิจจัง รักขันติ ปุตตะกัง,',
                 'pali_roman': 'Mātāpitā ca atrajaṃ niccaṃ rakkhanti puttakaṃ,',
                 'thai': 'มารดาและบิดา, ย่อมถนอมบุตรน้อย ผู้บังเกิดในตนเป็นนิตย์ ฉันใด,',
-                'paiboon': 'maan-daa lɛ́ bì-daa, yɔ̂m tà-nɔ̌ɔm bùt nɔ́ɔi pûu baŋ-gə̀ət nai dton bpen nít chǎn dai,',
+                'paiboon': 'maan-daa lɛ́ bì-daa, yɔ̂m tà-nɔ̌ɔm bùt nɔ́ɔy pûu baŋ-gə̀ət nai dton bpen nít chǎn dai,',
                 'english': 'as a mother and father always cherish the little child born of them,',
             },
             # ‼ CHECK [IMG_0481.PNG]: PAIYANNOI ฯ CLOSES THE CHANT in the Pali
@@ -61828,7 +61828,7 @@ CHANTS = [
                 'pali': 'สัตตา ติฏฐันติ โลกัส๎มิง เต ภุมมา จะตุโยนิกา ปัญเจกะจะตุโวการา สังสะรันตา ภะวาภะเว',
                 'pali_roman': 'Sattā tiṭṭhanti lokasmiṃ te bhummā catuyonikā pañcekacatuvokārā saṃsarantā bhavābhave',
                 'thai': 'สัตว์ทั้งหลาย ตั้งอยู่ในโลก อยู่ในภูมิทั้งสาม อยู่ในกำเนิดทั้งสี่ มีขันธ์ห้าขันธ์ มีขันธ์ขันธ์เดียว มีขันธ์สี่ขันธ์ กำลังท่องเที่ยวอยู่ในภพน้อยภพใหญ่ก็ดี',
-                'paiboon': 'sàt táŋ-lǎai dtâŋ yùu nai lôok yùu nai puum táŋ sǎam yùu nai gam-nə̀ət táŋ sìi mii kǎn hâa kǎn mii kǎn kǎn diao mii kǎn sìi kǎn gam-laŋ tɔ̂ŋ-tîao yùu nai pôp nɔ́ɔi pôp yài gɔ̂ dii',
+                'paiboon': 'sàt táŋ-lǎai dtâŋ yùu nai lôok yùu nai puum táŋ sǎam yùu nai gam-nə̀ət táŋ sìi mii kǎn hâa kǎn mii kǎn kǎn diao mii kǎn sìi kǎn gam-laŋ tɔ̂ŋ-tîao yùu nai pôp nɔ́ɔy pôp yài gɔ̂ dii',
                 'english': 'beings established in the world, in the three planes, in the four kinds of birth, with five aggregates, with one, or with four, wandering in becoming great and small',
             },
             {
@@ -62125,7 +62125,7 @@ CHANTS = [
                 'pali': 'เนตัง โข สะระณัง เขมัง เนตัง สะระณะมุตตะมัง เนตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะติ',
                 'pali_roman': 'Netaṃ kho saraṇaṃ khemaṃ netaṃ saraṇamuttamaṃ netaṃ saraṇamāgamma sabbadukkhā pamuccati',
                 'thai': 'นั่นมิใช่สรณะอันเกษมเลย นั่นมิใช่สรณะอันสูงสุด เขาอาศัยสรณะนั่นแล้ว ย่อมไม่พ้นจากทุกข์ทั้งปวงได้',
-                'paiboon': 'nân mí châi sà-rá-ná an gà-sěem ləəi nân mí châi sà-rá-ná an sǔuŋ-sùt kǎo aa-sǎi sà-rá-ná nân lɛ́ɛo yɔ̂m mâi pón jàak túk táŋ-bpuaŋ dâai',
+                'paiboon': 'nân mí châi sà-rá-ná an gà-sěem ləəy nân mí châi sà-rá-ná an sǔuŋ-sùt kǎo aa-sǎi sà-rá-ná nân lɛ́ɛo yɔ̂m mâi pón jàak túk táŋ-bpuaŋ dâai',
                 'english': 'that is no safe refuge, that is no supreme refuge; coming to that refuge one is not freed from all suffering',
             },
             {
@@ -78678,7 +78678,7 @@ _CONTENTS_PAIBOON = {
     'ถวายพรพระ':
         'tà-wǎai pɔɔn prá',
     'มงคลจักรวาฬน้อย':
-        'moŋ-kon jàk-grà-waan nɔ́ɔi',
+        'moŋ-kon jàk-grà-waan nɔ́ɔy',
     'ทำวัตรเย็น':
         'tam-wát yen',
     'ระเบียบทำวัตรสวดมนต์ ภาคเย็น':
@@ -78882,7 +78882,7 @@ _CONTENTS_PAIBOON = {
     'อนุโมทนาวิธี':
         'à-nú-moo-tá-naa-wí-tii',
     'มงคลจักรวาฬน้อย (ย่อ)':
-        'moŋ-kon jàk-grà-waan nɔ́ɔi (yɔ̂ɔ)',
+        'moŋ-kon jàk-grà-waan nɔ́ɔy (yɔ̂ɔ)',
     'ติโรกุฑฑะกัณฑะปัจฉิมภาค':
         'dtì-roo-kút-tá-gan-tá-bpàt-chǐm-má-pâak',
     'อาฏานาฏิยะปะริตตัง (ย่อ)':

@@ -300,12 +300,15 @@ PAIBOON_INITIALS = [
     '',                       # a syllable may begin with its vowel (an, ùu)
 ]
 PAIBOON_VOWELS = [
-    'aao', 'aai', 'ɔɔi', 'ooi', 'ɛɛo', 'eeo', 'iao',
+    # A final ย after any vowel but a/aa is the FINAL y (dooy, nɔ́ɔy, kuy),
+    # so ɔɔi / ooi / ui / ɔi / oi are deliberately absent: only ai and aai
+    # (ไ ใ ัย าย) keep the i.
+    'aao', 'aai', 'ɛɛo', 'eeo', 'iao',
     'ɔɔ', 'əə', 'ɛɛ', 'ʉʉ', 'aa', 'ii', 'uu', 'ee', 'oo',
-    'ia', 'ʉa', 'ua', 'ai', 'ao', 'ui', 'ɔi', 'oi',
+    'ia', 'ʉa', 'ua', 'ai', 'ao',
     'a', 'i', 'ʉ', 'u', 'e', 'ɛ', 'o', 'ɔ', 'ə',
 ]
-PAIBOON_FINALS = {'p', 't', 'k', 'm', 'n', 'ŋ', 'i', 'o', 'y', 'w', ''}
+PAIBOON_FINALS = {'p', 't', 'k', 'm', 'n', 'ŋ', 'o', 'y', 'w', ''}
 
 # The four tone marks Paiboon writes over the vowel. Stripped before a
 # syllable is matched, because they say how it is said, not what it is.

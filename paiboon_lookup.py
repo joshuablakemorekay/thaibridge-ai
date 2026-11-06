@@ -35,7 +35,7 @@ SEARCHING WITHOUT THE DIACRITICS
 This is the part that makes the tool usable, and it takes TWO folds, not one.
 
 `fold` is the tight one: tone marks stripped, the IPA-ish letters flattened to
-ASCII, hyphens and spaces dropped. That alone gets "aroi" to à-rɔ̀i.
+ASCII, hyphens and spaces dropped. That alone gets "aroi" to à-rɔ̀y.
 
 `fold_loose` is the fallback, and it is what makes the commonest phrases in the
 language findable at all. Tight folding still misses ขอบคุณ and สวัสดี, because
@@ -51,11 +51,12 @@ a query without padding a good result set.
 The display always shows the real, fully-marked romanisation — folding is for
 finding, not for teaching.
 """
+import re
 import unicodedata
 from dataclasses import dataclass, field
 
 # Paiboon borrows four vowel letters from the IPA that no keyboard has. Folding
-# them to their nearest ASCII spelling is what lets "aroi" find "à-rɔ̀i" and
+# them to their nearest ASCII spelling is what lets "aroi" find "à-rɔ̀y" and
 # "phuea" find "pʉ̂a". The values are the letters a learner actually reaches for,
 # not a linguistically tidy mapping.
 _LETTER_FOLDS = {
@@ -63,7 +64,7 @@ _LETTER_FOLDS = {
     'ɛ': 'e',    # ae, as in ɛɛ
     'ɯ': 'u',    # the unrounded u
     'ʉ': 'u',    # same sound, the other glyph Paiboon uses for it
-    'ə': 'e',    # oe, as in ləəi
+    'ə': 'e',    # oe, as in ləəy
     'ŋ': 'ng',   # eng — spelled out, because that is how it is typed
     'ʔ': '',     # glottal stop: written in some sources, never typed
 }
@@ -97,7 +98,13 @@ def fold(text):
         if ch in '-– _.,:;!?()/':
             continue                      # separators and stray punctuation
         out.append(ch)
-    return ''.join(out)
+    # ThaiBridge Spelling writes a final ย as y (dûay, à-rɔ̀y), but learners
+    # type it either way ("aroi", "aroy"). A y after a vowel and not before
+    # one is folded to i, so both spellings reach the same row.
+    return _FINAL_Y.sub('i', ''.join(out))
+
+
+_FINAL_Y = re.compile(r'(?<=[aeiou])y(?![aeiou])')
 
 
 def fold_loose(text):
@@ -403,7 +410,7 @@ def search(query, limit=40):
             #
             # Its substring hits are a different matter: they are the noisy
             # ones. Searching "aroi" turned up two long price sentences,
-            # because "rɔ́ɔi" (hundred) sits inside them and survives the fuzzy
+            # because "rɔ́ɔy" (hundred) sits inside them and survives the fuzzy
             # merge. So a loose SUBSTRING only counts when nothing precise was
             # found anywhere — a genuine last resort, rather than five results
             # where three were wanted.
