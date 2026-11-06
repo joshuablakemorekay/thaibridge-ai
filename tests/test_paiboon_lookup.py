@@ -47,6 +47,13 @@ class TestFoldLoose:
         # Every road sign in Thailand writes kh/ph/th; Paiboon writes k/p/t.
         assert pl.fold_loose('khop khun') == pl.fold_loose('kɔ̀ɔp-kun')
 
+    def test_rtgs_vowel_pairs_reach_the_paiboon_spelling(self):
+        # Road signs write ə as oe and ʉ as ue: เลย loei, เมือง mueang.
+        assert pl.fold_loose('loei') == pl.fold_loose('ləəy')
+        assert pl.fold_loose('ngoen') == pl.fold_loose('ŋəən')
+        assert pl.fold_loose('mueang') == pl.fold_loose('mʉaŋ')
+        assert pl.fold_loose('rue') == pl.fold_loose('rʉ̌ʉ')
+
     def test_the_ee_spelling_reaches_paiboons_ii(self):
         # สวัสดี is sà-wàt-dii, and every beginner types "sawatdee".
         assert pl.fold_loose('sawatdee') == pl.fold_loose('sà-wàt-dii')

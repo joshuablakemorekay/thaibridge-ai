@@ -139,6 +139,12 @@ def fold_loose(text):
     # from the signage, and without this they find nothing at all.
     for digraph, plain in (('kh', 'k'), ('ph', 'p'), ('th', 't')):
         tight = tight.replace(digraph, plain)
+    # RTGS spells two vowels with letter pairs where Paiboon uses one IPA
+    # letter: ə is "oe" (เลย loei, เงิน ngoen) and ʉ is "ue" (หรือ rue, เมือง
+    # mueang). fold() already turned ə into e and ʉ into u, so the RTGS pairs
+    # are brought down to the same single letter.
+    for digraph, plain in (('uea', 'ua'), ('ue', 'u'), ('oe', 'e')):
+        tight = tight.replace(digraph, plain)
     # Then merge each voiced stop into its voiceless partner. Thai finals are
     # unreleased, so ขอบ is heard somewhere between "khop" and "khob" and gets
     # written both ways; and Paiboon's own bp/dt digraphs for บ/ต are a
