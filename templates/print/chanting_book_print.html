@@ -38,7 +38,7 @@
 <style>
     @page {
         size: 210mm 297mm;   /* A4 */
-        margin: 20mm 16mm 22mm 30mm;
+        margin: 16mm 14mm 18mm 24mm;   /* tightened 2026-11-06 to thin the book */
         @bottom-center {
             content: counter(page);
             font-family: 'Noto Serif', serif;
@@ -49,8 +49,8 @@
     /* Mirrored margins: the wider margin always sits on the spine side.
        30mm there, because Lulu asks 29mm (1.125in) for a 400-600 page
        book so nothing is lost in the fold. */
-    @page :left  { margin-left: 16mm; margin-right: 30mm; }
-    @page :right { margin-left: 30mm; margin-right: 16mm; }
+    @page :left  { margin-left: 14mm; margin-right: 24mm; }
+    @page :right { margin-left: 24mm; margin-right: 14mm; }
     @page :first { @bottom-center { content: none; } }
     @page front  { @bottom-center { content: none; } }
 
@@ -174,7 +174,7 @@
        contents. Kept as real text because a PDF only remembers text. */
     .locator { font-size: 1pt; color: #fff; line-height: 0; }
 
-    .commentary { font-size: 10pt; max-width: 150mm; }
+    .commentary { font-size: 10pt; }
     .commentary p { margin: 0 0 1.8mm; text-align: justify; hyphens: auto; }
     .commentary .summary { font-style: italic; }
     .commentary h3 {
@@ -214,7 +214,7 @@
     .o-pali { font-size: 9.5pt; font-weight: 600; margin: 0; }
     .o-english { font-size: 10pt; margin: 0; }
     .owen-closing { text-align: center; font-weight: 700; margin: 3mm 0 0; }
-    .owen-intro { max-width: 150mm; margin: 0 0 3mm; font-size: 10.5pt; font-style: italic; }
+    .owen-intro { margin: 0 0 3mm; font-size: 10.5pt; font-style: italic; }
     .owen-intro p { margin: 0 0 1.5mm; }
     .owen-meaning { column-span: all; margin: 2mm 0 4mm; font-size: 10pt; max-width: 165mm; }
     .owen-meaning p { margin: 0 0 1.5mm; }
@@ -226,7 +226,7 @@
     .owen-after { font-size: 9.5pt; font-style: italic; margin: 3mm 0 0 7mm; }
     /* A verse chant: one full-width column, each verse line in two halves. */
     .verses-wide { column-count: auto; }
-    .verses-wide .verse { max-width: 150mm; }
+    .verses-wide .verse { }
     .half-pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
     /* A Thai-script Pali word is never broken mid-word; see pali_words(). */
     .nw { white-space: nowrap; }
