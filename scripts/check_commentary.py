@@ -225,8 +225,97 @@ SPELLING_ADDED = {
 }
 
 
+# Chant headings given a romanised title on 2026-11-06. Their `title_roman`
+# was empty in the baseline; 69 copy the book's own contents line (the
+# heading must match it) and 10 are new drafts. Only that field is excused.
+TITLE_ROMAN_ADDED = {
+    'akkappasada-suttagatha',
+    'anumothana-withi',
+    'atanatiya-parittam-yo',
+    'athibai-rabiap-suat-mon-phiset',
+    'baep-kammavaca-suat-hai-pha-kathin',
+    'baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao',
+    'bhojanadanumothana-gatha',
+    'gatha-dap-thian-chai',
+    'gatha-jut-thian-chai',
+    'kammawaca-upasombot',
+    'katha-sarathaphrot',
+    'kham-anumothana-kathin',
+    'kham-anumothana-kathin-303',
+    'kham-anumothana-khong-phra-maha-thera',
+    'kham-apalok-kathin-baep-2-rup',
+    'kham-apalok-kathin-baep-4-rup',
+    'kham-aradhana-sadaeng-tham',
+    'kham-aradhana-sadaeng-tham-phisadan',
+    'kham-aradhana-sin-5-phiset',
+    'kham-aradhana-sin-5-prokati',
+    'kham-aradhana-sin-8',
+    'kham-aradhana-sin-8-phiset',
+    'kham-aradhana-sin-8-prokati',
+    'kham-aradhana-suat-phra-paritta',
+    'kham-athibai-prakop',
+    'kham-athitthan',
+    'kham-athitthan-khao-phansa',
+    'kham-athitthan-pha-kathin',
+    'kham-bangsukun-khon-pen',
+    'kham-bangsukun-sop-rue-atthi',
+    'kham-bok-anusat',
+    'kham-kho-banphacha-nak-khu',
+    'kham-kho-buat-chi',
+    'kham-kho-khama-thot-dae-phra-maha-thera',
+    'kham-kho-khama-thot-phra-ratanatrai',
+    'kham-kho-khama-thot-phra-therauthera',
+    'kham-kho-nissai-nak-khu',
+    'kham-kho-riak-upasampathapekkha-khao-ma',
+    'kham-kho-upasombot-phrom-kan',
+    'kham-khuen',
+    'kham-la-sikkha',
+    'kham-namatsakan-phra-phutthachao',
+    'kham-pawarana-ok-phansa',
+    'kham-phinthu-pha',
+    'kham-phra-upatchai-klao-phadiang-song',
+    'kham-phra-upatchaiya-klao-phadiang-song',
+    'kham-rap-khama-thot-khong-phra-maha-thera',
+    'kham-riak-upasampathapekkha-khao-ma',
+    'kham-sadaeng-ton-pen-ubasok',
+    'kham-samathan-sin',
+    'kham-sattaha',
+    'kham-sia-sala',
+    'kham-sommot-ton-lae-kham-tham-antarayikatham',
+    'kham-sommot-ton-phuea-son-som',
+    'kham-sommot-ton-phuea-tham-antarayikatham',
+    'kham-son-som',
+    'kham-suat-kammawaca-upasombot',
+    'kham-suat-sommot-lae-kham-son-som',
+    'kham-tham-antarayikatham',
+    'kham-thon',
+    'kham-wikap',
+    'kitchawat-10-yang',
+    'mongkhon-chakkrawan-noi-yo',
+    'rabiap-anumothana',
+    'rabiap-bangsukun',
+    'rabiap-suat-chet-tamnan-yang-pan-klang',
+    'rabiap-suat-chet-tamnan-yang-tem-thi',
+    'rabiap-suat-chet-tamnan-yang-yo',
+    'rabiap-suat-mon-nai-ngan-phithi-awamongkhon',
+    'rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen',
+    'rabiap-suat-mon-ngan-phithi-mongkhon',
+    'rabiap-suat-mon-noppakhro',
+    'rabiap-suat-thawai-phon-phra-kon-chan',
+    'rabiap-thawai-phon-phra',
+    'tirokuddakanda-pacchimaphak',
+    'vipassit-thai',
+    'withi-banphacha-upasombot-baep-esaham',
+    'withi-banphacha-upasombot-baep-ukasa',
+    'withi-sadaeng-abat',
+}
+
+
 def drop_added_spelling(chant):
-    """Blank `paiboon` on the SPELLING_ADDED verses of one chant dict."""
+    """Blank the spelling added after the baseline on one chant dict:
+    `paiboon` on the SPELLING_ADDED verses, `title_roman` on TITLE_ROMAN_ADDED."""
+    if chant.get('id') in TITLE_ROMAN_ADDED and 'title_roman' in chant:
+        chant = dict(chant, title_roman='')
     added = SPELLING_ADDED.get(chant.get('id'))
     if not added or not isinstance(chant.get('verses'), list):
         return chant

@@ -36896,7 +36896,7 @@ CHANTS = [
         'id': 'baep-kammavaca-suat-hai-pha-kathin',
         'title_thai': 'แบบกรรมวาจาสวดให้ผ้ากฐิน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'bɛ̀ɛp gam-má-waa-jaa sùat hâi pâa gà-tǐn',
         'title_english': 'The Form of the Kammavācā for Giving the Kathina Cloth',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -37173,7 +37173,7 @@ CHANTS = [
         'id': 'kham-athitthan-pha-kathin',
         'title_thai': 'คำอธิษฐานผ้ากฐิน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-tít-tǎan pâa gà-tǐn',
         'title_english': 'The Words for Determining the Kathina Cloth',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -37262,7 +37262,7 @@ CHANTS = [
         'id': 'kham-anumothana-kathin',
         'title_thai': 'คำอนุโมทนากฐิน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-nú-moo-tá-naa gà-tǐn',
         'title_english': 'The Words of Rejoicing in the Kathina',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -37376,7 +37376,7 @@ CHANTS = [
         'id': 'kham-apalok-kathin-baep-4-rup',
         'title_thai': 'คำอปโลกน์กฐิน แบบ ๔ รูป',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-bpà-lòok gà-tǐn bɛ̀ɛp 4 rûup',
         'title_english': 'The Words of Announcing the Kathina, the Form for Four Monks',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -37925,7 +37925,7 @@ CHANTS = [
         'id': 'kham-apalok-kathin-baep-2-rup',
         'title_thai': 'คำอปโลกน์กฐิน แบบ ๒ รูป',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-bpà-lòok gà-tǐn bɛ̀ɛp 2 rûup',
         'title_english': 'The Words of Announcing the Kathina, the Form for Two Monks',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38329,7 +38329,7 @@ CHANTS = [
         'id': 'kitchawat-10-yang',
         'title_thai': 'กิจวัตร ๑๐ อย่าง',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'gìt-jà-wát 10 yàaŋ',
         'title_english': 'The Ten Duties',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38494,7 +38494,7 @@ CHANTS = [
         'id': 'kham-athitthan-khao-phansa',
         'title_thai': 'คำอธิษฐานเข้าพรรษา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-tít-tǎan kâo-pan-sǎa',
         'title_english': 'The Words of Determining the Rains Residence',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38553,7 +38553,7 @@ CHANTS = [
         'id': 'kham-pawarana-ok-phansa',
         'title_thai': 'คำปวารณาออกพรรษา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam bpà-waa-rá-naa ɔ̀ɔk-pan-sǎa',
         'title_english': 'The Words of Invitation at the End of the Rains',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38635,7 +38635,7 @@ CHANTS = [
         'id': 'kham-sattaha',
         'title_thai': 'คำสัตตาหะ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sàt-dtaa-hà',
         'title_english': 'The Words of the Seven-Day Absence',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38691,7 +38691,7 @@ CHANTS = [
         'id': 'kham-anumothana-kathin-303',
         'title_thai': 'คำอนุโมทนากฐิน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-nú-moo-tá-naa gà-tǐn',
         'title_english': 'The Words of Rejoicing in the Kathina',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38765,7 +38765,7 @@ CHANTS = [
         'id': 'kham-la-sikkha',
         'title_thai': 'คำลาสิกขา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam laa-sìk-kǎa',
         'title_english': 'The Words of Leaving the Training',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38828,7 +38828,7 @@ CHANTS = [
         'id': 'kham-sadaeng-ton-pen-ubasok',
         'title_thai': 'คำแสดงตนเป็นอุบาสก',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sà-dɛɛŋ dton bpen ù-baa-sòk',
         'title_english': 'The Words of Declaring Oneself a Lay Follower',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38884,7 +38884,7 @@ CHANTS = [
         'id': 'kham-phinthu-pha',
         'title_thai': 'คำพินทุผ้า',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam pin-tù pâa',
         'title_english': 'The Words of Marking the Cloth',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -38939,7 +38939,7 @@ CHANTS = [
         'id': 'kham-athitthan',
         'title_thai': 'คำอธิษฐาน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-tít-tǎan',
         'title_english': 'The Words of Determining',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39038,7 +39038,7 @@ CHANTS = [
         'id': 'kham-sia-sala',
         'title_thai': 'คำเสียสละ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sǐa-sà-là',
         'title_english': 'The Words of Forfeiting',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39137,7 +39137,7 @@ CHANTS = [
         'id': 'kham-khuen',
         'title_thai': 'คำคืน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kʉʉn',
         'title_english': 'The Words of Returning',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39192,7 +39192,7 @@ CHANTS = [
         'id': 'kham-wikap',
         'title_thai': 'คำวิกัปป์',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam wí-gàp',
         'title_english': 'The Words of Shared Ownership',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39260,7 +39260,7 @@ CHANTS = [
         'id': 'kham-thon',
         'title_thai': 'คำถอน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam tɔ̌ɔn',
         'title_english': 'The Words of Withdrawing',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39620,7 +39620,7 @@ CHANTS = [
         'id': 'withi-sadaeng-abat',
         'title_thai': 'วิธีแสดงอาบัติ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'wí-tii sà-dɛɛŋ aa-bàt',
         'title_english': 'The Method of Confessing an Offence',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -39918,7 +39918,7 @@ CHANTS = [
         'id': 'kham-samathan-sin',
         'title_thai': 'คำสมาทานศีล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sà-maa-taan sǐin',
         'title_english': 'The Words of Undertaking the Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40083,7 +40083,7 @@ CHANTS = [
         'id': 'kham-kho-buat-chi',
         'title_thai': 'คำขอบวชชี',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ bùat chii',
         'title_english': 'The Words of Requesting the Going Forth',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40155,7 +40155,7 @@ CHANTS = [
         'id': 'kham-aradhana-sin-8',
         'title_thai': 'คำอาราธนาศีล ๘',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sǐin 8',
         'title_english': 'The Words of Requesting the Eight Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40244,7 +40244,7 @@ CHANTS = [
         'id': 'kham-namatsakan-phra-phutthachao',
         'title_thai': 'คำนมัสการพระพุทธเจ้า',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam ná-mát-sà-gaan prá-pút-tá-jâo',
         'title_english': 'The Words of Homage to the Buddha',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40409,7 +40409,7 @@ CHANTS = [
         'id': 'kham-kho-riak-upasampathapekkha-khao-ma',
         'title_thai': 'คำขอเรียกอุปสัมปทาเปกขะเข้ามา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ rîak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
         'title_english': 'The Words of Asking to Call the Candidates In',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40506,7 +40506,7 @@ CHANTS = [
         'id': 'kham-sommot-ton-lae-kham-tham-antarayikatham',
         'title_thai': 'คำสมมติตนและคำถามอันตรายิกธรรม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sǒm-mút dton lɛ́ kam tǎam an-dtà-raa-yí-gà-tam',
         'title_english': 'The Words of Appointing Oneself and Asking the Obstructing Conditions',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40594,7 +40594,7 @@ CHANTS = [
         'id': 'kham-phra-upatchai-klao-phadiang-song',
         'title_thai': 'คำพระอุปัชฌาย์กล่าวเผดียงสงฆ์',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam prá-ù-bpàt-chaa glàao pà-diaŋ sǒŋ',
         'title_english': 'The Words of the Preceptor Informing the Saṅgha',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -40770,7 +40770,7 @@ CHANTS = [
         'id': 'kham-suat-kammawaca-upasombot',
         'title_thai': 'คำสวดกรรมวาจาอุปสมบท',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sùat gam-má-waa-jaa ù-bpà-sǒm-bòt',
         'title_english': 'The Words of Chanting the Kammavācā of Ordination',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -41377,7 +41377,7 @@ CHANTS = [
         'id': 'kham-sommot-ton-phuea-tham-antarayikatham',
         'title_thai': 'คำสมมติตนเพื่อถามอันตรายิกธรรม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sǒm-mút dton pʉ̂a tǎam an-dtà-raa-yí-gà-tam',
         'title_english': 'The Words of Appointing Oneself to Ask the Obstructing Conditions',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -41472,7 +41472,7 @@ CHANTS = [
         'id': 'kham-tham-antarayikatham',
         'title_thai': 'คำถามอันตรายิกธรรม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam tǎam an-dtà-raa-yí-gà-tam',
         'title_english': 'The Questions on the Obstructing Conditions',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -41602,7 +41602,7 @@ CHANTS = [
         'id': 'kammawaca-upasombot',
         'title_thai': 'กรรมวาจาอุปสมบท',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'gam-má-waa-jaa ù-bpà-sǒm-bòt',
         'title_english': 'The Kammavācā of Ordination',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42168,7 +42168,7 @@ CHANTS = [
         'id': 'kham-suat-sommot-lae-kham-son-som',
         'title_thai': 'คำสวดสมมติและคำสอนซ้อม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sùat sǒm-mút lɛ́ kam sɔ̌ɔn-sɔ́ɔm',
         'title_english': 'The Words of Appointment and of Rehearsing the Instruction',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42276,7 +42276,7 @@ CHANTS = [
         'id': 'kham-riak-upasampathapekkha-khao-ma',
         'title_thai': 'คำเรียกอุปสัมปทาเปกขะเข้ามา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam rîak ù-bpà-sǎm-bpá-taa-bpèek-kà kâo-maa',
         'title_english': 'The Words of Calling the Candidate In',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42393,7 +42393,7 @@ CHANTS = [
         'id': 'kham-phra-upatchaiya-klao-phadiang-song',
         'title_thai': 'คำพระอุปัชฌายะกล่าวเผดียงสงฆ์',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam prá-ù-bpàt-chaa-yá glàao pà-diaŋ sǒŋ',
         'title_english': 'The Words of the Preceptor Informing the Saṅgha',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42531,7 +42531,7 @@ CHANTS = [
         'id': 'baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao',
         'title_thai': 'แบบสวดกรรมวาจาในอุปสมบทกรรม สำหรับนาคเดี่ยว',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'bɛ̀ɛp sùat gam-má-waa-jaa nai ù-bpà-sǒm-bòt-gam sǎm-ràp nâak-dìao',
         'title_english': 'The Form of Chanting the Kammavācā in the Act of Ordination, for a Single Candidate',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42599,7 +42599,7 @@ CHANTS = [
         'id': 'kham-sommot-ton-phuea-son-som',
         'title_thai': 'คำสมมติตนเพื่อสอนซ้อม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sǒm-mút dton pʉ̂a sɔ̌ɔn-sɔ́ɔm',
         'title_english': 'The Words of Appointing Oneself to Rehearse the Instruction',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -42716,7 +42716,7 @@ CHANTS = [
         'id': 'kham-son-som',
         'title_thai': 'คำสอนซ้อม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam sɔ̌ɔn-sɔ́ɔm',
         'title_english': 'The Words of the Rehearsal',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -43119,7 +43119,7 @@ CHANTS = [
         'id': 'kham-kho-nissai-nak-khu',
         'title_thai': 'คำขอนิสสัยนาคคู่',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ nít-sǎi nâak-kûu',
         'title_english': 'The Words of Requesting Dependence, for a Pair',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -43255,7 +43255,7 @@ CHANTS = [
         'id': 'kham-kho-upasombot-phrom-kan',
         'title_thai': 'คำขออุปสมบทพร้อมกัน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ ù-bpà-sǒm-bòt prɔ́ɔm-gan',
         'title_english': 'The Words of Requesting Ordination Together',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -43419,7 +43419,7 @@ CHANTS = [
         'id': 'kham-bok-anusat',
         'title_thai': 'คำบอกอนุศาสน์',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam bɔ̀ɔk à-nú-sǎat',
         'title_english': 'The Words of the Admonition',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -44064,7 +44064,7 @@ CHANTS = [
         'id': 'kham-kho-banphacha-nak-khu',
         'title_thai': 'คำขอบรรพชานาคคู่',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ ban-pá-chaa nâak-kûu',
         'title_english': 'The Words of Requesting the Going Forth, for a Pair',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -44888,7 +44888,7 @@ CHANTS = [
         'id': 'withi-banphacha-upasombot-baep-esaham',
         'title_thai': 'วิธีบรรพชาอุปสมบทแบบเอสาหัง',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'wí-tii ban-pá-chaa ù-bpà-sǒm-bòt bɛ̀ɛp ee-sǎa-hǎŋ',
         'title_english': 'The Method of Going Forth and Ordination, the Esāhaṃ Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -45923,7 +45923,7 @@ CHANTS = [
         'id': 'withi-banphacha-upasombot-baep-ukasa',
         'title_thai': 'วิธีบรรพชาอุปสมบทแบบอุกาสะ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'wí-tii ban-pá-chaa ù-bpà-sǒm-bòt bɛ̀ɛp u-gaa-sà',
         'title_english': 'The Method of Going Forth and Ordination, the Ukāsa Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -47071,7 +47071,7 @@ CHANTS = [
         'id': 'kham-athibai-prakop',
         'title_thai': 'คำอธิบายประกอบ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-tí-baai bprà-gɔ̀ɔp',
         'title_english': 'Accompanying Explanation',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -47188,7 +47188,7 @@ CHANTS = [
         'id': 'katha-sarathaphrot',
         'title_thai': 'คาถาศราทธพรต',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kaa-tǎa sà-râat-tá-pá-rót',
         'title_english': 'The Verses of the Śrāddha Rite',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -47435,7 +47435,7 @@ CHANTS = [
         'id': 'atanatiya-parittam-yo',
         'title_thai': 'อาฏานาฏิยะปะริตตัง (ย่อ)',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'aa-dtaa-naa-dtì-yá-bpà-rít-dtaŋ (yɔ̂ɔ)',
         'title_english': 'The Āṭānāṭiya Paritta (abbreviated)',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -47539,7 +47539,7 @@ CHANTS = [
         'id': 'rabiap-bangsukun',
         'title_thai': 'ระเบียบบังสุกุล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap baŋ-sù-gun',
         'title_english': 'The Procedure for the Paṃsukūla',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48167,7 +48167,7 @@ CHANTS = [
         'id': 'akkappasada-suttagatha',
         'title_thai': 'อัคคัปปะสาทะสุตตะคาถา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'Aggappasādasuttagāthā',
         'title_english': 'The Verses of the Aggappasāda Sutta',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48289,7 +48289,7 @@ CHANTS = [
         'id': 'tirokuddakanda-pacchimaphak',
         'title_thai': 'ติโรกุฑฑะกัณฑะปัจฉิมภาค',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'dtì-roo-kút-tá-gan-tá-bpàt-chǐm-má-pâak',
         'title_english': 'The Latter Part of the Tirokuḍḍa Kaṇḍa',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48427,7 +48427,7 @@ CHANTS = [
         'id': 'bhojanadanumothana-gatha',
         'title_thai': 'โภชะนะทานุโมทะนาคาถา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'Bhojanadānumodanāgāthā',
         'title_english': 'The Verses of Rejoicing in the Gift of Food',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48506,7 +48506,7 @@ CHANTS = [
         'id': 'anumothana-withi',
         'title_thai': 'อนุโมทนาวิธี',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'à-nú-moo-tá-naa-wí-tii',
         'title_english': 'The Method of Rejoicing',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48621,7 +48621,7 @@ CHANTS = [
         'id': 'mongkhon-chakkrawan-noi-yo',
         'title_thai': 'มงคลจักรวาฬน้อย (ย่อ)',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'moŋ-kon jàk-grà-waan nɔ́ɔy (yɔ̂ɔ)',
         'title_english': 'The Lesser Maṅgala Cakkavāḷa (abbreviated)',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -48867,7 +48867,7 @@ CHANTS = [
         'id': 'rabiap-anumothana',
         'title_thai': 'ระเบียบอนุโมทนา',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap à-nú-moo-tá-naa',
         'title_english': 'The Procedure for the Anumodanā',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -49021,7 +49021,7 @@ CHANTS = [
         'id': 'rabiap-thawai-phon-phra',
         'title_thai': 'ระเบียบถวายพรพระ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap tà-wǎai pɔɔn prá',
         'title_english': 'The Procedure for the Blessing of the Buddha',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -49401,7 +49401,7 @@ CHANTS = [
         'id': 'rabiap-suat-mon-noppakhro',
         'title_thai': 'ระเบียบสวดมนต์นพเคราะห์',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat-mon nóp-pá-krɔ́',
         'title_english': 'The Procedure for the Navagraha Chanting',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -49696,7 +49696,7 @@ CHANTS = [
         'id': 'athibai-rabiap-suat-mon-phiset',
         'title_thai': 'อธิบายระเบียบสวดมนต์พิเศษ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'à-tí-baai rá-bìap sùat-mon pí-sèet',
         'title_english': 'An Explanation of the Special Chanting Procedures',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -49874,7 +49874,7 @@ CHANTS = [
         'id': 'rabiap-suat-thawai-phon-phra-kon-chan',
         'title_thai': 'ระเบียบสวดถวายพรพระก่อนฉัน',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat tà-wǎai pɔɔn prá gɔ̀ɔn chǎn',
         'title_english': 'The Order of Chanting the Blessing of the Buddha before the Meal',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -49985,7 +49985,7 @@ CHANTS = [
         'id': 'rabiap-suat-mon-nai-ngan-phithi-awamongkhon',
         'title_thai': 'ระเบียบสวดมนต์ในงานพิธีอวมงคล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat-mon nai ŋaan pí-tii à-wá-moŋ-kon',
         'title_english': 'The Order of Chanting at Inauspicious Ceremonies',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -50275,7 +50275,7 @@ CHANTS = [
         'id': 'rabiap-suat-chet-tamnan-yang-pan-klang',
         'title_thai': 'ระเบียบสวดเจ็ดตำนานอย่างปานกลาง',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat jèt dtam-naan yàaŋ bpaan-glaaŋ',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Middling Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -50440,7 +50440,7 @@ CHANTS = [
         'id': 'rabiap-suat-chet-tamnan-yang-yo',
         'title_thai': 'ระเบียบสวดเจ็ดตำนานอย่างย่อ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat jèt dtam-naan yàaŋ yɔ̂ɔ',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Short Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -50833,7 +50833,7 @@ CHANTS = [
         'id': 'rabiap-suat-chet-tamnan-yang-tem-thi',
         'title_thai': 'ระเบียบสวดเจ็ดตำนานอย่างเต็มที่',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat jèt dtam-naan yàaŋ dtem-tîi',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Full Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -51322,7 +51322,7 @@ CHANTS = [
         'id': 'rabiap-suat-mon-ngan-phithi-mongkhon',
         'title_thai': 'ระเบียบสวดมนต์งานพิธีมงคล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat-mon ŋaan pí-tii moŋ-kon',
         'title_english': 'The Order of Chanting at an Auspicious Ceremony',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -51640,7 +51640,7 @@ CHANTS = [
         'id': 'rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen',
         'title_thai': 'ระเบียบสวดมนต์ในงานพิธีมงคลอื่น ๆ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'rá-bìap sùat-mon nai ŋaan pí-tii moŋ-kon ʉ̀ʉn-ʉ̀ʉn',
         'title_english': 'The Order of Chanting at Other Auspicious Ceremonies',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -51751,7 +51751,7 @@ CHANTS = [
         'id': 'kham-kho-khama-thot-phra-therauthera',
         'title_thai': 'คำขอขมาโทษพระเถรานุเถระทั่วไป',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ kà-maa tôot prá-tee-raa-nú-tee-rá tûa-bpai',
         'title_english': 'The Words for Asking Pardon of the Elders and Junior Elders Generally',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -51844,7 +51844,7 @@ CHANTS = [
         'id': 'gatha-jut-thian-chai',
         'title_thai': 'คาถาจุดเทียนชัย',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kaa-tǎa jùt tian-chai',
         'title_english': 'The Verses for Lighting the Victory Candle',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -51938,7 +51938,7 @@ CHANTS = [
         'id': 'gatha-dap-thian-chai',
         'title_thai': 'คาถาดับเทียนชัย',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kaa-tǎa dàp tian-chai',
         'title_english': 'The Verses for Quenching the Victory Candle',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -52562,7 +52562,7 @@ CHANTS = [
         'id': 'kham-kho-khama-thot-dae-phra-maha-thera',
         'title_thai': 'คำขอขมาโทษแด่พระมหาเถระ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ kà-maa tôot dɛ̀ɛ prá-má-hǎa-těe-rá',
         'title_english': 'The Words for Asking Pardon of a Great Elder',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -52703,7 +52703,7 @@ CHANTS = [
         'id': 'kham-rap-khama-thot-khong-phra-maha-thera',
         'title_thai': 'คำรับขมาโทษของพระมหาเถระ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam ráp kà-maa tôot kɔ̌ɔŋ prá-má-hǎa-těe-rá',
         'title_english': "The Great Elder's Words Accepting the Asking of Pardon",
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -52875,7 +52875,7 @@ CHANTS = [
         'id': 'kham-anumothana-khong-phra-maha-thera',
         'title_thai': 'คำอนุโมทนาของพระมหาเถระ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam à-nú-moo-tá-naa kɔ̌ɔŋ prá-má-hǎa-těe-rá',
         'title_english': "The Great Elder's Words of Rejoicing",
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53336,7 +53336,7 @@ CHANTS = [
         'id': 'kham-bangsukun-sop-rue-atthi',
         'title_thai': 'คำบังสุกุลศพหรืออัฐิ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam baŋ-sù-gun sòp rʉ̌ʉ àt-tì',
         'title_english': 'The Words of the Paṃsukūla for a Body or for Relics',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53446,7 +53446,7 @@ CHANTS = [
         'id': 'kham-bangsukun-khon-pen',
         'title_thai': 'คำบังสุกุลคนเป็น',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam baŋ-sù-gun kon bpen',
         'title_english': 'The Words of the Paṃsukūla for the Living',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53508,7 +53508,7 @@ CHANTS = [
         'id': 'kham-kho-khama-thot-phra-ratanatrai',
         'title_thai': 'คำขอขมาโทษพระรัตนตรัย',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam kɔ̌ɔ kà-maa tôot prá-rát-dtà-ná-dtrai',
         'title_english': 'The Words for Asking Pardon of the Triple Gem',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53639,7 +53639,7 @@ CHANTS = [
         'id': 'kham-aradhana-sin-8-phiset',
         'title_thai': 'คำอาราธนาศีล 8 พิเศษ คืออุโบสถศีล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sǐin bpɛ̀ɛt pí-sèet kʉʉ ù-boo-sòt-sǐin',
         'title_english': 'The Words for Requesting the Special Eight Precepts, the Uposatha Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53713,7 +53713,7 @@ CHANTS = [
         'id': 'kham-aradhana-suat-phra-paritta',
         'title_thai': 'คำอาราธนาสวดพระปริตร',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sùat prá-bpà-rìt',
         'title_english': 'The Words for Requesting the Chanting of the Parittas',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53807,7 +53807,7 @@ CHANTS = [
         'id': 'kham-aradhana-sadaeng-tham',
         'title_thai': 'คำอาราธนาแสดงธรรม',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sà-dɛɛŋ tam',
         'title_english': 'The Words for Requesting a Teaching of the Dhamma',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -53899,7 +53899,7 @@ CHANTS = [
         'id': 'kham-aradhana-sadaeng-tham-phisadan',
         'title_thai': 'คำอาราธนาแสดงธรรมอย่างพิสดาร',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sà-dɛɛŋ tam yàaŋ pít-sà-daan',
         'title_english': 'The Words for Requesting a Teaching of the Dhamma, the Elaborate Form',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -54189,7 +54189,7 @@ CHANTS = [
         'id': 'kham-aradhana-sin-5-prokati',
         'title_thai': 'คำอาราธนาศีล 5 ปรกติ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sǐin hâa bpòk-gà-dtì',
         'title_english': 'The Words for Requesting the Ordinary Five Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -54270,7 +54270,7 @@ CHANTS = [
         'id': 'kham-aradhana-sin-5-phiset',
         'title_thai': 'คำอาราธนาศีล 5 พิเศษ คือนิจศีล',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sǐin hâa pí-sèet kʉʉ nít-jà-sǐin',
         'title_english': 'The Words for Requesting the Special Five Precepts, the Constant Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -54345,7 +54345,7 @@ CHANTS = [
         'id': 'kham-aradhana-sin-8-prokati',
         'title_thai': 'คำอาราธนาศีล 8 ปรกติ',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'kam aa-râat-tá-naa sǐin bpɛ̀ɛt bpòk-gà-dtì',
         'title_english': 'The Words for Requesting the Ordinary Eight Precepts',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
@@ -55873,7 +55873,7 @@ CHANTS = [
         'id': 'vipassit-thai',
         'title_thai': 'วิปัสสิต',
         'title_pali': '',
-        'title_roman': '',
+        'title_roman': 'wí-bpàt-sìt',
         'title_english': 'Vipassit',
         # Left empty on purpose: the book prints no attribution for this
         # chant and none has been supplied from memory.
