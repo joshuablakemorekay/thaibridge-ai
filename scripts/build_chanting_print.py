@@ -347,11 +347,11 @@ def find_pages(pdf_path, chant_ids):
     return pages, total
 
 
-# The commentary and English are set in 8.5pt, so that is the commonest text
+# The commentary and English are set in 10pt, so that is the commonest text
 # size in a correctly printed book. If anything on any page is wider than
 # the page, Chrome shrinks EVERY page to fit and says nothing — an A5 volume
 # once came out at 85% — and this is how that gets caught.
-BODY_SIZE = 8.5
+BODY_SIZE = 10   # raised from 8.5 after the teacher's review (text too small)
 
 
 # Fonts Chrome falls back on when the chosen font lacks a letter. Finding one
