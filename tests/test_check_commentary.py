@@ -141,11 +141,29 @@ def test_the_real_book_is_unchanged_since_before_stage_3():
     The deliberate changes since are romanisation only, made 2026-10-14: the
     long diphthongs (riian, tuua) moved to the app's ia/ua standard, plus the
     single-word fixes in BOOK_CORRECTIONS. Those are applied to both sides, so
-    anything else that moved still fails.
+    anything else that moved still fails. Since 2026-11-06 the 168 translation
+    lines in SPELLING_ADDED also carry ThaiBridge Spelling that was empty in
+    the baseline; only that one field on those verses is excused.
     """
     import chanting
     assert against('5d53f50~1', chanting.CHANTS,
                    normalise=book_spelling_changes) == []
+
+
+def test_every_excused_verse_really_has_its_spelling():
+    """SPELLING_ADDED excuses a field from the baseline check, so it must only
+    name verses that are filled — otherwise a line could lose its spelling
+    again and the check would wave it through."""
+    import chanting
+    from check_commentary import SPELLING_ADDED
+    by_id = {c['id']: c for c in chanting.CHANTS}
+    assert sum(len(v) for v in SPELLING_ADDED.values()) == 168
+    for cid, numbers in SPELLING_ADDED.items():
+        verses = {v['number']: v for v in by_id[cid]['verses']}
+        for n in numbers:
+            v = verses[n]
+            assert v['thai'].strip() and v['pali'].strip(), (cid, n)
+            assert v['paiboon'].strip(), f'{cid} verse {n} lost its spelling'
 
 
 def test_the_spelling_rule_only_touches_long_diphthongs():

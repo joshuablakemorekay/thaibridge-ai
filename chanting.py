@@ -38808,8 +38808,10 @@ CHANTS = [
             #   Every other chant here prints Pali alone, but คำลาสิกขา prints
             #   a Thai rendering beneath its Pali, so `thai` carries a
             #   translation here rather than an instruction or a label — the
-            #   first time in this stretch that is true. `paiboon` is still
-            #   left empty, for the reason recorded on page 306.
+            #   first time in this stretch that is true. `paiboon` was left
+            #   empty for the reason recorded on page 306, then written
+            #   2026-11-06 in the translation-lines pass — a DRAFT whose tones
+            #   no check here can verify.
             {
                 'number': 1,
                 'page': 303,
@@ -38817,7 +38819,7 @@ CHANTS = [
                 'pali': 'สิกขัง ปัจจักขามิ. คิหีติ มัง ธาเรถะ.',
                 'pali_roman': 'Sikkhaṃ paccakkhāmi. gihīti maṃ dhāretha.',
                 'thai': 'ข้าพเจ้าลาสิกขา ท่านทั้งหลายจงจำข้าพเจ้าไว้ว่า เป็นคฤหัสถ์',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo laa sìk-kǎa tâan táŋ-lǎai joŋ jam kâa-pá-jâo wái wâa bpen ká-rʉ́-hàt',
                 'english': 'I renounce the training. Remember me as a householder.',
             },
         ],
@@ -39963,8 +39965,9 @@ CHANTS = [
             # ‼ CHECK [IMG_0567.PNG]: THE THAI ON THIS SHEET IS A TRANSLATION,
             #   not a rubric or an instruction — the first time that has been
             #   true in the backward pass since page 303's คำลาสิกขา.
-            #   `paiboon` would ordinarily accompany it and is still left
-            #   empty, for the reason recorded on page 306.
+            #   `paiboon` was left empty for the reason recorded on page 306,
+            #   then written 2026-11-06 in the translation-lines pass — a DRAFT
+            #   whose tones no check here can verify.
             {
                 'number': 1,
                 'page': 300,
@@ -39973,7 +39976,7 @@ CHANTS = [
                 'pali': 'ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากฆ่าสัตว์มีชีวิตด้วยตนเองและใช้ให้ผู้อื่นฆ่า)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak kâa sàt mii chii-wít dûay dton-eeŋ lɛ́ chái hâi pûu ʉ̀ʉn kâa)',
                 'english': 'I undertake the training rule to abstain from killing living beings. (I undertake the training rule, that is, to refrain from killing living creatures myself and from having others kill.)',
             },
             # ‼ CHECK [IMG_0567.PNG]: ⚠ CORRECTED AGAINST THE PRINTED PAGE,
@@ -40005,7 +40008,7 @@ CHANTS = [
                 'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากลักทรัพย์ด้วยตนเองและใช้ให้ผู้อื่นลัก)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak lák sáp dûay dton-eeŋ lɛ́ chái hâi pûu ʉ̀ʉn lák)',
                 'english': 'I undertake the training rule to abstain from taking what is not given. (I undertake the training rule, that is, to refrain from stealing myself and from having others steal.)',
             },
             {
@@ -40014,7 +40017,7 @@ CHANTS = [
                 'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากอสัทธรรม กรรมอันเป็นข้าศึกแก่พรหมจรรย์)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak à-sàt-tam gam an bpen kâa-sʉ̀k gɛ̀ɛ prom-má-jan)',
                 'english': 'I undertake the training rule to abstain from unchastity. (I undertake the training rule, that is, to refrain from what is ignoble, the act that is the enemy of the holy life.)',
             },
             {
@@ -40023,7 +40026,7 @@ CHANTS = [
                 'pali': 'มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการพูดเท็จ)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak gaan pûut tét)',
                 'english': 'I undertake the training rule to abstain from false speech. (I undertake the training rule, that is, to refrain from speaking falsely.)',
             },
             {
@@ -40032,7 +40035,7 @@ CHANTS = [
                 'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากน้ำเมาคือสุรา และเมรัย อันเป็นที่ตั้งแห่งความประมาท)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak nám-mao kʉʉ sù-raa lɛ́ mee-rai an bpen tîi-dtâŋ hɛ̀ŋ kwaam bprà-màat)',
                 'english': 'I undertake the training rule to abstain from intoxicants, which are the basis of heedlessness. (I undertake the training rule, that is, to refrain from spirits and fermented drink, which are the ground of heedlessness.)',
             },
             {
@@ -40041,7 +40044,7 @@ CHANTS = [
                 'pali': 'วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการบริโภคอาหารในเวลาวิกาล)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak gaan bɔɔ-rí-pôok aa-hǎan nai wee-laa wí-gaan)',
                 'english': 'I undertake the training rule to abstain from eating at the wrong time. (I undertake the training rule, that is, to refrain from taking food outside the proper time.)',
             },
             {
@@ -40050,7 +40053,7 @@ CHANTS = [
                 'pali': 'นัจจะคีตะวาทิตะวิสูกะทัสสะนา มาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Naccagītavāditavisūkadassanā mālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการดู ฟัง ฟ้อนรำ ขับร้องและประโคมเครื่องดนตรีต่างๆ และการเล่นที่เป็นข้าศึกแก่กุศล และทัดทรงตกแต่งร่างกายด้วยเครื่องประดับและดอกไม้ของหอม เครื่องทาเครื่องย้อม ผัดผิวให้งามต่างๆ)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak gaan duu faŋ fɔ́ɔn-ram kàp-rɔ́ɔŋ lɛ́ bprà-koom krʉ̂aŋ don-dtrii dtàaŋ-dtàaŋ lɛ́ gaan-lên tîi bpen kâa-sʉ̀k gɛ̀ɛ gù-sǒn lɛ́ tát-soŋ dtòk-dtɛ̀ŋ râaŋ-gaai dûay krʉ̂aŋ-bprà-dàp lɛ́ dɔ̀ɔk-máai kɔ̌ɔŋ-hɔ̌ɔm krʉ̂aŋ-taa krʉ̂aŋ-yɔ́ɔm pàt pǐu hâi ŋaam dtàaŋ-dtàaŋ)',
                 'english': 'I undertake the training rule to abstain from dancing, singing, music and unseemly shows, and from wearing garlands, scents, cosmetics and adornment. (I undertake the training rule, that is, to refrain from watching and listening to dancing, singing and the playing of instruments of all kinds, and from amusements that are the enemy of what is wholesome; and from adorning the body with ornaments and scented flowers, ointments and dyes, and beautifying the complexion.)',
             },
             # ‼ CHECK [IMG_0567.PNG]: The eighth precept's Thai gloss opens
@@ -40062,7 +40065,7 @@ CHANTS = [
                 'pali': 'อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือ เว้นจากนั่งนอนเหนือเตียง ตั่งมีเท้าสูงเกินประมาณ และที่นั่งที่นอนอันสูงใหญ่ ภายในใส่นุ่นและสำลี อาสนะ อันวิจิตรไปด้วยลวดลายงาม ด้วยเงินทองต่างๆ)',
-                'paiboon': '',
+                'paiboon': '(kâa-pá-jâo sà-maa-taan sʉ̂ŋ sìk-kǎa-bòt kʉʉ wén jàak nâŋ nɔɔn nʉ̌a dtiaŋ dtàŋ mii táao sǔuŋ gəən bprà-maan lɛ́ tîi-nâŋ tîi-nɔɔn an sǔuŋ yài paai-nai sài nûn lɛ́ sǎm-lii aa-sà-ná an wí-jìt bpai dûay lûat-laai ŋaam dûay ŋən-tɔɔŋ dtàaŋ-dtàaŋ)',
                 'english': 'I undertake the training rule to abstain from high and luxurious beds and seats. (I undertake the training rule, that is, to refrain from sitting or lying on beds and couches with legs above the measure, and on large high seats and beds stuffed with kapok and cotton, and on seats elaborately worked with fine patterns in silver and gold.)',
             },
             {
@@ -56111,7 +56114,7 @@ CHANTS = [
                 'pali': 'อิมินา ปุญญะกัมเมนะ',
                 'pali_roman': 'Iminā puññakammena',
                 'thai': 'ด้วยบุญนี้ อุทิศให้',
-                'paiboon': '',
+                'paiboon': 'dûay bun níi ù-tít hâi',
                 'english': 'By this deed of merit, dedicated',
             },
             {
@@ -56119,7 +56122,7 @@ CHANTS = [
                 'pali': 'อุปัชฌายา คุณุตตะรา',
                 'pali_roman': 'Upajjhāyā guṇuttarā',
                 'thai': 'อุปัชฌาย์ ผู้เลิศคุณ',
-                'paiboon': '',
+                'paiboon': 'ù-bpàt-chaa pûu lə̂ət kun',
                 'english': 'to the preceptors of highest virtue,',
             },
             {
@@ -56127,7 +56130,7 @@ CHANTS = [
                 'pali': 'อาจะริยูปะการา จะ',
                 'pali_roman': 'Ācariyūpakārā ca',
                 'thai': 'แลอาจารย์ ผู้เกื้อหนุน',
-                'paiboon': '',
+                'paiboon': 'lɛɛ aa-jaan pûu gʉ̂a-nǔn',
                 'english': 'and to the teachers who have helped me,',
             },
             {
@@ -56135,7 +56138,7 @@ CHANTS = [
                 'pali': 'มาตาปิตา จะ ญาตะกา',
                 'pali_roman': 'Mātāpitā ca ñātakā',
                 'thai': 'ทั้งพ่อแม่ แลปวงญาติ',
-                'paiboon': '',
+                'paiboon': 'táŋ pɔ̂ɔ-mɛ̂ɛ lɛɛ bpuaŋ yâat',
                 'english': 'to mother and father and kinsfolk,',
             },
             {
@@ -56143,7 +56146,7 @@ CHANTS = [
                 'pali': 'สุริโย จันทิมา ราชา',
                 'pali_roman': 'Suriyo candimā rājā',
                 'thai': 'สูรย์จันทร์ แลราชา',
-                'paiboon': '',
+                'paiboon': 'sǔun-jan lɛɛ raa-chaa',
                 'english': 'to the sun and the moon and the king,',
             },
             {
@@ -56151,7 +56154,7 @@ CHANTS = [
                 'pali': 'คุณะวันตา นะราปิ จะ',
                 'pali_roman': 'Guṇavantā narāpi ca',
                 'thai': 'ผู้ทรงคุณ หรือสูงชาติ',
-                'paiboon': '',
+                'paiboon': 'pûu soŋ kun rʉ̌ʉ sǔuŋ châat',
                 'english': 'to people of virtue and of high birth,',
             },
             {
@@ -56159,7 +56162,7 @@ CHANTS = [
                 'pali': 'พ๎รัห๎มะมารา จะ อินทา จะ',
                 'pali_roman': 'Brahmamārā ca indā ca',
                 'thai': 'พรหม มาร และอินทราช',
-                'paiboon': '',
+                'paiboon': 'prom maan lɛ́ in-tá-râat',
                 'english': 'to Brahmā, to Māra and to Indra,',
             },
             {
@@ -56167,7 +56170,7 @@ CHANTS = [
                 'pali': 'โลกะปาลา จะ เทวะตา',
                 'pali_roman': 'Lokapālā ca devatā',
                 'thai': 'ทั้งทวยเทพ และโลกบาล',
-                'paiboon': '',
+                'paiboon': 'táŋ tuay-têep lɛ́ lôok-gà-baan',
                 'english': 'to the guardians of the world and the deities,',
             },
             {
@@ -56175,7 +56178,7 @@ CHANTS = [
                 'pali': 'ยะโม มิตตา มะนุสสา จะ',
                 'pali_roman': 'Yamo mittā manussā ca',
                 'thai': 'ยมราช มนุษย์ มิตร',
-                'paiboon': '',
+                'paiboon': 'yom-má-râat má-nút mít',
                 'english': 'to Yama, to friends and to human beings,',
             },
             {
@@ -56183,7 +56186,7 @@ CHANTS = [
                 'pali': 'มัชฌัตตา เวริกาปิ จะ',
                 'pali_roman': 'Majjhattā verikāpi ca',
                 'thai': 'ผู้เป็นกลาง ผู้จองผลาญ',
-                'paiboon': '',
+                'paiboon': 'pûu bpen glaaŋ pûu jɔɔŋ plǎan',
                 'english': 'to the indifferent and to those who bear enmity —',
             },
             # ‼ CHECK [IMG_0509.PNG]: THE THAI COLUMN HAS MORE LINES THAN THE
@@ -56196,7 +56199,7 @@ CHANTS = [
                 'pali': 'สัพเพ สัตตา สุขี โหนตุ',
                 'pali_roman': 'Sabbe sattā sukhī hontu',
                 'thai': 'ขอให้เป็นสุขศานติ์ ทุกทั่วหน้า อย่าทุกข์ทน',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ hâi bpen sùk sǎan túk tûa nâa yàa túk ton',
                 'english': 'may all beings be happy, every one of them, and free from suffering.',
             },
             {
@@ -56204,7 +56207,7 @@ CHANTS = [
                 'pali': 'ปุญญานิ ปะกะตานิ เม',
                 'pali_roman': 'Puññāni pakatāni me',
                 'thai': 'บุญผองที่ข้าทำ จงช่วยอำนวยศุภผล',
-                'paiboon': '',
+                'paiboon': 'bun pɔ̌ɔŋ tîi kâa tam joŋ chûay am-nuay sù-pà-pǒn',
                 'english': 'May the merits I have made bring about their good fruit,',
             },
             {
@@ -56212,7 +56215,7 @@ CHANTS = [
                 'pali': 'สุขัง จะ ติวิธัง เทนตุ',
                 'pali_roman': 'Sukhaṃ ca tividhaṃ dentu',
                 'thai': 'ให้สุขสามอย่างล้น',
-                'paiboon': '',
+                'paiboon': 'hâi sùk sǎam yàaŋ lón',
                 'english': 'and grant happiness of the three kinds in abundance,',
             },
             {
@@ -56220,7 +56223,7 @@ CHANTS = [
                 'pali': 'ขิปปัง ปาเปถะ โว มะตัง',
                 'pali_roman': 'Khippaṃ pāpetha vo mataṃ',
                 'thai': 'ให้ลุถึงนิพพานพลัน',
-                'paiboon': '',
+                'paiboon': 'hâi lú tʉ̌ŋ níp-paan plan',
                 'english': 'and swiftly bring you to what you have set your heart on.',
             },
             {
@@ -56228,7 +56231,7 @@ CHANTS = [
                 'pali': 'อิมินา ปุญญะกัมเมนะ',
                 'pali_roman': 'Iminā puññakammena',
                 'thai': 'ด้วยบุญนี้ ที่เราทำ',
-                'paiboon': '',
+                'paiboon': 'dûay bun níi tîi rao tam',
                 'english': 'By this deed of merit that we have done,',
             },
             {
@@ -56236,7 +56239,7 @@ CHANTS = [
                 'pali': 'อิมินา อุททิเสนะ จะ',
                 'pali_roman': 'Iminā uddisena ca',
                 'thai': 'แลอุทิศ ให้ปวงสัตว์',
-                'paiboon': '',
+                'paiboon': 'lɛɛ ù-tít hâi bpuaŋ sàt',
                 'english': 'and by this dedication to all beings,',
             },
             {
@@ -56244,7 +56247,7 @@ CHANTS = [
                 'pali': 'ขิปปาหัง สุละเภ เจวะ',
                 'pali_roman': 'Khippāhaṃ sulabhe ceva',
                 'thai': 'เราพลันได้ ซึ่งการตัด',
-                'paiboon': '',
+                'paiboon': 'rao plan dâai sʉ̂ŋ gaan dtàt',
                 'english': 'may I swiftly come to the cutting off',
             },
             {
@@ -56252,7 +56255,7 @@ CHANTS = [
                 'pali': 'ตัณหุปาทานะเฉทะนัง',
                 'pali_roman': 'Taṇhupādānachedanaṃ',
                 'thai': 'ตัวตัณหา อุปาทาน',
-                'paiboon': '',
+                'paiboon': 'dtua dtan-hǎa ù-bpaa-taan',
                 'english': 'of craving and of clinging.',
             },
             {
@@ -56260,7 +56263,7 @@ CHANTS = [
                 'pali': 'เย สันตาเน หินา ธัมมา',
                 'pali_roman': 'Ye santāne hinā dhammā',
                 'thai': 'สิ่งชั่วในดวงใจ',
-                'paiboon': '',
+                'paiboon': 'sìŋ chûa nai duaŋ-jai',
                 'english': 'Whatever base states are in my heart,',
             },
             {
@@ -56268,7 +56271,7 @@ CHANTS = [
                 'pali': 'ยาวะ นิพพานะโต มะมัง',
                 'pali_roman': 'Yāva nibbānato mamaṃ',
                 'thai': 'กว่าเราจะถึงนิพพาน',
-                'paiboon': '',
+                'paiboon': 'gwàa rao jà tʉ̌ŋ níp-paan',
                 'english': 'until I reach Nibbāna,',
             },
             {
@@ -56276,7 +56279,7 @@ CHANTS = [
                 'pali': 'นัสสันตุ สัพพะทา เยวะ',
                 'pali_roman': 'Nassantu sabbadā yeva',
                 'thai': 'มลายสิ้น จากสันดาน',
-                'paiboon': '',
+                'paiboon': 'má-laai sîn jàak sǎn-daan',
                 'english': 'let them perish utterly from my nature,',
             },
             {
@@ -56284,7 +56287,7 @@ CHANTS = [
                 'pali': 'ยัตถะ ชาโต ภะเว ภะเว',
                 'pali_roman': 'Yattha jāto bhave bhave',
                 'thai': 'ทุก ๆ ภพ ที่เราเกิด',
-                'paiboon': '',
+                'paiboon': 'túk túk póp tîi rao gə̀ət',
                 'english': 'in every existence in which I am born.',
             },
             {
@@ -56293,7 +56296,7 @@ CHANTS = [
                 'pali': 'อุชุจิตตัง สะติปัญญา',
                 'pali_roman': 'Ujucittaṃ satipaññā',
                 'thai': 'มีจิตตรง และสติ ทั้งปัญญา อันประเสริฐ',
-                'paiboon': '',
+                'paiboon': 'mii jìt dtroŋ lɛ́ sà-dtì táŋ bpan-yaa an bprà-sə̀ət',
                 'english': 'An upright mind, mindfulness, and excellent wisdom,',
             },
             {
@@ -56301,7 +56304,7 @@ CHANTS = [
                 'pali': 'สัลเลโข วิริยัมหินา',
                 'pali_roman': 'Sallekho viriyamhinā',
                 'thai': 'พร้อมทั้ง ความเพียรเลิศ เป็นเครื่องขูด กิเลสหาย',
-                'paiboon': '',
+                'paiboon': 'prɔ́ɔm táŋ kwaam-pian lə̂ət bpen krʉ̂aŋ kùut gì-lèet hǎai',
                 'english': 'together with surpassing effort, scouring the defilements away —',
             },
             {
@@ -56309,7 +56312,7 @@ CHANTS = [
                 'pali': 'มารา ละภันตุ โนกาสัง',
                 'pali_roman': 'Mārā labhantu nokāsaṃ',
                 'thai': 'โอกาสอย่าพึงมี แก่หมู่มาร สิ้นทั้งหลาย',
-                'paiboon': '',
+                'paiboon': 'oo-gàat yàa pʉŋ mii gɛ̀ɛ mùu maan sîn táŋ-lǎai',
                 'english': 'may the hosts of Māra find no opening at all,',
             },
             {
@@ -56317,7 +56320,7 @@ CHANTS = [
                 'pali': 'กาตุญจะ วิริเยสุ เม',
                 'pali_roman': 'Kātuñca viriyesu me',
                 'thai': 'เป็นช่องประทุษร้าย ทำลายล้าง ความเพียรจม',
-                'paiboon': '',
+                'paiboon': 'bpen chɔ̂ŋ bprà-tút-ráai tam-laai láaŋ kwaam-pian jom',
                 'english': 'no chink through which to do harm and sink my effort.',
             },
             {
@@ -56325,7 +56328,7 @@ CHANTS = [
                 'pali': 'พุทธาทิปะวะโร นาโถ',
                 'pali_roman': 'Buddhādipavaro nātho',
                 'thai': 'พระพุทธผู้บวรนาถ',
-                'paiboon': '',
+                'paiboon': 'prá-pút pûu bɔɔ-wɔɔn-nâat',
                 'english': 'The Buddha, the excellent refuge;',
             },
             {
@@ -56333,7 +56336,7 @@ CHANTS = [
                 'pali': 'ธัมโม นาโถ วะรุตตะโม',
                 'pali_roman': 'Dhammo nātho varuttamo',
                 'thai': 'พระธรรมที่พึ่งอุดม',
-                'paiboon': '',
+                'paiboon': 'prá-tam tîi-pʉ̂ŋ ù-dom',
                 'english': 'the Dhamma, the supreme refuge;',
             },
             # ‼ CHECK [IMG_0510.PNG]: A THAI WORD IS SPLIT ACROSS TWO ROWS
@@ -56347,7 +56350,7 @@ CHANTS = [
                 'pali': 'นาโถ ปัจเจกะพุทโธ จะ',
                 'pali_roman': 'Nātho paccekabuddho ca',
                 'thai': 'พระปัจเจกพุทธสม-',
-                'paiboon': '',
+                'paiboon': 'prá-bpàt-jèek-pút sǒm-',
                 'english': 'the Paccekabuddhas as refuge too,',
             },
             {
@@ -56355,7 +56358,7 @@ CHANTS = [
                 'pali': 'สังโฆ นาโถตตะโร มะมัง',
                 'pali_roman': 'Saṅgho nāthottaro mamaṃ',
                 'thai': 'ทบพระสงฆ์ ที่พึ่งผยอง',
-                'paiboon': '',
+                'paiboon': 'tóp prá-sǒŋ tîi-pʉ̂ŋ pà-yɔ̌ɔŋ',
                 'english': 'and the Saṅgha, the refuge above all, are mine.',
             },
             {
@@ -56363,7 +56366,7 @@ CHANTS = [
                 'pali': 'เตโสตตะมานุภาเวนะ',
                 'pali_roman': 'Tesottamānubhāvena',
                 'thai': 'ด้วยอานุภาพนั้น',
-                'paiboon': '',
+                'paiboon': 'dûay aa-nú-pâap nán',
                 'english': 'By the power of those supreme ones,',
             },
             {
@@ -56371,7 +56374,7 @@ CHANTS = [
                 'pali': 'มาโรกาสัง ละภันตุ มา',
                 'pali_roman': 'Mārokāsaṃ labhantu mā',
                 'thai': 'ขอหมู่มารอย่าได้ช่อง',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ mùu maan yàa dâai chɔ̂ŋ',
                 'english': 'may Māra find no opening;',
             },
             {
@@ -56379,7 +56382,7 @@ CHANTS = [
                 'pali': 'ทะสะปุญญานุภาเวนะ',
                 'pali_roman': 'Dasapuññānubhāvena',
                 'thai': 'ด้วยเดชบุญทั้งสิบป้อง',
-                'paiboon': '',
+                'paiboon': 'dûay dèet bun táŋ sìp bpɔ̂ŋ',
                 'english': 'by the power of the ten kinds of merit,',
             },
             {
@@ -56387,7 +56390,7 @@ CHANTS = [
                 'pali': 'มาโรกาสัง ละภันตุ มา ฯ',
                 'pali_roman': 'Mārokāsaṃ labhantu mā',
                 'thai': 'อย่าเปิดโอกาสแก่มาร เทอญ ฯ',
-                'paiboon': '',
+                'paiboon': 'yàa bpə̀ət oo-gàat gɛ̀ɛ maan təən',
                 'english': 'let no opening be given to Māra at all.',
             },
         ],
@@ -58545,7 +58548,7 @@ CHANTS = [
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง จีวะรัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,',
                 'thai': 'จีวรใด อันเรานุ่งห่มแล้ว, ไม่ทันพิจารณา ในวันนี้,',
-                'paiboon': '',
+                'paiboon': 'jii-wɔɔn dai an rao nûŋ-hòm lɛ́ɛo, mâi tan pí-jaa-rá-naa nai wan-níi,',
                 'english': 'Whatever robe I have used today without reflecting,',
             },
             {
@@ -58553,7 +58556,7 @@ CHANTS = [
                 'pali': 'ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
                 'pali_roman': 'Taṃ yāvadeva sītassa paṭighātāya,',
                 'thai': 'จีวรนั้น เรานุ่งห่มแล้ว, เพียงเพื่อบำบัดความหนาว,',
-                'paiboon': '',
+                'paiboon': 'jii-wɔɔn nán rao nûŋ-hòm lɛ́ɛo, piaŋ pʉ̂a bam-bàt kwaam-nǎao,',
                 'english': 'that was only for warding off cold,',
             },
             {
@@ -58561,7 +58564,7 @@ CHANTS = [
                 'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
                 'pali_roman': 'Uṇhassa paṭighātāya,',
                 'thai': 'เพื่อบำบัดความร้อน,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a bam-bàt kwaam-rɔ́ɔn,',
                 'english': 'for warding off heat,',
             },
             # ‼ CHECK [IMG_0504.PNG]: THE ROBE REFLECTION RUNS
@@ -58573,7 +58576,7 @@ CHANTS = [
                 'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานังปะฏิฆาตายะ,',
                 'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃpaṭighātāya,',
                 'thai': 'เพื่อบำบัดสัมผัสอันเกิดจากเหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a bam-bàt sǎm-pàt an gə̀ət jàak lʉ̀ap yuŋ lom dɛ̀ɛt lɛ́ sàt lʉ́ay-klaan táŋ-lǎai,',
                 'english': 'for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
             },
             # ‼ CHECK [IMG_0504.PNG]: THE PALI ENDS WITH A FULL STOP AND ITS
@@ -58585,7 +58588,7 @@ CHANTS = [
                 'pali': 'ยาวะเทวะ หิริโกปีนะปะฏิจฉาทะนัตถัง.',
                 'pali_roman': 'Yāvadeva hirikopīnapaṭicchādanatthaṃ.',
                 'thai': 'และเพียงเพื่อปกปิดอวัยวะ อันให้เกิดความละอาย,',
-                'paiboon': '',
+                'paiboon': 'lɛ́ piaŋ pʉ̂a bpòk-bpìt à-wai-yá-wá an hâi gə̀ət kwaam lá-aai,',
                 'english': 'and only for the sake of covering what modesty conceals.',
             },
             {
@@ -58601,7 +58604,7 @@ CHANTS = [
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย ปิณฑะปาโต ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,',
                 'thai': 'บิณฑบาตใด อันเราบริโภคแล้ว, ไม่ทันพิจารณาในวันนี้,',
-                'paiboon': '',
+                'paiboon': 'bin-tá-bàat dai an rao bɔɔ-rí-pôok lɛ́ɛo, mâi tan pí-jaa-rá-naa nai wan-níi,',
                 'english': 'Whatever almsfood I have used today without reflecting,',
             },
             {
@@ -58609,7 +58612,7 @@ CHANTS = [
                 'pali': 'โส เนวะ ท๎วายะ,',
                 'pali_roman': 'So neva dvāya,',
                 'thai': 'บิณฑบาตนั้นเราบริโภคแล้ว, ไม่ใช่เป็นไปเพื่อความเพลิดเพลิน สนุกสนาน,',
-                'paiboon': '',
+                'paiboon': 'bin-tá-bàat nán rao bɔɔ-rí-pôok lɛ́ɛo, mâi châi bpen bpai pʉ̂a kwaam plə̂ət-pləən sà-nùk-sà-nǎan,',
                 'english': 'that was not for amusement,',
             },
             {
@@ -58617,7 +58620,7 @@ CHANTS = [
                 'pali': 'นะ มะทายะ,',
                 'pali_roman': 'Na madāya,',
                 'thai': 'ไม่ใช่เป็นไปเพื่อความเมามัน เกิดกำลังพลังทางกาย,',
-                'paiboon': '',
+                'paiboon': 'mâi châi bpen bpai pʉ̂a kwaam mao-man gə̀ət gam-laŋ pá-laŋ taaŋ gaai,',
                 'english': 'nor for intoxication,',
             },
             {
@@ -58625,7 +58628,7 @@ CHANTS = [
                 'pali': 'นะ มัณฑะนายะ,',
                 'pali_roman': 'Na maṇḍanāya,',
                 'thai': 'ไม่ใช่เป็นไปเพื่อประดับ,',
-                'paiboon': '',
+                'paiboon': 'mâi châi bpen bpai pʉ̂a bprà-dàp,',
                 'english': 'nor for adornment,',
             },
             {
@@ -58633,7 +58636,7 @@ CHANTS = [
                 'pali': 'นะ วิภูสะนายะ,',
                 'pali_roman': 'Na vibhūsanāya,',
                 'thai': 'ไม่ใช่เป็นไปเพื่อตกแต่ง,',
-                'paiboon': '',
+                'paiboon': 'mâi châi bpen bpai pʉ̂a dtòk-dtɛ̀ŋ,',
                 'english': 'nor for beautifying,',
             },
             {
@@ -58641,7 +58644,7 @@ CHANTS = [
                 'pali': 'ยาวะเทวะ อิมัสสะ กายัสสะ ฐิติยา,',
                 'pali_roman': 'Yāvadeva imassa kāyassa ṭhitiyā,',
                 'thai': 'แต่ให้เป็นไปเพียงเพื่อความตั้งอยู่ได้แห่งกายนี้,',
-                'paiboon': '',
+                'paiboon': 'dtɛ̀ɛ hâi bpen bpai piaŋ pʉ̂a kwaam dtâŋ yùu dâai hɛ̀ŋ gaai níi,',
                 'english': 'but only for the endurance of this body,',
             },
             {
@@ -58649,7 +58652,7 @@ CHANTS = [
                 'pali': 'ยาปะนายะ,',
                 'pali_roman': 'Yāpanāya,',
                 'thai': 'เพื่อความเป็นไปได้ของอัตภาพ,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a kwaam bpen bpai dâai kɔ̌ɔŋ àt-dtà-pâap,',
                 'english': 'for its continuance,',
             },
             {
@@ -58658,7 +58661,7 @@ CHANTS = [
                 'pali': 'วิหิงสุปะระติยา,',
                 'pali_roman': 'Vihiṃsuparatiyā,',
                 'thai': 'เพื่อความสิ้นไปแห่งความลำบากทางกาย,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a kwaam sîn bpai hɛ̀ŋ kwaam lam-bàak taaŋ gaai,',
                 'english': 'for the ending of its hurt,',
             },
             {
@@ -58666,7 +58669,7 @@ CHANTS = [
                 'pali': 'พ๎รัห๎มะจะริยานุคคะหายะ,',
                 'pali_roman': 'Brahmacariyānuggahāya,',
                 'thai': 'เพื่ออนุเคราะห์แก่การประพฤติพรหมจรรย์,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a à-nú-krɔ́ gɛ̀ɛ gaan bprà-prʉ́t prom-má-jan,',
                 'english': 'and for the support of the holy life,',
             },
             {
@@ -58674,7 +58677,7 @@ CHANTS = [
                 'pali': 'อิติ ปุราณัญจะ เวทะนัง ปะฏิหังขามิ,',
                 'pali_roman': 'Iti purāṇañca vedanaṃ paṭihaṅkhāmi,',
                 'thai': 'ด้วยการทำอย่างนี้, เราย่อมระงับเสียได้ซึ่งทุกขเวทนาเก่า คือความหิว,',
-                'paiboon': '',
+                'paiboon': 'dûay gaan tam yàaŋ-níi, rao yɔ̂m rá-ŋáp sǐa dâai sʉ̂ŋ túk-kà-wêet-tà-naa gào kʉʉ kwaam-hǐu,',
                 'english': 'thinking: thus I put an end to the old feeling,',
             },
             {
@@ -58682,7 +58685,7 @@ CHANTS = [
                 'pali': 'นะวัญจะ เวทะนัง นะ อุปปาเทสสามิ,',
                 'pali_roman': 'Navañca vedanaṃ na uppādessāmi,',
                 'thai': 'และไม่ทำทุกขเวทนาใหม่ให้เกิดขึ้น,',
-                'paiboon': '',
+                'paiboon': 'lɛ́ mâi tam túk-kà-wêet-tà-naa mài hâi gə̀ət kʉ̂n,',
                 'english': 'and I shall not give rise to a new feeling,',
             },
             {
@@ -58690,7 +58693,7 @@ CHANTS = [
                 'pali': 'ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
                 'pali_roman': 'Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.',
                 'thai': 'อนึ่ง ความเป็นไปโดยสะดวกแห่งอัตภาพนี้ด้วย, ความเป็นผู้หาโทษมิได้ด้วย, และความเป็นอยู่โดยผาสุกด้วย, จักมีแก่เรา ดังนี้.',
-                'paiboon': '',
+                'paiboon': 'à-nʉ̀ŋ kwaam bpen bpai dooy sà-dùak hɛ̀ŋ àt-dtà-pâap níi dûay, kwaam bpen pûu hǎa tôot mí dâai dûay, lɛ́ kwaam bpen yùu dooy pǎa-sùk dûay, jàk mii gɛ̀ɛ rao daŋ-níi.',
                 'english': 'and I shall have sustenance, blamelessness, and a life of ease.',
             },
             {
@@ -58706,7 +58709,7 @@ CHANTS = [
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง เสนาสะนัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,',
                 'thai': 'เสนาสนะใด อันเราใช้สอยแล้ว, ไม่ทันพิจารณาในวันนี้,',
-                'paiboon': '',
+                'paiboon': 'sěe-naa-sà-ná dai an rao chái sɔ̌ɔy lɛ́ɛo, mâi tan pí-jaa-rá-naa nai wan-níi,',
                 'english': 'Whatever lodging I have used today without reflecting,',
             },
             {
@@ -58714,7 +58717,7 @@ CHANTS = [
                 'pali': 'ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
                 'pali_roman': 'Taṃ yāvadeva sītassa paṭighātāya,',
                 'thai': 'เสนาสนะนั้น เราใช้สอยแล้ว, เพียงเพื่อบำบัดความหนาว,',
-                'paiboon': '',
+                'paiboon': 'sěe-naa-sà-ná nán rao chái sɔ̌ɔy lɛ́ɛo, piaŋ pʉ̂a bam-bàt kwaam-nǎao,',
                 'english': 'that was only for warding off cold,',
             },
             {
@@ -58722,7 +58725,7 @@ CHANTS = [
                 'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
                 'pali_roman': 'Uṇhassa paṭighātāya,',
                 'thai': 'เพื่อบำบัดความร้อน,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a bam-bàt kwaam-rɔ́ɔn,',
                 'english': 'for warding off heat,',
             },
             {
@@ -58730,7 +58733,7 @@ CHANTS = [
                 'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,',
                 'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,',
                 'thai': 'เพื่อบำบัดสัมผัสอันเกิดจากเหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a bam-bàt sǎm-pàt an gə̀ət jàak lʉ̀ap yuŋ lom dɛ̀ɛt lɛ́ sàt lʉ́ay-klaan táŋ-lǎai,',
                 'english': 'for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
             },
             {
@@ -58738,7 +58741,7 @@ CHANTS = [
                 'pali': 'ยาวะเทวะ อุตุปะริสสะยะวิโนทะนัง ปะฏิสัลลานารามัตถัง.',
                 'pali_roman': 'Yāvadeva utuparissayavinodanaṃ paṭisallānārāmatthaṃ.',
                 'thai': 'เพียงเพื่อบรรเทาอันตรายอันจะพึงมีจากดินฟ้าอากาศ, และเพื่อความเป็นผู้ยินดีอยู่ได้, ในที่หลีกเร้นสำหรับภาวนา.',
-                'paiboon': '',
+                'paiboon': 'piaŋ pʉ̂a ban-tao an-dtà-raai an jà pʉŋ mii jàak din-fáa-aa-gàat, lɛ́ pʉ̂a kwaam bpen pûu yin-dii yùu dâai, nai tîi lìik-rén sǎm-ràp paa-wá-naa.',
                 'english': 'and only for dispelling the perils of the seasons and for delighting in seclusion.',
             },
             {
@@ -58755,7 +58758,7 @@ CHANTS = [
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,',
                 'thai': 'คิลานเภสัชบริขารใด อันเราบริโภคแล้ว, ไม่ทันพิจารณา ในวันนี้,',
-                'paiboon': '',
+                'paiboon': 'kí-laa-ná-pee-sàt bɔɔ-rí-kǎan dai an rao bɔɔ-rí-pôok lɛ́ɛo, mâi tan pí-jaa-rá-naa nai wan-níi,',
                 'english': 'Whatever medicine for use in sickness I have used today without reflecting,',
             },
             {
@@ -58763,7 +58766,7 @@ CHANTS = [
                 'pali': 'โส ยาวะเทวะ อุปปันนานัง เวยยาพาธิกานัง เวทะนานัง ปะฏิฆาตายะ,',
                 'pali_roman': 'So yāvadeva uppannānaṃ veyyābādhikānaṃ vedanānaṃ paṭighātāya,',
                 'thai': 'คิลานเภสัชบริขารนั้น เราบริโภคแล้ว, เพียงเพื่อบำบัดทุกขเวทนา อันบังเกิดขึ้นแล้ว มีอาพาธต่าง ๆ เป็นมูล,',
-                'paiboon': '',
+                'paiboon': 'kí-laa-ná-pee-sàt bɔɔ-rí-kǎan nán rao bɔɔ-rí-pôok lɛ́ɛo, piaŋ pʉ̂a bam-bàt túk-kà-wêet-tà-naa an baŋ-gə̀ət kʉ̂n lɛ́ɛo mii aa-pâat dtàaŋ-dtàaŋ bpen muun,',
                 'english': 'that was only for warding off painful feelings that had arisen,',
             },
             {
@@ -58771,7 +58774,7 @@ CHANTS = [
                 'pali': 'อัพ๎ยาปัชฌะปะระมะตายาติ.',
                 'pali_roman': 'Abyāpajjhaparamatāyāti.',
                 'thai': 'เพื่อความเป็นผู้ไม่มีโรคเบียดเบียนเป็นอย่างยิ่ง ดังนี้.',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a kwaam bpen pûu mâi mii rôok bìat-bian bpen yàaŋ-yîŋ daŋ-níi.',
                 'english': 'and for freedom from affliction as the highest aim.',
             },
         ],
@@ -59212,7 +59215,7 @@ CHANTS = [
                 'pali': 'สัทธัมมะโช สุปะฏิปัตติคุณาทิยุตโต,',
                 'pali_roman': 'Saddhammajo supaṭipattiguṇādiyutto,',
                 'thai': 'พระสงฆ์ที่เกิดโดยพระสัทธรรมประกอบด้วยคุณ มีความปฏิบัติดี เป็นต้น,',
-                'paiboon': '',
+                'paiboon': 'prá-sǒŋ tîi gə̀ət dooy prá-sàt-tam bprà-gɔ̀ɔp dûay kun mii kwaam bpà-dtì-bàt dii bpen dtôn,',
                 'english': 'Born of the true Dhamma, endowed with the quality of practising well and the rest,',
             },
             {
@@ -59220,7 +59223,7 @@ CHANTS = [
                 'pali': 'โยฏฐัพพิโธ อะริยะปุคคะละสังฆะเสฏโฐ,',
                 'pali_roman': 'Yoṭṭhabbidho ariyapuggalasaṅghaseṭṭho,',
                 'thai': 'เป็นหมู่แห่งพระอริยบุคคลอันประเสริฐแปดจำพวก,',
-                'paiboon': '',
+                'paiboon': 'bpen mùu hɛ̀ŋ prá-à-rí-yá-bùk-kon an bprà-sə̀ət bpɛ̀ɛt jam-pûak,',
                 'english': 'the supreme Sangha of noble persons, which is of eight kinds,',
             },
             {
@@ -59228,7 +59231,7 @@ CHANTS = [
                 'pali': 'สีลาทิธัมมะปะวะราสะยะกายะจิตโต,',
                 'pali_roman': 'Sīlādidhammapavarāsayakāyacitto,',
                 'thai': 'มีกายและจิต อันอาศัยธรรมมีศีลเป็นต้น อันบวร,',
-                'paiboon': '',
+                'paiboon': 'mii gaai lɛ́ jìt an aa-sǎi tam mii sǐin bpen dtôn an bɔɔ-wɔɔn,',
                 'english': 'whose body and mind are the dwelling place of virtue and the other excellent qualities —',
             },
             {
@@ -59236,7 +59239,7 @@ CHANTS = [
                 'pali': 'วันทามะหัง ตะมะริยานะคะณัง สุสุทธัง,',
                 'pali_roman': 'Vandāmahaṃ tamariyānagaṇaṃ susuddhaṃ,',
                 'thai': 'ข้าพเจ้าไหว้หมู่แห่งพระอริยเจ้าเหล่านั้น อันบริสุทธิ์ด้วยดี,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi mùu hɛ̀ŋ prá-à-rí-yá-jâo lào nán an bɔɔ-rí-sùt dûay dii,',
                 'english': 'that wholly pure company of the noble ones I salute with my head.',
             },
             {
@@ -59244,7 +59247,7 @@ CHANTS = [
                 'pali': 'สังโฆ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,',
                 'pali_roman': 'Saṅgho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,',
                 'thai': 'พระสงฆ์หมู่ใด เป็นสรณะอันเกษมสูงสุด ของสัตว์ทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'prá-sǒŋ mùu dai bpen sà-rá-ná an gà-sěem sǔuŋ-sùt kɔ̌ɔŋ sàt táŋ-lǎai,',
                 'english': 'The Sangha, which is for all breathing things the refuge, safe and supreme,',
             },
             {
@@ -59252,7 +59255,7 @@ CHANTS = [
                 'pali': 'ตะติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,',
                 'pali_roman': 'Tatiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระสงฆ์หมู่นั้น อันเป็นที่ตั้งแห่งความระลึกองค์ที่สาม ด้วยเศียรเกล้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi prá-sǒŋ mùu nán an bpen tîi-dtâŋ hɛ̀ŋ kwaam rá-lʉ́k oŋ tîi sǎam dûay sǐan-glâo,',
                 'english': 'the third of the objects of recollection — it I revere with my head.',
             },
             # ‼ CHECK [IMG_0502.PNG]: ⚠ THREE BRACKETED ALTERNATIVES ARE
@@ -59274,7 +59277,7 @@ CHANTS = [
                 'pali': 'สังฆัสสาหัส๎มิ ทาโส (ทาสี) วะ สังโฆ เม สามิกิสสะโร,',
                 'pali_roman': 'Saṅghassāhasmi dāso (dāsī) va saṅgho me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระสงฆ์, พระสงฆ์เป็นนาย มีอิสระเหนือข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo bpen tâat kɔ̌ɔŋ prá-sǒŋ, prá-sǒŋ bpen naai mii ìt-sà-rà nʉ̌a kâa-pá-jâo,',
                 'english': "I am the Sangha's servant; the Sangha is my lord and master.",
             },
             {
@@ -59282,7 +59285,7 @@ CHANTS = [
                 'pali': 'สังโฆ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,',
                 'pali_roman': 'Saṅgho dukkhassa ghātā ca vidhātā ca hitassa me,',
                 'thai': 'พระสงฆ์เป็นเครื่องกำจัดทุกข์ และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'prá-sǒŋ bpen krʉ̂aŋ gam-jàt túk lɛ́ soŋ wái sʉ̂ŋ bprà-yòot gɛ̀ɛ kâa-pá-jâo,',
                 'english': 'The Sangha destroys suffering, and brings about what is for my welfare.',
             },
             {
@@ -59290,7 +59293,7 @@ CHANTS = [
                 'pali': 'สังฆัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,',
                 'pali_roman': 'Saṅghassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,',
                 'thai': 'ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระสงฆ์,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo mɔ̂ɔp gaai tà-wǎai chii-wít níi dɛ̀ɛ prá-sǒŋ,',
                 'english': 'To the Sangha I surrender this body and this life,',
             },
             # ‼ CHECK [IMG_0502.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
@@ -59303,7 +59306,7 @@ CHANTS = [
                 'pali': 'วันทันโตหัง (ตีหัง) จะริสสามิ สังฆัสโสปะฏิปันนะตัง,',
                 'pali_roman': 'Vandantohaṃ (tīhaṃ) carissāmi saṅghassopaṭipannataṃ,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม ซึ่งความปฏิบัติดีของพระสงฆ์,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu jàk bprà-prʉ́t dtaam sʉ̂ŋ kwaam bpà-dtì-bàt dii kɔ̌ɔŋ prá-sǒŋ,',
                 'english': "Revering it, I shall walk on by the Sangha's own good practice.",
             },
             {
@@ -59311,7 +59314,7 @@ CHANTS = [
                 'pali': 'นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง,',
                 'pali_roman': 'Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ,',
                 'thai': 'สรณะอื่นของข้าพเจ้าไม่มี, พระสงฆ์เป็นสรณะอันประเสริฐของข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'sà-rá-ná ʉ̀ʉn kɔ̌ɔŋ kâa-pá-jâo mâi mii, prá-sǒŋ bpen sà-rá-ná an bprà-sə̀ət kɔ̌ɔŋ kâa-pá-jâo,',
                 'english': 'For me there is no other refuge; the Sangha is my refuge, the best of them.',
             },
             {
@@ -59320,7 +59323,7 @@ CHANTS = [
                 'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,',
                 'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane,',
                 'thai': 'ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนา ของพระศาสดา,',
-                'paiboon': '',
+                'paiboon': 'dûay gaan glàao kam sàt níi kâa-pá-jâo pʉŋ jà-rəən nai prá-sàat-sà-nǎa kɔ̌ɔŋ prá-sàat-sà-daa,',
                 'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
             },
             # ‼ CHECK [IMG_0502.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
@@ -59333,7 +59336,7 @@ CHANTS = [
                 'pali': 'สังฆัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,',
                 'pali_roman': 'Saṅghaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระสงฆ์ ได้ขวนขวายบุญใด ในบัดนี้,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu sʉ̂ŋ prá-sǒŋ dâai kǔan-kwǎai bun dai nai bàt-níi,',
                 'english': 'Whatever merit I have gained here in revering the Sangha —',
             },
             {
@@ -59341,7 +59344,7 @@ CHANTS = [
                 'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
                 'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
                 'thai': 'อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.',
-                'paiboon': '',
+                'paiboon': 'an-dtà-raai táŋ-bpuaŋ yàa dâai mii gɛ̀ɛ kâa-pá-jâo dûay dèet hɛ̀ŋ bun nán.',
                 'english': 'by the power of it, may all obstacles for me come to nothing.',
             },
             # ‼ CHECK [IMG_0503.PNG]: THE RUBRIC (กราบพร้อมกับหมอบลงว่า) IS
@@ -59362,7 +59365,7 @@ CHANTS = [
                 'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
                 'pali_roman': 'Kāyena vācāya va cetasā vā,',
                 'thai': 'ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,',
-                'paiboon': '',
+                'paiboon': 'dûay gaai gɔ̂ dii dûay waa-jaa gɔ̂ dii dûay jai gɔ̂ dii,',
                 'english': 'By body, by speech, or by mind,',
             },
             {
@@ -59370,7 +59373,7 @@ CHANTS = [
                 'pali': 'สังเฆ กุกัมมัง ปะกะตัง มะยา ยัง,',
                 'pali_roman': 'Saṅghe kukammaṃ pakataṃ mayā yaṃ,',
                 'thai': 'กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้ว ในพระสงฆ์,',
-                'paiboon': '',
+                'paiboon': 'gam nâa dtì-dtian an dai tîi kâa-pá-jâo grà-tam lɛ́ɛo nai prá-sǒŋ,',
                 'english': 'whatever wrong has been done by me towards the Sangha —',
             },
             {
@@ -59378,7 +59381,7 @@ CHANTS = [
                 'pali': 'สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง,',
                 'pali_roman': 'Saṅgho paṭiggaṇhatu accayantaṃ,',
                 'thai': 'ขอพระสงฆ์ จงงดซึ่งโทษล่วงเกินอันนั้น,',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ prá-sǒŋ joŋ ŋót sʉ̂ŋ tôot lûaŋ-gəən an nán,',
                 'english': 'may the Sangha accept that transgression,',
             },
             {
@@ -59386,7 +59389,7 @@ CHANTS = [
                 'pali': 'กาลันตะเร สังวะริตุง วะ สังเฆ.',
                 'pali_roman': 'Kālantare saṃvarituṃ va saṅghe.',
                 'thai': 'เพื่อการสำรวมระวัง ในพระสงฆ์ ในกาลต่อไป.',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a gaan sǎm-ruam rá-waŋ nai prá-sǒŋ nai gaan dtɔ̀ɔ bpai.',
                 'english': 'that in time to come I may be restrained towards the Sangha.',
             },
         ],
@@ -59805,7 +59808,7 @@ CHANTS = [
                 'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
                 'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt dii lɛ́ɛo,',
                 'english': "The Sangha of the Blessed One's disciples has practised well,",
             },
             {
@@ -59813,7 +59816,7 @@ CHANTS = [
                 'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
                 'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติตรงแล้ว,',
-                'paiboon': '',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt dtroŋ lɛ́ɛo,',
                 'english': "the Sangha of the Blessed One's disciples has practised straightly,",
             },
             {
@@ -59821,7 +59824,7 @@ CHANTS = [
                 'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
                 'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติเพื่อรู้ธรรมเป็นเครื่องออกจากทุกข์แล้ว,',
-                'paiboon': '',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt pʉ̂a rúu tam bpen krʉ̂aŋ ɔ̀ɔk jàak túk lɛ́ɛo,',
                 'english': "the Sangha of the Blessed One's disciples has practised for knowing the Dhamma, the means of release from suffering,",
             },
             {
@@ -59829,7 +59832,7 @@ CHANTS = [
                 'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
                 'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติสมควรแล้ว,',
-                'paiboon': '',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt sǒm-kuan lɛ́ɛo,',
                 'english': "the Sangha of the Blessed One's disciples has practised fittingly,",
             },
             # ‼ CHECK [IMG_0501.PNG]: THE THAI ENDS WITH THE MARK :- —
@@ -59841,7 +59844,7 @@ CHANTS = [
                 'pali': 'ยะทิทัง,',
                 'pali_roman': 'Yadidaṃ,',
                 'thai': 'ได้แก่บุคคลเหล่านี้ คือ :-',
-                'paiboon': '',
+                'paiboon': 'dâai-gɛ̀ɛ bùk-kon lào níi kʉʉ :-',
                 'english': 'namely, these persons:',
             },
             {
@@ -59849,7 +59852,7 @@ CHANTS = [
                 'pali': 'จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
                 'pali_roman': 'Cattāri purisayugāni aṭṭha purisapuggalā,',
                 'thai': 'คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,',
-                'paiboon': '',
+                'paiboon': 'kûu hɛ̀ŋ bù-rùt sìi kûu, náp riaŋ dtua bù-rùt dâai bpɛ̀ɛt bù-rùt,',
                 'english': 'four pairs of persons, eight individuals counted singly,',
             },
             {
@@ -59857,7 +59860,7 @@ CHANTS = [
                 'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
                 'thai': 'นั่นแหละ สงฆ์สาวกของพระผู้มีพระภาคเจ้า,',
-                'paiboon': '',
+                'paiboon': 'nân lɛ̀ sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo,',
                 'english': "that is the Sangha of the Blessed One's disciples —",
             },
             {
@@ -59865,7 +59868,7 @@ CHANTS = [
                 'pali': 'อาหุเนยโย,',
                 'pali_roman': 'Āhuneyyo,',
                 'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขานำมาบูชา,',
-                'paiboon': '',
+                'paiboon': 'bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo nam maa buu-chaa,',
                 'english': 'worthy of the offerings people bring,',
             },
             {
@@ -59873,7 +59876,7 @@ CHANTS = [
                 'pali': 'ปาหุเนยโย,',
                 'pali_roman': 'Pāhuneyyo,',
                 'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,',
-                'paiboon': '',
+                'paiboon': 'bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo jàt wái dtɔ̂ɔn-ráp,',
                 'english': 'worthy of the offerings people set out in welcome,',
             },
             {
@@ -59881,7 +59884,7 @@ CHANTS = [
                 'pali': 'ทักขิเณยโย,',
                 'pali_roman': 'Dakkhiṇeyyo,',
                 'thai': 'เป็นผู้ควรรับทักษิณาทาน,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu kuan ráp ták-sì-nǎa-taan,',
                 'english': 'worthy of gifts given in faith,',
             },
             {
@@ -59889,7 +59892,7 @@ CHANTS = [
                 'pali': 'อัญชะลีกะระณีโย,',
                 'pali_roman': 'Añjalīkaraṇīyo,',
                 'thai': 'เป็นผู้ที่บุคคลทั่วไปควรทำอัญชลี,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu tîi bùk-kon tûa-bpai kuan tam an-chá-lii,',
                 'english': 'worthy of reverent salutation by anyone,',
             },
             # ‼ CHECK [IMG_0501.PNG]: THE LAST LINE ENDS โลกัสสาติ. WITH THE
@@ -59902,7 +59905,7 @@ CHANTS = [
                 'pali': 'อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
                 'pali_roman': 'Anuttaraṃ puññakkhettaṃ lokassāti.',
                 'thai': 'เป็นเนื้อนาบุญของโลก, ไม่มีนาบุญอื่นยิ่งกว่า ดังนี้.',
-                'paiboon': '',
+                'paiboon': 'bpen nʉ́a-naa-bun kɔ̌ɔŋ lôok, mâi mii naa-bun ʉ̀ʉn yîŋ gwàa daŋ-níi.',
                 'english': 'the unsurpassed field of merit for the world — no field of merit is greater,',
             },
         ],
@@ -59960,7 +59963,7 @@ CHANTS = [
                 'pali': 'ส๎วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย,',
                 'pali_roman': 'Svākkhātatādiguṇayogavasena seyyo,',
                 'thai': 'พระธรรม เป็นสิ่งที่ประเสริฐเพราะประกอบด้วยคุณ คือความที่พระผู้มีพระภาคเจ้า ตรัสไว้ดีแล้ว เป็นต้น,',
-                'paiboon': '',
+                'paiboon': 'prá-tam bpen sìŋ tîi bprà-sə̀ət prɔ́ bprà-gɔ̀ɔp dûay kun kʉʉ kwaam tîi prá-pûu-mii-prá-pâak-jâo dtràt wái dii lɛ́ɛo bpen dtôn,',
                 'english': 'Better than all else, by reason of its being well proclaimed and the other qualities that go with it,',
             },
             {
@@ -59968,7 +59971,7 @@ CHANTS = [
                 'pali': 'โย มัคคะปากะปะริยัตติวิโมกขะเภโท,',
                 'pali_roman': 'Yo maggapākapariyattivimokkhabhedo,',
                 'thai': 'เป็นธรรมอันจำแนกเป็น มรรค ผล ปริยัติ และนิพพาน ส่วนใด,',
-                'paiboon': '',
+                'paiboon': 'bpen tam an jam-nɛ̂ɛk bpen mák pǒn bpà-rí-yát lɛ́ níp-paan sùan dai,',
                 'english': 'divided into path, fruit, scripture and release,',
             },
             {
@@ -59976,7 +59979,7 @@ CHANTS = [
                 'pali': 'ธัมโม กุโลกะปะตะนา ตะทะธาริธารี,',
                 'pali_roman': 'Dhammo kulokapatanā tadadhāridhārī,',
                 'thai': 'เป็นธรรมทรงไว้ซึ่งผู้ทรงธรรม จากการตกไปสู่โลกที่ชั่ว,',
-                'paiboon': '',
+                'paiboon': 'bpen tam soŋ wái sʉ̂ŋ pûu soŋ tam jàak gaan dtòk bpai sùu lôok tîi chûa,',
                 'english': 'the Dhamma, which holds up those who hold to it and keeps them from falling into the wretched worlds —',
             },
             {
@@ -59984,7 +59987,7 @@ CHANTS = [
                 'pali': 'วันทามะหัง ตะมะหะรัง วะระธัมมะเมตัง,',
                 'pali_roman': 'Vandāmahaṃ tamaharaṃ varadhammametaṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระธรรมอันประเสริฐนั้น อันเป็นเครื่องขจัดเสีย ซึ่งความมืด,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi prá-tam an bprà-sə̀ət nán an bpen krʉ̂aŋ kà-jàt sǐa sʉ̂ŋ kwaam mʉ̂ʉt,',
                 'english': 'that excellent Dhamma, dispeller of darkness, I salute with my head.',
             },
             {
@@ -59992,7 +59995,7 @@ CHANTS = [
                 'pali': 'ธัมโม โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,',
                 'pali_roman': 'Dhammo yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,',
                 'thai': 'พระธรรมใด เป็นสรณะอันเกษมสูงสุดของสัตว์ทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'prá-tam dai bpen sà-rá-ná an gà-sěem sǔuŋ-sùt kɔ̌ɔŋ sàt táŋ-lǎai,',
                 'english': 'The Dhamma, which is for all breathing things the refuge, safe and supreme,',
             },
             {
@@ -60000,7 +60003,7 @@ CHANTS = [
                 'pali': 'ทุติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,',
                 'pali_roman': 'Dutiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระธรรมนั้น อันเป็นที่ตั้งแห่งความระลึก องค์ที่สอง ด้วยเศียรเกล้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi prá-tam nán an bpen tîi-dtâŋ hɛ̀ŋ kwaam rá-lʉ́k oŋ tîi sɔ̌ɔŋ dûay sǐan-glâo,',
                 'english': 'the second of the objects of recollection — it I revere with my head.',
             },
             # ‼ CHECK [IMG_0499.PNG]: ⚠ THREE BRACKETED ALTERNATIVES INSIDE
@@ -60018,7 +60021,7 @@ CHANTS = [
                 'pali': 'ธัมมัสสาหัส๎มิ ทาโส (ทาสี) วะ ธัมโม เม สามิกิสสะโร,',
                 'pali_roman': 'Dhammassāhasmi dāso (dāsī) va dhammo me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระธรรม, พระธรรมเป็นนาย มีอิสระเหนือข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo bpen tâat kɔ̌ɔŋ prá-tam, prá-tam bpen naai mii ìt-sà-rà nʉ̌a kâa-pá-jâo,',
                 'english': "I am the Dhamma's servant; the Dhamma is my lord and master.",
             },
             {
@@ -60026,7 +60029,7 @@ CHANTS = [
                 'pali': 'ธัมโม ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,',
                 'pali_roman': 'Dhammo dukkhassa ghātā ca vidhātā ca hitassa me,',
                 'thai': 'พระธรรมเป็นเครื่องกำจัดทุกข์และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'prá-tam bpen krʉ̂aŋ gam-jàt túk lɛ́ soŋ wái sʉ̂ŋ bprà-yòot gɛ̀ɛ kâa-pá-jâo,',
                 'english': 'The Dhamma destroys suffering, and brings about what is for my welfare.',
             },
             {
@@ -60034,7 +60037,7 @@ CHANTS = [
                 'pali': 'ธัมมัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,',
                 'pali_roman': 'Dhammassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,',
                 'thai': 'ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระธรรม,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo mɔ̂ɔp gaai tà-wǎai chii-wít níi dɛ̀ɛ prá-tam,',
                 'english': 'To the Dhamma I surrender this body and this life,',
             },
             # ‼ CHECK [IMG_0499.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
@@ -60047,7 +60050,7 @@ CHANTS = [
                 'pali': 'วันทันโตหัง (ตีหัง) จะริสสามิ ธัมมัสเสวะ สุธัมมะตัง,',
                 'pali_roman': 'Vandantohaṃ (tīhaṃ) carissāmi dhammasseva sudhammataṃ,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม, ซึ่งความเป็นธรรมดีของพระธรรม,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu jàk bprà-prʉ́t dtaam, sʉ̂ŋ kwaam bpen tam dii kɔ̌ɔŋ prá-tam,',
                 'english': "Revering it, I shall walk on by the Dhamma's own true excellence.",
             },
             {
@@ -60056,7 +60059,7 @@ CHANTS = [
                 'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง,',
                 'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ,',
                 'thai': 'สรณะอื่นของข้าพเจ้าไม่มี, พระธรรมเป็นสรณะอันประเสริฐของข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'sà-rá-ná ʉ̀ʉn kɔ̌ɔŋ kâa-pá-jâo mâi mii, prá-tam bpen sà-rá-ná an bprà-sə̀ət kɔ̌ɔŋ kâa-pá-jâo,',
                 'english': 'For me there is no other refuge; the Dhamma is my refuge, the best of them.',
             },
             {
@@ -60064,7 +60067,7 @@ CHANTS = [
                 'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,',
                 'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane,',
                 'thai': 'ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนาของพระศาสดา,',
-                'paiboon': '',
+                'paiboon': 'dûay gaan glàao kam sàt níi kâa-pá-jâo pʉŋ jà-rəən nai prá-sàat-sà-nǎa kɔ̌ɔŋ prá-sàat-sà-daa,',
                 'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
             },
             # ‼ CHECK [IMG_0499.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
@@ -60077,7 +60080,7 @@ CHANTS = [
                 'pali': 'ธัมมัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,',
                 'pali_roman': 'Dhammaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระธรรม ได้ขวนขวายบุญใดในบัดนี้,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu sʉ̂ŋ prá-tam dâai kǔan-kwǎai bun dai nai bàt-níi,',
                 'english': 'Whatever merit I have gained here in revering the Dhamma —',
             },
             {
@@ -60085,7 +60088,7 @@ CHANTS = [
                 'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
                 'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
                 'thai': 'อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.',
-                'paiboon': '',
+                'paiboon': 'an-dtà-raai táŋ-bpuaŋ yàa dâai mii gɛ̀ɛ kâa-pá-jâo dûay dèet hɛ̀ŋ bun nán.',
                 'english': 'by the power of it, may all obstacles for me come to nothing.',
             },
             # ‼ CHECK [IMG_0500.PNG]: THE RUBRIC (กราบพร้อมกับหมอบลงว่า) IS
@@ -60105,7 +60108,7 @@ CHANTS = [
                 'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
                 'pali_roman': 'Kāyena vācāya va cetasā vā,',
                 'thai': 'ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,',
-                'paiboon': '',
+                'paiboon': 'dûay gaai gɔ̂ dii dûay waa-jaa gɔ̂ dii dûay jai gɔ̂ dii,',
                 'english': 'By body, by speech, or by mind,',
             },
             # ‼ CHECK [IMG_0500.PNG]: THE THAI OF VERSE 17 ENDS WITH NO MARK
@@ -60117,7 +60120,7 @@ CHANTS = [
                 'pali': 'ธัมเม กุกัมมัง ปะกะตัง มะยา ยัง,',
                 'pali_roman': 'Dhamme kukammaṃ pakataṃ mayā yaṃ,',
                 'thai': 'กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้ว ในพระธรรม',
-                'paiboon': '',
+                'paiboon': 'gam nâa dtì-dtian an dai tîi kâa-pá-jâo grà-tam lɛ́ɛo nai prá-tam',
                 'english': 'whatever wrong has been done by me towards the Dhamma —',
             },
             {
@@ -60125,7 +60128,7 @@ CHANTS = [
                 'pali': 'ธัมโม ปะฏิคคัณหะตุ อัจจะยันตัง,',
                 'pali_roman': 'Dhammo paṭiggaṇhatu accayantaṃ,',
                 'thai': 'ขอพระธรรม จงงดซึ่งโทษล่วงเกินอันนั้น,',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ prá-tam joŋ ŋót sʉ̂ŋ tôot lûaŋ-gəən an nán,',
                 'english': 'may the Dhamma accept that transgression,',
             },
             # ‼ CHECK [IMG_0500.PNG]: ⚠ THE CHANT'S LAST LINE ENDS ON A COMMA
@@ -60140,7 +60143,7 @@ CHANTS = [
                 'pali': 'กาลันตะเร สังวะริตุง วะ ธัมเม,',
                 'pali_roman': 'Kālantare saṃvarituṃ va dhamme,',
                 'thai': 'เพื่อการสำรวมระวัง ในพระธรรม ในกาลต่อไป.',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a gaan sǎm-ruam rá-waŋ nai prá-tam nai gaan dtɔ̀ɔ bpai.',
                 'english': 'that in time to come I may be restrained towards the Dhamma.',
             },
         ],
@@ -60669,7 +60672,7 @@ CHANTS = [
                 'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล๎ยาโณ กิตติสัทโท อัพภุคคะโต,',
                 'pali_roman': 'Taṃ kho pana bhagavantaṃ evaṃ kalyāṇo kittisaddo abbhuggato,',
                 'thai': 'ก็กิตติศัพท์อันงามของพระผู้มีพระภาคเจ้า, ได้ฟุ้งไปแล้วอย่างนี้ว่า :-',
-                'paiboon': '',
+                'paiboon': 'gɔ̂ gìt-dtì-sàp an ŋaam kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo, dâai fúŋ bpai lɛ́ɛo yàaŋ-níi wâa :-',
                 'english': 'And this good report has gone abroad concerning that Blessed One:',
             },
             {
@@ -60677,7 +60680,7 @@ CHANTS = [
                 'pali': 'อิติปิ โส ภะคะวา,',
                 'pali_roman': 'Itipi so bhagavā,',
                 'thai': 'เพราะเหตุอย่างนี้ ๆ พระผู้มีพระภาคเจ้านั้น,',
-                'paiboon': '',
+                'paiboon': 'prɔ́ hèet yàaŋ-níi yàaŋ-níi prá-pûu-mii-prá-pâak-jâo nán,',
                 'english': 'So indeed is he, the Blessed One —',
             },
             {
@@ -60685,7 +60688,7 @@ CHANTS = [
                 'pali': 'อะระหัง,',
                 'pali_roman': 'Arahaṃ,',
                 'thai': 'เป็นผู้ไกลจากกิเลส,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu glai jàak gì-lèet,',
                 'english': 'worthy,',
             },
             {
@@ -60693,7 +60696,7 @@ CHANTS = [
                 'pali': 'สัมมาสัมพุทโธ,',
                 'pali_roman': 'Sammāsambuddho,',
                 'thai': 'เป็นผู้ตรัสรู้ชอบได้โดยพระองค์เอง,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
                 'english': 'perfectly enlightened by himself,',
             },
             {
@@ -60701,7 +60704,7 @@ CHANTS = [
                 'pali': 'วิชชาจะระณะสัมปันโน,',
                 'pali_roman': 'Vijjācaraṇasampanno,',
                 'thai': 'เป็นผู้ถึงพร้อมด้วยวิชชาและจรณะ,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu tʉ̌ŋ prɔ́ɔm dûay wít-chaa lɛ́ jà-rá-ná,',
                 'english': 'accomplished in knowledge and conduct,',
             },
             {
@@ -60709,7 +60712,7 @@ CHANTS = [
                 'pali': 'สุคะโต,',
                 'pali_roman': 'Sugato,',
                 'thai': 'เป็นผู้ไปแล้วด้วยดี,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu bpai lɛ́ɛo dûay dii,',
                 'english': 'well-farer,',
             },
             {
@@ -60717,7 +60720,7 @@ CHANTS = [
                 'pali': 'โลกะวิทู,',
                 'pali_roman': 'Lokavidū,',
                 'thai': 'เป็นผู้รู้โลกอย่างแจ่มแจ้ง,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu rúu lôok yàaŋ jɛ̀m-jɛ̂ɛŋ,',
                 'english': 'knower of the worlds,',
             },
             {
@@ -60725,7 +60728,7 @@ CHANTS = [
                 'pali': 'อะนุตตะโร ปุริสะทัมมะสาระถิ,',
                 'pali_roman': 'Anuttaro purisadammasārathi,',
                 'thai': 'เป็นผู้สามารถฝึกบุรุษที่สมควรฝึกได้อย่างไม่มีใครยิ่งกว่า,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu sǎa-mâat fʉ̀k bù-rùt tîi sǒm-kuan fʉ̀k dâai yàaŋ mâi mii krai yîŋ gwàa,',
                 'english': 'unsurpassed trainer of those who can be trained,',
             },
             {
@@ -60733,7 +60736,7 @@ CHANTS = [
                 'pali': 'สัตถา เทวะมะนุสสานัง,',
                 'pali_roman': 'Satthā devamanussānaṃ,',
                 'thai': 'เป็นครูผู้สอนของเทวดาและมนุษย์ทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'bpen kruu pûu sɔ̌ɔn kɔ̌ɔŋ têe-wá-daa lɛ́ má-nút táŋ-lǎai,',
                 'english': 'teacher of devas and humans,',
             },
             {
@@ -60741,7 +60744,7 @@ CHANTS = [
                 'pali': 'พุทโธ,',
                 'pali_roman': 'Buddho,',
                 'thai': 'เป็นผู้รู้ ผู้ตื่น ผู้เบิกบานด้วยธรรม,',
-                'paiboon': '',
+                'paiboon': 'bpen pûu-rúu pûu-dtʉ̀ʉn pûu-bə̀ək-baan dûay tam,',
                 'english': 'awakened,',
             },
             {
@@ -60749,7 +60752,7 @@ CHANTS = [
                 'pali': 'ภะคะวาติ.',
                 'pali_roman': 'Bhagavāti.',
                 'thai': 'เป็นผู้มีความจำเริญ จำแนกธรรมสั่งสอนสัตว์ ดังนี้.',
-                'paiboon': '',
+                'paiboon': 'bpen pûu mii kwaam-jam-rəən jam-nɛ̂ɛk tam sàŋ-sɔ̌ɔn sàt daŋ-níi.',
                 'english': 'blessed.',
             },
         ],
@@ -60807,7 +60810,7 @@ CHANTS = [
                 'pali': 'พุทธ๎วาระหันตะวะระตาทิคุณาภิยุตโต,',
                 'pali_roman': 'Buddhvārahantavaratādiguṇābhiyutto,',
                 'thai': 'พระพุทธเจ้าประกอบด้วยคุณ มีความประเสริฐแห่งอรหันตคุณ เป็นต้น,',
-                'paiboon': '',
+                'paiboon': 'prá-pút-tá-jâo bprà-gɔ̀ɔp dûay kun mii kwaam bprà-sə̀ət hɛ̀ŋ à-rá-hǎn-tá-kun bpen dtôn,',
                 'english': 'The Buddha, joined to the highest qualities, arahantship foremost among them,',
             },
             {
@@ -60815,7 +60818,7 @@ CHANTS = [
                 'pali': 'สุทธาภิญาณะกะรุณาหิ สะมาคะตัตโต,',
                 'pali_roman': 'Suddhābhiñāṇakaruṇāhi samāgatatto,',
                 'thai': 'มีพระองค์อันประกอบด้วยพระญาณ และพระกรุณาอันบริสุทธิ์,',
-                'paiboon': '',
+                'paiboon': 'mii prá-oŋ an bprà-gɔ̀ɔp dûay prá-yaan lɛ́ prá-gà-rú-naa an bɔɔ-rí-sùt,',
                 'english': 'in whose being purity, higher knowing and compassion have come together,',
             },
             {
@@ -60823,7 +60826,7 @@ CHANTS = [
                 'pali': 'โพเธสิ โย สุชะนะตัง กะมะลังวะ สูโร,',
                 'pali_roman': 'Bodhesi yo sujanataṃ kamalaṃva sūro,',
                 'thai': 'พระองค์ใด ทรงกระทำชนที่ดีให้เบิกบาน ดุจอาทิตย์ทำบัวให้บาน,',
-                'paiboon': '',
+                'paiboon': 'prá-oŋ dai soŋ grà-tam chon tîi dii hâi bə̀ək-baan dùt aa-tít tam bua hâi baan,',
                 'english': 'who awakened the good folk as the sun awakens the lotus,',
             },
             {
@@ -60832,7 +60835,7 @@ CHANTS = [
                 'pali': 'วันทามะหัง ตะมะระณัง สิระสา ชิเนนทัง,',
                 'pali_roman': 'Vandāmahaṃ tamaraṇaṃ sirasā jinendaṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระชินสีห์ ผู้ไม่มีกิเลส พระองค์นั้น ด้วยเศียรเกล้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi prá-chin-ná-sǐi pûu mâi mii gì-lèet prá-oŋ nán dûay sǐan-glâo,',
                 'english': 'that Peaceful One, Lord of Conquerors, I salute with my head.',
             },
             {
@@ -60840,7 +60843,7 @@ CHANTS = [
                 'pali': 'พุทโธ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,',
                 'pali_roman': 'Buddho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,',
                 'thai': 'พระพุทธเจ้าพระองค์ใด เป็นสรณะอันเกษมสูงสุด ของสัตว์ทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'prá-pút-tá-jâo prá-oŋ dai bpen sà-rá-ná an gà-sěem sǔuŋ-sùt kɔ̌ɔŋ sàt táŋ-lǎai,',
                 'english': 'The Buddha, who is for all breathing things the refuge, safe and supreme,',
             },
             {
@@ -60848,7 +60851,7 @@ CHANTS = [
                 'pali': 'ปะฐะมานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,',
                 'pali_roman': 'Paṭhamānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,',
                 'thai': 'ข้าพเจ้าไหว้พระพุทธเจ้าพระองค์นั้น, อันเป็นที่ตั้งแห่งความระลึก องค์ที่หนึ่ง, ด้วยเศียรเกล้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo wâi prá-pút-tá-jâo prá-oŋ nán, an bpen tîi-dtâŋ hɛ̀ŋ kwaam rá-lʉ́k oŋ tîi nʉ̀ŋ, dûay sǐan-glâo,',
                 'english': 'the first of the objects of recollection — him I revere with my head.',
             },
             # ‼ CHECK [IMG_0497.PNG]: ⚠ AND HERE THE FIRST PRINTING IS NOT
@@ -60868,7 +60871,7 @@ CHANTS = [
                 'pali': 'พุทธัสสาหัส๎มิ ทาโส (ทาสี) วะ พุทโธ เม สามิกิสสะโร,',
                 'pali_roman': 'Buddhassāhasmi dāso (dāsī) va buddho me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระพุทธเจ้า, พระพุทธเจ้าเป็นนายมีอิสระเหนือข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo bpen tâat kɔ̌ɔŋ prá-pút-tá-jâo, prá-pút-tá-jâo bpen naai mii ìt-sà-rà nʉ̌a kâa-pá-jâo,',
                 'english': "I am the Buddha's servant; the Buddha is my lord and master.",
             },
             {
@@ -60876,7 +60879,7 @@ CHANTS = [
                 'pali': 'พุทโธ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,',
                 'pali_roman': 'Buddho dukkhassa ghātā ca vidhātā ca hitassa me,',
                 'thai': 'พระพุทธเจ้าเป็นเครื่องกำจัดทุกข์ และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'prá-pút-tá-jâo bpen krʉ̂aŋ gam-jàt túk lɛ́ soŋ wái sʉ̂ŋ bprà-yòot gɛ̀ɛ kâa-pá-jâo,',
                 'english': 'The Buddha destroys suffering, and brings about what is for my welfare.',
             },
             {
@@ -60884,7 +60887,7 @@ CHANTS = [
                 'pali': 'พุทธัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,',
                 'pali_roman': 'Buddhassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,',
                 'thai': 'ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระพุทธเจ้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo mɔ̂ɔp gaai tà-wǎai chii-wít níi dɛ̀ɛ prá-pút-tá-jâo,',
                 'english': 'To the Buddha I surrender this body and this life,',
             },
             {
@@ -60892,7 +60895,7 @@ CHANTS = [
                 'pali': 'วันทันโตหัง (ตีหัง) จะริสสามิ พุทธัสเสวะ สุโพธิตัง,',
                 'pali_roman': 'Vandantohaṃ (tīhaṃ) carissāmi buddhasseva subodhitaṃ,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม, ซึ่งความตรัสรู้ดีของพระพุทธเจ้า,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu jàk bprà-prʉ́t dtaam, sʉ̂ŋ kwaam dtràt-rúu dii kɔ̌ɔŋ prá-pút-tá-jâo,',
                 'english': "Revering him, I shall walk on by the Buddha's own true awakening.",
             },
             {
@@ -60900,7 +60903,7 @@ CHANTS = [
                 'pali': 'นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง,',
                 'pali_roman': 'Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ,',
                 'thai': 'สรณะอื่นของข้าพเจ้าไม่มี, พระพุทธเจ้าเป็นสรณะอันประเสริฐของข้าพเจ้า,',
-                'paiboon': '',
+                'paiboon': 'sà-rá-ná ʉ̀ʉn kɔ̌ɔŋ kâa-pá-jâo mâi mii, prá-pút-tá-jâo bpen sà-rá-ná an bprà-sə̀ət kɔ̌ɔŋ kâa-pá-jâo,',
                 'english': 'For me there is no other refuge; the Buddha is my refuge, the best of them.',
             },
             {
@@ -60908,7 +60911,7 @@ CHANTS = [
                 'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,',
                 'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane,',
                 'thai': 'ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนาของพระศาสดา,',
-                'paiboon': '',
+                'paiboon': 'dûay gaan glàao kam sàt níi kâa-pá-jâo pʉŋ jà-rəən nai prá-sàat-sà-nǎa kɔ̌ɔŋ prá-sàat-sà-daa,',
                 'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
             },
             # ‼ CHECK [IMG_0497.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
@@ -60920,7 +60923,7 @@ CHANTS = [
                 'pali': 'พุทธัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,',
                 'pali_roman': 'Buddhaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,',
                 'thai': 'ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระพุทธเจ้า ได้ขวนขวายบุญใด ในบัดนี้,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo pûu wâi yùu sʉ̂ŋ prá-pút-tá-jâo dâai kǔan-kwǎai bun dai nai bàt-níi,',
                 'english': 'Whatever merit I have gained here in revering the Buddha —',
             },
             {
@@ -60928,7 +60931,7 @@ CHANTS = [
                 'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
                 'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
                 'thai': 'อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.',
-                'paiboon': '',
+                'paiboon': 'an-dtà-raai táŋ-bpuaŋ yàa dâai mii gɛ̀ɛ kâa-pá-jâo dûay dèet hɛ̀ŋ bun nán.',
                 'english': 'by the power of it, may all obstacles for me come to nothing.',
             },
             # ‼ CHECK [IMG_0498.PNG]: THE RUBRIC (กราบพร้อมกับหมอบลงว่า) IS
@@ -60949,7 +60952,7 @@ CHANTS = [
                 'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
                 'pali_roman': 'Kāyena vācāya va cetasā vā,',
                 'thai': 'ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,',
-                'paiboon': '',
+                'paiboon': 'dûay gaai gɔ̂ dii dûay waa-jaa gɔ̂ dii dûay jai gɔ̂ dii,',
                 'english': 'By body, by speech, or by mind,',
             },
             {
@@ -60957,7 +60960,7 @@ CHANTS = [
                 'pali': 'พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง,',
                 'pali_roman': 'Buddhe kukammaṃ pakataṃ mayā yaṃ,',
                 'thai': 'กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้วในพระพุทธเจ้า,',
-                'paiboon': '',
+                'paiboon': 'gam nâa dtì-dtian an dai tîi kâa-pá-jâo grà-tam lɛ́ɛo nai prá-pút-tá-jâo,',
                 'english': 'whatever wrong has been done by me towards the Buddha —',
             },
             {
@@ -60965,7 +60968,7 @@ CHANTS = [
                 'pali': 'พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง,',
                 'pali_roman': 'Buddho paṭiggaṇhatu accayantaṃ,',
                 'thai': 'ขอพระพุทธเจ้า จงงดซึ่งโทษล่วงเกินอันนั้น,',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ prá-pút-tá-jâo joŋ ŋót sʉ̂ŋ tôot lûaŋ-gəən an nán,',
                 'english': 'may the Buddha accept that transgression,',
             },
             # ‼ CHECK [IMG_0498.PNG]: ⚠ THE LAST LINE ENDS ON A COMMA — วะ
@@ -60980,7 +60983,7 @@ CHANTS = [
                 'pali': 'กาลันตะเร สังวะริตุง วะ พุทเธ,',
                 'pali_roman': 'Kālantare saṃvarituṃ va buddhe,',
                 'thai': 'เพื่อการสำรวมระวัง ในพระพุทธเจ้า ในกาลต่อไป.',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a gaan sǎm-ruam rá-waŋ nai prá-pút-tá-jâo nai gaan dtɔ̀ɔ bpai.',
                 'english': 'that in time to come I may be restrained towards the Buddha.',
             },
         ],
@@ -61048,7 +61051,7 @@ CHANTS = [
                 'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรม เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'prá-tam bpen sìŋ tîi prá-pûu-mii-prá-pâak-jâo dâai dtràt wái dii lɛ́ɛo,',
                 'english': 'The Dhamma is well proclaimed by the Blessed One,',
             },
             {
@@ -61056,7 +61059,7 @@ CHANTS = [
                 'pali': 'สันทิฏฐิโก,',
                 'pali_roman': 'Sandiṭṭhiko,',
                 'thai': 'เป็นสิ่งที่ผู้ศึกษาและปฏิบัติ พึงเห็นได้ด้วยตนเอง,',
-                'paiboon': '',
+                'paiboon': 'bpen sìŋ tîi pûu sʉ̀k-sǎa lɛ́ bpà-dtì-bàt pʉŋ hěn dâai dûay dton-eeŋ,',
                 'english': 'visible here and now,',
             },
             {
@@ -61064,7 +61067,7 @@ CHANTS = [
                 'pali': 'อะกาลิโก,',
                 'pali_roman': 'Akāliko,',
                 'thai': 'เป็นสิ่งที่ปฏิบัติได้ และให้ผลได้ ไม่จำกัดกาล,',
-                'paiboon': '',
+                'paiboon': 'bpen sìŋ tîi bpà-dtì-bàt dâai lɛ́ hâi pǒn dâai mâi jam-gàt gaan,',
                 'english': 'timeless,',
             },
             {
@@ -61072,7 +61075,7 @@ CHANTS = [
                 'pali': 'เอหิปัสสิโก,',
                 'pali_roman': 'Ehipassiko,',
                 'thai': 'เป็นสิ่งที่ควรกล่าวกะผู้อื่นว่า ท่านจงมาดูเถิด,',
-                'paiboon': '',
+                'paiboon': 'bpen sìŋ tîi kuan glàao gà pûu ʉ̀ʉn wâa tâan joŋ maa duu tə̀ət,',
                 'english': 'inviting all to come and see,',
             },
             {
@@ -61080,7 +61083,7 @@ CHANTS = [
                 'pali': 'โอปะนะยิโก,',
                 'pali_roman': 'Opanayiko,',
                 'thai': 'เป็นสิ่งที่ควรน้อมเข้ามาใส่ตัว,',
-                'paiboon': '',
+                'paiboon': 'bpen sìŋ tîi kuan nɔ́ɔm kâo maa sài dtua,',
                 'english': 'leading onwards,',
             },
             {
@@ -61088,7 +61091,7 @@ CHANTS = [
                 'pali': 'ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
                 'pali_roman': 'Paccattaṃ veditabbo viññūhīti.',
                 'thai': 'เป็นสิ่งที่ผู้รู้ก็รู้ได้เฉพาะตน ดังนี้.',
-                'paiboon': '',
+                'paiboon': 'bpen sìŋ tîi pûu-rúu gɔ̂ rúu dâai chà-pɔ́ dton daŋ-níi.',
                 'english': 'to be known each for himself by the wise.',
             },
         ],
@@ -61168,7 +61171,7 @@ CHANTS = [
                 'pali': 'โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
                 'pali_roman': 'Yo so bhagavā arahaṃ sammāsambuddho,',
                 'thai': 'พระผู้มีพระภาคเจ้านั้น พระองค์ใด, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
-                'paiboon': '',
+                'paiboon': 'prá-pûu-mii-prá-pâak-jâo nán, prá-oŋ dai, bpen prá-à-rá-hǎn, dàp pləəŋ gì-lèet pləəŋ túk sîn-chəəŋ, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
                 'english': 'That Blessed One, whoever he is, is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
             },
             {
@@ -61176,7 +61179,7 @@ CHANTS = [
                 'pali': 'ส๎วากขาโต เยนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
                 'thai': 'พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า พระองค์ใด, ตรัสไว้ดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, dtràt wái dii lɛ́ɛo,',
                 'english': 'The Dhamma is the teaching well proclaimed by that Blessed One,',
             },
             {
@@ -61184,7 +61187,7 @@ CHANTS = [
                 'pali': 'สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Supaṭipanno yassa bhagavato sāvakasaṅgho,',
                 'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า พระองค์ใด, ปฏิบัติดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'prá-sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, bpà-dtì-bàt dii lɛ́ɛo,',
                 'english': "The Sangha of that Blessed One's disciples has practised well,",
             },
             {
@@ -61192,7 +61195,7 @@ CHANTS = [
                 'pali': 'ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง, อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,',
                 'pali_roman': 'Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ, imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,',
                 'thai': 'ข้าพเจ้าทั้งหลาย, ขอบูชาอย่างยิ่ง, ซึ่งพระผู้มีพระภาคเจ้าพระองค์นั้น, พร้อมทั้งพระธรรมและพระสงฆ์, ด้วยเครื่องสักการะทั้งหลายเหล่านี้, อันยกขึ้นตามสมควรแล้วอย่างไร,',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo táŋ-lǎai, kɔ̌ɔ buu-chaa yàaŋ-yîŋ, sʉ̂ŋ prá-pûu-mii-prá-pâak-jâo prá-oŋ nán, prɔ́ɔm táŋ prá-tam lɛ́ prá-sǒŋ, dûay krʉ̂aŋ sàk-gaa-rá táŋ-lǎai lào níi, an yók kʉ̂n dtaam sǒm-kuan lɛ́ɛo yàaŋ-rai,',
                 'english': 'We pay the highest homage to that Blessed One, together with the Dhamma and the Sangha, with these offerings raised up as is fitting,',
             },
             {
@@ -61200,7 +61203,7 @@ CHANTS = [
                 'pali': 'สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,',
                 'pali_roman': 'Sādhu no bhante bhagavā suciraparinibbutopi,',
                 'thai': 'ข้าแต่พระองค์ผู้เจริญ, พระผู้มีพระภาคเจ้าแม้ปรินิพพานนานแล้ว, ทรงสร้างคุณอันสำเร็จประโยชน์ไว้แก่ข้าพเจ้าทั้งหลาย,',
-                'paiboon': '',
+                'paiboon': 'kâa-dtɛ̀ɛ prá-oŋ pûu-jà-rəən, prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo, soŋ sâaŋ kun an sǎm-rèt bprà-yòot wái gɛ̀ɛ kâa-pá-jâo táŋ-lǎai,',
                 'english': 'Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,',
             },
             {
@@ -61208,7 +61211,7 @@ CHANTS = [
                 'pali': 'ปัจฉิมาชะนะตานุกัมปะมานะสา,',
                 'pali_roman': 'Pacchimājanatānukampamānasā,',
                 'thai': 'ทรงมีพระหฤทัยอนุเคราะห์แก่พวกข้าพเจ้า, อันเป็นชนรุ่นหลัง,',
-                'paiboon': '',
+                'paiboon': 'soŋ mii prá-há-rʉ́-tai à-nú-krɔ́ gɛ̀ɛ pûak kâa-pá-jâo, an bpen chon rûn-lǎŋ,',
                 'english': 'whose heart is compassionate towards us, who are of a later generation,',
             },
             {
@@ -61216,7 +61219,7 @@ CHANTS = [
                 'pali': 'อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,',
                 'pali_roman': 'Ime sakkāre duggatapaṇṇākārabhūte paṭiggaṇhātu,',
                 'thai': 'ขอพระผู้มีพระภาคเจ้า จงรับเครื่องสักการะ, อันเป็นบรรณาการของคนยากทั้งหลายเหล่านี้,',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ prá-pûu-mii-prá-pâak-jâo joŋ ráp krʉ̂aŋ sàk-gaa-rá, an bpen ban-naa-gaan kɔ̌ɔŋ kon yâak táŋ-lǎai lào níi,',
                 'english': 'may the Blessed One accept these offerings, which are the poor gifts of the needy,',
             },
             {
@@ -61225,7 +61228,7 @@ CHANTS = [
                 'pali': 'อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.',
                 'pali_roman': 'Amhākaṃ dīgharattaṃ hitāya sukhāya.',
                 'thai': 'เพื่อประโยชน์และความสุข แก่ข้าพเจ้าทั้งหลาย, ตลอดกาลนาน เทอญ.',
-                'paiboon': '',
+                'paiboon': 'pʉ̂a bprà-yòot lɛ́ kwaam-sùk gɛ̀ɛ kâa-pá-jâo táŋ-lǎai, dtà-lɔ̀ɔt gaan naan təən.',
                 'english': 'for our welfare and happiness, for a long time to come.',
             },
         ],
@@ -61303,7 +61306,7 @@ CHANTS = [
                 'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา,',
                 'pali_roman': 'Arahaṃ sammāsambuddho bhagavā,',
                 'thai': 'พระผู้มีพระภาคเจ้า, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
-                'paiboon': '',
+                'paiboon': 'prá-pûu-mii-prá-pâak-jâo, bpen prá-à-rá-hǎn, dàp pləəŋ gì-lèet pləəŋ túk sîn-chəəŋ, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
                 'english': 'The Blessed One is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
             },
             {
@@ -61311,7 +61314,7 @@ CHANTS = [
                 'pali': 'พุทธัง ภะคะวันตัง อะภิวาเทมิ.',
                 'pali_roman': 'Buddhaṃ bhagavantaṃ abhivādemi.',
                 'thai': 'ข้าพเจ้าอภิวาทพระผู้มีพระภาคเจ้า, ผู้รู้ ผู้ตื่น ผู้เบิกบาน.',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo à-pí-wâat prá-pûu-mii-prá-pâak-jâo, pûu-rúu pûu-dtʉ̀ʉn pûu-bə̀ək-baan.',
                 'english': 'I bow low to the Blessed One, the one who knows, who is awake, who has blossomed.',
             },
             # ‼ CHECK [IMG_0495.PNG]: ⚠ THE THREE (กราบ) MARKERS ARE ENTERED
@@ -61332,7 +61335,7 @@ CHANTS = [
                 'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo, dtràt wái dii lɛ́ɛo,',
                 'english': 'The Dhamma is the teaching well proclaimed by the Blessed One,',
             },
             {
@@ -61340,7 +61343,7 @@ CHANTS = [
                 'pali': 'ธัมมัง นะมัสสามิ.',
                 'pali_roman': 'Dhammaṃ namassāmi.',
                 'thai': 'ข้าพเจ้านมัสการพระธรรม.',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo ná-mát-sà-gaan prá-tam.',
                 'english': 'I pay homage to the Dhamma.',
             },
             {
@@ -61356,7 +61359,7 @@ CHANTS = [
                 'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
                 'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
                 'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า, ปฏิบัติดีแล้ว,',
-                'paiboon': '',
+                'paiboon': 'prá-sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo, bpà-dtì-bàt dii lɛ́ɛo,',
                 'english': "The Sangha of the Blessed One's disciples has practised well,",
             },
             {
@@ -61364,7 +61367,7 @@ CHANTS = [
                 'pali': 'สังฆัง นะมามิ.',
                 'pali_roman': 'Saṅghaṃ namāmi.',
                 'thai': 'ข้าพเจ้านอบน้อมพระสงฆ์.',
-                'paiboon': '',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-sǒŋ.',
                 'english': 'I bow to the Sangha.',
             },
             {
@@ -61429,7 +61432,7 @@ CHANTS = [
                 'pali': 'นะโม ตัสสะ ภะคะวะโต,',
                 'pali_roman': 'Namo tassa bhagavato,',
                 'thai': 'ขอนอบน้อมแด่พระผู้มีพระภาคเจ้า พระองค์นั้น,',
-                'paiboon': '',
+                'paiboon': 'kɔ̌ɔ nɔ̂ɔp-nɔ́ɔm dɛ̀ɛ prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,',
                 'english': 'Homage to the Blessed One,',
             },
             {
@@ -61437,7 +61440,7 @@ CHANTS = [
                 'pali': 'อะระหะโต,',
                 'pali_roman': 'Arahato,',
                 'thai': 'ซึ่งเป็นผู้ไกลจากกิเลส,',
-                'paiboon': '',
+                'paiboon': 'sʉ̂ŋ bpen pûu glai jàak gì-lèet,',
                 'english': 'the worthy one,',
             },
             {
@@ -61445,7 +61448,7 @@ CHANTS = [
                 'pali': 'สัมมาสัมพุทธัสสะ.',
                 'pali_roman': 'Sammāsambuddhassa.',
                 'thai': 'ตรัสรู้ชอบได้โดยพระองค์เอง.',
-                'paiboon': '',
+                'paiboon': 'dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ.',
                 'english': 'perfectly enlightened by himself.',
             },
             # ‼ CHECK [IMG_0495.PNG]: ⚠ THE REPEAT IS A MARKER HERE, NOT A
