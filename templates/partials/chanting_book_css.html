@@ -334,7 +334,20 @@
     .chant-book.hide-english    .layer-english { display: none; }
 
 
+    /* Verse in two halves, left and right (chanting_layout.py). */
+    .half-pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: 1.5rem; }
+    .half-pair .layer { margin: 0; }
+    .verse-label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.75; }
+    .verse-meaning { margin: 0.25rem 0 1.25rem; padding-left: 0.75rem; border-left: 3px solid rgba(0,0,0,0.12); }
+    .verse-meaning p { margin: 0 0 0.5rem; }
+    .chant-introduction p { font-style: italic; }
     @media (max-width: 600px) {
+        /* Stacked on a phone: left half and its romanisation, then the right. */
+        .half-pair { grid-template-columns: 1fr; }
+        .half-pair > :nth-child(1) { order: 1; }
+        .half-pair > :nth-child(3) { order: 2; }
+        .half-pair > :nth-child(2) { order: 3; margin-top: 0.3rem; }
+        .half-pair > :nth-child(4) { order: 4; }
         .layer-pali { font-size: 1.2rem; line-height: 1.95; }
         /* The grid already collapses to one column here; just tighten it. */
         .layer-options { gap: 0.85rem; }

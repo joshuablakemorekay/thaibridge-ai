@@ -30,6 +30,10 @@
             </p>
             {% endif %}
 
+            {% if chant.introduction %}
+            <div class="chant-introduction">{% for p in chant.introduction %}<p>{{ p }}</p>{% endfor %}</div>
+            {% endif %}
+
             <!-- Why it was taught, and what it means. Headings come from
                  CHANT_SECTIONS so every chant shows the same ones in the
                  same order. -->
@@ -72,13 +76,28 @@
         </div>
         {% endif %}
 
+        {# Verse is set in two halves, left and right, as Ajarn Owen's book
+           does and the printed book now does (chanting_layout.py decides
+           which lines are verse). On a phone the halves stack. #}
+        {% set verse_chant = chant|is_verse_chant %}
         {% for verse in chant.verses %}
         {% if verse.page %}<span class="verse-page">page {{ verse.page }}</span>{% endif %}
         {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
+        {% set rows = verse|verse_halves if verse_chant else None %}
         <div class="verse">
             <span class="verse-number">{{ verse.number }}</span>
+            {% if verse.label %}<span class="verse-label">{{ verse.label }}</span>{% endif %}
+            {% if rows %}
+            {% for row in rows %}
+            <div class="half-pair">
+                <p class="layer layer-pali">{{ row[0] }}</p><p class="layer layer-pali">{{ row[1] }}</p>
+                <p class="layer layer-pali_roman">{{ row[2] }}</p><p class="layer layer-pali_roman">{{ row[3] }}</p>
+            </div>
+            {% endfor %}
+            {% else %}
             <p class="layer layer-pali">{{ verse.pali }}</p>
             {% if verse.pali_roman %}<p class="layer layer-pali_roman">{{ verse.pali_roman }}</p>{% endif %}
+            {% endif %}
             {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
@@ -100,7 +119,11 @@
            view, because without it the Mahāsatipaṭṭhāna reads by title as one
            undivided run of prose — the book's own divisions being exactly
            these lines. #}
-        {% if verse.section_end %}
+        {# Ajarn Owen prints an English meaning under a run of verses. #}
+        {% if verse.meaning_after %}
+        <div class="verse-meaning">{% for p in verse.meaning_after %}<p>{{ p }}</p>{% endfor %}</div>
+        {% endif %}
+                {% if verse.section_end %}
         <h4 class="verse-section-end">{{ verse.section_end }}</h4>
         {% endif %}
         {# The outer close, printed larger, where two nested sections end at

@@ -25,7 +25,20 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import chanting  # noqa: E402
 
 
+import chanting_owen  # noqa: E402
+
 SAMPLE = chanting.CHANTS[0]
+
+
+def shows_line(verse, html):
+    """The verse's Pali is on the page: whole, or in its verse halves.
+
+    Verse is set as two half-lines, left and right (chanting_layout.py), so
+    a verse line no longer appears as one string; every word still does.
+    """
+    if verse['pali'] in html:
+        return True
+    return all(word in html for word in verse['pali'].split())
 
 
 def test_a_chant_has_a_page_of_its_own(unlocked_client):
@@ -34,7 +47,7 @@ def test_a_chant_has_a_page_of_its_own(unlocked_client):
 
     assert SAMPLE['title_thai'] in page
     # The chant itself, not just its title and summary.
-    assert SAMPLE['verses'][0]['pali'] in page
+    assert shows_line(SAMPLE['verses'][0], page)
     assert 'chant-body' in page
 
 
@@ -54,7 +67,7 @@ def test_the_fragment_is_a_chant_and_not_a_whole_page(unlocked_client):
         f"/chanting/chant/{SAMPLE['id']}/body").get_data(as_text=True)
 
     assert fragment.lstrip().startswith('<div class="chant-body">')
-    assert SAMPLE['verses'][0]['pali'] in fragment
+    assert shows_line(SAMPLE['verses'][0], fragment)
     for whole_page_marker in ('<html', '<nav', '<body'):
         assert whole_page_marker not in fragment, (
             f'the fragment carries {whole_page_marker} — that is a page, '
@@ -66,10 +79,12 @@ def test_the_index_no_longer_carries_the_chants(unlocked_client):
     index = unlocked_client.get('/chanting').get_data(as_text=True)
 
     # The cards are all there...
-    assert index.count('class="chant-card"') == len(chanting.CHANTS)
+    assert index.count('class="chant-card"') == (
+        len(chanting.CHANTS) + len(chanting_owen.APP_CHANTS))
     # ...and every one of them knows where to get its chant.
     # (the attribute as written on a card, not the script that reads it)
-    assert index.count('data-chant-url="') == len(chanting.CHANTS)
+    assert index.count('data-chant-url="') == (
+        len(chanting.CHANTS) + len(chanting_owen.APP_CHANTS))
     # ...but the words are not in the page.
     assert SAMPLE['verses'][0]['pali'] not in index
     assert 'class="verse"' not in index
@@ -156,7 +171,7 @@ def test_both_chant_routes_render_the_same_words(unlocked_client, route):
     served = unlocked_client.get(
         route.format(chant['id'])).get_data(as_text=True)
 
-    assert chant['verses'][0]['pali'] in served
+    assert shows_line(chant['verses'][0], served)
 
 
 def test_the_note_on_the_english_is_said_once_on_the_front_page(unlocked_client):
@@ -171,3 +186,22 @@ def test_a_chant_page_carries_no_note_of_its_own(unlocked_client):
     page = unlocked_client.get(f"/chanting/chant/{chant['id']}").get_data(as_text=True)
     assert 'A note on this chant' not in page
     assert 'working translation' not in page
+
+
+def test_ajarn_owens_chants_have_their_own_section(unlocked_client):
+    """Shown in the app, but apart from the temple book, never mixed in."""
+    index = unlocked_client.get('/chanting').get_data(as_text=True)
+    assert 'id="from-ajarn-owen"' in index
+    for chant in chanting_owen.APP_CHANTS:
+        assert chanting.get_chant(chant['id']) is None
+        page = unlocked_client.get(f"/chanting/chant/{chant['id']}")
+        assert page.status_code == 200
+        assert shows_line(chant['verses'][0], page.get_data(as_text=True))
+
+
+def test_verse_is_set_in_halves_and_prose_is_not(unlocked_client):
+    """The Tilakkhaṇādigāthā splits; the precepts (prose) do not."""
+    verse = unlocked_client.get('/chanting/chant/tilakkhanadi-gatha/body').get_data(as_text=True)
+    prose = unlocked_client.get('/chanting/chant/ubosot-sila/body').get_data(as_text=True)
+    assert 'class="half-pair"' in verse
+    assert 'class="half-pair"' not in prose
