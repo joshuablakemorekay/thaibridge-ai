@@ -31,10 +31,12 @@ import argparse
 import collections
 import datetime
 import os
+import re
 import shutil
 import subprocess
 import sys
 import tempfile
+import unicodedata
 
 import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader
@@ -108,8 +110,34 @@ def commentary(chant, key):
     return chant.get(key) or []
 
 
-def render_html(template, parts, contents_pages, proof):
+# The printed book writes a final ย as i (dûai, nɔ́ɔi, ləəi), where the app
+# writes y (dûay, nɔ́ɔy, ləəy). Josh's choice for the book, 2026-11-06; its
+# pronunciation guide explains both. Done here, at print time, so the data
+# and the app keep one spelling. ai/aai never had a y, and a word with no
+# tone mark or ɛ ɔ ə ʉ ŋ (English, Pali IAST) is never touched.
+_TONES = '̀́̂̌'
+_WORD = re.compile('[a-zA-ZɛɔəʉŋÀ-ɏḀ-ỿ̀-ͯ]+')
+_FINAL_Y = re.compile('(u[%s]?a|ʉ[%s]?a|o[%s]?o?|ɔ[%s]?ɔ?|ə[%s]?ə?|u[%s]?)y$' % ((_TONES,) * 6))
+_THAIISH = re.compile('[%sɛɔəʉŋ]' % _TONES)
+_PLAIN_FINAL_Y = {'dooy', 'kuy', 'rooy', 'ooy'}
+
+
+def book_spelling(text):
+    """ThaiBridge Spelling as the printed book shows it: final ย as i."""
+    if not text:
+        return text
+
+    def swap(m):
+        word = unicodedata.normalize('NFD', m.group(0))
+        if _FINAL_Y.search(word) and (_THAIISH.search(word) or word.lower() in _PLAIN_FINAL_Y):
+            return m.group(0)[:-1] + 'i'
+        return m.group(0)
+    return _WORD.sub(swap, text)
+
+
+def render_html(template, parts, contents_pages, proof, pad_blank=False):
     return template.render(
+        pad_blank=pad_blank,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         book=chanting.BOOK,
         how=chanting.HOW_TO_USE,
@@ -213,6 +241,7 @@ def main():
     chrome = find_chrome()
     env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')),
                       autoescape=True)
+    env.filters['book_spelling'] = book_spelling
     template = env.get_template('print/chanting_book_print.html')
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
     proof = not args.final
@@ -235,10 +264,14 @@ def main():
 
         print('Pass 2: filling in the contents page numbers...', flush=True)
         numbers = {cid: str(n) for cid, n in pages.items()}
-        print_pdf(chrome, render_html(template, parts, numbers, proof), args.out, workdir)
+        # Lulu prints only an even number of pages. An odd book gets one blank
+        # page before the credit page, which keeps the credit on the last
+        # page and moves no chant, so the contents numbers still hold.
+        pad = bool(total1 % 2)
+        print_pdf(chrome, render_html(template, parts, numbers, proof, pad), args.out, workdir)
         check, total2 = find_pages(args.out, chant_ids)
 
-    if check != pages or total1 != total2:
+    if check != pages or total1 + pad != total2:
         sys.exit('The second pass paginated differently from the first — '
                  'the contents numbers cannot be trusted. Nothing was fixed up.')
 
@@ -249,8 +282,8 @@ def main():
     if long_left:
         print(f'  {long_left} chants still print their FULL commentary — '
               'no short version in chanting_print_short.py yet.')
-    if total2 % 2:
-        print('  Note: odd page count; most printers add a blank page at the end.')
+    if pad:
+        print('  Added one blank page before the credit page to make the count even.')
 
 
 if __name__ == '__main__':

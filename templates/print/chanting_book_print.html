@@ -97,6 +97,7 @@
         padding-top: 90mm;
         font-size: 11pt;
     }
+    .blank-page { page: front; break-before: page; height: 1px; }
     .credit-page p { margin: 0 0 2.5mm; }
     .credit-page .credit-name { font-size: 16pt; font-weight: 600; margin: 3mm 0 4mm; }
     .credit-page .credit-app { margin-top: 22mm; font-size: 10pt; line-height: 1.6; }
@@ -104,6 +105,25 @@
     .layer-key { margin: 3mm 0 0; padding: 0; list-style: none; }
     .layer-key li { margin: 0 0 2.5mm; }
     .layer-key .sample { display: block; }
+
+    /* The publishing page: the back of the title page. */
+    .imprint { text-align: center; padding-top: 40mm; font-size: 10pt; }
+    .imprint p { margin: 0 auto 4mm; max-width: 120mm; line-height: 1.55; }
+    .imprint .i-title { font-size: 12pt; font-weight: 600; }
+    .imprint .i-gap { margin-top: 10mm; }
+    .imprint .i-quote { font-size: 9.5pt; }
+    .imprint .i-cite { font-size: 8.5pt; color: #444; }
+    .imprint .i-small { margin-top: 12mm; font-size: 8pt; color: #333; }
+
+    /* The pronunciation guide. */
+    .guide h2 { font-size: 12pt; font-weight: 600; margin: 7mm 0 2mm; break-after: avoid; }
+    .guide h3 { font-size: 10pt; font-weight: 600; margin: 4mm 0 1.5mm; break-after: avoid; }
+    .guide p, .guide li { font-size: 9.5pt; }
+    .g-list { margin: 0 0 2.5mm; padding-left: 5mm; max-width: 140mm; }
+    .g-list li { margin: 0 0 1.2mm; }
+    .g-table { border-collapse: collapse; margin: 1mm 0 3mm; font-size: 9pt; break-inside: avoid; }
+    .g-table th, .g-table td { border: 1px solid #999; padding: 1mm 3mm; text-align: left; }
+    .g-table th { background: #eee; font-weight: 600; }
 
     /* Contents, in two columns like the chants. */
     .contents { break-after: page; }
@@ -222,7 +242,7 @@
     {% if v.pali %}<p class="l-pali">{{ v.pali }}</p>{% endif %}
     {% if v.pali_roman %}<p class="l-pali_roman">{{ v.pali_roman }}</p>{% endif %}
     {% if v.thai %}<p class="l-thai">{{ v.thai }}</p>{% endif %}
-    {% if v.paiboon %}<p class="l-paiboon">{{ v.paiboon }}</p>{% endif %}
+    {% if v.paiboon %}<p class="l-paiboon">{{ v.paiboon|book_spelling }}</p>{% endif %}
     {% if v.english %}<p class="l-english">{{ v.english }}</p>{% endif %}
 {% endmacro %}
 
@@ -237,6 +257,34 @@
     </div>
     <div class="t-study">ThaiBridge AI study edition — with romanisation, translation and commentary</div>
     {% if proof %}<div class="t-proof">Proof copy · {{ built_on }} · not for distribution</div>{% endif %}
+</section>
+
+{# ── Publishing page ── the back of the title page. Publisher is Pra Joshua
+   himself, not SMOALD: this is a free Dhamma book, not a business product
+   (Josh, 2026-11-06). Add a "by kind permission of Wat Mahathat UK" line
+   only once that permission has actually been given. #}
+<section class="front imprint">
+    <p class="i-title">{{ book.title_english }}<br>
+    <span class="thai">{{ book.title_thai }}</span></p>
+    <p>ThaiBridge AI study edition, with romanisation,<br>translation and commentary</p>
+
+    <p class="i-gap">Prepared and published by<br>
+    <strong>Pra Joshua Vajira Panyo</strong></p>
+
+    <p>Based on the chanting book of<br>Wat Mahathat United Kingdom</p>
+
+    <p>First edition, 2026</p>
+
+    <p>Read the Digital Chanting Book online:<br><strong>thaibridge-ai.smoald.com</strong></p>
+
+    <p class="i-gap"><strong>For free distribution, not for sale.</strong></p>
+    <p class="i-quote"><em>Sabbadānaṃ dhammadānaṃ jināti</em><br>
+    The gift of the Dhamma excels all gifts.<br>
+    <span class="i-cite">Dhammapada 354</span></p>
+
+    <p class="i-small">The Pali and Thai texts are those of the Wat Mahathat United
+    Kingdom chanting book. The romanisation, English translations and
+    commentary in this edition © 2026 Pra Joshua Vajira Panyo.</p>
 </section>
 
 {# ── Preface ── Pra Joshua's own words, as he wrote them (only the
@@ -283,6 +331,111 @@
     </ul>
 </section>
 
+{# ── A guide to pronunciation ── Pali first, then ThaiBridge Spelling.
+   The book prints a final ย as i and a final ว as o (Josh, 2026-11-06),
+   though the app writes dûay; the guide says so, so neither surprises. #}
+<section class="front guide">
+    <h1 class="front-heading">A guide to pronunciation</h1>
+    <p>Each verse in this book can be read in two romanised forms: the Pali in
+    the Latin alphabet, and the Thai translation in ThaiBridge Spelling. This
+    guide covers both.</p>
+
+    <h2>Pali</h2>
+    <p>Pali is the language in which the Theravāda teachings were recorded and
+    preserved. It is what is chanted. Most letters sound as you would expect;
+    these are the ones to know.</p>
+
+    <h3>Vowels</h3>
+    <table class="g-table">
+        <tr><th>Short</th><th>As in</th><th>Long</th><th>As in</th></tr>
+        <tr><td>a</td><td><em>about</em></td><td>ā</td><td><em>father</em></td></tr>
+        <tr><td>i</td><td><em>hit</em></td><td>ī</td><td><em>machine</em></td></tr>
+        <tr><td>u</td><td><em>put</em></td><td>ū</td><td><em>rule</em></td></tr>
+        <tr><td></td><td></td><td>e</td><td><em>grey</em></td></tr>
+        <tr><td></td><td></td><td>o</td><td><em>go</em></td></tr>
+    </table>
+    <p>A long vowel is held about twice as long as a short one. <em>e</em> and
+    <em>o</em> are short before a double consonant: <em>mettā</em>,
+    <em>sotthi</em>.</p>
+
+    <h3>Consonants</h3>
+    <ul class="g-list">
+        <li><strong>c</strong> is <em>ch</em> as in <em>church</em>, never k or s.</li>
+        <li><strong>ñ</strong> is <em>ny</em> as in <em>canyon</em>.</li>
+        <li><strong>ṅ</strong> is <em>ng</em> as in <em>sing</em>; <strong>ṃ</strong> is a nasal hum at the end of a syllable, said <em>ng</em> in Thai temples.</li>
+        <li><strong>v</strong> is softer than English v, close to w.</li>
+        <li><strong>g</strong> is always hard, as in <em>go</em>; <strong>s</strong> always as in <em>sun</em>.</li>
+        <li><strong>kh, gh, ch, jh, ṭh, ḍh, th, dh, ph, bh</strong> are single sounds with a puff of breath. <strong>th</strong> is never as in <em>the</em>, and <strong>ph</strong> is never f.</li>
+        <li><strong>ṭ, ṭh, ḍ, ḍh, ṇ, ḷ</strong> are said with the tip of the tongue curled back.</li>
+        <li>A double consonant is said twice, or held: <em>bud-dha</em>, <em>dham-ma</em>.</li>
+    </ul>
+
+    <h3>Pali as it is chanted in a Thai temple</h3>
+    <p>The line in Thai script is what is chanted, and Thai monks chant Pali
+    with Thai sounds. What you hear will often differ from the romanised line,
+    which shows the classical spelling. The commonest differences:</p>
+    <ul class="g-list">
+        <li>A final <strong>ṃ</strong> is said <em>ng</em>: <em>buddhaṃ</em> is chanted <em>put-tang</em>.</li>
+        <li><strong>bh, dh, gh</strong> are said p, t, k with breath: <em>dhammaṃ</em> is <em>tam-mang</em>.</li>
+        <li><strong>v</strong> is said w; the curled-back letters are said like plain t, d, n, l.</li>
+    </ul>
+    <p>When in doubt, follow the Thai-script line and the voices around you.</p>
+
+    <h2>ThaiBridge Spelling</h2>
+    <p>The Thai translations are given in ThaiBridge Spelling, the system
+    ThaiBridge AI uses to teach Thai. It is based on Paiboon+ by Benjawan
+    Poomsan Becker (Paiboon Publishing).</p>
+
+    <h3>Vowels</h3>
+    <p>A doubled letter is a long vowel: <em>a</em> / <em>aa</em>,
+    <em>i</em> / <em>ii</em>, <em>u</em> / <em>uu</em>, <em>e</em> /
+    <em>ee</em>, <em>o</em> / <em>oo</em>. Four letters are not in the
+    English alphabet:</p>
+    <table class="g-table">
+        <tr><th>Letter</th><th>Sound</th><th>Example</th></tr>
+        <tr><td class="spelling">ɔ</td><td>as in <em>law</em></td><td><span class="thai">ขอ</span> <span class="spelling">kɔ̌ɔ</span>, to ask</td></tr>
+        <tr><td class="spelling">ɛ</td><td>as in <em>bed</em>, held open</td><td><span class="thai">แม่</span> <span class="spelling">mɛ̂ɛ</span>, mother</td></tr>
+        <tr><td class="spelling">ə</td><td>as in <em>her</em>, with no r</td><td><span class="thai">เดิน</span> <span class="spelling">dəən</span>, to walk</td></tr>
+        <tr><td class="spelling">ʉ</td><td><em>oo</em> with the lips spread, not rounded</td><td><span class="thai">มือ</span> <span class="spelling">mʉʉ</span>, hand</td></tr>
+    </table>
+    <p><span class="spelling">ia</span>, <span class="spelling">ua</span> and
+    <span class="spelling">ʉa</span> glide from one vowel into the next.</p>
+
+    <h3>Consonants</h3>
+    <ul class="g-list">
+        <li><strong class="spelling">k, p, t, ch</strong> are breathy, as in <em>kit, pit, tip, chip</em>.</li>
+        <li><strong class="spelling">g, bp, dt, j</strong> have no breath: <span class="spelling">g</span> like the k in <em>skin</em>, <span class="spelling">bp</span> like the p in <em>spin</em>, <span class="spelling">dt</span> like the t in <em>stop</em>.</li>
+        <li><strong class="spelling">ŋ</strong> is <em>ng</em> as in <em>sing</em>, and can begin a syllable: <span class="spelling">ŋaan</span>, work.</li>
+        <li>A final <span class="spelling">k, t, p</span> is stopped, not released.</li>
+    </ul>
+
+    <h3>Endings in i and o (or y and w)</h3>
+    <p>In this book a final <span class="thai">ย</span> is written
+    <span class="spelling">i</span> (<span class="spelling">dûai</span>,
+    <span class="spelling">nɔ́ɔi</span>, <span class="spelling">ləəi</span>) and a
+    final <span class="thai">ว</span> is written <span class="spelling">o</span>
+    (<span class="spelling">lɛ́ɛo</span>, <span class="spelling">kǎao</span>). You
+    will also see these endings written <span class="spelling">y</span> and
+    <span class="spelling">w</span>: the ThaiBridge AI app writes
+    <span class="spelling">dûay</span> and <span class="spelling">nɔ́ɔy</span>,
+    and some systems write <span class="spelling">lɛ́ɛw</span>. They are the same
+    sounds, a short glide to i or to o at the end of the vowel.</p>
+
+    <h3>Tones</h3>
+    <p>Thai has five tones, and the mark over the vowel shows which. Said with a
+    different tone, the same syllable is a different word.</p>
+    <table class="g-table">
+        <tr><th>Mark</th><th>Tone</th><th>Example</th></tr>
+        <tr><td class="spelling">kaa</td><td>mid (no mark): level</td><td><span class="thai">คา</span>, to be stuck</td></tr>
+        <tr><td class="spelling">kàa</td><td>low: level, below your normal voice</td><td><span class="thai">ข่า</span>, galangal</td></tr>
+        <tr><td class="spelling">kâa</td><td>falling: high, dropping</td><td><span class="thai">ค่า</span>, value</td></tr>
+        <tr><td class="spelling">káa</td><td>high: raised</td><td><span class="thai">ค้า</span>, to trade</td></tr>
+        <tr><td class="spelling">kǎa</td><td>rising: low, then up</td><td><span class="thai">ขา</span>, leg</td></tr>
+    </table>
+    <p>A hyphen joins the syllables of one word: <span class="spelling">sà-rá-ná</span>,
+    refuge.</p>
+</section>
+
 {# ── Contents ── #}
 <section class="contents">
     <h1>Contents</h1>
@@ -291,7 +444,7 @@
     {% if part.heading %}<div class="toc-section">{% if part.heading.title %}<span class="thai">{{ part.heading.title }}</span> — {% endif %}{{ part.heading.title_english }}</div>{% endif %}
     {% for chant in part.chants %}
     <div class="toc-entry">
-        <span class="toc-title">{{ chant.title_english or chant.title_pali or chant.title_roman }}<span class="thai">{{ chant.title_thai }}</span></span>
+        <span class="toc-title">{{ chant.title_english or chant.title_pali or chant.title_roman|book_spelling }}<span class="thai">{{ chant.title_thai }}</span></span>
         <span class="toc-dots"></span>
         <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
     </div>
@@ -318,7 +471,7 @@
         {# title_roman is ThaiBridge Spelling for some chants and romanised
            Pali for others. Pali's dotted and barred letters never occur in
            the spelling, so a title without any is set as spelling. #}
-        {% elif chant.title_roman %}<span class="title-pali{% if not chant.title_roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %} spelling{% endif %}">{{ chant.title_roman }}</span>{% endif %}
+        {% elif chant.title_roman %}<span class="title-pali{% if not chant.title_roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %} spelling{% endif %}">{{ chant.title_roman|book_spelling }}</span>{% endif %}
         {% if chant.title_english %}<span class="title-english">{{ chant.title_english }}</span>{% endif %}
         <div class="meta">
             {% if chant.page_start %}Book page {{ chant.page_start }}{% endif %}
@@ -371,6 +524,7 @@
 {% endfor %}
 
 {# ── Credit, on the last page of the book ── #}
+{% if pad_blank %}<section class="blank-page"></section>{% endif %}
 <section class="credit-page">
     <p>This study edition was prepared by</p>
     <p class="credit-name">Pra Joshua Vajira Panyo</p>
