@@ -50,7 +50,7 @@
      "pali": "สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
      "pali_roman": "Supaṭipanno bhagavato sāvakasaṅgho,",
      "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติดีแล้ว,",
-     "paiboon": "",
+     "paiboon": "sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt dii lɛ́ɛo,",
      "english": "The Sangha of the Blessed One's disciples has practised well,",
      "page": 231
     },
@@ -59,7 +59,7 @@
      "pali": "อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
      "pali_roman": "Ujupaṭipanno bhagavato sāvakasaṅgho,",
      "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติตรงแล้ว,",
-     "paiboon": "",
+     "paiboon": "sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt dtroŋ lɛ́ɛo,",
      "english": "the Sangha of the Blessed One's disciples has practised straightly,"
     },
     {
@@ -67,7 +67,7 @@
      "pali": "ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
      "pali_roman": "Ñāyapaṭipanno bhagavato sāvakasaṅgho,",
      "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติเพื่อรู้ธรรมเป็นเครื่องออกจากทุกข์แล้ว,",
-     "paiboon": "",
+     "paiboon": "sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt pʉ̂a rúu tam bpen krʉ̂aŋ ɔ̀ɔk jàak túk lɛ́ɛo,",
      "english": "the Sangha of the Blessed One's disciples has practised for knowing the Dhamma, the means of release from suffering,"
     },
     {
@@ -75,7 +75,7 @@
      "pali": "สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
      "pali_roman": "Sāmīcipaṭipanno bhagavato sāvakasaṅgho,",
      "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติสมควรแล้ว,",
-     "paiboon": "",
+     "paiboon": "sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt sǒm-kuan lɛ́ɛo,",
      "english": "the Sangha of the Blessed One's disciples has practised fittingly,"
     },
     {
@@ -83,7 +83,7 @@
      "pali": "ยะทิทัง,",
      "pali_roman": "Yadidaṃ,",
      "thai": "ได้แก่บุคคลเหล่านี้ คือ :-",
-     "paiboon": "",
+     "paiboon": "dâai-gɛ̀ɛ bùk-kon lào níi kʉʉ :-",
      "english": "namely, these persons:"
     },
     {
@@ -91,7 +91,7 @@
      "pali": "จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,",
      "pali_roman": "Cattāri purisayugāni aṭṭha purisapuggalā,",
      "thai": "คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,",
-     "paiboon": "",
+     "paiboon": "kûu hɛ̀ŋ bù-rùt sìi kûu, náp riaŋ dtua bù-rùt dâai bpɛ̀ɛt bù-rùt,",
      "english": "four pairs of persons, eight individuals counted singly,"
     },
     {
@@ -99,7 +99,7 @@
      "pali": "เอสะ ภะคะวะโต สาวะกะสังโฆ,",
      "pali_roman": "Esa bhagavato sāvakasaṅgho,",
      "thai": "นั่นแหละ สงฆ์สาวกของพระผู้มีพระภาคเจ้า,",
-     "paiboon": "",
+     "paiboon": "nân lɛ̀ sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo,",
      "english": "that is the Sangha of the Blessed One's disciples —"
     },
     {
@@ -107,7 +107,7 @@
      "pali": "อาหุเนยโย,",
      "pali_roman": "Āhuneyyo,",
      "thai": "เป็นสงฆ์ควรแก่สักการะที่เขานำมาบูชา,",
-     "paiboon": "",
+     "paiboon": "bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo nam maa buu-chaa,",
      "english": "worthy of the offerings people bring,"
     },
     {
@@ -115,7 +115,7 @@
      "pali": "ปาหุเนยโย,",
      "pali_roman": "Pāhuneyyo,",
      "thai": "เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,",
-     "paiboon": "",
+     "paiboon": "bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo jàt wái dtɔ̂ɔn-ráp,",
      "english": "worthy of the offerings people set out in welcome,"
     },
     {
@@ -123,7 +123,7 @@
      "pali": "ทักขิเณยโย,",
      "pali_roman": "Dakkhiṇeyyo,",
      "thai": "เป็นผู้ควรรับทักษิณาทาน,",
-     "paiboon": "",
+     "paiboon": "bpen pûu kuan ráp ták-sì-nǎa-taan,",
      "english": "worthy of gifts given in faith,"
     },
     {
@@ -131,7 +131,7 @@
      "pali": "อัญชะลีกะระณีโย,",
      "pali_roman": "Añjalīkaraṇīyo,",
      "thai": "เป็นผู้ที่บุคคลทั่วไปควรทำอัญชลี,",
-     "paiboon": "",
+     "paiboon": "bpen pûu tîi bùk-kon tûa-bpai kuan tam an-chá-lii,",
      "english": "worthy of reverent salutation by anyone,"
     },
     {
@@ -139,7 +139,7 @@
      "pali": "อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.",
      "pali_roman": "Anuttaraṃ puññakkhettaṃ lokassāti.",
      "thai": "เป็นเนื้อนาบุญของโลก, ไม่มีนาบุญอื่นยิ่งกว่า ดังนี้.",
-     "paiboon": "",
+     "paiboon": "bpen nʉ́a-naa-bun kɔ̌ɔŋ lôok, mâi mii naa-bun ʉ̀ʉn yîŋ gwàa daŋ-níi.",
      "english": "the unsurpassed field of merit for the world — no field of merit is greater,"
     }
    ],

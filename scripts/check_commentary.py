@@ -175,6 +175,39 @@ BOOK_CORRECTIONS = [
 ]
 
 
+# Translation lines given ThaiBridge Spelling on 2026-11-06. Their `paiboon`
+# was empty in the baseline, left so on purpose until a dedicated pass (see
+# the page-306 note in chanting.py). Only `paiboon` on these verses is
+# excused; their Thai, Pali and English are still compared. The two
+# kham-anumothana-kathin lines stay empty: they are instructions, not
+# translations.
+SPELLING_ADDED = {
+    'atita-paccavekkhana-patha-plae': {*range(2, 7), *range(8, 20), *range(21, 26), *range(27, 30)},
+    'buddhabhigiti-plae': {*range(1, 15), *range(16, 20)},
+    'buddhanussati-plae': {*range(1, 12)},
+    'dhammabhigiti-plae': {*range(1, 15), *range(16, 20)},
+    'dhammanussati-plae': {*range(1, 7)},
+    'kham-bucha-phra-ratanattaya-yen-plae': {*range(1, 9)},
+    'kham-la-sikkha': {1},
+    'kham-namatsakan-phra-ratanattaya-yen-plae': {1, 2, 4, 5, 7, 8},
+    'kham-samathan-sin': {*range(1, 9)},
+    'pubbabhaga-namakara-yen-plae': {*range(1, 4)},
+    'sanghabhigiti-plae': {*range(1, 15), *range(16, 20)},
+    'sanghanussati-plae': {*range(1, 13)},
+    'uddissanadhitthana-gatha-plae': {*range(1, 35)},
+}
+
+
+def drop_added_spelling(chant):
+    """Blank `paiboon` on the SPELLING_ADDED verses of one chant dict."""
+    added = SPELLING_ADDED.get(chant.get('id'))
+    if not added or not isinstance(chant.get('verses'), list):
+        return chant
+    verses = [dict(v, paiboon='') if v.get('number') in added else v
+              for v in chant['verses']]
+    return dict(chant, verses=verses)
+
+
 def book_spelling_changes(value):
     """Every deliberate romanisation change since the baseline, applied."""
     value = shorten_diphthongs(value)
@@ -184,6 +217,7 @@ def book_spelling_changes(value):
                                   unicodedata.normalize('NFC', new))
         return value
     if isinstance(value, dict):
+        value = drop_added_spelling(value)
         return {k: book_spelling_changes(v) for k, v in value.items()}
     if isinstance(value, (list, tuple)):
         return type(value)(book_spelling_changes(v) for v in value)

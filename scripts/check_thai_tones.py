@@ -41,7 +41,7 @@ KNOWN_SPOKEN = {
     'หนู': 'nǔu', 'ค่ะ': 'kâ', 'คะ': 'ká', 'นะ': 'ná', 'จ้ะ': 'jâ', 'จ๊ะ': 'já',
     'ไหน': 'nǎi', 'ไหร่': 'rài', 'เพราะ': 'prɔ́', 'เหรอ': 'rə̌ə', 'ละ': 'lá',
     # Spelled with a silent letter this checker cannot see (no ์ mark).
-    'บาตร': 'bàat',
+    'บาตร': 'bàat', 'มิตร': 'mít',
 }
 
 # Isan words follow Isan tones, not the Central Thai spelling rules. They are

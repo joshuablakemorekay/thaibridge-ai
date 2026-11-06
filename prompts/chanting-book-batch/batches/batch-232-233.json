@@ -61,7 +61,7 @@
      "pali": "สัทธัมมะโช สุปะฏิปัตติคุณาทิยุตโต,",
      "pali_roman": "Saddhammajo supaṭipattiguṇādiyutto,",
      "thai": "พระสงฆ์ที่เกิดโดยพระสัทธรรมประกอบด้วยคุณ มีความปฏิบัติดี เป็นต้น,",
-     "paiboon": "",
+     "paiboon": "prá-sǒŋ tîi gə̀ət dooy prá-sàt-tam bprà-gɔ̀ɔp dûay kun mii kwaam bpà-dtì-bàt dii bpen dtôn,",
      "english": "Born of the true Dhamma, endowed with the quality of practising well and the rest,",
      "page": 232
     },
@@ -70,7 +70,7 @@
      "pali": "โยฏฐัพพิโธ อะริยะปุคคะละสังฆะเสฏโฐ,",
      "pali_roman": "Yoṭṭhabbidho ariyapuggalasaṅghaseṭṭho,",
      "thai": "เป็นหมู่แห่งพระอริยบุคคลอันประเสริฐแปดจำพวก,",
-     "paiboon": "",
+     "paiboon": "bpen mùu hɛ̀ŋ prá-à-rí-yá-bùk-kon an bprà-sə̀ət bpɛ̀ɛt jam-pûak,",
      "english": "the supreme Sangha of noble persons, which is of eight kinds,"
     },
     {
@@ -78,7 +78,7 @@
      "pali": "สีลาทิธัมมะปะวะราสะยะกายะจิตโต,",
      "pali_roman": "Sīlādidhammapavarāsayakāyacitto,",
      "thai": "มีกายและจิต อันอาศัยธรรมมีศีลเป็นต้น อันบวร,",
-     "paiboon": "",
+     "paiboon": "mii gaai lɛ́ jìt an aa-sǎi tam mii sǐin bpen dtôn an bɔɔ-wɔɔn,",
      "english": "whose body and mind are the dwelling place of virtue and the other excellent qualities —"
     },
     {
@@ -86,7 +86,7 @@
      "pali": "วันทามะหัง ตะมะริยานะคะณัง สุสุทธัง,",
      "pali_roman": "Vandāmahaṃ tamariyānagaṇaṃ susuddhaṃ,",
      "thai": "ข้าพเจ้าไหว้หมู่แห่งพระอริยเจ้าเหล่านั้น อันบริสุทธิ์ด้วยดี,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo wâi mùu hɛ̀ŋ prá-à-rí-yá-jâo lào nán an bɔɔ-rí-sùt dûay dii,",
      "english": "that wholly pure company of the noble ones I salute with my head."
     },
     {
@@ -94,7 +94,7 @@
      "pali": "สังโฆ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,",
      "pali_roman": "Saṅgho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,",
      "thai": "พระสงฆ์หมู่ใด เป็นสรณะอันเกษมสูงสุด ของสัตว์ทั้งหลาย,",
-     "paiboon": "",
+     "paiboon": "prá-sǒŋ mùu dai bpen sà-rá-ná an gà-sěem sǔuŋ-sùt kɔ̌ɔŋ sàt táŋ-lǎai,",
      "english": "The Sangha, which is for all breathing things the refuge, safe and supreme,"
     },
     {
@@ -102,7 +102,7 @@
      "pali": "ตะติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,",
      "pali_roman": "Tatiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,",
      "thai": "ข้าพเจ้าไหว้พระสงฆ์หมู่นั้น อันเป็นที่ตั้งแห่งความระลึกองค์ที่สาม ด้วยเศียรเกล้า,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo wâi prá-sǒŋ mùu nán an bpen tîi-dtâŋ hɛ̀ŋ kwaam rá-lʉ́k oŋ tîi sǎam dûay sǐan-glâo,",
      "english": "the third of the objects of recollection — it I revere with my head."
     },
     {
@@ -110,7 +110,7 @@
      "pali": "สังฆัสสาหัส๎มิ ทาโส (ทาสี) วะ สังโฆ เม สามิกิสสะโร,",
      "pali_roman": "Saṅghassāhasmi dāso (dāsī) va saṅgho me sāmikissaro,",
      "thai": "ข้าพเจ้าเป็นทาสของพระสงฆ์, พระสงฆ์เป็นนาย มีอิสระเหนือข้าพเจ้า,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo bpen tâat kɔ̌ɔŋ prá-sǒŋ, prá-sǒŋ bpen naai mii ìt-sà-rà nʉ̌a kâa-pá-jâo,",
      "english": "I am the Sangha's servant; the Sangha is my lord and master."
     },
     {
@@ -118,7 +118,7 @@
      "pali": "สังโฆ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,",
      "pali_roman": "Saṅgho dukkhassa ghātā ca vidhātā ca hitassa me,",
      "thai": "พระสงฆ์เป็นเครื่องกำจัดทุกข์ และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,",
-     "paiboon": "",
+     "paiboon": "prá-sǒŋ bpen krʉ̂aŋ gam-jàt túk lɛ́ soŋ wái sʉ̂ŋ bprà-yòot gɛ̀ɛ kâa-pá-jâo,",
      "english": "The Sangha destroys suffering, and brings about what is for my welfare."
     },
     {
@@ -126,7 +126,7 @@
      "pali": "สังฆัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,",
      "pali_roman": "Saṅghassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,",
      "thai": "ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระสงฆ์,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo mɔ̂ɔp gaai tà-wǎai chii-wít níi dɛ̀ɛ prá-sǒŋ,",
      "english": "To the Sangha I surrender this body and this life,"
     },
     {
@@ -134,7 +134,7 @@
      "pali": "วันทันโตหัง (ตีหัง) จะริสสามิ สังฆัสโสปะฏิปันนะตัง,",
      "pali_roman": "Vandantohaṃ (tīhaṃ) carissāmi saṅghassopaṭipannataṃ,",
      "thai": "ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม ซึ่งความปฏิบัติดีของพระสงฆ์,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo pûu wâi yùu jàk bprà-prʉ́t dtaam sʉ̂ŋ kwaam bpà-dtì-bàt dii kɔ̌ɔŋ prá-sǒŋ,",
      "english": "Revering it, I shall walk on by the Sangha's own good practice."
     },
     {
@@ -142,7 +142,7 @@
      "pali": "นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง,",
      "pali_roman": "Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ,",
      "thai": "สรณะอื่นของข้าพเจ้าไม่มี, พระสงฆ์เป็นสรณะอันประเสริฐของข้าพเจ้า,",
-     "paiboon": "",
+     "paiboon": "sà-rá-ná ʉ̀ʉn kɔ̌ɔŋ kâa-pá-jâo mâi mii, prá-sǒŋ bpen sà-rá-ná an bprà-sə̀ət kɔ̌ɔŋ kâa-pá-jâo,",
      "english": "For me there is no other refuge; the Sangha is my refuge, the best of them."
     },
     {
@@ -150,7 +150,7 @@
      "pali": "เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,",
      "pali_roman": "Etena saccavajjena vaḍḍheyyaṃ satthusāsane,",
      "thai": "ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนา ของพระศาสดา,",
-     "paiboon": "",
+     "paiboon": "dûay gaan glàao kam sàt níi kâa-pá-jâo pʉŋ jà-rəən nai prá-sàat-sà-nǎa kɔ̌ɔŋ prá-sàat-sà-daa,",
      "english": "By the speaking of this truth, may I grow in the Teacher's dispensation.",
      "page": 233
     },
@@ -159,7 +159,7 @@
      "pali": "สังฆัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,",
      "pali_roman": "Saṅghaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,",
      "thai": "ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระสงฆ์ ได้ขวนขวายบุญใด ในบัดนี้,",
-     "paiboon": "",
+     "paiboon": "kâa-pá-jâo pûu wâi yùu sʉ̂ŋ prá-sǒŋ dâai kǔan-kwǎai bun dai nai bàt-níi,",
      "english": "Whatever merit I have gained here in revering the Sangha —"
     },
     {
@@ -167,7 +167,7 @@
      "pali": "สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.",
      "pali_roman": "Sabbepi antarāyā me māhesuṃ tassa tejasā.",
      "thai": "อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.",
-     "paiboon": "",
+     "paiboon": "an-dtà-raai táŋ-bpuaŋ yàa dâai mii gɛ̀ɛ kâa-pá-jâo dûay dèet hɛ̀ŋ bun nán.",
      "english": "by the power of it, may all obstacles for me come to nothing."
     },
     {
@@ -183,7 +183,7 @@
      "pali": "กาเยนะ วาจายะ วะ เจตะสา วา,",
      "pali_roman": "Kāyena vācāya va cetasā vā,",
      "thai": "ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,",
-     "paiboon": "",
+     "paiboon": "dûay gaai gɔ̂ dii dûay waa-jaa gɔ̂ dii dûay jai gɔ̂ dii,",
      "english": "By body, by speech, or by mind,"
     },
     {
@@ -191,7 +191,7 @@
      "pali": "สังเฆ กุกัมมัง ปะกะตัง มะยา ยัง,",
      "pali_roman": "Saṅghe kukammaṃ pakataṃ mayā yaṃ,",
      "thai": "กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้ว ในพระสงฆ์,",
-     "paiboon": "",
+     "paiboon": "gam nâa dtì-dtian an dai tîi kâa-pá-jâo grà-tam lɛ́ɛo nai prá-sǒŋ,",
      "english": "whatever wrong has been done by me towards the Sangha —"
     },
     {
@@ -199,7 +199,7 @@
      "pali": "สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง,",
      "pali_roman": "Saṅgho paṭiggaṇhatu accayantaṃ,",
      "thai": "ขอพระสงฆ์ จงงดซึ่งโทษล่วงเกินอันนั้น,",
-     "paiboon": "",
+     "paiboon": "kɔ̌ɔ prá-sǒŋ joŋ ŋót sʉ̂ŋ tôot lûaŋ-gəən an nán,",
      "english": "may the Sangha accept that transgression,"
     },
     {
@@ -207,7 +207,7 @@
      "pali": "กาลันตะเร สังวะริตุง วะ สังเฆ.",
      "pali_roman": "Kālantare saṃvarituṃ va saṅghe.",
      "thai": "เพื่อการสำรวมระวัง ในพระสงฆ์ ในกาลต่อไป.",
-     "paiboon": "",
+     "paiboon": "pʉ̂a gaan sǎm-ruam rá-waŋ nai prá-sǒŋ nai gaan dtɔ̀ɔ bpai.",
      "english": "that in time to come I may be restrained towards the Sangha."
     }
    ],
