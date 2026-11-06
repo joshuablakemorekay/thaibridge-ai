@@ -1114,36 +1114,21 @@ rows you believe are NOT indented, then look at the residuals. On page 100 the
 fit was `x = 0.0343*y + 464`; rows 2–22 sat on it within 8px and verse 1 stood
 **+138** clear. That is an unambiguous answer, and it takes one short script.
 
-## 🐛 OPEN BUG — 11 Thai colophons are printed TWICE (pages 38-47)
+## ✅ FIXED — the 11 Thai colophons printed twice (pages 38-47)
 
-Found 2026-08-24 when Josh said he could see no paiboon anywhere. **Not fixed —
-raised with him and left for his call.**
+Found 2026-08-24, fixed 2026-08-25 in `ca3cc5b` ("let a THAI colophon render
+without printing it twice"). Recorded here as fixed on 2026-11-06, when Josh
+asked for it again and the check showed it was already done.
 
-The book prints `จบพระวิภังค์` ("Here ends the Vibhanga") as ONE centred line
-closing the chant. The app renders it as two:
+The 11 closing lines in the สวดแจง section (`จบพระวินัย` … `มงคลจักรวาฬน้อย จบ`)
+now hold `thai` and `paiboon` only, with `pali` empty. The page, chant and
+print templates all show a closing when `pali OR thai` is set, and print the
+pali line only when there is one. Verified 2026-11-06: each line appears ONCE on
+its book page (38, 39, 40, 41, 43, 47) and once in its chant view, with its
+ThaiBridge Spelling. Josh confirmed the spelling stays: it is Thai the book
+prints.
 
-    จบพระวิภังค์          <- layer-pali
-    จบพระวิภังค์          <- layer-thai   (the same line again)
-    jop pra-wi-pang        <- paiboon
-
-**Why it happened:** `templates/chanting_page.html` gates the whole closing block
-on `chant.closing.pali`, so a Thai-only colophon would not render at all unless
-its text were ALSO put in `pali`. Duplicating it was the only way to make it show.
-
-**The 11**, all in the สวดแจง section: `phra-winai-sangkhep`,
-`phra-sut-sangkhep`, `phra-sangkhani`, `phra-wiphang`, `phra-thatukatha`,
-`phra-pukkhalabanyat`, `phra-kathawatthu`, `phra-yamaka`, `phra-mahapatthan`,
-`thammasangkhani-matika-patho`, `mongkhon-chakkrawan-noi`. The other 41 closings
-are Pali (`…นิฏฐิตา`) with `thai` empty and are CORRECT — do not touch them.
-
-**The fix, when Josh says go:** widen the template condition to
-`chant.closing.pali or chant.closing.thai`, render the pali line only when there
-is one, then move those 11 lines out of `pali` into `thai` alone. Open question
-he has not answered: whether a Thai colophon should keep its `paiboon` (my
-inclination: yes, it is Thai the book prints).
-
-⚠️ This also means the app's ONLY genuine five-layer content is pages 217-221
-(59 lines). The 16 "paiboon lines" on pages 10-47 are mostly these duplicates.
+The other 41 closings are Pali (`…นิฏฐิตา`) with `thai` empty, and are correct.
 
 ## ❗ The book has a SECOND, TRANSLATED pass — it starts around page 191–193
 
