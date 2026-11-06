@@ -287,10 +287,12 @@
     {% set h = v|halves if wide else None %}
     {% if h %}
     {# A verse line set as two half-lines, left and right (Ajarn Owen's layout). #}
+    {% for row in h %}
     <div class="half-pair">
-        <p class="l-pali">{{ h[0]|pali_words }}</p><p class="l-pali">{{ h[1]|pali_words }}</p>
-        <p class="l-pali_roman">{{ h[2] }}</p><p class="l-pali_roman">{{ h[3] }}</p>
+        <p class="l-pali">{{ row[0]|pali_words }}</p><p class="l-pali">{{ row[1]|pali_words }}</p>
+        <p class="l-pali_roman">{{ row[2] }}</p><p class="l-pali_roman">{{ row[3] }}</p>
     </div>
+    {% endfor %}
     {% else %}
     {% if v.pali %}<p class="l-pali">{{ v.pali|pali_words }}</p>{% endif %}
     {% if v.pali_roman %}<p class="l-pali_roman">{{ v.pali_roman }}</p>{% endif %}
