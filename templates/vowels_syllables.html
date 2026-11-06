@@ -248,10 +248,14 @@
         Short vowels are quick and clipped - approximately half the duration of long vowels.
         Often end with a hard stop (!). Mastering these is crucial for natural Thai pronunciation.
     </p>
-    
+    <p style="color: #666; margin-bottom: 2rem;">
+        A few gliding vowels near the end of this list (อาย, อาว, เอว, แอว) are actually long.
+        They're kept here so the 32-vowel numbering stays in order - look for the LONG badge.
+    </p>
+
     <div class="vowel-grid">
         {% for vowel in vowels.short_vowels %}
-        <div class="vowel-card short" style="position: relative;">
+        <div class="vowel-card {{ 'long' if vowel.type == 'long' else 'short' }}" style="position: relative;">
             <div class="vowel-number">{{ vowel.number }}</div>
             
             <div style="display: flex; align-items: center; margin-bottom: 1rem;">
@@ -260,7 +264,7 @@
                 <div>
                     <div class="vowel-paiboon">
                         {{ vowel.paiboon }}
-                        <span class="type-badge short">SHORT</span>
+                        {% if vowel.type == 'long' %}<span class="type-badge long">LONG</span>{% else %}<span class="type-badge short">SHORT</span>{% endif %}
                     </div>
                     <div style="color: #666; margin-top: 0.25rem;">{{ vowel.sound }}</div>
                 </div>
