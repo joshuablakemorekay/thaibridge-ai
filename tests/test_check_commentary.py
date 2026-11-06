@@ -201,3 +201,23 @@ def test_prose_and_own_text_do_not_overlap():
     written = prose(chant(meaning=['mentions เมตตา']))
     printed = own_text(chant(meaning=['mentions เมตตา']))
     assert 'mentions' in written and 'mentions' not in printed
+
+
+def test_every_excused_heading_really_has_its_romanised_title():
+    """TITLE_ROMAN_ADDED excuses a field from the baseline check, so each
+    chant it names must actually carry a title_roman."""
+    import chanting
+    from check_commentary import TITLE_ROMAN_ADDED
+    by_id = {c['id']: c for c in chanting.CHANTS}
+    assert len(TITLE_ROMAN_ADDED) == 79
+    for cid in TITLE_ROMAN_ADDED:
+        assert by_id[cid]['title_roman'].strip(), f'{cid} lost its romanised title'
+
+
+def test_every_printed_title_has_a_romanised_line():
+    """A chant whose heading the book prints shows a romanised line under it."""
+    import chanting
+    bare = [c['id'] for c in chanting.CHANTS
+            if c.get('title_thai', '').strip()
+            and not (c.get('title_pali') or c.get('title_roman'))]
+    assert not bare, bare
