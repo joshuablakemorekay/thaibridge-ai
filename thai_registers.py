@@ -146,7 +146,7 @@ VARIANTS = {
         'casual': {'thai': 'มาจากอเมริกา', 'paiboon': 'maa jàak à-mee-rí-gaa'},
     },
     'คุณพูดไทยเก่งมากเลยค่ะ': {
-        'neutral': {'thai': 'พูดไทยเก่งมากเลยค่ะ', 'paiboon': 'pûut tai gèŋ mâak ləəi kâ'},
+        'neutral': {'thai': 'พูดไทยเก่งมากเลยค่ะ', 'paiboon': 'pûut tai gèŋ mâak ləəy kâ'},
         'casual': {'thai': 'พูดไทยเก่งจัง', 'paiboon': 'pûut tai gèŋ jaŋ',
                    'note': 'จัง is the casual "so…!" particle — admiring rather than measured.'},
     },
@@ -162,7 +162,7 @@ VARIANTS = {
     # ---------------------------------------------------------------
     'ขอดูเสื้อตัวนี้หน่อยค่ะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ขอดูตัวนี้หน่อย', 'paiboon': 'kɔ̌ɔ duu dtua níi nɔ̀ɔi',
+        'casual': {'thai': 'ขอดูตัวนี้หน่อย', 'paiboon': 'kɔ̌ɔ duu dtua níi nɔ̀ɔy',
                    'note': 'เสื้อ dropped — the classifier ตัว already tells them it is clothing.'},
     },
     'ได้ครับ ขนาดอะไรครับ': {
@@ -177,7 +177,7 @@ VARIANTS = {
     },
     'สามร้อยบาทครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'สามร้อย', 'paiboon': 'sǎam rɔ́ɔi',
+        'casual': {'thai': 'สามร้อย', 'paiboon': 'sǎam rɔ́ɔy',
                    'note': 'บาท is dropped constantly — the currency is obvious.'},
     },
     'แพงไปหน่อยค่ะ ลดได้มั๊ยคะ': {
@@ -185,8 +185,8 @@ VARIANTS = {
         'casual': {'thai': 'แพงจัง ลดได้มั๊ย', 'paiboon': 'pɛɛŋ jaŋ, lót dâi mái'},
     },
     'ลดให้สองร้อยห้าสิบบาทครับ': {
-        'neutral': {'thai': 'ลดให้สองร้อยห้าสิบครับ', 'paiboon': 'lót hâi sɔ̌ɔŋ rɔ́ɔi hâa-sìp kráp'},
-        'casual': {'thai': 'สองร้อยห้าสิบ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi hâa-sìp',
+        'neutral': {'thai': 'ลดให้สองร้อยห้าสิบครับ', 'paiboon': 'lót hâi sɔ̌ɔŋ rɔ́ɔy hâa-sìp kráp'},
+        'casual': {'thai': 'สองร้อยห้าสิบ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔy hâa-sìp',
                    'note': 'Just naming the new number is a complete counter-offer.'},
     },
     'โอเคค่ะ เอาค่ะ': {
@@ -270,7 +270,7 @@ VARIANTS = {
     },
     'ได้ครับ ไปกันเลยครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ได้ ไปกันเลย', 'paiboon': 'dâi, bpai gan ləəi'},
+        'casual': {'thai': 'ได้ ไปกันเลย', 'paiboon': 'dâi, bpai gan ləəy'},
     },
 
     # ---------------------------------------------------------------
@@ -283,9 +283,9 @@ VARIANTS = {
                 'it costs you nothing and sets the tone for the whole ride.',
     },
     'ได้ครับ เชิญขึ้นเลยครับ': {
-        'neutral': {'thai': 'ได้ครับ ขึ้นเลยครับ', 'paiboon': 'dâi kráp, kʉ̂n ləəi kráp',
+        'neutral': {'thai': 'ได้ครับ ขึ้นเลยครับ', 'paiboon': 'dâi kráp, kʉ̂n ləəy kráp',
                     'note': 'เชิญ is the formal "please do" — everyday speech just says ขึ้นเลย.'},
-        'casual': {'thai': 'ได้ ขึ้นเลย', 'paiboon': 'dâi, kʉ̂n ləəi'},
+        'casual': {'thai': 'ได้ ขึ้นเลย', 'paiboon': 'dâi, kʉ̂n ləəy'},
     },
     'ใช้มิเตอร์ได้มั๊ยครับ': {
         'neutral': SAME,
@@ -294,7 +294,7 @@ VARIANTS = {
     },
     'ได้ครับ รถติดนิดหน่อยนะครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ได้ รถติดนิดหน่อยนะ', 'paiboon': 'dâi, rót tìt nít-nɔ̀i ná'},
+        'casual': {'thai': 'ได้ รถติดนิดหน่อยนะ', 'paiboon': 'dâi, rót tìt nít-nɔ̀y ná'},
     },
     'ไม่เป็นไรครับ จอดตรงนี้ได้มั๊ยครับ': {
         'neutral': SAME,
@@ -319,28 +319,28 @@ VARIANTS = {
                    'note': 'อันนี้ shortens to นี่ when you are pointing at the thing.'},
     },
     'สองร้อยบาทครับ': {
-        'neutral': {'thai': 'สองร้อยครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi kráp'},
-        'casual': {'thai': 'สองร้อย', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi'},
+        'neutral': {'thai': 'สองร้อยครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔy kráp'},
+        'casual': {'thai': 'สองร้อย', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔy'},
     },
     'แพงไปหน่อยค่ะ ลดได้มั๊ยคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'แพงจัง ลดหน่อยได้มั๊ย', 'paiboon': 'pɛɛŋ jaŋ, lót nɔ̀i dâi mái',
+        'casual': {'thai': 'แพงจัง ลดหน่อยได้มั๊ย', 'paiboon': 'pɛɛŋ jaŋ, lót nɔ̀y dâi mái',
                    'note': 'หน่อย keeps a casual request from sounding like a demand.'},
     },
     'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ': {
         'neutral': SAME,
         'casual': {'thai': 'ลดให้ห้าสิบ เหลือร้อยห้า',
-                   'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔi hâa',
+                   'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔy hâa',
                    'note': 'Market Thai clips 150 to ร้อยห้า — the สิบ is understood.'},
     },
     'ร้อยยี่สิบได้มั๊ยคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ร้อยยี่ได้มั๊ย', 'paiboon': 'rɔ́ɔi yîi dâi mái',
+        'casual': {'thai': 'ร้อยยี่ได้มั๊ย', 'paiboon': 'rɔ́ɔy yîi dâi mái',
                    'note': 'Same clipping again: ร้อยยี่ for 120.'},
     },
     'ได้ครับ เอาไปเลย': {
         'neutral': SAME,
-        'casual': {'thai': 'ได้ เอาไปเลย', 'paiboon': 'dâi, ao bpai ləəi',
+        'casual': {'thai': 'ได้ เอาไปเลย', 'paiboon': 'dâi, ao bpai ləəy',
                    'note': 'The vendor already dropped the particle on the second half — '
                            'a friendly sign the haggling is over.'},
     },
@@ -363,7 +363,7 @@ VARIANTS = {
     },
     'ควรปิดไหล่กับหัวเข่าครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ปิดไหล่กับเข่าด้วยนะ', 'paiboon': 'bpìt lài gàp kào dûai ná'},
+        'casual': {'thai': 'ปิดไหล่กับเข่าด้วยนะ', 'paiboon': 'bpìt lài gàp kào dûay ná'},
     },
     'ถ่ายรูปได้มั๊ยคะ': {
         'neutral': SAME,
@@ -613,7 +613,7 @@ VARIANTS = {
     },
     'พูดช้าๆ ได้มั๊ยครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'พูดช้าๆ หน่อย', 'paiboon': 'pûut cháa-cháa nɔ̀i'},
+        'casual': {'thai': 'พูดช้าๆ หน่อย', 'paiboon': 'pûut cháa-cháa nɔ̀y'},
     },
     'ผมยังไม่เข้าใจครับ': {
         'neutral': {'thai': 'ยังไม่เข้าใจครับ', 'paiboon': 'yaŋ mâi kâo-jai kráp'},
@@ -662,11 +662,11 @@ VARIANTS = {
     },
     'ได้เลยครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ได้เลย', 'paiboon': 'dâi ləəi'},
+        'casual': {'thai': 'ได้เลย', 'paiboon': 'dâi ləəy'},
     },
     'เยี่ยมเลยครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'เยี่ยมเลย', 'paiboon': 'yîam ləəi'},
+        'casual': {'thai': 'เยี่ยมเลย', 'paiboon': 'yîam ləəy'},
     },
     'น่าสนใจนะครับ': {
         'neutral': SAME,
@@ -679,7 +679,7 @@ VARIANTS = {
     },
     'รบกวนหน่อยครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ขอโทษนะ ขอถามหน่อย', 'paiboon': 'kɔ̌ɔ-tôot ná, kɔ̌ɔ tǎam nɔ̀i',
+        'casual': {'thai': 'ขอโทษนะ ขอถามหน่อย', 'paiboon': 'kɔ̌ɔ-tôot ná, kɔ̌ɔ tǎam nɔ̀y',
                    'note': 'รบกวน is quite formal. Between friends you would just ask.'},
         'warn': 'รบกวน is worth keeping formal — it is the phrase that makes an imposition '
                 'land politely.',

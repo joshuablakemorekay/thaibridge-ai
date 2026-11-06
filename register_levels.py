@@ -119,7 +119,7 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'เสวย',
-                'paiboon': 'sà-wə̌əi',
+                'paiboon': 'sà-wə̌əy',
                 'english': 'to eat (royal)',
                 'note': 'Replaces กิน / รับประทาน entirely.',
             },
@@ -434,7 +434,7 @@ REGISTER_LEVELS = {
             ),
             'examples': [
                 'ว่ะ (wâ) — rough sentence particle',
-                'เว้ย (wə́əi) — "oi!", calling someone',
+                'เว้ย (wə́əy) — "oi!", calling someone',
                 'มั๊ย for ไหม — clipped question particle',
             ],
         },

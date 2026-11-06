@@ -168,6 +168,33 @@ def shorten_diphthongs(value):
     return value
 
 
+# 2026-11-06: a final ย after any vowel but a/aa is written y, not i
+# (dûai -> dûay, ləəi -> ləəy, nɔ́ɔi -> nɔ́ɔy). ai/aai are untouched. Only a
+# word carrying a tone mark or ɛ ɔ ə ʉ ŋ, or a known toneless one, counts as
+# romanisation, so English and IAST are never matched.
+_TONES = '̀́̂̌'
+_WORD = re.compile('[a-zA-ZɛɔəʉŋÀ-ɏḀ-ỿ̀-ͯ]+')
+_FINAL_I = re.compile('(u[%s]?a|ʉ[%s]?a|o[%s]?o?|ɔ[%s]?ɔ?|ə[%s]?ə?|u[%s]?)i$' % ((_TONES,) * 6))
+_THAIISH = re.compile('[%sɛɔəʉŋ]' % _TONES)
+_PLAIN_FINAL_I = {'dooi', 'kui', 'rooi', 'ooi'}
+
+
+def final_y(value):
+    """The 2026-11-06 spelling change, applied to any string inside `value`."""
+    if isinstance(value, str):
+        def swap(m):
+            word = unicodedata.normalize('NFD', m.group(0))
+            if _FINAL_I.search(word) and (_THAIISH.search(word) or word.lower() in _PLAIN_FINAL_I):
+                return m.group(0)[:-1] + 'y'
+            return m.group(0)
+        return _WORD.sub(swap, value)
+    if isinstance(value, dict):
+        return {k: final_y(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return type(value)(final_y(v) for v in value)
+    return value
+
+
 # Single-word corrections to the book's romanisation, made after the baseline.
 # ครีเมขละ: hyphens missing, and ขะ is high class + dead syllable = low tone.
 BOOK_CORRECTIONS = [
@@ -210,7 +237,7 @@ def drop_added_spelling(chant):
 
 def book_spelling_changes(value):
     """Every deliberate romanisation change since the baseline, applied."""
-    value = shorten_diphthongs(value)
+    value = final_y(shorten_diphthongs(value))
     if isinstance(value, str):
         for old, new in BOOK_CORRECTIONS:
             value = value.replace(unicodedata.normalize('NFC', old),

@@ -332,7 +332,7 @@ STORIES = [
                 _tok('นานมาแล้ว', 'naan maa lɛ́ɛo', 'long ago'),
                 _tok('มี', 'mii', 'there was'),
                 _tok('นกคุ่ม', 'nók-kûm', 'a quail'),
-                _tok('ตัวน้อย', 'dtua nɔ́ɔi', 'a little one'),
+                _tok('ตัวน้อย', 'dtua nɔ́ɔy', 'a little one'),
             ],
             [
                 _tok('นกคุ่ม', 'nók-kûm', 'the quail'),
@@ -373,7 +373,7 @@ STORIES = [
             [
                 _tok('ไฟ', 'fai', 'fire'),
                 _tok('จง', 'joŋ', '(command:) do'),
-                _tok('ถอย', 'tɔ̌ɔi', 'draw back'),
+                _tok('ถอย', 'tɔ̌ɔy', 'draw back'),
                 _tok('กลับ', 'glàp', 'back'),
                 _tok('ไป', 'bpai', 'away'),
             ],

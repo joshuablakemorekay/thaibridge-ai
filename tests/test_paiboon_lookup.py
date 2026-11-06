@@ -19,7 +19,7 @@ class TestFold:
     """The tight fold: tone marks and IPA letters off, separators dropped."""
 
     def test_tone_marks_are_stripped(self):
-        assert pl.fold('à-rɔ̀i') == 'aroi'
+        assert pl.fold('à-rɔ̀y') == 'aroi'
 
     def test_the_ipa_vowels_flatten_to_typeable_letters(self):
         assert pl.fold('ɔ') == 'o'
@@ -86,7 +86,7 @@ class TestIndex:
         assert len(keys) == len(set(keys))
 
     def test_the_folded_forms_are_precomputed(self):
-        entry = pl.Entry('อร่อย', 'à-rɔ̀i', 'delicious', 'Test')
+        entry = pl.Entry('อร่อย', 'à-rɔ̀y', 'delicious', 'Test')
         assert entry.folded == 'aroi'
         assert entry.folded_english == 'delicious'
 
@@ -118,7 +118,7 @@ class TestSearch:
 
     def test_the_fuzzy_band_does_not_pad_a_good_result_set(self):
         """Regression: "aroi" returned five matches, two of which were long
-        price sentences — "rɔ́ɔi" (hundred) survives the fuzzy merge and sits
+        price sentences — "rɔ́ɔy" (hundred) survives the fuzzy merge and sits
         inside them. A loose SUBSTRING now only counts when nothing precise was
         found anywhere, so a good result set stays clean."""
         results = pl.search('aroi', limit=20)

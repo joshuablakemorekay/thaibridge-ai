@@ -47,7 +47,7 @@ a different word.
   folds to a string containing "chang" across a syllable boundary. Ranking is
   band-major now — exact beats prefix beats substring, whichever fold found it.
 - **A good result set padded with fuzzy noise.** "aroi" returned five matches,
-  two of them long price sentences, because `rɔ́ɔi` (hundred) sits inside them.
+  two of them long price sentences, because `rɔ́ɔy` (hundred) sits inside them.
   A loose *substring* now only counts when nothing precise was found anywhere.
 - **The corpus disagreeing with itself.** ช้าง is written both `cháaŋ` and
   `cháang` in different sections. De-duplication is on the folded romanisation,

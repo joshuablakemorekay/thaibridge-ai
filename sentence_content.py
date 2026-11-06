@@ -494,10 +494,10 @@ SENTENCE_PATTERNS = {
                 'tip': 'The noun comes first, then ที่ and everything that describes it — the opposite of English adjectives.',
                 'examples': {
                     'male': [
-                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากครับ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀i mâak kráp', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ครับ (polite)'},
+                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากครับ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀y mâak kráp', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ครับ (polite)'},
                     ],
                     'female': [
-                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากค่ะ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀i mâak kâ', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ค่ะ (polite)'},
+                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากค่ะ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀y mâak kâ', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ค่ะ (polite)'},
                     ],
                 },
             },
@@ -663,7 +663,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'person2_female',
                 'thai': 'คุณพูดไทยเก่งมากเลยค่ะ',
-                'paiboon': 'kun pûut tai gèŋ mâak ləəi kâ',
+                'paiboon': 'kun pûut tai gèŋ mâak ləəy kâ',
                 'english': 'You speak Thai very well!',
                 'note': 'Compliment'
             },
@@ -685,7 +685,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'customer_female',
                 'thai': 'ขอดูเสื้อตัวนี้หน่อยค่ะ',
-                'paiboon': 'kɔ̌ɔ duu sʉ̂a dtua níi nɔ̀ɔi kâ',
+                'paiboon': 'kɔ̌ɔ duu sʉ̂a dtua níi nɔ̀ɔy kâ',
                 'english': 'Can I see this shirt please?',
                 'note': 'Polite request with หน่อย'
             },
@@ -706,21 +706,21 @@ CONVERSATIONS = {
             {
                 'speaker': 'seller',
                 'thai': 'สามร้อยบาทครับ',
-                'paiboon': 'sǎam rɔ́ɔi bàat kráp',
+                'paiboon': 'sǎam rɔ́ɔy bàat kráp',
                 'english': '300 baht',
                 'note': 'Price'
             },
             {
                 'speaker': 'customer_female',
                 'thai': 'แพงไปหน่อยค่ะ ลดได้มั๊ยคะ',
-                'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mái ká',
+                'paiboon': 'pɛɛŋ bpai nɔ̀ɔy kâ, lót dâi mái ká',
                 'english': "It's a bit expensive. Can you reduce the price?",
                 'note': 'Negotiating'
             },
             {
                 'speaker': 'seller',
                 'thai': 'ลดให้สองร้อยห้าสิบบาทครับ',
-                'paiboon': 'lót hâi sɔ̌ɔŋ rɔ́ɔi hâa-sìp bàat kráp',
+                'paiboon': 'lót hâi sɔ̌ɔŋ rɔ́ɔy hâa-sìp bàat kráp',
                 'english': "I'll reduce it to 250 baht",
                 'note': 'Counter offer'
             },
@@ -827,14 +827,14 @@ CONVERSATIONS = {
             {
                 'speaker': 'friend2_female',
                 'thai': 'ไปกินด้วยกันมั๊ยคะ',
-                'paiboon': 'bpai gin dûai gan mái ká',
+                'paiboon': 'bpai gin dûay gan mái ká',
                 'english': 'Want to eat together?',
                 'note': 'Invitation'
             },
             {
                 'speaker': 'friend1_male',
                 'thai': 'ได้ครับ ไปกันเลยครับ',
-                'paiboon': 'dâi kráp, bpai gan ləəi kráp',
+                'paiboon': 'dâi kráp, bpai gan ləəy kráp',
                 'english': "Sure, let's go!",
                 'note': 'Accepting + suggesting action'
             }
@@ -849,9 +849,9 @@ CONVERSATIONS = {
         'difficulty': 'beginner',
         'dialogue': [
             {'speaker': 'passenger_male', 'thai': 'ไปสยามพารากอนครับ', 'paiboon': 'bpai sà-yǎam paa-raa-gɔɔn kráp', 'english': 'To Siam Paragon, please.', 'note': 'Stating the destination'},
-            {'speaker': 'driver_male', 'thai': 'ได้ครับ เชิญขึ้นเลยครับ', 'paiboon': 'dâi kráp, chəən kʉ̂n ləəi kráp', 'english': 'Sure, please get in.', 'note': 'เชิญ = please (inviting)'},
+            {'speaker': 'driver_male', 'thai': 'ได้ครับ เชิญขึ้นเลยครับ', 'paiboon': 'dâi kráp, chəən kʉ̂n ləəy kráp', 'english': 'Sure, please get in.', 'note': 'เชิญ = please (inviting)'},
             {'speaker': 'passenger_male', 'thai': 'ใช้มิเตอร์ได้มั๊ยครับ', 'paiboon': 'chái mí-təə dâi mái kráp', 'english': 'Can you use the meter?', 'note': 'Helps get a fair fare'},
-            {'speaker': 'driver_male', 'thai': 'ได้ครับ รถติดนิดหน่อยนะครับ', 'paiboon': 'dâi kráp, rót tìt nít-nɔ̀i ná kráp', 'english': "Sure. There's a bit of traffic.", 'note': 'รถติด = traffic jam'},
+            {'speaker': 'driver_male', 'thai': 'ได้ครับ รถติดนิดหน่อยนะครับ', 'paiboon': 'dâi kráp, rót tìt nít-nɔ̀y ná kráp', 'english': "Sure. There's a bit of traffic.", 'note': 'รถติด = traffic jam'},
             {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้มั๊ยครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt dtroŋ níi dâi mái kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
             {'speaker': 'passenger_male', 'thai': 'เท่าไหร่ครับ', 'paiboon': 'tâo-rài kráp', 'english': 'How much is it?', 'note': ''},
             {'speaker': 'driver_male', 'thai': 'เก้าสิบบาทครับ', 'paiboon': 'gâo-sìp bàat kráp', 'english': 'Ninety baht.', 'note': ''}
@@ -864,11 +864,11 @@ CONVERSATIONS = {
         'difficulty': 'intermediate',
         'dialogue': [
             {'speaker': 'customer_female', 'thai': 'อันนี้เท่าไหร่คะ', 'paiboon': 'an níi tâo-rài ká', 'english': 'How much is this one?', 'note': 'อันนี้ = this one'},
-            {'speaker': 'vendor_male', 'thai': 'สองร้อยบาทครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi bàat kráp', 'english': 'Two hundred baht.', 'note': ''},
-            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้มั๊ยคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mái ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
-            {'speaker': 'vendor_male', 'thai': 'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ', 'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔi hâa-sìp kráp', 'english': "I'll take off fifty — a hundred and fifty.", 'note': 'เหลือ = leaving (remaining)'},
-            {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้มั๊ยคะ', 'paiboon': 'rɔ́ɔi yîi-sìp dâi mái ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
-            {'speaker': 'vendor_male', 'thai': 'ได้ครับ เอาไปเลย', 'paiboon': 'dâi kráp, ao bpai ləəi', 'english': "Alright, it's yours.", 'note': 'Agreeing to the deal'}
+            {'speaker': 'vendor_male', 'thai': 'สองร้อยบาทครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔy bàat kráp', 'english': 'Two hundred baht.', 'note': ''},
+            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้มั๊ยคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀ɔy kâ, lót dâi mái ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
+            {'speaker': 'vendor_male', 'thai': 'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ', 'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔy hâa-sìp kráp', 'english': "I'll take off fifty — a hundred and fifty.", 'note': 'เหลือ = leaving (remaining)'},
+            {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้มั๊ยคะ', 'paiboon': 'rɔ́ɔy yîi-sìp dâi mái ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
+            {'speaker': 'vendor_male', 'thai': 'ได้ครับ เอาไปเลย', 'paiboon': 'dâi kráp, ao bpai ləəy', 'english': "Alright, it's yours.", 'note': 'Agreeing to the deal'}
         ]
     },
 
@@ -909,7 +909,7 @@ CONVERSATIONS = {
             {'speaker': 'layperson_male', 'thai': 'ผมอยากเริ่มนั่งสมาธิครับ ควรเริ่มยังไงดีครับ', 'paiboon': 'pǒm yàak rə̂əm nâŋ sà-maa-tí kráp, kuan rə̂əm yaŋ-ŋai dii kráp', 'english': 'I would like to start meditating. How should I begin?', 'note': 'นั่งสมาธิ = to meditate'},
             {'speaker': 'monk', 'thai': 'เริ่มจากลมหายใจ หายใจเข้าก็รู้ หายใจออกก็รู้', 'paiboon': 'rə̂əm jàak lom hǎai-jai, hǎai-jai kâo gɔ̂ɔ rúu, hǎai-jai ɔ̀ɔk gɔ̂ɔ rúu', 'english': 'Begin with the breath. Breathing in, know it; breathing out, know it.', 'note': 'Mindfulness of breathing (ānāpānasati)'},
             {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานมั๊ยครับ', 'paiboon': 'dtɔ̂ŋ nâŋ naan mái kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
-            {'speaker': 'monk', 'thai': 'เริ่มจากสิบนาทีก่อน แล้วค่อยๆ เพิ่มขึ้น', 'paiboon': 'rə̂əm jàak sìp naa-tii gɔ̀ɔn, lɛ́ɛo kɔ̂i-kɔ̂i pə̂əm kʉ̂n', 'english': 'Start with ten minutes, then gradually increase.', 'note': 'ค่อยๆ = gradually'}
+            {'speaker': 'monk', 'thai': 'เริ่มจากสิบนาทีก่อน แล้วค่อยๆ เพิ่มขึ้น', 'paiboon': 'rə̂əm jàak sìp naa-tii gɔ̀ɔn, lɛ́ɛo kɔ̂y-kɔ̂y pə̂əm kʉ̂n', 'english': 'Start with ten minutes, then gradually increase.', 'note': 'ค่อยๆ = gradually'}
         ]
     }
 }
@@ -952,8 +952,8 @@ CONVERSATIONAL_PHRASES = [
         'phrases': [
             {'thai': 'จริงเหรอครับ', 'paiboon': 'jiŋ rə̌ə kráp', 'english': 'Really?'},
             {'thai': 'โอเคครับ', 'paiboon': 'oo-kee kráp', 'english': 'Ok.'},
-            {'thai': 'ได้เลยครับ', 'paiboon': 'dâi ləəi kráp', 'english': 'Sure / No problem.'},
-            {'thai': 'เยี่ยมเลยครับ', 'paiboon': 'yîam ləəi kráp', 'english': 'Great!'},
+            {'thai': 'ได้เลยครับ', 'paiboon': 'dâi ləəy kráp', 'english': 'Sure / No problem.'},
+            {'thai': 'เยี่ยมเลยครับ', 'paiboon': 'yîam ləəy kráp', 'english': 'Great!'},
             {'thai': 'น่าสนใจนะครับ', 'paiboon': 'nâa-sǒn-jai ná kráp', 'english': "That's interesting."}
         ]
     },
@@ -965,7 +965,7 @@ CONVERSATIONAL_PHRASES = [
             {'thai': 'ขอโทษครับ', 'paiboon': 'kɔ̌ɔ-tôot kráp', 'english': 'Excuse me / Sorry.'},
             {'thai': 'ไม่เป็นไรครับ', 'paiboon': 'mâi bpen rai kráp', 'english': "It's ok / No worries."},
             {'thai': 'ขอบคุณมากครับ', 'paiboon': 'kɔ̀ɔp-kun mâak kráp', 'english': 'Thank you very much.'},
-            {'thai': 'รบกวนหน่อยครับ', 'paiboon': 'róp-guan nɔ̀i kráp', 'english': 'Sorry to trouble you… (before a request)'}
+            {'thai': 'รบกวนหน่อยครับ', 'paiboon': 'róp-guan nɔ̀y kráp', 'english': 'Sorry to trouble you… (before a request)'}
         ]
     }
 ]

@@ -53,7 +53,7 @@ VOCABULARY = {
         {'thai': 'แหน่', 'paiboon': 'nɛ̀ɛ', 'english': 'Emphasis particle (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'หมู่', 'paiboon': 'mùu', 'english': 'You all (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
         {'thai': 'เด้อ', 'paiboon': 'dəə', 'english': 'Polite particle (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
-        {'thai': 'ข่อย', 'paiboon': 'kɔ̀ɔi', 'english': 'I/me (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
+        {'thai': 'ข่อย', 'paiboon': 'kɔ̀ɔy', 'english': 'I/me (Isan)', 'category': 'isan_dialect', 'formality': 'casual'},
     ],
     
     'nature': [
@@ -133,7 +133,7 @@ VOCABULARY = {
         {'thai': 'ไม่ใช่', 'paiboon': 'mâi châi', 'english': 'No (not so)', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ไม่เป็นไร', 'paiboon': 'mâi bpen rai', 'english': "It's okay", 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เท่าไหร่', 'paiboon': 'tâo-rài', 'english': 'How much?', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'อร่อย', 'paiboon': 'à-rɔ̀y', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ร้อน', 'paiboon': 'rɔ́ɔn', 'english': 'Hot', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เย็น', 'paiboon': 'yen', 'english': 'Cold/Cool', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'น้ำ', 'paiboon': 'náam', 'english': 'Water', 'category': 'everyday', 'formality': 'neutral'},

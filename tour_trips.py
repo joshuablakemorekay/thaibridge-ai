@@ -86,7 +86,7 @@ TRIPS = [
         'title': 'A morning at Doi Suthep',
         'place': 'Chiang Mai',
         'place_thai': 'วัดพระธาตุดอยสุเทพ',
-        'place_paiboon': 'wát prá-tâat dɔɔi sù-têep',
+        'place_paiboon': 'wát prá-tâat dɔɔy sù-têep',
         'place_english': 'The temple of the relic on Suthep mountain',
         'blurb': 'Ride a red truck up the mountain, visit Chiang Mai’s best-known '
                  'temple, and come back down for khao soi.',
@@ -108,7 +108,7 @@ TRIPS = [
                    'rót-dɛɛŋ, shared taxis that go up the mountain once enough people '
                    'climb in. A driver leans out.',
                    'Tell him where you want to go.',
-                   [_c('ไปดอยสุเทพ{s}', 'bpai dɔɔi sù-têep {s}', 'To Doi Suthep.', 'good',
+                   [_c('ไปดอยสุเทพ{s}', 'bpai dɔɔy sù-têep {s}', 'To Doi Suthep.', 'good',
                        'He nods at the back bench. You are going up the mountain.'),
                     _c('ไปโรงแรม{s}', 'bpai rooŋ-rɛɛm {s}', 'To the hotel.', 'miss',
                        'He looks puzzled. Which hotel? There are hundreds. Name the place.'),
@@ -128,7 +128,7 @@ TRIPS = [
                        'money. Real fares change, so always ask.'),
                     _c('แพง{s}', 'pɛɛŋ {s}', 'Expensive.', 'miss',
                        'He has not told you a price yet. Ask first, then react.'),
-                    _c('อร่อย{s}', 'à-rɔ̀i {s}', 'Delicious.', 'miss',
+                    _c('อร่อย{s}', 'à-rɔ̀y {s}', 'Delicious.', 'miss',
                        'He laughs. That is a food word. Save it for lunch.')],
                    ('Why ask before you get in',
                     'Once you are sitting down it is too late to agree a price. The same '
@@ -172,10 +172,10 @@ TRIPS = [
                    'Accept her offer.',
                    [_c('ได้{s} ขอบคุณ{s}', 'dâi {s}, kɔ̀ɔp-kun {s}', 'Yes please, thank you.', 'good',
                        'She takes three photos, then points at the view. You say สวยมาก '
-                       '(sǔai mâak), "Very beautiful."'),
+                       '(sǔay mâak), "Very beautiful."'),
                     _c('ไม่เผ็ด{s}', 'mâi pèt {s}', 'Not spicy.', 'miss',
                        'She blinks. Wrong word list. You are thinking about lunch already.'),
-                    _c('ช่วยด้วย', 'chûai dûai', 'Help!', 'miss',
+                    _c('ช่วยด้วย', 'chûay dûay', 'Help!', 'miss',
                        'Everyone on the terrace turns round. ช่วยด้วย is for real emergencies.')],
                    ('Walking round the chedi',
                     'Walk round it clockwise, keeping it on your right. When you sit, tuck '
@@ -183,34 +183,34 @@ TRIPS = [
                    who='Thai visitor', thai='ถ่ายรูปให้มั๊ยคะ', paiboon='tàai-rûup hâi mái ká',
                    english='Shall I take a photo for you?'),
             _scene(4, 'A khao soi stall in town', 'Lunch',
-                   'Back down the mountain, you stop for ข้าวซอย (kâao-sɔɔi), Chiang Mai’s '
+                   'Back down the mountain, you stop for ข้าวซอย (kâao-sɔɔy), Chiang Mai’s '
                    'curry noodle soup. The cook looks up.',
                    'How spicy do you want it?',
                    [_c('ไม่เผ็ด{s}', 'mâi pèt {s}', 'Not spicy.', 'good',
                        'ได้ค่ะ (dâi kâ). There is chilli on the table if you change your mind.'),
-                    _c('เผ็ดนิดหน่อย{s}', 'pèt nít-nɔ̀i {s}', 'A little spicy.', 'good',
+                    _c('เผ็ดนิดหน่อย{s}', 'pèt nít-nɔ̀y {s}', 'A little spicy.', 'good',
                        'ได้ค่ะ. The safest answer anywhere in Thailand.'),
                     _c('เผ็ดมาก{s}', 'pèt mâak {s}', 'Very spicy.', 'ok',
                        'She raises an eyebrow and reaches for the chillies. Brave. Keep '
                        'your water close.')],
                    ('A new word: นิดหน่อย',
-                    'นิดหน่อย (nít-nɔ̀i) means "a little". It is modest and polite, and it '
+                    'นิดหน่อย (nít-nɔ̀y) means "a little". It is modest and polite, and it '
                     'goes with almost anything.'),
                    who='Cook', thai='เผ็ดมั๊ยคะ', paiboon='pèt mái ká', english='Spicy?'),
             _scene(4, 'Same stall, empty bowl', 'Time to pay',
                    'The bowl is empty. Tell the cook it was good, and ask to pay.',
                    'Pick what to say.',
-                   [_c('อร่อยมาก{s} เก็บเงินด้วย{s}', 'à-rɔ̀i mâak {s}, gèp ŋən dûai {s}',
+                   [_c('อร่อยมาก{s} เก็บเงินด้วย{s}', 'à-rɔ̀y mâak {s}, gèp ŋən dûay {s}',
                        'Delicious! Can I pay, please?', 'good',
                        'She beams. เก็บเงิน is what people say at street stalls.'),
-                    _c('อร่อยมาก{s} เช็คบิล{s}', 'à-rɔ̀i mâak {s}, chék-bin {s}',
+                    _c('อร่อยมาก{s} เช็คบิล{s}', 'à-rɔ̀y mâak {s}, chék-bin {s}',
                        'Delicious! The bill, please.', 'good',
                        'That works too. เช็คบิล sounds more like a restaurant, but '
                        'everyone understands it.'),
                     _c('แพง{s}', 'pɛɛŋ {s}', 'Expensive.', 'miss',
                        'Ouch. That was a cheap bowl of noodles, and she made it for you.')],
                    ('Two ways to ask for the bill',
-                    'เก็บเงินด้วย (gèp ŋən dûai), "please collect the money", at stalls. '
+                    'เก็บเงินด้วย (gèp ŋən dûay), "please collect the money", at stalls. '
                     'เช็คบิล (chék-bin) in restaurants.')),
         ],
     },
@@ -358,7 +358,7 @@ TRIPS = [
                    'Ask if this boat goes to Tha Tien.',
                    [_c('ไปท่าเตียนมั๊ย{q}', 'bpai tâa-tian mái {q}', 'Does it go to Tha Tien?', 'good',
                        'ไปครับ (bpai kráp), "It goes." To say yes, Thai repeats the verb.'),
-                    _c('ท่าเตียนอร่อย{s}', 'tâa-tian à-rɔ̀i {s}', 'Tha Tien is delicious.', 'miss',
+                    _c('ท่าเตียนอร่อย{s}', 'tâa-tian à-rɔ̀y {s}', 'Tha Tien is delicious.', 'miss',
                        'He tries not to laugh. A pier is not a dish.'),
                     _c('แท็กซี่{s}', 'tɛ́k-sîi {s}', 'Taxi.', 'miss',
                        'He waves at the road behind you. Wrong kind of transport.')],
@@ -387,11 +387,11 @@ TRIPS = [
                    'Wat Pho is famous for teaching traditional Thai massage. Halfway '
                    'through, the therapist presses a knot in your shoulder.',
                    'It hurts. Ask her to go gently.',
-                   [_c('เบาๆ หน่อย{s}', 'bao-bao nɔ̀i {s}', 'A bit more gently, please.', 'good',
+                   [_c('เบาๆ หน่อย{s}', 'bao-bao nɔ̀y {s}', 'A bit more gently, please.', 'good',
                        'ได้ค่ะ (dâi kâ). The pressure eases straight away.'),
                     _c('แรงๆ{s}', 'rɛɛŋ-rɛɛŋ {s}', 'Harder.', 'ok',
                        'She presses harder. It is your shoulder, but you did say it hurt.'),
-                    _c('ช่วยด้วย', 'chûai dûai', 'Help!', 'miss',
+                    _c('ช่วยด้วย', 'chûay dûay', 'Help!', 'miss',
                        'The whole room goes quiet. A bit much for a sore shoulder.')],
                    ('Doubled words',
                     'Saying a word twice softens it or spreads it out: เบาๆ (bao-bao) is '
@@ -402,7 +402,7 @@ TRIPS = [
                    'towers covered in pieces of coloured china. On the far bank you want a '
                    'photo with the tower behind you.',
                    'Ask someone to take your photo.',
-                   [_c('ช่วยถ่ายรูปให้หน่อยได้มั๊ย{q}', 'chûai tàai-rûup hâi nɔ̀i dâi mái {q}',
+                   [_c('ช่วยถ่ายรูปให้หน่อยได้มั๊ย{q}', 'chûay tàai-rûup hâi nɔ̀y dâi mái {q}',
                        'Could you take a photo for me?', 'good',
                        'ได้ครับ (dâi kráp). He crouches low to fit the whole tower in.'),
                     _c('ถ่ายรูป{s}', 'tàai-rûup {s}', 'Take photo.', 'ok',
@@ -410,7 +410,7 @@ TRIPS = [
                     _c('ห้อง{s}', 'hɔ̂ɔŋ {s}', 'Room.', 'miss',
                        'A room? He looks around for a hotel.')],
                    ('ช่วย…หน่อย: the polite favour',
-                    'Put ช่วย (chûai, "help") before a verb and หน่อย (nɔ̀i, "a little") after '
+                    'Put ช่วย (chûay, "help") before a verb and หน่อย (nɔ̀y, "a little") after '
                     'it, and any request becomes a polite favour.')),
             _scene(4, 'Sampheng Lane, Chinatown', 'Sampheng market',
                    'Before dinner you squeeze into สำเพ็ง (sǎm-peŋ), Chinatown’s oldest '
@@ -425,7 +425,7 @@ TRIPS = [
                     _c('ลดได้มั๊ย{q}', 'lót dâi mái {q}', 'Can you lower the price?', 'ok',
                        'She shakes her head for one, then holds up three fingers. Here the '
                        'discount comes from buying more.'),
-                    _c('อร่อย{s}', 'à-rɔ̀i {s}', 'Delicious.', 'miss',
+                    _c('อร่อย{s}', 'à-rɔ̀y {s}', 'Delicious.', 'miss',
                        'She looks at the keyrings, then at you. Please don’t eat them.')],
                    ('Wholesale Thai',
                     'อัน (an) is the counting word for small objects. In wholesale markets '
@@ -501,7 +501,7 @@ TRIPS = [
                        'Do you sell bicycles?', 'ok',
                        'He blinks. ขาย is "sell". You only want it for the afternoon. '
                        'เช่า (châo) is "hire".'),
-                    _c('จักรยานสวย{s}', 'jàk-grà-yaan sǔai {s}', 'Bicycle beautiful.', 'miss',
+                    _c('จักรยานสวย{s}', 'jàk-grà-yaan sǔay {s}', 'Bicycle beautiful.', 'miss',
                        'He agrees it is a nice bike, and waits for the actual question.')],
                    ('ได้มั๊ย: can I?',
                     'Put ได้มั๊ย (dâi mái) after almost anything to ask if it is allowed or '
@@ -544,7 +544,7 @@ TRIPS = [
                    'eat it with your right hand. After the first mouthful the cook asks '
                    'what you think.',
                    'Tell her it is delicious.',
-                   [_c('อร่อยมาก{s}', 'à-rɔ̀i mâak {s}', 'Very delicious.', 'good',
+                   [_c('อร่อยมาก{s}', 'à-rɔ̀y mâak {s}', 'Very delicious.', 'good',
                        'She is pleased. Then she teaches you the Isan word: แซ่บ (sɛ̂ɛp).'),
                     _c('แซ่บ{s}', 'sɛ̂ɛp {s}', 'Delicious! (Isan word)', 'good',
                        'Her face lights up. You just used the local word, and everyone at '
@@ -555,7 +555,7 @@ TRIPS = [
                     'Isan has its own language, close to Lao. แซ่บ (sɛ̂ɛp) is "delicious" '
                     'there, and Thais from every region know it. Use it in the northeast '
                     'and people will smile.'),
-                   who='Cook', thai='อร่อยมั๊ยคะ', paiboon='à-rɔ̀i mái ká',
+                   who='Cook', thai='อร่อยมั๊ยคะ', paiboon='à-rɔ̀y mái ká',
                    english='Is it good?'),
         ],
     },
@@ -620,7 +620,7 @@ TRIPS = [
                    'Ask if they have a room free.',
                    [_c('มีห้องว่างมั๊ย{q}', 'mii hɔ̂ɔŋ wâaŋ mái {q}', 'Do you have a free room?', 'good',
                        'มีค่ะ (mii kâ), "We have." She asks: ห้องแอร์หรือห้องพัดลม, "Air-con or fan?"'),
-                    _c('ห้องสวย{s}', 'hɔ̂ɔŋ sǔai {s}', 'Room beautiful.', 'miss',
+                    _c('ห้องสวย{s}', 'hɔ̂ɔŋ sǔay {s}', 'Room beautiful.', 'miss',
                        'She thanks you, but you still have not asked for one.'),
                     _c('กุญแจ{s}', 'gun-jɛɛ {s}', 'Key.', 'ok',
                        'She laughs. You skipped a step. Ask if there is a room first.')],
@@ -720,10 +720,10 @@ TRIPS = [
                    [_c('เจ็บเท้า{s}', 'jèp táao {s}', 'My foot hurts.', 'good',
                        'She looks and nods. Not a hospital job. She tells you there is a '
                        'pharmacy, ร้านขายยา, on the walking street.'),
-                    _c('ช่วยด้วย', 'chûai dûai', 'Help!', 'ok',
+                    _c('ช่วยด้วย', 'chûay dûay', 'Help!', 'ok',
                        'She runs over, then sees the cut. Use ช่วยด้วย when it is serious. '
                        'For a cut foot, say what hurts.'),
-                    _c('สวยมาก{s}', 'sǔai mâak {s}', 'Very beautiful.', 'miss',
+                    _c('สวยมาก{s}', 'sǔay mâak {s}', 'Very beautiful.', 'miss',
                        'She agrees the cliffs are lovely. Your foot is still bleeding.')],
                    ('เจ็บ + body part',
                     'เจ็บ (jèp) is "hurt". Add the body part: เจ็บเท้า foot, เจ็บหัว head, '
@@ -819,7 +819,7 @@ TRIPS = [
                        'He nods, and tells you the war cemetery in town is worth a quiet visit.'),
                     _c('มาจาก...{s}', 'maa jàak … {s}', 'I’m from… (your country)', 'good',
                        'มาจาก + your country. He nods and asks if this is your first time here.'),
-                    _c('อร่อยมาก{s}', 'à-rɔ̀i mâak {s}', 'Very delicious.', 'miss',
+                    _c('อร่อยมาก{s}', 'à-rɔ̀y mâak {s}', 'Very delicious.', 'miss',
                        'He waits politely. That did not answer his question.')],
                    ('Where are you from?',
                     'มาจากไหน (maa jàak nǎi) and the answer มาจาก + country is one of the '
@@ -835,7 +835,7 @@ TRIPS = [
                        'สิบโมง (sìp mooŋ), "Ten o’clock." Story time, like story money. Check on the day.'),
                     _c('รถเท่าไหร่{q}', 'rót tâo-rài {q}', 'How much is the bus?', 'ok',
                        'Useful, and he tells you. But you still do not know when it goes.'),
-                    _c('รถสวย{s}', 'rót sǔai {s}', 'The bus is beautiful.', 'miss',
+                    _c('รถสวย{s}', 'rót sǔay {s}', 'The bus is beautiful.', 'miss',
                        'He looks at the old orange bus and laughs.')],
                    ('กี่โมง: what time?',
                     'กี่ (gìi) asks "how many", โมง (mooŋ) is the daytime hour. So กี่โมง is '
@@ -866,7 +866,7 @@ TRIPS = [
                        'He laughs even more, and shouts it to his sister.'),
                     _c('เจ็บ{s}', 'jèp {s}', 'It hurts.', 'ok',
                        'He looks worried. They are tiny fish. They don’t really hurt.'),
-                    _c('ช่วยด้วย', 'chûai dûai', 'Help!', 'miss',
+                    _c('ช่วยด้วย', 'chûay dûay', 'Help!', 'miss',
                        'The ranger looks up. Not for fish.')],
                    ('A fun word',
                     'จั๊กจี้ (ják-gà-jîi) means "ticklish". It is one of those words Thai '

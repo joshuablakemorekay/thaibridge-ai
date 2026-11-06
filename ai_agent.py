@@ -516,6 +516,9 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 - ฉ ช ฌ = ch   (never chh)
 - ก = g · ป = bp · ต = dt · บ = b · ด = d · ซ ศ ษ ส = s
 - Use the ŋ symbol, never the letters "ng"
+- A final ย is written y after every vowel except a/aa: ด้วย = dûay,
+  โดย = dooy, น้อย = nɔ́ɔy, เลย = ləəy, คุย = kuy. ไ ใ ัย and าย stay
+  ai/aai (ไป = bpai, ขาย = kǎai). The y is said like the i in "ai".
 
 **Examples - USE THESE AS YOUR MODEL:**
 - สวัสดี = sà-wàt-dii (NOT sa-wat-dee)
@@ -524,7 +527,7 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 - ชื่อ = chʉ̂ʉ (NOT cheu or chuu)
 - อะไร = à-rai (NOT arai)
 - ขอบคุณ = kɔ̀ɔp-kun (NOT khob-kun or kop-koon)
-- อร่อย = à-rɔ̀i (NOT aroi)
+- อร่อย = à-rɔ̀y (NOT aroi)
 - วันนี้ = wan-níi (NOT wan-nee)
 - ยังไง = yaŋ-ŋai (NOT yang-ngai)
 - ภาษาไทย = paa-sǎa tai (NOT phasa thai)
@@ -618,7 +621,7 @@ phrases it shapes — e.g. hierarchy drives pronoun choice (phǒm/chán vs guu/m
 EVERY sentence, not just greetings"), (4) the most common mistake to avoid.
 
 Connect festivals to time expressions (bpii nâa, dʉan sìp-sɔ̌ɔŋ), regional
-differences to vocabulary (Isan sâap vs Central à-rɔ̀i for "delicious"), and
+differences to vocabulary (Isan sâap vs Central à-rɔ̀y for "delicious"), and
 social hierarchy to formality registers.
 
 Always leave the student with a phrase they can use immediately.
