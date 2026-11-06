@@ -129,8 +129,11 @@
     /* Contents, in two columns like the chants. */
     .contents { break-after: page; }
     .contents h1 { font-size: 14pt; font-weight: 600; margin: 0 0 4mm; }
-    .contents .toc { column-count: 2; column-gap: 9mm; }
-    .toc-section { font-weight: 600; margin: 3.5mm 0 1mm; break-after: avoid; }
+    .contents .toc { max-width: 165mm; }
+    .toc-part { font-size: 12pt; font-weight: 700; margin: 5mm 0 1.5mm; break-after: avoid; }
+    .toc-part-no { margin-right: 2mm; }
+    .toc-spelling { font-size: 7.5pt; }
+    .toc-no { flex: 0 0 7mm; text-align: right; padding-right: 1.5mm; }
     .toc-entry {
         display: flex;
         align-items: baseline;
@@ -140,7 +143,7 @@
         break-inside: avoid;
     }
     .toc-entry .toc-title { flex: 0 1 auto; }
-    .toc-entry .toc-title .thai { display: block; font-size: 8.5pt; }
+    .toc-entry .toc-title .thai { display: block; font-size: 8pt; color: #444; }
     .toc-entry .toc-dots { flex: 1 1 auto; border-bottom: 1px dotted #888; min-width: 4mm; }
     .toc-entry .toc-page { flex: 0 0 7mm; text-align: right; font-variant-numeric: tabular-nums; }
 
@@ -150,6 +153,7 @@
         text-align: center;
         padding: 30mm 0 12mm;
     }
+    .part-heading .part-no { display: block; font-size: 13pt; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 3mm; }
     .part-heading .thai { font-size: 18pt; font-weight: 600; display: block; }
     .part-heading .en { font-size: 12pt; display: block; margin-top: 2mm; }
 
@@ -192,6 +196,40 @@
         break-after: avoid;
     }
     .verses { column-count: 2; column-gap: 8mm; }
+    /* Ajarn Owen's chants: a separate book at the back. */
+    .owen-title { font-size: 15pt; }
+    .owen-note { max-width: 120mm; margin: 6mm auto 0; font-size: 9.5pt; font-style: italic; }
+    .owen-chant { break-before: page; }
+    .owen-h { font-size: 15pt; font-weight: 700; margin: 0; text-align: center; }
+    .owen-sub { font-size: 11.5pt; font-weight: 600; text-align: center; margin-top: 1mm; }
+    .owen-src { font-size: 7.5pt; color: #555; text-align: center; margin: 1mm 0 4mm; }
+    .o-intro { text-align: center; }
+    .o-intro-en { text-align: center; margin-bottom: 3mm; }
+    .owen-section { font-size: 11pt; font-weight: 700; margin: 5mm 0 1mm; break-after: avoid; }
+    .owen-section-note { font-size: 9pt; font-style: italic; margin: 0 0 2mm; }
+    .owen-lines { column-count: 2; column-gap: 8mm; }
+    .o-line { display: grid; grid-template-columns: 7mm minmax(0, 1fr); margin: 0 0 2mm; break-inside: avoid; }
+    .o-num { font-size: 7.5pt; color: #555; text-align: right; padding: 0.6mm 1.5mm 0 0; }
+    .o-role { display: block; font-size: 7pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #444; }
+    .o-pali { font-size: 9.5pt; font-weight: 600; margin: 0; }
+    .o-english { font-size: 8.5pt; margin: 0; }
+    .owen-closing { text-align: center; font-weight: 700; margin: 3mm 0 0; }
+    .owen-intro { max-width: 150mm; margin: 0 0 3mm; font-size: 9pt; font-style: italic; }
+    .owen-intro p { margin: 0 0 1.5mm; }
+    .owen-meaning { column-span: all; margin: 2mm 0 4mm; font-size: 8.5pt; max-width: 165mm; }
+    .owen-meaning p { margin: 0 0 1.5mm; }
+    .owen-prose { column-count: 1; }
+    .owen-prose .verse { break-inside: auto; grid-template-columns: 7mm minmax(0, 1fr); margin-bottom: 2.6mm; }
+    .owen-prose .verse .l-pali_roman { font-size: 9.5pt; }
+    .owen-prose .verse .l-english { margin-top: 0.8mm; }
+    .owen-after { font-size: 9.5pt; font-style: italic; margin: 3mm 0 0 7mm; }
+    /* A verse chant: one full-width column, each verse line in two halves. */
+    .verses-wide { column-count: 1; }
+    .verses-wide .verse { max-width: 150mm; }
+    .half-pair { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+    /* A Thai-script Pali word is never broken mid-word; see pali_words(). */
+    .nw { white-space: nowrap; }
+    .l-pali { hyphens: manual; }
 
     .verse {
         display: grid;
@@ -239,9 +277,18 @@
 </style>
 </head>
 <body>
-{% macro layers(v) %}
-    {% if v.pali %}<p class="l-pali">{{ v.pali }}</p>{% endif %}
+{% macro layers(v, wide=False) %}
+    {% set h = v|halves if wide else None %}
+    {% if h %}
+    {# A verse line set as two half-lines, left and right (Ajarn Owen's layout). #}
+    <div class="half-pair">
+        <p class="l-pali">{{ h[0]|pali_words }}</p><p class="l-pali">{{ h[1]|pali_words }}</p>
+        <p class="l-pali_roman">{{ h[2] }}</p><p class="l-pali_roman">{{ h[3] }}</p>
+    </div>
+    {% else %}
+    {% if v.pali %}<p class="l-pali">{{ v.pali|pali_words }}</p>{% endif %}
     {% if v.pali_roman %}<p class="l-pali_roman">{{ v.pali_roman }}</p>{% endif %}
+    {% endif %}
     {% if v.thai %}<p class="l-thai">{{ v.thai }}</p>{% endif %}
     {% if v.paiboon %}<p class="l-paiboon">{{ v.paiboon|book_spelling }}</p>{% endif %}
     {% if v.english %}<p class="l-english">{{ v.english }}</p>{% endif %}
@@ -452,20 +499,35 @@
     refuge.</p>
 </section>
 
-{# ── Contents ── #}
+{# ── Contents ── Bold numbered Parts (Ajarn Owen's book), numbered
+   "Pali title: English title" entries (Ajarn Sujan's), the Thai title small
+   beneath so it matches the temple book. Order is the temple book's. #}
 <section class="contents">
     <h1>Contents</h1>
     <div class="toc">
     {% for part in parts %}
-    {% if part.heading %}<div class="toc-section">{% if part.heading.title %}<span class="thai">{{ part.heading.title }}</span> — {% endif %}{{ part.heading.title_english }}</div>{% endif %}
+    {% if part.heading %}<div class="toc-part"><span class="toc-part-no">Part {{ part.number }}</span> {{ part.name }}</div>{% endif %}
     {% for chant in part.chants %}
+    {% set roman = chant.title_pali or (chant.title_roman|book_spelling) %}
     <div class="toc-entry">
-        <span class="toc-title">{{ chant.title_english or chant.title_pali or chant.title_roman|book_spelling }}<span class="thai">{{ chant.title_thai }}</span></span>
+        <span class="toc-no">{{ loop.index }}.</span>
+        <span class="toc-title">{% if roman %}{% if chant.title_pali or roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %}<em>{{ roman }}</em>{% else %}<span class="spelling toc-spelling">{{ roman }}</span>{% endif %}{% if chant.title_english %}: {% endif %}{% endif %}{{ chant.title_english }}<span class="thai">{{ chant.title_thai }}</span></span>
         <span class="toc-dots"></span>
         <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
     </div>
     {% endfor %}
     {% endfor %}
+    {% if owen_chants %}
+    <div class="toc-part"><span class="toc-part-no">Part {{ owen_part }}</span> From {{ owen_book }}</div>
+    {% for chant in owen_chants %}
+    <div class="toc-entry">
+        <span class="toc-no">{{ loop.index }}.</span>
+        <span class="toc-title"><em>{{ chant.title }}</em>: {{ chant.title_english }}</span>
+        <span class="toc-dots"></span>
+        <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
     </div>
 </section>
 
@@ -473,8 +535,9 @@
 {% for part in parts %}
 {% if part.heading %}
 <div class="part-heading">
+    {% if part.number %}<span class="part-no">Part {{ part.number }}</span>{% endif %}
     <span class="thai">{{ part.heading.title }}</span>
-    {% if part.heading.title_english %}<span class="en">{{ part.heading.title_english }}</span>{% endif %}
+    <span class="en">{{ part.name or part.heading.title_english }}</span>
 </div>
 {% endif %}
 
@@ -509,7 +572,8 @@
 
     <div class="the-chant-label">The chant</div>
 
-    <div class="verses">
+    {% set wide = chant|is_verse_chant %}
+    <div class="verses{% if wide %} verses-wide{% endif %}">
     {% if chant.invitation and chant.invitation.pali %}
     <div class="verse"><span class="num"></span><div class="lines">
         <span class="label">Invitation</span>
@@ -520,7 +584,7 @@
     {% for verse in chant.verses %}
     {% if verse.section %}<div class="verse-section">{{ verse.section }}</div>{% endif %}
     <div class="verse"><span class="num">{{ verse.number }}</span><div class="lines">
-        {{ layers(verse) }}
+        {{ layers(verse, wide) }}
         {% for variant in verse.variants %}
         <p class="variant">{{ variant.marker }} <span class="thai">{{ variant.word }}</span> — the book's footnote gives another reading: <span class="thai">{{ variant.reading }}</span>{% if variant.reading_roman %} ({{ variant.reading_roman }}){% endif %}</p>
         {% endfor %}
@@ -540,6 +604,59 @@
 {% endfor %}
 
 {# ── Credit, on the last page of the book ── #}
+{# ── A separate book at the back: chants from Ajarn Owen's chanting book
+   that the temple book does not have (Josh, 2026-11-06). Romanised Pali and
+   English as he prints them; his book has no Thai-script Pali. #}
+{% if owen_chants %}
+<div class="part-heading">
+    <span class="part-no">Part {{ owen_part }}</span>
+    <span class="en owen-title">From {{ owen_book }}</span>
+    <p class="owen-note">Chants from {{ owen_book }}, given in romanised Pali
+    and English as he prints them, with thanks to Ajarn Owen: his Sekhiyavatta,
+    and chants the Wat Mahathat United Kingdom book does not include.</p>
+</div>
+{% for chant in owen_chants %}
+<article class="chant owen-chant">
+    {# Set exactly like the book's Pali-only chants: Thai-script Pali,
+       romanised Pali, English (Josh, 2026-11-06). #}
+    <header class="chant-head">
+        <span class="locator">{{ locator(chant.id) }}</span>
+        <span class="title-thai thai">{{ chant.title_thai }}</span>
+        <span class="title-pali">{{ chant.title }}</span>
+        <span class="title-english">{{ chant.title_english }}</span>
+        <div class="meta">{{ owen_book }}, pages {{ chant.source_pages }}</div>
+    </header>
+    {% if chant.introduction %}<div class="owen-intro">{% for p in chant.introduction %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
+    <div class="the-chant-label">The chant</div>
+    {# A prose sutta (long paragraphs) is set full width and may break across
+       pages, like a normal book page; verse stays in the two-column style. #}
+    {% set lines = chant.sections|map(attribute='lines')|sum(start=[]) %}
+    {% set prose = (lines|map(attribute='pali_roman')|map('length')|sum) > 150 * (lines|length) %}
+    <div class="verses{% if prose %} owen-prose{% endif %}">
+    {% for line in chant.intro %}
+    <div class="verse"><span class="num"></span><div class="lines">{{ layers(line) }}</div></div>
+    {% endfor %}
+    {% for section in chant.sections %}
+    {% if section.heading %}<div class="verse-section">{{ section.heading }}</div>{% endif %}
+    {% if section.note %}<p class="owen-section-note">{{ section.note }}</p>{% endif %}
+    {% for line in section.lines %}
+    <div class="verse"><span class="num">{{ line.n }}</span><div class="lines">
+        {% if line.role or line.label %}<span class="label">{{ line.role or line.label }}</span>{% endif %}
+        {{ layers(line) }}
+    </div></div>
+    {% endfor %}
+    {% if section.closing %}
+    <div class="verse closing"><span class="num"></span><div class="lines">{{ layers(section.closing) }}</div></div>
+    {% endif %}
+    {% if section.after %}<p class="owen-after">{{ section.after }}</p>{% endif %}
+    {% if section.meaning %}<div class="owen-meaning"><span class="label">English meaning</span>{% for p in section.meaning %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
+    {% endfor %}
+    </div>
+    {% if chant.meaning %}<div class="owen-meaning"><span class="label">English meaning</span>{% for p in chant.meaning %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
+</article>
+{% endfor %}
+{% endif %}
+
 {% if pad_blank %}<section class="blank-page"></section>{% endif %}
 <section class="credit-page">
     <p>This study edition was prepared by</p>
