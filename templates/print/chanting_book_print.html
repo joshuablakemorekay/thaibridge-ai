@@ -111,6 +111,7 @@
     .imprint p { margin: 0 auto 4mm; max-width: 120mm; line-height: 1.55; }
     .imprint .i-title { font-size: 12pt; font-weight: 600; }
     .imprint .i-gap { margin-top: 10mm; }
+    .imprint .i-permission { margin-top: 7mm; font-size: 9.5pt; }
     .imprint .i-quote { font-size: 9.5pt; }
     .imprint .i-cite { font-size: 8.5pt; color: #444; }
     .imprint .i-small { margin-top: 12mm; font-size: 8pt; color: #333; }
@@ -261,8 +262,8 @@
 
 {# ── Publishing page ── the back of the title page. Publisher is Pra Joshua
    himself, not SMOALD: this is a free Dhamma book, not a business product
-   (Josh, 2026-11-06). Add a "by kind permission of Wat Mahathat UK" line
-   only once that permission has actually been given. #}
+   (Josh, 2026-11-06). Permission given 2026-11-06 by Phra Rajawithetpanyakhun;
+   his name and title are as Josh supplied them. #}
 <section class="front imprint">
     <p class="i-title">{{ book.title_english }}<br>
     <span class="thai">{{ book.title_thai }}</span></p>
@@ -272,6 +273,11 @@
     <strong>Pra Joshua Vajira Panyo</strong></p>
 
     <p>Based on the chanting book of<br>Wat Mahathat United Kingdom</p>
+
+    <p class="i-permission">Published with the kind permission of<br>
+    <strong>the Most Venerable Phra Rajawithetpanyakhun<br>(Dr Laow Panyasiri)</strong><br>
+    Abbot of Buddhapadipa Temple, London<br>
+    President of the Council of Thai Dhammaduta Monks<br>in the United Kingdom and Ireland</p>
 
     <p>First edition, 2026</p>
 
@@ -329,6 +335,16 @@
         <li><span class="sample l-paiboon">kam bplae paa-sǎa tai</span>The Thai in ThaiBridge Spelling, to read it aloud</li>
         <li><span class="sample l-english">The meaning in English</span>The English translation</li>
     </ul>
+
+    {# Names exactly as Josh gave them (2026-11-06); not to be "corrected". #}
+    <h1 class="front-heading">With thanks</h1>
+    <p>To <strong>Pra Maha Napon Pāraṭinṇo Petwichian</strong>, for checking the
+    Thai for accuracy.</p>
+    <p>To <strong>Ven. Pra Juab Katabhunyo Kraikhao</strong>, for his help with
+    some of the chanting pages and the Pali.</p>
+    <p>And to <strong>the Most Venerable Phra Rajawithetpanyakhun (Dr Laow
+    Panyasiri)</strong>, Abbot of Buddhapadipa Temple, London, for his kind
+    permission to publish this edition.</p>
 </section>
 
 {# ── A guide to pronunciation ── Pali first, then ThaiBridge Spelling.
