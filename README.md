@@ -1,4 +1,6 @@
-# 🪷 ThaiBridge AI
+<p align="center"><img src="static/img/brand/logo-large.png" alt="ThaiBridge AI logo" width="520"></p>
+
+# ThaiBridge AI
 
 **Building a live, paid, AI-powered language-learning SaaS as my first web app — and proving every risky part actually works.**
 

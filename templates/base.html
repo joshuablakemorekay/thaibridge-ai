@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ThaiBridge AI{% endblock %}</title>
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ static_v('img/brand/favicon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ static_v('img/brand/icon-192.png') }}">
+    <link rel="apple-touch-icon" href="{{ static_v('img/brand/apple-touch-icon.png') }}">
 
     <!-- Font Imports for Proper Unicode Support -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +35,7 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo"><span>🪷</span> ThaiBridge AI</a>
+            <a href="/" class="logo"><img src="{{ static_v('img/brand/logo.png') }}" alt="ThaiBridge AI" width="315" height="48"></a>
             
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             

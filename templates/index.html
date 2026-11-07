@@ -8,7 +8,7 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1 class="main-title">
-                <span class="brand-title">🪷 ThaiBridge AI</span>
+                <span class="brand-title"><img src="{{ static_v('img/brand/logo-large.png') }}" alt="ThaiBridge AI" width="655" height="100"></span>
                 <span class="brand-strapline">Learn the Dhamma. Learn Thai. Find Your Own Path.</span>
                 <span class="brand-tagline">ศึกษาพระธรรม เรียนภาษาไทย พบหนทางของตนเอง</span>
             </h1>
@@ -450,11 +450,23 @@
         margin-bottom: 2rem;
     }
 
+    /* The logo is red and gold designed for white, so it sits on a white
+       badge rather than straight onto the dark hero photo. */
     .brand-title {
-        font-size: 3rem;
-        color: var(--royal-gold);
-        font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        display: inline-block;
+        align-self: center;
+        margin: 0 auto;
+        width: fit-content;
+        background: #fff;
+        border-radius: 18px;
+        padding: 0.6rem 1.4rem;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+        line-height: 0;
+    }
+    .brand-title img {
+        display: block;
+        width: min(520px, 70vw);
+        height: auto;
     }
 
     /* The strapline sits inside the <h1> but a step down in size: at the
@@ -732,7 +744,6 @@
     }
 
     @media (max-width: 768px) {
-        .brand-title,
         .thai-title {
             font-size: 2rem;
         }
