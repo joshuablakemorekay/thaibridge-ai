@@ -24,7 +24,7 @@ Two conventions, both borrowed from thai_consonants.py:
     stand in for "any consonant", the way Thai teaching materials print it.
 
 ✅ REVIEWED THAI — the WORDS and STORIES sections below were first drafts,
-then checked by a native Thai teacher (November 2026) with no corrections,
+then checked by Phramaha Wichet Suvaddano Sriprom (November 2026) with no corrections,
 dharma content included.
 """
 
@@ -171,7 +171,7 @@ DHARMA_WORDS = [
 # Order matters — the page shows them in this order and the first is the default,
 # so they run easiest-first.
 #
-# Thai and romanisation below began as a first pass and were checked by a native Thai teacher (November 2026).
+# Thai and romanisation below began as a first pass and were checked by Phramaha Wichet Suvaddano Sriprom (November 2026).
 
 def _tok(thai, paiboon, english):
     return {'thai': thai, 'paiboon': paiboon, 'english': english}

@@ -7,7 +7,7 @@
     "en": "Receiving offerings and giving thanks — generosity, merit, blessings and the dedication of merit that flow between saṅgha and laity.",
     "th": "การรับของถวายและการอนุโมทนา — ทาน บุญ การให้พร และการอุทิศบุญระหว่างพระกับโยม"
   },
-  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "_review_note": "Reviewed by Phramaha Wichet Suvaddano Sriprom (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "ทาน", "paiboon": "taan", "english": "giving / generosity", "english_respell": "je-nuh-RO-si-tee", "english_tip_th": "ห้าพยางค์ เน้นที่ RO — J ก้อง ไม่ใช่ จ — R ห่อลิ้นไม่แตะเพดาน ไม่ใช่ ร ไทย", "english_ipa": "/ˌdʒɛnəˈrɒsɪti/", "pali": "dāna", "note": "The practice of giving.", "note_th": "การให้ทาน" },

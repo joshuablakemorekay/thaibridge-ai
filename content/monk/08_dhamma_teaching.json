@@ -7,7 +7,7 @@
     "en": "Core words for teaching and practice — the Dhamma, giving a talk, and key terms a monk uses and explains.",
     "th": "คำหลักในการสอนและการปฏิบัติ — ธรรมะ การเทศน์ และคำสำคัญที่พระใช้และอธิบาย"
   },
-  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "_review_note": "Reviewed by Phramaha Wichet Suvaddano Sriprom (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "ธรรมะ", "paiboon": "tam-má", "english": "the Dhamma / teaching", "english_respell": "DAA-muh", "english_tip_th": "ในภาษาอังกฤษออกเป็น D ธรรมดา ไม่ใช่ TH — เน้นพยางค์แรก สระ AA ยาวเหมือน -า", "english_ipa": "/ˈdɑːmə/", "pali": "dhamma", "note": "The Buddha's teaching; the truth.", "note_th": "คำสอนของพระพุทธเจ้า" },

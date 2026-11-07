@@ -45,7 +45,7 @@ Same rule as the trips: Wikimedia Commons, CC BY / BY-SA / CC0 only, credited
 on the page, shrunk to 1000px WebP in static/img/tour/.
 
 ✅ REVIEWED THAI — first drafted, spelling-checked against the reviewed
-lessons on 2026-10-20, then checked by a native Thai teacher (November 2026) with no
+lessons on 2026-10-20, then checked by Phramaha Wichet Suvaddano Sriprom (November 2026) with no
 corrections, like the trips.
 """
 from urllib.parse import quote, urlencode, urlsplit, urlunsplit, parse_qsl

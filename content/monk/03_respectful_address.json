@@ -7,7 +7,7 @@
     "en": "How monks and laypeople address one another — titles, respectful pronouns, and the special register of monastic speech.",
     "th": "พระกับโยมเรียกขานกันอย่างไร — คำนำหน้า สรรพนามสุภาพ และภาษาที่พระใช้"
   },
-  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. Tones to double-check: ท่าน (I used falling 'tâan'; your dict showed low 'tàan').",
+  "_review_note": "Reviewed by Phramaha Wichet Suvaddano Sriprom (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. Tones to double-check: ท่าน (I used falling 'tâan'; your dict showed low 'tàan').",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
     { "thai": "อาตมา", "paiboon": "àat-dtà-maa", "english": "I (a monk's word for 'I')", "english_respell": "AI", "english_tip_th": "สระ AI เหมือน ไ — เป็นคำเดียวสั้น ๆ แต่ในประโยคมักไม่เน้นเสียง", "english_ipa": "/aɪ/", "pali": "", "note": "Used by a monk when speaking to laypeople.", "note_th": "พระใช้แทนตัวเมื่อพูดกับโยม — ภาษาอังกฤษไม่มีคำแยกสำหรับพระ ใช้ I เหมือนกันทุกคน" },

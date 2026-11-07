@@ -89,7 +89,7 @@ class TestTheAudioStrings:
 
 class TestHowItIsPresented:
     def test_the_review_note_is_shown(self, client):
-        """The Thai here was a draft until a native Thai teacher reviewed it
+        """The Thai here was a draft until Phramaha Wichet Suvaddano Sriprom reviewed it
         (November 2026). The page says so, and no longer says 'draft'."""
         body = client.get('/survival').get_data(as_text=True)
         assert 'Checked by a native speaker' in body

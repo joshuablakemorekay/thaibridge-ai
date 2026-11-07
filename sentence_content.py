@@ -302,7 +302,7 @@ SENTENCE_PATTERNS = {
     # never replying to it, and the reply is where Thai differs most from
     # English: there is no all-purpose "yes" or "no". The bare rules for ไม่
     # live on the Grammar page (Negation); this is them in use, as replies.
-    # Thai checked by a native Thai teacher (November 2026).
+    # Thai checked by Phramaha Wichet Suvaddano Sriprom (November 2026).
     'answering': {
         'title': 'Answering Questions — Yes, No & Not Yet',
         'explanation': 'Thai has no single word for "yes" or "no". You answer by '
@@ -410,7 +410,7 @@ SENTENCE_PATTERNS = {
     },
 
     # Joining two ideas into one longer sentence — the step after single
-    # patterns. Thai checked by a native Thai teacher (November 2026).
+    # patterns. Thai checked by Phramaha Wichet Suvaddano Sriprom (November 2026).
     'joining': {
         'title': 'Joining Ideas — Longer Sentences',
         'explanation': 'Real conversation strings ideas together. These linking words turn two short sentences into one longer one — and Thai keeps the same word order inside each half, so everything above still applies.',
@@ -842,7 +842,7 @@ CONVERSATIONS = {
     },
 
     # ── Phase 2 additions (2026-07-23) — Thai, including the Dhamma
-    # dialogues' monastic register, checked by a native Thai teacher (November 2026). ──
+    # dialogues' monastic register, checked by Phramaha Wichet Suvaddano Sriprom (November 2026). ──
     'taxi': {
         'title': 'Taking a Taxi (นั่งแท็กซี่)',
         'setting': 'Getting a taxi to a destination and paying by the meter',
@@ -917,7 +917,7 @@ CONVERSATIONS = {
 
 # The "glue" of real conversation — the phrases textbooks skip that keep talk
 # moving when you don't catch every word. Grouped for the Sentences page.
-# Drafted 2026-07-23, checked by a native Thai teacher (November 2026). Particles shown with
+# Drafted 2026-07-23, checked by Phramaha Wichet Suvaddano Sriprom (November 2026). Particles shown with
 # ครับ (male speaker); a female speaker swaps ครับ -> ค่ะ, as the first group notes.
 CONVERSATIONAL_PHRASES = [
     {

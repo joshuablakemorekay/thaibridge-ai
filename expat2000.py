@@ -25,7 +25,7 @@ went from 60 days to 30 on 15 September 2026, and most guides online still say
 date, and keep pointing people at the official sources in OFFICIAL_LINKS rather
 than presenting this page as the authority.
 
-✅ REVIEWED THAI — drafted first, then checked by a native Thai teacher (November 2026)
+✅ REVIEWED THAI — drafted first, then checked by Phramaha Wichet Suvaddano Sriprom (November 2026)
 with no corrections, same as survival.py. The FACTS still go stale: see
 LAST_CHECKED.
 """

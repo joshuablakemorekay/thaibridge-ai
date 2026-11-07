@@ -21,7 +21,7 @@ Placeholders let one entry serve both speakers:
     {q}  ครับ / คะ           question particle (women's rises: คะ, not ค่ะ) —
                              also after นะ, where women say นะคะ
 
-Thai checked by a native Thai teacher (November 2026), like the rest of the
+Thai checked by Phramaha Wichet Suvaddano Sriprom (November 2026), like the rest of the
 Sentences page.
 """
 

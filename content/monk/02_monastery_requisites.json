@@ -7,7 +7,7 @@
     "en": "The places of a monastery and the basic requisites of monastic life — robes, alms-food, lodging and medicine. Names a monk uses every day.",
     "th": "สถานที่ต่าง ๆ ในวัด และปัจจัยสี่ของการเป็นพระ — จีวร บิณฑบาต ที่อยู่ และยา คำที่พระใช้ทุกวัน"
   },
-  "_review_note": "Reviewed by a native Thai teacher (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. NOTE: วัด tone — I used high 'wát' (standard for 'temple'); your dictionary showed low 'wàt' in a different compound — please confirm which the app should use.",
+  "_review_note": "Reviewed by Phramaha Wichet Suvaddano Sriprom (November 2026) with no corrections, so the choices noted below stand. Original note: DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. NOTE: วัด tone — I used high 'wát' (standard for 'temple'); your dictionary showed low 'wàt' in a different compound — please confirm which the app should use.",
   "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Tip rule: sounds Thai HAS are anchored to Thai script; sounds Thai LACKS get explicit mouth instructions. Josh to verify all Thai.",
   "vocab": [
     { "thai": "วัด", "paiboon": "wát", "english": "temple / monastery", "english_respell": "MO-nuh-stree", "english_tip_th": "เน้นพยางค์แรก MO — สามพยางค์ ไม่ใช่สี่ — ท้ายคำ -STREE มี R ต้องห่อลิ้นไม่แตะเพดาน ไม่ใช่ ร ไทย", "english_ipa": "/ˈmɒnəstri/", "pali": "āvāsa", "note": "A Buddhist temple-monastery.", "note_th": "วัดในพระพุทธศาสนา" },
