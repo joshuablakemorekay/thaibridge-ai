@@ -1,6 +1,6 @@
 # 🪷 ThaiBridge AI
 
-**Building a live, paid, AI-powered language app as my first web app — and proving every risky part actually works.**
+**Building a live, paid, AI-powered language-learning SaaS as my first web app — and proving every risky part actually works.**
 
 [![Live Demo](https://img.shields.io/badge/▶_Live_Demo-thaibridge--ai.smoald.com-brightgreen?style=for-the-badge)](https://thaibridge-ai.smoald.com)
 
