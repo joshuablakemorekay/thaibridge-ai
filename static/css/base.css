@@ -228,15 +228,24 @@
             transform: translateZ(0);
         }
         
-        nav .logo::before {
-            content: '👑';
-            font-size: clamp(1.3rem, 1.0rem + 1.0vw, 1.8rem);
-            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+        /* The logo image is red and gold designed for white, so it sits on a
+           small white badge: straight onto the dark bar the red was hard to read. */
+        nav .logo {
+            background: #fff;
+            border-radius: 12px;
+            padding: 0.3rem 0.75rem;
+            line-height: 0;
         }
 
-        nav .logo span {
-            font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.2rem);
-            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+        /* Keep the badge white on hover (the other nav links turn gold). */
+        nav a.logo:hover {
+            background: #fff;
+        }
+
+        nav .logo img {
+            display: block;
+            height: clamp(28px, 22px + 1.2vw, 40px);
+            width: auto;
         }
         
         nav ul {
