@@ -46,7 +46,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 import chanting  # noqa: E402
 from chanting_print_short import SHORT  # noqa: E402
-from chanting_owen import OWEN_BOOK, OWEN_CHANTS  # noqa: E402
+from chanting_owen import OWEN_BOOK, OWEN_CHANTS, OWEN_GLOSSARY  # noqa: E402
 
 CHROME_PATHS = [
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
@@ -210,6 +210,7 @@ def render_html(template, parts, contents_pages, proof, pad_blank=False):
         parts=parts,
         owen_chants=OWEN_CHANTS,
         owen_book=OWEN_BOOK,
+        glossary=OWEN_GLOSSARY,
         owen_part=sum(1 for p in parts if p.get('number')) + 1,
         contents_pages=contents_pages,
         locator=locator,
@@ -323,6 +324,8 @@ def main():
     # Ajarn Owen's chants are paged too, for the contents, but they are a
     # separate Part from another book and are not chants of chanting.py.
     chant_ids += [c['id'] for c in OWEN_CHANTS]
+    # His word lists close the book and are in the contents too.
+    chant_ids.append(OWEN_GLOSSARY['id'])
 
     with tempfile.TemporaryDirectory() as workdir:
         first = os.path.join(workdir, 'pass1.pdf')

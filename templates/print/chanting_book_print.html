@@ -208,6 +208,14 @@
     .owen-section { font-size: 11pt; font-weight: 700; margin: 5mm 0 1mm; break-after: avoid; }
     .owen-section-note { font-size: 10.5pt; font-style: italic; margin: 0 0 2mm; }
     .owen-lines { column-count: 2; column-gap: 8mm; }
+
+    /* Ajarn Owen's word lists, after his chants. */
+    .glossary { break-before: page; }
+    .glossary h1.front-heading { text-align: center; margin-top: 7mm; }
+    .glossary h1.front-heading:first-of-type { margin-top: 0; }
+    .gl-cols { column-count: 2; column-gap: 8mm; font-size: 10.5pt; }
+    .gl-group { break-inside: avoid; margin: 0 0 3mm; }
+    .gl-group p { margin: 0; line-height: 1.35; }
     .o-line { display: grid; grid-template-columns: 7mm minmax(0, 1fr); margin: 0 0 2mm; break-inside: avoid; }
     .o-num { font-size: 9.5pt; color: #555; text-align: right; padding: 0.6mm 1.5mm 0 0; }
     .o-role { display: block; font-size: 9pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #444; }
@@ -397,7 +405,7 @@
        Ajarn Owen IS Pra Maha Napon. Vassa counts as of 1 November 2026. #}
     <h1 class="front-heading">With thanks</h1>
     <p>To <strong>Pra Maha Napon Pāraṭinṇo Petwichian</strong> (Ajarn Owen),
-    13 vassa (counted as of 1 November 2026), for checking the Thai for accuracy, and for the chants from his
+    Pali Grade 9, 13 vassa (counted as of 1 November 2026), for checking the Thai for accuracy, and for the chants from his
     own chanting book at the back of this edition.</p>
     <p>To <strong>Ven. Pra Juab Katabhunyo Kraikhao</strong>, 4 vassa, for his
     help with some of the chanting pages and the Pali.</p>
@@ -542,6 +550,12 @@
         <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
     </div>
     {% endfor %}
+    <div class="toc-entry">
+        <span class="toc-no"></span>
+        <span class="toc-title">Common Pāli words and their meanings</span>
+        <span class="toc-dots"></span>
+        <span class="toc-page">{{ contents_pages.get(glossary.id, '000') }}</span>
+    </div>
     {% endif %}
     </div>
 </section>
@@ -628,7 +642,7 @@
     <span class="en owen-title">From {{ owen_book }}</span>
     <p class="owen-note">Chants from {{ owen_book }}, given in romanised Pali
     and English as he prints them, with thanks to Ajarn Owen (Pra Maha Napon
-    Pāraṭinṇo Petwichian): his Sekhiyavatta,
+    Pāraṭinṇo Petwichian, Pali Grade 9): his Sekhiyavatta,
     and chants the Wat Mahathat United Kingdom book does not include.</p>
 </div>
 {% for chant in owen_chants %}
@@ -671,6 +685,20 @@
     {% if chant.meaning %}<div class="owen-meaning"><span class="label">English meaning</span>{% for p in chant.meaning %}<p>{{ p }}</p>{% endfor %}</div>{% endif %}
 </article>
 {% endfor %}
+
+{# ── Ajarn Owen's word lists, book pages 295–296 (Josh, 2026-11-07). #}
+<section class="front glossary">
+    <span class="locator">{{ locator(glossary.id) }}</span>
+    {% for list in glossary.lists %}
+    <h1 class="front-heading">{{ list.heading }}</h1>
+    {% if loop.first %}<p class="owen-src">From {{ owen_book }}, pages {{ glossary.source_pages }}</p>{% endif %}
+    <div class="gl-cols">
+    {% for group in list.groups %}
+    <div class="gl-group">{% for e in group %}<p>{{ e.word }} — {{ e.meaning }}</p>{% endfor %}</div>
+    {% endfor %}
+    </div>
+    {% endfor %}
+</section>
 {% endif %}
 
 {% if pad_blank %}<section class="blank-page"></section>{% endif %}

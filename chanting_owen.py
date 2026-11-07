@@ -1753,3 +1753,203 @@ _APP_BY_ID = {c['id']: c for c in APP_CHANTS}
 def get_app_chant(chant_id):
     """One of Ajarn Owen's chants in the app's shape, or None."""
     return _APP_BY_ID.get(chant_id)
+
+
+# ── Common Pali words and their meanings ─────────────────────────────────
+# Ajarn Owen's word lists, book pages 295-296 (Josh's photographs,
+# 2026-11-07). PRINT ONLY, at the back of the book after his chants (Josh's
+# choice). Words and meanings exactly as he prints them; only a stray space
+# before a comma and one hyphen used as a dash were tidied. Each blank line
+# starts a new group, as on his page. His pages set the letter groups in two
+# columns in an order that only works at his page size, so the main list here
+# runs A to Y and the print template flows it into two columns. Still to be
+# proofread against the printed book, like the chants above.
+
+_PALI_WORDS = """
+Ācariya — Teacher, instructor
+Ādīnava — Danger, disadvantage
+Āditta — Burning, on fire
+Āhāra — Food, nutriment
+Ākāsa — Space, sky
+Āloka — Light
+Ānanda — Bliss, joy, Pleasure
+Ārammaṇa — Object (of mind)
+Ārāma — Monastery, park
+Ārogya — Health, freedom from illness
+Āsana — Seat
+Āsava — Mental influx, defilement
+Ātāpa — Effort, exertion
+Ātura — Sick, afflicted
+Āyu — Life, lifespan
+
+Bala — Strength, power
+Bhagavā — The Blessed One (the Buddha)
+Bhāvanā — Meditation, development
+Bhaya — Fear
+Bhikkhu — Monk
+Bhikkhunī — Female Monk
+Bhoga — Wealth, enjoyment
+Bhojana — Food
+Bodhi — Enlightenment
+Bojjhaṅga — Factors of enlightenment
+Brahma — Divine being
+Brahmacariya — Holy life, spiritual practice
+Buddha — The Enlightened One
+
+Cakkhu — Eye
+Cetanā — Intention, volition
+Citta — Mind, consciousness
+Cīvara — Robe (monastic robe)
+
+Dāna — Giving, generosity
+Danta — Tamed, controlled
+Dassana — Seeing, understanding
+Dhamma — Teaching, truth, reality
+Dhammajīvī — One who lives by Dhamma
+Dhātu — Element
+Dosa — Anger, hatred
+Dukkha — Suffering, unsatisfactoriness
+
+Eka — One
+Ehi — Come
+Esa — This
+
+Gati — Destination, state of existence
+Gāthā — Verse, stanza
+Gotama — Family name of the Buddha
+
+Hiri — Moral shame
+Hita — Benefit, welfare
+
+Icchā — Desire
+Idaṃ — This
+Iddhi — Power, spiritual ability
+Indriya — Faculty, sense base
+
+Jāti — Birth
+Jaya — Victory
+Jīva — Life, living being
+
+Kāya — Body
+Kamma — Action, deed
+Karuṇā — Compassion
+Kāma — Sensual pleasure
+Kalyāṇa — Good, wholesome
+Khanti — Patience
+Khandha — Aggregate
+Kilesa — Defilement
+Kusala — Wholesome, skillful
+
+Lābha — Gain
+Loka — World
+Lobha — Greed
+
+Magga — Path
+Mahā — Great
+Maitri / Mettā — Loving-kindness
+Manas — Mind
+Māra — Evil one, tempter
+Māyā — Illusion
+Muni — Sage
+Maraṇa — Death
+
+Nāga — Serpent, dragon-like being
+Nibbāna — Liberation, extinction of suffering
+Nirodha — Cessation
+Nīvaraṇa — Hindrance
+
+Pabbajjā — Ordination (going forth)
+Paññā — Wisdom
+Pāpa — Evil, unwholesome
+Paritta — Protection chant
+Pāramī — Perfection
+Passaddhi — Calmness
+Phala — Result, fruit
+Pīti — Joy, rapture
+Puñña — Merit
+
+Rāga — Desire, attachment
+Ratanattaya — Three Jewels
+Rūpa — Form, matter
+
+Sacca — Truth
+Saddhā — Faith, confidence
+Saṅgha — Monastic community
+Saṅkhāra — Conditioned phenomena
+Sati — Mindfulness
+Sīla — Morality
+Sotāpanna — Stream-enterer
+Sukha — Happiness
+Sutta — Discourse
+
+Tathāgata — The Buddha
+Taṇhā — Craving
+Thera — Elder monk
+Tipiṭaka — Three baskets (Buddhist scriptures)
+
+Udaya — Arising
+Upekkhā — Equanimity
+
+Vedanā — Feeling
+Vinaya — Discipline
+Viriya — Effort
+Vimutti — Liberation
+
+Yathā — As, just as
+Yāva — As far as
+"""
+
+# In his order: left column, then right column.
+_CHANTING_PHRASES = """
+Namo tassa — Homage to Him
+Bhagavato — To the Blessed One
+Arahato — Worthy One
+Sammāsambuddhassa — Self Enlightened one
+
+Sabbe sattā — All beings
+Bhavantu sukhitattā — May they be happy
+
+Iti pi so — Indeed, He is
+Bhagavā — The Blessed One
+Svākkhāto — Well taught
+Dhammo — The Teaching
+
+Suppaṭipanno — Well practiced
+Saṅgho — The Community
+"""
+
+_KEY_CONCEPTS = """
+Anicca — Impermanence
+Dukkha — Suffering
+Anattā — Non-self
+
+Kamma — Action and result
+Saṃsāra — Cycle of birth and death
+Nibbāna — Freedom from suffering
+"""
+
+
+def _word_groups(text):
+    """'Word — meaning' lines; a blank line starts a new group."""
+    groups = []
+    for block in text.strip().split('\n\n'):
+        group = []
+        for line in block.strip().splitlines():
+            word, meaning = line.split(' — ')
+            group.append({'word': word.strip(), 'meaning': meaning.strip()})
+        groups.append(group)
+    return groups
+
+
+OWEN_GLOSSARY = {
+    'id': 'owen-glossary',
+    'source_pages': '295–296',
+    'lists': [
+        {'heading': 'Common Pāli words and their meanings',
+         'groups': _word_groups(_PALI_WORDS)},
+        {'heading': 'Common chanting words and phrases',
+         'groups': _word_groups(_CHANTING_PHRASES)},
+        {'heading': 'Key concepts',
+         'groups': _word_groups(_KEY_CONCEPTS)},
+    ],
+}
