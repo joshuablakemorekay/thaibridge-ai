@@ -244,7 +244,7 @@
 
         nav .logo img {
             display: block;
-            height: clamp(28px, 22px + 1.2vw, 40px);
+            height: clamp(24px, 20px + 0.8vw, 32px);
             width: auto;
         }
         
