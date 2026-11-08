@@ -78,7 +78,7 @@ services:
       # The address reset links point at. Without it a link could carry the
       # internal .onrender.com name the request arrived on.
       - key: PUBLIC_BASE_URL
-        value: "https://thaibridge-ai.smoald.com"
+        value: "https://thaibridge.smoald.com"
 
       # Stripe. sync:false throughout — the NAME is declared here so the
       # Blueprint re-sync stops wiping it, and the VALUE is typed into the

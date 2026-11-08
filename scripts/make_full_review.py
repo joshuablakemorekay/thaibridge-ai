@@ -51,7 +51,7 @@ import expat2000  # noqa: E402
 import thai_reading  # noqa: E402
 import tour_trips  # noqa: E402
 
-SITE = "https://thaibridge-ai.smoald.com"
+SITE = "https://thaibridge.smoald.com"
 THAI_FONT = "Leelawadee UI"
 HEAD_FILL = PatternFill("solid", fgColor="7A3E00")
 HEAD_FONT = Font(name=THAI_FONT, bold=True, color="FFFFFF")
