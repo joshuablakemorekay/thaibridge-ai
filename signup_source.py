@@ -1,7 +1,7 @@
 """Where a new account came from: remember an ad's tracking tag until sign-up.
 
 Each paid ad links to the site with a tag on the end, for example
-    https://thaibridge-ai.smoald.com/?utm_source=tiktok&utm_campaign=chant
+    https://thaibridge.smoald.com/?utm_source=tiktok&utm_campaign=chant
 Nobody signs up on the page they land on — they read a chant, open the
 alphabet, look at the prices — so a tag read only by the sign-up route would
 almost always be gone by then. Instead, any page that arrives carrying a tag

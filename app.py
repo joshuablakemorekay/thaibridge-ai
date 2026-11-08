@@ -93,6 +93,26 @@ if not app.secret_key:
     raise ValueError("FLASK_SECRET_KEY is not set. Please set it in your environment.")
 
 # ============================================
+# OLD ADDRESS -> NEW ADDRESS
+# ============================================
+# The site moved from thaibridge-ai.smoald.com to thaibridge.smoald.com on
+# 2026-11-08. The old address stays live forever (ads, TikTok links and the
+# printed chanting-book proof all point at it), and this sends anyone who
+# arrives there to the same page on the new address.
+#
+# Only GET/HEAD are moved. A POST (a form, or a Stripe webhook) can't safely
+# follow a redirect, so those are answered on whichever address they hit.
+OLD_HOSTS = {'thaibridge-ai.smoald.com'}
+NEW_HOST = 'thaibridge.smoald.com'
+
+
+@app.before_request
+def redirect_old_domain():
+    host = request.host.split(':')[0].lower()
+    if host in OLD_HOSTS and request.method in ('GET', 'HEAD'):
+        return redirect(f"https://{NEW_HOST}{request.full_path.rstrip('?')}", code=301)
+
+# ============================================
 # STRIPE PAYMENTS
 # ============================================
 # All keys come from environment variables (.env locally — never committed).

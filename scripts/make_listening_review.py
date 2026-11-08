@@ -42,7 +42,7 @@ import app  # noqa: E402
 import listening  # noqa: E402
 import thai_audio  # noqa: E402
 
-LIVE = "https://thaibridge-ai.smoald.com/static/"
+LIVE = "https://thaibridge.smoald.com/static/"
 THAI_FONT = "Leelawadee UI"
 
 INTRO_TH = [

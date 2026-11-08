@@ -85,9 +85,9 @@ def test_known_and_unknown_emails_get_the_same_reply(user):
 
 
 def test_link_uses_the_public_address_when_set(user, monkeypatch):
-    monkeypatch.setenv("PUBLIC_BASE_URL", "https://thaibridge-ai.smoald.com")
+    monkeypatch.setenv("PUBLIC_BASE_URL", "https://thaibridge.smoald.com")
     _, link = request_reset(app.test_client(), user["email"])
-    assert link.startswith("https://thaibridge-ai.smoald.com/reset-password/")
+    assert link.startswith("https://thaibridge.smoald.com/reset-password/")
 
 
 # ── Using the link ────────────────────────────────────────────────────────
