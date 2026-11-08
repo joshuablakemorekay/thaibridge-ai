@@ -24,6 +24,12 @@
     .tb-consent[hidden] { display: none; }
     .tb-consent p { margin: 0 0 0.75rem; }
     .tb-consent-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    /* The site's .btn-secondary is white text made for dark backgrounds, so on
+       this white banner it vanished. Saying no must be as easy to see as
+       saying yes (UK cookie rules), so give it readable colours here. */
+    .tb-consent .btn-secondary {
+        background: #fff; color: #2d1b4e; border: 2px solid #2d1b4e;
+    }
 </style>
 <script>
     (function () {
