@@ -211,7 +211,7 @@
     
     <footer>
         <p>🪷 ThaiBridge AI</p>
-        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a> • <a href="/premium#dana">🪷 Give dāna</a></p>
+        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" onclick="tbCookieChoices(); return false;">Cookie choices</a>{% endif %} • <a href="/premium#dana">🪷 Give dāna</a></p>
         <p>Using <a href="/paiboon">ThaiBridge Spelling</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>
@@ -245,5 +245,6 @@
     <script src="{{ static_v('js/base.js') }}"></script>
     
     {% block extra_js %}{% endblock %}
+    {% include 'partials/meta_pixel.html' %}
 </body>
 </html>

@@ -1,0 +1,84 @@
+{#- Cookie banner + Meta Pixel. Nothing from Meta loads until "Accept".
+    See meta_pixel.py for why. Included at the bottom of base.html. -#}
+{% if meta_pixel_id %}
+<div id="tb-consent" class="tb-consent" role="dialog" aria-live="polite"
+     aria-label="Cookie choice" hidden>
+    <p>
+        🍪 Can ThaiBridge use an advertising cookie from Meta (Facebook and Instagram)?
+        It tells me whether my ads bring people here, so I can spend less on the ones
+        that don't. It's optional, and everything works the same if you say no.
+        <a href="/privacy#cookies">More about this</a>
+    </p>
+    <div class="tb-consent-buttons">
+        <button type="button" class="btn" onclick="tbConsent('granted')">Accept</button>
+        <button type="button" class="btn btn-secondary" onclick="tbConsent('denied')">No thanks</button>
+    </div>
+</div>
+<style>
+    .tb-consent {
+        position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 1000;
+        max-width: 640px; margin: 0 auto; padding: 1rem 1.25rem;
+        background: #fff; color: #222; border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25); line-height: 1.6;
+    }
+    .tb-consent[hidden] { display: none; }
+    .tb-consent p { margin: 0 0 0.75rem; }
+    .tb-consent-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+</style>
+<script>
+    (function () {
+        var KEY = 'tb-ad-consent';
+        var PIXEL_ID = {{ meta_pixel_id|tojson }};
+        var EVENTS = {{ meta_pixel_events|tojson }};
+        var banner = document.getElementById('tb-consent');
+
+        function readChoice() {
+            try { return localStorage.getItem(KEY); } catch (e) { return null; }
+        }
+
+        function loadPixel() {
+            // Meta's standard loader, unchanged apart from layout.
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+                s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', PIXEL_ID);
+            fbq('track', 'PageView');
+            EVENTS.forEach(function (ev) {
+                if (ev.event_id) fbq('track', ev.name, ev.params, { eventID: ev.event_id });
+                else fbq('track', ev.name, ev.params);
+            });
+        }
+
+        function clearMetaCookies() {
+            // Meta's first-party cookies, in case the visitor accepted before.
+            ['_fbp', '_fbc'].forEach(function (name) {
+                var parts = location.hostname.split('.');
+                for (var i = 0; i < parts.length - 1; i++) {
+                    var domain = parts.slice(i).join('.');
+                    document.cookie = name + '=; Max-Age=0; path=/; domain=.' + domain;
+                }
+                document.cookie = name + '=; Max-Age=0; path=/';
+            });
+        }
+
+        window.tbConsent = function (choice) {
+            try { localStorage.setItem(KEY, choice); } catch (e) { /* storage off */ }
+            banner.hidden = true;
+            if (choice === 'granted') loadPixel();
+            else clearMetaCookies();
+        };
+
+        // The footer's "Cookie choices" link brings the banner back.
+        window.tbCookieChoices = function () { banner.hidden = false; };
+
+        var choice = readChoice();
+        if (choice === 'granted') loadPixel();
+        else if (choice !== 'denied') banner.hidden = false;
+    })();
+</script>
+{% endif %}
