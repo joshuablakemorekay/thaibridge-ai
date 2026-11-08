@@ -68,6 +68,7 @@ from models import db, utcnow, User, ensure_user_columns  # the database and the
 from extensions import limiter, login_manager, rate_limit_key, failed_attempt_only
 import progress  # saving a learner's progress, and the XP-to-level maths
 import signup_source  # which ad, if any, a new account came from
+import meta_pixel  # the Meta Pixel, loaded only after cookie consent
 from progress import (XP_LEVELS, MONK_DIRECTIONS, MONK_DIRECTION_DEFAULT,
                       MONK_ACCENTS, MONK_ACCENT_DEFAULT, init_user_progress,
                       get_user_level, get_xp_for_next_level)
@@ -155,6 +156,12 @@ PAYPAL_API_BASE = (
 def paypal_configured():
     """True only if both PayPal credentials are present."""
     return bool(PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET)
+
+
+@app.context_processor
+def inject_meta_pixel():
+    """The Pixel ID and any sign-up/purchase events waiting to fire."""
+    return meta_pixel.template_context()
 
 
 @app.context_processor
@@ -6624,9 +6631,11 @@ def paypal_success():
     expires_dt = utcnow() + timedelta(days=365 if paid_period == 'year' else 30)
     _apply_subscription(current_user, tier=tier, status='active',
                         current_period_end=expires_dt)
+    captured = _paypal_captured_amount(result)
     _record_payment(provider='paypal', provider_ref=order_id, kind='subscription',
-                    user=current_user, tier=tier,
-                    **_paypal_captured_amount(result))
+                    user=current_user, tier=tier, **captured)
+    meta_pixel.queue_purchase(captured['amount_pence'], captured['currency'],
+                              event_id=order_id)
     _mirror_tier_to_session(current_user)
     session.pop('pending_paypal_tier', None)
     session.pop('pending_paypal_period', None)
@@ -6664,6 +6673,8 @@ def subscribe_success():
 
     user = _sync_checkout_session(checkout_session) or current_user
     _mirror_tier_to_session(user)
+    meta_pixel.queue_purchase(checkout_session.amount_total,
+                              checkout_session.currency, event_id=session_id)
 
     expires = (user.current_period_end.strftime('%d %B %Y')
                if user.current_period_end else None)
@@ -6693,6 +6704,8 @@ def addon_success():
         return redirect('/subscribe/cancel')
     user = _sync_addon_session(checkout_session) or current_user
     _mirror_tier_to_session(user)
+    meta_pixel.queue_purchase(checkout_session.amount_total,
+                              checkout_session.currency, event_id=session_id)
     return render_template('addon_success.html', addon=INSTANT_ACCESS_ADDON)
 
 

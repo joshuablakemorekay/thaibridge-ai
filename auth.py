@@ -18,6 +18,7 @@ from flask import (Blueprint, jsonify, redirect, render_template, request,
 from flask_login import current_user, login_required, login_user, logout_user
 
 import accounts
+import meta_pixel
 import signup_source
 from extensions import failed_attempt_only, rate_limit_key, limiter, login_manager
 from models import User, db
@@ -257,6 +258,8 @@ def signup():
         return jsonify({'success': False, 'message': 'Registration failed. Please try again.'}), 500
 
     login_user(new_user, remember=True)   # creating an account also logs you in
+    # Fires on the next page, and only if the visitor accepted the cookie.
+    meta_pixel.queue_event('CompleteRegistration', event_id=f'signup-{new_user.id}')
 
     return jsonify({
         'success': True,
