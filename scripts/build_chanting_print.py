@@ -47,7 +47,6 @@ import sys
 import tempfile
 import unicodedata
 
-import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader
 from markupsafe import Markup, escape
 
@@ -407,6 +406,7 @@ def print_pdf(chrome, html, pdf_path, workdir):
 
 def find_pages(pdf_path, chant_ids):
     """Which PDF page (1-based) each chant's locator text sits on."""
+    import fitz  # PyMuPDF: imported here so the tests can load this script without it
     pages = {}
     with fitz.open(pdf_path) as doc:
         for number, page in enumerate(doc, start=1):
@@ -435,6 +435,7 @@ STAND_IN_FONTS = ('Arial', 'Times', 'Segoe', 'Calibri', 'Consolas', 'Courier',
 
 
 def check_fonts_and_scale(pdf_path):
+    import fitz  # PyMuPDF
     sizes = collections.Counter()
     stand_ins = collections.Counter()
     with fitz.open(pdf_path) as doc:
