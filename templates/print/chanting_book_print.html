@@ -24,7 +24,7 @@
 <meta charset="utf-8">
 <title>{{ title.title }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
 {# The app's own ThaiBridge Spelling font file (static/fonts), so the
    spelling prints from exactly the font it is read in on screen. #}
 <style>
@@ -61,6 +61,7 @@
        script checks the text size came out as set. */
     body {
         overflow-wrap: anywhere;
+        font-variant-numeric: lining-nums;
         margin: 0;
         font-family: 'Noto Serif', 'Noto Serif Thai', 'Leelawadee UI', serif;
         font-size: 10.5pt;
@@ -71,10 +72,11 @@
 
     /* ── Front matter ─────────────────────────────────────────────── */
     .front { page: front; break-after: page; }
-    .title-page { text-align: center; padding-top: 55mm; }
-    .title-page .t-over { font-size: 13pt; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; }
-    .title-page .t-main { font-size: 26pt; font-weight: 600; line-height: 1.3; margin-top: 3mm; }
-    .title-page .t-colour { font-size: 13pt; margin-top: 4mm; }
+    .title-page { text-align: center; padding-top: 45mm; height: 256mm; box-sizing: border-box;
+                  border: 3px double #333; }
+    .title-page .t-over { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 14pt; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; }
+    .title-page .t-main { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 34pt; font-weight: 600; line-height: 1.3; margin-top: 3mm; }
+    .title-page .t-colour { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 15pt; font-weight: 500; letter-spacing: 0.08em; margin-top: 4mm; }
     .title-page .t-sub { font-size: 12pt; font-style: italic; margin-top: 8mm; }
     .title-page .t-thai-small { font-size: 15pt; font-weight: 600; line-height: 1.6; margin-top: 12mm; }
     .title-page .t-thai-ed { font-size: 11pt; font-weight: 400; }
@@ -88,7 +90,7 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
-    h1.front-heading { font-size: 14pt; font-weight: 600; margin: 0 0 4mm; }
+    h1.front-heading { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 18pt; font-weight: 600; letter-spacing: 0.01em; margin: 0 0 4mm; }
     h1.front-heading + p { margin-top: 0; }
     .front h1.front-heading:not(:first-child) { margin-top: 9mm; }
     .front p { margin: 0 0 2.5mm; max-width: 140mm; }
@@ -131,9 +133,9 @@
 
     /* Contents, in two columns like the chants. */
     .contents { break-after: page; }
-    .contents h1 { font-size: 14pt; font-weight: 600; margin: 0 0 4mm; }
+    .contents h1 { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 20pt; font-weight: 600; margin: 0 0 4mm; }
     .contents .toc { max-width: 165mm; }
-    .toc-part { font-size: 12pt; font-weight: 700; margin: 5mm 0 1.5mm; break-after: avoid; }
+    .toc-part { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 14pt; font-weight: 700; margin: 5mm 0 1.5mm; break-after: avoid; }
     .toc-part-no { margin-right: 2mm; }
     .toc-spelling { font-size: 9.5pt; }
     .toc-no { flex: 0 0 7mm; text-align: right; padding-right: 1.5mm; }
@@ -154,11 +156,17 @@
     .part-heading {
         break-before: page;
         text-align: center;
-        padding: 30mm 0 12mm;
+        margin: 14mm 0 9mm;
+        padding: 14mm 0 11mm;
+        border-top: 3px double #333;
+        border-bottom: 3px double #333;
     }
-    .part-heading .part-no { display: block; font-size: 13pt; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 3mm; }
+    .part-heading .part-no { display: block; font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 14pt; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 4mm; }
     .part-heading .thai { font-size: 18pt; font-weight: 600; display: block; }
-    .part-heading .en { font-size: 12pt; display: block; margin-top: 2mm; }
+    .part-heading .en { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 17pt; font-weight: 500; display: block; margin-top: 3mm; }
+    /* A drawn ornament under titles and Part headings (2026-11-12). */
+    .orn { display: block; width: 46mm; height: 4.6mm; margin: 6mm auto 0;
+           background: no-repeat center / contain url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20120%2012%27%3E%3Cg%20fill=%27%23333%27%20stroke=%27%23333%27%20stroke-width=%270.8%27%3E%3Cline%20x1=%272%27%20y1=%276%27%20x2=%2747%27%20y2=%276%27/%3E%3Cline%20x1=%2773%27%20y1=%276%27%20x2=%27118%27%20y2=%276%27/%3E%3Ccircle%20cx=%2750.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Ccircle%20cx=%2769.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Cpath%20d=%27M60%200.8%20L65.2%206%20L60%2011.2%20L54.8%206%20Z%27/%3E%3C/g%3E%3C/svg%3E"); }
 
     /* ── One chant ────────────────────────────────────────────────── */
     .chant { margin: 0 0 9mm; }
@@ -180,6 +188,10 @@
     .commentary { font-size: 10pt; }
     .commentary p { margin: 0 0 1.8mm; text-align: justify; hyphens: auto; }
     .commentary .summary { font-style: italic; }
+    .commentary .summary::first-letter {
+        float: left; font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-style: normal; font-weight: 600;
+        font-size: 31pt; line-height: 0.82; padding: 1.2mm 1.6mm 0 0; color: #222;
+    }
     .commentary h3 {
         font-size: 10pt;
         font-weight: 600;
@@ -298,8 +310,8 @@
     .photo-caption { font-size: 10.5pt; font-style: italic; margin: 4mm 0 0; }
 
     /* ── Volumes, guides and indexes (2026-11-12) ─────────────────── */
-    .title-page .t-volume { font-size: 15pt; font-weight: 600; margin-top: 12mm; letter-spacing: 0.04em; }
-    .title-page .t-volume-name { display: block; font-size: 20pt; margin-top: 2mm; letter-spacing: 0; }
+    .title-page .t-volume { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 16pt; font-weight: 600; margin-top: 12mm; letter-spacing: 0.04em; }
+    .title-page .t-volume-name { display: block; font-size: 24pt; font-weight: 600; margin-top: 2mm; letter-spacing: 0; }
     .title-page .t-volume-desc { font-size: 10.5pt; font-style: italic; max-width: 120mm; margin: 4mm auto 0; }
     .occasions, .days { break-after: page; }
     .occasions .occ-cols { column-count: 2; column-gap: 8mm; }
@@ -372,6 +384,7 @@
     <div class="t-over">{{ title.over }}</div>
     <div class="t-main">{{ title.title }}</div>
     <div class="t-colour">{{ title.edition }}</div>
+    <span class="orn"></span>
     <div class="t-sub">{{ title.subtitle }}</div>
     <div class="t-thai-small thai">{{ book.title_thai }}<br><span class="t-thai-ed">{{ book.edition_thai }}</span></div>
     {% if volume %}<div class="t-volume">Volume {{ volume.roman }}<span class="t-volume-name">{{ volume.name }}</span></div>
@@ -743,6 +756,7 @@
     {% if part.number %}<span class="part-no">Part {{ part.number }}</span>{% endif %}
     <span class="thai">{{ part.heading.title }}</span>
     <span class="en">{{ part.name or part.heading.title_english }}{% if part.continued %} (continued){% endif %}</span>
+    <span class="orn"></span>
 </div>
 {% endif %}
 
@@ -816,6 +830,7 @@
 <div class="part-heading">
     <span class="part-no">Part {{ owen_part }}</span>
     <span class="en owen-title">From {{ owen_book }}</span>
+    <span class="orn"></span>
     <p class="owen-note">Chants from {{ owen_book }}, given in romanised Pali
     and English as he prints them, with thanks to Ajarn Owen (Pra Maha Napon
     Pāraṭinṇo Petwichian, Pali Grade 9): his Sekhiyavatta,
@@ -885,6 +900,7 @@
 <div class="part-heading">
     <span class="part-no">Part {{ amaravati_part }}</span>
     <span class="en owen-title">From {{ amaravati_book }}</span>
+    <span class="orn"></span>
     <p class="owen-note">Reflections commonly chanted after morning and evening
     chanting that the Wat Mahathat United Kingdom book does not include, from
     <em>{{ amaravati_book_full }}</em>, in romanised Pali and English as that

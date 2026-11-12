@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <title>Cover — {{ title.title }}</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
 <style>
     @page { size: {{ '%.3f' % sheet_w }}mm {{ '%.3f' % sheet_h }}mm; margin: 0; }
     :root {
@@ -33,6 +33,7 @@
         background: var(--purple);
         color: var(--cream);
         font-family: 'Noto Serif', 'Noto Serif Thai', serif;
+        font-variant-numeric: lining-nums;
         overflow: hidden;
     }
     .thai { font-family: 'Noto Serif Thai', 'Noto Serif', serif; }
@@ -62,13 +63,15 @@
 
     /* Front */
     .emblem { height: 62mm; margin: 8mm auto 7mm; display: block; }
-    .t-over { font-size: 13pt; font-weight: 600; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; }
-    .t-main { font-size: 25pt; font-weight: 600; line-height: 1.25; margin-top: 2.5mm; }
-    .t-colour { font-size: 12.5pt; color: var(--gold); margin-top: 3mm; letter-spacing: 0.04em; }
+    .t-over { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 14pt; font-weight: 600; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; }
+    .t-main { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 33pt; font-weight: 600; line-height: 1.15; margin-top: 2.5mm; }
+    .t-colour { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-weight: 500; font-size: 15pt; color: var(--gold); margin-top: 3mm; letter-spacing: 0.04em; }
     .t-sub { font-size: 12pt; font-style: italic; margin-top: 5mm; }
-    .t-volume { font-size: 14pt; font-weight: 600; color: var(--gold); letter-spacing: 0.06em;
+    .t-volume { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 15pt; font-weight: 600; color: var(--gold); letter-spacing: 0.06em;
                 text-transform: uppercase; margin-top: 8mm; }
-    .t-volume-name { font-size: 19pt; margin-top: 1.5mm; }
+    .t-volume-name { font-family: 'Cormorant Garamond', 'Noto Serif', serif; font-size: 23pt; font-weight: 500; margin-top: 1.5mm; }
+    .orn { display: block; width: 50mm; height: 5mm; margin: 7mm auto;
+           background: no-repeat center / contain url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20120%2012%27%3E%3Cg%20fill=%27%23D4AF37%27%20stroke=%27%23D4AF37%27%20stroke-width=%270.8%27%3E%3Cline%20x1=%272%27%20y1=%276%27%20x2=%2747%27%20y2=%276%27/%3E%3Cline%20x1=%2773%27%20y1=%276%27%20x2=%27118%27%20y2=%276%27/%3E%3Ccircle%20cx=%2750.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Ccircle%20cx=%2769.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Cpath%20d=%27M60%200.8%20L65.2%206%20L60%2011.2%20L54.8%206%20Z%27/%3E%3C/g%3E%3C/svg%3E"); }
     .wheel { width: 52mm; height: 52mm; margin: 22mm auto 14mm; display: block; }
     .t-thai { font-size: 18pt; font-weight: 600; color: var(--gold); line-height: 1.45; }
     .t-english { font-size: 19pt; margin-top: 5mm; }
@@ -156,7 +159,7 @@
     <div class="t-main">{{ title.title }}</div>
     <div class="t-colour">{{ title.edition }}</div>
     <div class="t-sub">{{ title.subtitle }}</div>
-    <div class="t-rule"></div>
+    <span class="orn"></span>
     <div class="t-thai thai">{{ book.title_thai }}</div>
     <div class="t-edition thai">{{ book.edition_thai }}</div>
     {% if volume %}<div class="t-volume">Volume {{ volume.roman }}</div>
