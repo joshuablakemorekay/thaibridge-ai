@@ -147,14 +147,18 @@
         </g>
     </svg>{% endif %}
     <div class="t-thai thai">{{ book.title_thai }}</div>
-    <div class="t-english">{{ book.title_english }}</div>
+    {# On a volume the two halves of the title swap (Josh, 2026-11-12):
+       "Chanting Book: Daily Chanting", and "Morning and Evening Service"
+       under the volume number. #}
+    {% set head, tail = book.title_english.split(': ', 1) %}
+    <div class="t-english">{% if volume %}{{ head }}: {{ volume.name }}{% else %}{{ book.title_english }}{% endif %}</div>
     <div class="t-rule"></div>
     <div class="t-edition">
         <span class="thai">{{ book.edition_thai }}</span><br>
         {{ book.edition_english }}
     </div>
     {% if volume %}<div class="t-volume">Volume {{ volume.roman }}</div>
-    <div class="t-volume-name">{{ volume.name }}</div>{% endif %}
+    <div class="t-volume-name">{{ tail }}</div>{% endif %}
     <div class="t-study">Study edition — with romanisation,<br>translation and commentary</div>
     <div class="t-name"><span class="label">Prepared by</span>Pra Joshua Vajirapanyo</div>
 </section>
