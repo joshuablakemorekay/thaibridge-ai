@@ -120,8 +120,10 @@ OCCASIONS = [
         {'occasion': 'A birthday',
          'note': 'The Dhammacakkappavattana Sutta, then the short Seven Tamnan, which opens '
                  'with the Maṅgala Sutta, the Highest Blessings.',
-         'chants': ['dhammacakkappavattana-suttam', 'rabiap-suat-chet-tamnan-yang-yo',
-                    'mangala-suttam-chet-tamnan'],
+         # The Maṅgala Sutta is printed twice; Volume 1's copy (book page 81)
+         # comes first, so a birthday needs only Volume 1 for it (Pra Kru Bob).
+         'chants': ['mangala-suttam-pathamam', 'dhammacakkappavattana-suttam',
+                    'rabiap-suat-chet-tamnan-yang-yo', 'mangala-suttam-chet-tamnan'],
          'source': 'temple book, page 256'},
         {'occasion': 'A new home, and other happy occasions',
          'note': 'The Seven Tamnan, in its full, middling or short form. The Passage for '

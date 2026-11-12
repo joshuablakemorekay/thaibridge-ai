@@ -119,3 +119,11 @@ def test_index_lists_every_chant_once():
     assert len(ids) == len(set(ids))
     expected = len(chanting.CHANTS) + len(build.OWEN_CHANTS) + len(chanting_amaravati.AMARAVATI_CHANTS)
     assert len(ids) == expected
+
+
+def test_birthday_points_first_to_the_mangala_sutta_in_volume_one():
+    birthday = next(i for g in plan.OCCASIONS for i in g['items'] if i['occasion'] == 'A birthday')
+    first = birthday['chants'][0]
+    assert first == 'mangala-suttam-pathamam'
+    vol1 = {c['id'] for p in _volume_books()[0]['parts'] for c in p['chants']}
+    assert first in vol1
