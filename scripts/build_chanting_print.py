@@ -217,6 +217,14 @@ def number_parts(parts):
 # either the whole one-volume edition or one of the three volumes; the plan
 # for which Part goes in which volume is chanting_volumes.py.
 
+# A full-page photograph before the Morning Service (Josh, 2026-11-12).
+# Kept OUTSIDE the repository, in the chanting book's OneDrive folder, like
+# the cover emblem; with no file the book prints without the page.
+PHOTO = os.path.join(os.path.expanduser('~'), 'OneDrive', 'Documents', 'Documents', 'SMOALD',
+                     'ThaiBridge', 'Digital Chanting Book', 'Photos',
+                     'Parivasa at Wat Buddhapadipa 2026-07-10.png')
+PHOTO_CAPTION = 'Parivāsa at Wat Buddhapadipa, Wimbledon, 10 July 2026'
+
 # Locators for the guide sections, so the contents can give their pages.
 GUIDE_IDS = ('guide-occasions', 'guide-days', 'index-chants', 'index-first-lines')
 
@@ -369,6 +377,8 @@ def render_html(template, book, books, pages, proof, pad_blank=False):
         amaravati_licence=AMARAVATI_LICENCE,
         amaravati_part=book['amaravati_part'],
         occasions=OCCASIONS,
+        photo_url=('file:///' + PHOTO.replace(os.sep, '/')) if os.path.exists(PHOTO) else None,
+        photo_caption=PHOTO_CAPTION,
         day_chants=DAY_CHANTS,
         daily_order=DAILY_ORDER,
         chant_by_id=chants_by_id,
