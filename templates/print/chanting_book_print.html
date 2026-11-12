@@ -288,6 +288,50 @@
     .verse-section-end { break-after: auto; break-before: avoid; }
     .verse-section-end.is-major { font-size: 11.5pt; }
     .variant { font-size: 9.5pt; color: #333; margin-top: 0.6mm !important; }
+
+    /* ── Volumes, guides and indexes (2026-11-12) ─────────────────── */
+    .title-page .t-volume { font-size: 15pt; font-weight: 600; margin-top: 12mm; letter-spacing: 0.04em; }
+    .title-page .t-volume-name { display: block; font-size: 20pt; margin-top: 2mm; letter-spacing: 0; }
+    .title-page .t-volume-desc { font-size: 10.5pt; font-style: italic; max-width: 120mm; margin: 4mm auto 0; }
+    .occasions, .days { break-after: page; }
+    .occasions .occ-cols { column-count: 2; column-gap: 8mm; }
+    .occ-group { font-size: 11pt; font-weight: 700; margin: 0 0 1.5mm; padding-top: 2mm; break-after: avoid; }
+    .occ-item { break-inside: avoid; margin: 0 0 3mm; }
+    .occ-item p { margin: 0; }
+    .occ-name { font-weight: 600; font-size: 10pt; }
+    .occ-note { font-size: 9.5pt; }
+    .occ-source { font-size: 9pt; color: #555; font-style: italic; }
+    .occ-entry { display: flex; align-items: baseline; gap: 1.5mm; font-size: 9.5pt; }
+    .occ-entry .occ-title { flex: 0 1 auto; }
+    .occ-entry .toc-dots, .ix-entry .toc-dots { flex: 1 1 auto; border-bottom: 1px dotted #888; min-width: 3mm; }
+    /* Fixed widths, so the real numbers take exactly the room the
+       placeholders took and nothing moves between the two passes. */
+    .occ-ref { flex: 0 0 22mm; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    /* Fixed column widths, so the page numbers cannot resize the table
+       between the two passes. */
+    .day-table { table-layout: fixed; width: 100%; }
+    .day-table col.c-day { width: 26mm; } .day-table col.c-times { width: 18mm; }
+    .day-table th { white-space: nowrap; }
+    .day-table col.c-chant { width: 48mm; } .day-table col.c-ref { width: 26mm; }
+    .day-table td { vertical-align: top; font-size: 9.5pt; }
+    .day-table .day-times { text-align: center; }
+    .day-ref { white-space: nowrap; }
+    .days .day-note { font-size: 9.5pt; font-style: italic; }
+    .days h2 { font-size: 12pt; font-weight: 600; margin: 6mm 0 2mm; }
+    .days .g-list li { font-size: 10pt; }
+    .am-leader { margin: 0 0 3mm; }
+    .am-leader p, .am-group p { margin: 0; }
+    .am-group { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 8mm; margin: 0 0 3mm; break-inside: avoid; }
+    .am-pali .l-pali_roman { margin-bottom: 0.8mm; }
+    .am-english .l-english { margin: 0 0 0.6mm !important; }
+    .am-continues { font-style: italic; font-size: 9.5pt; margin-top: 3mm; }
+    .index { break-before: page; }
+    .ix-cols { column-count: 2; column-gap: 8mm; }
+    .ix-entry { display: flex; align-items: baseline; gap: 1.5mm; font-size: 9.5pt; margin: 0 0 0.8mm; break-inside: avoid; }
+    .ix-entry .ix-title { flex: 0 1 auto; }
+    .ix-roman { font-size: 9pt; color: #444; }
+    .ix-ref { flex: 0 0 8mm; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .ix-ref.ix-ref-vol { flex-basis: 22mm; }
 </style>
 </head>
 <body>
@@ -321,6 +365,8 @@
         <span class="thai">{{ book.edition_thai }}</span><br>
         {{ book.edition_english }}
     </div>
+    {% if volume %}<div class="t-volume">Volume {{ volume.roman }}<span class="t-volume-name">{{ volume.name }}</span></div>
+    <div class="t-volume-desc">{{ volume.description }}</div>{% endif %}
     <div class="t-study">ThaiBridge AI study edition — with romanisation, translation and commentary</div>
     {% if proof %}<div class="t-proof">Proof copy · {{ built_on }} · not for distribution</div>{% endif %}
 </section>
@@ -333,9 +379,10 @@
     <p class="i-title">{{ book.title_english }}<br>
     <span class="thai">{{ book.title_thai }}</span></p>
     <p>ThaiBridge AI study edition, with romanisation,<br>translation and commentary</p>
+    {% if volume %}<p><strong>Volume {{ volume.roman }} of three: {{ volume.name }}</strong></p>{% endif %}
 
     <p class="i-gap">Prepared and published by<br>
-    <strong>Pra Joshua Vajira Panyo</strong></p>
+    <strong>Pra Joshua Vajirapanyo</strong></p>
 
     <p>Based on the chanting book of<br>Wat Mahathat United Kingdom</p>
 
@@ -355,11 +402,12 @@
 
     <p class="i-small">The Pali and Thai texts are those of the Wat Mahathat United
     Kingdom chanting book. The romanisation, English translations and
-    commentary in this edition © 2026 Pra Joshua Vajira Panyo.</p>
+    commentary in this edition © 2026 Pra Joshua Vajirapanyo.</p>
 </section>
 
 {# ── Preface ── Pra Joshua's own words, as he wrote them (only the
    spelling was corrected). Not to be reworded or softened. #}
+{% if full_front %}
 <section class="front preface">
     <h1 class="front-heading">Preface</h1>
     <p>I noticed that people, myself included, as English speakers, were
@@ -377,6 +425,7 @@
     making the book even more accessible and interesting. I value being
     wholesome and inclusive.</p>
 </section>
+{% endif %}
 
 {# ── About this edition, and how each verse is set ── #}
 <section class="front">
@@ -394,7 +443,7 @@
 
     <h1 class="front-heading">How each verse is set</h1>
     <ul class="layer-key">
-        <li><span class="sample l-pali">ปาฬิ</span>Pali, in Thai script — what is chanted</li>
+        <li><span class="sample l-pali">บาลี</span>Pali, in Thai script — what is chanted</li>
         <li><span class="sample l-pali_roman">Pāḷi</span>The same Pali in the Latin alphabet</li>
         <li><span class="sample l-thai">คำแปลภาษาไทย</span>The meaning in Thai, recited after the Pali in many temples</li>
         <li><span class="sample l-paiboon">kam bplae paa-sǎa tai</span>The Thai in ThaiBridge Spelling, to read it aloud</li>
@@ -403,6 +452,7 @@
 
     {# Names exactly as Josh gave them (2026-11-06/07); not to be "corrected".
        Ajarn Owen IS Pra Maha Napon. Vassa counts as of 1 November 2026. #}
+    {% if full_front %}
     <h1 class="front-heading">With thanks</h1>
     <p>To <strong>Pra Maha Napon Pāraṭinṇo Petwichian</strong> (Ajarn Owen),
     Pali Grade 9, 13 vassa (counted as of 1 November 2026), for checking the Thai for accuracy, and for the chants from his
@@ -415,11 +465,23 @@
     monks who hold it.</p>
     <p>And to <strong>the Most Venerable Phra Rajawithetpanyakhun (Dr Laow
     Panyasiri)</strong>, 46 vassa, Abbot of Buddhapadipa Temple, London, for
-    his kind permission to publish this edition.</p></section>
+    his kind permission to publish this edition.</p>
+    {% else %}
+    <p>The preface, the thanks and a guide to pronouncing Pali and the
+    ThaiBridge Spelling are at the front of Volume One.</p>
+    {% endif %}
+    {% if volumes %}
+    <h1 class="front-heading">The three volumes</h1>
+    {% for v in volumes %}<p><strong>Volume {{ v.roman }}: {{ v.name }}.</strong> {{ v.description }}.</p>{% endfor %}
+    <p>The chants keep the order of the Wat Mahathat United Kingdom book
+    within each volume, and keep the book's Part numbers, so a Part number
+    means the same in every volume.</p>
+    {% endif %}</section>
 
 {# ── A guide to pronunciation ── Pali first, then ThaiBridge Spelling.
    The book prints a final ย as i and a final ว as o (Josh, 2026-11-06),
    though the app writes dûay; the guide says so, so neither surprises. #}
+{% if full_front %}
 <section class="front guide">
     <h1 class="front-heading">A guide to pronunciation</h1>
     <p>Each verse in this book can be read in two romanised forms: the Pali in
@@ -521,6 +583,7 @@
     <p>A hyphen joins the syllables of one word: <span class="spelling">sà-rá-ná</span>,
     refuge.</p>
 </section>
+{% endif %}
 
 {# ── Contents ── Bold numbered Parts (Ajarn Owen's book), numbered
    "Pali title: English title" entries (Ajarn Sujan's), the Thai title small
@@ -528,15 +591,22 @@
 <section class="contents">
     <h1>Contents</h1>
     <div class="toc">
+    <div class="toc-part">Finding a chant</div>
+    {% set guides = [('guide-occasions', 'Chants for occasions: a birthday, a funeral, a meal and more')] %}
+    {% if day_guide %}{% set guides = guides + [('guide-days', 'Chants for each day of the week')] %}{% endif %}
+    {% set guides = guides + [('index-chants', 'Index of chants' ~ (', all three volumes' if volumes else '')), ('index-first-lines', 'Index of first lines')] %}
+    {% for gid, gname in guides %}
+    <div class="toc-entry"><span class="toc-no"></span><span class="toc-title">{{ gname }}</span><span class="toc-dots"></span><span class="toc-page">{{ page(gid) }}</span></div>
+    {% endfor %}
     {% for part in parts %}
-    {% if part.heading %}<div class="toc-part"><span class="toc-part-no">Part {{ part.number }}</span> {{ part.name }}</div>{% endif %}
+    {% if part.heading %}<div class="toc-part"><span class="toc-part-no">Part {{ part.number }}</span> {{ part.name }}{% if part.continued %} (continued){% endif %}</div>{% endif %}
     {% for chant in part.chants %}
     {% set roman = chant.title_pali or (chant.title_roman|book_spelling) %}
     <div class="toc-entry">
         <span class="toc-no">{{ loop.index }}.</span>
         <span class="toc-title">{% if roman %}{% if chant.title_pali or roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %}<em>{{ roman }}</em>{% else %}<span class="spelling toc-spelling">{{ roman }}</span>{% endif %}{% if chant.title_english %}: {% endif %}{% endif %}{{ chant.title_english }}<span class="thai">{{ chant.title_thai }}</span></span>
         <span class="toc-dots"></span>
-        <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
+        <span class="toc-page">{{ page(chant.id) }}</span>
     </div>
     {% endfor %}
     {% endfor %}
@@ -547,18 +617,90 @@
         <span class="toc-no">{{ loop.index }}.</span>
         <span class="toc-title"><em>{{ chant.title }}</em>: {{ chant.title_english }}</span>
         <span class="toc-dots"></span>
-        <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
+        <span class="toc-page">{{ page(chant.id) }}</span>
     </div>
     {% endfor %}
     <div class="toc-entry">
         <span class="toc-no"></span>
         <span class="toc-title">Common Pāli words and their meanings</span>
         <span class="toc-dots"></span>
-        <span class="toc-page">{{ contents_pages.get(glossary.id, '000') }}</span>
+        <span class="toc-page">{{ page(glossary.id) }}</span>
     </div>
+    {% endif %}
+    {% if amaravati_chants %}
+    <div class="toc-part"><span class="toc-part-no">Part {{ amaravati_part }}</span> From {{ amaravati_book }}</div>
+    {% for chant in amaravati_chants %}
+    <div class="toc-entry">
+        <span class="toc-no">{{ loop.index }}.</span>
+        <span class="toc-title"><em>{{ chant.title }}</em>: {{ chant.title_english }}</span>
+        <span class="toc-dots"></span>
+        <span class="toc-page">{{ page(chant.id) }}</span>
+    </div>
+    {% endfor %}
     {% endif %}
     </div>
 </section>
+
+{# ── Chants for occasions ── Pra Kru Bob: "If someone were to chant at a
+   birthday party they would want to know where the chants are." Taken from
+   the temple book's own ceremony pages (chanting_volumes.OCCASIONS). Pages
+   are given across the whole edition, so in volumes they name the volume. #}
+<section class="front occasions">
+    <span class="locator">{{ locator('guide-occasions') }}</span>
+    <h1 class="front-heading">Chants for occasions</h1>
+    <p>Where to find the chants for a birthday, a funeral, a meal and other
+    occasions. The advice comes from the Wat Mahathat United Kingdom book's
+    own pages on ceremonies, and the source is given for each. Where a whole
+    ceremony has a set order, the page for “the order of chanting” is listed.</p>
+    <div class="occ-cols">
+    {% for group in occasions %}
+    <h2 class="occ-group">{{ group.group }}</h2>
+    {% for item in group['items'] %}
+    <div class="occ-item">
+        <p class="occ-name">{{ item.occasion }}</p>
+        {% if item.note %}<p class="occ-note">{{ item.note }}</p>{% endif %}
+        {% for cid in item.chants %}{% set c = chant_by_id[cid] %}
+        <div class="occ-entry"><span class="occ-title">{{ c.title_english or c.title_pali or c.title_roman }}</span><span class="toc-dots"></span><span class="occ-ref">{{ ref(cid) }}</span></div>
+        {% endfor %}
+        <p class="occ-source">Source: {{ item.source }}</p>
+    </div>
+    {% endfor %}
+    {% endfor %}
+    </div>
+</section>
+
+{# ── Chants for each day of the week (chanting_volumes.DAY_CHANTS) ── #}
+{% if day_guide %}
+<section class="front days">
+    <span class="locator">{{ locator('guide-days') }}</span>
+    <h1 class="front-heading">Chants for each day of the week</h1>
+    <p>In Thai tradition each day of the week has its own number, the power of
+    the day (<span class="thai">กำลังวัน</span>, <em>kamlang wan</em>), and its
+    own protection chant. The chant of the day you were born on is recited
+    that number of times. The numbers come from Thai astrology and are a
+    custom, not a requirement of the Buddha's teaching. Every chant below is
+    already in this book: each is a protection chant or its opening verse.</p>
+    <table class="g-table day-table">
+        <colgroup><col class="c-day"><col class="c-times"><col class="c-chant"><col><col class="c-ref"></colgroup>
+        <tr><th>Day</th><th>Times</th><th>Chant</th><th>First line</th><th>Page</th></tr>
+        {% for d in day_chants %}
+        <tr><td>{{ d.day }}<br><span class="thai">{{ d.thai }}</span></td><td class="day-times">{{ d.times }}</td><td>{{ d.name }}</td><td><em>{{ d.first_line }}</em></td><td class="day-ref">{{ ref(d.chant) }}</td></tr>
+        {% endfor %}
+    </table>
+    <p class="day-note">Wednesday night is the day of Rāhu. This book's own
+    order for chanting to the nine planets pairs Rāhu with the Āṭānāṭiya
+    Paritta (temple book page 268). Some guides give the Suriya Paritta
+    instead, which this book does not contain.</p>
+
+    <h2>A simple daily practice</h2>
+    <ol class="g-list">
+        {% for step, ids in daily_order %}
+        <li>{{ step }}{% for cid in ids %} <span class="day-ref">({{ ref(cid) }})</span>{% endfor %}.</li>
+        {% endfor %}
+    </ol>
+</section>
+{% endif %}
+
 
 {# ── The chants ── #}
 {% for part in parts %}
@@ -566,7 +708,7 @@
 <div class="part-heading">
     {% if part.number %}<span class="part-no">Part {{ part.number }}</span>{% endif %}
     <span class="thai">{{ part.heading.title }}</span>
-    <span class="en">{{ part.name or part.heading.title_english }}</span>
+    <span class="en">{{ part.name or part.heading.title_english }}{% if part.continued %} (continued){% endif %}</span>
 </div>
 {% endif %}
 
@@ -701,10 +843,77 @@
 </section>
 {% endif %}
 
+{# ── Part 18: from the Amaravati chanting book (chanting_amaravati.py) ──
+   Pali and English as that book prints them, with a Thai-script line made
+   like Ajarn Owen's. Where the book sets the Pali and a chanted English
+   version on facing pages, they face each other here too. #}
+{% if amaravati_chants %}
+<div class="part-heading">
+    <span class="part-no">Part {{ amaravati_part }}</span>
+    <span class="en owen-title">From {{ amaravati_book }}</span>
+    <p class="owen-note">Reflections commonly chanted after morning and evening
+    chanting that the Wat Mahathat United Kingdom book does not include, from
+    <em>{{ amaravati_book_full }}</em>, in romanised Pali and English as that
+    book prints them, unaltered. The Thai-script line is this edition's own
+    transliteration, for a monk to check.</p>
+    <p class="owen-note am-licence">{{ amaravati_licence }}</p>
+</div>
+{% for chant in amaravati_chants %}
+<article class="chant owen-chant">
+    <header class="chant-head">
+        <span class="locator">{{ locator(chant.id) }}</span>
+        <span class="title-pali">{{ chant.title }}</span>
+        <span class="title-english">{{ chant.title_english }}</span>
+        <div class="meta">The Amaravati chanting book, page{% if '–' in chant.source_pages %}s{% endif %} {{ chant.source_pages }}</div>
+    </header>
+    <div class="the-chant-label">The chant</div>
+    <div class="am-leader">
+        <span class="label">Leader</span>
+        <p class="l-pali">{{ chant.leader.pali|pali_words }}</p>
+        <p class="l-pali_roman">{{ chant.leader.pali_roman }}</p>
+        {% if chant.leader.english %}<p class="l-english">{{ chant.leader.english }}</p>{% endif %}
+    </div>
+    {% for group in chant.groups %}
+    <div class="am-group">
+        <div class="am-pali">{% for line in group.pali %}
+            <p class="l-pali">{{ group.pali_thai[loop.index0]|pali_words }}</p>
+            <p class="l-pali_roman">{{ line }}</p>{% endfor %}
+        </div>
+        <div class="am-english">{% for line in group.english %}<p class="l-english">{{ line }}</p>{% endfor %}</div>
+    </div>
+    {% endfor %}
+    {% if chant.continues %}<p class="am-continues">This chant continues on pages {{ chant.continues }} of {{ amaravati_book }}, which are still to be added to this edition.</p>{% endif %}
+</article>
+{% endfor %}
+{% endif %}
+
+{# ── Indexes ── Pra Kru Bob asked for an index of every chant in each
+   volume. The index of chants covers the whole edition (so in volumes it
+   names the volume); the index of first lines is this book's own, like the
+   Amaravati book's "List of First Lines". #}
+<section class="index">
+    <span class="locator">{{ locator('index-chants') }}</span>
+    <h1 class="front-heading">Index of chants{% if volumes %}, all three volumes{% endif %}</h1>
+    <div class="ix-cols">
+    {% for e in index_chants %}
+    <div class="ix-entry"><span class="ix-title">{{ e.label }}{% if e.roman %} {% if e.roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %}<em class="ix-roman">{{ e.roman }}</em>{% else %}<span class="ix-roman spelling">{{ e.roman|book_spelling }}</span>{% endif %}{% endif %}</span><span class="toc-dots"></span><span class="ix-ref{% if volumes %} ix-ref-vol{% endif %}">{{ ref(e.id) if volumes else page(e.id) }}</span></div>
+    {% endfor %}
+    </div>
+</section>
+<section class="index">
+    <span class="locator">{{ locator('index-first-lines') }}</span>
+    <h1 class="front-heading">Index of first lines</h1>
+    <div class="ix-cols">
+    {% for e in index_first_lines %}
+    <div class="ix-entry"><span class="ix-title"><em>{{ e.line }}</em></span><span class="toc-dots"></span><span class="ix-ref">{{ page(e.id) }}</span></div>
+    {% endfor %}
+    </div>
+</section>
+
 {% if pad_blank %}<section class="blank-page"></section>{% endif %}
 <section class="credit-page">
     <p>This study edition was prepared by</p>
-    <p class="credit-name">Pra Joshua Vajira Panyo</p>
+    <p class="credit-name">Pra Joshua Vajirapanyo</p>
     <p>New English Monk</p>
     <p>Second ordination: 1 July 2025</p>
     <p>2 vassa (as of 1 November 2026)</p>
