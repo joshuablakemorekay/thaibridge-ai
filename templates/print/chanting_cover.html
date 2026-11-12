@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Cover — {{ book.title_english }}</title>
+<title>Cover — {{ title.title }}</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
 <style>
     @page { size: {{ '%.3f' % sheet_w }}mm {{ '%.3f' % sheet_h }}mm; margin: 0; }
@@ -61,16 +61,20 @@
     .front .frame { inset: {{ bleed + 9 }}mm {{ bleed + 9 }}mm {{ bleed + 9 }}mm 9mm; }
 
     /* Front */
-    .emblem { height: 72mm; margin: 12mm auto 8mm; display: block; }
+    .emblem { height: 62mm; margin: 8mm auto 7mm; display: block; }
+    .t-over { font-size: 13pt; font-weight: 600; color: var(--gold); letter-spacing: 0.3em; text-transform: uppercase; }
+    .t-main { font-size: 25pt; font-weight: 600; line-height: 1.25; margin-top: 2.5mm; }
+    .t-colour { font-size: 12.5pt; color: var(--gold); margin-top: 3mm; letter-spacing: 0.04em; }
+    .t-sub { font-size: 12pt; font-style: italic; margin-top: 5mm; }
     .t-volume { font-size: 14pt; font-weight: 600; color: var(--gold); letter-spacing: 0.06em;
                 text-transform: uppercase; margin-top: 8mm; }
     .t-volume-name { font-size: 19pt; margin-top: 1.5mm; }
     .wheel { width: 52mm; height: 52mm; margin: 22mm auto 14mm; display: block; }
-    .t-thai { font-size: 30pt; font-weight: 600; color: var(--gold); line-height: 1.45; }
+    .t-thai { font-size: 18pt; font-weight: 600; color: var(--gold); line-height: 1.45; }
     .t-english { font-size: 19pt; margin-top: 5mm; }
-    .t-rule { width: 40mm; height: 0.6mm; background: var(--saffron); margin: 11mm auto; }
+    .t-rule { width: 40mm; height: 0.6mm; background: var(--saffron); margin: 8mm auto; }
     .t-edition { font-size: 11.5pt; line-height: 1.6; }
-    .t-study { font-size: 13pt; font-style: italic; margin-top: 12mm; color: var(--gold); }
+    .t-study { font-size: 12pt; font-style: italic; margin: 9mm auto 0; max-width: 120mm; color: var(--gold); }
     .t-name { position: absolute; left: 0; right: {{ bleed }}mm; bottom: {{ bleed + 26 }}mm;
               font-size: 13pt; }
     .t-name .label { display: block; font-size: 9.5pt; letter-spacing: 0.08em;
@@ -125,7 +129,7 @@
 
 <section class="panel spine">
     <div class="spine-text">
-        <span>Chanting Book: Morning and Evening Service</span>
+        <span>{{ title.title }}</span>
         <span class="sep"></span>
         {% if volume %}<span>Volume {{ volume.number }}: {{ volume.name }}</span>
         <span class="sep"></span>{% endif %}
@@ -146,20 +150,18 @@
             {% endfor %}
         </g>
     </svg>{% endif %}
-    <div class="t-thai thai">{{ book.title_thai }}</div>
-    {# On a volume the two halves of the title swap (Josh, 2026-11-12):
-       "Chanting Book: Daily Chanting", and "Morning and Evening Service"
-       under the volume number. #}
-    {% set head, tail = book.title_english.split(': ', 1) %}
-    <div class="t-english">{% if volume %}{{ head }}: {{ volume.name }}{% else %}{{ book.title_english }}{% endif %}</div>
+    {# The printed books' own title (Josh, 2026-11-12). The Thai title and
+       edition line are the temple book's, kept smaller under the rule. #}
+    <div class="t-over">{{ title.over }}</div>
+    <div class="t-main">{{ title.title }}</div>
+    <div class="t-colour">{{ title.edition }}</div>
+    <div class="t-sub">{{ title.subtitle }}</div>
     <div class="t-rule"></div>
-    <div class="t-edition">
-        <span class="thai">{{ book.edition_thai }}</span><br>
-        {{ book.edition_english }}
-    </div>
+    <div class="t-thai thai">{{ book.title_thai }}</div>
+    <div class="t-edition thai">{{ book.edition_thai }}</div>
     {% if volume %}<div class="t-volume">Volume {{ volume.roman }}</div>
-    <div class="t-volume-name">{{ tail }}</div>{% endif %}
-    <div class="t-study">Study edition — with romanisation,<br>translation and commentary</div>
+    <div class="t-volume-name">{{ volume.name }}</div>{% endif %}
+    <div class="t-study">{{ title.study }}</div>
     <div class="t-name"><span class="label">Prepared by</span>Pra Joshua Vajirapanyo</div>
 </section>
 

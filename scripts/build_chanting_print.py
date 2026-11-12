@@ -217,6 +217,16 @@ def number_parts(parts):
 # either the whole one-volume edition or one of the three volumes; the plan
 # for which Part goes in which volume is chanting_volumes.py.
 
+# The printed books' own title (Josh, 2026-11-12). chanting.BOOK keeps the
+# temple book's title, which the app shows; only paper and covers use this.
+PRINT_TITLE = {
+    'over': 'Wat Mahathat',
+    'title': 'Universal Pāli Chanting Book',
+    'edition': 'Purple & Gold Edition',
+    'subtitle': 'A Five-Layer Guide to Theravāda Buddhist Chanting',
+    'study': 'United Kingdom Study edition — with romanisation, translation and commentary',
+}
+
 # A full-page photograph before the Morning Service (Josh, 2026-11-12).
 # Kept OUTSIDE the repository, in the chanting book's OneDrive folder, like
 # the cover emblem; with no file the book prints without the page.
@@ -359,6 +369,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False):
         pad_blank=pad_blank,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         book=chanting.BOOK,
+        title=PRINT_TITLE,
         how=chanting.HOW_TO_USE,
         sections=chanting.CHANT_SECTIONS,
         commentary=commentary,
