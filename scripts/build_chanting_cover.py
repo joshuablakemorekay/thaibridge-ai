@@ -25,11 +25,19 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 import chanting  # noqa: E402
+from chanting_volumes import VOLUMES  # noqa: E402
 from build_chanting_print import find_chrome, print_pdf  # noqa: E402
 
 TRIM_W, TRIM_H = 210.0, 297.0     # A4, mm
 BLEED = 3.175                     # Lulu's 0.125in
 MM_PER_INCH = 25.4
+
+# The emblem for the front of the three volumes (Josh, 2026-11-12). Kept
+# OUTSIDE the repository, in the chanting book's OneDrive folder, because it
+# is an emblem, not ThaiBridge artwork. With no emblem file the cover keeps
+# the drawn Dhamma wheel.
+DEFAULT_EMBLEM = os.path.join(os.path.expanduser('~'), 'OneDrive', 'Documents', 'Documents',
+                              'SMOALD', 'ThaiBridge', 'Digital Chanting Book', 'Cover emblem.png')
 
 
 def spine_width_mm(pages):
@@ -40,9 +48,18 @@ def spine_width_mm(pages):
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--final', action='store_true', help='leave off the "proof copy" mark')
-    parser.add_argument('--interior', default=os.path.join(ROOT, '_print', 'chanting-book-a4.pdf'))
-    parser.add_argument('--out', default=os.path.join(ROOT, '_print', 'chanting-book-a4-cover.pdf'))
+    parser.add_argument('--volume', type=int, choices=[v['number'] for v in VOLUMES],
+                        help='make the cover for one volume of the three-volume edition')
+    parser.add_argument('--emblem', default=DEFAULT_EMBLEM,
+                        help='image for the front; used only if the file exists')
+    parser.add_argument('--interior')
+    parser.add_argument('--out')
     args = parser.parse_args()
+    stem = f'chanting-volume-{args.volume}' if args.volume else 'chanting-book-a4'
+    args.interior = args.interior or os.path.join(ROOT, '_print', f'{stem}.pdf')
+    args.out = args.out or os.path.join(ROOT, '_print', f'{stem}-cover.pdf')
+    volume = next((v for v in VOLUMES if v['number'] == args.volume), None)
+    emblem = args.emblem if args.emblem and os.path.exists(args.emblem) else None
 
     if not os.path.exists(args.interior):
         sys.exit('Build the inside pages first: python scripts/build_chanting_print.py')
@@ -61,7 +78,8 @@ def main():
     html = env.get_template('print/chanting_cover.html').render(
         book=chanting.BOOK, proof=not args.final, built_on=datetime.date.today().isoformat(),
         trim_w=TRIM_W, bleed=BLEED, spine=spine, sheet_w=sheet_w, sheet_h=sheet_h,
-        spine_font=spine_font)
+        spine_font=spine_font, volume=volume,
+        emblem_url=('file:///' + emblem.replace(os.sep, '/')) if emblem else None)
 
     with tempfile.TemporaryDirectory() as workdir:
         print_pdf(find_chrome(), html, args.out, workdir)
@@ -74,7 +92,7 @@ def main():
         sys.exit(f'The cover came out {sheets} page(s) of {w_mm:.1f} x {h_mm:.1f}mm, '
                  f'not one sheet of {sheet_w:.1f} x {sheet_h:.1f}mm.')
 
-    print(f'Done: cover for {pages} pages, spine {spine:.1f}mm, '
+    print(f'Done: cover for {pages} pages{" (emblem)" if emblem else ""}, spine {spine:.1f}mm, '
           f'sheet {sheet_w:.1f} x {sheet_h:.1f}mm -> {args.out}')
 
 
