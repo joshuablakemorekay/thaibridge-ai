@@ -2,6 +2,15 @@
 
     python scripts/build_chanting_print.py            # proof copy
     python scripts/build_chanting_print.py --final    # no "proof" stamp
+    python scripts/build_chanting_print.py --volumes  # the three-volume edition
+
+THREE VOLUMES (2026-11-12): Pra Kru Bob asked for the book in three volumes
+with an index of every chant. `--volumes` prints the same chants, in the
+same order, as _print/chanting-volume-1/2/3.pdf, following the plan in
+chanting_volumes.py — which Part goes in which volume is one number there,
+so the abbot's decision is a one-line change. Both editions carry the
+occasion guide, the day-of-the-week chants, the Amaravati reflections
+(chanting_amaravati.py) and the indexes.
 
 Every chant in book order, with all five layers and a short commentary, laid
 out by templates/print/chanting_book_print.html and turned into a PDF by the
@@ -38,7 +47,6 @@ import sys
 import tempfile
 import unicodedata
 
-import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader
 from markupsafe import Markup, escape
 
@@ -47,6 +55,11 @@ sys.path.insert(0, ROOT)
 import chanting  # noqa: E402
 from chanting_print_short import SHORT  # noqa: E402
 from chanting_owen import OWEN_BOOK, OWEN_CHANTS, OWEN_GLOSSARY  # noqa: E402
+from chanting_amaravati import (  # noqa: E402
+    AMARAVATI_BOOK, AMARAVATI_BOOK_FULL, AMARAVATI_CHANTS, AMARAVATI_LICENCE)
+from chanting_volumes import (  # noqa: E402
+    AMARAVATI_VOLUME, CHANT_VOLUME, DAILY_ORDER, DAY_CHANTS, OCCASIONS, OWEN_VOLUME,
+    PART_VOLUME, SPLITS, VOLUMES)
 
 CHROME_PATHS = [
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
@@ -199,7 +212,141 @@ def number_parts(parts):
     return parts
 
 
-def render_html(template, parts, contents_pages, proof, pad_blank=False):
+# ── One book or three volumes (Pra Kru Bob's request, 2026-11-12) ──
+# The same chants, the same order, the same template. A "book" below is
+# either the whole one-volume edition or one of the three volumes; the plan
+# for which Part goes in which volume is chanting_volumes.py.
+
+# Locators for the guide sections, so the contents can give their pages.
+GUIDE_IDS = ('guide-occasions', 'guide-days', 'index-chants', 'index-first-lines')
+
+
+def split_into_volumes(parts):
+    """Each numbered part cut into runs by volume, in book order.
+
+    Returns {volume number: [part, ...]}, where a part that is split keeps
+    its number and name and is marked `continued` in every volume after the
+    one it starts in."""
+    out = {v['number']: [] for v in VOLUMES}
+    for part in parts:
+        volume = PART_VOLUME[part.get('number') or 16]
+        pieces = []
+        for chant in part['chants']:
+            volume = SPLITS.get(chant['id'], volume)
+            home = CHANT_VOLUME.get(chant['id'], volume)
+            if not pieces or pieces[-1]['volume'] != home:
+                pieces.append({'volume': home, 'chants': []})
+            pieces[-1]['chants'].append(chant)
+        for i, piece in enumerate(pieces):
+            out[piece['volume']].append(dict(part, chants=piece['chants'], continued=i > 0))
+    return out
+
+
+def _sort_key(text):
+    """Alphabetical order that ignores accents, 'The' and quote marks."""
+    text = unicodedata.normalize('NFD', text or '')
+    text = ''.join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r'^[\W_]+', '', text).lower()
+    return re.sub(r'^(the|a|an) ', '', text)
+
+
+def _first_line(text, limit=60):
+    text = re.sub(r'\s+', ' ', (text or '').split('\n')[0]).strip().rstrip(',.;:')
+    return text if len(text) <= limit else text[:limit].rsplit(' ', 1)[0] + ' …'
+
+
+def index_entries(books):
+    """Every chant of the edition, for the index of chants: label, the
+    romanised title under it, and the book it is in."""
+    entries = []
+    for book in books:
+        for part in book['parts']:
+            for c in part['chants']:
+                roman = c.get('title_pali') or c.get('title_roman') or ''
+                label = c.get('title_english') or roman or c.get('title_thai')
+                entries.append({'id': c['id'], 'label': label,
+                                'roman': roman if roman != label else '',
+                                'thai': c.get('title_thai', '')})
+        for c in book['owen_chants'] + book['amaravati_chants']:
+            entries.append({'id': c['id'], 'label': c['title_english'],
+                            'roman': c['title'], 'thai': c.get('title_thai', '')})
+    return sorted(entries, key=lambda e: _sort_key(e['label']))
+
+
+def first_line_entries(book):
+    """This book's chants by the first line of their Pali, as the Amaravati
+    book indexes them. A chant with no romanised Pali (an order of service in
+    Thai) has no first line to index."""
+    lines = []
+    for part in book['parts']:
+        for c in part['chants']:
+            first = next((v.get('pali_roman') for v in c['verses'] if v.get('pali_roman')), '')
+            if first:
+                lines.append({'id': c['id'], 'line': _first_line(first)})
+    for c in book['owen_chants']:
+        first = next((ln.get('pali_roman') for s in c['sections'] for ln in s['lines']
+                      if ln.get('pali_roman')), '')
+        if first:
+            lines.append({'id': c['id'], 'line': _first_line(first)})
+    for c in book['amaravati_chants']:
+        lines.append({'id': c['id'], 'line': _first_line(c['first_line'])})
+    return sorted(lines, key=lambda e: _sort_key(e['line']))
+
+
+def make_books(volumes):
+    """The books to print: one, or the three volumes."""
+    parts = number_parts(book_parts())
+    owen_part = sum(1 for p in parts if p.get('number')) + 1
+    common = {'owen_part': owen_part, 'amaravati_part': owen_part + 1}
+    if not volumes:
+        return [dict(common, key='one', volume=None, parts=parts, full_front=True, day_guide=True,
+                     owen_chants=OWEN_CHANTS, amaravati_chants=AMARAVATI_CHANTS,
+                     out=os.path.join(ROOT, '_print', 'chanting-book-a4.pdf'))]
+    by_volume = split_into_volumes(parts)
+    books = []
+    for v in VOLUMES:
+        n = v['number']
+        books.append(dict(
+            common, key=f'volume-{n}', volume=v, parts=by_volume[n],
+            full_front=(n == 1), day_guide=(n == 1),
+            owen_chants=OWEN_CHANTS if OWEN_VOLUME == n else [],
+            amaravati_chants=AMARAVATI_CHANTS if AMARAVATI_VOLUME == n else [],
+            out=os.path.join(ROOT, '_print', f'chanting-volume-{n}.pdf')))
+    return books
+
+
+def book_ids(book):
+    """Everything in one book that the contents or an index gives a page for."""
+    ids = [c['id'] for p in book['parts'] for c in p['chants']]
+    ids += [c['id'] for c in book['owen_chants']]
+    if book['owen_chants']:
+        ids.append(OWEN_GLOSSARY['id'])
+    ids += [c['id'] for c in book['amaravati_chants']]
+    ids += [g for g in GUIDE_IDS if g != 'guide-days' or book['day_guide']]
+    return ids
+
+
+def render_html(template, book, books, pages, proof, pad_blank=False):
+    """`pages` maps (book key, id) -> PDF page; empty on the first pass,
+    when every number prints as a same-width placeholder."""
+    home = {i: b for b in books for i in book_ids(b)}
+    many = len(books) > 1
+
+    def page(item_id):
+        """The page of something in THIS book (contents, its own index)."""
+        return str(pages.get((book['key'], item_id), '000'))
+
+    def ref(item_id):
+        """Where to find a chant anywhere in the edition: 'p. 123', or
+        'Vol. 2, p. 123' when the edition is in volumes."""
+        b = home.get(item_id)
+        if b is None:
+            return '—'
+        n = pages.get((b['key'], item_id), '000')
+        return f"Vol. {b['volume']['number']}, p. {n}" if many else f'p. {n}'
+
+    chants_by_id = {c['id']: c for c in chanting.CHANTS}
+    chants_by_id.update({c['id']: dict(c, title_pali=c['title']) for c in OWEN_CHANTS + AMARAVATI_CHANTS})
     return template.render(
         pad_blank=pad_blank,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
@@ -207,12 +354,28 @@ def render_html(template, parts, contents_pages, proof, pad_blank=False):
         how=chanting.HOW_TO_USE,
         sections=chanting.CHANT_SECTIONS,
         commentary=commentary,
-        parts=parts,
-        owen_chants=OWEN_CHANTS,
+        parts=book['parts'],
+        volume=book['volume'],
+        volumes=VOLUMES if many else [],
+        full_front=book['full_front'],
+        day_guide=book['day_guide'],
+        owen_chants=book['owen_chants'],
         owen_book=OWEN_BOOK,
         glossary=OWEN_GLOSSARY,
-        owen_part=sum(1 for p in parts if p.get('number')) + 1,
-        contents_pages=contents_pages,
+        owen_part=book['owen_part'],
+        amaravati_chants=book['amaravati_chants'],
+        amaravati_book=AMARAVATI_BOOK,
+        amaravati_book_full=AMARAVATI_BOOK_FULL,
+        amaravati_licence=AMARAVATI_LICENCE,
+        amaravati_part=book['amaravati_part'],
+        occasions=OCCASIONS,
+        day_chants=DAY_CHANTS,
+        daily_order=DAILY_ORDER,
+        chant_by_id=chants_by_id,
+        index_chants=index_entries(books),
+        index_first_lines=first_line_entries(book),
+        page=page,
+        ref=ref,
         locator=locator,
         proof=proof,
         built_on=datetime.date.today().isoformat(),
@@ -243,6 +406,7 @@ def print_pdf(chrome, html, pdf_path, workdir):
 
 def find_pages(pdf_path, chant_ids):
     """Which PDF page (1-based) each chant's locator text sits on."""
+    import fitz  # PyMuPDF: imported here so the tests can load this script without it
     pages = {}
     with fitz.open(pdf_path) as doc:
         for number, page in enumerate(doc, start=1):
@@ -271,6 +435,7 @@ STAND_IN_FONTS = ('Arial', 'Times', 'Segoe', 'Calibri', 'Consolas', 'Courier',
 
 
 def check_fonts_and_scale(pdf_path):
+    import fitz  # PyMuPDF
     sizes = collections.Counter()
     stand_ins = collections.Counter()
     with fitz.open(pdf_path) as doc:
@@ -299,7 +464,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--final', action='store_true',
                         help='leave off the "proof copy" stamp')
-    parser.add_argument('--out', default=os.path.join(ROOT, '_print', 'chanting-book-a4.pdf'))
+    parser.add_argument('--volumes', action='store_true',
+                        help='print the three-volume edition (chanting_volumes.py) '
+                             'instead of the one-volume book')
     args = parser.parse_args()
 
     unknown = sorted(set(SHORT) - {c['id'] for c in chanting.CHANTS})
@@ -314,52 +481,58 @@ def main():
     env.filters['halves'] = halves
     env.filters['is_verse_chant'] = is_verse_chant
     template = env.get_template('print/chanting_book_print.html')
-    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
+    os.makedirs(os.path.join(ROOT, '_print'), exist_ok=True)
     proof = not args.final
 
-    parts = number_parts(book_parts())
-    chant_ids = [c['id'] for p in parts for c in p['chants']]
-    if sorted(chant_ids) != sorted(c['id'] for c in chanting.CHANTS):
-        sys.exit('The book does not hold every chant exactly once.')
-    # Ajarn Owen's chants are paged too, for the contents, but they are a
-    # separate Part from another book and are not chants of chanting.py.
-    chant_ids += [c['id'] for c in OWEN_CHANTS]
-    # His word lists close the book and are in the contents too.
-    chant_ids.append(OWEN_GLOSSARY['id'])
+    books = make_books(args.volumes)
+    temple_ids = [c['id'] for b in books for p in b['parts'] for c in p['chants']]
+    if sorted(temple_ids) != sorted(c['id'] for c in chanting.CHANTS):
+        sys.exit('The edition does not hold every chant exactly once.')
+    if sum(bool(b['owen_chants']) for b in books) != 1 or \
+            sum(bool(b['amaravati_chants']) for b in books) != 1:
+        sys.exit("Ajarn Owen's and the Amaravati chants must each be in exactly one book.")
 
+    # Every book is laid out once with placeholder numbers; only then are all
+    # pages known, because the occasion guide and the index in one volume
+    # give pages in the others. Then every book is laid out again with the
+    # real numbers, and must come out paginated exactly as before.
     with tempfile.TemporaryDirectory() as workdir:
-        first = os.path.join(workdir, 'pass1.pdf')
-        print('Pass 1: laying out the book...', flush=True)
-        print_pdf(chrome, render_html(template, parts, {}, proof), first, workdir)
-        pages, total1 = find_pages(first, chant_ids)
-        check_fonts_and_scale(first)
+        pages, totals = {}, {}
+        print('Pass 1: laying out...', flush=True)
+        for book in books:
+            first = os.path.join(workdir, f"{book['key']}-pass1.pdf")
+            print_pdf(chrome, render_html(template, book, books, {}, proof), first, workdir)
+            found, totals[book['key']] = find_pages(first, book_ids(book))
+            check_fonts_and_scale(first)
+            missing = [i for i in book_ids(book) if i not in found]
+            if missing:
+                sys.exit(f"{book['key']}: {len(missing)} chants were not found in the PDF, "
+                         f'e.g. {missing[:5]}')
+            pages.update({(book['key'], i): n for i, n in found.items()})
 
-        missing = [cid for cid in chant_ids if cid not in pages]
-        if missing:
-            sys.exit(f'{len(missing)} chants were not found in the PDF, e.g. {missing[:5]}')
+        print('Pass 2: filling in the page numbers...', flush=True)
+        for book in books:
+            # Lulu prints only an even number of pages. An odd book gets one
+            # blank page before the credit page, which keeps the credit on
+            # the last page and moves no chant, so the numbers still hold.
+            pad = bool(totals[book['key']] % 2)
+            print_pdf(chrome, render_html(template, book, books, pages, proof, pad),
+                      book['out'], workdir)
+            check, total2 = find_pages(book['out'], book_ids(book))
+            if any(check.get(i) != pages[(book['key'], i)] for i in book_ids(book)) \
+                    or totals[book['key']] + pad != total2:
+                sys.exit(f"{book['key']}: the second pass paginated differently from the "
+                         'first — the page numbers cannot be trusted. Nothing was fixed up.')
+            name = f"Volume {book['volume']['number']}" if book['volume'] else 'The book'
+            print(f"Done: {name}: {total2} A4 pages -> {book['out']}"
+                  + (' (one blank page added to make the count even)' if pad else ''))
 
-        print('Pass 2: filling in the contents page numbers...', flush=True)
-        numbers = {cid: str(n) for cid, n in pages.items()}
-        # Lulu prints only an even number of pages. An odd book gets one blank
-        # page before the credit page, which keeps the credit on the last
-        # page and moves no chant, so the contents numbers still hold.
-        pad = bool(total1 % 2)
-        print_pdf(chrome, render_html(template, parts, numbers, proof, pad), args.out, workdir)
-        check, total2 = find_pages(args.out, chant_ids)
-
-    if check != pages or total1 + pad != total2:
-        sys.exit('The second pass paginated differently from the first — '
-                 'the contents numbers cannot be trusted. Nothing was fixed up.')
-
-    print(f'Done: {total2} A4 pages, {len(chant_ids)} chants -> {args.out}')
-    long_left = sum(1 for cid in chant_ids if chanting.get_chant(cid)
+    long_left = sum(1 for cid in temple_ids
                     if not all(SHORT.get(cid, {}).get(s['key']) for s in chanting.CHANT_SECTIONS
                                if chanting.get_chant(cid).get(s['key'])))
     if long_left:
         print(f'  {long_left} chants still print their FULL commentary — '
               'no short version in chanting_print_short.py yet.')
-    if pad:
-        print('  Added one blank page before the credit page to make the count even.')
 
 
 if __name__ == '__main__':
