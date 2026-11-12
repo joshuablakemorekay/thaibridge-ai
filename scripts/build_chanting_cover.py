@@ -26,7 +26,7 @@ sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 import chanting  # noqa: E402
 from chanting_volumes import VOLUMES  # noqa: E402
-from build_chanting_print import find_chrome, print_pdf  # noqa: E402
+from build_chanting_print import PRINT_TITLE, find_chrome, print_pdf  # noqa: E402
 
 TRIM_W, TRIM_H = 210.0, 297.0     # A4, mm
 BLEED = 3.175                     # Lulu's 0.125in
@@ -76,7 +76,7 @@ def main():
 
     env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')), autoescape=True)
     html = env.get_template('print/chanting_cover.html').render(
-        book=chanting.BOOK, proof=not args.final, built_on=datetime.date.today().isoformat(),
+        book=chanting.BOOK, title=PRINT_TITLE, proof=not args.final, built_on=datetime.date.today().isoformat(),
         trim_w=TRIM_W, bleed=BLEED, spine=spine, sheet_w=sheet_w, sheet_h=sheet_h,
         spine_font=spine_font, volume=volume,
         emblem_url=('file:///' + emblem.replace(os.sep, '/')) if emblem else None)
