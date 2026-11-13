@@ -159,7 +159,22 @@ DELETE  FROM users WHERE username = 'testaccount';    -- then delete it
 If the `SELECT` returns forty rows when you expected one, you have just saved
 yourself. This costs three seconds and is the single most useful habit here.
 
-**Deleting a user who has AI usage or payment rows** — remove those first, or
+**Deleting a real learner's account:** they can do it themselves from their
+Progress page, which is the safest way. If one asks you by
+email instead, do what that button does: unlink their payments and AI usage
+(keep the rows, set `user_id` to empty), delete their review, then the account.
+
+```sql
+UPDATE payments    SET user_id = NULL WHERE user_id = (SELECT id FROM users WHERE username = 'x');
+UPDATE ai_usage    SET user_id = NULL WHERE user_id = (SELECT id FROM users WHERE username = 'x');
+DELETE FROM app_reviews WHERE user_id = (SELECT id FROM users WHERE username = 'x');
+DELETE FROM users       WHERE username = 'x';
+```
+
+Check they have no subscription that will still renew first (the button
+refuses until it's cancelled), and remember the "never without a WHERE" rule.
+
+**Deleting a test account that has AI usage or payment rows**: remove those first, or
 the foreign keys will refuse:
 
 ```sql

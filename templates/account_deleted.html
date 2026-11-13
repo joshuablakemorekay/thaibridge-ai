@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Account deleted - ThaiBridge AI{% endblock %}
+
+{% block content %}
+{# Shown once, straight after /delete-account (auth.py). The visitor is already
+   signed out by now, so nothing here can depend on the account. #}
+<div class="container">
+    <div class="goodbye-container">
+        <div class="goodbye-icon">🙏</div>
+        <h1>Your account has been deleted</h1>
+        <p class="lead">
+            Your account, progress and settings are gone, along with any review you left.
+            Records of past payments are kept with your details taken off them, because
+            UK tax law requires it. We've sent a confirmation to your email address.
+        </p>
+        <p>Thank you for learning with ThaiBridge. You're always welcome back.</p>
+        <p class="metta">May you be happy!</p>
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">Back to the home page</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .goodbye-container {
+        max-width: 600px; margin: 3rem auto; background: white;
+        border-radius: 16px; padding: 2.5rem; text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    .goodbye-icon { font-size: 3rem; }
+    .goodbye-container .lead { line-height: 1.7; }
+    .metta { font-style: italic; color: var(--saffron-text); }
+    .action-buttons { margin-top: 1.5rem; }
+</style>
+{% endblock %}

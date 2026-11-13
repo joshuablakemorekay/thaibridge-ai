@@ -147,18 +147,23 @@ Please don't test against other people's accounts or try to access data that isn
 
 What's kept and why is set out for learners on the [privacy page](https://thaibridge.smoald.com/privacy).
 In short: account details, learning progress, plan and payment records, AI usage counts
-(not content) and, if a learner chooses to leave one, their review. Accounts are deleted
-on request by email. Payment records are kept as long as UK tax law requires.
+(not content) and, if a learner chooses to leave one, their review.
+
+**Learners can delete their own account** from the Progress page (`/delete-account` in
+`auth.py`). It asks for their password and the word DELETE. The account, progress and any
+review are deleted. Payment and AI usage records are kept but unlinked (`user_id` set to
+empty), so nothing in them says who they belonged to; UK tax law requires the payment
+records. A subscription that will still renew must be cancelled first, so nobody is
+charged for an account that no longer exists. A confirmation email goes to the old address.
 
 ---
 
 ## Known gaps
 
-Honest list of what isn't done yet, roughly in priority order:
-
-1. **No self-service account deletion.** It's done by email today.
+Nothing on the list right now. If you find something, please report it as described at
+the top of this page.
 
 Fixed on 13 November 2026: the cookie settings are now explicit, Monk Mode codes are
 rate limited, security headers are sent on every response, the Content-Security-Policy
-only lets the site's own scripts run, every POST must be JSON, and the developer password
-is hashed and checked like learners' passwords.
+only lets the site's own scripts run, every POST must be JSON, the developer password
+is hashed and checked like learners' passwords, and learners can delete their own account.
