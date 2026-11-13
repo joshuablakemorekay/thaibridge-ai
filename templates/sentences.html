@@ -114,9 +114,16 @@
     text-align: left;
     cursor: pointer;
 }
-.listen-option:disabled { cursor: default; }
+/* The answers lock once you pick one. Without an explicit colour the browser
+   greys locked buttons to about 30%, which made the answers hard to read
+   at the exact moment you are checking them. */
+.listen-option:disabled { cursor: default; color: var(--dark-text, #2C1810); }
 .listen-option.is-right { border-color: var(--bodhi-green); background: #eef6e4; }
 .listen-option.is-wrong { border-color: var(--temple-red); background: #fbeaea; }
+/* Right and wrong were shown by colour alone here, which red-green colour-blind
+   learners can't read. A tick or cross says it in shape too, for everyone. */
+.listen-option.is-right::after { content: " ✓"; font-weight: 700; }
+.listen-option.is-wrong::after { content: " ✗"; font-weight: 700; }
 .listen-score { margin-top: 1rem; font-weight: 600; color: var(--royal-purple); }
 /* Sentence builder: tap tiles from the pool into the answer row. */
 .sb-prompt { margin: 1rem 0; font-size: 1.25rem; }
