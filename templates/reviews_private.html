@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Reviews (private) - ThaiBridge AI{% endblock %}
+
+{% block content %}
+{# Developer mode only (app_reviews.private_reviews). Every review is listed,
+   low ratings included. Never hand-pick from this for the site without
+   showing the overall picture too. #}
+<div class="container">
+    <h1>💬 Reviews (private)</h1>
+
+    {% if not rows %}
+    <p>No reviews yet. They'll appear here as learners reach Level 3 and answer the prompt on their Progress page.</p>
+    {% else %}
+    <p class="rv-summary"><strong>{{ average }} ★ average</strong> from {{ rows|length }} review{{ 's' if rows|length != 1 }}
+        &nbsp;·&nbsp;
+        {% for stars, n in counts.items() %}{{ stars }}★ {{ n }}{{ ' · ' if not loop.last }}{% endfor %}
+    </p>
+
+    <div class="rv-scroll">
+    <table class="rv-table">
+        <thead>
+            <tr>
+                <th scope="col">Date</th><th scope="col">Rating</th><th scope="col">Review</th>
+                <th scope="col">Can show?</th><th scope="col">Learner</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for r, username in rows %}
+            <tr>
+                <td>{{ r.created_at.strftime('%d %b %Y') }}</td>
+                <td class="rv-stars">{{ '★' * r.rating }}<span class="rv-dim">{{ '★' * (5 - r.rating) }}</span></td>
+                <td>{{ r.comment or '—' }}</td>
+                <td>{% if r.can_publish %}✅ Yes{% if r.display_name %}, as “{{ r.display_name }}”{% endif %}{% else %}No{% endif %}</td>
+                <td>{{ username }}<br><small>Level {{ r.level_at_review or '?' }}, {{ r.tier_at_review or '?' }}</small></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .rv-summary { font-size: 1.1rem; }
+    .rv-scroll { overflow-x: auto; }
+    .rv-table { width: 100%; border-collapse: collapse; background: white; }
+    .rv-table th, .rv-table td { padding: 0.6rem; border-bottom: 1px solid #eee; text-align: left; vertical-align: top; }
+    .rv-table td:nth-child(3) { white-space: pre-wrap; min-width: 16rem; }
+    .rv-stars { color: var(--saffron-text); white-space: nowrap; }
+    .rv-dim { color: #ccc; }
+</style>
+{% endblock %}

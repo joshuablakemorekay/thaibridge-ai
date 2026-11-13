@@ -135,6 +135,46 @@ class User(UserMixin, db.Model):
         return self.subscription_tier
 
 
+# ============================================
+# APP REVIEWS (collected privately — see app_reviews.py)
+# ============================================
+
+class AppReview(db.Model):
+    """One learner's review of ThaiBridge: a star rating and, if they like, a few words.
+
+    Collected PRIVATELY first. Nothing here is shown on the site. Some reviews
+    may later go on the site as quotes, but only ones whose writer ticked
+    can_publish. UK law (DMCC Act 2024) also bans showing only the good ones
+    and hiding the rest, so every rating is kept, low ones included, and never
+    edited.
+
+    One row per account (user_id is UNIQUE). Sending again updates that row
+    instead of adding a second one, so a double-click or a change of heart
+    never counts twice.
+    """
+    __tablename__ = 'app_reviews'
+
+    id           = db.Column(db.Integer, primary_key=True)
+    created_at   = db.Column(db.DateTime, default=utcnow, nullable=False, index=True)
+    updated_at   = db.Column(db.DateTime, default=utcnow, onupdate=utcnow, nullable=False)
+    user_id      = db.Column(db.Integer, db.ForeignKey('users.id'),
+                             nullable=False, unique=True)
+
+    rating       = db.Column(db.Integer, nullable=False)        # 1–5 stars
+    comment      = db.Column(db.Text)                           # optional, capped in app_reviews.py
+    # Permission to quote it on the site. Off unless they tick the box.
+    can_publish  = db.Column(db.Boolean, default=False, nullable=False)
+    # The name they'd like shown beside a quote, e.g. "Sarah, Bangkok".
+    # Never their username, unless that's what they type.
+    display_name = db.Column(db.String(60))
+
+    # Where they were when they wrote it, recorded as it was AT THE TIME
+    # (same rule as AiUsage.tier), so we can later see how a free learner on
+    # Level 3 rates the app compared with a Pro learner on Level 8.
+    level_at_review = db.Column(db.Integer)
+    tier_at_review  = db.Column(db.String(20))
+
+
 def ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
     exists, so add any missing ones by hand. Idempotent — each ALTER is skipped

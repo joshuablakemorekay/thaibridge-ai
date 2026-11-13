@@ -394,6 +394,8 @@ import quizzes  # noqa: E402  (the quiz and listening routes; needs the limiter 
 app.register_blueprint(quizzes.bp)
 progress.init_app(app)
 signup_source.init_app(app)
+import app_reviews  # noqa: E402  (the review prompt on /progress; needs the limiter)
+app_reviews.init_app(app)
 
 
 @app.errorhandler(429)
@@ -5767,6 +5769,7 @@ def progress_dashboard():
                          achievements=ACHIEVEMENTS,
                          earned_unlock=earned_unlock_status(),
                          earned_unlock_level=EARNED_UNLOCK_LEVEL,
+                         ask_for_review=app_reviews.should_ask(user),
                          new_achievements=new_achievements)
 
 
