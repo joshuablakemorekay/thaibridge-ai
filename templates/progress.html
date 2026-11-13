@@ -220,6 +220,41 @@
         <p id="change-password-message" class="change-password-message" role="alert"></p>
     </div>
     <script src="{{ static_v('js/pages/change-password.js') }}"></script>
+
+    {# Deleting the account. Rules in auth.py (delete_account): password + the
+       word DELETE; a plan that will still renew must be cancelled first;
+       payments are kept but unlinked, everything else goes. #}
+    <div class="receipts-section delete-account" id="delete-account">
+        <h2>🗑️ Delete my account</h2>
+        <p class="receipts-note">This removes your account, your progress and settings, and any
+            review you left. It can't be undone. Records of past payments are kept with your
+            details taken off them, because UK tax law requires it.
+            <a href="/privacy">More in the privacy policy.</a></p>
+        {% if current_user.stripe_subscription_id and current_user.subscription_status in ['active', 'trialing', 'past_due'] %}
+        <p class="receipts-note"><strong>You have a subscription that will renew.</strong>
+            Please cancel it first (the button is near the top of this page), so you aren't
+            charged again. Then you can delete your account here.</p>
+        {% else %}
+        {% if current_user.subscription_status == 'canceling' and current_user.current_period_end %}
+        <p class="receipts-note"><strong>Your paid access runs until
+            {{ current_user.current_period_end.strftime('%d %B %Y').lstrip('0') }}.</strong>
+            Deleting your account now ends it today.</p>
+        {% endif %}
+        <form action="/delete-account" method="post" class="change-password-form" data-json-post
+              data-confirm="Delete your ThaiBridge account for good? This can't be undone.">
+            <label for="delete-password">Your password</label>
+            <input type="password" id="delete-password" name="password" autocomplete="current-password" required>
+            <label for="delete-confirm">Type DELETE to confirm</label>
+            <input type="text" id="delete-confirm" name="confirm" autocomplete="off" required
+                   pattern="[Dd][Ee][Ll][Ee][Tt][Ee]" title="Type the word DELETE">
+            <button type="submit" class="btn btn-delete-account">Delete my account</button>
+            <p class="change-password-message bad" data-form-message role="alert"></p>
+        </form>
+        {% endif %}
+    </div>
+    <style>
+        .btn-delete-account { background: #c0392b; color: #fff; }
+    </style>
     {% endif %}
 
     <!-- Achievements -->

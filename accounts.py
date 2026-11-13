@@ -140,6 +140,21 @@ def send_reset_email(user, link):
     ))
 
 
+def send_deleted_email(email, username):
+    """Confirm a deletion to the address it belonged to. Takes the email and
+    name rather than the user, because by the time this runs the row is gone."""
+    send_in_background(email, "Your ThaiBridge AI account has been deleted", (
+        f"Hi {username},\n\n"
+        "Your ThaiBridge AI account has been deleted, as you asked. Your progress, "
+        "settings and any review you left have been removed.\n\n"
+        "Records of past payments are kept, with your account details taken off "
+        "them, because UK tax law requires it.\n\n"
+        "If you didn't do this, please email joshua@smoald.com straight away.\n\n"
+        "Thank you for learning with us. You're always welcome back.\n\n"
+        "ThaiBridge AI"
+    ))
+
+
 def send_changed_email(user, forgot_link):
     """Tell the owner their password changed, so a change they didn't make is
     noticed by the one person able to act on it."""

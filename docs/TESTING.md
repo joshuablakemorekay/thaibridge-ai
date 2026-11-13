@@ -3,7 +3,7 @@
 How ThaiBridge AI is tested: how to run the suite, how it's organised, how it stays away
 from the live database, and the habits that keep a green tick meaningful.
 
-*Last checked: 13 November 2026, 73 test files, 2,830 tests passing (3 skipped).*
+*Last checked: 13 November 2026, 74 test files, 2,847 tests passing (3 skipped).*
 
 ---
 

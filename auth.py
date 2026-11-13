@@ -16,6 +16,7 @@ import re
 from flask import (Blueprint, jsonify, redirect, render_template, request,
                    session, url_for)
 from flask_login import current_user, login_required, login_user, logout_user
+from sqlalchemy import delete, update
 
 import accounts
 import meta_pixel
@@ -207,6 +208,81 @@ def change_password():
     login_user(user, remember=True)
     _tell_owner_password_changed(user)
     return jsonify({'success': True, 'message': 'Your password has been changed.'})
+
+
+# ============================================
+# DELETING AN ACCOUNT
+# ============================================
+#
+# Settled with Josh 2026-11-13:
+#   * payments are KEPT but unlinked (user_id set to NULL). UK tax law needs a
+#     record of money received; with the link cut, nothing in it says who paid;
+#   * AI usage rows are unlinked the same way. They hold no message text, and
+#     the totals stay honest;
+#   * a review is DELETED along with the account;
+#   * a subscription that will still renew must be cancelled first, so nobody
+#     is charged for an account that no longer exists. A cancelled plan with
+#     paid time left can be deleted; the page warns that the time goes too.
+
+# Statuses where Stripe will charge again. 'canceling' is not one: it stops at
+# the end of the paid period.
+STILL_RENEWING = {'active', 'trialing', 'past_due'}
+
+CONFIRM_WORD = 'DELETE'
+
+
+def _still_renewing(user):
+    return bool(user.stripe_subscription_id) and user.subscription_status in STILL_RENEWING
+
+
+@bp.route('/delete-account', methods=['POST'])
+@login_required
+# Asks for the password, so like /change-password it is a guessing door. Only
+# failed attempts count.
+@limiter.limit("10 per 15 minutes; 40 per hour", key_func=rate_limit_key,
+               deduct_when=failed_attempt_only)
+def delete_account():
+    data = request.get_json(silent=True) or {}
+    user = current_user._get_current_object()
+
+    if not user.check_password(str(data.get('password', ''))):
+        return jsonify({'success': False, 'message': 'Your password is not right.'}), 400
+    if str(data.get('confirm', '')).strip().upper() != CONFIRM_WORD:
+        return jsonify({'success': False,
+                        'message': f'Please type {CONFIRM_WORD} to confirm.'}), 400
+    if _still_renewing(user):
+        return jsonify({'success': False,
+                        'message': 'Please cancel your subscription first (the button is '
+                                   'near the top of this page), so you are not charged '
+                                   'again. Then you can delete your account.'}), 400
+
+    email, username, uid = user.email, user.username, user.id
+    tables = db.metadata.tables   # the tables themselves, so this file needn't import app.py
+    try:
+        for name in ('payments', 'ai_usage'):
+            db.session.execute(update(tables[name])
+                               .where(tables[name].c.user_id == uid)
+                               .values(user_id=None))
+        db.session.execute(delete(tables['app_reviews'])
+                           .where(tables['app_reviews'].c.user_id == uid))
+        db.session.delete(user)
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        return jsonify({'success': False,
+                        'message': "Sorry, we couldn't delete your account just now. "
+                                   "Nothing has been removed. Please try again, or email "
+                                   "joshua@smoald.com."}), 500
+
+    logout_user()
+    session.clear()
+    accounts.send_deleted_email(email, username)
+    return jsonify({'success': True, 'redirect': url_for('auth.account_deleted')})
+
+
+@bp.route('/account-deleted')
+def account_deleted():
+    return render_template('account_deleted.html')
 
 
 # ============================================
