@@ -229,6 +229,17 @@ loads. The plain file is the fallback. `generate_paiboon.py`, `fix_paiboon.py` a
 65 Jinja2 templates (HTML with placeholders Flask fills in). They all extend `base.html`.
 `static/` holds the CSS, JavaScript, fonts and about 2,000 generated MP3 clips (Thai and English).
 
+**No JavaScript lives in the templates.** The Content-Security-Policy refuses inline
+scripts, so:
+- each page's script is a file in `static/js/pages/` (named after its page), loaded from
+  the spot in the template where it used to sit;
+- values from the server reach a script through a JSON data block,
+  `<script type="application/json" id="...">{{ value|tojson }}</script>`, which the browser
+  never runs;
+- buttons say what they do with `data-on-click="functionName"` and `data-args='[...]'`
+  instead of `onclick="..."`. One listener in `static/js/actions.js` runs them for the
+  whole site.
+
 ### `scripts/`, `prompts/`, `evals/`, `tests/`, `docs/`
 
 - `scripts/` holds developer tools: audio generation, the print-book builder, review-sheet

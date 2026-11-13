@@ -25,10 +25,14 @@ Each one closes a door the browser would otherwise leave open:
         on http://localhost it would be ignored at best, and at worst teach the
         browser to refuse plain-http localhost for every project on the machine.
 
-NOT here yet: a Content-Security-Policy that controls which scripts may run.
-Most pages have their scripts written inline, so a strict policy would block
-the site's own code. Moving those scripts into files comes first. See
-SECURITY.md, "Known gaps".
+  * Content-Security-Policy script-src
+        Scripts may only come from this site's own files, plus Meta's Pixel
+        loader (which only loads after a visitor accepts the cookie). Inline
+        <script> blocks and onclick="..." attributes are refused, so if an
+        attacker ever managed to slip HTML into a page, any script in it would
+        not run. That's why every page script lives in static/js/, values from
+        the server arrive as JSON data blocks, and buttons use data-on-click
+        (see static/js/actions.js). Styles are not restricted.
 
 Like the other modules this never imports app.py. app.py calls init_app(app).
 """
@@ -37,10 +41,14 @@ import os
 
 HSTS_MAX_AGE = 60 * 60 * 24 * 365   # one year, in seconds
 
+# Where Meta's Pixel loader comes from (static/js/pages/meta-pixel.js).
+META_PIXEL_ORIGIN = 'https://connect.facebook.net'
+
 HEADERS = {
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
-    'Content-Security-Policy': "frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+    'Content-Security-Policy': ("script-src 'self' " + META_PIXEL_ORIGIN + "; "
+                                "frame-ancestors 'none'; base-uri 'self'; object-src 'none'"),
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), geolocation=(), payment=(), microphone=(self)',
 }
