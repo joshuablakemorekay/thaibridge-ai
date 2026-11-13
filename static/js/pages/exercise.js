@@ -54,7 +54,7 @@ async function loadQuiz() {
 
         data.options.forEach(option => {
             html += `
-                <button class="btn" onclick="checkAnswer('${option}')" style="width: 100%;">
+                <button class="btn" data-on-click="checkAnswer" data-args="${argsAttr([option])}" style="width: 100%;">
                     ${option}
                 </button>
             `;
@@ -69,10 +69,17 @@ async function loadQuiz() {
     }
 }
 
+// The arguments for a data-on-click button (see static/js/actions.js), made
+// safe to sit inside a double-quoted HTML attribute whatever the text holds.
+function argsAttr(list) {
+    return JSON.stringify(list).replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 // Listening Quiz: the word is heard, never shown, until it has been answered.
 // The options are English meanings, so they can hold apostrophes ("don't") —
 // the buttons are built as elements with their own click handler rather than
-// as an onclick="..." string, which an apostrophe would break.
+// as a string of HTML, which an apostrophe could break.
 let listening = false;
 const SLOW_RATE = 0.7;   // the clips are already a touch slow; this is "really slow"
 
@@ -153,7 +160,7 @@ async function checkAnswer(answer) {
             <p class="paiboon" style="font-size: 1.3rem;">${listening ? currentQuestion.paiboon : (result.correct_answer ?? '')}</p>
             ${listening ? `<p style="font-size: 1.2rem; color: #666;">${result.correct_answer ?? ''}</p>` : ''}
             <p style="margin-top: 1.5rem;">
-                <button class="btn btn-saffron" onclick="${listening ? 'loadListening()' : 'loadQuiz()'}">Next Question</button>
+                <button class="btn btn-saffron" data-on-click="${listening ? 'loadListening' : 'loadQuiz'}">Next Question</button>
             </p>
         </div>
     `;

@@ -859,8 +859,8 @@
 <div class="card sb-card">
     <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 0;">Now it's your turn. Read the English, then tap the Thai words in the right order. Say it out loud as you build it.</p>
     <div class="sb-levels" role="group" aria-label="Difficulty">
-        <button type="button" class="sb-level active" data-level="starter" onclick="sbSetLevel('starter')" aria-pressed="true">🌱 Starter</button>
-        <button type="button" class="sb-level" data-level="challenge" onclick="sbSetLevel('challenge')" aria-pressed="false">🔥 Challenge</button>
+        <button type="button" class="sb-level active" data-level="starter" data-on-click="sbSetLevel" data-args='["starter"]' aria-pressed="true">🌱 Starter</button>
+        <button type="button" class="sb-level" data-level="challenge" data-on-click="sbSetLevel" data-args='["challenge"]' aria-pressed="false">🔥 Challenge</button>
     </div>
     <p id="sb-level-note" class="sb-level-note">Short sentences, with the romanisation on every word.</p>
     <div id="sb-drill" aria-live="polite">
@@ -871,9 +871,9 @@
         <div id="sb-answer" class="sb-row sb-answer" aria-label="Your sentence"></div>
         <div id="sb-pool" class="sb-row sb-pool" aria-label="Words to choose from"></div>
         <div class="sb-buttons">
-            <button type="button" id="sb-check" class="btn" onclick="sbCheck()" disabled>✓ Check</button>
-            <button type="button" class="btn sb-secondary" onclick="sbClear()">↺ Start again</button>
-            <button type="button" id="sb-next" class="btn sb-secondary" onclick="sbNext()">Next →</button>
+            <button type="button" id="sb-check" class="btn" data-on-click="sbCheck" disabled>✓ Check</button>
+            <button type="button" class="btn sb-secondary" data-on-click="sbClear">↺ Start again</button>
+            <button type="button" id="sb-next" class="btn sb-secondary" data-on-click="sbNext">Next →</button>
         </div>
         <div id="sb-result" class="sb-result" hidden></div>
     </div>
@@ -904,7 +904,7 @@
         </span>
     </p>
 
-    <button type="button" class="practice-toggle" onclick="toggleConvPractice(this)">
+    <button type="button" class="practice-toggle" data-on-click="toggleConvPractice" data-args='["$this"]'>
         🎭 Practice mode: <span class="practice-state">off</span>
     </button>
     {% if conv_id in roleplay_ids %}
@@ -915,7 +915,7 @@
     {% set ns = namespace(urls=[]) %}
     {% for line in conv.dialogue %}{% if thai_audio_url(line.thai) %}{% set ns.urls = ns.urls + [thai_audio_url(line.thai)] %}{% endif %}{% endfor %}
     {% if ns.urls and conv_id in listening_ids %}
-    <button type="button" class="practice-toggle listen-toggle" onclick="toggleConvListening(this, '{{ conv_id }}')">
+    <button type="button" class="practice-toggle listen-toggle" data-on-click="toggleConvListening" data-args='{{ ['$this', conv_id]|tojson }}'>
         🎧 Listen &amp; answer: <span class="listen-state">off</span>
     </button>
     <div class="listen-panel" hidden>
@@ -931,7 +931,7 @@
         <button type="button" class="btn btn-saffron th-audio listen-play"
                 data-audio-sequence="{{ ns.urls|join(' ') }}" data-audio-rate="1">▶️ Play the conversation</button>
         <div class="listen-questions"></div>
-        <button type="button" class="practice-toggle listen-reveal" onclick="revealConversation(this)">👀 Show the conversation</button>
+        <button type="button" class="practice-toggle listen-reveal" data-on-click="revealConversation" data-args='["$this"]'>👀 Show the conversation</button>
     </div>
     {% endif %}
 
@@ -944,7 +944,7 @@
             </span>
             {% if thai_audio_url(line.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(line.thai) }}" aria-label="Play this line">🔊</button>{% endif %}
         </div>
-        <div class="answer" onclick="revealAnswer(this)">
+        <div class="answer" data-on-click="revealAnswer" data-args='["$this"]'>
             <div class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ formal_tag(line.thai) }}{{ line.thai }}</div>
             <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ line.paiboon }}</div>
         </div>

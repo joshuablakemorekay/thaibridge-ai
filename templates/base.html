@@ -27,7 +27,7 @@
         <div class="nav-container">
             <a href="/" class="logo"><img src="{{ static_v('img/brand/logo.png') }}" alt="ThaiBridge AI" width="315" height="48"></a>
             
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <button class="mobile-menu-toggle" data-on-click="toggleMobileMenu">☰</button>
             
             <ul id="main-nav">
                 <li><a href="/">🏠 Home</a></li>
@@ -37,7 +37,7 @@
                      studying harder (e.g. dyslexia, ADHD, autism). Pure front-end —
                      choices are saved in the browser, nothing is sent to the server. -->
                 <li class="dropdown reading-support">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)"
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'
                             title="Learning support — easier-to-read font, bigger text, more spacing, and read aloud">
                         ♿ Learning Support
                     </button>
@@ -70,7 +70,7 @@
 
                 <!-- Learn -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">📚 Learn</button>
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>📚 Learn</button>
                     <div class="dropdown-content">
                         <a href="/alphabet">🔤 Alphabet</a>
                         <a href="/tones-classes">🔊 Tones & Consonant Classes</a>
@@ -101,7 +101,7 @@
 
                 <!-- Buddhism -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">☸️ Buddhism</button>
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>☸️ Buddhism</button>
                     <div class="dropdown-content">
                         <a href="/practising-anywhere">🌏 Practising the Dhamma Anywhere</a>
                         <a href="/dhamma-and-culture">🪷 Dhamma, Culture &amp; Thailand</a>
@@ -122,7 +122,7 @@
 
                 <!-- Account -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>
                         {% if current_user.is_authenticated %}👤 {{ current_user.username }}{% else %}👤 Account{% endif %}
                     </button>
                     <div class="dropdown-content">
@@ -144,7 +144,7 @@
                      and monks learning Thai -->
                 <li>
                     {% if monk_mode %}
-                    <button class="monk-mode-toggle active" onclick="turnMonkModeOff()"
+                    <button class="monk-mode-toggle active" data-on-click="turnMonkModeOff"
                             title="Monk Mode is on — click to switch it off">
                         🧡 Monk Mode: ON
                     </button>
@@ -160,13 +160,13 @@
             {% if request.endpoint == 'gender_examples' %}
             <div class="gender-selector">
                 <label>Your Gender:</label>
-                <button class="gender-btn" id="male-btn" onclick="setGender('male')">
+                <button class="gender-btn" id="male-btn" data-on-click="setGender" data-args='["male"]'>
                     <span class="gender-indicator">👨</span> Male
                 </button>
-                <button class="gender-btn" id="female-btn" onclick="setGender('female')">
+                <button class="gender-btn" id="female-btn" data-on-click="setGender" data-args='["female"]'>
                     <span class="gender-indicator">👩</span> Female
                 </button>
-                <button class="gender-btn active" id="neutral-btn" onclick="setGender('neutral')">
+                <button class="gender-btn active" id="neutral-btn" data-on-click="setGender" data-args='["neutral"]'>
                     <span class="gender-indicator">👤</span> Show Both
                 </button>
             </div>
@@ -202,12 +202,13 @@
     
     <footer>
         <p>🪷 ThaiBridge AI</p>
-        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" onclick="tbCookieChoices(); return false;">Cookie choices</a>{% endif %} • <a href="/premium#dana">🪷 Give dāna</a></p>
+        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" data-on-click="tbCookieChoices">Cookie choices</a>{% endif %} • <a href="/premium#dana">🪷 Give dāna</a></p>
         <p>Using <a href="/paiboon">ThaiBridge Spelling</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>
     
     <script src="{{ static_v('js/pages/monk-switches.js') }}"></script>
+    <script src="{{ static_v('js/actions.js') }}"></script>
     <script src="{{ static_v('js/base.js') }}"></script>
     
     {% block extra_js %}{% endblock %}

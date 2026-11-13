@@ -293,23 +293,23 @@
 <div class="card" style="border-left-color: var(--royal-purple);">
     <h2 style="margin-top:0;">🪷 Start a Guided Session</h2>
     <div class="session-grid">
-        <button class="session-btn btn-blessing"  onclick="launchSession('blessing')">
+        <button class="session-btn btn-blessing"  data-on-click="launchSession" data-args='["blessing"]'>
             🙏 On the Move
             <span class="duration">2 min · Before giving blessings</span>
         </button>
-        <button class="session-btn btn-samadhi"   onclick="launchSession('samatha')">
+        <button class="session-btn btn-samadhi"   data-on-click="launchSession" data-args='["samatha"]'>
             🌊 Samadhi
             <span class="duration">30 min · Concentration</span>
         </button>
-        <button class="session-btn btn-vipassana" onclick="launchSession('vipassana')">
+        <button class="session-btn btn-vipassana" data-on-click="launchSession" data-args='["vipassana"]'>
             👁️ Vipassana
             <span class="duration">30 min · Insight</span>
         </button>
-        <button class="session-btn btn-body-scan" onclick="launchSession('body_scan')">
+        <button class="session-btn btn-body-scan" data-on-click="launchSession" data-args='["body_scan"]'>
             🫁 Body Scan
             <span class="duration">20 min · Awareness</span>
         </button>
-        <button class="session-btn btn-full"      onclick="launchSession('full')">
+        <button class="session-btn btn-full"      data-on-click="launchSession" data-args='["full"]'>
             ☸ Full Session
             <span class="duration">60 min · Samadhi → Vipassana</span>
         </button>
@@ -338,21 +338,21 @@
     <p class="phase-instruction" id="phaseInstruction">Select a session above or set a custom time below.</p>
 
     <div class="timer-presets" id="presetButtons">
-        <button onclick="setCustomTimer(2)">2 min</button>
-        <button onclick="setCustomTimer(5)">5 min</button>
-        <button onclick="setCustomTimer(10)">10 min</button>
-        <button onclick="setCustomTimer(15)">15 min</button>
-        <button onclick="setCustomTimer(20)">20 min</button>
-        <button onclick="setCustomTimer(30)">30 min</button>
-        <button onclick="setCustomTimer(45)">45 min</button>
-        <button onclick="setCustomTimer(60)">60 min</button>
+        <button data-on-click="setCustomTimer" data-args='[2]'>2 min</button>
+        <button data-on-click="setCustomTimer" data-args='[5]'>5 min</button>
+        <button data-on-click="setCustomTimer" data-args='[10]'>10 min</button>
+        <button data-on-click="setCustomTimer" data-args='[15]'>15 min</button>
+        <button data-on-click="setCustomTimer" data-args='[20]'>20 min</button>
+        <button data-on-click="setCustomTimer" data-args='[30]'>30 min</button>
+        <button data-on-click="setCustomTimer" data-args='[45]'>45 min</button>
+        <button data-on-click="setCustomTimer" data-args='[60]'>60 min</button>
     </div>
 
     <div class="timer-controls">
-        <button class="btn btn-saffron" onclick="startTimer()" id="startBtn">▶ Start</button>
-        <button class="btn btn-secondary" onclick="pauseTimer()" id="pauseBtn" disabled>⏸ Pause</button>
-        <button class="btn" onclick="resetTimer()">↺ Reset</button>
-        <select class="ambient-btn" id="musicSelect" onchange="setMusic(this.value)" aria-label="Background music">
+        <button class="btn btn-saffron" data-on-click="startTimer" id="startBtn">▶ Start</button>
+        <button class="btn btn-secondary" data-on-click="pauseTimer" id="pauseBtn" disabled>⏸ Pause</button>
+        <button class="btn" data-on-click="resetTimer">↺ Reset</button>
+        <select class="ambient-btn" id="musicSelect" data-on-change="setMusic" data-args='["$value"]' aria-label="Background music">
             <option value="off">🔔 Bell only</option>
             <option value="golden">🎧 Golden binaural beat (headphones)</option>
         </select>

@@ -19,10 +19,10 @@
 <div class="card" style="text-align: center;">
     <strong>Filter by Level:</strong>
     <p style="margin-top: 0.5rem;">
-        <button class="btn tag-beginner" onclick="filterLessons('all')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">All</button>
-        <button class="btn tag-beginner" onclick="filterLessons('Beginner')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌱 Beginner</button>
-        <button class="btn tag-intermediate" onclick="filterLessons('Intermediate')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌿 Intermediate</button>
-        <button class="btn tag-advanced" onclick="filterLessons('Advanced')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌳 Advanced</button>
+        <button class="btn tag-beginner" data-on-click="filterLessons" data-args='["all"]' style="border: none; cursor: pointer; padding: 0.5rem 1rem;">All</button>
+        <button class="btn tag-beginner" data-on-click="filterLessons" data-args='["Beginner"]' style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌱 Beginner</button>
+        <button class="btn tag-intermediate" data-on-click="filterLessons" data-args='["Intermediate"]' style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌿 Intermediate</button>
+        <button class="btn tag-advanced" data-on-click="filterLessons" data-args='["Advanced"]' style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌳 Advanced</button>
     </p>
 </div>
 

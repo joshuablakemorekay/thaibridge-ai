@@ -10,8 +10,8 @@
         <a href="/privacy#cookies">More about this</a>
     </p>
     <div class="tb-consent-buttons">
-        <button type="button" class="btn" onclick="tbConsent('granted')">Accept</button>
-        <button type="button" class="btn btn-secondary" onclick="tbConsent('denied')">No thanks</button>
+        <button type="button" class="btn" data-on-click="tbConsent" data-args='["granted"]'>Accept</button>
+        <button type="button" class="btn btn-secondary" data-on-click="tbConsent" data-args='["denied"]'>No thanks</button>
     </div>
 </div>
 <style>

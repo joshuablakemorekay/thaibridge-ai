@@ -77,12 +77,12 @@
     <h2>🎯 Quick Quiz</h2>
     <div id="quizContent">
         <p style="text-align: center;">
-            <button class="btn btn-saffron" onclick="loadQuiz()">Start Quiz</button>
+            <button class="btn btn-saffron" data-on-click="loadQuiz">Start Quiz</button>
             {% if listening_ready %}
-            <button class="btn" onclick="loadListening()">🎧 Listening Quiz</button>
+            <button class="btn" data-on-click="loadListening">🎧 Listening Quiz</button>
             {% endif %}
             {% if can_pronounce and pron_words %}
-            <button class="btn" id="pronounceStart" onclick="loadPronounce()">🎤 Say it</button>
+            <button class="btn" id="pronounceStart" data-on-click="loadPronounce">🎤 Say it</button>
             {% endif %}
         </p>
         {% if listening_ready %}

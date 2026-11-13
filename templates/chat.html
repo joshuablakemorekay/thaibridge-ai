@@ -547,49 +547,49 @@
         <p>Practice Thai with an intelligent AI tutor - Choose your mode below</p>
         
         <div class="mode-selector">
-            <button class="mode-btn active" data-mode="conversation" onclick="switchMode('conversation')">
+            <button class="mode-btn active" data-mode="conversation" data-on-click="switchMode" data-args='["conversation"]'>
                 🗣️ Conversation
                 <span class="mode-tooltip">
                     <strong>🗣️ Conversation</strong>
                     Chat back-and-forth in Thai like a real dialogue. The AI replies naturally and adapts to your level, so you build speaking confidence and learn how words actually flow in real life.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="tutor" onclick="switchMode('tutor')">
+            <button class="mode-btn" data-mode="tutor" data-on-click="switchMode" data-args='["tutor"]'>
                 🎓 Tutor
                 <span class="mode-tooltip">
                     <strong>🎓 Tutor</strong>
                     Ask "why" and get clear explanations of grammar, tones, and word choice. Best when you want to truly understand a rule instead of just memorising it.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="cultural" onclick="switchMode('cultural')">
+            <button class="mode-btn" data-mode="cultural" data-on-click="switchMode" data-args='["cultural"]'>
                 🌏 Culture
                 <span class="mode-tooltip">
                     <strong>🌏 Culture</strong>
                     Learn Thai customs, etiquette, and traditions behind the language. Helps you speak <em>appropriately</em> — knowing when to be polite, formal, or casual, not just grammatically correct.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="buddhist" onclick="switchMode('buddhist')">
+            <button class="mode-btn" data-mode="buddhist" data-on-click="switchMode" data-args='["buddhist"]'>
                 ☸️ Buddhist
                 <span class="mode-tooltip">
                     <strong>☸️ Buddhist</strong>
                     Ask about the Dhamma your way: the universal teachings, the Dhamma as it lives in Thai culture, or culturally neutral. Pick your approach once you switch to this mode.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="generator" onclick="switchMode('generator')">
+            <button class="mode-btn" data-mode="generator" data-on-click="switchMode" data-args='["generator"]'>
                 📝 Generator
                 <span class="mode-tooltip">
                     <strong>📝 Generator</strong>
                     Creates custom quizzes and practice exercises on demand. Tailored to your exact level and chosen topic, so you always have fresh material to drill weak spots.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="translator" onclick="switchMode('translator')">
+            <button class="mode-btn" data-mode="translator" data-on-click="switchMode" data-args='["translator"]'>
                 🔤 Translator
                 <span class="mode-tooltip">
                     <strong>🔤 Translator</strong>
                     Type English or Thai and get the translation with its spelling and meaning. Unlike a general translator, it gives the right version for who you're talking to and explains why. Ask "to a friend?" or "to a monk?" to change it.
                 </span>
             </button>
-            <button class="mode-btn" data-mode="helper" onclick="switchMode('helper')">
+            <button class="mode-btn" data-mode="helper" data-on-click="switchMode" data-args='["helper"]'>
                 💡 Helper
                 <span class="mode-tooltip">
                     <strong>💡 Helper</strong>
@@ -635,10 +635,10 @@
         <span class="scenario-label">🎭 Roleplay a scene:</span>
         {% for sid, sc in roleplay_scenarios.items() %}
         <button type="button" class="scenario-chip" data-scenario="{{ sid }}"
-                onclick="startScenario('{{ sid }}', '{{ sc.title }}')">{{ sc.icon }} {{ sc.title }}</button>
+                data-on-click="startScenario" data-args='{{ [sid, sc.title]|tojson }}'>{{ sc.icon }} {{ sc.title }}</button>
         {% endfor %}
         <button type="button" class="scenario-chip scenario-chip--exit" id="scenario-exit"
-                onclick="exitScenario()" hidden>✕ End roleplay</button>
+                data-on-click="exitScenario" hidden>✕ End roleplay</button>
     </div>
     {% endif %}
 
@@ -655,7 +655,7 @@
         {% for lid, ln in dhamma_lenses.items() %}
         <button type="button" class="scenario-chip lens-chip" data-lens="{{ lid }}"
                 title="{{ ln.blurb }}"
-                onclick="setLens('{{ lid }}')">{{ ln.icon }} {{ ln.title }}</button>
+                data-on-click="setLens" data-args='{{ [lid]|tojson }}'>{{ ln.icon }} {{ ln.title }}</button>
         {% endfor %}
     </div>
     {% endif %}
@@ -668,19 +668,19 @@
                 Choose a mode above and start chatting!
             </p>
             <div class="quick-starts">
-                <div class="quick-start-btn" onclick="quickStart('Teach me a common Thai greeting')">
+                <div class="quick-start-btn" data-on-click="quickStart" data-args='["Teach me a common Thai greeting"]'>
                     <span class="emoji">👋</span>
                     <span class="text">Common greeting</span>
                 </div>
-                <div class="quick-start-btn" onclick="quickStart('How do Thai tones work?')">
+                <div class="quick-start-btn" data-on-click="quickStart" data-args='["How do Thai tones work?"]'>
                     <span class="emoji">🎵</span>
                     <span class="text">How tones work</span>
                 </div>
-                <div class="quick-start-btn" onclick="quickStart('Give me a beginner vocabulary quiz')">
+                <div class="quick-start-btn" data-on-click="quickStart" data-args='["Give me a beginner vocabulary quiz"]'>
                     <span class="emoji">📝</span>
                     <span class="text">Quick quiz</span>
                 </div>
-                <div class="quick-start-btn" onclick="quickStart('Tell me about Thai temple etiquette')">
+                <div class="quick-start-btn" data-on-click="quickStart" data-args='["Tell me about Thai temple etiquette"]'>
                     <span class="emoji">🛕</span>
                     <span class="text">Temple etiquette</span>
                 </div>
@@ -703,29 +703,29 @@
             <span>📷 Photo ready. Add a question if you like, then press Send.
                 For leases, visa forms, medical or bank letters, have a Thai
                 speaker check the translation too.</span>
-            <button class="control-btn" onclick="clearPhoto()">✕ Remove</button>
+            <button class="control-btn" data-on-click="clearPhoto">✕ Remove</button>
         </div>
         <div class="input-container">
             {# No `capture` attribute: on a phone that would force the camera,
                and a photo already in the gallery is just as likely. #}
             <input type="file" id="photo-input" accept="image/*" hidden
-                   onchange="onPhotoChosen(this.files[0]); this.value='';">
+                   data-on-change="onPhotoChosen" data-args='["$file"]' data-reset-value>
             <button id="photo-btn" hidden title="Translate a photo of a menu, sign or form"
                     aria-label="Translate a photo"
-                    onclick="document.getElementById('photo-input').click()">📷</button>
+                    data-clicks="photo-input">📷</button>
             <input
                 type="text"
                 id="user-input"
                 placeholder="Type your message in English or Thai..."
-                onkeydown="if(event.key==='Enter'){sendMessage();}"
+                data-on-keydown="sendMessage" data-key="Enter"
             >
-            <button id="send-btn" onclick="sendMessage()">Send ➤</button>
+            <button id="send-btn" data-on-click="sendMessage">Send ➤</button>
         </div>
 
         <div class="chat-controls">
             <div>
-                <button class="control-btn" onclick="clearChat()">🗑️ Clear Chat</button>
-                <button class="control-btn" onclick="exportChat()">💾 Export</button>
+                <button class="control-btn" data-on-click="clearChat">🗑️ Clear Chat</button>
+                <button class="control-btn" data-on-click="exportChat">💾 Export</button>
             </div>
             <div class="token-counter">
                 <span id="token-display">Session tokens: 0</span>

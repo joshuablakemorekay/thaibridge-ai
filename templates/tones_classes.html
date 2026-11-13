@@ -246,11 +246,11 @@
 
 <!-- Tab Navigation -->
 <div class="tab-buttons">
-    <button class="tab-btn active" onclick="showTab('concept', this)">🧭 How Tones Work</button>
-    <button class="tab-btn" onclick="showTab('classes', this)">🔤 The 3 Classes</button>
-    <button class="tab-btn" onclick="showTab('chart', this)">📊 Tone Chart</button>
-    <button class="tab-btn" onclick="showTab('leadingh', this)">✨ Leading ห &amp; Pairs</button>
-    <button class="tab-btn" onclick="showTab('practice', this)">🎯 Practice</button>
+    <button class="tab-btn active" data-on-click="showTab" data-args='["concept", "$this"]'>🧭 How Tones Work</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["classes", "$this"]'>🔤 The 3 Classes</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["chart", "$this"]'>📊 Tone Chart</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["leadingh", "$this"]'>✨ Leading ห &amp; Pairs</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["practice", "$this"]'>🎯 Practice</button>
 </div>
 
 <!-- ── TAB 1: How Tones Work ── -->
