@@ -74645,6 +74645,11 @@ CHANTS = [
 # scripts); the three meaning layers are cool or neutral, so a glance tells you
 # whether you are looking at something to chant or something to understand.
 #
+# ThaiBridge Spelling reads through --cb-paiboon first. That variable only
+# exists while Learning Support's colour-blind option is on, and it turns the
+# layer blue: in green it looked almost the same as the clay Pali (Romanised)
+# line to red-green colour-blind readers, and both are italic Latin text.
+#
 # `note` is the short label under each toggle; `description` is the fuller
 # sentence used in "How to use this chanting book" and in the printed edition's
 # front matter.
@@ -74669,7 +74674,7 @@ CHANT_LAYERS = [
     },
     {
         'key': 'paiboon', 'label': 'Thai (ThaiBridge Spelling)',
-        'note': 'Read the Thai aloud', 'colour': 'var(--bodhi-green)',
+        'note': 'Read the Thai aloud', 'colour': 'var(--cb-paiboon, var(--bodhi-green))',
         'description': (
             'The Thai translation romanised for readers who cannot yet read '
             'Thai script.'
