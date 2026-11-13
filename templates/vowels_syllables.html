@@ -745,26 +745,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script>
-function showTab(tabName) {
-    // Hide all tabs
-    document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
-    // Remove active from all buttons
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    // Show selected tab
-    document.getElementById(tabName).classList.add('active');
-    
-    // Add active to clicked button
-    event.target.classList.add('active');
-    
-    // Scroll to top of content
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
+<script src="{{ static_v('js/pages/vowels-syllables.js') }}"></script>
 {% endblock %}

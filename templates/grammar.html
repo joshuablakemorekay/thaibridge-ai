@@ -849,23 +849,6 @@
    actually have a clip). The button uses the site-wide .th-audio player in
    base.js, so no per-page audio code is needed. #}
 <script id="gr-audio-map" type="application/json">{{ audio_map|tojson }}</script>
-<script>
-  (function () {
-    var map = JSON.parse(document.getElementById('gr-audio-map').textContent);
-    document.querySelectorAll('.thai-text').forEach(function (el) {
-      if (el.dataset.audioWired) { return; }
-      var url = map[el.textContent.trim()];   // exact match — pure-Thai cells only
-      if (!url) { return; }
-      el.dataset.audioWired = '1';
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'th-audio gr-listen';
-      b.setAttribute('data-audio', url);
-      b.setAttribute('aria-label', 'Listen');
-      b.textContent = '🔊';
-      el.appendChild(b);
-    });
-  })();
-</script>
+<script src="{{ static_v('js/pages/grammar.js') }}"></script>
 
 {% endblock %}

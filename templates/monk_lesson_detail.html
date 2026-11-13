@@ -268,42 +268,10 @@
 {% endif %}
 
 {% if direction == 'learn_english' %}
-<script>
-(function () {
-    var toggle = document.getElementById('monkIpaToggle');
-    if (!toggle) return;
-    toggle.addEventListener('change', function () {
-        document.querySelectorAll('.monk-ipa').forEach(function (el) {
-            el.hidden = !toggle.checked;
-        });
-    });
-})();
-</script>
+<script src="{{ static_v('js/pages/monk-ipa-toggle.js') }}"></script>
 {% endif %}
 
 {# Outside the direction guard: drills and passages keep their play buttons in
    BOTH directions, so the player must always be wired up. #}
-<script>
-(function () {
-    // One Audio object reused for every button. Tapping a second word while the
-    // first is still playing should replace it, not talk over it — and a page
-    // with 20 separate <audio> elements is needlessly heavy on a phone.
-    var player = null;
-
-    document.querySelectorAll('.monk-audio-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            if (player) { player.pause(); }
-            player = new Audio(btn.dataset.audio);
-
-            btn.classList.add('is-playing');
-            var clear = function () { btn.classList.remove('is-playing'); };
-            player.addEventListener('ended', clear);
-            // If the file is missing or the browser blocks playback, drop the
-            // highlight rather than leaving the button stuck mid-play.
-            player.addEventListener('error', clear);
-            player.play().catch(clear);
-        });
-    });
-})();
-</script>
+<script src="{{ static_v('js/pages/monk-lesson-audio.js') }}"></script>
 {% endblock %}

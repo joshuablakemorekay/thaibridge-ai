@@ -140,56 +140,7 @@
             <p id="review-message" class="review-message" role="alert"></p>
         </form>
     </div>
-    <script>
-    (function () {
-        'use strict';
-        var box     = document.getElementById('review-prompt');
-        var form    = document.getElementById('review-form');
-        var msg     = document.getElementById('review-message');
-        var publish = document.getElementById('review-can-publish');
-        var nameBox = document.getElementById('review-name-wrap');
-
-        publish.addEventListener('change', function () { nameBox.hidden = !publish.checked; });
-
-        function post(url, body) {
-            return fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body || {})
-            });
-        }
-
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            var picked = form.querySelector('input[name="rating"]:checked');
-            if (!picked) { msg.textContent = 'Please choose a star rating.'; return; }
-            var send = document.getElementById('review-send');
-            send.disabled = true;
-            try {
-                var response = await post('/api/review', {
-                    rating:       Number(picked.value),
-                    comment:      document.getElementById('review-comment').value,
-                    can_publish:  publish.checked,
-                    display_name: publish.checked ? document.getElementById('review-name').value : ''
-                });
-                var result = await response.json();
-                if (result.success) {
-                    box.innerHTML = '<h2>🙏 ' + result.message + '</h2>';
-                    return;
-                }
-                msg.textContent = result.message;
-            } catch (err) {
-                msg.textContent = 'A network error occurred. Please try again.';
-            }
-            send.disabled = false;
-        });
-
-        document.getElementById('review-snooze').addEventListener('click', function () {
-            post('/api/review/snooze').catch(function () {});
-            box.hidden = true;
-        });
-    }());
-    </script>
+    <script src="{{ static_v('js/pages/review-prompt.js') }}"></script>
     <style>
         .review-prompt {
             background: white;
@@ -268,38 +219,7 @@
         </form>
         <p id="change-password-message" class="change-password-message" role="alert"></p>
     </div>
-    <script>
-    (function () {
-        'use strict';
-        var form = document.getElementById('change-password-form');
-        var msg  = document.getElementById('change-password-message');
-        var btn  = document.getElementById('change-password-btn');
-
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
-            btn.disabled = true;
-            try {
-                var response = await fetch('/change-password', {
-                    method:  'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body:    JSON.stringify({
-                        current_password: document.getElementById('current_password').value,
-                        new_password:     document.getElementById('new_password').value,
-                        confirm_password: document.getElementById('confirm_new_password').value
-                    })
-                });
-                var result = await response.json();
-                msg.textContent = result.message;
-                msg.className = 'change-password-message ' + (result.success ? 'ok' : 'bad');
-                if (result.success) { form.reset(); }
-            } catch (err) {
-                msg.textContent = 'A network error occurred. Please try again.';
-                msg.className = 'change-password-message bad';
-            }
-            btn.disabled = false;
-        });
-    }());
-    </script>
+    <script src="{{ static_v('js/pages/change-password.js') }}"></script>
     {% endif %}
 
     <!-- Achievements -->
@@ -443,138 +363,7 @@
         </ol>
     </div>
 
-    <script>
-    (function () {
-        'use strict';
-        var box = document.getElementById('path');
-        var message = box.querySelector('.path-message');
-
-        async function post(url, body) {
-            var response = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body || {})
-            });
-            var result = await response.json();
-            if (!response.ok) { throw new Error(result.error || 'Something went wrong.'); }
-            return result;
-        }
-
-        function reloadAtPath() {
-            window.location.hash = 'path';
-            window.location.reload();
-        }
-
-        async function run(action) {
-            try { await action(); reloadAtPath(); }
-            catch (err) { if (message) { message.textContent = err.message; } }
-        }
-
-        var form = document.getElementById('path-start');
-        if (form) {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                var data = new FormData(form);
-                run(function () {
-                    return post('/api/path/start', {
-                        goal: data.get('goal'),
-                        practice: data.get('practice'),
-                        minutes: data.get('minutes')
-                    });
-                });
-            });
-        }
-
-        var review = document.getElementById('path-review');
-        if (review) {
-            review.addEventListener('click', function () { run(function () { return post('/api/path/review'); }); });
-        }
-
-        var reset = document.getElementById('path-reset');
-        if (reset) {
-            reset.addEventListener('click', function () { run(function () { return post('/api/path/reset'); }); });
-        }
-
-        // The starting check: all six questions are fetched at once and
-        // answered one at a time, then marked together in a single POST.
-        var go = document.getElementById('placement-go');
-        if (go) {
-            var skip = document.getElementById('placement-skip');
-            var quiz = document.getElementById('placement-quiz');
-            var questions = [], answers = [];
-
-            skip.addEventListener('click', function () {
-                run(function () { return post('/api/path/placement', { answers: [] }); });
-            });
-
-            go.addEventListener('click', async function () {
-                go.disabled = true;
-                try {
-                    var response = await fetch('/api/path/placement');
-                    var result = await response.json();
-                    if (!response.ok) { throw new Error(result.error); }
-                    questions = result.questions;
-                } catch (err) {
-                    message.textContent = err.message || 'Could not load the check. Please try again.';
-                    go.disabled = false;
-                    return;
-                }
-                show(0);
-            });
-
-            // Built from elements, not an HTML string: the options are English
-            // meanings and may contain apostrophes or other characters.
-            function show(i) {
-                if (i >= questions.length) {
-                    quiz.textContent = 'Marking…';
-                    run(function () { return post('/api/path/placement', { answers: answers }); });
-                    return;
-                }
-                var q = questions[i];
-                quiz.innerHTML = '';
-
-                var count = document.createElement('p');
-                count.className = 'path-note';
-                count.textContent = 'Question ' + (i + 1) + ' of ' + questions.length + ' · ' + q.topic;
-                quiz.appendChild(count);
-
-                var word = document.createElement('p');
-                word.className = 'thai-text path-word';
-                word.textContent = q.thai + ' ';
-                if (q.audio) {
-                    var play = document.createElement('button');
-                    play.type = 'button';
-                    play.className = 'th-audio';
-                    play.setAttribute('data-audio', q.audio);
-                    play.setAttribute('aria-label', 'Listen');
-                    play.textContent = '🔊';
-                    word.appendChild(play);
-                }
-                quiz.appendChild(word);
-
-                var spelling = document.createElement('p');
-                spelling.className = 'paiboon';
-                spelling.textContent = q.paiboon;
-                quiz.appendChild(spelling);
-
-                var grid = document.createElement('div');
-                grid.className = 'path-options';
-                q.options.concat(["I don't know"]).forEach(function (option) {
-                    var b = document.createElement('button');
-                    b.type = 'button';
-                    b.className = 'btn';
-                    b.textContent = option;
-                    b.addEventListener('click', function () {
-                        answers.push({ question_id: q.question_id, answer: option });
-                        show(i + 1);
-                    });
-                    grid.appendChild(b);
-                });
-                quiz.appendChild(grid);
-            }
-        }
-    }());
-    </script>
+    <script src="{{ static_v('js/pages/learning-path.js') }}"></script>
     
     <!-- Subscription Options -->
     <div id="subscriptions" class="subscriptions-section">

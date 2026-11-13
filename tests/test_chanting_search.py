@@ -16,6 +16,7 @@ search stands on, and that is where it would actually break:
 on purpose: without it nothing checks that the DATA can be typed at all, and
 that is the half that changes every time a page is entered from a photograph.
 """
+import pathlib
 import os
 import re
 import sys
@@ -107,4 +108,9 @@ def test_the_box_is_hidden_until_its_javascript_has_run(unlocked_client):
     """
     page = unlocked_client.get('/chanting').get_data(as_text=True)
     assert '<div class="chant-search" id="chant-search" hidden>' in page
-    assert 'panel.hidden = false;' in page
+    # The script lives in a file since inline scripts were moved out for the
+    # Content-Security-Policy, so check the page loads it and it unhides the box.
+    assert 'js/pages/chanting.js' in page
+    script = (pathlib.Path(__file__).resolve().parent.parent
+              / 'static' / 'js' / 'pages' / 'chanting.js').read_text(encoding='utf-8')
+    assert 'panel.hidden = false;' in script

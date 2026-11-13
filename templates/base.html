@@ -20,18 +20,7 @@
     <!-- Reading Support: apply the user's saved accessibility choices before the
          page paints, so switching pages never flashes the old style first. The
          matching checkboxes and full logic live in base.js. -->
-    <script>
-        (function () {
-            try {
-                var s = JSON.parse(localStorage.getItem('tb-reading-support') || '{}');
-                var el = document.documentElement;
-                if (s.font)    el.classList.add('rs-font');
-                if (s.large)   el.classList.add('rs-large');
-                if (s.spacing) el.classList.add('rs-spacing');
-                if (s.colour)  el.classList.add('rs-colour');
-            } catch (e) { /* private mode / storage off: just skip */ }
-        })();
-    </script>
+    <script src="{{ static_v('js/pages/reading-support-early.js') }}"></script>
 </head>
 <body>
     <nav>
@@ -219,31 +208,7 @@
     </footer>
     
     <script>window.CURRENT_GENDER = '{{ current_gender|default("neutral") }}';</script>
-    <script>
-        // Turning Monk Mode ON needs a code (handled on the /monk-mode page).
-        // Turning it OFF needs no code — flip it and reload so every gate
-        // re-evaluates with the new state.
-        function turnMonkModeOff() {
-            fetch('/set-monk-mode/off')
-                .then(function (r) { return r.json(); })
-                .then(function () { window.location.reload(); })
-                .catch(function () { window.location.reload(); });
-        }
-        // Flip the monk lessons between learning Thai and learning English.
-        function setMonkDirection(dir) {
-            fetch('/set-monk-direction/' + dir)
-                .then(function (r) { return r.json(); })
-                .then(function () { window.location.reload(); })
-                .catch(function () { window.location.reload(); });
-        }
-        // Flip the English side between British and American.
-        function setMonkAccent(accent) {
-            fetch('/set-monk-accent/' + accent)
-                .then(function (r) { return r.json(); })
-                .then(function () { window.location.reload(); })
-                .catch(function () { window.location.reload(); });
-        }
-    </script>
+    <script src="{{ static_v('js/pages/monk-switches.js') }}"></script>
     <script src="{{ static_v('js/base.js') }}"></script>
     
     {% block extra_js %}{% endblock %}

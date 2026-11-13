@@ -67,17 +67,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script>
-function filterLessons(level) {
-    const cards = document.querySelectorAll('.lesson-card');
-    
-    cards.forEach(card => {
-        if (level === 'all' || card.dataset.level === level) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-</script>
+<script src="{{ static_v('js/pages/lessons.js') }}"></script>
 {% endblock %}
