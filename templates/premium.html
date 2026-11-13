@@ -282,7 +282,7 @@
            pounds — the buttons are a shortcut, not a separate code path. The
            server range-checks whatever arrives, so the min/max here are a
            courtesy to the person typing, not the actual guard. #}
-        <form method="POST" action="/dana"
+        <form method="POST" action="/dana" data-json-post
               style="display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap; align-items:center;">
             {% for amount in dana.presets %}
             <button type="submit" name="amount" value="{{ amount }}" class="dana-btn">£{{ amount }}</button>
@@ -295,6 +295,7 @@
                        class="dana-input">
                 <button type="submit" class="dana-btn dana-btn-other">Give</button>
             </span>
+            <p data-form-message role="alert" style="flex-basis:100%; color:#c0392b; margin:0;"></p>
         </form>
         <p style="color:#8a7a5a; font-size:0.85rem; margin:1rem 0 0;">
             One-off gift via Stripe. No account needed, nothing recurring.

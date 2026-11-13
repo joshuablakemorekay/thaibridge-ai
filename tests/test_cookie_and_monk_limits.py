@@ -59,13 +59,14 @@ A.is_valid_monk_code = lambda code: code == "right"
 c = A.app.test_client()
 
 def post(ip, code):
-    r = c.post("/monk-mode", data={"code": code}, headers={"CF-Connecting-IP": ip})
-    return r.status_code, r.mimetype, b"Too many codes tried" in r.data
+    r = c.post("/monk-mode", json={"code": code}, headers={"CF-Connecting-IP": ip})
+    body = r.get_json() or {}
+    return r.status_code, bool(body.get("success")), body.get("message", "")
 
 wrong = [post("10.0.0.1", "wrong") for _ in range(6)]
 reads = [c.get("/monk-mode", headers={"CF-Connecting-IP": "10.0.0.2"}).status_code
          for _ in range(10)]
-right = [post("10.0.0.3", "right")[0] for _ in range(8)] + [post("10.0.0.3", "wrong")[0]]
+right = [post("10.0.0.3", "right")[:2] for _ in range(8)] + [post("10.0.0.3", "wrong")[:2]]
 print(repr({"wrong": wrong, "reads": reads, "right": right}))
 """
 
@@ -88,11 +89,11 @@ def limited_run():
 
 def test_wrong_codes_are_stopped_after_five(limited_run):
     wrong = limited_run["wrong"]
-    assert [status for status, _, _ in wrong[:5]] == [200] * 5
-    status, mimetype, friendly = wrong[5]
-    assert status == 429
-    # An ordinary page with a readable message, not raw JSON.
-    assert mimetype == "text/html" and friendly
+    assert [(status, ok) for status, ok, _ in wrong[:5]] == [(200, False)] * 5
+    status, ok, message = wrong[5]
+    assert status == 429 and not ok
+    # A readable message for json-forms.js to show beside the form.
+    assert "wait" in message
 
 
 def test_reading_the_page_is_never_limited(limited_run):
@@ -103,15 +104,17 @@ def test_right_codes_do_not_use_up_the_limit(limited_run):
     # A monastery sharing one connection must not lock itself out by
     # entering correct codes: eight right codes, then a wrong one still
     # gets a normal answer rather than a 429.
-    assert limited_run["right"] == [302] * 8 + [200]
+    assert limited_run["right"] == [(200, True)] * 8 + [(200, False)]
 
 
-def test_only_rejections_count():
-    class Response:
-        def __init__(self, status):
-            self.status_code = status
-    assert A._monk_code_rejected(Response(200)) is True     # wrong code, page re-shown
-    assert A._monk_code_rejected(Response(302)) is False    # right code, redirected
+def test_monk_mode_counts_only_failed_attempts():
+    # The same rule as the log-in routes: a right code answers success: true
+    # and costs nothing; a wrong one answers success: false and is counted.
+    from extensions import failed_attempt_only
+    with app.test_request_context():
+        from flask import jsonify
+        assert failed_attempt_only(jsonify({"success": False})) is True
+        assert failed_attempt_only(jsonify({"success": True, "redirect": "/monk-mode"})) is False
 
 
 def test_other_routes_still_get_json_when_limited():

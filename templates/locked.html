@@ -57,7 +57,7 @@
             </p>
             <p class="earned-unlock-warning">You only get one, so pick the section you want most.</p>
             {% if current_user.is_authenticated %}
-            <form method="POST" action="/unlock/earned/{{ section }}">
+            <form method="POST" action="/unlock/earned/{{ section }}" data-json-post>
                 <button type="submit" class="btn btn-gold">Open {{ section.replace('_', ' ').title() }} with my unlock</button>
             </form>
             {% else %}

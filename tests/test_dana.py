@@ -26,7 +26,6 @@ import os
 import re
 import pytest
 from unittest.mock import patch
-from werkzeug.datastructures import MultiDict
 
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
@@ -77,8 +76,8 @@ def amount_sent(mock):
     ("500", 50000),       # so is the ceiling
 ])
 def test_valid_amounts_reach_stripe_in_exact_pence(client, stripe_create, typed, expected_pence):
-    resp = client.post("/dana", data=MultiDict([("amount", typed)]))
-    assert resp.status_code == 303
+    resp = client.post("/dana", json={"amount": typed})
+    assert resp.get_json()["redirect"] == FakeSession.url
     assert amount_sent(stripe_create) == expected_pence
 
 
@@ -87,14 +86,14 @@ def test_preset_click_wins_over_the_empty_typed_field(client, stripe_create):
     preset click submits BOTH its value and an empty string. Picking by
     position would be at the mercy of DOM order; the route takes the first
     non-empty value instead."""
-    resp = client.post("/dana", data=MultiDict([("amount", "3"), ("amount", "")]))
-    assert resp.status_code == 303
+    resp = client.post("/dana", json={"amount": ["3", ""]})
+    assert resp.get_json()["redirect"]
     assert amount_sent(stripe_create) == 300
 
 
 def test_the_gift_is_a_one_off_payment_tagged_as_dana(client, stripe_create):
     """`kind: dana` is what stops the webhook treating a gift as a purchase."""
-    client.post("/dana", data=MultiDict([("amount", "10")]))
+    client.post("/dana", json={"amount": "10"})
     kwargs = stripe_create.call_args.kwargs
     assert kwargs["mode"] == "payment"          # never a subscription
     assert kwargs["metadata"] == {"kind": "dana"}
@@ -103,8 +102,8 @@ def test_the_gift_is_a_one_off_payment_tagged_as_dana(client, stripe_create):
 def test_giving_does_not_require_an_account(client, stripe_create):
     """Requiring a login would make dāna an upsell. A logged-out visitor must
     get all the way to Stripe."""
-    resp = client.post("/dana", data=MultiDict([("amount", "5")]))
-    assert resp.status_code == 303
+    resp = client.post("/dana", json={"amount": "5"})
+    assert resp.get_json()["redirect"]
     # Nothing was prefilled, because we know nothing about them.
     kwargs = stripe_create.call_args.kwargs
     assert "customer" not in kwargs and "customer_email" not in kwargs
@@ -126,15 +125,15 @@ def test_giving_does_not_require_an_account(client, stripe_create):
     "3; DROP TABLE users",
 ])
 def test_bad_amounts_are_turned_away_not_crashed(client, stripe_create, bad):
-    resp = client.post("/dana", data=MultiDict([("amount", bad)]))
-    assert resp.status_code == 302, f"{bad!r} should redirect, got {resp.status_code}"
-    assert resp.headers["Location"].endswith("/premium#dana")
+    resp = client.post("/dana", json={"amount": bad})
+    assert resp.status_code == 400, f"{bad!r} should be refused, got {resp.status_code}"
+    assert "Please choose an amount" in resp.get_json()["message"]
     stripe_create.assert_not_called()          # and no charge was ever started
 
 
 def test_no_stripe_key_says_so_instead_of_erroring(client):
     with patch("app.stripe.api_key", None):
-        resp = client.post("/dana", data=MultiDict([("amount", "10")]))
+        resp = client.post("/dana", json={"amount": "10"})
     assert resp.status_code == 503
 
 
@@ -189,7 +188,7 @@ def test_the_gift_declares_the_donation_tax_code(client, stripe_create):
     which is both wrong for VAT and wrong about what is happening.
     """
     from app import TAX_CODE_DONATION, TAX_CODE_COURSE
-    client.post("/dana", data=MultiDict([("amount", "10")]))
+    client.post("/dana", json={"amount": "10"})
     product = stripe_create.call_args.kwargs["line_items"][0]["price_data"]["product_data"]
     assert product["tax_code"] == TAX_CODE_DONATION
     assert product["tax_code"] != TAX_CODE_COURSE
@@ -206,7 +205,7 @@ def test_the_gift_opts_out_of_managed_payments(client, stripe_create):
     The subscriptions and the Instant Access Pass deliberately stay IN Managed
     Payments: those really are course sales.
     """
-    client.post("/dana", data=MultiDict([("amount", "10")]))
+    client.post("/dana", json={"amount": "10"})
     assert stripe_create.call_args.kwargs["managed_payments"] == {"enabled": False}
 
 

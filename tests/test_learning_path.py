@@ -278,7 +278,7 @@ def test_a_retagged_question_counts_nothing(client):
 def test_review_is_refused_mid_week(client):
     start(client)
     take_check(client)
-    assert client.post('/api/path/review').status_code == 400
+    assert client.post('/api/path/review', json={}).status_code == 400
 
 
 def test_review_after_a_week_moves_on(client):
@@ -288,7 +288,7 @@ def test_review_after_a_week_moves_on(client):
         s['user_progress']['learning_path']['week_start'] = (
             date.today() - timedelta(days=7)).isoformat()
         s.modified = True   # a nested edit is invisible to Flask otherwise
-    assert client.post('/api/path/review').get_json()['ok']
+    assert client.post('/api/path/review', json={}).get_json()['ok']
     plan = progress_of(client)['learning_path']
     assert plan['week'] == 2
     assert plan['history'][0]['week'] == 1
@@ -301,8 +301,8 @@ def test_changing_goals_keeps_the_history(client):
         s['user_progress']['learning_path']['week_start'] = (
             date.today() - timedelta(days=7)).isoformat()
         s.modified = True   # a nested edit is invisible to Flask otherwise
-    client.post('/api/path/review')
-    client.post('/api/path/reset')
+    client.post('/api/path/review', json={})
+    client.post('/api/path/reset', json={})
     html = client.get('/progress').get_data(as_text=True)
     assert 'Build my plan' in html and 'Past weeks' in html
 

@@ -11,10 +11,9 @@ document.getElementById('developer-form').addEventListener('submit', async funct
     try {
         const response = await fetch('/developer-login', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: `password=${encodeURIComponent(password)}`
+            // JSON, like every POST on the site (see json_only.py).
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password: password })
         });
 
         const data = await response.json();

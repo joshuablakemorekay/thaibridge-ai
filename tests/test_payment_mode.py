@@ -71,8 +71,8 @@ def test_a_stripe_failure_shows_a_friendly_message_not_stripe_internals(client):
     boom = Exception("Request req_I05oruwlcDTiGR: No such customer: 'cus_VRJocJAXVTgkqe'")
     with patch("app.stripe.api_key", "sk_test_x"), \
          patch("app.stripe.checkout.Session.create", side_effect=boom):
-        resp = client.post("/dana", data={"amount": "3"})
+        resp = client.post("/dana", json={"amount": "3"})
     body = resp.get_data(as_text=True)
     assert resp.status_code == 502
-    assert body == A.CHECKOUT_FAILED_MESSAGE
+    assert resp.get_json()["message"] == A.CHECKOUT_FAILED_MESSAGE
     assert "req_" not in body and "cus_" not in body

@@ -102,10 +102,15 @@ Please don't test against other people's accounts or try to access data that isn
 
 ## Web safety
 
-- **Forms that change things take JSON.** Most actions (log-in, quizzes, reviews, the
-  learning path) only accept `Content-Type: application/json`. A form on another website
-  can't send that without the browser checking with ThaiBridge first, which blocks
-  forged requests from other sites.
+- **Every POST must be JSON** (`json_only.py`). A form on another website can make a
+  learner's browser post to ThaiBridge, but it can't send `Content-Type: application/json`
+  without the browser asking ThaiBridge's permission first, and ThaiBridge never gives it.
+  So one site-wide rule refuses any POST that isn't JSON, which blocks forged requests
+  from other sites (CSRF) on top of the `SameSite=Lax` cookie. The only exception is
+  Stripe's webhook, which is checked by Stripe's signature instead. The older HTML forms
+  (Monk Mode, dāna, claiming the earned unlock, cancelling a subscription) send JSON
+  through `static/js/json-forms.js`, and a test walks every POST route in the app to
+  check it refuses a plain form.
 - **Templates escape everything by default** (Jinja2 autoescaping). The few places that
   output raw HTML (`|safe`) only use text written by the developer in the code, never
   anything a user typed.
@@ -147,15 +152,11 @@ on request by email. Payment records are kept as long as UK tax law requires.
 
 Honest list of what isn't done yet, roughly in priority order:
 
-1. **A few older routes take ordinary form posts** (developer log-in, Monk Mode codes, the
-   dāna amount, cancelling a subscription), so they don't get the JSON protection above.
-   The `SameSite=Lax` login cookie now stops another website submitting them as a
-   signed-in learner. Moving them to JSON (or adding CSRF tokens) would add a second layer.
-2. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
+1. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
    read from an environment variable and the route is rate limited, but a constant-time
    comparison and a slow hash (as used for learners' passwords) would be better practice.
-3. **No self-service account deletion.** It's done by email today.
+2. **No self-service account deletion.** It's done by email today.
 
 Fixed on 13 November 2026: the cookie settings are now explicit, Monk Mode codes are
-rate limited, security headers are sent on every response, and the Content-Security-Policy
-only lets the site's own scripts run.
+rate limited, security headers are sent on every response, the Content-Security-Policy
+only lets the site's own scripts run, and every POST must be JSON.

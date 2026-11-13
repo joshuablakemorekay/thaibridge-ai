@@ -370,9 +370,8 @@ def test_a_failed_cancel_tells_the_learner_instead_of_bouncing(user):
     c = signed_in(user["id"])
     with patch("app.stripe.api_key", "sk_test_fake"), \
          patch("app.stripe.Subscription.modify", side_effect=RuntimeError("stripe down")):
-        resp = c.post("/subscribe/cancel-subscription")
-    assert resp.status_code == 302
-    assert resp.headers["Location"].endswith("/progress?cancel=failed")
+        resp = c.post("/subscribe/cancel-subscription", json={})
+    assert resp.get_json()["redirect"] == "/progress?cancel=failed"
     body = c.get("/progress?cancel=failed").get_data(as_text=True)
     assert "couldn't cancel your subscription" in body
     with app.app_context():
@@ -393,9 +392,9 @@ def test_a_successful_cancel_keeps_access_until_the_paid_period_ends(user):
                   "current_period_end": int((end - datetime(1970, 1, 1)).total_seconds())}
     with patch("app.stripe.api_key", "sk_test_fake"), \
          patch("app.stripe.Subscription.modify", return_value=stripe_sub) as modify:
-        resp = c.post("/subscribe/cancel-subscription")
+        resp = c.post("/subscribe/cancel-subscription", json={})
     modify.assert_called_once_with("sub_ok", cancel_at_period_end=True)
-    assert resp.headers["Location"].endswith("/subscription-goodbye")
+    assert resp.get_json()["redirect"] == "/subscription-goodbye"
     with app.app_context():
         u = db.session.get(User, user["id"])
         assert u.subscription_status == "canceling"
