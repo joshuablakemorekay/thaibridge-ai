@@ -53,18 +53,44 @@ def test_no_password_configured_means_developer_mode_is_off(configured):
 def test_the_old_default_password_is_gone():
     """'changeme' was the fallback. With nothing configured there must be no
     valid password at all — least of all that one."""
-    import hashlib
     enabled, password_hash = appmod._developer_credentials(None)
     assert not enabled
-    assert password_hash != hashlib.sha256(b"changeme").hexdigest()
+    assert not appmod._developer_password_matches("changeme", password_hash)
 
 
 def test_a_configured_password_is_hashed_not_stored():
     enabled, password_hash = appmod._developer_credentials("hunter2")
-    import hashlib
     assert enabled is True
-    assert password_hash == hashlib.sha256(b"hunter2").hexdigest()
     assert "hunter2" not in (password_hash or "")
+    assert appmod._developer_password_matches("hunter2", password_hash)
+    assert not appmod._developer_password_matches("hunter3", password_hash)
+    assert not appmod._developer_password_matches("", password_hash)
+
+
+def test_the_hash_is_slow_and_salted_not_plain_sha256():
+    """Plain SHA-256 can be guessed billions of times a second if the hash ever
+    leaks. Werkzeug's hash names a slow method and carries a random salt, so the
+    same password hashes differently each time."""
+    import hashlib
+    _, first = appmod._developer_credentials("hunter2")
+    _, second = appmod._developer_credentials("hunter2")
+    assert first.startswith(("scrypt:", "pbkdf2:"))
+    assert first != second
+    assert first != hashlib.sha256(b"hunter2").hexdigest()
+
+
+def test_the_check_uses_werkzeugs_constant_time_comparison(monkeypatch):
+    """Comparing hashes with == can leak, through timing, how much matched.
+    The route must go through check_password_hash, which doesn't."""
+    calls = []
+    real = appmod.check_password_hash
+    monkeypatch.setattr(appmod, "check_password_hash",
+                        lambda h, p: calls.append(p) or real(h, p))
+    _, password_hash = appmod._developer_credentials("hunter2")
+    monkeypatch.setattr(appmod, "DEVELOPER_MODE_ENABLED", True)
+    monkeypatch.setattr(appmod, "DEVELOPER_PASSWORD_HASH", password_hash)
+    app.test_client().post("/developer-login", json={"password": "guess"})
+    assert calls == ["guess"]
 
 
 def test_unconfigured_deployment_refuses_every_password(developer_mode_unconfigured):
@@ -108,11 +134,10 @@ def test_a_wrong_password_is_rejected_when_configured():
 def test_the_correct_password_still_unlocks_developer_mode(monkeypatch):
     """The one path that must keep working. Uses a known password rather than
     the real one, so the test never needs the live secret."""
-    import hashlib
     secret = "a-known-test-password"
     monkeypatch.setattr(appmod, "DEVELOPER_MODE_ENABLED", True)
     monkeypatch.setattr(appmod, "DEVELOPER_PASSWORD_HASH",
-                        hashlib.sha256(secret.encode()).hexdigest())
+                        appmod._developer_credentials(secret)[1])
 
     client = app.test_client()
     response = client.post("/developer-login", json={"password": secret})
