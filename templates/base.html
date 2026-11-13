@@ -22,7 +22,7 @@
          matching checkboxes and full logic live in base.js. -->
     <script src="{{ static_v('js/pages/reading-support-early.js') }}"></script>
 </head>
-<body>
+<body data-current-gender="{{ current_gender|default('neutral') }}">
     <nav>
         <div class="nav-container">
             <a href="/" class="logo"><img src="{{ static_v('img/brand/logo.png') }}" alt="ThaiBridge AI" width="315" height="48"></a>
@@ -207,7 +207,6 @@
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>
     
-    <script>window.CURRENT_GENDER = '{{ current_gender|default("neutral") }}';</script>
     <script src="{{ static_v('js/pages/monk-switches.js') }}"></script>
     <script src="{{ static_v('js/base.js') }}"></script>
     

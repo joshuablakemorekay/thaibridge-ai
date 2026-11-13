@@ -59,7 +59,7 @@ def used_names():
     """
     uses = {}
     for path, text in sources("static/css/*.css", "templates/**/*.html",
-                              "static/js/*.js"):
+                              "static/js/**/*.js"):
         for name, terminator in USAGE.findall(text):
             if terminator == ",":
                 continue  # has a fallback

@@ -8,6 +8,8 @@ and then forgotten.
 
 Run with:  pytest tests/test_meta_pixel.py -v
 """
+import json
+import os
 import re
 import uuid
 
@@ -23,9 +25,11 @@ def client():
 
 
 def events_on(html):
-    match = re.search(r"var EVENTS = (\[.*?\]);", html)
-    assert match, "the Pixel script is missing from the page"
-    return match.group(1)
+    # The events arrive in a JSON data block since the Pixel loader moved into
+    # static/js/pages/meta-pixel.js (inline scripts are refused by the CSP).
+    match = re.search(r'<script id="meta-pixel-data" type="application/json">(.*?)</script>', html)
+    assert match, "the Pixel data is missing from the page"
+    return json.dumps(json.loads(match.group(1))["events"])
 
 
 def test_banner_and_pixel_id_are_on_every_page():
@@ -39,7 +43,10 @@ def test_meta_script_is_not_loaded_before_consent():
     """No <script src=...fbevents.js>: the loader only runs inside loadPixel()."""
     html = client().get("/about").get_data(as_text=True)
     assert '<script src="https://connect.facebook.net' not in html
-    assert "if (choice === 'granted') loadPixel();" in html
+    assert "js/pages/meta-pixel.js" in html
+    loader = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                  "static", "js", "pages", "meta-pixel.js"), encoding="utf-8").read()
+    assert "if (choice === 'granted') loadPixel();" in loader
 
 
 def test_sign_up_fires_complete_registration_once():

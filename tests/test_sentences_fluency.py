@@ -4,6 +4,7 @@ questions, and the sentence builder drill.
 The page used to show finished sentences only. These tests pin the parts that
 make a learner produce Thai themselves.
 """
+import os
 import pytest
 
 from ai_agent import ROLEPLAY_SCENARIOS
@@ -36,10 +37,13 @@ def test_conversations_without_a_roleplay_get_no_link(sentences_html):
 
 def test_chat_page_reads_the_scenario_parameter(unlocked_client):
     html = unlocked_client.get('/chat?scenario=restaurant').get_data(as_text=True)
-    assert ".get('scenario')" in html
+    assert "js/pages/chat.js" in html
+    chat_js = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                   "static", "js", "pages", "chat.js"), encoding="utf-8").read()
+    assert ".get('scenario')" in chat_js
     # Dropping the parameter stops a refresh from restarting (and paying for)
     # the scene again.
-    assert 'history.replaceState' in html
+    assert 'history.replaceState' in chat_js
     assert 'data-scenario="restaurant"' in html
 
 
