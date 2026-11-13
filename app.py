@@ -94,6 +94,34 @@ if not app.secret_key:
     raise ValueError("FLASK_SECRET_KEY is not set. Please set it in your environment.")
 
 # ============================================
+# COOKIE SETTINGS
+# ============================================
+# Said out loud rather than left to Flask's and the browser's defaults.
+#
+# SameSite=Lax: the browser leaves the login cookies off any POST that starts
+# on another website. A few older forms (developer log-in, Monk Mode, dāna,
+# cancelling a subscription) are ordinary form posts, so this is what stops a
+# page elsewhere submitting them as a signed-in learner. Lax, not Strict, so a
+# learner coming back from Stripe or PayPal (a normal link) is still signed in.
+#
+# Secure: the cookies only travel over HTTPS. Switched on where Render runs the
+# app (Render always sets RENDER=true), and off on a laptop running plain
+# http://localhost, where a Secure cookie would never be sent back and nobody
+# could stay logged in.
+#
+# HttpOnly is already Flask's and Flask-Login's default; set anyway so all
+# three settings sit in one place.
+_ON_RENDER = os.environ.get("RENDER", "").lower() == "true"
+app.config.update(
+    SESSION_COOKIE_SAMESITE="Lax",
+    SESSION_COOKIE_SECURE=_ON_RENDER,
+    SESSION_COOKIE_HTTPONLY=True,
+    REMEMBER_COOKIE_SAMESITE="Lax",
+    REMEMBER_COOKIE_SECURE=_ON_RENDER,
+    REMEMBER_COOKIE_HTTPONLY=True,
+)
+
+# ============================================
 # OLD ADDRESS -> NEW ADDRESS
 # ============================================
 # The site moved from thaibridge-ai.smoald.com to thaibridge.smoald.com on
@@ -402,7 +430,17 @@ app_reviews.init_app(app)
 def _rate_limit_exceeded(e):
     """The AI routes speak JSON, so a limit hit must answer in JSON too —
     otherwise the browser gets Flask's HTML error page and the chat window
-    fails with an unhelpful parse error instead of a readable message."""
+    fails with an unhelpful parse error instead of a readable message.
+
+    The Monk Mode page is the exception: it's an ordinary form, so a JSON
+    reply would show the learner raw code. It gets its own page back instead,
+    with the reason in the usual error spot."""
+    if request.path == '/monk-mode':
+        return render_template(
+            'monk_mode.html', active=False,
+            error="Too many codes tried in a short time. Please wait 15 minutes "
+                  "and try again.",
+        ), 429
     return jsonify({
         'success': False,
         'gate': 'rate_limited',
@@ -4526,7 +4564,23 @@ def set_gender(gender):
     return jsonify({'success': False, 'error': 'Invalid gender'})
 
 
+def _monk_code_rejected(response):
+    """Count a Monk Mode attempt against the limit only when the code was wrong.
+
+    A right code redirects (302); a wrong one re-renders the page (200). The
+    shared failed_attempt_only() can't be used here: it reads any non-200 as a
+    failure, so every monk who got their code RIGHT would be charged for it,
+    and a monastery sharing one connection could lock itself out by succeeding.
+    """
+    return response.status_code == 200
+
+
 @app.route('/monk-mode', methods=['GET', 'POST'])
+# Same limit as the developer log-in. Without one, the codes could be guessed
+# as fast as a script can post them. Only wrong codes count, and only POSTs:
+# reading the page is never limited.
+@limiter.limit("5 per 15 minutes; 20 per hour", key_func=rate_limit_key,
+               methods=["POST"], deduct_when=_monk_code_rejected)
 def monk_mode():
     """The Monk Mode access page.
 

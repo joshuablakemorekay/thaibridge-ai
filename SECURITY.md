@@ -38,14 +38,20 @@ Please don't test against other people's accounts or try to access data that isn
   least 8 characters, including a letter and a number.
 - **Flask-Login** keeps only the account id in the signed session cookie and loads the
   account from the database on every request.
+- **The login cookies are locked down explicitly**: `HttpOnly` (page scripts can't read
+  them), `SameSite=Lax` (the browser leaves them off any form post that starts on another
+  website), and `Secure` on the live site (HTTPS only). Set in `app.py`, pinned by
+  `tests/test_cookie_and_monk_limits.py`.
 - **A new password signs out every other device.** The id in the login cookie includes a
   session version, and changing the password bumps it, so older cookies stop working.
 - **Password resets** use a signed link that expires in 30 minutes and only works once (it
   carries a fingerprint of the current password hash). The reply is the same whether or
   not the email has an account, and the email is sent in the background, so the response
   time doesn't give that away either. The owner gets a "your password was changed" email.
-- **Rate limits** (Flask-Limiter) sit on log-in, sign-up, password resets and the
-  developer log-in, so passwords can't be guessed at speed. Visitors
+- **Rate limits** (Flask-Limiter) sit on log-in, sign-up, password resets, the developer
+  log-in and Monk Mode codes, so passwords and codes can't be guessed at speed. On the
+  log-in and code routes only *failed* attempts count, so people sharing one connection
+  (a monastery or guesthouse) can't lock each other out just by signing in. Visitors
   are identified by Cloudflare's `CF-Connecting-IP` header, so the limit applies to each
   real visitor rather than to the proxy everyone arrives through.
 
@@ -128,21 +134,16 @@ on request by email. Payment records are kept as long as UK tax law requires.
 
 Honest list of what isn't done yet, roughly in priority order:
 
-1. **Cookie settings aren't set explicitly.** `SESSION_COOKIE_SECURE` and
-   `SESSION_COOKIE_SAMESITE` (and the remember-me equivalents) use Flask's defaults. The site
-   is HTTPS-only behind Cloudflare and modern browsers treat cookies as `SameSite=Lax`
-   anyway, but the app should say so itself instead of relying on that.
-2. **A few older routes take ordinary form posts** (developer log-in, Monk Mode codes, the
+1. **A few older routes take ordinary form posts** (developer log-in, Monk Mode codes, the
    dāna amount, cancelling a subscription), so they don't get the JSON protection above.
-   They rely on the browser's `SameSite=Lax` default today. Setting the cookie options in
-   point 1 closes this. Moving them to JSON (or adding CSRF tokens) would close it fully.
-3. **No security headers yet**, such as `Content-Security-Policy`, `X-Frame-Options` /
+   The `SameSite=Lax` login cookie now stops another website submitting them as a
+   signed-in learner. Moving them to JSON (or adding CSRF tokens) would add a second layer.
+2. **No security headers yet**, such as `Content-Security-Policy`, `X-Frame-Options` /
    `frame-ancestors`, or `Strict-Transport-Security`.
-4. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
+3. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
    read from an environment variable and the route is rate limited, but a constant-time
    comparison and a slow hash (as used for learners' passwords) would be better practice.
-5. **Monk Mode codes aren't rate limited.** `/monk-mode` checks a code without the limit the
-   log-in routes have, so codes could be guessed at speed. The codes only open the monk
-   learning track (not the paywall), but the route should get the same limit as the
-   developer log-in.
-6. **No self-service account deletion.** It's done by email today.
+4. **No self-service account deletion.** It's done by email today.
+
+Fixed on 13 November 2026: the cookie settings are now explicit, and Monk Mode codes are
+rate limited.
