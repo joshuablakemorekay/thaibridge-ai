@@ -1952,6 +1952,88 @@ html.rs-spacing li {
     margin-bottom: 0.8em;
 }
 
+/* --- Effect 4: colour-blind friendly colours ---
+   The quizzes mark right answers green and wrong ones red: the one pair that
+   the most common colour blindness (red-green, about 1 in 12 men) can't tell
+   apart. This swaps them for blue (right) and orange (wrong), a pair nearly
+   everyone can separate, based on the Okabe-Ito colour-blind palette.
+   Both are darkened so text passes WCAG AA: blue 7.1:1 and orange 6.1:1 on
+   white, and at least 5.1:1 on the pale tints.
+
+   Colour is never the only clue, either: wrong answers also get a dashed
+   border, and the answers already carry a ✓ / ✗ or a written verdict.
+
+   The page selectors below come from each quiz's own stylesheet. Starting with
+   "html.rs-colour" gives them higher specificity, so they win even though the
+   page's styles load after this file. */
+html.rs-colour {
+    --cb-good: #005A9C;
+    --cb-good-bg: #E3EFFA;
+    --cb-bad: #A84300;
+    --cb-bad-bg: #FCE9D9;
+    /* Chanting book: ThaiBridge Spelling layer (see CHANT_LAYERS in chanting.py) */
+    --cb-paiboon: #005A9C;
+}
+
+/* Answer buttons with a coloured border (Alphabet quiz, Sentences listening) */
+html.rs-colour .abc-option.is-correct,
+html.rs-colour .listen-option.is-right {
+    border-color: var(--cb-good);
+    background: var(--cb-good-bg);
+}
+html.rs-colour .abc-option.is-wrong,
+html.rs-colour .listen-option.is-wrong {
+    border-color: var(--cb-bad);
+    border-style: dashed;
+    background: var(--cb-bad-bg);
+}
+
+/* Answer buttons filled with colour (Tones & Classes quiz) */
+html.rs-colour .opt-btn.correct {
+    background: var(--cb-good);
+    border-color: var(--cb-good);
+}
+html.rs-colour .opt-btn.wrong {
+    background: var(--cb-bad);
+    border-color: var(--cb-bad);
+    /* A dashed border would vanish into a button filled with the same colour,
+       so the dashes sit just outside it instead. */
+    outline: 2px dashed var(--cb-bad);
+    outline-offset: 2px;
+}
+
+/* Feedback boxes under a question */
+html.rs-colour .abc-feedback.is-correct,
+html.rs-colour .sb-result.right {
+    background: var(--cb-good-bg);
+    color: var(--cb-good);
+    border-left-color: var(--cb-good);
+}
+html.rs-colour .abc-feedback.is-wrong,
+html.rs-colour .sb-result.wrong {
+    background: var(--cb-bad-bg);
+    color: var(--cb-bad);
+    border-left-color: var(--cb-bad);
+}
+html.rs-colour .sb-result.wrong { border-left-style: dashed; }
+
+/* Coloured words: quiz verdicts and the pronunciation check */
+html.rs-colour .abc-result-verdict.is-pass,
+html.rs-colour .pron-heard.is-right { color: var(--cb-good); }
+html.rs-colour .abc-result-verdict.is-fail { color: var(--cb-bad); }
+
+/* Yes / No labels in the Sentences "Answering" section */
+html.rs-colour .qa-yes .qa-label { background: var(--cb-good); }
+html.rs-colour .qa-no .qa-label  { background: var(--cb-bad); }
+
+/* The exercise quiz (/exercise/...) writes its result colour inline, as var(--bodhi-green)
+   or var(--temple-red). Re-pointing those two variables inside the quiz box
+   recolours it without touching the rest of the site's greens and reds. */
+html.rs-colour #quizContent {
+    --bodhi-green: var(--cb-good);
+    --temple-red: var(--cb-bad);
+}
+
 /* --- Read aloud (inside the panel) ---
    A chooser ("what should I read?") sits above the button so the learner
    decides what gets spoken before starting. */

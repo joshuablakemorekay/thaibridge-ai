@@ -212,7 +212,9 @@
         // changes as the user toggles them.
         (function () {
             var KEY = 'tb-reading-support';
-            var OPTIONS = ['font', 'large', 'spacing'];
+            // 'colour' swaps the quizzes' green/red for blue/orange, which
+            // people with red-green colour blindness can tell apart.
+            var OPTIONS = ['font', 'large', 'spacing', 'colour'];
 
             function load() {
                 try { return JSON.parse(localStorage.getItem(KEY) || '{}'); }

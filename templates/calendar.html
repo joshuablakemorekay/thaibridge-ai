@@ -108,6 +108,35 @@
     .cal-list-month a { color: var(--royal-burgundy, #8B1A1A); text-decoration: none; }
     .cal-list-month a:hover { text-decoration: underline; }
     .cal-legend .cal-dot { width: 8px; height: 8px; }
+
+    /* Learning Support → Colour-blind friendly colours.
+       The Thai (purple) and Christian (blue) marks differ mostly in their red,
+       which red-green colour blindness removes, and the dots are tiny. So the
+       Christian marks change SHAPE as well: a hollow ring instead of a solid
+       dot. The key uses the same classes, so it always matches. */
+    html.rs-colour .cal-dot { width: 6px; height: 6px; }
+    html.rs-colour .cal-legend .cal-dot { width: 9px; height: 9px; }
+    html.rs-colour .dot-christian { background: transparent; box-shadow: inset 0 0 0 1.5px #2E7DB5; }
+    /* Phones, for everyone: each event shrinks to a thin bar with no words.
+       The pale chip tints were too alike to read that small (lavender and pale
+       blue look the same even with full colour vision), so the bars use the
+       strong dot colours instead. The key's chips get a matching dot, because
+       on a phone the key is the only place the bar colours are explained. */
+    @media (max-width: 640px) {
+        .cal-grid .cal-ev.cat-buddhist { background: #E08A00; }
+        .cal-grid .cal-ev.cat-thai { background: var(--royal-purple, #4A1A6B); }
+        .cal-grid .cal-ev.cat-christian { background: #2E7DB5; }
+        .cal-legend .cal-ev::before {
+            content: ''; display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+            margin-right: 0.35rem; vertical-align: -0.05em;
+        }
+        .cal-legend .cat-buddhist::before { background: #E08A00; }
+        .cal-legend .cat-thai::before { background: var(--royal-purple, #4A1A6B); }
+        .cal-legend .cat-christian::before { background: #2E7DB5; }
+        /* Colour-blind option: Christian bars and their key dot become outlines. */
+        html.rs-colour .cal-grid .cal-ev.cat-christian,
+        html.rs-colour .cal-legend .cat-christian::before { background: transparent; box-shadow: inset 0 0 0 1.5px #2E7DB5; }
+    }
     .cal-list-compact li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; padding: 0.45rem 0.75rem; }
     .cal-list-compact .cal-when { min-width: 3.2rem; }
     .cal-list-compact .cal-name { flex: 1 1 12rem; }
