@@ -115,7 +115,6 @@ function makeDrill(rootId, cfg) {
     updateScore();
     nextQuestion();
     return { reset: nextQuestion };
-};
 }
 
 document.addEventListener('DOMContentLoaded', function () {
