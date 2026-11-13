@@ -1,24 +1,30 @@
 # Architecture & Codebase Guide
 
-This is the developer's-eye view of the Thai Language & Culture Learning App — what
-the code is, how it's put together, how it runs, and the design decisions (and a few
-"gotchas") behind it. It was written by reading the real source files, so it reflects
-what's actually in the repo, not what we hoped to build.
+This is the developer's-eye view of ThaiBridge AI. It covers what the code is, how it's
+put together, how it runs, and the design decisions (and a few "gotchas") behind it.
+It was written by reading the real source files, so it describes what's actually in
+the repo, not what we hoped to build.
 
 If you just want to *use* the app, start with the root `README.md`. If you want to
-*work on* it, start here.
+*work on* it, start here. Two companion guides cover the rest:
+
+- **[TESTING.md](./TESTING.md)** explains how the test suite is organised and how to run it safely.
+- **[../SECURITY.md](../SECURITY.md)** explains how accounts, payments and the AI spend are protected.
+
+*Last checked against the code: 13 November 2026.*
 
 ---
 
 ## The one-paragraph summary
 
-This is a **Flask web app** (Flask = a Python toolkit that turns Python functions into
-web pages) for learning Thai through culture and Buddhism. Almost everything lives in a
-single large file, `app.py`. Learning content (vocabulary, grammar, meditation guides)
-is written directly into Python as data, the way you'd fill in a spreadsheet. An
-AI tutor powered by Claude lives in a separate file, `ai_agent.py`. Player progress —
-points, levels, unlocked sections — is tracked per browser session, and there's a
-gamified "level up to unlock more" system on top.
+ThaiBridge is a **Flask web app** (Flask is a Python toolkit that turns Python functions
+into web pages) for learning Thai through its culture and Theravada Buddhism. The live
+site is https://thaibridge.smoald.com. `app.py` is still the hub, holding most of the pages
+and the billing. Around it sit about 40 smaller modules, each owning one job: accounts,
+access rules, progress, quizzes, the chanting book and so on. Learning content is written
+directly into Python as data, the way you'd fill in a spreadsheet. A Claude-powered tutor
+lives in `ai_agent.py`. Accounts, progress, payments, AI usage and reviews are stored in
+**Postgres** in production and a **SQLite** file on a developer's machine.
 
 ---
 
@@ -26,315 +32,302 @@ gamified "level up to unlock more" system on top.
 
 From `requirements.txt`:
 
-- **Flask 3.1** — the web framework (the toolkit that gives the project its web-page structure)
-- **Flask-SQLAlchemy** — talks to the database in Python instead of raw SQL
-- **SQLite** — a tiny file-based database (one `.db` file, no separate database server needed)
-- **Flask-Login** — keeps track of who is logged in across requests (real sign-in/sign-out)
-- **Werkzeug** — used here to hash passwords safely (turn a password into scrambled text that can't be reversed)
-- **anthropic** — the official Claude SDK (the library that lets the app talk to Claude)
-- **stripe** — the Stripe SDK for taking subscription payments (test mode)
-- **httpx** — used to talk to PayPal's REST API directly (second payment option)
-- **python-dotenv** — loads secret settings from a `.env` file
-- **pytest** — the testing tool
+- **Flask 3.1** is the web framework.
+- **Flask-SQLAlchemy / SQLAlchemy 2.0** talk to the database in Python instead of raw SQL.
+- **psycopg2** is the Postgres driver used in production (on Neon, Frankfurt).
+- **Flask-Login** keeps track of who is logged in.
+- **Flask-Limiter** puts rate limits on the routes that cost money or guard accounts.
+- **Werkzeug** hashes passwords, turning them into scrambled text that can't be reversed.
+- **anthropic** is the official Claude SDK, used by the AI tutor.
+- **stripe** handles subscriptions, the Instant Access Pass and dāna gifts. It's **live**
+  since 5 November 2026.
+- **httpx** talks to PayPal's REST API (the second payment option).
+- **python-dotenv** loads secret settings from a `.env` file.
+- **pytest** is the testing tool. `requirements-dev.txt` adds the extra libraries only the
+  tests and scripts need.
+
+**Hosting:** Render (free web service, Frankfurt), built from `render.yaml`, started with
+`gunicorn app:app`, served behind Cloudflare. Every push to `main` deploys automatically.
+Python is pinned to **3.12.8** in `.python-version`.
 
 ---
 
 ## How to run it
 
-1. **Install the dependencies** (the external tools the project needs):
+1. **Install the dependencies:**
    ```
-   pip install -r requirements.txt
+   pip install -r requirements-dev.txt
    ```
-   (Or run `install.bat` on Windows / `install.sh` on Mac/Linux.)
+   (`requirements-dev.txt` includes everything in `requirements.txt`, plus what the tests need.)
 
 2. **Create a `.env` file** (copy `.env.example`) and fill in:
-   - `ANTHROPIC_API_KEY` — **required.** The app refuses to start without it.
-   - `FLASK_SECRET_KEY` — **required.** Used to secure browser sessions.
-   - `DEVELOPER_PASSWORD` — optional. Unlocks a developer test mode (defaults to `changeme`).
+   - `ANTHROPIC_API_KEY` is **required**. The app refuses to start without it.
+   - `FLASK_SECRET_KEY` is **required**. It signs the browser's session cookie.
+   - `DEVELOPER_PASSWORD` is optional. It turns on developer mode. **There's no default.**
+     If it's left blank, developer mode is switched off entirely.
+   - Leave `DATABASE_URL` **unset** locally, so the app uses `instance/thai_app.db`.
 
-3. **Start the app:**
+3. **Start the app** with Flask's own runner:
    ```
-   python app.py
+   PYTHONUTF8=1 DATABASE_URL="" python -m flask --app app run --port 5000
    ```
+   `DATABASE_URL=""` guarantees you're on the local SQLite file, even if your `.env` holds
+   the live connection string (see "Gotchas" below). Avoid `python app.py`. It imports the
+   app twice, and one page (`/calendar`) breaks locally when that happens. The live site
+   uses gunicorn and isn't affected.
 
-4. **Open** http://127.0.0.1:5000 in your browser.
+4. **Open** http://127.0.0.1:5000.
 
-On startup the app prints a banner, creates the SQLite database file if it doesn't
-exist, and tries to initialise the AI agent. If the AI key is missing it still runs —
-it just disables the AI features and tells you why.
+On startup the app creates any missing database tables, adds any missing columns, and
+tries to start the AI tutor. If the AI can't start, the rest of the site still runs.
 
 ---
 
 ## The big picture (how the pieces fit)
 
 ```
-                ┌──────────────────────────────────────────┐
-   Browser ───► │  app.py  (the whole web app)             │
-                │   • config + secrets (from .env)         │
-                │   • User model (SQLite)                  │
-                │   • gamification rules (levels, tiers)   │
-                │   • learning content (Python dicts)      │
-                │   • ~60 routes (pages + JSON APIs)       │
-                └───────────────┬──────────────────────────┘
-                                │ AI calls
-                                ▼
-                ┌──────────────────────────────────────────┐
-                │  ai_agent.py  (Claude wrapper)           │
-                │   • 6 teaching "modes"                   │
-                │   • per-session chat history             │
-                └───────────────┬──────────────────────────┘
-                                │
-                                ▼
-                         Claude (Anthropic API)
-
-   Side data:  data/*.tsv  (Thai–English dictionary)
-   Templates:  templates/*.html  (the actual pages)
+                     Browser
+                        │
+                        ▼
+                  Cloudflare ──► Render (gunicorn)
+                                      │
+   ┌──────────────────────────────────┴───────────────────────────────────┐
+   │  app.py  — the hub (~7,400 lines, ~90 routes)                        │
+   │   • config, secrets, database setup                                  │
+   │   • page routes for Learn, Culture, Buddhism, Chanting, Tour Guide…  │
+   │   • billing: Stripe/PayPal checkout + the Stripe webhook             │
+   │   • AI routes (/api/ai/*) with allowances and usage logging          │
+   │                                                                      │
+   │  Blueprints registered by app.py:                                    │
+   │   auth.py (accounts) · quizzes.py (drills) · app_reviews.py (reviews)│
+   │                                                                      │
+   │  Plain modules app.py imports:                                       │
+   │   access.py · progress.py · plans.py · rewards.py · questions.py ·   │
+   │   learning_path.py · signup_source.py · site_search.py · curriculum.py│
+   │   + content modules (vocabulary, chanting, survival, tour_trips…)    │
+   └───────────────┬──────────────────────────────┬───────────────────────┘
+                   │                              │
+                   ▼                              ▼
+          ai_agent.py ──► Claude API      models.py ──► Postgres (live)
+                                                       SQLite (local)
+   Stripe ──webhook──► /stripe/webhook
+   Resend ◄── password-reset emails (accounts.py)
 ```
+
+**The one rule that keeps this tidy: modules never import `app.py`.** `app.py` imports them,
+never the other way round. That means there's no import loop. Each module that needs to
+hook into the app gets an `init_app(app)` function that `app.py` calls once.
 
 ---
 
 ## File-by-file tour
 
-### `app.py` — the heart of everything (~5,400 lines)
+### `app.py` — the hub (~7,400 lines)
 
-This single file holds the entire web app. It's organised top-to-bottom roughly like this:
+Organised top to bottom roughly like this:
 
-1. **Setup & secrets** — loads `.env`, creates the Flask app, and *fails fast* if the
-   API key or secret key is missing (it raises an error rather than running half-broken).
-2. **Database config + `User` model** — one table, `users`. Identity columns
-   (`id`, `username`, `email`, `password_hash`, `created_at`) plus **subscription
-   columns** (`subscription_tier`, `subscription_status`, `stripe_customer_id`,
-   `stripe_subscription_id`, `current_period_end`). It also has a `effective_tier`
-   property — the one rule that decides what a user gets *right now* (a paid tier
-   only counts while active and not expired). Helpers set/check passwords safely.
-3. **Gamification & subscription rules** — the level thresholds, point rewards,
-   achievements, section-unlock requirements, and subscription tiers (all explained below).
-4. **Learning content** — large Python dictionaries holding vocabulary, gendered/formal
-   sentence patterns, grammar, culture notes, Buddhist teachings, and more.
-5. **Helper functions** — things like `add_xp()`, `get_user_level()`,
-   `check_section_access()`, `check_achievements()`, and a `require_access()` decorator
-   that locks a page behind a level/tier requirement.
-6. **Routes** — about 60 of them: page routes (`/`, `/alphabet`, `/chat`, `/dictionary`…)
-   and JSON API routes (`/api/...`) that the front-end calls for quizzes, points, and AI.
+1. **Setup & secrets.** It loads `.env`, creates the Flask app, and *fails fast* if
+   `ANTHROPIC_API_KEY` or `FLASK_SECRET_KEY` is missing. It also redirects the old domain
+   (`thaibridge-ai.smoald.com`) to the new one with a permanent 301.
+2. **Database setup.** Postgres when `DATABASE_URL` is set, otherwise SQLite. Two tables are
+   defined here: `AiUsage` (one row per AI request) and `Payment` (one row per time money
+   moved). Then `db.create_all()` and `ensure_user_columns()` bring any database up to date
+   (see "Database" below).
+3. **Extensions and blueprints.** It attaches the rate limiter and login manager, then
+   registers `auth`, `quizzes` and `app_reviews`, and wires up `progress` and `signup_source`.
+4. **Gamification and access helpers.** `ACHIEVEMENTS`, `check_achievements()`, and the
+   `require_access()` decorator that puts a page behind its rule in `access.py`.
+5. **Learning content** that hasn't been moved out into its own module yet.
+6. **Routes** (~90): pages (`/`, `/alphabet`, `/chanting`, `/calendar`…), JSON APIs
+   (`/api/...`), billing (`/subscribe/...`, `/dana`, `/stripe/webhook`), and AI
+   (`/api/ai/chat`, `/hint`, `/explain`, `/generate`, `/clear`, `/status`).
 
-**Design note:** keeping everything in one file makes the app very easy to run and read
-top-to-bottom, but hard to maintain as it grows. Splitting `app.py` into modules
-(models, content, routes, gamification) is the most obvious future refactor
-("refactor" = rewriting code to be cleaner without changing what it does).
+### Accounts: `models.py`, `auth.py`, `accounts.py`, `extensions.py`
 
-### `ai_agent.py` — the Claude-powered tutor (~500 lines)
+- `models.py` holds the database object (`db`), the `User` model, the `AppReview` model, and
+  `utcnow()`. That function deliberately returns a time *without* a timezone; changing it
+  breaks the subscription date comparisons, and a test pins it.
+- `auth.py` is a Flask **Blueprint** (a bundle of routes registered with the app). It holds
+  sign-up, log-in, log-out, forgotten password, reset and change password.
+- `accounts.py` holds the password rules, the signed reset links and the account emails.
+- `extensions.py` creates the login manager and the rate limiter, plus `rate_limit_key()`,
+  which identifies a visitor by their real address behind Cloudflare.
 
-A clean, self-contained class called `ThaiLearningAI` that wraps Claude. Key points:
+### Access and plans: `access.py`, `plans.py`
 
-- **Model used:** `claude-sonnet-4-20250514`.
-- **Six teaching modes**, each defined by its own system prompt (the instructions that
-  shape how Claude behaves):
-  - `conversation` — a practice partner that corrects one mistake at a time
-  - `tutor` — explains concepts in a fixed three-step structure
-  - `generator` — creates custom exercises and quizzes
-  - `cultural` — explains Thai culture through the language it shapes
-  - `buddhist` — teaches dharma terms as vocabulary
-  - `helper` — gives progressive hints without spoiling the answer
-- **A shared "rulebook"** sits at the top of every prompt: the **Paiboon+ romanization
-  rules** (a precise, IPA-based way of writing Thai sounds in Latin letters). This is the
-  single most important design choice in the AI layer — it forces consistent, accurate
-  pronunciation across every mode.
-- **Conversation memory:** chat history is kept per session in memory (the last 20
-  messages), so the tutor remembers the current conversation but nothing is saved to disk.
-- **Singleton pattern:** `get_ai_agent()` returns one shared instance, created once.
+- `access.py` holds `SECTION_REQUIREMENTS` (every section's level, tier and alphabet rule),
+  `check_section_access()`, `active_tier()` (the tier to enforce *right now*, read from the
+  database for logged-in users), and the **earned unlock**: reaching Level 3 lets a free
+  learner open one Thai Reader section for good.
+- `plans.py` is the price list (`SUBSCRIPTION_TIERS`) and the AI allowances each plan gets.
 
-The app talks to this file through endpoints like `/api/ai/chat`, `/api/ai/hint`,
-`/api/ai/explain`, `/api/ai/generate`, `/api/ai/clear`, and `/api/ai/status`.
+### Progress and rewards: `progress.py`, `rewards.py`, `questions.py`, `learning_path.py`
 
-### `new_routes.py` — ⚠️ a draft, not wired in
+- `progress.py` handles a learner's XP, level, streak and settings. The session cookie is
+  the working copy, and `User.progress` (a JSON column) is the durable one. It's saved
+  after every request and restored at login. Keys that grant anything (tier, unlocks,
+  developer mode) are **never** saved from the cookie.
+- `rewards.py` holds the point values (`POINT_REWARDS`), `add_xp()` and a **daily cap** on
+  drill XP.
+- `questions.py` signs each drill question's answer with an **HMAC** (a tamper-proof
+  fingerprint made with the secret key), so the browser never learns the answer and
+  can't claim XP for one it didn't get right.
+- `learning_path.py` is the Personalised Learning Path on `/progress`: goals, a placement
+  check, weekly targets.
 
-This file defines tourist vocabulary, business-Thai vocabulary, and meditation data,
-plus `/tour-guide`, `/business-thai`, and `/meditation` routes. **But `app.py` already
-has its own versions of those three routes**, and `new_routes.py` is **never imported**
-by the app. Its own header comment says *"Add these two routes to app.py"* — so it's a
-**staging/scratch file**, a place where new content was drafted before being copied in.
+### Blueprints for features: `quizzes.py`, `app_reviews.py`
 
-**Gotcha for future-you:** editing `new_routes.py` changes nothing in the running app.
-The live versions live in `app.py`. This file is currently untracked (not yet saved into
-git) — decide whether to fold it into `app.py` and delete it, or keep it as a drafting pad.
+- `quizzes.py` holds the exercise pages, quiz questions, listening questions and
+  `/api/check_answer`.
+- `app_reviews.py` is the in-app review prompt. It shows a card on `/progress` from
+  Level 3, saves reviews privately to `app_reviews`, and lists them at `/reviews/private`
+  for developer mode only.
 
-### The Paiboon dictionary pipeline
+### `ai_agent.py` — the Claude-powered tutor (~1,200 lines)
 
-The app ships a real English–Thai dictionary (~4,894 entries, sourced from the
-NECTEC LEXiTRON / Yaitron corpus). The data and the scripts that process it:
+A class called `ThaiLearningAI` that wraps Claude.
 
-- `data/yaitron_dictionary_paiboon_fixed.tsv` — the dictionary **with** Paiboon
-  pronunciation added. This is what the app prefers to load.
-- `data/yaitron_dictionary.tsv` — the plain English–Thai base file (used as a fallback).
-- `generate_paiboon.py` — adds Paiboon romanization to the base dictionary.
-- `fix_paiboon.py` / `rerun_paiboon.py` — clean up and re-process entries that came out
-  wrong the first time (`data/needs_rerun.tsv` lists those).
+- **Model:** `claude-sonnet-5-5`, set by the `AI_MODEL` environment variable. It moved up
+  from Haiku in October 2026 because the cheaper model taught wrong Thai.
+- **Seven chat modes:** `conversation`, `tutor`, `generator`, `cultural`, `buddhist`,
+  `helper` and `translator`. Translator is Pro only and can read a photo of Thai text.
+- **A shared rulebook** at the top of every prompt holds the **ThaiBridge Spelling** rules
+  (the app's romanisation, based on Paiboon+), so pronunciation is written the same way
+  everywhere.
+- **A spelling lookup tool.** The tutor can look up a word's confirmed spelling before
+  answering, up to three rounds per message.
+- **Prompt caching** keeps the long instructions cached between messages, which cuts the
+  cost of a follow-up message to about a third.
+- **Conversation memory** is kept per session, capped at 20 messages and 16,000 characters.
+  It's never saved to disk.
+- If the Anthropic account runs out of credit, the tutor shows a calm "resting" message
+  instead of an error.
 
-`_load_yaitron()` in `app.py` loads this once at startup, prefers the Paiboon-enriched
-file, removes duplicates, and falls back gracefully if the enriched file isn't there.
+### Content modules
 
-> **Heads-up:** at the time of writing, the base `data/yaitron_dictionary.tsv` is
-> *deleted* in the working folder (an uncommitted change). The app still runs fine
-> because it loads the `_paiboon_fixed.tsv` version, but it's worth deciding whether
-> that deletion was intentional before committing it.
+Learning content lives as Python data in its own files: `vocabulary.py`,
+`sentence_content.py`, `thai_reading.py`, `thai_registers.py`, `tones.py`, `survival.py`,
+`expat2000.py`, `tour_trips.py`, `tour_activities.py`, `thai_calendar.py` and more.
+`content/` holds Markdown for the journal, Monk Mode lessons and Dhamma talks.
 
-### `templates/` — the actual web pages (~30 files)
+**The chanting book** is the biggest piece by far. `chanting.py` (~80,000 lines) holds 305
+chants in Pali, Thai, ThaiBridge Spelling and English, verse by verse, transcribed from a
+printed book. `chanting_layout.py`, `chanting_volumes.py` and `scripts/build_chanting_print.py`
+turn the same data into the printed edition.
 
-Standard Jinja2 templates (HTML with placeholders Flask fills in). They all extend
-`base.html` for shared layout. There's one template per feature — `alphabet.html`,
-`dictionary.html`, `chat.html`, `meditation.html`, `progress.html`, and so on.
+### The dictionary
 
-### `tests/` and `test_api.py`
+About 4,900 English–Thai entries from the NECTEC LEXiTRON / Yaitron corpus.
+`data/yaitron_dictionary_paiboon_fixed.tsv` (with pronunciation added) is what the app
+loads. The plain file is the fallback. `generate_paiboon.py`, `fix_paiboon.py` and
+`rerun_paiboon.py` are the one-off scripts that built it.
 
-- `tests/test_calculator.py` — unit tests for the gamification maths (XP and level calculations).
-- `test_api.py` — a smoke test for the API.
+### `templates/` and `static/`
 
-### `docs/`
+65 Jinja2 templates (HTML with placeholders Flask fills in). They all extend `base.html`.
+`static/` holds the CSS, JavaScript, fonts and about 2,000 generated MP3 clips (Thai and English).
 
-Setup and phase guides written during the build — `QUICK_START.md`,
-`PHASE_1_SETUP_GUIDE.md`, `AI_INTEGRATION_SIMPLE_GUIDE.md`, and others.
+### `scripts/`, `prompts/`, `evals/`, `tests/`, `docs/`
+
+- `scripts/` holds developer tools: audio generation, the print-book builder, review-sheet
+  makers, and checkers for the chanting data.
+- `prompts/` is the archived library of prompts used to build features, each with a rubric.
+  `evals/` holds the AI tutor's accuracy exam.
+- `tests/` holds 71 test files. See [TESTING.md](./TESTING.md).
+- `docs/` holds this guide, the database runbook, review sheets and screenshots.
 
 ---
 
-## How the gamification system works
+## Database
 
-The app is built like a game: you earn points, level up, and unlock content.
+Four tables:
 
-- **10 levels**, each with an XP threshold (`XP_LEVELS`): Level 1 starts at 0 XP and
-  Level 10 needs 12,000 XP.
-- **Points are earned** for actions (`POINT_REWARDS`) — e.g. a correct quiz answer = 10,
-  a perfect quiz = 50, a daily login = 15.
-- **Six achievements** (`ACHIEVEMENTS`) — badges like *First Steps*, *Word Learner*, and
-  *Enlightened*, each unlocked by meeting a condition.
-- **Every section has an unlock rule** (`SECTION_REQUIREMENTS`): a minimum level, a
-  subscription tier, and — for most learning sections — **completing the Thai
-  alphabet first**. The alphabet is free and is the gateway to the rest of the
-  app; completion is stored on the user row so it survives a cleared cookie or
-  a change of device.
-- The `require_access()` decorator enforces these rules on protected routes.
+| Table | One row per… | Written by |
+|---|---|---|
+| `users` | account | `auth.py`, the Stripe webhook, `progress.py` |
+| `payments` | time money moved (subscription, renewal, add-on, dāna) | Stripe/PayPal handlers |
+| `ai_usage` | AI request: tokens, model, tier, outcome. **Never the message text.** | the AI routes |
+| `app_reviews` | learner's review (one per account) | `app_reviews.py` |
 
-**Where things are stored:**
-- **Subscriptions live in the database** (on the `User` row) — this is the source of
-  truth, written by the Stripe webhook. A tampered session cookie cannot grant paid
-  access; access is always checked against the DB via `active_tier()`.
-- **Learning progress** (XP, level, unlocked sections) still lives in the **Flask
-  session** (`user_progress`), tied to the browser rather than synced across devices —
-  a known trade-off and the next obvious thing to move into the database.
+**Schema changes without a migration tool.** `db.create_all()` creates whole new tables
+on startup. It never adds a column to a table that already exists, so
+`ensure_user_columns()` in `models.py` does that by hand, checking first so it's safe to
+run on every start. New columns must be nullable or have a default.
 
-## Subscription tiers
+For looking at live data safely, see [DATABASE_RUNBOOK.md](./DATABASE_RUNBOOK.md).
 
-Three tiers are defined (`SUBSCRIPTION_TIERS`):
+---
 
-| Tier | Name | Price | Unlocks |
-|------|------|-------|---------|
-| `free` | FREE Explorer | £0 | Levels 1–5, the full Thai alphabet, Theravada Dhamma teachings & articles, progress tracking |
-| `basic` | Thai Reader | £9.99 | + Guided meditation sessions/timer/techniques, the Learn menu (vocab, grammar, sentences), culture, formality, register, Paiboon guide, Tour Guide & Business Thai, Levels 6–7, 2× points |
-| `pro` | Thai Master | £19.99 | + Unlimited AI chat (all modes), Culture & Dhamma AI Q&A, full dictionary, Levels 8–10, 3× points |
+## How access works
 
-The dividing line is deliberate: the **Dhamma teaching itself** is free (*dāna*), while the
-**tooling built on top of it** — guided practice sessions, language study, AI — is paid.
-**Monk Mode waives every tier** for monastics, at no charge.
+Every section has a rule in `access.py`: a minimum **level**, a **tier**, and often
+**"finish the alphabet first"**. `require_access()` enforces it on the page.
 
-These power the `/premium` and `/subscribe/<tier>` pages.
+- **Tiers and prices** (`plans.py`): Free; **Thai Reader** £9.99/month or £99/year; **Thai
+  Master** £19.99/month or £199/year. Pro has a fair-use cap of 75 AI messages a day.
+- **The Instant Access Pass** is a one-off purchase that skips the level gates
+  (`User.full_unlock`).
+- **Monk Mode** opens the monk learning track with a code from `MONK_MODE_CODES`. Since
+  21 October 2026 it **does not** waive the paywall.
+- **The Dhamma teaching itself is free.** Guided practice, language study and the AI are
+  what's paid for.
+- **Where the truth lives:** the tier, unlocks and alphabet completion are read from the
+  **database**, never from the cookie, so editing a cookie can't unlock anything.
 
-**How a subscription actually flows (production-style):**
-1. A logged-in user picks a tier → `/subscribe/<tier>/stripe` creates a Stripe
-   Checkout session, tagged with their `user_id` (so we know whose payment it is).
-2. They pay on Stripe (test mode), then Stripe calls our **webhook**
-   (`/stripe/webhook`) server-to-server. The webhook verifies the signature and is
-   the **source of truth** — it writes the tier, status, Stripe ids and the
-   period-end date onto the `User` row.
-3. The webhook also handles **renewals** (`invoice.paid` pushes the period out) and
-   **cancellations** (`customer.subscription.deleted` flips the status, so
-   `effective_tier` drops the user back to free).
-4. PayPal is offered as a second option; since this demo doesn't use PayPal's
-   recurring billing, a PayPal payment is recorded as a 30-day access grant.
+**How a subscription flows:**
+1. A logged-in learner picks a plan. `/subscribe/<tier>/stripe` creates a Stripe Checkout
+   session tagged with their `user_id`.
+2. They pay on Stripe. Stripe then calls `/stripe/webhook` from its own servers. The
+   webhook **checks Stripe's signature**, then writes the tier, status, Stripe ids and
+   period end onto the `User` row, and adds a `payments` row.
+3. Renewals (`invoice.paid`) push the period out. Cancellations end access when the paid
+   period does.
+4. PayPal is a second option, recorded as a 30-day access grant.
 
-(Test mode only — no real money moves. To go live you'd swap in live Stripe/PayPal
-keys and move off SQLite, see the README's deploy notes.)
+---
 
 ## Developer mode
 
-`/developer-login` accepts a password (hashed from the `DEVELOPER_PASSWORD` environment
-variable) and unlocks everything for testing, so you don't have to grind levels while
-developing. `/developer-logout` ends it.
-
----
-
-## Security & secrets
-
-- **All secrets come from environment variables**, loaded from `.env` — the API key, the
-  Flask secret key, and the developer password. Nothing sensitive is hard-coded. (This was
-  a deliberate clean-up: an earlier commit moved the developer password out of the source
-  code and into an environment variable.)
-- **Passwords are hashed** with Werkzeug before being stored — the raw password is never
-  saved.
-- **Sign-in is handled by Flask-Login** — only the user's id is kept in the signed
-  session cookie; the full account is loaded from the database each request.
-- **Forgotten passwords are reset by email** (`/forgot-password`). The link is a signed
-  token that expires in 30 minutes and carries a fingerprint of the current password
-  hash, so it works once and any password change cancels it, with no tokens table. The
-  reply is the same whether or not the email has an account, and the email is sent in a
-  background thread so the reply's *timing* doesn't give that away either. Emails go
-  through Resend (`RESEND_API_KEY`); with no key, the email is written to the server log
-  instead. Logged-in users change their password on `/progress`, and every reset or
-  change sends the owner a "your password was changed" notice.
-- **A new password signs out every other device.** The id in the login cookies is
-  `<user id>:<session version>`, and setting a password bumps the version, so older
-  session and remember-me cookies stop matching. The device that made the change is
-  signed straight back in. Cookies from before versions existed count as version 0, so
-  shipping this signed nobody out.
-- **Subscriptions are verified server-side** — the Stripe webhook checks the event
-  signature, and paid access is read from the database, never from the cookie, so a
-  user can't edit a cookie to unlock paid content.
-- `.env`, the database file, and other local artifacts are kept out of git via `.gitignore`.
+`/developer-login` takes the `DEVELOPER_PASSWORD` and opens everything for testing, plus
+the private pages (such as `/reviews/private`). With no password configured, the route is
+switched off completely. It doesn't fall back to a default. `/developer-logout` ends it.
 
 ---
 
 ## Key design decisions, in plain English
 
-- **One big `app.py`.** Simple to run and follow; harder to maintain as it grows. The
-  natural next step is splitting it into modules.
-- **Modules never import `app.py`.** `app.py` imports them, never the other way round,
-  so there is no import loop and `python app.py` loads the app once. The account code
-  shows how that works in practice:
-  - `models.py` holds the database object (`db`, created unbound and attached with
-    `db.init_app(app)`) and the `User` model.
-  - `extensions.py` holds the login manager and the rate limiter, attached the same way.
-  - `accounts.py` holds the password rules, reset links and account emails.
-  - `auth.py` is a Flask **Blueprint**: the sign-up, login, logout, forgot, reset and
-    change-password routes, registered with `app.register_blueprint(auth.bp)`.
-  - `progress.py` holds a learner's progress: its starting values, saving it to the
-    account (minus the keys that must never be saved, such as subscription flags),
-    loading it back at login, and the XP-to-level maths. `app.py` calls
-    `progress.init_app(app)` once, and that sets up both hooks.
-  - Logging in restores a learner's saved XP, but that's gamification, so `auth.py`
-    doesn't do it. `progress.py` listens for Flask-Login's `user_logged_in` signal
-    instead. It skips the restore when the session already belongs to that user, so
-    re-signing in after a password change can't rewind progress.
-  - What progress *unlocks* (section gates, subscriptions, Monk Mode's paywall waiver,
-    the earned unlock) stays in `app.py`. Those rules depend on billing and on each
-    other, so moving them would only move the tangle.
-  - `AiUsage` and `Payment` are still in `app.py`, because `Payment` reads the price
-    lists that live there.
-- **Content as Python data, not a database/CMS.** Vocabulary and lessons are written
-  directly into Python dictionaries. Easy to edit by hand, but it mixes content with code.
-- **Progress in the session, not the database.** Lightweight and quick, but not synced
-  across devices and lost if the session is cleared.
-- **A strict shared romanization rulebook for the AI.** The Paiboon+ rules are injected
-  into every AI prompt so pronunciation stays consistent and accurate everywhere.
-- **Fail-fast on missing secrets.** The app stops immediately if the API key or secret key
-  is absent, rather than running in a broken state.
+- **A hub plus small modules.** `app.py` is still big, but new features now go into
+  their own modules (`access`, `progress`, `plans`, `app_reviews`…), and older parts
+  move out when they're next touched.
+- **Modules never import `app.py`.** No import loops, and each module can be tested alone.
+- **Content as Python data.** Easy to edit and review line by line, and tests can walk
+  every Thai string. The cost is that content and code live together.
+- **The database decides who gets what.** Cookies hold working copies only.
+- **Fail closed.** No developer password means no developer mode. No Monk Mode codes
+  means Monk Mode can't be opened. A missing secret stops the app starting.
+- **Log what it costs, never what was said.** `ai_usage` records tokens and outcomes so
+  costs and caps are measurable, and stores none of the conversation.
 
 ---
 
-## Suggested first refactors (if you pick this up later)
+## Gotchas
 
-1. **Split `app.py`** into `models.py`, `content/`, `gamification.py`, and `routes/`.
-2. **Resolve `new_routes.py`** — fold it into `app.py` and delete it, or clearly mark it as a drafting pad.
-3. **Move learning progress into the database** so it survives across devices and sessions
-   (subscriptions already live there — progress is the remaining session-only piece).
-4. **Decide on the deleted `data/yaitron_dictionary.tsv`** before committing that change.
-5. **Before going live:** add Flask-Migrate (so schema changes don't need a DB wipe) and
-   move off SQLite to a persistent database (e.g. Postgres) — Render's free disk is
-   ephemeral, so SQLite there would lose data on redeploy.
+- **`import app` connects to the live database** if `.env` holds the production
+  `DATABASE_URL`. Prefix any ad-hoc script with `DATABASE_URL=""`. The test suite does
+  this for itself (see [TESTING.md](./TESTING.md)).
+- **Use `flask run`, not `python app.py`, locally.** See "How to run it".
+- **Changing a `render.yaml` environment value needs `sync: false`** for anything secret,
+  or Render overwrites what you set in the dashboard.
+- **A schema change needs a line in `ensure_user_columns()`**, or the live database never
+  gets the new column.
+
+---
+
+## Suggested next refactors
+
+1. **Keep shrinking `app.py`.** The billing routes and the AI routes are the two biggest
+   self-contained pieces left to move into their own blueprints.
+2. **Move `AiUsage` and `Payment` into `models.py`.** They stay in `app.py` today only
+   because `Payment` reads the price list. That could be passed in instead.
+3. **Adopt a real migration tool** (Flask-Migrate) once schema changes become more than
+   "add a nullable column".
