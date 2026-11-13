@@ -104,6 +104,126 @@
         </div>
     </div>
     
+    {# The review prompt (rules in app_reviews.py): signed-in learners from
+       Level 3, until they send one or press "Not now" (hidden 30 days).
+       Answers are kept privately. Nothing here is shown on the site. #}
+    {% if ask_for_review %}
+    <div class="review-prompt" id="review-prompt">
+        <h2>💬 How's ThaiBridge going for you?</h2>
+        <p class="review-intro">You've reached Level {{ user.level }}, so you've seen a fair bit of it.
+            An honest rating, good or bad, helps me make it better.</p>
+        <form id="review-form">
+            <fieldset class="review-stars">
+                <legend>Your rating</legend>
+                {% for n in range(1, 6) %}
+                <input type="radio" name="rating" id="review-star-{{ n }}" value="{{ n }}" required>
+                <label for="review-star-{{ n }}" title="{{ n }} star{{ 's' if n > 1 }}">
+                    <span aria-hidden="true">★</span><span class="visually-hidden">{{ n }} star{{ 's' if n > 1 }}</span>
+                </label>
+                {% endfor %}
+            </fieldset>
+            <label for="review-comment">Anything you'd like to say? <span class="review-optional">(optional)</span></label>
+            <textarea id="review-comment" maxlength="1000" rows="4"
+                      placeholder="What's helped you most? What's missing or frustrating?"></textarea>
+            <label class="review-check">
+                <input type="checkbox" id="review-can-publish">
+                You can show my review on the ThaiBridge website
+            </label>
+            <div id="review-name-wrap" hidden>
+                <label for="review-name">Name to show beside it <span class="review-optional">(e.g. "Sarah, Bangkok")</span></label>
+                <input type="text" id="review-name" maxlength="60" autocomplete="off">
+            </div>
+            <div class="review-actions">
+                <button type="submit" class="btn btn-saffron" id="review-send">Send review</button>
+                <button type="button" class="btn btn-secondary" id="review-snooze">Not now</button>
+            </div>
+            <p id="review-message" class="review-message" role="alert"></p>
+        </form>
+    </div>
+    <script>
+    (function () {
+        'use strict';
+        var box     = document.getElementById('review-prompt');
+        var form    = document.getElementById('review-form');
+        var msg     = document.getElementById('review-message');
+        var publish = document.getElementById('review-can-publish');
+        var nameBox = document.getElementById('review-name-wrap');
+
+        publish.addEventListener('change', function () { nameBox.hidden = !publish.checked; });
+
+        function post(url, body) {
+            return fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body || {})
+            });
+        }
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            var picked = form.querySelector('input[name="rating"]:checked');
+            if (!picked) { msg.textContent = 'Please choose a star rating.'; return; }
+            var send = document.getElementById('review-send');
+            send.disabled = true;
+            try {
+                var response = await post('/api/review', {
+                    rating:       Number(picked.value),
+                    comment:      document.getElementById('review-comment').value,
+                    can_publish:  publish.checked,
+                    display_name: publish.checked ? document.getElementById('review-name').value : ''
+                });
+                var result = await response.json();
+                if (result.success) {
+                    box.innerHTML = '<h2>🙏 ' + result.message + '</h2>';
+                    return;
+                }
+                msg.textContent = result.message;
+            } catch (err) {
+                msg.textContent = 'A network error occurred. Please try again.';
+            }
+            send.disabled = false;
+        });
+
+        document.getElementById('review-snooze').addEventListener('click', function () {
+            post('/api/review/snooze').catch(function () {});
+            box.hidden = true;
+        });
+    }());
+    </script>
+    <style>
+        .review-prompt {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--saffron);
+            margin: 2rem 0;
+        }
+        .review-prompt h2 { color: var(--royal-purple); margin-top: 0; }
+        .review-intro { color: #555; line-height: 1.6; }
+        .review-stars { border: none; padding: 0; margin: 0.5rem 0 1rem; }
+        .review-stars legend { font-weight: bold; color: var(--royal-purple); margin-bottom: 0.3rem; }
+        .review-stars input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+        .review-stars label { font-size: 2rem; color: #bbb; cursor: pointer; padding: 0 0.1rem; }
+        /* Light up the chosen star and every star before it. */
+        .review-stars:has(input:nth-of-type(1):checked) label:nth-of-type(-n+1),
+        .review-stars:has(input:nth-of-type(2):checked) label:nth-of-type(-n+2),
+        .review-stars:has(input:nth-of-type(3):checked) label:nth-of-type(-n+3),
+        .review-stars:has(input:nth-of-type(4):checked) label:nth-of-type(-n+4),
+        .review-stars:has(input:nth-of-type(5):checked) label:nth-of-type(-n+5) { color: var(--saffron-text); }
+        .review-stars input:focus-visible + label { outline: 2px solid var(--royal-purple); border-radius: 4px; }
+        .review-prompt textarea,
+        .review-prompt input[type="text"] {
+            width: 100%; box-sizing: border-box; padding: 0.6rem;
+            border: 1px solid #ccc; border-radius: 8px; font: inherit; margin: 0.3rem 0 1rem;
+        }
+        .review-optional { color: #777; font-weight: normal; font-size: 0.9em; }
+        .review-check { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; cursor: pointer; }
+        .review-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .review-message { color: #c0392b; margin: 0.75rem 0 0; }
+    </style>
+    {% endif %}
+
     {# Receipts: only drawn when there is something to show. A free learner
        with no history gets no empty table asking to be filled. #}
     {% if receipts %}
