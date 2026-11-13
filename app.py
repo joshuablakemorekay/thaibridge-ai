@@ -479,8 +479,9 @@ except Exception as e:
 # GAMIFICATION & SUBSCRIPTION SYSTEM
 # ============================================
 
-import hashlib
 from functools import wraps
+
+from werkzeug.security import check_password_hash, generate_password_hash
 
 # Developer password — loaded from environment.
 #
@@ -503,11 +504,24 @@ def _developer_credentials(raw_password):
 
     Blank, whitespace or absent all mean OFF. There is deliberately no default:
     see the note above.
+
+    Hashed the same way as learners' passwords (Werkzeug's slow, salted hash),
+    not with plain SHA-256. A fast hash can be guessed billions of times a
+    second if it ever leaks, and comparing two hashes with == can leak, through
+    timing, how many characters matched. check_password_hash compares in
+    constant time. It runs once at start-up, so the extra cost is nothing.
     """
     password = (raw_password or "").strip()
     if not password:
         return False, None
-    return True, hashlib.sha256(password.encode()).hexdigest()
+    return True, generate_password_hash(password)
+
+
+def _developer_password_matches(attempt, password_hash):
+    """Whether an attempt is the developer password. False when none is set."""
+    if not password_hash:
+        return False
+    return check_password_hash(password_hash, attempt or "")
 
 
 DEVELOPER_MODE_ENABLED, DEVELOPER_PASSWORD_HASH = _developer_credentials(
@@ -5976,9 +5990,7 @@ def developer_login():
 
     if request.method == 'POST':
         password = str((request.get_json(silent=True) or {}).get('password', ''))
-        password_hash = hashlib.sha256(password.encode()).hexdigest()
-
-        if password_hash == DEVELOPER_PASSWORD_HASH:
+        if _developer_password_matches(password, DEVELOPER_PASSWORD_HASH):
             init_user_progress()
             session['user_progress']['is_developer'] = True
             session.modified = True

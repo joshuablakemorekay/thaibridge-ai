@@ -57,6 +57,10 @@ Please don't test against other people's accounts or try to access data that isn
 
 ## Developer mode
 
+- **Hashed like learners' passwords.** The password from the environment is hashed at
+  start-up with Werkzeug's slow, salted hash, and each attempt is checked with
+  `check_password_hash`, which compares in constant time, so response timing gives away
+  nothing about how close a guess was.
 - **Off unless a password is configured.** There is no default password. Blank or missing
   means the route is switched off. A test pins this.
 - Developer-only pages (such as `/reviews/private`) answer **404 Not Found** to everyone
@@ -152,11 +156,9 @@ on request by email. Payment records are kept as long as UK tax law requires.
 
 Honest list of what isn't done yet, roughly in priority order:
 
-1. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
-   read from an environment variable and the route is rate limited, but a constant-time
-   comparison and a slow hash (as used for learners' passwords) would be better practice.
-2. **No self-service account deletion.** It's done by email today.
+1. **No self-service account deletion.** It's done by email today.
 
 Fixed on 13 November 2026: the cookie settings are now explicit, Monk Mode codes are
 rate limited, security headers are sent on every response, the Content-Security-Policy
-only lets the site's own scripts run, and every POST must be JSON.
+only lets the site's own scripts run, every POST must be JSON, and the developer password
+is hashed and checked like learners' passwords.
