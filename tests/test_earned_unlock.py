@@ -103,7 +103,7 @@ def test_claiming_opens_the_section(account):
     pass_the_alphabet(username)
     set_level(client, EARNED_UNLOCK_LEVEL)
 
-    client.post(f"/unlock/earned/{SPENDABLE}")
+    client.post(f"/unlock/earned/{SPENDABLE}", json={})
     assert spent_on(username) == SPENDABLE
 
     response = client.get(f"/{SPENDABLE}")
@@ -116,7 +116,7 @@ def test_it_opens_that_section_and_no_other(account):
     client, username = account
     pass_the_alphabet(username)
     set_level(client, EARNED_UNLOCK_LEVEL)
-    client.post(f"/unlock/earned/{SPENDABLE}")
+    client.post(f"/unlock/earned/{SPENDABLE}", json={})
 
     other = client.get("/grammar").get_data(as_text=True)
     assert "Section Locked" in other
@@ -125,8 +125,8 @@ def test_it_opens_that_section_and_no_other(account):
 def test_it_cannot_be_spent_twice(account):
     client, username = account
     set_level(client, EARNED_UNLOCK_LEVEL)
-    client.post(f"/unlock/earned/{SPENDABLE}")
-    client.post("/unlock/earned/grammar")
+    client.post(f"/unlock/earned/{SPENDABLE}", json={})
+    client.post("/unlock/earned/grammar", json={})
     assert spent_on(username) == SPENDABLE, "a second claim moved the unlock"
 
 
@@ -134,21 +134,21 @@ def test_it_cannot_be_spent_above_your_level(account):
     """Otherwise the one unlock is burned on a door the level gate keeps shut."""
     client, username = account
     set_level(client, EARNED_UNLOCK_LEVEL)
-    client.post(f"/unlock/earned/{TOO_HIGH}")
+    client.post(f"/unlock/earned/{TOO_HIGH}", json={})
     assert spent_on(username) is None
 
 
 def test_it_cannot_be_spent_on_a_pro_section(account):
     client, username = account
     set_level(client, 10)
-    client.post(f"/unlock/earned/{PRO_ONLY}")
+    client.post(f"/unlock/earned/{PRO_ONLY}", json={})
     assert spent_on(username) is None
 
 
 def test_it_cannot_be_claimed_below_the_level(account):
     client, username = account
     set_level(client, EARNED_UNLOCK_LEVEL - 1)
-    client.post(f"/unlock/earned/{SPENDABLE}")
+    client.post(f"/unlock/earned/{SPENDABLE}", json={})
     assert spent_on(username) is None
 
 
@@ -158,7 +158,7 @@ def test_a_signed_out_visitor_cannot_claim_one():
     client = app.test_client()
     client.get("/")
     set_level(client, EARNED_UNLOCK_LEVEL)
-    response = client.post(f"/unlock/earned/{SPENDABLE}")
+    response = client.post(f"/unlock/earned/{SPENDABLE}", json={})
     assert response.status_code in (302, 401)
     assert "/login" in response.headers.get("Location", "")
 
@@ -203,7 +203,7 @@ def test_the_dashboard_says_where_a_spent_unlock_went(account):
     client, username = account
     pass_the_alphabet(username)
     set_level(client, EARNED_UNLOCK_LEVEL)
-    client.post(f"/unlock/earned/{SPENDABLE}")
+    client.post(f"/unlock/earned/{SPENDABLE}", json={})
 
     page = dashboard(client)
     assert "spent your earned unlock" in page

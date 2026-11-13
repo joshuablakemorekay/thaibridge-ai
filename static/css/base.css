@@ -2186,3 +2186,7 @@ html.rs-picking main figcaption:hover {
     white-space: nowrap;
     border: 0;
 }
+
+/* A form's message line (static/js/json-forms.js) takes no space until it has
+   something to say. */
+[data-form-message]:empty { display: none; }

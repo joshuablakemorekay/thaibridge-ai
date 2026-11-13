@@ -75,7 +75,7 @@
                 {{ current_user.current_period_end.strftime('%d %B %Y').lstrip('0') }},
                 and you won't be charged again.</p>
             {% elif current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
-            <form action="/subscribe/cancel-subscription" method="post"
+            <form action="/subscribe/cancel-subscription" method="post" data-json-post
                   data-confirm="Cancel your subscription? You keep everything until the end of the period you have paid for, then move to the free plan."
                   style="margin-top:0.75rem;">
                 <button type="submit" class="btn" style="background:#c0392b;color:#fff;">Cancel subscription</button>

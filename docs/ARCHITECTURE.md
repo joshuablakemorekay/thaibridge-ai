@@ -154,6 +154,11 @@ Organised top to bottom roughly like this:
   which identifies a visitor by their real address behind Cloudflare.
 - `security_headers.py` adds the browser security headers (no framing, nosniff, HSTS on
   the live site…) to every response. See [SECURITY.md](../SECURITY.md).
+- `json_only.py` refuses any POST that isn't JSON (Stripe's webhook excepted), which
+  blocks forged requests from other websites. Routes that used to redirect after a form
+  post answer `{"redirect": "/somewhere"}` instead (`_go_to()` in `app.py`), and
+  `static/js/json-forms.js` sends any `<form data-json-post>` as JSON and follows the
+  reply.
 
 ### Access and plans: `access.py`, `plans.py`
 

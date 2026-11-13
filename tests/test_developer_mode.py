@@ -72,7 +72,7 @@ def test_unconfigured_deployment_refuses_every_password(developer_mode_unconfigu
     'the documented default works'."""
     client = app.test_client()
     for attempt in ("", "changeme", "password", "admin"):
-        response = client.post("/developer-login", data={"password": attempt})
+        response = client.post("/developer-login", json={"password": attempt})
         assert response.status_code == 403, f"{attempt!r} was not refused"
         assert response.get_json()["success"] is False
 
@@ -86,7 +86,7 @@ def test_unconfigured_deployment_does_not_even_show_the_form(developer_mode_unco
 def test_unconfigured_deployment_grants_no_access(developer_mode_unconfigured):
     """The real risk was never the form — it was the bypass behind it."""
     client = app.test_client()
-    client.post("/developer-login", data={"password": "changeme"})
+    client.post("/developer-login", json={"password": "changeme"})
     with client.session_transaction() as s:
         assert s.get("user_progress", {}).get("is_developer") is not True
 
@@ -99,7 +99,7 @@ def test_a_wrong_password_is_rejected_when_configured():
     """Guard against 'fixed' meaning 'broken for everyone'."""
     client = app.test_client()
     response = client.post("/developer-login",
-                           data={"password": "definitely-not-the-password"})
+                           json={"password": "definitely-not-the-password"})
     assert response.get_json()["success"] is False
     with client.session_transaction() as s:
         assert s.get("user_progress", {}).get("is_developer") is not True
@@ -115,7 +115,7 @@ def test_the_correct_password_still_unlocks_developer_mode(monkeypatch):
                         hashlib.sha256(secret.encode()).hexdigest())
 
     client = app.test_client()
-    response = client.post("/developer-login", data={"password": secret})
+    response = client.post("/developer-login", json={"password": secret})
     assert response.get_json()["success"] is True
     with client.session_transaction() as s:
         assert s["user_progress"]["is_developer"] is True

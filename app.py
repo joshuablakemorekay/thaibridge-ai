@@ -99,10 +99,10 @@ if not app.secret_key:
 # Said out loud rather than left to Flask's and the browser's defaults.
 #
 # SameSite=Lax: the browser leaves the login cookies off any POST that starts
-# on another website. A few older forms (developer log-in, Monk Mode, dāna,
-# cancelling a subscription) are ordinary form posts, so this is what stops a
-# page elsewhere submitting them as a signed-in learner. Lax, not Strict, so a
-# learner coming back from Stripe or PayPal (a normal link) is still signed in.
+# on another website, so a page elsewhere can't act as a signed-in learner.
+# It's one of two locks: json_only.py also refuses any POST that isn't JSON,
+# which another website can't send. Lax, not Strict, so a learner coming back
+# from Stripe or PayPal (a normal link) is still signed in.
 #
 # Secure: the cookies only travel over HTTPS. Switched on where Render runs the
 # app (Render always sets RENDER=true), and off on a laptop running plain
@@ -426,6 +426,24 @@ import app_reviews  # noqa: E402  (the review prompt on /progress; needs the lim
 app_reviews.init_app(app)
 import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live site)
 security_headers.init_app(app)
+import json_only  # noqa: E402  (every POST must be JSON, except Stripe's webhook)
+json_only.init_app(app)
+
+
+def _go_to(url):
+    """The JSON answer to a POST that should end on another page.
+
+    The older form routes used to answer with a redirect. They're sent with
+    fetch now (every POST is JSON, see json_only.py), and fetch would quietly
+    follow a redirect without moving the page, so they say where to go
+    instead and static/js/json-forms.js takes the learner there.
+    """
+    return jsonify({'success': True, 'redirect': url})
+
+
+def _form_error(message, status=400):
+    """The JSON answer to a POST that can't go ahead, shown beside the form."""
+    return jsonify({'success': False, 'message': message}), status
 
 
 @app.errorhandler(429)
@@ -434,15 +452,8 @@ def _rate_limit_exceeded(e):
     otherwise the browser gets Flask's HTML error page and the chat window
     fails with an unhelpful parse error instead of a readable message.
 
-    The Monk Mode page is the exception: it's an ordinary form, so a JSON
-    reply would show the learner raw code. It gets its own page back instead,
-    with the reason in the usual error spot."""
-    if request.path == '/monk-mode':
-        return render_template(
-            'monk_mode.html', active=False,
-            error="Too many codes tried in a short time. Please wait 15 minutes "
-                  "and try again.",
-        ), 429
+    Every form now posts JSON too (json_only.py), so this one answer suits them
+    all: static/js/json-forms.js shows the message beside the form."""
     return jsonify({
         'success': False,
         'gate': 'rate_limited',
@@ -4566,45 +4577,35 @@ def set_gender(gender):
     return jsonify({'success': False, 'error': 'Invalid gender'})
 
 
-def _monk_code_rejected(response):
-    """Count a Monk Mode attempt against the limit only when the code was wrong.
-
-    A right code redirects (302); a wrong one re-renders the page (200). The
-    shared failed_attempt_only() can't be used here: it reads any non-200 as a
-    failure, so every monk who got their code RIGHT would be charged for it,
-    and a monastery sharing one connection could lock itself out by succeeding.
-    """
-    return response.status_code == 200
-
-
 @app.route('/monk-mode', methods=['GET', 'POST'])
 # Same limit as the developer log-in. Without one, the codes could be guessed
-# as fast as a script can post them. Only wrong codes count, and only POSTs:
-# reading the page is never limited.
+# as fast as a script can post them. Only wrong codes count (a right one
+# answers success: true), and only POSTs: reading the page is never limited.
 @limiter.limit("5 per 15 minutes; 20 per hour", key_func=rate_limit_key,
-               methods=["POST"], deduct_when=_monk_code_rejected)
+               methods=["POST"], deduct_when=failed_attempt_only)
 def monk_mode():
     """The Monk Mode access page.
 
     GET  — explains who Monk Mode is for and shows a code-entry form (or, if
            it's already on, an 'active' state with a switch-off button).
-    POST — checks the submitted access code. A valid code switches Monk Mode on
-           for this session; an invalid one re-renders the page with a gentle
-           error. Turning it ON always requires a valid code.
+    POST — checks the access code, sent as JSON ({"code": ...}). A valid code
+           switches Monk Mode on for this session and sends the page back to
+           itself; an invalid one answers with a gentle error to show beside
+           the form. Turning it ON always requires a valid code.
     """
     init_user_progress()
-    error = None
     if request.method == 'POST':
-        code = request.form.get('code', '')
+        code = str((request.get_json(silent=True) or {}).get('code', ''))
         if is_valid_monk_code(code):
             session['user_progress']['monk_mode'] = True
             session.modified = True
-            return redirect(url_for('monk_mode'))
-        error = "That code wasn't recognised. Please check with the temple or teacher who shared it with you."
+            return _go_to(url_for('monk_mode'))
+        return jsonify({'success': False,
+                        'message': "That code wasn't recognised. Please check with "
+                                   "the temple or teacher who shared it with you."})
     return render_template(
         'monk_mode.html',
         active=session['user_progress'].get('monk_mode', False),
-        error=error,
     )
 
 
@@ -5974,7 +5975,7 @@ def developer_login():
         return redirect('/')
 
     if request.method == 'POST':
-        password = request.form.get('password', '')
+        password = str((request.get_json(silent=True) or {}).get('password', ''))
         password_hash = hashlib.sha256(password.encode()).hexdigest()
 
         if password_hash == DEVELOPER_PASSWORD_HASH:
@@ -6224,6 +6225,10 @@ def addon_instant_access_stripe():
     return redirect(checkout_session.url, code=303)
 
 
+DANA_AMOUNT_MESSAGE = ("Please choose an amount between £{min_amount} and £{max_amount}."
+                       .format(**DANA))
+
+
 @app.route('/dana', methods=['POST'])
 @limiter.limit("10 per hour; 30 per day", key_func=rate_limit_key)
 def dana_stripe():
@@ -6237,7 +6242,8 @@ def dana_stripe():
     success handler doing database work — just a thank-you page.
     """
     if not stripe.api_key:
-        return render_template('dana_thanks.html', stripe_unconfigured=True), 503
+        return _form_error("Card gifts aren't switched on right now, sorry. "
+                           "Please try again later.", 503)
 
     # Amount is collected by our own form (preset buttons post a fixed value, the
     # "other" field posts a typed one) and converted to pence here. Stripe's
@@ -6250,10 +6256,13 @@ def dana_stripe():
     # Decimal, not float, so £7.35 doesn't arrive as 734 pence.
     #
     # The preset buttons and the typed field share the name `amount`, so clicking
-    # a preset also submits the (empty) input. Take the first NON-EMPTY value
-    # rather than trusting DOM order to decide which one wins.
-    raw = next((v.strip().lstrip('£') for v in request.form.getlist('amount')
-                if v and v.strip()), '')
+    # a preset also sends the (empty) input: json-forms.js sends a list when a
+    # name repeats. Take the first NON-EMPTY value rather than trusting DOM
+    # order to decide which one wins.
+    sent = (request.get_json(silent=True) or {}).get('amount', '')
+    values = sent if isinstance(sent, list) else [sent]
+    raw = next((str(v).strip().lstrip('£') for v in values
+                if v is not None and str(v).strip()), '')
     try:
         pounds = Decimal(raw)
         # Decimal accepts 'inf' and 'nan' as valid input, and both then blow up
@@ -6263,9 +6272,9 @@ def dana_stripe():
             raise InvalidOperation
         pence = int((pounds * 100).to_integral_value(rounding=ROUND_HALF_UP))
     except (InvalidOperation, ValueError):
-        return redirect('/premium#dana')
+        return _form_error(DANA_AMOUNT_MESSAGE)
     if not (DANA['min_amount'] * 100 <= pence <= DANA['max_amount'] * 100):
-        return redirect('/premium#dana')
+        return _form_error(DANA_AMOUNT_MESSAGE)
 
     base_url = request.url_root.rstrip('/')
     price_data = {
@@ -6303,8 +6312,8 @@ def dana_stripe():
         checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
     except Exception:
         app.logger.exception("Stripe dāna checkout session creation failed")
-        return CHECKOUT_FAILED_MESSAGE, 502
-    return redirect(checkout_session.url, code=303)
+        return _form_error(CHECKOUT_FAILED_MESSAGE, 502)
+    return _go_to(checkout_session.url)
 
 
 @app.route('/subscribe/<tier>/paypal')
@@ -6793,7 +6802,7 @@ def claim_earned_unlock(section_id):
     would be re-mintable by clearing cookies.
     """
     if not earned_unlock_offer(section_id):
-        return redirect(url_for('premium'))
+        return _go_to(url_for('premium'))
 
     current_user.earned_unlock_section = section_id
     db.session.commit()
@@ -6806,7 +6815,7 @@ def claim_earned_unlock(section_id):
     destination = request.referrer
     if not destination or urlparse(destination).netloc != request.host:
         destination = url_for('premium')
-    return redirect(destination)
+    return _go_to(destination)
 
 
 @app.route('/subscribe/cancel')
@@ -6831,7 +6840,7 @@ def cancel_subscription():
     sub_id = current_user.stripe_subscription_id
     if not sub_id or not stripe.api_key:
         # Nothing to cancel via Stripe (free tier, or a one-off PayPal grant).
-        return redirect('/progress')
+        return _go_to('/progress')
 
     try:
         sub = stripe.Subscription.modify(sub_id, cancel_at_period_end=True)
@@ -6840,7 +6849,7 @@ def cancel_subscription():
         # Say so on the page. A silent bounce back to /progress looks exactly
         # like the confirm popup being dismissed, and it took three rounds of
         # log-reading to tell the two apart when this was first tested live.
-        return redirect('/progress?cancel=failed')
+        return _go_to('/progress?cancel=failed')
 
     # Record it now (the webhook will also do this — both are idempotent).
     _apply_subscription(current_user, tier=current_user.subscription_tier,
@@ -6848,8 +6857,8 @@ def cancel_subscription():
                         current_period_end=_subscription_period_end(sub))
     _mirror_tier_to_session(current_user)
     app.logger.info("User %s cancelled subscription %s", current_user.id, sub_id)
-    # Send them to a warm goodbye page (PRG pattern: redirect after the POST).
-    return redirect('/subscription-goodbye')
+    # Send them to a warm goodbye page.
+    return _go_to('/subscription-goodbye')
 
 
 @app.route('/subscription-goodbye')

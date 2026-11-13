@@ -35,15 +35,12 @@
         If you have one, enter it below.
     </p>
 
-    {% if error %}
-    <p class="monk-error">⚠️ {{ error }}</p>
-    {% endif %}
-
-    <form method="POST" action="/monk-mode" class="monk-form">
+    <form method="POST" action="/monk-mode" class="monk-form" data-json-post>
         <label for="monk-code">Access code</label>
         <input type="text" id="monk-code" name="code" autocomplete="off"
                placeholder="Enter your Monk Mode code" required autofocus>
         <button type="submit" class="monk-mode-toggle">Unlock Monk Mode</button>
+        <p class="monk-error" data-form-message role="alert"></p>
     </form>
 
     <p class="monk-note">
