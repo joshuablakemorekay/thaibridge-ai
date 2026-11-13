@@ -41,7 +41,7 @@ def test_hidden_from_pro_learners_until_reviewed(monkeypatch):
 def test_a_named_tester_on_pro_sees_it(monkeypatch):
     html = exercise_page(monkeypatch, "pro", username="KruNid", testers="someone, krunid")
     assert SAY_IT in html and SCRIPT in html
-    assert "const PRON_WORDS = [" in html
+    assert '<script id="pron-words" type="application/json">[' in html
 
 
 def test_a_tester_needs_pro_too(monkeypatch):

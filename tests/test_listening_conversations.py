@@ -66,7 +66,7 @@ def test_listening_answers_are_marked_by_the_server(client, open_sentences):
 
 def test_sentences_page_plays_each_conversation_as_one_sequence(client, open_sentences):
     html = client.get("/sentences").get_data(as_text=True)
-    assert html.count('onclick="toggleConvListening(') == len(app_module.CONVERSATIONS)
+    assert html.count('data-on-click="toggleConvListening"') == len(app_module.CONVERSATIONS)
     restaurant_lines = len(app_module.CONVERSATIONS["restaurant"]["dialogue"])
     sequences = [chunk.split('"', 1)[0] for chunk in html.split('data-audio-sequence="')[1:]]
     assert len(sequences[0].split()) == restaurant_lines

@@ -108,7 +108,7 @@ def test_switching_approach_makes_the_tutor_forget_the_old_one():
     approach, so a switch must reset the conversation the page sends back
     (the page keeps it now; the server holds none)."""
     src = open(os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), "templates", "chat.html"), encoding="utf-8").read()
+        os.path.abspath(__file__))), "static", "js", "pages", "chat.js"), encoding="utf-8").read()
     set_lens = src[src.index("function setLens"):]
     set_lens = set_lens[:set_lens.index("\n    }\n")]
     assert "resetHistory()" in set_lens
@@ -279,5 +279,5 @@ def test_single_shot_features_skip_a_thinking_block(monkeypatch, call):
 def test_the_resting_note_does_not_sell_pro():
     """Upgrading can't help when the budget is gone, so no plans link."""
     src = open(os.path.join(os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__))), "templates", "chat.html"), encoding="utf-8").read()
+        os.path.abspath(__file__))), "static", "js", "pages", "chat.js"), encoding="utf-8").read()
     assert "showUpgradeNote(data.message, data.gate !== 'ai_resting')" in src

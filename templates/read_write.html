@@ -169,11 +169,7 @@
 <script id="rw-stories" type="application/json">{{ stories|tojson }}</script>
 <script id="rw-consonants" type="application/json">{{ consonants|tojson }}</script>
 <script id="rw-audio-map" type="application/json">{{ audio_map|tojson }}</script>
-<script>
-  window.RW_CONFIG = {
-    consonantAudioBase: "{{ url_for('static', filename='audio/th/') }}"
-  };
-</script>
+<script id="rw-config" type="application/json">{{ {'consonantAudioBase': url_for('static', filename='audio/th/')}|tojson }}</script>
 <script src="{{ static_v('js/trace_check.js') }}" defer></script>
 <script src="{{ static_v('js/read_write.js') }}" defer></script>
 {% endblock %}

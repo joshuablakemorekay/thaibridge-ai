@@ -140,12 +140,6 @@
 {# The letters are handed over as one JSON block rather than being written into
    the markup 44 times. Jinja's tojson escapes it safely for a script tag. #}
 <script id="abc-data" type="application/json">{{ consonants|tojson }}</script>
-<script>
-    window.ABC_CONFIG = {
-        passMark: {{ quiz_pass_mark }},
-        classLabels: {{ class_labels|tojson }},
-        staticBase: "{{ url_for('static', filename='') }}"
-    };
-</script>
+<script id="abc-config" type="application/json">{{ {'passMark': quiz_pass_mark, 'classLabels': class_labels, 'staticBase': url_for('static', filename='')}|tojson }}</script>
 <script src="{{ static_v('js/alphabet.js') }}"></script>
 {% endblock %}

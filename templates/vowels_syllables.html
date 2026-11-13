@@ -179,16 +179,16 @@
 
 <!-- Tab Navigation -->
 <div class="tab-buttons">
-    <button class="tab-btn active" onclick="showTab('long')">
+    <button class="tab-btn active" data-on-click="showTab" data-args='["long"]'>
         👑 Long Vowels (14)
     </button>
-    <button class="tab-btn" onclick="showTab('short')">
+    <button class="tab-btn" data-on-click="showTab" data-args='["short"]'>
         ⚡ Short Vowels (18)
     </button>
-    <button class="tab-btn" onclick="showTab('pairs')">
+    <button class="tab-btn" data-on-click="showTab" data-args='["pairs"]'>
         🔄 Meaning Pairs
     </button>
-    <button class="tab-btn" onclick="showTab('syllables')">
+    <button class="tab-btn" data-on-click="showTab" data-args='["syllables"]'>
         🏗️ Syllable Structure
     </button>
 </div>
@@ -745,26 +745,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script>
-function showTab(tabName) {
-    // Hide all tabs
-    document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
-    // Remove active from all buttons
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    // Show selected tab
-    document.getElementById(tabName).classList.add('active');
-    
-    // Add active to clicked button
-    event.target.classList.add('active');
-    
-    // Scroll to top of content
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
+<script src="{{ static_v('js/pages/vowels-syllables.js') }}"></script>
 {% endblock %}

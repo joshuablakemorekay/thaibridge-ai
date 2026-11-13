@@ -18,7 +18,10 @@
 (function () {
     'use strict';
 
-    var CONFIG = window.RW_CONFIG || {};
+    // Settings from the server, in a JSON block on the page (not a script, so the
+    // Content-Security-Policy allows it).
+    var configEl = document.getElementById('rw-config');
+    var CONFIG = configEl ? JSON.parse(configEl.textContent) : {};
 
     function byId(id) { return document.getElementById(id); }
     function readJSON(id) {

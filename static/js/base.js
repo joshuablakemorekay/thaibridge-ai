@@ -73,7 +73,7 @@
         
         // Set initial active state based on current gender
         document.addEventListener('DOMContentLoaded', function() {
-            const currentGender = window.CURRENT_GENDER || 'neutral';
+            const currentGender = document.body.dataset.currentGender || 'neutral';
             if (currentGender) {
                 document.querySelectorAll('.gender-btn').forEach(btn => {
                     btn.classList.remove('active');

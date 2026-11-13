@@ -3,7 +3,7 @@
 How ThaiBridge AI is tested: how to run the suite, how it's organised, how it stays away
 from the live database, and the habits that keep a green tick meaningful.
 
-*Last checked: 13 November 2026, 71 test files, 2,739 tests passing (3 skipped).*
+*Last checked: 13 November 2026, 73 test files, 2,795 tests passing (3 skipped).*
 
 ---
 
@@ -26,8 +26,13 @@ python -m pytest -k "paywall or gate"             # tests whose names match
 python -m pytest -x                               # stop at the first failure
 ```
 
-**The 3 skipped tests** (`test_pronounce_core.py`, `test_trace_check.py`) exercise browser
-JavaScript and need Node.js installed. Without Node they skip, rather than fail.
+**Tests that need Node.js** (`test_pronounce_core.py`, `test_trace_check.py`,
+`test_js_syntax.py`) run JavaScript, or check that it parses. Without Node they skip
+rather than fail. GitHub's test machines have Node, so CI always runs them.
+
+**The 3 skipped tests** are deliberate. Two in `test_contents_roman.py` cover chant titles
+whose spelling is romanised by hand (it doesn't follow the Pali rules the test checks), and
+one in `test_thai_romanisation.py` is a check with nothing to check yet (an empty list).
 
 ---
 
@@ -89,6 +94,7 @@ One file per feature, named after it. Broadly:
 | **Thai accuracy** | `test_thai_romanisation.py`, `test_registers.py`, `test_thai_tones.py`, `test_spelling_snapshot.py` | The ThaiBridge Spelling rules across every Thai string in the app |
 | **Chanting book** | `test_chanting_*.py`, `test_check_pages.py`, `test_check_batch.py`, `test_apply_batch.py` | Verified verses never change; pages show exactly what the printed book shows |
 | **Pages & content** | `test_survival.py`, `test_expat2000.py`, `test_tour_trips.py`, `test_site_search.py`, `test_curriculum.py` | Each page renders and its content is complete |
+| **Security headers & scripts** | `test_security_headers.py`, `test_js_syntax.py`, `test_cookie_and_monk_limits.py` | Headers on every response; no inline scripts or handlers creep back in; every script file parses |
 | **Accessibility** | `test_colour_blind_mode.py`, `test_css_variables.py` | Contrast at 4.5:1 or better; nothing relies on colour alone |
 | **Reviews** | `test_app_reviews.py` | Who's asked, what's saved, and that the private list stays private |
 

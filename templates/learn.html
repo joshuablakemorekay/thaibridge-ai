@@ -22,7 +22,7 @@
     <div class="toggle-container" style="justify-content: center; margin-top: 1rem;">
         <span>Standard</span>
         <label class="toggle">
-            <input type="checkbox" id="beginnerToggle" onchange="updateLinks()">
+            <input type="checkbox" id="beginnerToggle" data-on-change="updateLinks">
             <span class="slider"></span>
         </label>
         <span>Beginner</span>
@@ -70,19 +70,5 @@
 {% endblock %}
 
 {% block extra_js %}
-<script>
-function updateLinks() {
-    const isBeginnerMode = document.getElementById('beginnerToggle').checked;
-    const links = document.querySelectorAll('.category-link');
-    
-    links.forEach(link => {
-        const category = link.dataset.category;
-        if (isBeginnerMode) {
-            link.href = `/exercise/${category}?beginner=true`;
-        } else {
-            link.href = `/exercise/${category}`;
-        }
-    });
-}
-</script>
+<script src="{{ static_v('js/pages/learn.js') }}"></script>
 {% endblock %}

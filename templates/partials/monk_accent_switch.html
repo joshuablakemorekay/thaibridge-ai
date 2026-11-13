@@ -4,11 +4,11 @@
 <div class="monk-accent-switch" role="group" aria-label="English accent">
     <span class="monk-accent-label thai">สำเนียง / Accent</span>
     <button class="monk-accent-btn{% if monk_accent == 'uk' %} active{% endif %}"
-            onclick="setMonkAccent('uk')">
+            data-on-click="setMonkAccent" data-args='["uk"]'>
         🇬🇧 British
     </button>
     <button class="monk-accent-btn{% if monk_accent == 'us' %} active{% endif %}"
-            onclick="setMonkAccent('us')">
+            data-on-click="setMonkAccent" data-args='["us"]'>
         🇺🇸 American
     </button>
 </div>

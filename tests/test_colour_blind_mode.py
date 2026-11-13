@@ -7,6 +7,7 @@ the before-paint script, base.js), that the swapped colours stay readable,
 and that every quiz selector the CSS recolours still exists, so renaming a
 class on a quiz page can't quietly switch the feature off for that page.
 """
+import pathlib
 import re
 from pathlib import Path
 
@@ -30,8 +31,16 @@ def test_the_panel_offers_the_option(home):
 
 
 def test_a_saved_choice_applies_before_the_page_paints(home):
-    """Without this the quiz would flash green/red on every page load."""
-    assert "if (s.colour)  el.classList.add('rs-colour');" in home
+    """Without this the quiz would flash green/red on every page load.
+
+    The early script is a file now (inline scripts were moved out for the
+    Content-Security-Policy). It still has to load in the <head>, before the
+    body paints, so check where the page loads it as well as what it does."""
+    head = home.split("</head>")[0]
+    assert "js/pages/reading-support-early.js" in head
+    early = (pathlib.Path(__file__).resolve().parent.parent
+             / "static" / "js" / "pages" / "reading-support-early.js").read_text(encoding="utf-8")
+    assert "if (s.colour)  el.classList.add('rs-colour');" in early
 
 
 def test_base_js_saves_and_resets_the_option():

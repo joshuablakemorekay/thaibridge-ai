@@ -21,25 +21,4 @@
     .ta-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
 </style>
 <script id="ta-audio-map" type="application/json">{{ audio_map|tojson }}</script>
-<script>
-  (function () {
-    var map = JSON.parse(document.getElementById('ta-audio-map').textContent);
-    function wire(root) {
-      (root || document).querySelectorAll('.thai-text').forEach(function (el) {
-        if (el.dataset.audioWired) { return; }
-        var url = map[el.textContent.trim()];   // exact match — pure-Thai cells only
-        if (!url) { return; }
-        el.dataset.audioWired = '1';
-        var b = document.createElement('button');
-        b.type = 'button';
-        b.className = 'th-audio ta-listen';
-        b.setAttribute('data-audio', url);
-        b.setAttribute('aria-label', 'Listen');
-        b.textContent = '🔊';
-        el.appendChild(b);
-      });
-    }
-    window.wireThaiAudio = wire;   // for pages that add .thai-text after load
-    document.addEventListener('DOMContentLoaded', function () { wire(document); });
-  })();
-</script>
+<script src="{{ static_v('js/pages/thai-audio-wiring.js') }}"></script>

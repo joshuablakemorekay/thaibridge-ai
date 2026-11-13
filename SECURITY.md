@@ -122,6 +122,13 @@ Please don't test against other people's accounts or try to access data that isn
   sites only the domain, a permissions policy that turns off the camera API, location and
   the payment API (the microphone stays allowed for pronunciation practice), and, on the
   live site, `Strict-Transport-Security` so browsers use HTTPS for a year after a visit.
+- **Only the site's own scripts can run.** The Content-Security-Policy allows scripts from
+  ThaiBridge's own files and Meta's Pixel loader, and nothing else. Inline `<script>`
+  blocks and `onclick="..."` attributes are refused, so even if someone managed to slip
+  HTML into a page, any script inside it wouldn't run. Every page script lives in
+  `static/js/`, values from the server arrive as JSON data blocks, and buttons use
+  `data-on-click` (run by `static/js/actions.js`). Tests fail if an inline script or
+  handler is ever added back.
 - **Tracking needs consent.** The Meta advertising cookie only loads if the visitor clicks
   Accept, and declining changes nothing about the site.
 
@@ -144,13 +151,11 @@ Honest list of what isn't done yet, roughly in priority order:
    dāna amount, cancelling a subscription), so they don't get the JSON protection above.
    The `SameSite=Lax` login cookie now stops another website submitting them as a
    signed-in learner. Moving them to JSON (or adding CSRF tokens) would add a second layer.
-2. **No script rules in the Content-Security-Policy yet.** The other security headers are
-   in place, but a policy limiting which scripts may run would block the site's own
-   inline scripts. Those need moving into files first.
-3. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
+2. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
    read from an environment variable and the route is rate limited, but a constant-time
    comparison and a slow hash (as used for learners' passwords) would be better practice.
-4. **No self-service account deletion.** It's done by email today.
+3. **No self-service account deletion.** It's done by email today.
 
 Fixed on 13 November 2026: the cookie settings are now explicit, Monk Mode codes are
-rate limited, and security headers are sent on every response.
+rate limited, security headers are sent on every response, and the Content-Security-Policy
+only lets the site's own scripts run.
