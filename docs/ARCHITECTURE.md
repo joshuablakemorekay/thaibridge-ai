@@ -152,6 +152,8 @@ Organised top to bottom roughly like this:
 - `accounts.py` holds the password rules, the signed reset links and the account emails.
 - `extensions.py` creates the login manager and the rate limiter, plus `rate_limit_key()`,
   which identifies a visitor by their real address behind Cloudflare.
+- `security_headers.py` adds the browser security headers (no framing, nosniff, HSTS on
+  the live site…) to every response. See [SECURITY.md](../SECURITY.md).
 
 ### Access and plans: `access.py`, `plans.py`
 

@@ -116,6 +116,12 @@ Please don't test against other people's accounts or try to access data that isn
   ThaiBridge first.
 - **The old domain** (`thaibridge-ai.smoald.com`) redirects permanently to
   `thaibridge.smoald.com`.
+- **Security headers on every response** (`security_headers.py`): `nosniff` (the browser
+  uses the file type it's told), no framing by other sites (`X-Frame-Options: DENY` and
+  `frame-ancestors 'none'`, which stops clickjacking), a referrer policy that sends other
+  sites only the domain, a permissions policy that turns off the camera API, location and
+  the payment API (the microphone stays allowed for pronunciation practice), and, on the
+  live site, `Strict-Transport-Security` so browsers use HTTPS for a year after a visit.
 - **Tracking needs consent.** The Meta advertising cookie only loads if the visitor clicks
   Accept, and declining changes nothing about the site.
 
@@ -138,12 +144,13 @@ Honest list of what isn't done yet, roughly in priority order:
    dāna amount, cancelling a subscription), so they don't get the JSON protection above.
    The `SameSite=Lax` login cookie now stops another website submitting them as a
    signed-in learner. Moving them to JSON (or adding CSRF tokens) would add a second layer.
-2. **No security headers yet**, such as `Content-Security-Policy`, `X-Frame-Options` /
-   `frame-ancestors`, or `Strict-Transport-Security`.
+2. **No script rules in the Content-Security-Policy yet.** The other security headers are
+   in place, but a policy limiting which scripts may run would block the site's own
+   inline scripts. Those need moving into files first.
 3. **The developer password is hashed with plain SHA-256** for comparison. It's only ever
    read from an environment variable and the route is rate limited, but a constant-time
    comparison and a slow hash (as used for learners' passwords) would be better practice.
 4. **No self-service account deletion.** It's done by email today.
 
-Fixed on 13 November 2026: the cookie settings are now explicit, and Monk Mode codes are
-rate limited.
+Fixed on 13 November 2026: the cookie settings are now explicit, Monk Mode codes are
+rate limited, and security headers are sent on every response.

@@ -424,6 +424,8 @@ progress.init_app(app)
 signup_source.init_app(app)
 import app_reviews  # noqa: E402  (the review prompt on /progress; needs the limiter)
 app_reviews.init_app(app)
+import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live site)
+security_headers.init_app(app)
 
 
 @app.errorhandler(429)
