@@ -242,7 +242,8 @@
     .owen-meaning { column-span: all; margin: 2mm 0 4mm; font-size: 10pt; max-width: 165mm; }
     .owen-meaning p { margin: 0 0 1.5mm; }
     .owen-prose { column-count: 1; }
-    .owen-prose .verse { break-inside: auto; grid-template-columns: 7mm minmax(0, 1fr); margin-bottom: 2.6mm; }
+    .owen-prose .verse { break-inside: auto; padding-left: 8.5mm; margin-bottom: 2.6mm; }
+    .owen-prose .verse .num { width: 7mm; }
     .owen-prose .verse .l-pali_roman { font-size: 10.5pt; }
     .owen-prose .verse .l-english { margin-top: 0.8mm; }
     .owen-prose .verse p { break-inside: auto; }   /* long prose paragraphs flow on, like book text */
@@ -256,10 +257,13 @@
     .l-pali { hyphens: manual; }
 
     .verse {
-        display: grid;
-        /* minmax(0, …) so one long unbroken line cannot widen the column. */
-        grid-template-columns: 6mm minmax(0, 1fr);
-        column-gap: 1.5mm;
+        /* NOT a grid (2026-11-17): when a grid verse ran on into the next
+           column or page, Chrome forgot the height of the part carried
+           over and drew the next verse on top of it — 17 pages of overlap.
+           A plain block splits correctly; the number sits in the left
+           padding instead of a grid column, so the page looks the same. */
+        position: relative;
+        padding-left: 7.5mm;
         margin: 0 0 2.4mm;
         /* A verse may continue into the next column or page rather than
            jumping whole and leaving a gap (Josh, 2026-11-06: too much white
@@ -267,8 +271,8 @@
            verse rarely splits because of orphans/widows. */
         break-inside: auto;
     }
-    .verse .num { font-size: 9pt; color: #555; padding-top: 1.2mm; text-align: right; }
-    .verse .lines { grid-column: 2; }
+    .verse .num { position: absolute; left: 0; top: 0; width: 6mm; font-size: 9pt; color: #555; padding-top: 1.2mm; text-align: right; }
+    .verse .lines { min-width: 0; }
     .verse p { margin: 0; break-inside: avoid; orphans: 2; widows: 2; }
     .verse .lines > p:first-child { break-after: avoid; }
     .verse.closing { margin-top: 3mm; }
