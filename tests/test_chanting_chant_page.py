@@ -235,3 +235,26 @@ def test_every_chant_a_guide_names_is_in_the_app():
     ids |= {c for _, step in chanting_volumes.DAILY_ORDER for c in step}
     missing = {c for c in ids if not chanting.get_chant(c)}
     assert missing == {'amaravati-universal-well-being'}
+
+
+def test_the_preface_thanks_and_pronunciation_guide_are_on_the_index(unlocked_client):
+    index = unlocked_client.get('/chanting').get_data(as_text=True)
+    for anchor in ('id="preface"', 'id="pronunciation-guide"', 'id="with-thanks"'):
+        assert anchor in index
+    assert 'Phra Rajawithetpanyakhun' in index
+
+
+def test_the_apps_preface_is_word_for_word_the_printed_one():
+    """Josh's own words: the app must never drift from the printed book."""
+    import re
+    from pathlib import Path
+
+    def preface(path, start):
+        text = Path(path).read_text(encoding='utf-8')
+        text = text[text.index(start):]
+        paras = re.findall(r'<p>(.*?)</p>', text, flags=re.S)[:2]
+        return [' '.join(p.split()) for p in paras]
+
+    printed = preface('templates/print/chanting_book_print.html', '<h1 class="front-heading">Preface</h1>')
+    in_app = preface('templates/partials/chanting_front_matter.html', '<summary>Preface')
+    assert printed == in_app
