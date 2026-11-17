@@ -307,6 +307,14 @@
                                         font-size: 0.92rem; }
     .chant-guide h3 { margin: 1.4rem 0 0.4rem; color: var(--royal-purple); font-size: 1.35rem; font-weight: 600; }
     .chant-guide ol { padding-left: 1.6rem; }
+    .front-matter { margin: 1.5rem 0; }
+    .chant-guide p { margin: 0.6rem 0; }
+    .chant-guide h4 { margin: 1rem 0 0.3rem; font-size: 1.05rem; }
+    .chant-guide ul { padding-left: 1.4rem; }
+    .guide-table { border-collapse: collapse; margin: 0.4rem 0 0.8rem; }
+    .guide-table th, .guide-table td { text-align: left; padding: 0.3rem 0.8rem 0.3rem 0;
+                                       border-bottom: 1px solid #eee; }
+    .tb-spell { font-family: 'ThaiBridge Spelling', 'Roboto Mono', monospace; }
     .occ-item { margin: 0 0 0.9rem; }
     .occ-item .occ-name { font-weight: 600; margin: 0; }
     .occ-item .occ-note { margin: 0.1rem 0 0.2rem; }
@@ -368,6 +376,9 @@
         <strong>Every chant follows the same layout:</strong> {{ how_to_use.layout }}
     </p>
 </div>
+
+{# The printed book's preface, pronunciation guide and thanks. #}
+{% include 'partials/chanting_front_matter.html' %}
 
 {# Chanting along with a monk is a different job from reading a chant, and it
    is the one with no time in it: a page number is called and the room turns
