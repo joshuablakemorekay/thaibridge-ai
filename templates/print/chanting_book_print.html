@@ -23,8 +23,7 @@
 <head>
 <meta charset="utf-8">
 <title>{{ title.title }}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+{% include 'print/_print_fonts.html' %}
 {# The app's own ThaiBridge Spelling font file (static/fonts), so the
    spelling prints from exactly the font it is read in on screen. #}
 <style>

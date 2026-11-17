@@ -12,7 +12,7 @@
 <head>
 <meta charset="utf-8">
 <title>Cover — {{ title.title }}</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+{% include 'print/_print_fonts.html' %}
 <style>
     @page { size: {{ '%.3f' % sheet_w }}mm {{ '%.3f' % sheet_h }}mm; margin: 0; }
     :root {

@@ -83,6 +83,10 @@ UNPLACED = {'title': '', 'title_english': 'Chants not yet placed on a page of th
 # spelling from one file. See scripts/fetch_spelling_font.py for why the
 # spelling has a font of its own.
 SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
+# Fixed (non-variable) copies of the book's other fonts, SIL Open Font
+# Licence (OFL-*.txt beside them). Kept out of static/ so the app never serves them.
+PRINT_FONTS = os.path.join(ROOT, 'scripts', 'print_fonts')
+
 
 
 def locator(chant_id):
@@ -377,6 +381,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
         pad_blank=pad_blank,
         colour=colour,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
+        print_fonts_url='file:///' + PRINT_FONTS.replace('\\', '/'),
         book=chanting.BOOK,
         title=PRINT_TITLE,
         how=chanting.HOW_TO_USE,
@@ -478,11 +483,17 @@ def check_fonts_and_scale(pdf_path):
                             line_text = ''.join(s['text'] for s in line['spans'])
                             stand_ins[(span['text'].strip(), span['font'],
                                        line_text[:50])] += 1
+        # Type 3 fonts are what Chrome makes of variable (e.g. Google Fonts)
+        # files; printers' preflight checks often reject them.
+        type3 = sum(1 for page in doc for f in page.get_fonts() if f[2] == 'Type3')
     if stand_ins:
         sample = '\n  '.join(f'{t!r} in {font}, in "{context}"'
                              for (t, font, context), _ in stand_ins.most_common(8))
         sys.exit(f'{os.path.basename(pdf_path)}: some letters were printed in a stand-in '
                  f'font, not the book\'s own:\n  {sample}')
+    if type3:
+        sys.exit(f'{os.path.basename(pdf_path)}: {type3} Type 3 fonts in the PDF — a font '
+                 'is not loading from scripts/print_fonts (printers reject Type 3).')
     commonest = sizes.most_common(1)[0][0]
     if abs(commonest - BODY_SIZE) > 0.1:
         sys.exit(f'{os.path.basename(pdf_path)}: body text came out at {commonest}pt, '
