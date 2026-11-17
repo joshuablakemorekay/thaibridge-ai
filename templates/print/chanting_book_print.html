@@ -387,6 +387,23 @@
     .verse-section, .verse-section-end, .owen-h, .owen-section { color: {{ ink }}; }
     .orn { background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20120%2012%27%3E%3Cg%20fill=%27%23{{ accent[1:] }}%27%20stroke=%27%23{{ accent[1:] }}%27%20stroke-width=%270.8%27%3E%3Cline%20x1=%272%27%20y1=%276%27%20x2=%2747%27%20y2=%276%27/%3E%3Cline%20x1=%2773%27%20y1=%276%27%20x2=%27118%27%20y2=%276%27/%3E%3Ccircle%20cx=%2750.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Ccircle%20cx=%2769.5%27%20cy=%276%27%20r=%271.3%27/%3E%3Cpath%20d=%27M60%200.8%20L65.2%206%20L60%2011.2%20L54.8%206%20Z%27/%3E%3C/g%3E%3C/svg%3E"); }
     {% endif %}
+    {# Full colour = the app's colours (2026-11-17). Every value comes from
+       app_colours() in the build script, which reads base.css and
+       CHANT_LAYERS, so the chant pages look like /chanting: the Thai title
+       purple, the Pali title red, each of the five layers in its own app
+       colour. Text colour only; the app's coloured left rule on each layer
+       is left out on purpose, because it needs padding and that would move
+       every page break. #}
+    {% if colour == 'full' %}
+    .chant-head { border-top-color: {{ app.gold }}; }
+    .chant-head .title-thai { color: {{ app.purple }}; }
+    .chant-head .title-pali { color: {{ app.red }}; }
+    .chant-head .title-english { color: {{ app.brown }}; }
+    .verse-section, .verse-section-end, .owen-h, .owen-section { color: {{ app.purple }}; }
+    {% for key, c in app.layers.items() %}
+    .l-{{ key }} { color: {{ c }}; }
+    {% endfor %}
+    {% endif %}
     {# Two-colour printing has only black and red ink, so a colour photo
        cannot print: it goes grey, as it would on the press anyway. #}
     {% if colour == 'two' %}
