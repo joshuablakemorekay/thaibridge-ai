@@ -292,6 +292,43 @@
         .chant-card + .chant-card[open] { break-before: page; }
         .chant-card summary::after { display: none; }
     }
+
+    /* ── The Parivāsa photograph and the "what to chant" guides ──────────
+       The same photograph and guides as the printed book (Josh, 2026-11-17).
+       The guides are <details> so they cost one line each until opened. */
+    .chant-photo { margin: 2rem auto 1.5rem; max-width: 220px; text-align: center; }
+    .chant-photo img { width: 100%; height: auto; border-radius: 10px; display: block; }
+    .chant-photo figcaption { font-size: 0.9rem; color: #555; margin-top: 0.4rem; }
+    .chant-guides { margin: 1.5rem 0 2rem; }
+    .chant-guide { border: 1px solid #e3dcef; border-radius: 10px; padding: 0.6rem 1rem;
+                   margin-bottom: 0.75rem; background: #fff; }
+    .chant-guide > summary { cursor: pointer; font-weight: 600; color: var(--royal-purple); }
+    .chant-guide > summary .guide-sub { display: block; font-weight: 400; color: #555;
+                                        font-size: 0.92rem; }
+    .chant-guide h3 { margin: 1.4rem 0 0.4rem; color: var(--royal-purple); font-size: 1.35rem; font-weight: 600; }
+    .chant-guide ol { padding-left: 1.6rem; }
+    .occ-item { margin: 0 0 0.9rem; }
+    .occ-item .occ-name { font-weight: 600; margin: 0; }
+    .occ-item .occ-note { margin: 0.1rem 0 0.2rem; }
+    .occ-item ul { margin: 0.2rem 0 0.1rem; padding-left: 1.2rem; }
+    .occ-item .occ-source { font-size: 0.85rem; color: #666; margin: 0; }
+    .day-table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; }
+    .day-table th, .day-table td { text-align: left; padding: 0.4rem 0.5rem;
+                                   border-bottom: 1px solid #eee; vertical-align: top; }
+    .day-table .day-times { text-align: center; font-weight: 600; }
+    .gl-group { margin: 0 0 0.8rem; }
+    .gl-group p { margin: 0.1rem 0; }
+    .gl-cols { columns: 2 16rem; column-gap: 2rem; }
+    .gl-group { break-inside: avoid; }
+    @media (max-width: 600px) {
+        /* The day table becomes stacked rows: five columns do not fit a phone. */
+        .day-table thead { display: none; }
+        .day-table tr { display: block; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        .day-table td { display: block; border: none; padding: 0.1rem 0; }
+        .day-table .day-times { text-align: left; }
+        .day-table td:first-child { font-weight: 600; }
+        .day-table .day-times::before { content: "Times: "; font-weight: 400; }
+    }
 </style>
 {% endblock %}
 
@@ -373,6 +410,76 @@
     entered as links.
 </p>
 {% endif %}
+
+{# The photograph that faces the Morning Service in the printed book. #}
+<figure class="chant-photo">
+    <img src="{{ static_v('img/chanting-parivasa.webp') }}"
+         alt="A monk in saffron robes sitting cross-legged in meditation among trees"
+         width="788" height="1400" loading="lazy">
+    <figcaption>Parivāsa at Wat Buddhapadipa, Wimbledon, 10 July 2026</figcaption>
+</figure>
+
+{# The printed book's two guides (chanting_volumes.py), with each chant a
+   link instead of a page number. #}
+<div class="chant-guides" id="what-to-chant">
+<h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">What to chant, and when</h2>
+
+<details class="chant-guide" id="chants-for-occasions">
+    <summary>Chants for occasions
+        <span class="guide-sub">A birthday, a funeral, a meal, an observance day and more</span></summary>
+    <p>Where to find the chants for each occasion. The advice comes from the
+    Wat Mahathat United Kingdom book's own pages on ceremonies, and the source
+    is given for each.</p>
+    {% for group in occasions %}
+    <h3>{{ group.group }}</h3>
+    {% for item in group['items'] %}
+    <div class="occ-item">
+        <p class="occ-name">{{ item.occasion }}</p>
+        {% if item.note %}<p class="occ-note">{{ item.note }}</p>{% endif %}
+        <ul>
+        {% for cid in item.chants if cid in guide_chants %}{% set c = guide_chants[cid] %}
+            <li><a href="{{ url_for('chanting_chant', chant_id=cid) }}">{{ c.title_english or c.title_pali or c.title_roman }}</a></li>
+        {% endfor %}
+        </ul>
+        <p class="occ-source">Source: {{ item.source }}</p>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</details>
+
+<details class="chant-guide" id="chants-for-each-day">
+    <summary>Chants for each day of the week
+        <span class="guide-sub">The chant for the day you were born, and a simple daily practice</span></summary>
+    <p>In Thai tradition each day of the week has its own number, the power of
+    the day (<span class="thai">กำลังวัน</span>, <em>kamlang wan</em>), and its
+    own protection chant. The chant of the day you were born on is recited
+    that number of times. The numbers come from Thai astrology and are a
+    custom, not a requirement of the Buddha's teaching. Every chant below is
+    in this book: each is a protection chant or its opening verse.</p>
+    <table class="day-table">
+        <thead><tr><th>Day</th><th>Times</th><th>Chant</th><th>First line</th></tr></thead>
+        <tbody>
+        {% for d in day_chants %}
+        <tr><td>{{ d.day }}<br><span class="thai">{{ d.thai }}</span></td>
+            <td class="day-times">{{ d.times }}</td>
+            <td>{% if d.chant in guide_chants %}<a href="{{ url_for('chanting_chant', chant_id=d.chant) }}">{{ d.name }}</a>{% else %}{{ d.name }}{% endif %}</td>
+            <td><em>{{ d.first_line }}</em></td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p>Wednesday night is the day of Rāhu. The temple book's own order for
+    chanting to the nine planets pairs Rāhu with the Āṭānāṭiya Paritta
+    (temple book page 268). Some guides give the Suriya Paritta instead,
+    which this book does not contain.</p>
+
+    <h3>A simple daily practice</h3>
+    <ol>
+        {% for step, ids in daily_order %}
+        <li>{{ step }}{% for cid in ids if cid in guide_chants %} (<a href="{{ url_for('chanting_chant', chant_id=cid) }}">{{ guide_chants[cid].title_english or guide_chants[cid].title_pali }}</a>){% endfor %}.</li>
+        {% endfor %}
+    </ol>
+</details>
+</div>
 
 <h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">The chants</h2>
 <p style="color:#555; max-width: 62ch; margin-top: 0;">
@@ -485,6 +592,23 @@ were converted from his romanised Pali and are still being checked.</p>
     </details>
     {% endfor %}
 </div>
+
+{# Ajarn Owen's word lists, his pages 295–296 — in the printed book since
+   2026-11-07, in the app since 2026-11-17. #}
+{% if glossary %}
+<details class="chant-guide" id="{{ glossary.id }}">
+    <summary>Ajarn Owen's word lists
+        <span class="guide-sub">Common Pāli words, chanting phrases and key concepts, from his pages {{ glossary.source_pages }}</span></summary>
+    {% for list in glossary.lists %}
+    <h3>{{ list.heading }}</h3>
+    <div class="gl-cols">
+    {% for group in list.groups %}
+    <div class="gl-group">{% for e in group %}<p><strong>{{ e.word }}</strong> — {{ e.meaning }}</p>{% endfor %}</div>
+    {% endfor %}
+    </div>
+    {% endfor %}
+</details>
+{% endif %}
 {% endif %}
 
 <div class="card" style="border-left: 4px solid var(--monk-saffron);">
