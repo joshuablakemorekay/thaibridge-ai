@@ -367,6 +367,43 @@ def book_ids(book):
     return ids
 
 
+def app_colours():
+    """The app's own colours, for the full-colour edition, read from the
+    same places the app reads them: the palette in static/css/base.css and
+    each layer's colour in chanting.CHANT_LAYERS. Nothing is copied by hand,
+    so the printed book can never drift from /chanting.
+
+    Only the FIRST :root block counts. Later blocks (colour-blind mode, for
+    one) override some values for readers who switch them on, and the book
+    prints the default look."""
+    with open(os.path.join(ROOT, 'static', 'css', 'base.css'), encoding='utf-8') as f:
+        css = f.read()
+    root = css[css.index(':root'):]
+    root = root[:root.index('}')]
+    palette = dict(re.findall(r'(--[\w-]+)\s*:\s*(#[0-9A-Fa-f]{3,6})', root))
+
+    def resolve(value):
+        # var(--name) or var(--name, fallback): the name if :root sets it,
+        # otherwise the fallback, which may itself be a var().
+        m = re.fullmatch(r'var\(\s*(--[\w-]+)\s*(?:,\s*(.+))?\)', value.strip())
+        if not m:
+            return value.strip()
+        if m.group(1) in palette:
+            return palette[m.group(1)]
+        if m.group(2):
+            return resolve(m.group(2))
+        raise KeyError(f'{m.group(1)} is not set in the :root block of base.css')
+
+    return {
+        'layers': {layer['key']: resolve(layer['colour']) for layer in chanting.CHANT_LAYERS},
+        'purple': palette['--royal-purple'],
+        'red': palette['--temple-red'],
+        'saffron': palette['--saffron-text'],
+        'gold': palette['--royal-gold'],
+        'brown': '#55483a',   # the app's title-english colour (chanting_chant.html)
+    }
+
+
 def render_html(template, book, books, pages, proof, pad_blank=False, colour='mono'):
     """`pages` maps (book key, id) -> PDF page; empty on the first pass,
     when every number prints as a same-width placeholder."""
@@ -391,6 +428,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
     return template.render(
         pad_blank=pad_blank,
         colour=colour,
+        app=app_colours() if colour == 'full' else {},
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         tight_chants=TIGHT_CHANTS,
         print_fonts_url='file:///' + PRINT_FONTS.replace('\\', '/'),
