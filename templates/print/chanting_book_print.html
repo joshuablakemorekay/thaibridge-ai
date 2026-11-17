@@ -309,7 +309,10 @@
 
     /* The photograph page: the picture fills nearly the whole page. */
     .photo-page { break-before: page; text-align: center; }
-    .photo-page img { display: block; height: 238mm; max-width: 100%; margin: 0 auto; object-fit: contain; }
+    /* Printed at 141mm tall so the 941 x 1672 px photo keeps 300 dpi, the
+       printers' standard (238mm gave only 178 dpi). Use a larger original
+       to print it bigger. Centred down the page. */
+    .photo-page img { display: block; height: 141mm; max-width: 100%; margin: 45mm auto 0; object-fit: contain; }
     .photo-caption { font-size: 10.5pt; font-style: italic; margin: 4mm 0 0; }
 
     /* ── Volumes, guides and indexes (2026-11-12) ─────────────────── */
