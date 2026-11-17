@@ -205,3 +205,33 @@ def test_verse_is_set_in_halves_and_prose_is_not(unlocked_client):
     prose = unlocked_client.get('/chanting/chant/ubosot-sila/body').get_data(as_text=True)
     assert 'class="half-pair"' in verse
     assert 'class="half-pair"' not in prose
+
+
+def test_the_printed_books_guides_are_on_the_index(unlocked_client):
+    """The occasion and day-of-the-week guides, Ajarn Owen's word lists and
+    the Parivasa photograph appear in the app as in the printed book."""
+    index = unlocked_client.get('/chanting').get_data(as_text=True)
+    assert 'id="chants-for-occasions"' in index
+    assert 'id="chants-for-each-day"' in index
+    assert 'id="owen-glossary"' in index
+    assert 'img/chanting-parivasa.webp' in index
+    # A guide links to the chant itself rather than to a printed page.
+    assert '/chanting/chant/bot-khat-atanatiya-parittam' in index
+    assert 'Sammāsambuddhassa' in index
+
+
+def test_the_guides_never_link_the_amaravati_reflections(unlocked_client):
+    """Their licence is non-commercial, so they stay out of the paid app."""
+    index = unlocked_client.get('/chanting').get_data(as_text=True)
+    assert 'amaravati' not in index.lower()
+
+
+def test_every_chant_a_guide_names_is_in_the_app():
+    """A guide pointing at a chant the app lacks would be a dead end.
+    The one exception is the Amaravati reflection, kept out on purpose."""
+    import chanting_volumes
+    ids = set(chanting_volumes.occasion_chant_ids())
+    ids |= {d['chant'] for d in chanting_volumes.DAY_CHANTS}
+    ids |= {c for _, step in chanting_volumes.DAILY_ORDER for c in step}
+    missing = {c for c in ids if not chanting.get_chant(c)}
+    assert missing == {'amaravati-universal-well-being'}

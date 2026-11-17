@@ -22,6 +22,7 @@ import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import chanting_layout  # verse lines in two halves, shared with the printed book
 import chanting_owen  # chants from Ajarn Owen's chanting book, a section of their own
+import chanting_volumes  # the occasion and day-of-the-week guides, shared with the printed book
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
 import expat2000  # the free expat / digital nomad set-up guide (/expat2000)
@@ -5112,6 +5113,19 @@ def theravada():
     return render_template('theravada.html', teachings=THERAVADA_TEACHINGS,
                            audio_map=audio_map, talks=DHAMMA_TALKS)
 
+def _guide_chants():
+    """The chants the guides point to, by id, for their titles and links.
+
+    Only chants the app holds: the daily practice also names an Amaravati
+    reflection, which is printed in the free book but kept out of the paid
+    app by its licence (CC BY-NC-ND), so that step shows without a link."""
+    ids = set(chanting_volumes.occasion_chant_ids())
+    ids |= {d['chant'] for d in chanting_volumes.DAY_CHANTS}
+    ids |= {cid for _, step_ids in chanting_volumes.DAILY_ORDER for cid in step_ids}
+    found = {cid: chanting.get_chant(cid) for cid in ids}
+    return {cid: chant for cid, chant in found.items() if chant}
+
+
 @app.route('/chanting')
 @require_access('chanting')
 def chanting_book():
@@ -5131,6 +5145,14 @@ def chanting_book():
                            chants=chanting.chants_in_book_order(),
                            owen_chants=chanting_owen.APP_CHANTS,
                            owen_book=chanting_owen.OWEN_BOOK,
+                           # Ajarn Owen's word lists and the two "what to
+                           # chant" guides, the same data the printed book
+                           # uses (Josh, 2026-11-17).
+                           glossary=chanting_owen.OWEN_GLOSSARY,
+                           occasions=chanting_volumes.OCCASIONS,
+                           day_chants=chanting_volumes.DAY_CHANTS,
+                           daily_order=chanting_volumes.DAILY_ORDER,
+                           guide_chants=_guide_chants(),
                            layers=chanting.CHANT_LAYERS,
                            sections=chanting.CHANT_SECTIONS,
                            how_to_use=chanting.HOW_TO_USE,

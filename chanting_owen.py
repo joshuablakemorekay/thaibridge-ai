@@ -1757,8 +1757,8 @@ def get_app_chant(chant_id):
 
 # ── Common Pali words and their meanings ─────────────────────────────────
 # Ajarn Owen's word lists, book pages 295-296 (Josh's photographs,
-# 2026-11-07). PRINT ONLY, at the back of the book after his chants (Josh's
-# choice). Words and meanings exactly as he prints them; only a stray space
+# 2026-11-07). At the back of the printed book after his chants, and since
+# 2026-11-17 at the end of his section in the app too (Josh's choice). Words and meanings exactly as he prints them; only a stray space
 # before a comma and one hyphen used as a dash were tidied. Each blank line
 # starts a new group, as on his page. His pages set the letter groups in two
 # columns in an order that only works at his page size, so the main list here
