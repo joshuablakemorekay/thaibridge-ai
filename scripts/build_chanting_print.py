@@ -87,6 +87,17 @@ SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2
 # Licence (OFL-*.txt beside them). Kept out of static/ so the app never serves them.
 PRINT_FONTS = os.path.join(ROOT, 'scripts', 'print_fonts')
 
+# Chants that ended with a line or two alone on a page before a new Part
+# (found 2026-11-17: pp. 57, 108, 675, 740 of the 756-page book. Part 4
+# is a single 1.2-page chant, and Owen's Lakkhana Sutta (p. 701) is dense prose
+# that still spilled 5 lines when closed up, so those two are left as they are).
+# They are set with slightly closer verses so they end a page sooner. If the
+# text changes, re-check the last page of each Part and update this list.
+TIGHT_CHANTS = {
+    'kham-kho-khama-phra-rattanatrai', 'mahacunda-bojjhanga-suttam',
+    'dhatupatikula-paccavekkhana',
+    'amaravati-striving',
+}
 
 
 def locator(chant_id):
@@ -381,6 +392,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
         pad_blank=pad_blank,
         colour=colour,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
+        tight_chants=TIGHT_CHANTS,
         print_fonts_url='file:///' + PRINT_FONTS.replace('\\', '/'),
         book=chanting.BOOK,
         title=PRINT_TITLE,

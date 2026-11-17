@@ -214,6 +214,11 @@
     .owen-title { font-size: 15pt; }
     .owen-note { max-width: 120mm; margin: 6mm auto 0; font-size: 9.5pt; font-style: italic; }
     .owen-chant { }
+    /* A chant whose last few lines would spill alone onto the page before a
+       new Part (TIGHT_CHANTS in build_chanting_print.py) is set with a
+       little less space between verses, so it ends on its own page. */
+    .chant.tight .verses .verse { margin-bottom: 1.2mm; }
+    .chant.tight p { line-height: 1.42; }
     .owen-h { font-size: 15pt; font-weight: 700; margin: 0; text-align: center; }
     .owen-sub { font-size: 11.5pt; font-weight: 600; text-align: center; margin-top: 1mm; }
     .owen-src { font-size: 9.5pt; color: #555; text-align: center; margin: 1mm 0 4mm; }
@@ -796,7 +801,7 @@
 {% endif %}
 
 {% for chant in part.chants %}
-<article class="chant">
+<article class="chant{% if chant.id in tight_chants %} tight{% endif %}">
     <header class="chant-head">
         <span class="locator">{{ locator(chant.id) }}</span>
         <span class="title-thai thai">{{ chant.title_thai }}</span>
@@ -872,7 +877,7 @@
     and chants the Wat Mahathat United Kingdom book does not include.</p>
 </div>
 {% for chant in owen_chants %}
-<article class="chant owen-chant">
+<article class="chant owen-chant{% if chant.id in tight_chants %} tight{% endif %}">
     {# Set exactly like the book's Pali-only chants: Thai-script Pali,
        romanised Pali, English (Josh, 2026-11-06). #}
     <header class="chant-head">
@@ -944,7 +949,7 @@
     <p class="owen-note am-licence">{{ amaravati_licence }}</p>
 </div>
 {% for chant in amaravati_chants %}
-<article class="chant owen-chant">
+<article class="chant owen-chant{% if chant.id in tight_chants %} tight{% endif %}">
     <header class="chant-head">
         <span class="locator">{{ locator(chant.id) }}</span>
         <span class="title-pali">{{ chant.title }}</span>
