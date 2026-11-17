@@ -3,6 +3,14 @@
     python scripts/build_chanting_print.py            # proof copy
     python scripts/build_chanting_print.py --final    # no "proof" stamp
     python scripts/build_chanting_print.py --volumes  # the three-volume edition
+    python scripts/build_chanting_print.py --colour two   # black + red headings
+    python scripts/build_chanting_print.py --colour full  # the app's colours
+
+COLOUR (2026-11-17): so Josh can compare print prices, `--colour two` prints
+headings in red (two-ink printing, the photo goes grey) and `--colour full`
+uses the app's purple, red and saffron with the photo in colour. Only colours
+change, never sizes, so the pages break exactly as the black-and-white book.
+The file name gets -two-colour / -full-colour on the end.
 
 THREE VOLUMES (2026-11-12): Pra Kru Bob asked for the book in three volumes
 with an index of every chant. `--volumes` prints the same chants, in the
@@ -344,7 +352,7 @@ def book_ids(book):
     return ids
 
 
-def render_html(template, book, books, pages, proof, pad_blank=False):
+def render_html(template, book, books, pages, proof, pad_blank=False, colour='mono'):
     """`pages` maps (book key, id) -> PDF page; empty on the first pass,
     when every number prints as a same-width placeholder."""
     home = {i: b for b in books for i in book_ids(b)}
@@ -367,6 +375,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False):
     chants_by_id.update({c['id']: dict(c, title_pali=c['title']) for c in OWEN_CHANTS + AMARAVATI_CHANTS})
     return template.render(
         pad_blank=pad_blank,
+        colour=colour,
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         book=chanting.BOOK,
         title=PRINT_TITLE,
@@ -488,6 +497,8 @@ def main():
     parser.add_argument('--volumes', action='store_true',
                         help='print the three-volume edition (chanting_volumes.py) '
                              'instead of the one-volume book')
+    parser.add_argument('--colour', choices=['mono', 'two', 'full'], default='mono',
+                        help='mono (default), two (black + red headings) or full (app colours)')
     args = parser.parse_args()
 
     unknown = sorted(set(SHORT) - {c['id'] for c in chanting.CHANTS})
@@ -506,6 +517,10 @@ def main():
     proof = not args.final
 
     books = make_books(args.volumes)
+    if args.colour != 'mono':
+        suffix = {'two': '-two-colour', 'full': '-full-colour'}[args.colour]
+        for b in books:
+            b['out'] = b['out'][:-len('.pdf')] + suffix + '.pdf'
     temple_ids = [c['id'] for b in books for p in b['parts'] for c in p['chants']]
     if sorted(temple_ids) != sorted(c['id'] for c in chanting.CHANTS):
         sys.exit('The edition does not hold every chant exactly once.')
@@ -522,7 +537,7 @@ def main():
         print('Pass 1: laying out...', flush=True)
         for book in books:
             first = os.path.join(workdir, f"{book['key']}-pass1.pdf")
-            print_pdf(chrome, render_html(template, book, books, {}, proof), first, workdir)
+            print_pdf(chrome, render_html(template, book, books, {}, proof, colour=args.colour), first, workdir)
             found, totals[book['key']] = find_pages(first, book_ids(book))
             check_fonts_and_scale(first)
             missing = [i for i in book_ids(book) if i not in found]
@@ -537,7 +552,7 @@ def main():
             # blank page before the credit page, which keeps the credit on
             # the last page and moves no chant, so the numbers still hold.
             pad = bool(totals[book['key']] % 2)
-            print_pdf(chrome, render_html(template, book, books, pages, proof, pad),
+            print_pdf(chrome, render_html(template, book, books, pages, proof, pad, args.colour),
                       book['out'], workdir)
             check, total2 = find_pages(book['out'], book_ids(book))
             if any(check.get(i) != pages[(book['key'], i)] for i in book_ids(book)) \
