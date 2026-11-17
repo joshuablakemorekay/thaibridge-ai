@@ -1,0 +1,25 @@
+{# The print fonts, shared by the book and its covers. They are fixed
+   (static) files kept in scripts/print_fonts, NOT fetched from Google Fonts:
+   Google sends "variable" fonts, which Chrome can only store in a PDF as
+   Type 3 fonts, and professional printers' checks often reject those.
+   Needs print_fonts_url. #}
+<style>
+{% for family, file, weight, style in [
+    ('Noto Serif', 'NotoSerif-Regular', 400, 'normal'),
+    ('Noto Serif', 'NotoSerif-SemiBold', 600, 'normal'),
+    ('Noto Serif', 'NotoSerif-Italic', 400, 'italic'),
+    ('Noto Serif Thai', 'NotoSerifThai-Regular', 400, 'normal'),
+    ('Noto Serif Thai', 'NotoSerifThai-SemiBold', 600, 'normal'),
+    ('Cormorant Garamond', 'CormorantGaramond-Medium', 500, 'normal'),
+    ('Cormorant Garamond', 'CormorantGaramond-SemiBold', 600, 'normal'),
+    ('Cormorant Garamond', 'CormorantGaramond-Bold', 700, 'normal'),
+    ('Cormorant Garamond', 'CormorantGaramond-MediumItalic', 500, 'italic'),
+] %}
+    @font-face {
+        font-family: '{{ family }}';
+        font-style: {{ style }};
+        font-weight: {{ weight }};
+        src: url('{{ print_fonts_url }}/{{ file }}.ttf') format('truetype');
+    }
+{% endfor %}
+</style>

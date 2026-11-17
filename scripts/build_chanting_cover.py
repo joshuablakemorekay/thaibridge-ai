@@ -26,7 +26,7 @@ sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 import chanting  # noqa: E402
 from chanting_volumes import VOLUMES  # noqa: E402
-from build_chanting_print import PRINT_TITLE, find_chrome, print_pdf  # noqa: E402
+from build_chanting_print import PRINT_FONTS, PRINT_TITLE, find_chrome, print_pdf  # noqa: E402
 
 TRIM_W, TRIM_H = 210.0, 297.0     # A4, mm
 BLEED = 3.175                     # Lulu's 0.125in
@@ -79,6 +79,7 @@ def main():
         book=chanting.BOOK, title=PRINT_TITLE, proof=not args.final, built_on=datetime.date.today().isoformat(),
         trim_w=TRIM_W, bleed=BLEED, spine=spine, sheet_w=sheet_w, sheet_h=sheet_h,
         spine_font=spine_font, volume=volume,
+        print_fonts_url='file:///' + PRINT_FONTS.replace(os.sep, '/'),
         emblem_url=('file:///' + emblem.replace(os.sep, '/')) if emblem else None)
 
     with tempfile.TemporaryDirectory() as workdir:
@@ -88,6 +89,10 @@ def main():
         w_mm = doc[0].rect.width / 72 * MM_PER_INCH
         h_mm = doc[0].rect.height / 72 * MM_PER_INCH
         sheets = doc.page_count
+        type3 = sum(1 for f in doc[0].get_fonts() if f[2] == 'Type3')
+    if type3:
+        sys.exit(f'The cover has {type3} Type 3 fonts — a font is not loading from '
+                 'scripts/print_fonts (printers reject Type 3).')
     if sheets != 1 or abs(w_mm - sheet_w) > 0.5 or abs(h_mm - sheet_h) > 0.5:
         sys.exit(f'The cover came out {sheets} page(s) of {w_mm:.1f} x {h_mm:.1f}mm, '
                  f'not one sheet of {sheet_w:.1f} x {sheet_h:.1f}mm.')
