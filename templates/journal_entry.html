@@ -4,6 +4,7 @@
 {% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
 
 {% block title %}{{ entry.title }} - Journal{% endblock %}
+{% block description %}{{ entry.summary or entry.title }}{% endblock %}
 
 {% block extra_css %}
 <style>

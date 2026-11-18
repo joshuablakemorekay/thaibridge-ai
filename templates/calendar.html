@@ -3,6 +3,7 @@
 {% set buddhist = view == 'buddhist' %}
 {% set year_layout = layout == 'year' %}
 {% block title %}{% if buddhist %}Buddhist calendar {{ cal.be_year }}{% else %}Calendar {{ cal.year }}{% endif %} — ThaiBridge AI{% endblock %}
+{% block description %}The Thai and Buddhist calendar: Gregorian and Buddhist Era dates side by side, Thai public holidays and the Buddhist holy days that follow the moon.{% endblock %}
 
 {% block extra_css %}
 <style>
