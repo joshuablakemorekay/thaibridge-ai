@@ -600,7 +600,7 @@
         <div id="limit-hint" class="limit-hint" style="display:none;"></div>
         {# Only shown in Translator mode: its Thai is AI output nobody has checked. #}
         <p id="translator-note" class="limit-hint" hidden>
-            🔤 You get the Thai for who you're talking to, not just what the words mean.
+            You get the Thai for who you're talking to, not just what the words mean.
             Ask "to a friend?", "to an elder?" or "to a monk?" to change it.<br>
             AI translation, may not be perfect. Check anything important with a Thai speaker.
         </p>
@@ -653,7 +653,7 @@
     </style>
     {# Same three ways in as /dhamma-and-culture. Only shown in Buddhist mode. #}
     <div id="lens-bar" class="scenario-bar lens-bar" hidden>
-        <span class="scenario-label">☸️ Your approach:</span>
+        <span class="scenario-label">Your approach:</span>
         {% for lid, ln in dhamma_lenses.items() %}
         <button type="button" class="scenario-chip lens-chip" data-lens="{{ lid }}"
                 title="{{ ln.blurb }}"
@@ -675,26 +675,21 @@
             </p>
             <div class="quick-starts">
                 <div class="quick-start-btn" data-on-click="quickStart" data-args='["Teach me a common Thai greeting"]'>
-                    <span class="emoji">👋</span>
                     <span class="text">Common greeting</span>
                 </div>
                 <div class="quick-start-btn" data-on-click="quickStart" data-args='["How do Thai tones work?"]'>
-                    <span class="emoji">🎵</span>
                     <span class="text">How tones work</span>
                 </div>
                 <div class="quick-start-btn" data-on-click="quickStart" data-args='["Give me a beginner vocabulary quiz"]'>
-                    <span class="emoji">📝</span>
                     <span class="text">Quick quiz</span>
                 </div>
                 <div class="quick-start-btn" data-on-click="quickStart" data-args='["Tell me about Thai temple etiquette"]'>
-                    <span class="emoji">🛕</span>
                     <span class="text">Temple etiquette</span>
                 </div>
             </div>
         </div>
 
         <div id="chat-placeholder">
-            <span class="placeholder-icon">🪷</span>
             <span class="placeholder-text">Your conversation will appear here...</span>
         </div>
 

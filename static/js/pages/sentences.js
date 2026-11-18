@@ -257,7 +257,7 @@ function sbCheck() {
             if (res.tip) {
                 var tip = document.createElement('div');
                 tip.style.marginTop = '0.5rem';
-                tip.textContent = '' + res.tip;
+                tip.textContent = res.tip;
                 box.appendChild(tip);
             }
         })
