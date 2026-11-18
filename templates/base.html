@@ -56,14 +56,7 @@
             <button class="mobile-menu-toggle" data-on-click="toggleMobileMenu"
                     aria-label="Menu" aria-controls="main-nav" aria-expanded="false">☰</button>
             
-            {# Two menus, one layout. Logged-in learners (and Monk Mode) get the app
-               menu; everyone else is a visitor and gets the website menu. Chosen
-               by who is looking, not by page, so no page can show the wrong one. #}
-            {% if current_user.is_authenticated or monk_mode %}
-            {% include 'partials/nav_app.html' %}
-            {% else %}
-            {% include 'partials/nav_site.html' %}
-            {% endif %}
+            {% include 'partials/nav_classic.html' %}
             
             {% if request.endpoint == 'gender_examples' %}
             <div class="gender-selector">
@@ -109,9 +102,6 @@
     </div>
     
     <footer>
-        {% if not (current_user.is_authenticated or monk_mode) %}
-        {% include 'partials/footer_site.html' %}
-        {% endif %}
         <p>ThaiBridge AI</p>
         <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" data-on-click="tbCookieChoices">Cookie choices</a>{% endif %} • <a href="/premium#dana">Give dāna</a></p>
         <p>Using <a href="/paiboon">ThaiBridge Spelling</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>

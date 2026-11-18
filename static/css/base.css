@@ -470,57 +470,6 @@
         }
         .dropdown-item-button:hover { background: rgba(255, 153, 51, 0.15); }
 
-        /* WEBSITE menu (partials/nav_site.html, for visitors). The one filled
-           gold button is the main next step, so it stands out from the plain
-           links around it. */
-        @media (min-width: 769px) {
-            nav .nav-site { align-items: center; }  /* line the button up with the links */
-        }
-        nav a.nav-cta {
-            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
-            color: var(--deep-purple);
-            text-shadow: none;
-            border: 2px solid var(--royal-gold);
-            padding: 0.5rem 1.2rem;
-        }
-        nav a.nav-cta:hover { color: var(--deep-purple); border-color: var(--deep-purple); }
-        @media (max-width: 768px) {
-            nav a.nav-cta { display: inline-block; margin: 0.5rem 0 0.25rem; }
-        }
-
-        /* WEBSITE footer columns (partials/footer_site.html). */
-        .site-footer-columns {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 1.5rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto 2rem;
-            text-align: left;
-        }
-        .site-footer-columns a {
-            display: block;
-            padding: 0.3rem 0;
-            border-bottom: none;
-            width: fit-content;
-        }
-        .site-footer-heading {
-            margin: 0 0 0.4rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            color: var(--royal-gold);
-        }
-        @media (max-width: 768px) {
-            .site-footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        }
-
-        /* "Aa" is enough in the wide top bar; the phone menu has room for
-           the full name, which is clearer. */
-        .nav-long-label { display: none; }
-        @media (max-width: 768px) {
-            .nav-long-label { display: inline; }
-        }
         
         /* Collapsible Sections */
         .collapsible-section {
