@@ -1,12 +1,10 @@
-"""Phase 2 of the website work: two menus, one layout.
+"""The menu: one classic tab-style menu for everyone.
 
-base.html picks the menu by WHO is looking, not by page:
-
-  * a visitor (not logged in) gets the website menu and footer
-    (partials/nav_site.html, partials/footer_site.html) — free things to try,
-    Pricing, Log in and a "Start free" button;
-  * a logged-in learner, or anyone in Monk Mode, gets the learner menu
-    (partials/nav_app.html) — AI Tutor, Help and their account.
+Josh chose (2026-11-18) the classic tab menu from the protected tag
+webapp-classic-menu-2026-11-18 over both the grouped learner menu and the
+separate visitor "website" menu. These tests guard that choice: visitors and
+learners see the same menu, every main page is one tap away, every link
+opens, and the later decisions (no Developer Login link) still hold.
 """
 import re
 import uuid
@@ -15,6 +13,16 @@ import pytest
 
 from app import app
 from models import User, db
+
+# Every page the classic menu must reach (account links depend on login).
+MENU_PAGES = {
+    '/', '/instructions', '/alphabet', '/tones-classes', '/vowels_syllables',
+    '/read_write', '/paiboon', '/grammar', '/formality', '/gender-examples',
+    '/sentences', '/learn', '/lessons', '/tour-guide', '/business-thai',
+    '/culture', '/calendar', '/expat2000', '/practising-anywhere',
+    '/dhamma-and-culture', '/theravada', '/chanting', '/bob-writings',
+    '/journal', '/meditation', '/dictionary', '/chat', '/premium', '/monk-mode',
+}
 
 
 def _nav(html):
@@ -44,53 +52,31 @@ def learner():
 
 
 @pytest.mark.parametrize("path", ["/", "/theravada", "/premium", "/lessons"])
-def test_a_visitor_gets_the_website_menu(path):
-    html = app.test_client().get(path).get_data(as_text=True)
-    nav = _nav(html)
-    assert 'class="nav-site"' in html
-    assert 'href="/signup" class="nav-cta">Start free</a>' in nav
-    assert 'href="/login"' in nav and 'href="/premium"' in nav
-    assert 'href="/progress"' not in nav, "My Progress needs an account, not a website link"
-    assert 'class="site-footer-columns"' in html
+def test_a_visitor_gets_the_classic_menu(path):
+    nav = _nav(app.test_client().get(path).get_data(as_text=True))
+    assert MENU_PAGES <= _hrefs(nav), sorted(MENU_PAGES - _hrefs(nav))
+    assert 'href="/signup"' in nav and 'href="/login"' in nav
 
 
-@pytest.mark.parametrize("path", ["/", "/theravada", "/premium"])
-def test_a_logged_in_learner_gets_the_app_menu(learner, path):
+def test_a_learner_gets_the_same_classic_menu(learner):
     client, name = learner
-    html = client.get(path).get_data(as_text=True)
-    nav = _nav(html)
+    nav = _nav(client.get('/').get_data(as_text=True))
+    assert MENU_PAGES <= _hrefs(nav), sorted(MENU_PAGES - _hrefs(nav))
+    assert name in nav and 'href="/progress"' in nav and 'href="/logout"' in nav
+
+
+def test_the_retired_menus_are_gone():
+    html = app.test_client().get('/').get_data(as_text=True)
     assert 'class="nav-site"' not in html
-    assert 'href="/chat"' in nav and 'href="/progress"' in nav
-    assert name in nav
-    assert 'Start free' not in nav
     assert 'class="site-footer-columns"' not in html
+    assert 'href="/developer-login"' not in html
 
 
-def test_both_menus_offer_learning_support():
-    visitor = app.test_client().get('/').get_data(as_text=True)
-    assert 'id="rs-large"' in _nav(visitor)
+def test_learning_support_is_in_the_menu():
+    assert 'id="rs-large"' in _nav(app.test_client().get('/').get_data(as_text=True))
 
 
-def test_every_website_link_is_a_page_that_opens():
+def test_every_menu_link_opens():
     client = app.test_client()
-    html = client.get('/').get_data(as_text=True)
-    footer = html.split('class="site-footer-columns"', 1)[1].split('</div>\n</div>', 1)[0]
-    for href in sorted(_hrefs(_nav(html)) | _hrefs(footer)):
-        assert client.get(href).status_code == 200, href + ' is linked from the website menu but does not open'
-
-
-# Pages that only make sense with an account, so visitors are not linked to them.
-ACCOUNT_ONLY = {'/progress', '/logout'}
-
-
-def test_visitors_can_reach_every_page_learners_can(learner):
-    # The first website menu listed only the free pages, so 13 course
-    # sections silently vanished for logged-out visitors. Every page in the
-    # learner menu must be linked from the visitor menu or footer too.
-    client, _ = learner
-    learner_links = _hrefs(_nav(client.get('/').get_data(as_text=True)))
-    visitor_html = app.test_client().get('/').get_data(as_text=True)
-    footer = visitor_html.split('<footer>', 1)[1].split('</footer>', 1)[0]
-    visitor_links = _hrefs(_nav(visitor_html)) | _hrefs(footer)
-    missing = sorted(learner_links - visitor_links - ACCOUNT_ONLY)
-    assert not missing, f"Learners can reach these but visitors can't: {missing}"
+    for href in sorted(_hrefs(_nav(client.get('/').get_data(as_text=True)))):
+        assert client.get(href).status_code in (200, 302), href
