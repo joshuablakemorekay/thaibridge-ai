@@ -149,7 +149,8 @@
                         {% if current_user.is_authenticated %}
                         <a href="/logout">Log out</a>
                         {% endif %}
-                        <a href="/developer-login">Developer Login</a>
+                        {# No Developer Login link here on purpose: every visitor saw it.
+                           The page still works at /developer-login for Josh. #}
                     </div>
                 </li>
             </ul>
