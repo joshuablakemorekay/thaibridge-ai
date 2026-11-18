@@ -50,7 +50,7 @@ def test_a_visitor_gets_the_website_menu(path):
     assert 'class="nav-site"' in html
     assert 'href="/signup" class="nav-cta">Start free</a>' in nav
     assert 'href="/login"' in nav and 'href="/premium"' in nav
-    assert 'href="/chat"' not in nav, "the AI Tutor is a learner tool, not a website link"
+    assert 'href="/progress"' not in nav, "My Progress needs an account, not a website link"
     assert 'class="site-footer-columns"' in html
 
 
@@ -77,3 +77,20 @@ def test_every_website_link_is_a_page_that_opens():
     footer = html.split('class="site-footer-columns"', 1)[1].split('</div>\n</div>', 1)[0]
     for href in sorted(_hrefs(_nav(html)) | _hrefs(footer)):
         assert client.get(href).status_code == 200, href + ' is linked from the website menu but does not open'
+
+
+# Pages that only make sense with an account, so visitors are not linked to them.
+ACCOUNT_ONLY = {'/progress', '/logout'}
+
+
+def test_visitors_can_reach_every_page_learners_can(learner):
+    # The first website menu listed only the free pages, so 13 course
+    # sections silently vanished for logged-out visitors. Every page in the
+    # learner menu must be linked from the visitor menu or footer too.
+    client, _ = learner
+    learner_links = _hrefs(_nav(client.get('/').get_data(as_text=True)))
+    visitor_html = app.test_client().get('/').get_data(as_text=True)
+    footer = visitor_html.split('<footer>', 1)[1].split('</footer>', 1)[0]
+    visitor_links = _hrefs(_nav(visitor_html)) | _hrefs(footer)
+    missing = sorted(learner_links - visitor_links - ACCOUNT_ONLY)
+    assert not missing, f"Learners can reach these but visitors can't: {missing}"
