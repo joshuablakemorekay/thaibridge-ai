@@ -4595,7 +4595,47 @@ def home():
     # Set default gender if not set
     if 'user_gender' not in session:
         session['user_gender'] = 'neutral'
+    # Same address, two audiences: a visitor gets the website's front page
+    # (what ThaiBridge is, what's free, why to sign up); a logged-in learner
+    # already knows all that and gets "continue where you left off" instead.
+    # Search engines only ever see the visitor version.
+    if current_user.is_authenticated:
+        return _learner_home()
     return render_template('index.html', current_gender=session.get('user_gender', 'neutral'))
+
+
+def _learner_home():
+    """The logged-in home page: the learner's next step and how far they've come.
+
+    Everything here is worked out the same way as on /progress — the learning
+    path, the level bar — so the two pages can never disagree. /progress stays
+    the place for the details (plan, targets, receipts); this page is the
+    short version with one obvious thing to do next.
+    """
+    init_user_progress()
+    user = session['user_progress']
+
+    next_level_xp = get_xp_for_next_level(user['level'])
+    current_level_xp = XP_LEVELS[user['level']]
+    if next_level_xp:
+        level_pct = round((user['xp'] - current_level_xp) / (next_level_xp - current_level_xp) * 100)
+        level_pct = max(0, min(100, level_pct))
+    else:
+        level_pct = 100
+
+    plan = user.get('learning_path')
+    path = learning_path.build_path(plan, user, _outline_sections(), check_section_access)
+    return render_template(
+        'home_learner.html',
+        user=user,
+        next_step=next((s for s in path if s['state'] == 'next'), None),
+        also_open=[s for s in path if s['state'] == 'open'][:3],
+        done_count=sum(1 for s in path if s['state'] == 'done'),
+        total_count=len(path),
+        level_pct=level_pct,
+        xp_to_next=max(0, next_level_xp - user['xp']) if next_level_xp else 0,
+        has_plan=bool(plan and plan.get('goal') in learning_path.GOALS),
+    )
 
 
 @app.route('/set-gender/<gender>')

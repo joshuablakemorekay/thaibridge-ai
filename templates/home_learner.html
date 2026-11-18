@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{# The home page for a LOGGED-IN learner (app.py: home -> _learner_home).
+   Visitors get index.html at the same address. One clear next step first,
+   then progress at a glance, then a few ways in. Details live on /progress. #}
+{% block title %}Continue learning — ThaiBridge{% endblock %}
+
+{% block extra_css %}
+<style>
+    .lh { max-width: 900px; margin: 0 auto; }
+    .lh h1 { margin-bottom: 0.25rem; }
+    .lh-sub { text-align: center; color: #5b4b6b; margin: 0 0 2rem; font-size: 1.1rem; }
+    .lh-card {
+        background: #fff; border-radius: 18px; padding: 1.75rem;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.10); margin-bottom: 1.5rem;
+    }
+    .lh-next { border-top: 6px solid var(--royal-gold); }
+    .lh-label {
+        margin: 0 0 0.35rem; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--gold-text);
+    }
+    .lh-next h2 { margin: 0 0 1rem; font-size: 1.6rem; }
+    .lh-next h2::after { display: none; }
+    .lh-next .btn { font-size: 1.1rem; }
+    .lh-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    .lh-bar { height: 14px; background: #efe7d6; border-radius: 999px; overflow: hidden; margin: 0.6rem 0; }
+    .lh-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--royal-gold), var(--monk-saffron)); }
+    .lh-big { font-size: 1.5rem; font-weight: 700; color: var(--royal-purple); margin: 0; }
+    .lh-list { list-style: none; margin: 0; padding: 0; }
+    .lh-list li { padding: 0.55rem 0; border-bottom: 1px dotted #e2d3a8; }
+    .lh-list li:last-child { border-bottom: none; }
+    .lh-list a { font-weight: 600; }
+    .lh-quick { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    @media (max-width: 700px) {
+        .lh-grid { grid-template-columns: 1fr; gap: 0; }
+        .lh-card { padding: 1.25rem; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="lh">
+    <h1>Welcome back, {{ current_user.username }}</h1>
+    <p class="lh-sub">Pick up where you left off.</p>
+
+    <section class="lh-card lh-next" aria-labelledby="lh-next-title">
+        {% if next_step %}
+        <p class="lh-label">Your next step</p>
+        <h2 id="lh-next-title">{{ next_step.title }}</h2>
+        <a href="{{ next_step.url }}" class="btn btn-gold">Continue: {{ next_step.title }}</a>
+        {% else %}
+        <p class="lh-label">Your next step</p>
+        <h2 id="lh-next-title">See what's open to you</h2>
+        <a href="/progress#path" class="btn btn-gold">Open my learning path</a>
+        {% endif %}
+        {% if not has_plan %}
+        <p style="margin-top: 1rem;">Want a path made for you? <a href="/progress#path">Set your goals</a> and ThaiBridge will order the course around them.</p>
+        {% endif %}
+    </section>
+
+    <div class="lh-grid">
+        <section class="lh-card" aria-labelledby="lh-progress-title">
+            <p class="lh-label" id="lh-progress-title">Your progress</p>
+            <p class="lh-big">Level {{ user.level }}</p>
+            <div class="lh-bar" role="progressbar" aria-label="Progress to the next level"
+                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ level_pct }}">
+                <span style="width: {{ level_pct }}%"></span>
+            </div>
+            <p>{% if xp_to_next %}{{ xp_to_next }} XP to Level {{ user.level + 1 }}{% else %}Top level reached{% endif %}
+               · {{ done_count }} of {{ total_count }} sections done</p>
+            <a href="/progress">See my full progress</a>
+        </section>
+
+        <section class="lh-card" aria-labelledby="lh-more-title">
+            <p class="lh-label" id="lh-more-title">Also open to you</p>
+            {% if also_open %}
+            <ul class="lh-list">
+                {% for s in also_open %}<li><a href="{{ s.url }}">{{ s.title }}</a></li>{% endfor %}
+            </ul>
+            {% else %}
+            <p>Finish your next step to open more of the course.</p>
+            {% endif %}
+        </section>
+    </div>
+
+    <section class="lh-card" aria-labelledby="lh-quick-title">
+        <p class="lh-label" id="lh-quick-title">Jump to</p>
+        <div class="lh-quick">
+            <a href="/chat" class="btn btn-secondary">Ask the AI Tutor</a>
+            <a href="/survival" class="btn btn-secondary">Survival Thai</a>
+            <a href="/alphabet" class="btn btn-secondary">Alphabet</a>
+            <a href="/chanting" class="btn btn-secondary">Chanting Book</a>
+            <a href="/meditation" class="btn btn-secondary">Meditation</a>
+        </div>
+    </section>
+</div>
+{% endblock %}
