@@ -144,3 +144,10 @@ def test_the_correct_password_still_unlocks_developer_mode(monkeypatch):
     assert response.get_json()["success"] is True
     with client.session_transaction() as s:
         assert s["user_progress"]["is_developer"] is True
+
+
+def test_menu_does_not_advertise_developer_login():
+    # Visitors kept seeing "Developer Login" in the Account menu. The page
+    # stays reachable by its address, but nothing on the site links to it.
+    page = app.test_client().get("/about").get_data(as_text=True)
+    assert 'href="/developer-login"' not in page
