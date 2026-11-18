@@ -104,7 +104,7 @@ def test_social_preview_tags_point_at_a_real_image(client):
     html = client.get('/').get_data(as_text=True)
     assert '<meta property="og:image" content="' + seo.SITE_URL + '/static/img/brand/social-preview.png">' in html
     assert os.path.exists(os.path.join(app_module.app.static_folder, 'img', 'brand', 'social-preview.png'))
-    assert '<meta property="og:title" content="Home - ThaiBridge AI">' in html
+    assert '<meta property="og:title" content="ThaiBridge — Learn Thai and the Dhamma, free to start">' in html
 
 
 def test_version_stamped_static_files_are_cached_for_a_year(client):
