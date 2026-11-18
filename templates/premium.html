@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Premium AI Learning - Plans & Pricing{% endblock %}
+{% block title %}The Full ThaiBridge Course - Plans & Pricing{% endblock %}
 
 {% block content %}
+{# Leads with the course, not the AI (feedback 2026-11-18: "why pay when
+   ChatGPT exists?"). No Thai line under the heading until the teacher has
+   checked one. #}
 <h1 style="text-align:center;">
-    🌟 Premium AI Learning
-    <span class="thai">ระบบเรียนรู้ AI พรีเมียม</span>
+    🌟 The Full ThaiBridge Course
 </h1>
 
 <p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
-    Learn Thai with an AI tutor by your side. Start FREE and upgrade whenever
-    you're ready — paid plans unlock more content, the premium AI tools and a
-    points multiplier.
+    A full course in Thai language and culture. The Thai is checked by a native
+    Thai teacher, with tap-to-hear audio and ThaiBridge Spelling. Start FREE and
+    upgrade whenever you're ready: paid plans unlock more of the course, the AI
+    tools and a points multiplier.
 </p>
 
 <!-- ============================================================
@@ -22,7 +25,9 @@
     🎯 What you unlock
 </h2>
 <p style="text-align:center; color:#666; font-size:0.92rem; margin:0 auto 1.8rem; max-width:640px;">
-    Powered by Claude. Try the <strong>AI Tutor FREE</strong> — up to
+    This isn't a generic chatbot. The AI is grounded in the Dhamma and Thai
+    culture, and it checks its Thai against ThaiBridge Spelling.
+    Try the <strong>AI Tutor FREE</strong> — up to
     {{ free_ai_daily_limit }} messages a day, plus
     {{ free_dhamma_daily_limit }} Dhamma questions on their own separate
     allowance — then go <strong>Pro</strong> to unlock every mode with
@@ -42,7 +47,8 @@
         <span class="feat-badge is-taste">FREE taste · Unlimited on Pro</span>
         <h4>🎓 Personal AI Tutor</h4>
         <p>Ask anything about Thai — grammar, vocabulary, tones — and get clear,
-           beginner-friendly explanations on demand.</p>
+           beginner-friendly explanations on demand, with Thai checked against
+           ThaiBridge Spelling, not guessed.</p>
     </div>
 
     <div class="feature-card">
@@ -74,7 +80,8 @@
         <span class="feat-badge is-taste">FREE taste · Unlimited on Pro</span>
         <h4>☸️ Dhamma Q&amp;A</h4>
         <p>Ask about Theravada Buddhism and the teachings on this site. Free for
-           everyone — the Dhamma is not ours to sell.</p>
+           everyone — the Dhamma is not ours to sell. Choose a Universal,
+           Thai-culture or culturally neutral view.</p>
     </div>
 
     <div class="feature-card">
