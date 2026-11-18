@@ -140,6 +140,8 @@ You'll need **Python 3.12** (the live site runs 3.12.8) and a free [Anthropic AP
 
 > **Going deeper:** [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) explains how the code fits together, [docs/TESTING.md](./docs/TESTING.md) explains how the 2,700+ tests are organised and kept off the live database, and [SECURITY.md](./SECURITY.md) covers how accounts, payments and AI costs are protected, including the known gaps.
 
+> **Developer mode** (every section open, for checking pages) is at **[/developer-login](https://thaibridge.smoald.com/developer-login)**, deliberately not linked from the menu. How to use it and where the password lives: **[docs/DEVELOPER_ACCESS.md](./docs/DEVELOPER_ACCESS.md)**.
+
 > **No email service needed locally either.** Password-reset emails are sent through [Resend](https://resend.com) when `RESEND_API_KEY` is set. Leave it unset and the reset link is printed in the terminal instead, so you can still test the whole flow.
 
 > **No `DATABASE_URL` needed locally.** Leave it unset and the app uses a SQLite file in `instance/`, so development works offline and the tests stay fast. Production sets it to a Postgres connection string. For looking at the live data — what the AI is costing, who has signed up, how to delete something without breaking a foreign key — see **[docs/DATABASE_RUNBOOK.md](./docs/DATABASE_RUNBOOK.md)**. Every query in it has been run against the real database.
