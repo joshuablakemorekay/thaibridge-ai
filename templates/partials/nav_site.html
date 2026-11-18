@@ -1,0 +1,49 @@
+{# The WEBSITE menu: shown to visitors who are not logged in (base.html
+   chooses). It leads with what a newcomer can try straight away for free, then
+   Pricing, then the two ways in. Learners get partials/nav_app.html instead.
+   Every link here is an existing page — tests/test_page_addresses.py guards
+   them. Keep it to these items; anything else belongs in footer_site.html. #}
+<ul id="main-nav" class="nav-site">
+    <li class="dropdown">
+        <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>Learn Thai</button>
+        <div class="dropdown-content">
+            <p class="dropdown-heading">Free to try</p>
+            <a href="/survival">Survival Thai: 50 phrases</a>
+            <a href="/alphabet">The Thai Alphabet</a>
+            <a href="/paiboon">ThaiBridge Spelling</a>
+            <p class="dropdown-heading">The full course</p>
+            <a href="/premium">What's in the course</a>
+            <a href="/instructions">How ThaiBridge works</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>Buddhism</button>
+        <div class="dropdown-content">
+            <p class="dropdown-heading">Free to everyone</p>
+            <a href="/theravada">Theravada Dhamma</a>
+            <a href="/theravada#dhamma-talks">Dhamma Talks</a>
+            <a href="/chanting">Digital Chanting Book</a>
+            <a href="/meditation">Meditation</a>
+            <a href="/practising-anywhere">Practising the Dhamma Anywhere</a>
+            <a href="/bob-writings">Pra Kru Bob's Writings</a>
+        </div>
+    </li>
+
+    <li class="dropdown">
+        <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>Thailand</button>
+        <div class="dropdown-content">
+            <a href="/expat2000">Expat2000: moving to Thailand</a>
+            <a href="/calendar">Thai &amp; Buddhist Calendar</a>
+            <a href="/dhamma-and-culture">Dhamma, Culture &amp; Thailand</a>
+        </div>
+    </li>
+
+    <li><a href="/premium">Pricing</a></li>
+    <li><a href="/about">About</a></li>
+
+    {% include 'partials/nav_learning_support.html' %}
+
+    <li><a href="/login">Log in</a></li>
+    <li><a href="/signup" class="nav-cta">Start free</a></li>
+</ul>
