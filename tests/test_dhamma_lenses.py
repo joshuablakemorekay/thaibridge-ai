@@ -103,6 +103,18 @@ def test_the_chat_page_shows_all_three_approaches(monkeypatch):
         assert f'data-lens="{lid}"' in body
 
 
+def test_the_chat_page_explains_the_chosen_approach(monkeypatch):
+    """The blurb only lived in a hover tooltip, which phones never show, so
+    the difference between Universal and Culturally neutral was invisible
+    at the moment of choosing."""
+    monkeypatch.setattr(appmod, "ai_agent", FakeAgent())
+    body = app.test_client().get("/chat").get_data(as_text=True)
+    default = ai_agent.DHAMMA_LENSES[ai_agent.DEFAULT_DHAMMA_LENS]
+    assert 'id="lens-blurb"' in body
+    assert 'href="/dhamma-and-culture">Compare the three' in body
+    assert "Theravada tradition preserves" in default["blurb"]
+
+
 def test_switching_approach_makes_the_tutor_forget_the_old_one():
     """Old answers in the tutor's memory drag the next few back to the old
     approach, so a switch must reset the conversation the page sends back
