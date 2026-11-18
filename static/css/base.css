@@ -83,16 +83,26 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
-        /* Body - Thai script font.
-           Noto Sans sits second ON PURPOSE. Noto Serif Thai and Cormorant both
-           claim the Latin Extended range but cannot draw the tone-marked vowels
-           the romanisation needs for the rising tone (ǎ ǐ ǔ ɔ̌), so "mǎi" came
-           out with a squashed or detached caron. The browser borrows any letter
-           a font lacks from the next one in the list; Noto Sans has them all
-           and is already loaded. Ordinary Latin and Thai are unaffected. */
+
+        /* Browsers give buttons and form boxes their own font (usually
+           Arial) instead of the page's, which put a third font on every
+           page. Make them use the site font like everything else. */
+        button, input, select, textarea {
+            font-family: inherit;
+        }
+
+        /* Body font. The whole site uses ONE family, Noto: Noto Sans for
+           English and headings, Noto Sans Thai Looped for Thai. The browser
+           takes each letter from the first font in the list that has it, so
+           English comes from Noto Sans and Thai falls through to the Thai face.
+           Looped on purpose: beginners learn the letters from their loops, and
+           the loopless "modern" Thai looks too much like Latin to learn from.
+           Noto Sans also draws every tone-marked vowel the romanisation needs
+           (ǎ ǐ ǔ ɔ̌). Testers found the old mix of five fonts looked
+           inconsistent; keep it to this pair plus the ThaiBridge Spelling
+           face for romanisation (Noto Sans Mono, the same family again). */
         body {
-            font-family: 'Noto Serif Thai', 'Noto Sans', 'Cormorant Garamond', 'Sarabun', Georgia, serif;
+            font-family: 'Noto Sans', 'Noto Sans Thai Looped', sans-serif;
             background: 
                 linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(245, 230, 211, 0.9) 100%),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bamboo" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23228B22" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23bamboo)"/></svg>');
@@ -127,7 +137,7 @@
         /* Romanization text - FIXED WIDTH SOLUTION */
         .paiboon, .romanized, .paiboon-text, 
         [class*="paiboon"], [class*="romaniz"] {
-            font-family: 'ThaiBridge Spelling', 'Roboto Mono', 'Consolas', 'Monaco', monospace !important;
+            font-family: 'ThaiBridge Spelling', 'Consolas', 'Monaco', monospace !important;
             font-weight: 400 !important;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -222,7 +232,6 @@
                 0 0 3px var(--deep-purple),
                 0 1px 0 var(--deep-purple),
                 2px 2px 4px rgba(0,0,0,0.5);
-            font-family: 'Cormorant Garamond', serif;
             letter-spacing: 0.05em;
             /* GPU acceleration */
             transform: translateZ(0);
@@ -561,7 +570,6 @@
             margin-bottom: 1.5rem;
             text-align: center;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
-            font-family: 'Cormorant Garamond', serif;
             font-weight: 700;
             letter-spacing: 0.02em;
             position: relative;
@@ -592,7 +600,6 @@
             margin: 2.5rem 0 1.5rem;
             border-bottom: none;
             padding-bottom: 0.75rem;
-            font-family: 'Cormorant Garamond', serif;
             font-weight: 700;
             position: relative;
             padding-left: 2rem;
@@ -619,7 +626,6 @@
             color: var(--royal-purple);
             font-size: clamp(1.15rem, 1.0rem + 0.75vw, 1.5rem);
             margin: 1.75rem 0 1rem;
-            font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
         }
         
@@ -1634,7 +1640,7 @@ body {
 .monk-entry-word { font-size: 1.15rem; }
 .monk-entry-pron {
     display: block;
-    font-family: "Roboto Mono", monospace;
+    font-family: 'ThaiBridge Spelling', monospace;
     font-size: 0.9rem;
     color: #1565c0;
 }
@@ -1657,7 +1663,7 @@ body {
    be the real anchor, with the respelling as the memory aid.) */
 .monk-entry-respell {
     display: block;
-    font-family: "Roboto Mono", monospace;
+    font-family: 'ThaiBridge Spelling', monospace;
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -1733,7 +1739,7 @@ body {
     opacity: 0.7;
 }
 .monk-pron-table code {
-    font-family: "Roboto Mono", monospace;
+    font-family: 'ThaiBridge Spelling', monospace;
     font-weight: 600;
     color: #1565c0;
 }
@@ -1852,7 +1858,7 @@ body {
    in base.html's nav; the button reuses the site's .dropdown pattern.
 
    Design note: the easy-read font only replaces the LATIN text. Thai script and
-   Paiboon romanization keep their own fonts (Thai needs Noto Serif Thai to
+   Paiboon romanization keep their own fonts (Thai needs Noto Sans Thai Looped to
    render its stacked vowels/tones; romanization stays monospace via its own
    !important rule earlier in this file), so switching fonts never breaks them.
    ------------------------------------------------------------------------- */
@@ -1922,15 +1928,15 @@ body {
 }
 
 /* --- Effect 1: easy-to-read font ---
-   Swap the decorative serif for Atkinson Hyperlegible (designed for maximum
-   legibility). Thai glyphs fall through to Noto Serif Thai automatically. No
+   Swap Noto Sans for Atkinson Hyperlegible (designed for maximum
+   legibility). Thai glyphs fall through to Noto Sans Thai Looped. No
    !important, so the earlier monospace romanization rule still wins. Noto Sans
    comes second for the same reason as on body: Atkinson cannot draw ǎ ǐ ǔ and
    split them into a letter plus a floating caron. */
 html.rs-font body,
 html.rs-font h1, html.rs-font h2, html.rs-font h3,
 html.rs-font h4, html.rs-font h5, html.rs-font h6 {
-    font-family: 'Atkinson Hyperlegible', 'Noto Sans', 'Noto Serif Thai', Georgia, sans-serif;
+    font-family: 'Atkinson Hyperlegible', 'Noto Sans', 'Noto Sans Thai Looped', sans-serif;
 }
 
 /* --- Effect 2: bigger text ---
