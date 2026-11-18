@@ -648,6 +648,8 @@
         .lens-chip { border-color: var(--royal-purple); color: var(--royal-purple); }
         .lens-chip:hover { background: #f3e5f5; }
         .lens-chip.active { background: var(--royal-purple); color: #fff; }
+        .lens-note { flex-basis: 100%; margin: 0; font-size: 0.9rem; color: #555; }
+        .lens-note a { color: var(--royal-purple); font-weight: 600; white-space: nowrap; }
     </style>
     {# Same three ways in as /dhamma-and-culture. Only shown in Buddhist mode. #}
     <div id="lens-bar" class="scenario-bar lens-bar" hidden>
@@ -657,6 +659,10 @@
                 title="{{ ln.blurb }}"
                 data-on-click="setLens" data-args='{{ [lid]|tojson }}'>{{ ln.icon }} {{ ln.title }}</button>
         {% endfor %}
+        {# The tooltip alone hid the difference on phones, so the chosen
+           lens's blurb is shown here too; chat.js keeps it in step. #}
+        <p class="lens-note"><span id="lens-blurb">{{ dhamma_lenses[default_dhamma_lens].blurb }}</span>
+            <a href="/dhamma-and-culture">Compare the three →</a></p>
     </div>
     {% endif %}
 

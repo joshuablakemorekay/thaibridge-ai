@@ -66,7 +66,7 @@ ROLEPLAY_SCENARIOS = {
 DHAMMA_LENSES = {
     'universal': {
         'title': 'Universal Dhamma', 'icon': '☸️',
-        'blurb': 'The teachings themselves, for anywhere. No Thai required.',
+        'blurb': "The Buddha's teachings as the Theravada tradition preserves them, for anywhere. No Thai required.",
         'prompt': """
 MODE: BUDDHIST DHAMMA GUIDE — UNIVERSAL DHAMMA
 

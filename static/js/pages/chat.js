@@ -72,6 +72,8 @@ function showLensBar() {
     bar.hidden = currentMode !== 'buddhist';
     document.querySelectorAll('.lens-chip').forEach(c =>
         c.classList.toggle('active', c.dataset.lens === currentLens));
+    const blurb = document.getElementById('lens-blurb');
+    if (blurb && DHAMMA_LENSES[currentLens]) blurb.textContent = DHAMMA_LENSES[currentLens].blurb;
 }
 
 function setLens(id) {
