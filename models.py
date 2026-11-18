@@ -104,6 +104,29 @@ class User(UserMixin, db.Model):
     signup_source          = db.Column(db.String(64), index=True)
     signup_campaign        = db.Column(db.String(64))
 
+    # --- Lifetime value (LTV): is this learner still with us? ---
+    # Added 2026-11-18 so the app can tell a learner drifting away from one who
+    # is still learning, and see why people leave. NULL on rows written before
+    # these columns existed means "we weren't recording this yet", not "never".
+    #
+    # last_active_on: the last day they used the site while signed in. A DATE,
+    # written at most once a day (see activity.py), so it costs one tiny write
+    # per learner per day rather than one per page.
+    last_active_on         = db.Column(db.Date)
+    # level3_reached_at: when they first reached Level 3, the level that earns
+    # their first free Basic section. How fast new learners get here is the
+    # best early sign of who will stay.
+    level3_reached_at      = db.Column(db.DateTime)
+    # canceled_at: when the CURRENT subscription was cancelled, copied from
+    # Stripe. Like the tier and status above it is current standing only:
+    # resubscribing clears it (and the reason). The money history lives in
+    # the payments table and is never cleared.
+    canceled_at            = db.Column(db.DateTime)
+    # cancel_reason: the one answer they picked on the goodbye page, from
+    # CANCEL_REASONS. cancel_comment: anything they chose to add.
+    cancel_reason          = db.Column(db.String(30))
+    cancel_comment         = db.Column(db.Text)
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
         # Here rather than in each route, so no route that sets a password can
@@ -205,10 +228,16 @@ def ensure_user_columns():
         'session_version':        "INTEGER NOT NULL DEFAULT 0",
         'signup_source':          "VARCHAR(64)",
         'signup_campaign':        "VARCHAR(64)",
+        'last_active_on':         "DATE",
+        'level3_reached_at':      dt,
+        'canceled_at':            dt,
+        'cancel_reason':          "VARCHAR(30)",
+        'cancel_comment':         "TEXT",
     }
     _ensure_columns('users', wanted)
     _ensure_columns('ai_usage', {'cache_write_tokens': 'INTEGER',
                                  'cache_read_tokens': 'INTEGER'})
+    _ensure_columns('payments', {'billing_period': "VARCHAR(10)"})
 
 
 def _ensure_columns(table_name, wanted):

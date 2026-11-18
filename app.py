@@ -364,6 +364,10 @@ class Payment(db.Model):
     tier         = db.Column(db.String(20))                   # 'basic' | 'pro' — subscription/renewal only
     amount_pence = db.Column(db.Integer)                      # None when the provider did not say
     currency     = db.Column(db.String(3))                    # ISO code, lower-case as Stripe sends it
+    # 'month' | 'year' for subscription and renewal rows, so LTV can tell an
+    # annual payer from a monthly one without guessing from the amount. NULL
+    # for add-ons, gifts, PayPal, and rows written before 2026-11-18.
+    billing_period = db.Column(db.String(10))
 
     # 'subscription' is the first payment of a plan, 'renewal' each one after
     # it, 'addon' the Instant Access Pass, 'dana' a gift that grants nothing.
@@ -425,6 +429,8 @@ progress.init_app(app)
 signup_source.init_app(app)
 import app_reviews  # noqa: E402  (the review prompt on /progress; needs the limiter)
 app_reviews.init_app(app)
+import activity  # noqa: E402  (LTV tracking: last active day, Level 3 date, cancel reason)
+activity.init_app(app)
 import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live site)
 security_headers.init_app(app)
 import json_only  # noqa: E402  (every POST must be JSON, except Stripe's webhook)
@@ -6518,7 +6524,8 @@ def _apply_subscription(user, *, tier, status, customer_id=None,
 
 
 def _record_payment(*, provider_ref, kind, user=None, tier=None,
-                    amount_pence=None, currency=None, provider='stripe'):
+                    amount_pence=None, currency=None, provider='stripe',
+                    billing_period=None):
     """Write one Payment row. Idempotent on provider_ref. Returns the row, or
     None if nothing could be written.
 
@@ -6537,7 +6544,8 @@ def _record_payment(*, provider_ref, kind, user=None, tier=None,
             return existing
         row = Payment(provider=provider, provider_ref=provider_ref, kind=kind,
                       user_id=user.id if user else None, tier=tier,
-                      amount_pence=amount_pence, currency=currency)
+                      amount_pence=amount_pence, currency=currency,
+                      billing_period=billing_period if billing_period in ('month', 'year') else None)
         db.session.add(row)
         db.session.commit()
     except IntegrityError:
@@ -6587,7 +6595,8 @@ def _sync_checkout_session(cs):
         return None
     _record_payment(provider_ref=cs.get('id'), kind='subscription', user=user,
                     tier=tier, amount_pence=cs.get('amount_total'),
-                    currency=cs.get('currency'))
+                    currency=cs.get('currency'),
+                    billing_period=meta.get('period'))
     app.logger.info("Activated tier '%s' for user %s", tier, user.id)
     return user
 
@@ -6619,6 +6628,23 @@ def _sync_addon_session(cs):
     return user
 
 
+def _note_cancellation(user, sub):
+    """Copy the subscription's cancellation date onto the user (LTV tracking).
+
+    Stripe sets canceled_at the moment cancel_at_period_end is requested, and
+    keeps it when the period ends. A subscription that was un-cancelled, or a
+    brand-new one, has none, so the old date and reason are cleared: these are
+    current standing, like the tier. Not committed here; the caller's
+    _apply_subscription commits it with the rest."""
+    canceled_at = _ts_to_dt(sub.get('canceled_at'))
+    if canceled_at:
+        user.canceled_at = canceled_at
+    elif sub.get('status') in ('active', 'trialing') and not sub.get('cancel_at_period_end'):
+        user.canceled_at = None
+        user.cancel_reason = None
+        user.cancel_comment = None
+
+
 def _sync_subscription_object(sub):
     """A customer.subscription.* event -> update status/tier/period (handles
     cancellations: a deleted/canceled subscription drops the user back to free
@@ -6631,6 +6657,7 @@ def _sync_subscription_object(sub):
         app.logger.warning("No user matched subscription %s", sub.get('id'))
         return None
 
+    _note_cancellation(user, sub)
     _apply_subscription(user,
                         tier=meta.get('tier', user.subscription_tier),
                         status=_subscription_status(sub),
@@ -6640,6 +6667,27 @@ def _sync_subscription_object(sub):
     app.logger.info("Subscription %s for user %s -> %s",
                     sub.get('id'), user.id, sub.get('status'))
     return user
+
+
+def _invoice_period(invoice, user):
+    """'month' or 'year' for a renewal invoice, or None if it can't be told.
+
+    The invoice's own line says how often its price recurs. If an older API
+    shape hides that, fall back to the period of this learner's most recent
+    subscription payment: a plan's period never changes without a new
+    Checkout, and that Checkout records it."""
+    try:
+        line = ((invoice.get('lines') or {}).get('data') or [{}])[0]
+        recurring = ((line.get('price') or {}).get('recurring')
+                     or line.get('plan') or {})
+        period = recurring.get('interval')
+        if period in ('month', 'year'):
+            return period
+    except (AttributeError, IndexError, TypeError):
+        pass
+    last = (Payment.query.filter_by(user_id=user.id, kind='subscription')
+            .order_by(Payment.created_at.desc()).first())
+    return last.billing_period if last else None
 
 
 def _sync_invoice_paid(invoice):
@@ -6669,7 +6717,8 @@ def _sync_invoice_paid(invoice):
         _record_payment(provider_ref=invoice.get('id'), kind='renewal',
                         user=user, tier=user.subscription_tier,
                         amount_pence=invoice.get('amount_paid'),
-                        currency=invoice.get('currency'))
+                        currency=invoice.get('currency'),
+                        billing_period=_invoice_period(invoice, user))
     app.logger.info("Renewal recorded for user %s (sub %s)", user.id, sub_id)
     return user
 
@@ -6886,6 +6935,9 @@ def cancel_subscription():
         return _go_to('/progress?cancel=failed')
 
     # Record it now (the webhook will also do this — both are idempotent).
+    _note_cancellation(current_user, sub)
+    if not current_user.canceled_at:
+        current_user.canceled_at = utcnow()
     _apply_subscription(current_user, tier=current_user.subscription_tier,
                         status='canceling',
                         current_period_end=_subscription_period_end(sub))
@@ -6899,7 +6951,8 @@ def cancel_subscription():
 @login_required
 def subscription_goodbye():
     """A friendly 'sorry to see you go' page shown right after cancellation."""
-    return render_template('subscription_goodbye.html')
+    return render_template('subscription_goodbye.html',
+                           cancel_reasons=activity.CANCEL_REASONS)
 
 
 @app.route('/stripe/webhook', methods=['POST'])

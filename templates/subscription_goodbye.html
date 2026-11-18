@@ -16,6 +16,22 @@
         </p>
         <p class="metta">May you be happy!</p>
 
+        {% if not current_user.cancel_reason %}
+        <form class="cancel-reason" data-json-post action="/api/cancel-reason">
+            <h2>Would you tell us why? <span class="optional">(optional)</span></h2>
+            <p class="hint">One tap is plenty. It helps make ThaiBridge better for the next learner.</p>
+            {% for key, words in cancel_reasons.items() %}
+            <label class="reason-option">
+                <input type="radio" name="reason" value="{{ key }}" required> {{ words }}
+            </label>
+            {% endfor %}
+            <label class="comment-label" for="cancel-comment">Anything else you'd like to say?</label>
+            <textarea id="cancel-comment" name="comment" maxlength="1000" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <p data-form-message role="alert"></p>
+        </form>
+        {% endif %}
+
         <div class="action-buttons">
             <a href="/learn" class="btn btn-primary">Keep learning (FREE)</a>
             <a href="/premium" class="btn btn-secondary">View plans</a>
@@ -42,6 +58,28 @@
         font-style: italic;
         margin-top: 1.5rem;
     }
+    .cancel-reason {
+        text-align: left;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #eee;
+    }
+    .cancel-reason h2 { font-size: 1.2rem; color: var(--royal-purple); margin-bottom: 0.25rem; }
+    .cancel-reason .optional { font-weight: normal; color: #777; font-size: 0.95rem; }
+    .cancel-reason p.hint { font-size: 0.95rem; color: #666; margin-bottom: 0.75rem; }
+    .reason-option { display: block; padding: 0.35rem 0; color: #444; cursor: pointer; }
+    .comment-label { display: block; margin-top: 0.75rem; color: #444; }
+    .cancel-reason textarea {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0.35rem 0 0.75rem;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font: inherit;
+    }
+    .cancel-reason .btn { border: none; cursor: pointer; }
+    .cancel-reason [data-form-message] { color: var(--bodhi-green, #6b8e23); margin-top: 0.75rem; }
     .action-buttons {
         display: flex;
         gap: 1rem;
