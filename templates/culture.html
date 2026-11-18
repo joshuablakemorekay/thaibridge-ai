@@ -150,7 +150,7 @@
 {% block content %}
 {% from "_page_banner.html" import page_banner %}
 <h1>
-    🎭 Thai Culture & Etiquette
+    Thai Culture & Etiquette
     <span class="thai">วัฒนธรรมและมารยาทไทย</span>
 </h1>
 
@@ -178,10 +178,10 @@
 <div class="card" style="text-align: center;">
     <strong>Jump to:</strong>
     <p style="margin-top: 0.5rem;">
-        <a href="#greetings" class="btn" style="margin: 0.25rem;">👋 Greetings</a>
-        <a href="#wai" class="btn" style="margin: 0.25rem;">🙏 The Wai</a>
-        <a href="#festivals" class="btn btn-saffron" style="margin: 0.25rem;">🎉 Festivals</a>
-        <a href="#stories" class="btn" style="margin: 0.25rem;">📖 Stories</a>
+        <a href="#greetings" class="btn" style="margin: 0.25rem;">Greetings</a>
+        <a href="#wai" class="btn" style="margin: 0.25rem;">The Wai</a>
+        <a href="#festivals" class="btn btn-saffron" style="margin: 0.25rem;">Festivals</a>
+        <a href="#stories" class="btn" style="margin: 0.25rem;">Stories</a>
     </p>
 </div>
 
@@ -189,7 +189,7 @@
 {% if cultural_info.greetings_hello_goodbye %}
 <div class="collapsible-section">
     <div class="section-header" id="greetings">
-        <h2>👋 {{ cultural_info.greetings_hello_goodbye.name }}</h2>
+        <h2>{{ cultural_info.greetings_hello_goodbye.name }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -249,7 +249,7 @@
 
             <!-- Monk Form -->
             <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.25rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--saffron);">
-                <h4 style="color: var(--temple-red); margin-top: 0;">🙏 Greeting Monks</h4>
+                <h4 style="color: var(--temple-red); margin-top: 0;">Greeting Monks</h4>
                 <div class="thai-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.thai }}</div>
                 <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text); margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.paiboon }}</div>
                 <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Breakdown:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.breakdown }}</p>
@@ -261,13 +261,13 @@
 
             <!-- Key Insight -->
             <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 5px solid var(--royal-purple);">
-                <h4 style="color: var(--royal-purple); margin-top: 0;">💡 {{ cultural_info.greetings_hello_goodbye.hello.key_insight.point }}</h4>
+                <h4 style="color: var(--royal-purple); margin-top: 0;">{{ cultural_info.greetings_hello_goodbye.hello.key_insight.point }}</h4>
                 <p style="font-size: 1.05rem; line-height: 1.8;">{{ cultural_info.greetings_hello_goodbye.hello.key_insight.explanation }}</p>
             </div>
 
             <!-- Cultural Notes -->
             <div style="background: #fff9e6; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
-                <h4 style="color: var(--temple-red); margin-top: 0;">📝 Cultural Notes</h4>
+                <h4 style="color: var(--temple-red); margin-top: 0;">Cultural Notes</h4>
                 <ul style="line-height: 1.8; padding-left: 1.5rem;">
                     {% for note in cultural_info.greetings_hello_goodbye.hello.cultural_notes %}
                     <li>{{ note }}</li>
@@ -340,7 +340,7 @@
 
             <!-- Cultural Notes for Goodbye -->
             <div style="background: #fff9e6; padding: 1.25rem; border-radius: 8px;">
-                <h4 style="color: var(--temple-red); margin-top: 0;">📝 Cultural Notes</h4>
+                <h4 style="color: var(--temple-red); margin-top: 0;">Cultural Notes</h4>
                 <ul style="line-height: 1.8; padding-left: 1.5rem;">
                     {% for note in cultural_info.greetings_hello_goodbye.goodbye.cultural_notes %}
                     <li>{{ note }}</li>
@@ -369,7 +369,7 @@
 {% if cultural_info.wai_gesture %}
 <div class="collapsible-section">
     <div class="section-header" id="wai">
-        <h2>🙏 {{ cultural_info.wai_gesture.name }}</h2>
+        <h2>{{ cultural_info.wai_gesture.name }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -486,7 +486,7 @@
                 </ul>
             </div>
             <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 3px solid var(--bodhi-green);">
-                <strong style="color: var(--bodhi-green);">💡 Key Insight:</strong>
+                <strong style="color: var(--bodhi-green);">Key Insight:</strong>
                 <p style="margin: 0.5rem 0 0 0;">{{ cultural_info.wai_gesture.who_wais_whom.key_insight }}</p>
             </div>
         </div>
@@ -547,11 +547,11 @@
 <div class="lotus-divider">❀ ❀ ❀</div>
 
 <!-- Festivals Section -->
-<h2 id="festivals">🎉 Major Thai Festivals</h2>
+<h2 id="festivals">Major Thai Festivals</h2>
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="festivals">🎉 Major Thai Festivals</h2>
+        <h2 id="festivals">Major Thai Festivals</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -575,7 +575,7 @@
         <div class="card" style="text-align: center;">
             <p>Learn the vocabulary for Thai festivals, or see when they fall this year:</p>
             <a href="/exercise/festivals" class="btn btn-saffron">Practice Festival Vocabulary →</a>
-            <a href="/calendar" class="btn btn-saffron">📅 Thai &amp; Buddhist Calendar →</a>
+            <a href="/calendar" class="btn btn-saffron">Thai &amp; Buddhist Calendar →</a>
         </div>
     </div>
 </div>
@@ -583,7 +583,7 @@
 <div class="lotus-divider">❀ ❀ ❀</div>
 
 <!-- Cultural Stories Section -->
-<h2 id="stories">📖 Cultural Stories</h2>
+<h2 id="stories">Cultural Stories</h2>
 
 <p style="margin-bottom: 1.5rem;">
     These stories provide cultural context and teach important Thai values:
@@ -606,7 +606,7 @@
                 <p class="feature-tale-sub">{{ tale.subtitle }}</p>
                 {% if tale.thai_version %}
                 <a class="feature-tale-link" href="{{ tale.thai_version.href }}">
-                    ✍️ {{ tale.thai_version.label }} &rarr;
+                    {{ tale.thai_version.label }} &rarr;
                 </a>
                 {% endif %}
             </div>
@@ -618,7 +618,7 @@
                 {% endfor %}
             </div>
 
-            <h4 class="feature-tale-heading">☸️ What this story teaches</h4>
+            <h4 class="feature-tale-heading">What this story teaches</h4>
             <div class="feature-tale-table-wrap">
                 <table class="feature-tale-table">
                     <thead>
@@ -645,7 +645,7 @@
             </div>
 
             {% if tale.scripture_note %}
-            <h4 class="feature-tale-heading">📜 {{ tale.scripture_note.heading }}</h4>
+            <h4 class="feature-tale-heading">{{ tale.scripture_note.heading }}</h4>
             <div class="feature-tale-note">
                 {% for paragraph in tale.scripture_note.intro %}
                 <p>{{ paragraph|safe }}</p>
@@ -661,7 +661,7 @@
             </div>
             {% endif %}
 
-            <h4 class="feature-tale-heading">📕 Vocabulary highlights</h4>
+            <h4 class="feature-tale-heading">Vocabulary highlights</h4>
             <ul class="feature-tale-vocab">
                 {% for word in tale.vocabulary %}
                 <li>
@@ -689,7 +689,7 @@
     <p style="line-height: 1.8; white-space: pre-line;">{{ story.story }}</p>
     
     <div style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 10px; border-left: 4px solid var(--gold);">
-        <strong>✨ Lesson:</strong>
+        <strong>Lesson:</strong>
         <p style="margin-top: 0.5rem;">{{ story.lesson }}</p>
     </div>
 </div>
@@ -699,7 +699,7 @@
 
 <!-- Cultural Tips -->
 <div class="card" style="border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">🙏 Important Cultural Tips</h2>
+    <h2 style="margin-top: 0;">Important Cultural Tips</h2>
     
     <h4>The Wai (ไหว้)</h4>
     <p style="margin-bottom: 1rem;">
@@ -733,7 +733,7 @@
 </div>
 
 <div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">🌾 About Isan Culture</h2>
+    <h2 style="margin-top: 0;">About Isan Culture</h2>
     <p style="line-height: 1.8;">
         The <strong>Isan region</strong> (อีสาน) in northeastern Thailand has a distinct culture influenced 
         by Lao language and traditions. Many forest monasteries are located here, and the Isan dialect 

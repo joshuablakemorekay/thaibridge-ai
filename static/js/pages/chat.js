@@ -114,13 +114,13 @@ function switchMode(mode) {
 
     // Show mode change message
     const modeNames = {
-        'conversation': '🗣️ Conversation Mode - Practice Thai dialogue',
-        'tutor': '🎓 Tutor Mode - Get explanations and answers',
-        'cultural': '🌏 Cultural Guide - Learn Thai customs',
-        'buddhist': '☸️ Buddhist Guide - Explore the Dhamma. Choose your approach above',
-        'generator': '📝 Generator Mode - Create custom exercises',
-        'helper': '💡 Helper Mode - Get smart hints',
-        'translator': '🔤 Translator - Type English or Thai, or tap 📷 for a photo of a menu or sign'
+        'conversation': 'Conversation Mode - Practice Thai dialogue',
+        'tutor': 'Tutor Mode - Get explanations and answers',
+        'cultural': 'Cultural Guide - Learn Thai customs',
+        'buddhist': 'Buddhist Guide - Explore the Dhamma. Choose your approach above',
+        'generator': 'Generator Mode - Create custom exercises',
+        'helper': 'Helper Mode - Get smart hints',
+        'translator': 'Translator - Type English or Thai, or tap 📷 for a photo of a menu or sign'
     };
 
     addMessage('system', `Switched to ${modeNames[mode]}`);
@@ -379,7 +379,7 @@ function startScenario(id, title) {
 
     const welcome = document.querySelector('.welcome-message');
     if (welcome) welcome.remove();
-    addMessage('system', `🎭 Roleplay started: ${title}. Reply in Thai — the other person will begin.`);
+    addMessage('system', `Roleplay started: ${title}. Reply in Thai — the other person will begin.`);
 
     // Let the AI open the scene in character (hidden control message).
     callAI('(The learner is ready. Please begin the scene in character.)', { showUser: false });
@@ -405,7 +405,7 @@ function exitScenario() {
     document.querySelectorAll('.scenario-chip').forEach(c => c.classList.remove('active'));
     const exit = document.getElementById('scenario-exit');
     if (exit) exit.hidden = true;
-    addMessage('system', '🎭 Roleplay ended. Back to open conversation.');
+    addMessage('system', 'Roleplay ended. Back to open conversation.');
 }
 
 function addMessage(type, content) {
@@ -460,7 +460,7 @@ function clearChat() {
     const chatBody = document.getElementById('chat-messages');
     chatBody.innerHTML = `
         <div class="welcome-message">
-            <h2>🪷 Chat Cleared!</h2>
+            <h2>Chat Cleared!</h2>
             <p>Start a new conversation below.</p>
         </div>
         <div id="chat-placeholder">
@@ -520,13 +520,13 @@ function updateLimitHint() {
     // surface, which is the same objection as charging for it — just
     // quieter. The tutor line keeps its link; that one really is a product.
     if (left > 0 && pool === 'dhamma') {
-        hint.innerHTML = `🪷 <strong>${left}</strong> Dhamma question${left === 1 ? '' : 's'} left today`;
+        hint.innerHTML = `<strong>${left}</strong> Dhamma question${left === 1 ? '' : 's'} left today`;
     } else if (left > 0) {
-        hint.innerHTML = `🎁 FREE taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
+        hint.innerHTML = `FREE taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
             + `<a href="/premium">Go Pro for unlimited →</a>`;
     } else if (pool === 'dhamma') {
         // No upsell: the teaching is free, and the cap is a running cost.
-        hint.innerHTML = `🪷 That’s today’s Dhamma questions — the teaching is free, `
+        hint.innerHTML = `That’s today’s Dhamma questions — the teaching is free, `
             + `the model isn’t. Back tomorrow.`;
     } else {
         hint.innerHTML = `🔒 You’ve used today’s free AI messages · `

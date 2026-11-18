@@ -292,7 +292,7 @@
 
             if ((story.virtues || []).length) {
                 var vsec = el('section', 'rw-virtues');
-                vsec.appendChild(el('h3', 'rw-note-head', '☸️ คุณธรรมในเรื่องนี้ — the virtues in this story'));
+                vsec.appendChild(el('h3', 'rw-note-head', 'คุณธรรมในเรื่องนี้ — the virtues in this story'));
                 var ul = el('ul', 'rw-virtue-list');
                 story.virtues.forEach(function (v) {
                     var li = el('li', 'rw-virtue');
@@ -315,7 +315,7 @@
 
             if ((story.vocabulary || []).length) {
                 var vocab = el('section', 'rw-vocab');
-                vocab.appendChild(el('h3', 'rw-note-head', '📕 คำศัพท์ — vocabulary'));
+                vocab.appendChild(el('h3', 'rw-note-head', 'คำศัพท์ — vocabulary'));
                 var vlist = el('ul', 'rw-vocab-list');
                 story.vocabulary.forEach(function (w) {
                     var li = el('li', 'rw-vocab-item');
@@ -340,7 +340,7 @@
             }
 
             if (story.moral_en) {
-                body.appendChild(el('p', 'rw-moral', '☸️ ' + story.moral_en));
+                body.appendChild(el('p', 'rw-moral', '' + story.moral_en));
             }
             if (story.source) {
                 body.appendChild(el('p', 'rw-source', story.source));
@@ -562,7 +562,7 @@
         toggle.addEventListener('click', function () {
             var hidden = guide.classList.toggle('is-hidden');
             toggle.setAttribute('aria-pressed', hidden ? 'false' : 'true');
-            toggle.textContent = hidden ? '👁️ Show guide' : '👁️ Hide guide';
+            toggle.textContent = hidden ? 'Show guide' : 'Hide guide';
             check.hidden = !hidden || !checking;
             clear();
         });

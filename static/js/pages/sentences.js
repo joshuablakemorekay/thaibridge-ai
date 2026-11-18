@@ -183,7 +183,7 @@ function sbRender() {
     });
     var speaker = document.getElementById('sb-speaker');
     speaker.className = 'sb-speaker ' + sbQuestion.speaker;
-    speaker.textContent = sbQuestion.speaker === 'male' ? '👨 said by a man' : '👩 said by a woman';
+    speaker.textContent = sbQuestion.speaker === 'male' ? 'Said by a man' : 'Said by a woman';
     document.getElementById('sb-english').textContent = sbQuestion.english;
     document.getElementById('sb-check').disabled = true;
     document.getElementById('sb-result').hidden = true;
@@ -257,7 +257,7 @@ function sbCheck() {
             if (res.tip) {
                 var tip = document.createElement('div');
                 tip.style.marginTop = '0.5rem';
-                tip.textContent = '💡 ' + res.tip;
+                tip.textContent = '' + res.tip;
                 box.appendChild(tip);
             }
         })

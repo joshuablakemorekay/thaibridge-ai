@@ -293,18 +293,18 @@
         <p class="x2k-tagline">{{ m.tagline }}</p>
     </div>
     <div class="x2k-body">
-        <h3>📘 Know</h3>
+        <h3>Know</h3>
         <ul class="x2k-know">
             {% for fact in m.know %}<li>{{ fact }}</li>{% endfor %}
         </ul>
         {% if m.key == 'fit-in' %}
-        <p class="x2k-sources">Go deeper: <a href="/culture">🎭 Thai culture &amp; temple etiquette</a></p>
+        <p class="x2k-sources">Go deeper: <a href="/culture">Thai culture &amp; temple etiquette</a></p>
         {% endif %}
         {% if m.links %}
         <p class="x2k-sources">
             Official sources:
             {% for key in m.links %}
-            <a href="{{ links[key].url }}" target="_blank" rel="noopener">🔗 {{ links[key].label }}</a>
+            <a href="{{ links[key].url }}" target="_blank" rel="noopener">{{ links[key].label }}</a>
             {% endfor %}
         </p>
         {% endif %}
@@ -321,7 +321,7 @@
             {% endfor %}
         </ul>
 
-        <h3>🗣️ Say it in Thai</h3>
+        <h3>Say it in Thai</h3>
         <div class="x2k-say">
             {% for phrase in m.say %}
             <div class="x2k-phrase">
@@ -345,7 +345,7 @@
 </section>
 {% endfor %}
 
-<h2 style="text-align:center;">🆘 Save these numbers now</h2>
+<h2 style="text-align:center;">Save these numbers now</h2>
 <div class="x2k-sos">
     <a href="tel:1669"><span>1669</span>Ambulance</a>
     <a href="tel:191"><span>191</span>Police</a>
@@ -361,9 +361,9 @@
 
 <div class="x2k-finale">
     <p><strong>Set up? Now make Thailand feel like home.</strong></p>
-    <a href="/survival" class="btn btn-saffron">🗣️ Start Survival Thai (free)</a>
-    <a href="/business-thai" class="btn btn-secondary">💼 Business Thai</a>
-    <a href="/chat" class="btn btn-secondary">🤖 Ask the AI Tutor</a>
+    <a href="/survival" class="btn btn-saffron">Start Survival Thai (free)</a>
+    <a href="/business-thai" class="btn btn-secondary">Business Thai</a>
+    <a href="/chat" class="btn btn-secondary">Ask the AI Tutor</a>
 </div>
 
 <div class="x2k-toast" id="x2k-toast" role="status"></div>

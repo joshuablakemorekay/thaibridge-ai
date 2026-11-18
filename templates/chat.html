@@ -543,56 +543,56 @@
 {% block content %}
 <div class="chat-container">
     <div class="chat-header">
-        <h1><span class="title-emoji">🤖</span>AI Learning Assistant</h1>
+        <h1>AI Learning Assistant</h1>
         <p>Practice Thai with an intelligent AI tutor - Choose your mode below</p>
         
         <div class="mode-selector">
             <button class="mode-btn active" data-mode="conversation" data-on-click="switchMode" data-args='["conversation"]'>
-                🗣️ Conversation
+                Conversation
                 <span class="mode-tooltip">
-                    <strong>🗣️ Conversation</strong>
+                    <strong>Conversation</strong>
                     Chat back-and-forth in Thai like a real dialogue. The AI replies naturally and adapts to your level, so you build speaking confidence and learn how words actually flow in real life.
                 </span>
             </button>
             <button class="mode-btn" data-mode="tutor" data-on-click="switchMode" data-args='["tutor"]'>
-                🎓 Tutor
+                Tutor
                 <span class="mode-tooltip">
-                    <strong>🎓 Tutor</strong>
+                    <strong>Tutor</strong>
                     Ask "why" and get clear explanations of grammar, tones, and word choice. Best when you want to truly understand a rule instead of just memorising it.
                 </span>
             </button>
             <button class="mode-btn" data-mode="cultural" data-on-click="switchMode" data-args='["cultural"]'>
-                🌏 Culture
+                Culture
                 <span class="mode-tooltip">
-                    <strong>🌏 Culture</strong>
+                    <strong>Culture</strong>
                     Learn Thai customs, etiquette, and traditions behind the language. Helps you speak <em>appropriately</em> — knowing when to be polite, formal, or casual, not just grammatically correct.
                 </span>
             </button>
             <button class="mode-btn" data-mode="buddhist" data-on-click="switchMode" data-args='["buddhist"]'>
-                ☸️ Buddhist
+                Buddhist
                 <span class="mode-tooltip">
-                    <strong>☸️ Buddhist</strong>
+                    <strong>Buddhist</strong>
                     Ask about the Dhamma your way: the universal teachings, the Dhamma as it lives in Thai culture, or culturally neutral. Pick your approach once you switch to this mode.
                 </span>
             </button>
             <button class="mode-btn" data-mode="generator" data-on-click="switchMode" data-args='["generator"]'>
-                📝 Generator
+                Generator
                 <span class="mode-tooltip">
-                    <strong>📝 Generator</strong>
+                    <strong>Generator</strong>
                     Creates custom quizzes and practice exercises on demand. Tailored to your exact level and chosen topic, so you always have fresh material to drill weak spots.
                 </span>
             </button>
             <button class="mode-btn" data-mode="translator" data-on-click="switchMode" data-args='["translator"]'>
-                🔤 Translator
+                Translator
                 <span class="mode-tooltip">
-                    <strong>🔤 Translator</strong>
+                    <strong>Translator</strong>
                     Type English or Thai and get the translation with its spelling and meaning. Unlike a general translator, it gives the right version for who you're talking to and explains why. Ask "to a friend?" or "to a monk?" to change it.
                 </span>
             </button>
             <button class="mode-btn" data-mode="helper" data-on-click="switchMode" data-args='["helper"]'>
-                💡 Helper
+                Helper
                 <span class="mode-tooltip">
-                    <strong>💡 Helper</strong>
+                    <strong>Helper</strong>
                     Gives gentle hints instead of full answers. Nudges you toward the solution so you still learn by figuring it out yourself — perfect when you're stuck but don't want to give up.
                 </span>
             </button>
@@ -632,10 +632,10 @@
         .scenario-chip--exit:hover { background: #fdecea; }
     </style>
     <div id="scenario-bar" class="scenario-bar">
-        <span class="scenario-label">🎭 Roleplay a scene:</span>
+        <span class="scenario-label">Roleplay a scene:</span>
         {% for sid, sc in roleplay_scenarios.items() %}
         <button type="button" class="scenario-chip" data-scenario="{{ sid }}"
-                data-on-click="startScenario" data-args='{{ [sid, sc.title]|tojson }}'>{{ sc.icon }} {{ sc.title }}</button>
+                data-on-click="startScenario" data-args='{{ [sid, sc.title]|tojson }}'>{{ sc.title }}</button>
         {% endfor %}
         <button type="button" class="scenario-chip scenario-chip--exit" id="scenario-exit"
                 data-on-click="exitScenario" hidden>✕ End roleplay</button>
@@ -668,7 +668,7 @@
 
     <div class="chat-body" id="chat-messages">
         <div class="welcome-message">
-            <h2>🪷 Welcome to Your AI Thai Learning Partner!</h2>
+            <h2>Welcome to Your AI Thai Learning Partner!</h2>
             <p>
                 I'm here to help you learn Thai through conversation, explanations, and practice.
                 Choose a mode above and start chatting!
@@ -725,13 +725,13 @@
                 placeholder="Type your message in English or Thai..."
                 data-on-keydown="sendMessage" data-key="Enter"
             >
-            <button id="send-btn" data-on-click="sendMessage">Send ➤</button>
+            <button id="send-btn" data-on-click="sendMessage">Send</button>
         </div>
 
         <div class="chat-controls">
             <div>
-                <button class="control-btn" data-on-click="clearChat">🗑️ Clear Chat</button>
-                <button class="control-btn" data-on-click="exportChat">💾 Export</button>
+                <button class="control-btn" data-on-click="clearChat">Clear Chat</button>
+                <button class="control-btn" data-on-click="exportChat">Export</button>
             </div>
             <div class="token-counter">
                 <span id="token-display">Session tokens: 0</span>

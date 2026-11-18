@@ -168,7 +168,7 @@
         }
         
         body::after {
-            content: '🌴 🦚 🐘 🌺 🦎 🌿 🍃';
+            content: none;  /* decorative emoji removed: testers found them distracting */
             position: fixed;
             bottom: 10px;
             left: 0;
@@ -602,11 +602,10 @@
             padding-bottom: 0.75rem;
             font-weight: 700;
             position: relative;
-            padding-left: 2rem;
         }
         
         h2::before {
-            content: '🌺';
+            content: none;  /* was a flower emoji; removed with the 2rem indent it needed */
             position: absolute;
             left: 0;
             top: 0;
@@ -656,7 +655,7 @@
         }
         
         .card::after {
-            content: '🍃';
+            content: none;
             position: absolute;
             bottom: 10px;
             right: 15px;
@@ -871,7 +870,7 @@
         }
         
         .example-box::before {
-            content: '🌾';
+            content: none;
             position: absolute;
             top: 10px;
             right: 15px;
@@ -901,7 +900,7 @@
         }
         
         footer::before {
-            content: '🌴 🦚 🐘 🌺 🦎 🌿';
+            content: none;
             display: block;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
@@ -991,7 +990,7 @@
         }
         
         .lotus-divider::after {
-            content: '🌸 🪷 🌸';
+            content: none;
             display: block;
             background: linear-gradient(135deg, var(--silk-cream) 0%, var(--frangipani) 100%);
             padding: 0.5rem 2rem;

@@ -35,7 +35,7 @@
             });
             var result = await response.json();
             if (result.success) {
-                box.innerHTML = '<h2>🙏 ' + result.message + '</h2>';
+                box.innerHTML = '<h2>' + result.message + '</h2>';
                 return;
             }
             msg.textContent = result.message;

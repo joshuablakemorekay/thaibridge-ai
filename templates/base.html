@@ -30,7 +30,7 @@
             <button class="mobile-menu-toggle" data-on-click="toggleMobileMenu">☰</button>
             
             <ul id="main-nav">
-                <li><a href="/">🏠 Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/instructions">ℹ️ Help</a></li>
 
                 <!-- Learning Support: accessibility toggles for learners who find
@@ -39,7 +39,7 @@
                 <li class="dropdown reading-support">
                     <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'
                             title="Learning support — easier-to-read font, bigger text, more spacing, and read aloud">
-                        ♿ Learning Support
+                        Learning Support
                     </button>
                     <div class="dropdown-content reading-support-panel">
                         <p class="rs-heading">Learning Support</p>
@@ -70,75 +70,75 @@
 
                 <!-- Learn -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>📚 Learn</button>
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>Learn</button>
                     <div class="dropdown-content">
-                        <a href="/alphabet">🔤 Alphabet</a>
-                        <a href="/tones-classes">🔊 Tones & Consonant Classes</a>
-                        <a href="/vowels_syllables">🗣️ Vowels & Syllables</a>
-                        <a href="/read_write">✍️ Read & Write Script</a>
-                        <a href="/paiboon">🔤 ThaiBridge Spelling</a>
-                        <a href="/grammar">✏️ Grammar Guide</a>
-                        <a href="/formality">🎭 Formality Levels</a>
-                        <a href="/gender-examples">👤 Gender Guide</a>
-                        <a href="/sentences">💬 Sentences & Conversations</a>
-                        <a href="/learn">📖 Vocabulary</a>
-                        <a href="/lessons">📝 Lessons</a>
-                        <a href="/tour-guide">🗺️ Tour Guide Thai</a>
-                        <a href="/business-thai">💼 Business Thai</a>
+                        <a href="/alphabet">Alphabet</a>
+                        <a href="/tones-classes">Tones & Consonant Classes</a>
+                        <a href="/vowels_syllables">Vowels & Syllables</a>
+                        <a href="/read_write">Read & Write Script</a>
+                        <a href="/paiboon">ThaiBridge Spelling</a>
+                        <a href="/grammar">Grammar Guide</a>
+                        <a href="/formality">Formality Levels</a>
+                        <a href="/gender-examples">Gender Guide</a>
+                        <a href="/sentences">Sentences & Conversations</a>
+                        <a href="/learn">Vocabulary</a>
+                        <a href="/lessons">Lessons</a>
+                        <a href="/tour-guide">Tour Guide Thai</a>
+                        <a href="/business-thai">Business Thai</a>
                     </div>
                 </li>
 
                 <!-- Culture -->
-                <li><a href="/culture">🎭 Thai Culture</a></li>
+                <li><a href="/culture">Thai Culture</a></li>
 
                 <!-- Calendar: free, Gregorian and Buddhist-Era views -->
-                <li><a href="/calendar">📅 Calendar</a></li>
+                <li><a href="/calendar">Calendar</a></li>
 
                 <!-- Expat2000: free set-up guide for people moving to Thailand.
                      Its own tab rather than inside Learn — it is practical help,
                      not a Thai lesson, and it is the site's newest front door. -->
-                <li><a href="/expat2000">🚀 Expat2000</a></li>
+                <li><a href="/expat2000">Expat2000</a></li>
 
                 <!-- Buddhism -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>☸️ Buddhism</button>
+                    <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>Buddhism</button>
                     <div class="dropdown-content">
-                        <a href="/practising-anywhere">🌏 Practising the Dhamma Anywhere</a>
-                        <a href="/dhamma-and-culture">🪷 Dhamma, Culture &amp; Thailand</a>
-                        <a href="/theravada">☸️ Theravada Dhamma</a>
-                        <a href="/theravada#dhamma-talks">🪷 Dhamma Talks</a>
-                        <a href="/chanting">📿 Digital Chanting Book</a>
-                        <a href="/bob-writings">📿 Pra Kru Bob's Writings</a>
-                        <a href="/journal">📖 Journal</a>
-                        <a href="/meditation">🧘 Meditation</a>
+                        <a href="/practising-anywhere">Practising the Dhamma Anywhere</a>
+                        <a href="/dhamma-and-culture">Dhamma, Culture &amp; Thailand</a>
+                        <a href="/theravada">Theravada Dhamma</a>
+                        <a href="/theravada#dhamma-talks">Dhamma Talks</a>
+                        <a href="/chanting">Digital Chanting Book</a>
+                        <a href="/bob-writings">Pra Kru Bob's Writings</a>
+                        <a href="/journal">Journal</a>
+                        <a href="/meditation">Meditation</a>
                     </div>
                 </li>
 
                 <!-- Dictionary -->
-                <li><a href="/dictionary">📕 Dictionary</a></li>
+                <li><a href="/dictionary">Dictionary</a></li>
 
                 <!-- AI Tutor -->
-                <li><a href="/chat">🤖 AI Tutor</a></li>
+                <li><a href="/chat">AI Tutor</a></li>
 
                 <!-- Account -->
                 <li class="dropdown">
                     <button class="dropdown-toggle" data-on-click="toggleDropdown" data-args='["$this"]'>
-                        {% if current_user.is_authenticated %}👤 {{ current_user.username }}{% else %}👤 Account{% endif %}
+                        {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Account{% endif %}
                     </button>
                     <div class="dropdown-content">
                         {% if current_user.is_authenticated %}
-                        <a href="/progress">🏆 My Progress</a>
-                        <a href="/logout">🚪 Log out</a>
+                        <a href="/progress">My Progress</a>
+                        <a href="/logout">Log out</a>
                         {% else %}
-                        <a href="/signup">✍️ Sign up</a>
-                        <a href="/login">🔑 Log in</a>
+                        <a href="/signup">Sign up</a>
+                        <a href="/login">Log in</a>
                         {% endif %}
-                        <a href="/developer-login">🛠️ Developer Login</a>
+                        <a href="/developer-login">Developer Login</a>
                     </div>
                 </li>
 
                 <!-- Premium -->
-                <li><a href="/premium">⭐ Premium</a></li>
+                <li><a href="/premium">Premium</a></li>
 
                 <!-- Monk Mode: free, monk-tailored track for Thai monks learning English
                      and monks learning Thai -->
@@ -146,12 +146,12 @@
                     {% if monk_mode %}
                     <button class="monk-mode-toggle active" data-on-click="turnMonkModeOff"
                             title="Monk Mode is on — click to switch it off">
-                        🧡 Monk Mode: ON
+                        Monk Mode: ON
                     </button>
                     {% else %}
                     <a href="/monk-mode" class="monk-mode-toggle"
                        title="Free monk track — for Thai monks learning English, and monks learning Thai. Enter your access code.">
-                        🧡 Monk Mode
+                        Monk Mode
                     </a>
                     {% endif %}
                 </li>
@@ -167,7 +167,7 @@
                     <span class="gender-indicator">👩</span> Female
                 </button>
                 <button class="gender-btn active" id="neutral-btn" data-on-click="setGender" data-args='["neutral"]'>
-                    <span class="gender-indicator">👤</span> Show Both
+                    Show Both
                 </button>
             </div>
             {% endif %}
@@ -188,7 +188,7 @@
 
     {% if monk_mode %}
     <div class="monk-mode-banner">
-        🧡 <strong>Monk Mode is on.</strong> The monk lesson track is open to you. May your study bring wisdom and peace. 🙏
+        <strong>Monk Mode is on.</strong> The monk lesson track is open to you. May your study bring wisdom and peace.
     </div>
     {% endif %}
 
@@ -201,10 +201,10 @@
     </div>
     
     <footer>
-        <p>🪷 ThaiBridge AI</p>
-        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" data-on-click="tbCookieChoices">Cookie choices</a>{% endif %} • <a href="/premium#dana">🪷 Give dāna</a></p>
+        <p>ThaiBridge AI</p>
+        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" data-on-click="tbCookieChoices">Cookie choices</a>{% endif %} • <a href="/premium#dana">Give dāna</a></p>
         <p>Using <a href="/paiboon">ThaiBridge Spelling</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ · May your practice bring wisdom and peace</p>
     </footer>
     
     <script src="{{ static_v('js/pages/monk-switches.js') }}"></script>

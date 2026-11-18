@@ -96,7 +96,7 @@
 {% macro listen_url(url) %}{% if url %}<button type="button" class="th-audio pb-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
 {% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
 <h1>
-    🔤 ThaiBridge Spelling Guide
+    ThaiBridge Spelling Guide
     <span class="thai">ระบบถอดเสียงไพบูลย์</span>
 </h1>
 
@@ -109,7 +109,7 @@
    word?", not "teach me the system". The guide is still right underneath for
    the visit that is. #}
 <div class="card pb-lookup">
-    <h3 style="margin-top: 0;">🔎 Look up a word</h3>
+    <h3 style="margin-top: 0;">Look up a word</h3>
     <p class="pb-lookup-help">
         Type Thai, or the romanisation as you think it sounds — tone marks are
         optional, and <em>sawatdee</em>, <em>khop khun</em> and <em>gai</em> all
@@ -183,7 +183,7 @@
 </div>
 
 <!-- 5 Tones -->
-<h2 id="tones">🎵 The Five Thai Tones</h2>
+<h2 id="tones">The Five Thai Tones</h2>
 
 <p style="margin-bottom: 1rem;">
     Thai is a tonal language with 5 distinct tones. The same syllable with different tones can mean completely different things!
@@ -209,7 +209,7 @@
 </div>
 
 <div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: var(--bodhi-green);">
-    <h3>💡 Tone Learning Tips</h3>
+    <h3>Tone Learning Tips</h3>
     <ul style="margin-left: 1.5rem; line-height: 2;">
         {% for tone in guide.tones %}
         <li><strong>{{ tone.name }} tone:</strong> {{ tone.tip }}</li>
@@ -222,7 +222,7 @@
 </div>
 
 <!-- Consonants -->
-<h2 id="consonants">🔠 Consonants</h2>
+<h2 id="consonants">Consonants</h2>
 
 <p style="margin-bottom: 1rem;">
     Thai has 44 consonant letters, but many share the same sound. Here are the ThaiBridge Spelling romanizations:
@@ -262,7 +262,7 @@
 </div>
 
 <!-- Vowels -->
-<h2 id="vowels">🔤 Vowels</h2>
+<h2 id="vowels">Vowels</h2>
 
 <p style="margin-bottom: 1rem;">
     Thai has short and long vowel pairs. Length matters - it changes meaning! <strong>Short vowels are pronounced as phonic sounds.</strong> There is a distinct Thai accent not to be confused with the many English accents!
@@ -309,7 +309,7 @@
 </div>
 
 <div class="card" style="border-left-color: var(--lotus-pink);">
-    <h3>📏 Short vs. Long Vowels</h3>
+    <h3>Short vs. Long Vowels</h3>
     <p>In ThaiBridge Spelling, <strong>doubled letters = long vowels</strong>:</p>
     <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
         <li><span class="paiboon">a</span> (short) vs. <span class="paiboon">aa</span> (long)</li>
@@ -330,7 +330,7 @@
 
 <!-- Stressed & soft syllables -->
 <div class="card" id="stress" style="border-left-color: var(--royal-purple);">
-    <h3>🎵 Stressed (-) &amp; Soft (~) Syllables</h3>
+    <h3>Stressed (-) &amp; Soft (~) Syllables</h3>
     <p style="line-height: 1.8;">
         The Paiboon+ system in the <em>Three-Way Dictionary</em> (Becker &amp; Pirazzi) shows stress between syllables:
     </p>
@@ -352,7 +352,7 @@
 </div>
 
 <!-- Thai Tone Markers -->
-<h2 id="tone-markers">📍 Thai Tone Markers</h2>
+<h2 id="tone-markers">Thai Tone Markers</h2>
 
 <p style="margin-bottom: 1rem;">
     These marks appear above Thai consonants to modify the tone:
@@ -380,7 +380,7 @@
 </div>
 
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--gold);">
-    <h3>📚 Reference</h3>
+    <h3>Reference</h3>
     <p>
         The ThaiBridge Spelling system used in this app is based on the 
         <strong><a href="/dictionary">Thai-English English-Thai Dictionary</a></strong> 

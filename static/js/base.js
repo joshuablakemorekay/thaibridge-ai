@@ -543,7 +543,7 @@
                 document.documentElement.classList.add('rs-picking');
                 document.addEventListener('click', onPick, true);
                 document.addEventListener('keydown', onPickKey, true);
-                if (button) button.textContent = '👆 Click a part of the page';
+                if (button) button.textContent = 'Click a part of the page';
                 setHint('Click the paragraph or heading you want. Esc to cancel.');
                 closeMenus();
             }

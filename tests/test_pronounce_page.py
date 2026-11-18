@@ -70,7 +70,7 @@ def test_not_advertised_while_hidden(monkeypatch):
 def test_premium_card_appears_once_live(monkeypatch):
     monkeypatch.setattr(app_module, "PRONUNCIATION_LIVE", True)
     premium = app_module.app.test_client().get("/premium").get_data(as_text=True)
-    assert "🎤 Pronunciation Analysis" in premium
+    assert "Pronunciation Analysis" in premium
 
 
 def test_privacy_page_explains_the_microphone():

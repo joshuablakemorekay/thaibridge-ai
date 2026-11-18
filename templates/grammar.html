@@ -53,7 +53,7 @@
 
 {% block content %}
 <h1>
-    ✏️ Thai Grammar Guide
+    Thai Grammar Guide
     <span class="thai">ไวยากรณ์ภาษาไทย</span>
 </h1>
 
@@ -66,7 +66,7 @@
     <strong>Quick Navigation:</strong>
     <p style="margin-top: 0.5rem;">
         <a href="#parts-of-speech" class="btn" style="margin: 0.25rem;">Parts of Speech</a>
-        <a href="/tones-classes" class="btn btn-saffron" style="margin: 0.25rem;">⭐ Consonant Classes &amp; Tones →</a>
+        <a href="/tones-classes" class="btn btn-saffron" style="margin: 0.25rem;">Consonant Classes &amp; Tones →</a>
         <a href="#particles" class="btn" style="margin: 0.25rem;">Particles</a>
         <a href="#sentence-structure" class="btn" style="margin: 0.25rem;">Sentence Structure</a>
         <a href="#tense" class="btn" style="margin: 0.25rem;">Tense & Aspect</a>
@@ -81,7 +81,7 @@
 <!-- Parts of Speech -->
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="parts-of-speech">📚 Parts of Speech</h2>
+        <h2 id="parts-of-speech">Parts of Speech</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -93,7 +93,7 @@
     
     {% if pos.note %}
     <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid #2196f3;">
-        <strong style="color: #1565c0;">💡 Tip:</strong> {{ pos.note }} 
+        <strong style="color: #1565c0;">Tip:</strong> {{ pos.note }} 
         {% if 'pronoun' in pos.name.lower() %}
         <a href="/gender-examples" style="color: #1565c0; text-decoration: underline;">Click here for Gender Guide →</a>
         {% endif %}
@@ -105,7 +105,7 @@
     
     <!-- Key Insights -->
     <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 5px solid var(--saffron);">
-        <h4 style="margin-top: 0; color: var(--temple-red);">🎯 Key Insights</h4>
+        <h4 style="margin-top: 0; color: var(--temple-red);">Key Insights</h4>
         {% for insight in pos.key_insights %}
         <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
             <strong style="color: var(--royal-purple);">{{ insight.title }}</strong>
@@ -139,7 +139,7 @@
     
     <!-- People Classifiers -->
     <div class="card" style="border-left: 5px solid #2196F3;">
-        <h4 style="color: #1565c0; margin-top: 0;">👥 {{ pos.people.category }}</h4>
+        <h4 style="color: #1565c0; margin-top: 0;">{{ pos.people.category }}</h4>
         <p>{{ pos.people.explanation }}</p>
         {% for classifier in pos.people.classifiers %}
         <div style="background: #e3f2fd; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -165,7 +165,7 @@
     
     <!-- Animals Classifiers -->
     <div class="card" style="border-left: 5px solid #4CAF50;">
-        <h4 style="color: #2e7d32; margin-top: 0;">🐾 {{ pos.animals.category }}</h4>
+        <h4 style="color: #2e7d32; margin-top: 0;">{{ pos.animals.category }}</h4>
         <p>{{ pos.animals.explanation }}</p>
         {% for classifier in pos.animals.classifiers %}
         <div style="background: #e8f5e9; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -191,7 +191,7 @@
     
     <!-- Objects Classifiers -->
     <div class="card" style="border-left: 5px solid #FF9800;">
-        <h4 style="color: var(--saffron-text); margin-top: 0;">📦 {{ pos.objects.category }}</h4>
+        <h4 style="color: var(--saffron-text); margin-top: 0;">{{ pos.objects.category }}</h4>
         <p>{{ pos.objects.explanation }}</p>
         {% for classifier in pos.objects.classifiers %}
         <div style="background: #fff3e0; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -217,7 +217,7 @@
     
     <!-- Vehicles Classifiers -->
     <div class="card" style="border-left: 5px solid #9C27B0;">
-        <h4 style="color: #9C27B0; margin-top: 0;">🚗 {{ pos.vehicles.category }}</h4>
+        <h4 style="color: #9C27B0; margin-top: 0;">{{ pos.vehicles.category }}</h4>
         <p>{{ pos.vehicles.explanation }}</p>
         {% for classifier in pos.vehicles.classifiers %}
         <div style="background: #f3e5f5; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -243,7 +243,7 @@
     
     <!-- Containers Classifiers -->
     <div class="card" style="border-left: 5px solid #00BCD4;">
-        <h4 style="color: #00838f; margin-top: 0;">🍶 {{ pos.containers.category }}</h4>
+        <h4 style="color: #00838f; margin-top: 0;">{{ pos.containers.category }}</h4>
         <p>{{ pos.containers.explanation }}</p>
         {% for classifier in pos.containers.classifiers %}
         <div style="background: #e0f7fa; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -269,7 +269,7 @@
     
     <!-- Media Classifiers -->
     <div class="card" style="border-left: 5px solid #795548;">
-        <h4 style="color: #795548; margin-top: 0;">📚 {{ pos.media.category }}</h4>
+        <h4 style="color: #795548; margin-top: 0;">{{ pos.media.category }}</h4>
         <p>{{ pos.media.explanation }}</p>
         {% for classifier in pos.media.classifiers %}
         <div style="background: #efebe9; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -295,7 +295,7 @@
     
     <!-- Buildings Classifiers -->
     <div class="card" style="border-left: 5px solid #607D8B;">
-        <h4 style="color: #607D8B; margin-top: 0;">🏠 {{ pos.buildings.category }}</h4>
+        <h4 style="color: #607D8B; margin-top: 0;">{{ pos.buildings.category }}</h4>
         <p>{{ pos.buildings.explanation }}</p>
         {% for classifier in pos.buildings.classifiers %}
         <div style="background: #eceff1; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -321,7 +321,7 @@
     
     <!-- Clothing Classifiers -->
     <div class="card" style="border-left: 5px solid #E91E63;">
-        <h4 style="color: #c2185b; margin-top: 0;">👕 {{ pos.clothing.category }}</h4>
+        <h4 style="color: #c2185b; margin-top: 0;">{{ pos.clothing.category }}</h4>
         <p>{{ pos.clothing.explanation }}</p>
         {% for classifier in pos.clothing.classifiers %}
         <div style="background: #fce4ec; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -347,7 +347,7 @@
     
     <!-- Abstract Classifiers -->
     <div class="card" style="border-left: 5px solid #673AB7;">
-        <h4 style="color: #673AB7; margin-top: 0;">💭 {{ pos.abstract.category }}</h4>
+        <h4 style="color: #673AB7; margin-top: 0;">{{ pos.abstract.category }}</h4>
         <p>{{ pos.abstract.explanation }}</p>
         {% for classifier in pos.abstract.classifiers %}
         <div style="background: #ede7f6; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
@@ -521,7 +521,7 @@
     {% endfor %}
     
     <!-- Key Insights -->
-    <h4 style="color: var(--temple-red); margin-top: 2rem;">🔑 Essential Insights About Thai Pronouns</h4>
+    <h4 style="color: var(--temple-red); margin-top: 2rem;">Essential Insights About Thai Pronouns</h4>
     
     {% for insight in pos.key_insights %}
     <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem; border-left: 4px solid var(--saffron);">
@@ -560,7 +560,7 @@
 
 <!-- Consonant classes & tones moved to their own dedicated section -->
 <div class="card" style="text-align: center; border-left: 5px solid var(--saffron); background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
-    <h2 id="consonant-classes" style="margin-top: 0; color: var(--temple-red);">⭐ Consonant Classes &amp; Tones</h2>
+    <h2 id="consonant-classes" style="margin-top: 0; color: var(--temple-red);">Consonant Classes &amp; Tones</h2>
     <p style="font-size: 1.05rem; line-height: 1.7;">
         Consonant classes and the tone rules now have their own free, dedicated section — with the full tone chart, live/dead-syllable rules, the leading ห rule and interactive practice drills.
     </p>
@@ -569,7 +569,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="particles">💬 Particles</h2>
+        <h2 id="particles">Particles</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -603,7 +603,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="sentence-structure">📝 Sentence Structure</h2>
+        <h2 id="sentence-structure">Sentence Structure</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -676,7 +676,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="questions">❓ Question Words</h2>
+        <h2 id="questions">Question Words</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -709,7 +709,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="negation">🚫 Negation</h2>
+        <h2 id="negation">Negation</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -742,7 +742,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="comparison">⚖️ Comparison</h2>
+        <h2 id="comparison">Comparison</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -775,7 +775,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="classifiers">🔢 Classifier-Based Counting</h2>
+        <h2 id="classifiers">Classifier-Based Counting</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -811,7 +811,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="patterns">🗣️ Common Sentence Patterns</h2>
+        <h2 id="patterns">Common Sentence Patterns</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">

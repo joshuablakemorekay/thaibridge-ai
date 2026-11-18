@@ -8,56 +8,56 @@ const SESSIONS = {
     // Two minutes, for when you are on the move - a moment of stillness before
     // giving blessings. Phase durations are in minutes, so 0.5 = 30 seconds.
     blessing: {
-        label: '🙏 On the Move — Before Giving Blessings',
+        label: 'On the Move — Before Giving Blessings',
         totalMinutes: 2,
         type: 'breathing',
         phases: [
-            { name: '🌬️ Arriving',   duration: 0.5, instruction: 'Three slow breaths. Feel your feet on the ground. Let the hurry fall away.' },
-            { name: '🪷 Metta',      duration: 1,   instruction: '"May you be happy. May you be well. May you be free from suffering." Wish it for the people you are about to bless.' },
-            { name: '🙏 Blessing',   duration: 0.5, instruction: 'Rest the mind in goodwill. Carry this calm with you into the blessing.' },
+            { name: 'Arriving',   duration: 0.5, instruction: 'Three slow breaths. Feel your feet on the ground. Let the hurry fall away.' },
+            { name: 'Metta',      duration: 1,   instruction: '"May you be happy. May you be well. May you be free from suffering." Wish it for the people you are about to bless.' },
+            { name: 'Blessing',   duration: 0.5, instruction: 'Rest the mind in goodwill. Carry this calm with you into the blessing.' },
         ]
     },
     samatha: {
-        label: '🌊 Samadhi — Concentration',
+        label: 'Samadhi — Concentration',
         totalMinutes: 30,
         type: 'breathing',
         phases: [
-            { name: '🌿 Settling',       duration: 5,  instruction: 'Sit comfortably. Let thoughts settle like sediment in still water. Simply be here.' },
-            { name: '🌬️ Anapanasati',   duration: 15, instruction: 'Bring full attention to the breath at the nostrils. Notice in-breath and out-breath without control.' },
-            { name: '🌊 Deepening',      duration: 10, instruction: 'Rest awareness in the breath continuously. If distracted, return gently without judgment.' },
+            { name: 'Settling',       duration: 5,  instruction: 'Sit comfortably. Let thoughts settle like sediment in still water. Simply be here.' },
+            { name: 'Anapanasati',   duration: 15, instruction: 'Bring full attention to the breath at the nostrils. Notice in-breath and out-breath without control.' },
+            { name: 'Deepening',      duration: 10, instruction: 'Rest awareness in the breath continuously. If distracted, return gently without judgment.' },
         ]
     },
     vipassana: {
-        label: '👁️ Vipassana — Insight',
+        label: 'Vipassana — Insight',
         totalMinutes: 30,
         type: 'breathing',
         phases: [
-            { name: '🌿 Settling into Stillness', duration: 5,  instruction: 'Begin with breath awareness. Allow the mind to arrive before turning to investigation.' },
+            { name: 'Settling into Stillness', duration: 5,  instruction: 'Begin with breath awareness. Allow the mind to arrive before turning to investigation.' },
             { name: '🔍 Noting Practice',          duration: 15, instruction: 'Observe arising phenomena — thoughts, sensations, emotions. Note each: arising, passing, impermanent.' },
-            { name: '🌌 Open Awareness',           duration: 10, instruction: 'Allow awareness to rest openly. Receive whatever arises without clinging or aversion.' },
+            { name: 'Open Awareness',           duration: 10, instruction: 'Allow awareness to rest openly. Receive whatever arises without clinging or aversion.' },
         ]
     },
     body_scan: {
-        label: '🫁 Body Scan',
+        label: 'Body Scan',
         totalMinutes: 20,
         type: 'body_scan',
         phases: [
-            { name: '🌱 Grounding',          duration: 3,  instruction: 'Lie down or sit. Notice the points of contact between your body and the surface supporting you.' },
-            { name: '🫁 Body Scan',          duration: 14, instruction: 'Move attention slowly upward through the body. At each area, simply notice whatever is present.' },
-            { name: '🌟 Whole Body Awareness', duration: 3,  instruction: 'Expand awareness to hold the entire body as a whole. Rest here in open presence.' },
+            { name: 'Grounding',          duration: 3,  instruction: 'Lie down or sit. Notice the points of contact between your body and the surface supporting you.' },
+            { name: 'Body Scan',          duration: 14, instruction: 'Move attention slowly upward through the body. At each area, simply notice whatever is present.' },
+            { name: 'Whole Body Awareness', duration: 3,  instruction: 'Expand awareness to hold the entire body as a whole. Rest here in open presence.' },
         ]
     },
     full: {
-        label: '☸ Full Session',
+        label: 'Full Session',
         totalMinutes: 60,
         type: 'breathing',
         phases: [
-            { name: '🌿 Settling',             duration: 5,  instruction: 'Sit comfortably. Let thoughts settle. Simply arrive here.' },
-            { name: '🌬️ Anapanasati',         duration: 20, instruction: 'Rest attention on the breath at the nostrils. Establish deep concentration.' },
-            { name: '🌊 Deepening Samadhi',    duration: 5,  instruction: 'Allow the mind to rest in stillness. The breath becomes subtle and fine.' },
+            { name: 'Settling',             duration: 5,  instruction: 'Sit comfortably. Let thoughts settle. Simply arrive here.' },
+            { name: 'Anapanasati',         duration: 20, instruction: 'Rest attention on the breath at the nostrils. Establish deep concentration.' },
+            { name: 'Deepening Samadhi',    duration: 5,  instruction: 'Allow the mind to rest in stillness. The breath becomes subtle and fine.' },
             { name: '🔍 Vipassana — Noting',   duration: 15, instruction: 'Open awareness to all arising phenomena. Note thoughts, sensations, emotions as they arise and pass.' },
-            { name: '🌌 Open Awareness',       duration: 10, instruction: 'Rest in open, choiceless awareness. Receive experience without preference.' },
-            { name: '🪷 Metta Closing',        duration: 5,  instruction: '"May all beings be happy. May all beings be free from suffering." Radiate loving kindness outward.' },
+            { name: 'Open Awareness',       duration: 10, instruction: 'Rest in open, choiceless awareness. Receive experience without preference.' },
+            { name: 'Metta Closing',        duration: 5,  instruction: '"May all beings be happy. May all beings be free from suffering." Radiate loving kindness outward.' },
         ]
     }
 };
@@ -288,10 +288,10 @@ function finishSession() {
     document.getElementById('progressBar').style.width = '100%';
     document.getElementById('startBtn').disabled = false;
     document.getElementById('pauseBtn').disabled = true;
-    document.getElementById('phaseBanner').textContent = '🪷 Session Complete';
+    document.getElementById('phaseBanner').textContent = 'Session Complete';
     document.getElementById('phaseInstruction').textContent = 'Sādhu sādhu sādhu 🙏 Rest in the stillness before returning to activity.';
     playBell(3);
-    setTimeout(() => alert('🔔 Meditation session complete.\nSādhu sādhu sādhu 🙏'), 500);
+    setTimeout(() => alert('Meditation session complete.\nSādhu sādhu sādhu 🙏'), 500);
 }
 
 // ── Bell ──────────────────────────────────────────────────────────────────
@@ -343,12 +343,12 @@ function setMusic(mode) {
     const note = document.getElementById('musicNote');
     note.style.display = mode === 'off' ? 'none' : 'block';
     note.textContent = mode === 'golden'
-        ? '🧠 Your left ear hears a C at 131 Hz and your right ear 132.618 Hz, so your brain '
+        ? 'Your left ear hears a C at 131 Hz and your right ear 132.618 Hz, so your brain '
           + 'creates a slow 1.618 Hz pulse - the golden number. A beat this slow is in the delta range, '
           + 'the brainwave rhythm of deep rest and sleep. Studies suggest slow binaural beats can help '
           + 'the brain relax, ease anxiety and quieten busy thoughts, so the mind settles more easily '
           + 'into meditation (the research is still young, so treat it as a gentle aid). '
-          + '🎧 Best with headphones; through speakers you\'ll hear it as a gentle slow pulse. '
+          + 'Best with headphones; through speakers you\'ll hear it as a gentle slow pulse. '
           + 'On iPhone, turn the silent switch off.'
         : 'On iPhone, turn the silent switch off to hear the music.';
     stopMusic();

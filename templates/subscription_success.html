@@ -41,7 +41,7 @@
         </div>
         
         <div class="features-unlocked">
-            <h3>✨ What You Now Have Access To:</h3>
+            <h3>What You Now Have Access To:</h3>
             <ul>
                 {% for feature in tier_info.features %}
                 <li>{{ feature }}</li>
@@ -51,7 +51,7 @@
         
         {% if tier != 'free' %}
         <div class="subscription-info">
-            <h3>📅 Subscription Details:</h3>
+            <h3>Subscription Details:</h3>
             <p><strong>Plan:</strong> {{ tier_info.name }}</p>
             <p><strong>Price:</strong> £{{ tier_info.price }}/month <span class="price-tax">(VAT included)</span></p>
             {% if expires %}<p><strong>Next Billing:</strong> {{ expires }}</p>{% endif %}
@@ -60,7 +60,7 @@
         {% endif %}
         
         <div class="next-steps">
-            <h3>🚀 Ready to Learn?</h3>
+            <h3>Ready to Learn?</h3>
             <p>Start exploring your newly unlocked content!</p>
         </div>
         
