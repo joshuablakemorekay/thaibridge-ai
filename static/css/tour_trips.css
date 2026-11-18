@@ -208,7 +208,7 @@ a.tp-btn { text-decoration: none; display: inline-block; }
 .activity-trips a { color: var(--royal-purple); font-weight: 600; }
 .activity-phrases { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.25rem; }
 .activity-phrases li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem; font-size: 0.88rem; }
-.activity-phrases .thai-text { font-family: 'Sarabun', sans-serif; font-size: 1.15rem; color: var(--royal-purple); }
+.activity-phrases .thai-text { font-family: 'Noto Sans Thai Looped', sans-serif; font-size: 1.15rem; color: var(--royal-purple); }
 .activity-phrases .vocab-paiboon { font-size: 0.88rem; }
 .activity-english { color: #555; }
 .activity-links { display: flex; flex-direction: column; gap: 0.4rem; padding-top: 0.3rem; }

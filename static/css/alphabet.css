@@ -157,7 +157,7 @@
 }
 
 .abc-cell-letter {
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 2rem;
     line-height: 1.1;
     color: var(--dark-text);
@@ -206,7 +206,7 @@
 .abc-detail[hidden] { display: none; }
 
 .abc-detail-letter {
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 3rem;
     line-height: 1;
     color: var(--royal-purple);
@@ -231,7 +231,7 @@
 
 .abc-detail-text { flex: 1 1 12rem; }
 .abc-detail-name { font-weight: 700; color: var(--dark-text); font-size: 1.05rem; }
-.abc-detail-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.15rem; color: var(--teak-wood); }
+.abc-detail-thai { font-family: 'Noto Sans Thai Looped', sans-serif; font-size: 1.15rem; color: var(--teak-wood); }
 .abc-detail-meta { font-size: 0.9rem; color: #5a6573; }
 
 /* The two obsolete letters (ฃ, ฅ) are still shown in the grid — they are part
@@ -266,7 +266,7 @@
 }
 
 .abc-card-letter {
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 5.5rem;
     line-height: 1;
     color: var(--royal-purple);
@@ -295,7 +295,7 @@
 }
 
 .abc-card-name { font-size: 1.4rem; font-weight: 700; color: var(--dark-text); }
-.abc-card-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.5rem; color: var(--teak-wood); }
+.abc-card-thai { font-family: 'Noto Sans Thai Looped', sans-serif; font-size: 1.5rem; color: var(--teak-wood); }
 .abc-card-meaning { color: #5a6573; }
 
 .abc-counter {
@@ -330,7 +330,7 @@
 .abc-question-prompt { color: #5a6573; margin-bottom: 0.5rem; }
 
 .abc-question-letter {
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Noto Sans Thai Looped', sans-serif;
     font-size: 5rem;
     line-height: 1;
     color: var(--royal-purple);
@@ -391,7 +391,7 @@
     cursor: pointer;
 }
 
-.abc-option-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.6rem; }
+.abc-option-thai { font-family: 'Noto Sans Thai Looped', sans-serif; font-size: 1.6rem; }
 
 /* Right and wrong are never signalled by colour alone — the JS also writes a
    ✓ or ✗ into the label, so the answer still reads if you cannot tell the two
