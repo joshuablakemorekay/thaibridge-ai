@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>🎯 Your Learning Progress</h1>
+    <h1>Your Learning Progress</h1>
     
     <!-- Developer Badge -->
     {% if user.is_developer %}
@@ -109,7 +109,7 @@
        Answers are kept privately. Nothing here is shown on the site. #}
     {% if ask_for_review %}
     <div class="review-prompt" id="review-prompt">
-        <h2>💬 How's ThaiBridge going for you?</h2>
+        <h2>How's ThaiBridge going for you?</h2>
         <p class="review-intro">You've reached Level {{ user.level }}, so you've seen a fair bit of it.
             An honest rating, good or bad, helps me make it better.</p>
         <form id="review-form">
@@ -179,7 +179,7 @@
        with no history gets no empty table asking to be filled. #}
     {% if receipts %}
     <div class="receipts-section">
-        <h2>🧾 Receipts</h2>
+        <h2>Receipts</h2>
         <div class="receipts-scroll">
         <table class="receipts-table">
             <thead>
@@ -206,7 +206,7 @@
 
     {% if current_user.is_authenticated %}
     <div class="receipts-section">
-        <h2>🔑 Change password</h2>
+        <h2>Change password</h2>
         <form id="change-password-form" class="change-password-form">
             <label for="current_password">Current password</label>
             <input type="password" id="current_password" autocomplete="current-password" required>
@@ -225,7 +225,7 @@
        word DELETE; a plan that will still renew must be cancelled first;
        payments are kept but unlinked, everything else goes. #}
     <div class="receipts-section delete-account" id="delete-account">
-        <h2>🗑️ Delete my account</h2>
+        <h2>Delete my account</h2>
         <p class="receipts-note">This removes your account, your progress and settings, and any
             review you left. It can't be undone. Records of past payments are kept with your
             details taken off them, because UK tax law requires it.
@@ -259,7 +259,7 @@
 
     <!-- Achievements -->
     <div class="achievements-section">
-        <h2>🏆 Achievements</h2>
+        <h2>Achievements</h2>
         <div class="achievements-grid">
             {% for achievement_id, achievement in achievements.items() %}
             <div class="achievement-card {% if achievement_id in user.achievements_earned %}earned{% endif %}">
@@ -274,7 +274,7 @@
     
     <!-- Personalized Learning Path (IEP) — rules in learning_path.py -->
     <div class="path-section" id="path">
-        <h2>📊 Personalized Learning Path (IEP)</h2>
+        <h2>Personalized Learning Path (IEP)</h2>
         <p class="path-intro">An individualized plan built around your goals, your
             progress and how you like to practise, like an IEP for language
             learning: a starting check, a few measurable targets each week, and a
@@ -351,7 +351,7 @@
                trace each letter and write it from memory.</p>
             {% endif %}
             {% if review_due %}
-            <p><button type="button" class="btn btn-saffron" id="path-review">📝 Review my week and set new targets</button></p>
+            <p><button type="button" class="btn btn-saffron" id="path-review">Review my week and set new targets</button></p>
             {% else %}
             <p class="path-note">Your weekly review opens on {{ review_opens }}, or
                as soon as every target is met.</p>
@@ -402,7 +402,7 @@
     
     <!-- Subscription Options -->
     <div id="subscriptions" class="subscriptions-section">
-        <h2>💎 Subscription Plans</h2>
+        <h2>Subscription Plans</h2>
         <div class="subscription-grid">
             {% for tier_id, tier_info in subscription_tiers.items() %}
             <div class="subscription-card {% if tier == tier_id %}current{% endif %}">

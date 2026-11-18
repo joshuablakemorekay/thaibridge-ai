@@ -237,7 +237,7 @@
 </h1>
 
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
-    <h2 style="margin-top: 0;">🎯 {{ data.core_concept.title }}</h2>
+    <h2 style="margin-top: 0;">{{ data.core_concept.title }}</h2>
     <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.core_concept.summary }}</p>
     <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 5px solid var(--royal-purple); font-size: 1.15rem; font-weight: 600; text-align: center;">
         {{ data.core_concept.formula }}
@@ -246,16 +246,16 @@
 
 <!-- Tab Navigation -->
 <div class="tab-buttons">
-    <button class="tab-btn active" data-on-click="showTab" data-args='["concept", "$this"]'>🧭 How Tones Work</button>
-    <button class="tab-btn" data-on-click="showTab" data-args='["classes", "$this"]'>🔤 The 3 Classes</button>
-    <button class="tab-btn" data-on-click="showTab" data-args='["chart", "$this"]'>📊 Tone Chart</button>
-    <button class="tab-btn" data-on-click="showTab" data-args='["leadingh", "$this"]'>✨ Leading ห &amp; Pairs</button>
-    <button class="tab-btn" data-on-click="showTab" data-args='["practice", "$this"]'>🎯 Practice</button>
+    <button class="tab-btn active" data-on-click="showTab" data-args='["concept", "$this"]'>How Tones Work</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["classes", "$this"]'>The 3 Classes</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["chart", "$this"]'>Tone Chart</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["leadingh", "$this"]'>Leading ห &amp; Pairs</button>
+    <button class="tab-btn" data-on-click="showTab" data-args='["practice", "$this"]'>Practice</button>
 </div>
 
 <!-- ── TAB 1: How Tones Work ── -->
 <div id="concept" class="tab-content active">
-    <h2>🧭 The one idea to hold onto</h2>
+    <h2>The one idea to hold onto</h2>
     <p style="line-height: 1.8;">{{ data.core_concept.summary }}</p>
 
     <div class="card">
@@ -264,12 +264,12 @@
     </div>
 
     <div class="card" style="border-left: 6px solid var(--bodhi-green);">
-        <h3 style="margin-top: 0;">💡 The big shortcut</h3>
+        <h3 style="margin-top: 0;">The big shortcut</h3>
         <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.core_concept.shortcut }}</p>
     </div>
 
     <div class="card" style="border-left: 6px solid var(--monk-saffron);">
-        <h3 style="margin-top: 0;">👂 Can't hear the tones yet?</h3>
+        <h3 style="margin-top: 0;">Can't hear the tones yet?</h3>
         <ul style="line-height: 1.8; padding-left: 1.2rem; margin-bottom: 0;">
             {% for tip in data.core_concept.cant_hear %}
             <li>{{ tip }}</li>
@@ -325,13 +325,13 @@
         </div>
 
         <div style="background: #f4f0fa; border-radius: 8px; padding: 0.8rem; margin-top: 1rem;">
-            <strong>🧠 Remember:</strong> {{ cls.memory_tip }}
+            <strong>Remember:</strong> {{ cls.memory_tip }}
         </div>
     </div>
     {% endfor %}
 
     <!-- Same-sound pairs: identical sound, different class, different tone -->
-    <h2 style="margin-top: 2.5rem;">🔁 {{ data.sound_pairs.title }}</h2>
+    <h2 style="margin-top: 2.5rem;">{{ data.sound_pairs.title }}</h2>
     <p style="line-height: 1.8;">{{ data.sound_pairs.note }}</p>
 
     <div class="pair-card">
@@ -375,24 +375,24 @@
 
     <!-- How to master this -->
     <div class="card" style="border-left: 6px solid var(--bodhi-green); margin-top: 2rem;">
-        <h3 style="margin-top: 0;">🎓 {{ data.mastery.title }}</h3>
+        <h3 style="margin-top: 0;">{{ data.mastery.title }}</h3>
         <ol style="line-height: 1.9; padding-left: 1.2rem;">
             {% for step in data.mastery.steps %}
             <li>{{ step }}</li>
             {% endfor %}
         </ol>
         <div style="background: #eef7ee; border-radius: 8px; padding: 0.9rem; margin-top: 0.8rem;">
-            <strong>🧠 Mnemonic:</strong> {{ data.mastery.mnemonic }}
+            <strong>Mnemonic:</strong> {{ data.mastery.mnemonic }}
         </div>
         <div style="background: #f4f0fa; border-radius: 8px; padding: 0.9rem; margin-top: 0.8rem;">
-            <strong>💡 Quick trick:</strong> {{ data.mastery.sonorant_tip }}
+            <strong>Quick trick:</strong> {{ data.mastery.sonorant_tip }}
         </div>
     </div>
 </div>
 
 <!-- ── TAB 3: Tone Chart ── -->
 <div id="chart" class="tab-content">
-    <h2>📊 {{ data.tone_chart_live.title }}</h2>
+    <h2>{{ data.tone_chart_live.title }}</h2>
     <p style="line-height: 1.8;">{{ data.tone_chart_live.note }}</p>
 
     <div class="chart-wrap">
@@ -440,7 +440,7 @@
 
 <!-- ── TAB 4: Leading ห & Pairs ── -->
 <div id="leadingh" class="tab-content">
-    <h2>✨ {{ data.leading_h.title }}</h2>
+    <h2>{{ data.leading_h.title }}</h2>
     <div class="card" style="border-left: 6px solid var(--monk-saffron);">
         <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.leading_h.rule }}</p>
     </div>
@@ -460,7 +460,7 @@
     </div>
     {% endfor %}
 
-    <h2 style="margin-top: 2.5rem;">🔀 {{ data.contrast_pairs.title }}</h2>
+    <h2 style="margin-top: 2.5rem;">{{ data.contrast_pairs.title }}</h2>
     <p style="line-height: 1.8;">{{ data.contrast_pairs.note }}</p>
     {% for pair in data.contrast_pairs.pairs %}
     <div class="pair-card">
@@ -483,7 +483,7 @@
 
 <!-- ── TAB 5: Practice ── -->
 <div id="practice" class="tab-content">
-    <h2>🎯 Practice drills</h2>
+    <h2>Practice drills</h2>
     <p style="line-height: 1.8;">Each correct answer earns you XP, just like the vocabulary quizzes. Work through them in order — they get harder as you go.</p>
 
     <!-- Drill 1: Class ID -->

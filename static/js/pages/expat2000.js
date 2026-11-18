@@ -8,11 +8,11 @@
     // blocked storage just means the ticks don't survive a reload.
     var KEY = 'expat2000-ticks';
     var RANKS = [
-        [0,   '✈️ Just landed'],
-        [15,  '🧳 Finding my feet'],
-        [40,  '🛵 Getting the hang of it'],
-        [70,  '🏠 Settled in'],
-        [100, '🚀 Expat2000 legend']
+        [0,   'Just landed'],
+        [15,  'Finding my feet'],
+        [40,  'Getting the hang of it'],
+        [70,  'Settled in'],
+        [100, 'Expat2000 legend']
     ];
     var boxes = Array.prototype.slice.call(document.querySelectorAll('.x2k-do input'));
     var ticks = {};
@@ -72,7 +72,7 @@
             try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch (e) {}
             if (box.checked && missionDone(box.dataset.mission)) {
                 var title = document.querySelector('#' + box.dataset.mission + ' h2').textContent.trim();
-                toast('🎉 Mission complete: ' + title);
+                toast('Mission complete: ' + title);
             }
             render();
         });

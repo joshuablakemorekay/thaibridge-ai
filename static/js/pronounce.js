@@ -138,9 +138,9 @@
     }
 
     function verdict(score) {
-        if (score >= 75) { return '🌟 Very close'; }
-        if (score >= 55) { return '👍 Close'; }
-        return '🔁 Try again';
+        if (score >= 75) { return 'Very close'; }
+        if (score >= 55) { return 'Close'; }
+        return 'Try again';
     }
 
     /* Show one word and its controls in `box`. */
@@ -158,7 +158,7 @@
         var play = el('button', 'btn th-audio', '▶️ Hear the model');
         play.type = 'button';
         play.setAttribute('data-audio', word.audio);
-        var mic = el('button', 'btn btn-saffron', '🎤 Say it');
+        var mic = el('button', 'btn btn-saffron', 'Say it');
         mic.type = 'button';
         var next = el('button', 'btn btn-secondary', 'Next word →');
         next.type = 'button';
@@ -225,8 +225,8 @@
             return el('p', 'pron-heard is-right', '✅ The word check heard ' + target + '.');
         }
         return el('p', 'pron-heard', heard.length
-            ? '🤔 The word check heard: ' + heard[0] + '. Listen to the model and try again.'
-            : '🤔 The word check couldn\'t make out a Thai word. Try again, clearly and a little slower.');
+            ? 'The word check heard: ' + heard[0] + '. Listen to the model and try again.'
+            : 'The word check couldn\'t make out a Thai word. Try again, clearly and a little slower.');
     }
 
     window.Pronounce = {

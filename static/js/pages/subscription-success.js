@@ -4,5 +4,5 @@
 
 // Confetti effect
 setTimeout(() => {
-    console.log('🎊 Subscription activated! 🎊');
+    console.log('Subscription activated! 🎊');
 }, 500);

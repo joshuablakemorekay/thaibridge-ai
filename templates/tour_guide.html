@@ -7,7 +7,7 @@
 
 {% block content %}
 <div class="container">
-    <h1>🗺️ Tour Guide Thai
+    <h1>Tour Guide Thai
         <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;">ภาษาไทยสำหรับนักท่องเที่ยว</span>
     </h1>
 
@@ -21,7 +21,7 @@
        player below replaces it while a trip is running (tour_guide JS). #}
     <section id="trips" class="trips" aria-label="Trips">
         <div id="trip-picker">
-            <h2 class="section-header">🧭 Seven trips</h2>
+            <h2 class="section-header">Seven trips</h2>
             <p class="trips-intro">Each trip is a short story. Someone speaks to you in Thai, and you choose what to say back.
                 Finish a trip to collect its stamp.</p>
             <div class="trip-grid">
@@ -48,7 +48,7 @@
     {% set trip_links = true %}
     {% include 'partials/things_to_do.html' %}
 
-    <h2 id="phrasebook" class="phrasebook-header">📖 Phrasebook</h2>
+    <h2 id="phrasebook" class="phrasebook-header">Phrasebook</h2>
 
     {% set category_labels = {
         'transport': '🚕 Transport & Directions',
@@ -76,7 +76,7 @@
     {% endfor %}
 
     <div class="attribution-card">
-        <h3>🎯 Who is this for?</h3>
+        <h3>Who is this for?</h3>
         <p>Anyone exploring Thailand: holiday makers, backpackers, long-term travellers and people
         who live here and want to see more of the country. If you want to get beyond "hello" and
         "thank you", the trips and these 25 words cover the situations you'll meet most, from
@@ -89,7 +89,7 @@
 
     {# BY and BY-SA licences require the credit; see the PHOTOS note in tour_trips.py. #}
     <div class="attribution-card photo-credits">
-        <h3>📷 Photo credits</h3>
+        <h3>Photo credits</h3>
         <ul>
             {% for trip in trips %}
             <li>{{ trip.title }}: <a href="{{ trip.photo.source }}" target="_blank" rel="noopener">photo</a>
