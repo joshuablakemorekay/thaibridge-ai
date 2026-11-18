@@ -370,16 +370,23 @@
             z-index: 1001;
             margin-top: 0.5rem;
             padding: 0.75rem 0;
-            max-height: 400px;
+            /* Tall enough for the whole Learn Thai list on a laptop; it only
+               scrolls on a short screen. 400px cut the list off. */
+            max-height: calc(100vh - 6rem);
             overflow-y: auto;
             border: 2px solid var(--royal-gold);
-            background-image: 
-                repeating-linear-gradient(90deg, 
-                    transparent, 
-                    transparent 40px, 
-                    rgba(212, 175, 55, 0.08) 40px, 
-                    rgba(212, 175, 55, 0.08) 41px);
-            backdrop-filter: blur(10px);
+            /* The stripes and the purple gradient MUST be in one
+               background-image. A separate background-image line used to
+               replace the gradient, leaving the menu see-through, with white
+               text over the page underneath. */
+            background-color: var(--deep-purple);
+            background-image:
+                repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(212, 175, 55, 0.08) 40px,
+                    rgba(212, 175, 55, 0.08) 41px),
+                linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-burgundy) 100%);
         }
         
         .dropdown.active .dropdown-content {
@@ -427,6 +434,47 @@
             height: 1px;
             background: rgba(212, 175, 55, 0.4);
             margin: 0.5rem 0;
+        }
+
+        /* Small group label inside a dropdown ("Start here", "Go deeper"),
+           so a long list reads as two short ones. */
+        .dropdown-heading {
+            margin: 0;
+            padding: 0.7rem 1.5rem 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--royal-gold);
+        }
+        .dropdown-heading + a { border-top: none; }
+        .dropdown-content a + .dropdown-heading {
+            border-top: 1px solid rgba(212, 175, 55, 0.4);
+            margin-top: 0.4rem;
+        }
+
+        /* A button sitting in a dropdown list (Monk Mode: ON) looks like the
+           links around it. */
+        .dropdown-item-button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 0.85rem 1.5rem;
+            background: transparent;
+            border: none;
+            border-left: 3px solid var(--monk-saffron);
+            color: var(--monk-saffron);
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .dropdown-item-button:hover { background: rgba(255, 153, 51, 0.15); }
+
+        /* "Aa" is enough in the wide top bar; the phone menu has room for
+           the full name, which is clearer. */
+        .nav-long-label { display: none; }
+        @media (max-width: 768px) {
+            .nav-long-label { display: inline; }
         }
         
         /* Collapsible Sections */
