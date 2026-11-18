@@ -66,10 +66,13 @@ def _templates():
 
 def test_no_template_has_an_inline_script():
     # The CSP refuses them, so one added later would silently do nothing on the
-    # live site. Server values go in <script type="application/json"> blocks.
+    # live site. Server values go in <script type="application/json"> blocks,
+    # and structured data for search engines in application/ld+json blocks:
+    # both are data the browser never runs, so the CSP does not apply to them.
     for path, text in _templates():
         for attrs in re.findall(r"<script(?![^>]*\bsrc=)([^>]*)>", text):
-            assert "application/json" in attrs, f"inline <script> in {path.name}"
+            assert ('type="application/json"' in attrs
+                    or 'type="application/ld+json"' in attrs), f"inline <script> in {path.name}"
 
 
 def test_no_template_or_script_uses_inline_handlers():

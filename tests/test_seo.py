@@ -97,3 +97,37 @@ def test_version_stamped_static_files_are_cached_for_a_year(client):
     assert 'immutable' in stamped.headers.get('Cache-Control', '')
     plain = client.get('/static/css/base.css')
     assert 'immutable' not in plain.headers.get('Cache-Control', '')
+
+
+# ── Phase 3b: structured data (schema.org JSON-LD) ──────────────────────────
+
+def _ld_blocks(client, path):
+    import json
+    html = client.get(path).get_data(as_text=True)
+    return [json.loads(b) for b in
+            re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
+
+
+def test_home_page_describes_the_organisation_and_site_search(client):
+    (data,) = _ld_blocks(client, '/')
+    types = {node['@type']: node for node in data['@graph']}
+    assert types['Organization']['url'] == seo.SITE_URL + '/'
+    action = types['WebSite']['potentialAction']
+    assert action['target'] == seo.SITE_URL + '/search?q={search_term_string}'
+    # The search address it advertises must really work.
+    assert client.get('/search?q=hello').status_code == 200
+
+
+def test_pricing_page_describes_the_course(client):
+    (data,) = _ld_blocks(client, '/premium')
+    assert data['@type'] == 'Course' and data['provider']['name'] == 'ThaiBridge'
+
+
+def test_journal_entries_and_talks_are_articles_with_authors(client):
+    import app as app_module
+    entry = app_module.JOURNAL_ENTRIES[0]
+    (post,) = _ld_blocks(client, '/journal/' + entry['slug'])
+    assert post['@type'] == 'BlogPosting' and post['headline'] == entry['title']
+    talk = app_module.DHAMMA_TALKS[0]
+    (article,) = _ld_blocks(client, '/dhamma-talk/' + talk['slug'])
+    assert article['@type'] == 'Article' and article['author']['name'] == talk['speaker']

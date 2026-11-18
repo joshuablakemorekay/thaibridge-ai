@@ -5,6 +5,14 @@
 
 {% block title %}{{ entry.title }} - Journal{% endblock %}
 {% block description %}{{ entry.summary or entry.title }}{% endblock %}
+{% block structured_data %}
+{% set post = {"@context": "https://schema.org", "@type": "BlogPosting",
+               "headline": entry.title, "description": entry.summary or entry.title,
+               "datePublished": entry.date, "url": canonical_url, "inLanguage": "en",
+               "author": {"@type": "Person", "name": "Joshua Kay"},
+               "publisher": {"@type": "Organization", "name": "ThaiBridge", "url": site_url ~ "/"}} %}
+<script type="application/ld+json">{{ post|tojson }}</script>
+{% endblock %}
 
 {% block extra_css %}
 <style>
