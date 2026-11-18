@@ -179,6 +179,13 @@
 
     @media (max-width: 600px) {
         .toc-row.is-entry .toc-title { padding-left: 0.9rem; }
+        /* A phone has no room for title, page number and both buttons on one
+           line: the buttons ran off the right edge and the phone shrank the
+           whole page to fit. Let the row wrap so the buttons drop onto their
+           own line under the title. */
+        .toc-row { flex-wrap: wrap; }
+        .toc-names { flex: 1 1 0; min-width: 0; }
+        .toc-go { flex-basis: 100%; flex-wrap: wrap; justify-content: flex-end; }
         .toc-head { font-size: 1.35rem; }
     }
 </style>

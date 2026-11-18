@@ -2190,3 +2190,16 @@ html.rs-picking main figcaption:hover {
 /* A form's message line (static/js/json-forms.js) takes no space until it has
    something to say. */
 [data-form-message]:empty { display: none; }
+
+/* Phones and tablets zoom the whole page in when you tap a text box or
+   drop-down whose text is under 16px, and they do not zoom back out. Testers
+   found the site "keeps zooming in and out" because of this. One rule here
+   covers every box on every page, including ones added later, so no single
+   page can bring the problem back. */
+@media (max-width: 1024px), (pointer: coarse) {
+    input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+    select,
+    textarea {
+        font-size: max(16px, 1em) !important;
+    }
+}
