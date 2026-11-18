@@ -12,6 +12,7 @@ from datetime import datetime
 from flask import session
 
 from access import active_tier
+from activity import mark_level3
 from plans import SUBSCRIPTION_TIERS
 from progress import get_user_level, init_user_progress
 
@@ -69,7 +70,8 @@ def add_xp(points, action_description=""):
     user['level'] = get_user_level(user['xp'])
     
     level_up = user['level'] > old_level
-    
+    mark_level3(old_level, user['level'])   # LTV: when they first reached Level 3
+
     session.modified = True
     
     return {
