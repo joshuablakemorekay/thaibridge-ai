@@ -165,7 +165,9 @@ def page_content(client, path):
     Scanning the whole document would flag it every time.
     """
     body = client.get(path).get_data(as_text=True)
-    start = body.index("<main>") + len("<main>")
+    # <main> carries attributes (the skip link's target), so match the tag
+    # by name rather than by its exact text.
+    start = body.index(">", body.index("<main")) + 1
     return body[start:body.index("</main>", start)]
 
 

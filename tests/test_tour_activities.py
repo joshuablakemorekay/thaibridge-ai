@@ -145,7 +145,9 @@ class TestFreeToRead:
 
     def test_the_locked_tour_guide_page_shows_the_activities(self, free_client):
         body = free_client.get('/tour-guide').get_data(as_text=True)
-        assert '<h1>Section Locked</h1>' in body, 'the trips must stay paid'
+        # The locked page now leads with a public preview, so "Section Locked"
+        # heads the unlock box rather than the page.
+        assert 'class="locked-container"' in body and 'Section Locked' in body, 'the trips must stay paid'
         assert 'id="things-to-do"' in body
         assert 'id="trip-player"' not in body
         for a in tour_activities.ACTIVITIES:
@@ -158,5 +160,5 @@ class TestFreeToRead:
 
     def test_other_locked_pages_do_not_show_it(self, free_client):
         body = free_client.get('/business-thai').get_data(as_text=True)
-        assert '<h1>Section Locked</h1>' in body
+        assert 'class="locked-container"' in body and 'Section Locked' in body
         assert 'id="things-to-do"' not in body

@@ -64,7 +64,7 @@
 {% macro listen(thai) %}{% set url = thai_audio_url(thai) %}{% if url %}<button type="button" class="th-audio fm-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
 <h1>
     Thai Formality System
-    <span class="thai">ระดับความสุภาพของภาษา</span>
+    <span class="thai" lang="th">ระดับความสุภาพของภาษา</span>
 </h1>
 
 <p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
@@ -77,7 +77,7 @@
     <h2 style="margin-top: 0; color: var(--bodhi-green, #228B22);">First — which Thai is this?</h2>
     <p style="line-height: 1.8;">
         Everything in this app is <strong>Central Thai</strong>
-        (<span class="thai-text">ภาษาไทยกลาง</span>{{ listen('ภาษาไทยกลาง') }} <em>paa-sǎa tai glaaŋ</em>) —
+        (<span class="thai-text" lang="th">ภาษาไทยกลาง</span>{{ listen('ภาษาไทยกลาง') }} <em>paa-sǎa tai glaaŋ</em>) —
         the Bangkok-region standard you'll hear on the news, in schools and in government offices,
         and the one that's understood everywhere in the country. Where we teach a regional form
         instead, it's labelled: the Isan vocabulary set and Lesson 13 are the main places.
@@ -89,7 +89,7 @@
         speaker can be crude or courtly without ever leaving Central Thai.
     </p>
     <p style="line-height: 1.8; margin-bottom: 0; color: #666; font-size: 0.95rem;">
-        Worth saying plainly because the names collide: <span class="thai-text">ภาษากลาง</span> is often used
+        Worth saying plainly because the names collide: <span class="thai-text" lang="th">ภาษากลาง</span> is often used
         to mean Central Thai the dialect, so we no longer use it as the name for the Neutral level below.
     </p>
 </div>
@@ -122,7 +122,7 @@
         </span>
     </div>
     
-    <p class="thai-text" style="font-size: 1.2rem; margin: 0.5rem 0;">{{ level.thai }}{{ listen(level.thai) }}</p>
+    <p class="thai-text" style="font-size: 1.2rem; margin: 0.5rem 0;" lang="th">{{ level.thai }}{{ listen(level.thai) }}</p>
     <p style="line-height: 1.8; margin: 1rem 0; color: #444;">{{ level.description }}</p>
     
     <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid {{ level.color }};">
@@ -130,7 +130,7 @@
         <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
             {% for example in level.examples %}
             <li>
-                <span class="fm-example-thai thai-text">{{ example.thai }}</span>{{ listen(example.thai) }}
+                <span class="fm-example-thai thai-text" lang="th">{{ example.thai }}</span>{{ listen(example.thai) }}
                 <span class="fm-example-paiboon">{{ example.paiboon }}</span>
                 <span class="fm-example-english">— {{ example.english }}</span>
             </li>

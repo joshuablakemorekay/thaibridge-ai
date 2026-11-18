@@ -76,20 +76,35 @@ def test_private_pages_are_kept_out_of_search(client, path):
     assert client.get(path).headers.get('X-Robots-Tag') == 'noindex'
 
 
-def test_locked_section_notice_is_kept_out_of_search(client):
-    # A logged-out visitor sees the same "Section Locked" notice on many
-    # sections; it must not be indexed as if it were each section's content.
-    html = client.get('/lessons').get_data(as_text=True)
-    assert 'Section Locked' in html
+def test_a_bare_locked_notice_is_kept_out_of_search():
+    # A locked section WITHOUT a preview shows only the shared notice, the
+    # same thin page at many addresses — it must not be indexed.
+    from flask import render_template
+    with app_module.app.test_request_context('/somewhere-locked'):
+        html = render_template('locked.html', section='example_section', preview=None,
+                               message='Locked',
+                               requirements={'level': 2, 'tier': 'basic', 'points_reward': 10},
+                               earned_unlock_offered=False, earned_unlock_level=3,
+                               user_progress={'level': 1, 'xp': 0, 'subscription_tier': 'free'})
+    assert '<h1>Section Locked</h1>' in html
     assert '<meta name="robots" content="noindex, follow">' in html
-    assert '/lessons' not in seo.sitemap_paths()
+
+
+def test_a_locked_section_with_a_preview_is_a_real_page(client):
+    # With a preview the page says what the section teaches, has its own
+    # title and description, and is listed for search.
+    html = client.get('/lessons').get_data(as_text=True)
+    assert '<title>Structured Lessons — ThaiBridge Thai course</title>' in html
+    assert 'class="section-preview"' in html and 'Section Locked' in html
+    assert 'noindex' not in html
+    assert '/lessons' in seo.sitemap_paths()
 
 
 def test_social_preview_tags_point_at_a_real_image(client):
     html = client.get('/').get_data(as_text=True)
     assert '<meta property="og:image" content="' + seo.SITE_URL + '/static/img/brand/social-preview.png">' in html
     assert os.path.exists(os.path.join(app_module.app.static_folder, 'img', 'brand', 'social-preview.png'))
-    assert '<meta property="og:title" content="Home - ThaiBridge AI">' in html
+    assert '<meta property="og:title" content="ThaiBridge — Learn Thai and the Dhamma, free to start">' in html
 
 
 def test_version_stamped_static_files_are_cached_for_a_year(client):
@@ -97,3 +112,37 @@ def test_version_stamped_static_files_are_cached_for_a_year(client):
     assert 'immutable' in stamped.headers.get('Cache-Control', '')
     plain = client.get('/static/css/base.css')
     assert 'immutable' not in plain.headers.get('Cache-Control', '')
+
+
+# ── Phase 3b: structured data (schema.org JSON-LD) ──────────────────────────
+
+def _ld_blocks(client, path):
+    import json
+    html = client.get(path).get_data(as_text=True)
+    return [json.loads(b) for b in
+            re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)]
+
+
+def test_home_page_describes_the_organisation_and_site_search(client):
+    (data,) = _ld_blocks(client, '/')
+    types = {node['@type']: node for node in data['@graph']}
+    assert types['Organization']['url'] == seo.SITE_URL + '/'
+    action = types['WebSite']['potentialAction']
+    assert action['target'] == seo.SITE_URL + '/search?q={search_term_string}'
+    # The search address it advertises must really work.
+    assert client.get('/search?q=hello').status_code == 200
+
+
+def test_pricing_page_describes_the_course(client):
+    (data,) = _ld_blocks(client, '/premium')
+    assert data['@type'] == 'Course' and data['provider']['name'] == 'ThaiBridge'
+
+
+def test_journal_entries_and_talks_are_articles_with_authors(client):
+    import app as app_module
+    entry = app_module.JOURNAL_ENTRIES[0]
+    (post,) = _ld_blocks(client, '/journal/' + entry['slug'])
+    assert post['@type'] == 'BlogPosting' and post['headline'] == entry['title']
+    talk = app_module.DHAMMA_TALKS[0]
+    (article,) = _ld_blocks(client, '/dhamma-talk/' + talk['slug'])
+    assert article['@type'] == 'Article' and article['author']['name'] == talk['speaker']

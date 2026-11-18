@@ -45,7 +45,7 @@ async function loadQuiz() {
         let html = `
             <div style="text-align: center; margin-bottom: 1.5rem;">
                 <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
-                <p class="thai-text" style="font-size: 2.5rem; margin: 1rem 0;">${data.thai}</p>
+                <p class="thai-text" style="font-size: 2.5rem; margin: 1rem 0;" lang="th">${data.thai}</p>
                 <p style="font-size: 1.2rem; color: #666;">${data.english}</p>
                 <p style="margin-top: 1rem; color: var(--royal-purple);">Select the correct ThaiBridge Spelling:</p>
             </div>
@@ -156,7 +156,7 @@ async function checkAnswer(answer) {
             <p style="font-size: 1.5rem; color: ${resultColor}; margin: 1rem 0;">
                 ${result.message}
             </p>
-            <p class="thai-text" style="font-size: 2rem;">${currentQuestion.thai}</p>
+            <p class="thai-text" style="font-size: 2rem;" lang="th">${currentQuestion.thai}</p>
             <p class="paiboon" style="font-size: 1.3rem;">${listening ? currentQuestion.paiboon : (result.correct_answer ?? '')}</p>
             ${listening ? `<p style="font-size: 1.2rem; color: #666;">${result.correct_answer ?? ''}</p>` : ''}
             <p style="margin-top: 1.5rem;">

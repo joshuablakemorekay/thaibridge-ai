@@ -2274,6 +2274,23 @@ html.rs-picking main figcaption:hover {
     .site-search { padding: 0.5rem 1rem; }
 }
 
+/* "Skip to content": off-screen until a keyboard user tabs to it, then it
+   appears top-left above everything. */
+.skip-link {
+    position: absolute;
+    left: 0.5rem;
+    top: -4rem;
+    z-index: 3000;
+    padding: 0.6rem 1rem;
+    background: var(--royal-gold);
+    color: var(--deep-purple);
+    font-weight: 700;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+}
+.skip-link:focus { top: 0; outline: 3px solid var(--deep-purple); }
+main:focus { outline: none; }
+
 /* For labels a screen reader needs but a sighted reader doesn't. */
 .visually-hidden {
     position: absolute !important;

@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}The Full ThaiBridge Course - Plans & Pricing{% endblock %}
+{% block title %}Thai Course Plans & Prices — ThaiBridge{% endblock %}
 {% block description %}ThaiBridge plans and prices: start free, then unlock the full Thai course, extra lessons and more AI tutor help whenever you are ready. Cancel any time.{% endblock %}
+{% block structured_data %}
+{% set course = {"@context": "https://schema.org", "@type": "Course",
+                 "name": "The Full ThaiBridge Course",
+                 "description": "A full course in Thai language and culture, with Thai checked by a native Thai teacher, tap-to-hear audio, ThaiBridge Spelling and an AI tutor.",
+                 "url": canonical_url, "inLanguage": ["en", "th"],
+                 "provider": {"@type": "Organization", "name": "ThaiBridge", "url": site_url ~ "/"}} %}
+<script type="application/ld+json">{{ course|tojson }}</script>
+{% endblock %}
 
 {% block content %}
 {# Leads with the course, not the AI (feedback 2026-11-18: "why pay when
@@ -129,7 +137,7 @@
      ============================================================ -->
 <h2 style="text-align:center; color:var(--royal-purple); margin:3rem 0 0.4rem;">
     Plans &amp; Pricing
-    <span class="thai">แผนและราคา</span>
+    <span class="thai" lang="th">แผนและราคา</span>
 </h2>
 <p style="text-align:center; color:#666; font-size:0.92rem; margin:0 auto 1.8rem;">
     Pick the plan that fits where you are on the path.

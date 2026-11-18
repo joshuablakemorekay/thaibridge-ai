@@ -5,6 +5,15 @@
 
 {% block title %}{{ talk.title.en }} - Dhamma Talk{% endblock %}
 {% block description %}{{ talk.title }}: a Dhamma talk by {{ talk.speaker }}, in Thai and English side by side. Free to read.{% endblock %}
+{% block structured_data %}
+{% set article = {"@context": "https://schema.org", "@type": "Article",
+                  "headline": talk.title, "url": canonical_url, "inLanguage": ["th", "en"],
+                  "author": {"@type": "Person", "name": talk.speaker},
+                  "isAccessibleForFree": true,
+                  "publisher": {"@type": "Organization", "name": "ThaiBridge", "url": site_url ~ "/"}} %}
+{% if talk.date %}{% set _ = article.update({"datePublished": talk.date}) %}{% endif %}
+<script type="application/ld+json">{{ article|tojson }}</script>
+{% endblock %}
 
 {% block extra_css %}
 <style>

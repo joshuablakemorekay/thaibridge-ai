@@ -3,7 +3,7 @@
 {% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
 {% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
 
-{% block title %}Survival Thai — the FREE starter set{% endblock %}
+{% block title %}Survival Thai: 50 free phrases — ThaiBridge{% endblock %}
 {% block description %}50 survival Thai phrases, free with no account and no alphabet needed: greetings, numbers, ordering food and directions, with tap-to-hear audio.{% endblock %}
 
 {% block extra_css %}
@@ -79,7 +79,7 @@
 {% block content %}
 <h1 style="text-align:center;">
     Survival Thai
-    <span class="thai">ภาษาไทยเอาตัวรอด</span>
+    <span class="thai" lang="th">ภาษาไทยเอาตัวรอด</span>
 </h1>
 
 <p class="sv-intro">
@@ -104,7 +104,7 @@
     <div class="sv-phrases">
         {% for phrase in set.phrases %}
         <div class="sv-phrase">
-            <div class="thai-text">{{ phrase.thai }}</div>
+            <div class="thai-text" lang="th">{{ phrase.thai }}</div>
             <div class="sv-paiboon">{{ phrase.paiboon }}</div>
             <div class="sv-english">{{ phrase.english }}</div>
             {% if phrase.note %}<div class="sv-note">{{ phrase.note }}</div>{% endif %}
@@ -112,9 +112,9 @@
             {# Both particles, always. Picking one would quietly teach half the
                learners to sound wrong — same reasoning as /gender-examples. #}
             <div class="sv-particle">
-                Add <span class="thai-text">{{ particle.male.thai }}</span>
+                Add <span class="thai-text" lang="th">{{ particle.male.thai }}</span>
                 <em>({{ particle.male.paiboon }})</em> if you are male,
-                <span class="thai-text">{{ particle.female.thai }}</span>
+                <span class="thai-text" lang="th">{{ particle.female.thai }}</span>
                 <em>({{ particle.female.paiboon }})</em> if you are female.
             </div>
             {% endif %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Meditation Practice{% endblock %}
+{% block title %}Meditation: Samatha and Vipassana — ThaiBridge{% endblock %}
 {% block description %}Free Samatha (calm) and Vipassana (insight) meditation guidance from the Theravada tradition, with a simple timer and bells to mark each stage.{% endblock %}
 
 {% block extra_css %}
@@ -264,7 +264,7 @@
 {% from "_page_banner.html" import page_banner %}
 <h1>
     Meditation Practice
-    <span class="thai">การปฏิบัติสมาธิ</span>
+    <span class="thai" lang="th">การปฏิบัติสมาธิ</span>
 </h1>
 
 {{ page_banner('img/banners/meditation.webp', 'Misty sunrise over the forest of Thung Salaeng Luang', 'Misty sunrise over Thung Salaeng Luang', 'Maipraewa', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Misty_Sunrise_over_Thung_Salaeng_Luang_Savannah.jpg') }}
@@ -373,7 +373,7 @@
                 <div class="body-scan-dot">{{ loop.index }}</div>
                 <div>
                     <strong>{{ step.area }}</strong>
-                    <span class="thai" style="margin-left:0.5rem; font-size:0.85rem;">{{ step.thai }}</span>
+                    <span class="thai" style="margin-left:0.5rem; font-size:0.85rem;" lang="th">{{ step.thai }}</span>
                     <p style="margin:0.25rem 0 0; font-size:0.85rem; color:#555;">{{ step.instruction }}</p>
                 </div>
             </div>
@@ -400,7 +400,7 @@
     </div>
     <div class="section-content">
 <div class="card samatha-card">
-    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.samatha.thai }}</h3>
+    <h3 class="thai-text" style="margin-bottom:0.25rem;" lang="th">{{ techniques.samatha.thai }}</h3>
     <p class="paiboon">{{ techniques.samatha.paiboon }}</p>
     <p style="margin-top:1rem; line-height:1.8;">{{ techniques.samatha.description }}</p>
 </div>
@@ -408,7 +408,7 @@
 {% for technique in techniques.samatha.techniques %}
 <div class="card">
     <h3>{{ technique.name }}</h3>
-    <p class="thai-text" style="margin-bottom:1rem;">{{ technique.thai }}</p>
+    <p class="thai-text" style="margin-bottom:1rem;" lang="th">{{ technique.thai }}</p>
     <h4>Instructions:</h4>
     {% for step in technique.instructions %}
     <div class="instruction-step">
@@ -433,7 +433,7 @@
     </div>
     <div class="section-content">
 <div class="card vipassana-card">
-    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.vipassana.thai }}</h3>
+    <h3 class="thai-text" style="margin-bottom:0.25rem;" lang="th">{{ techniques.vipassana.thai }}</h3>
     <p class="paiboon">{{ techniques.vipassana.paiboon }}</p>
     <p style="margin-top:1rem; line-height:1.8;">{{ techniques.vipassana.description }}</p>
 </div>
@@ -441,7 +441,7 @@
 {% for technique in techniques.vipassana.techniques %}
 <div class="card">
     <h3>{{ technique.name }}</h3>
-    <p class="thai-text" style="margin-bottom:1rem;">{{ technique.thai }}</p>
+    <p class="thai-text" style="margin-bottom:1rem;" lang="th">{{ technique.thai }}</p>
     {% if technique.about %}
     <p style="line-height:1.8;">{{ technique.about }}</p>
     {% endif %}
@@ -477,7 +477,7 @@
     </div>
     <div class="section-content">
 <div class="card bodyscan-card">
-    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.body_scan.thai }}</h3>
+    <h3 class="thai-text" style="margin-bottom:0.25rem;" lang="th">{{ techniques.body_scan.thai }}</h3>
     <p class="paiboon">{{ techniques.body_scan.paiboon }}</p>
     <p style="margin-top:1rem; line-height:1.8;">{{ techniques.body_scan.description }}</p>
 </div>

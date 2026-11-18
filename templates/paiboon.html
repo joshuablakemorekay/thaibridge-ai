@@ -3,7 +3,7 @@
 {% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
 {% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
 
-{% block title %}ThaiBridge Spelling Guide{% endblock %}
+{% block title %}ThaiBridge Spelling: Thai in English letters{% endblock %}
 {% block description %}ThaiBridge Spelling: how Thai is written in English letters, with tones marked, so you can say each word properly. Look up any Thai word's spelling.{% endblock %}
 
 {% block extra_css %}
@@ -98,7 +98,7 @@
 {% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
 <h1>
     ThaiBridge Spelling Guide
-    <span class="thai">ระบบถอดเสียงไพบูลย์</span>
+    <span class="thai" lang="th">ระบบถอดเสียงไพบูลย์</span>
 </h1>
 
 <p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
@@ -133,7 +133,7 @@
             {% for entry in results %}
             <div class="pb-result">
                 <div class="pb-result-thai">
-                    <span class="thai">{{ entry.thai }}</span>
+                    <span class="thai" lang="th">{{ entry.thai }}</span>
                     {{ listen(entry.thai) }}
                 </div>
                 <div class="pb-result-paiboon">{{ entry.paiboon }}</div>
@@ -201,7 +201,7 @@
             <span style="color: var(--temple-red);">{{ tone.symbol }}</span>
             {% endif %}
         </p>
-        <p style="font-size: 1.6rem; margin: 0.25rem 0;"><span class="thai">{{ tone.thai }}</span>{{ listen(tone.thai) }}</p>
+        <p style="font-size: 1.6rem; margin: 0.25rem 0;"><span class="thai" lang="th">{{ tone.thai }}</span>{{ listen(tone.thai) }}</p>
         <p class="paiboon" style="font-size: 1.4rem; margin: 0;">{{ tone.paiboon }}</p>
         <p style="color: #444; margin: 0.25rem 0 0;">"{{ tone.english }}"</p>
         <p style="color: #666; margin-top: 0.5rem;">{{ tone.description }}</p>
@@ -241,7 +241,7 @@
         <tbody>
             {% for cons in guide.consonants %}
             <tr>
-                <td class="thai-text">{{ cons.thai }}{% for letter in cons.thai.split('/') %}{{ listen_url(consonant_audio.get(letter.strip())) }}{% endfor %}</td>
+                <td class="thai-text" lang="th">{{ cons.thai }}{% for letter in cons.thai.split('/') %}{{ listen_url(consonant_audio.get(letter.strip())) }}{% endfor %}</td>
                 <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ cons.paiboon }}</strong></td>
                 <td>{{ cons.sound }}</td>
             </tr>
@@ -258,7 +258,7 @@
         <li><strong>ng</strong> - Can appear at the start of syllables (unusual for English speakers)</li>
         <li><strong>r</strong> - Rolled or trilled, often softened to 'l' in casual speech</li>
         <li><strong>Final consonants</strong> - At the end of a syllable, Thai only has 8 sounds: <strong>k, t, p</strong> (cut short, not released), <strong>n, m, ŋ</strong>, and <strong>y/o</strong> from ย and ว. So ด, ต, ส, ช all end as <strong>t</strong>, and ล, ร end as <strong>n</strong>.</li>
-        <li><strong>Final y</strong> - A <strong>y</strong> at the end of a syllable is not a new sound: say it like the <strong>i</strong> in <em>ai</em>. So <span class="thai">ด้วย</span> <strong>dûay</strong> is said exactly as if it were written dûai, and <span class="thai">น้อย</span> <strong>nɔ́ɔy</strong> as if it were nɔ́ɔi. Only <strong>ai</strong> and <strong>aai</strong> (<span class="thai">ไ ใ าย</span>) are written with i.</li>
+        <li><strong>Final y</strong> - A <strong>y</strong> at the end of a syllable is not a new sound: say it like the <strong>i</strong> in <em>ai</em>. So <span class="thai" lang="th">ด้วย</span> <strong>dûay</strong> is said exactly as if it were written dûai, and <span class="thai" lang="th">น้อย</span> <strong>nɔ́ɔy</strong> as if it were nɔ́ɔi. Only <strong>ai</strong> and <strong>aai</strong> (<span class="thai" lang="th">ไ ใ าย</span>) are written with i.</li>
     </ul>
 </div>
 
@@ -281,7 +281,7 @@
         <tbody>
             {% for vowel in guide.vowels %}
             <tr>
-                <td class="thai-text">{{ vowel.thai }}{{ listen(vowel.thai) }}</td>
+                <td class="thai-text" lang="th">{{ vowel.thai }}{{ listen(vowel.thai) }}</td>
                 <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ vowel.paiboon }}</strong></td>
                 <td>{{ vowel.sound }}</td>
             </tr>
@@ -342,7 +342,7 @@
         <li>The written tone mark <strong>stays</strong> on a soft syllable - the softening is heard, not spelled.</li>
     </ul>
     <p style="margin-top: 1rem;">
-        <span class="thai">มหาวิทยาลัย</span> <span class="paiboon">má<span style="color: var(--saffron-text);">~</span>hǎa-wít-tá<span style="color: var(--saffron-text);">~</span>yaa-lai</span> (university)
+        <span class="thai" lang="th">มหาวิทยาลัย</span> <span class="paiboon">má<span style="color: var(--saffron-text);">~</span>hǎa-wít-tá<span style="color: var(--saffron-text);">~</span>yaa-lai</span> (university)
         - "má" and "tá" are soft, the rest are stressed.
     </p>
     <p style="margin-top: 1rem; font-style: italic; color: #666;">
@@ -371,7 +371,7 @@
         <tbody>
             {% for marker in guide.tone_markers %}
             <tr>
-                <td class="thai-text" style="font-size: 2rem;">{{ marker.thai }}</td>
+                <td class="thai-text" style="font-size: 2rem;" lang="th">{{ marker.thai }}</td>
                 <td>{{ marker.name }}</td>
                 <td>{{ marker.effect }}</td>
             </tr>

@@ -26,7 +26,10 @@
         // Mobile menu toggle
         function toggleMobileMenu() {
             const nav = document.getElementById('main-nav');
-            nav.classList.toggle('active');
+            const open = nav.classList.toggle('active');
+            // Tell screen readers whether the menu is now open or closed.
+            const button = document.querySelector('.mobile-menu-toggle');
+            if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
         }
         
         // Collapsible section functionality

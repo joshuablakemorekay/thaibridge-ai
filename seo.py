@@ -106,6 +106,7 @@ def _after_request(response):
 
 def _template_values():
     return {
+        'site_url': SITE_URL,
         'canonical_url': SITE_URL + request.path,
         'social_image_url': SITE_URL + url_for('static', filename='img/brand/social-preview.png'),
     }

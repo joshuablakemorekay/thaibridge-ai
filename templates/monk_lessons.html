@@ -5,7 +5,7 @@
 {% block content %}
 <h1>
     Monk Lessons
-    <span class="thai">บทเรียนสำหรับพระ</span>
+    <span class="thai" lang="th">บทเรียนสำหรับพระ</span>
 </h1>
 
 <div class="card monk-card">
@@ -17,7 +17,7 @@
     {% include "partials/monk_accent_switch.html" %}
 
     {% if direction == 'learn_english' %}
-    <a class="monk-pron-link thai" href="/monk/pronunciation">
+    <a class="monk-pron-link thai" href="/monk/pronunciation" lang="th">
         วิธีอ่านคำอ่าน — How to read the pronunciation
     </a>
     {% endif %}

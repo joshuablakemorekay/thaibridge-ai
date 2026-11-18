@@ -1,7 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Home - ThaiBridge AI{% endblock %}
+{% block title %}ThaiBridge — Learn Thai and the Dhamma, free to start{% endblock %}
 {% block description %}A full course in Thai language, culture and Buddhist teachings. Thai checked by a native Thai teacher, tap-to-hear audio and an AI tutor. Buddhist teachings are free.{% endblock %}
+{% block structured_data %}
+{% set org = {"@type": "Organization", "@id": site_url ~ "/#organization", "name": "ThaiBridge",
+              "url": site_url ~ "/", "logo": site_url ~ url_for('static', filename='img/brand/logo-large.png'),
+              "email": "joshua@smoald.com",
+              "parentOrganization": {"@type": "Organization", "name": "SMOALD", "url": "https://smoald.com"}} %}
+{% set site = {"@type": "WebSite", "@id": site_url ~ "/#website", "name": "ThaiBridge", "url": site_url ~ "/",
+               "publisher": {"@id": site_url ~ "/#organization"}, "inLanguage": "en",
+               "potentialAction": {"@type": "SearchAction",
+                                   "target": site_url ~ "/search?q={search_term_string}",
+                                   "query-input": "required name=search_term_string"}} %}
+<script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": [org, site]}|tojson }}</script>
+{% endblock %}
 
 {% block content %}
 <div class="container">

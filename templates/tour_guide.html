@@ -8,7 +8,7 @@
 {% block content %}
 <div class="container">
     <h1>Tour Guide Thai
-        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;">ภาษาไทยสำหรับนักท่องเที่ยว</span>
+        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;" lang="th">ภาษาไทยสำหรับนักท่องเที่ยว</span>
     </h1>
 
     <div class="info-banner">
@@ -32,10 +32,10 @@
                     <span class="trip-body">
                     <span class="trip-region">{{ trip.region }} · {{ trip.place }}</span>
                     <span class="trip-title">{{ trip.title }}</span>
-                    <span class="trip-thai thai">{{ trip.place_thai }}</span>
+                    <span class="trip-thai thai" lang="th">{{ trip.place_thai }}</span>
                     <span class="trip-blurb">{{ trip.blurb }}</span>
                     <span class="trip-stamp-slot" data-stamp-for="{{ trip.key }}" hidden>
-                        <span class="mini-stamp thai">{{ trip.stamp }}</span> Stamp collected
+                        <span class="mini-stamp thai" lang="th">{{ trip.stamp }}</span> Stamp collected
                     </span>
                     </span>
                 </button>
@@ -65,7 +65,7 @@
         <div class="vocab-grid">
             {% for word in words %}
             <div class="vocab-card">
-                <span class="vocab-thai thai-text">{{ word.thai }}</span>
+                <span class="vocab-thai thai-text" lang="th">{{ word.thai }}</span>
                 <span class="vocab-paiboon">{{ word.paiboon }}</span>
                 <span class="vocab-english">{{ word.english }}</span>
                 <span class="vocab-note">{{ word.note }}</span>

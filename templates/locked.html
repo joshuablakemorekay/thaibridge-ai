@@ -1,17 +1,42 @@
 {% extends "base.html" %}
 
-{% block title %}Section Locked - ThaiBridge AI{% endblock %}
-{# Many locked sections show this same notice to logged-out visitors;
-   keep it out of search until those sections have public previews. #}
-{% block robots %}<meta name="robots" content="noindex, follow">{% endblock %}
+{# With a preview (section_previews.py) this page says what the section
+   teaches and is worth listing in search. Without one it is the same bare
+   notice at many addresses, so it stays out of search. #}
+{% block title %}{% if preview %}{{ preview.name }} — ThaiBridge Thai course{% else %}Section Locked - ThaiBridge AI{% endif %}{% endblock %}
+{% block description %}{% if preview %}{{ preview.summary }}{% else %}{{ super() }}{% endif %}{% endblock %}
+{% block robots %}{% if not preview %}<meta name="robots" content="noindex, follow">{% endif %}{% endblock %}
 
 {% block content %}
 <div class="container">
+    {% if preview %}
+    <section class="section-preview">
+        <p class="section-preview-kicker">Part of the ThaiBridge course</p>
+        <h1>{{ preview.name }}</h1>
+        <p class="section-preview-summary">{{ preview.summary }}</p>
+        <h2>In this section</h2>
+        <ul class="section-preview-points">
+            {% for point in preview.points %}<li>{{ point }}</li>{% endfor %}
+        </ul>
+        {% if not current_user.is_authenticated %}
+        <div class="section-preview-actions">
+            <a href="/signup" class="btn btn-gold">Start free</a>
+            <a href="/premium" class="btn btn-secondary">See plans and prices</a>
+        </div>
+        {% endif %}
+    </section>
+    {% endif %}
+
     <div class="locked-container">
         <div class="lock-icon">🔒</div>
+        {% if preview %}
+        <h2>Section Locked</h2>
+        <p>Here's how to open {{ preview.name }}:</p>
+        {% else %}
         <h1>Section Locked</h1>
         <h2>{{ section.replace('_', ' ').title() }}</h2>
-        
+        {% endif %}
+
         <div class="lock-message">
             <p class="requirement">{{ message }}</p>
         </div>
@@ -103,6 +128,32 @@
     .earned-unlock p { color: #5a4a2a; line-height: 1.7; margin: 0 0 0.9rem; }
     .earned-unlock-warning { font-weight: bold; }
     .earned-unlock form { margin: 0; }
+
+    /* The public preview: what the section teaches, above the unlock box. */
+    .section-preview {
+        max-width: 700px;
+        margin: 2rem auto 0;
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        border-top: 6px solid var(--royal-gold);
+    }
+    .section-preview-kicker {
+        margin: 0 0 0.25rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gold-text);
+    }
+    .section-preview h1 { margin: 0 0 0.75rem; text-align: left; }
+    .section-preview h1::after { display: none; }
+    .section-preview h2 { margin: 1.5rem 0 0.5rem; font-size: 1.25rem; }
+    .section-preview-summary { font-size: 1.1rem; line-height: 1.6; }
+    .section-preview-points { margin: 0 0 0 1.25rem; line-height: 1.8; }
+    .section-preview-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+    @media (max-width: 600px) { .section-preview { padding: 1.5rem 1.1rem; } }
 
     .locked-container {
         max-width: 700px;
