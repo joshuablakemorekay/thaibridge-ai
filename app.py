@@ -435,11 +435,13 @@ import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live si
 security_headers.init_app(app)
 import json_only  # noqa: E402  (every POST must be JSON, except Stripe's webhook)
 json_only.init_app(app)
+import section_previews  # noqa: E402  (what a locked section teaches, shown on locked.html)
 import seo  # noqa: E402  (sitemap, robots.txt, noindex on private pages, static caching)
 # A function, not a list: the journal and Dhamma talks are loaded further down
 # this file, and are read fresh each time the sitemap is asked for.
 seo.init_app(app, dynamic_paths=lambda: (
-    ['/journal/' + e['slug'] for e in JOURNAL_ENTRIES if e.get('slug')]
+    [p['path'] for p in section_previews.SECTION_PREVIEWS.values()]
+    + ['/journal/' + e['slug'] for e in JOURNAL_ENTRIES if e.get('slug')]
     + ['/dhamma-talk/' + t['slug'] for t in DHAMMA_TALKS]))
 
 
@@ -1159,8 +1161,9 @@ def require_access(section_id):
             has_access, message = check_section_access(section_id)
             
             if not has_access:
-                return render_template('locked.html', 
+                return render_template('locked.html',
                                      section=section_id,
+                                     preview=section_previews.preview_for(section_id),
                                      message=message,
                                      requirements=SECTION_REQUIREMENTS.get(section_id, {}),
                                      earned_unlock_offered=earned_unlock_offer(section_id),

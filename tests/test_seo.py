@@ -76,13 +76,28 @@ def test_private_pages_are_kept_out_of_search(client, path):
     assert client.get(path).headers.get('X-Robots-Tag') == 'noindex'
 
 
-def test_locked_section_notice_is_kept_out_of_search(client):
-    # A logged-out visitor sees the same "Section Locked" notice on many
-    # sections; it must not be indexed as if it were each section's content.
-    html = client.get('/lessons').get_data(as_text=True)
-    assert 'Section Locked' in html
+def test_a_bare_locked_notice_is_kept_out_of_search():
+    # A locked section WITHOUT a preview shows only the shared notice, the
+    # same thin page at many addresses — it must not be indexed.
+    from flask import render_template
+    with app_module.app.test_request_context('/somewhere-locked'):
+        html = render_template('locked.html', section='example_section', preview=None,
+                               message='Locked',
+                               requirements={'level': 2, 'tier': 'basic', 'points_reward': 10},
+                               earned_unlock_offered=False, earned_unlock_level=3,
+                               user_progress={'level': 1, 'xp': 0, 'subscription_tier': 'free'})
+    assert '<h1>Section Locked</h1>' in html
     assert '<meta name="robots" content="noindex, follow">' in html
-    assert '/lessons' not in seo.sitemap_paths()
+
+
+def test_a_locked_section_with_a_preview_is_a_real_page(client):
+    # With a preview the page says what the section teaches, has its own
+    # title and description, and is listed for search.
+    html = client.get('/lessons').get_data(as_text=True)
+    assert '<title>Structured Lessons — ThaiBridge Thai course</title>' in html
+    assert 'class="section-preview"' in html and 'Section Locked' in html
+    assert 'noindex' not in html
+    assert '/lessons' in seo.sitemap_paths()
 
 
 def test_social_preview_tags_point_at_a_real_image(client):
