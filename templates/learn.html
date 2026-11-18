@@ -33,13 +33,6 @@
     {% for cat in categories %}
     <div class="card">
         <h3>
-            {% if cat.id == 'festivals' %}🎉
-            {% elif cat.id == 'isan_dialect' %}🌾
-            {% elif cat.id == 'nature' %}🌿
-            {% elif cat.id == 'buddhist_formal' %}🙏
-            {% elif cat.id == 'theravada_dhamma' %}☸️
-            {% elif cat.id == 'everyday' %}💬
-            {% endif %}
             {{ cat.name }}
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">{{ cat.word_count }} words</p>

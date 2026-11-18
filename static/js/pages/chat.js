@@ -464,7 +464,6 @@ function clearChat() {
             <p>Start a new conversation below.</p>
         </div>
         <div id="chat-placeholder">
-            <span class="placeholder-icon">🪷</span>
             <span class="placeholder-text">Your conversation will appear here...</span>
         </div>
         <div class="thinking-indicator" id="thinking">AI is thinking</div>

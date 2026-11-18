@@ -135,7 +135,7 @@
     {% for example in pair.examples %}
     <div class="example-card {% if example.vowel_type == 'short' %}short-vowel{% else %}long-vowel{% endif %}">
         <span class="vowel-type-badge {% if example.vowel_type == 'short' %}badge-short{% else %}badge-long{% endif %}">
-            {% if example.vowel_type == 'short' %}📍 SHORT VOWEL{% else %}📏 LONG VOWEL{% endif %}
+            {% if example.vowel_type == 'short' %}SHORT VOWEL{% else %}LONG VOWEL{% endif %}
         </span>
         
         <div class="word-display">

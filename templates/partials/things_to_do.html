@@ -37,7 +37,7 @@
                         <span class="activity-english">{{ english }}</span></li>
                     {% endfor %}
                 </ul>
-                <p class="activity-tip">💡 {{ a.tip }}</p>
+                <p class="activity-tip">{{ a.tip }}</p>
                 {% if a.trips and trip_links %}
                 <p class="activity-trips">Play it first:
                     {% for key in a.trips %}<a href="#trips">{{ ttd.trips_by_key[key].title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}

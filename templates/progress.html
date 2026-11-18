@@ -35,17 +35,17 @@
                this replaced. #}
                 {% if earned_unlock.state == 'locked' %}
                 <p class="earned-unlock-note">
-                    🔑 Reach <strong>Level {{ earned_unlock.level }}</strong> to earn
+                    Reach <strong>Level {{ earned_unlock.level }}</strong> to earn
                     <strong>one Thai Reader section, free</strong> — yours to choose.
                 </p>
                 {% elif earned_unlock.state == 'available' %}
                 <p class="earned-unlock-note earned-unlock-ready">
-                    🔑 <strong>You've earned an unlock.</strong> Open any locked Thai Reader
+                    <strong>You've earned an unlock.</strong> Open any locked Thai Reader
                     section and claim it there — you get one, so pick the one you want most.
                 </p>
                 {% elif earned_unlock.state == 'spent' %}
                 <p class="earned-unlock-note">
-                    🔑 You spent your earned unlock on
+                    You spent your earned unlock on
                     <strong>{{ earned_unlock.section_name }}</strong> — it's yours for good.
                 </p>
                 {% endif %}
@@ -337,16 +337,16 @@
             </ul>
             {# How they like to practise points at the tools built for it. #}
             {% if plan.practice == 'speaking' %}
-            <p class="path-tip">🗣️ You like to practise by speaking: say every answer
-               out loud{% if pronunciation_live %}, try 🎤 Say it on the vocabulary pages
+            <p class="path-tip">You like to practise by speaking: say every answer
+               out loud{% if pronunciation_live %}, try Say it on the vocabulary pages
                to check your tones (Thai Master),{% endif %} and chat with the
                <a href="/chat">AI Tutor</a>.</p>
             {% elif plan.practice == 'listening' %}
-            <p class="path-tip">🎧 You like to practise by listening: your quiz target
+            <p class="path-tip">You like to practise by listening: your quiz target
                uses the Listening Quiz, and the conversations on the Sentences page
-               have 🎧 Listen &amp; answer, with a slow speed when you need it.</p>
+               have Listen &amp; answer, with a slow speed when you need it.</p>
             {% else %}
-            <p class="path-tip">📖 You like to practise by reading: your path brings
+            <p class="path-tip">You like to practise by reading: your path brings
                <a href="/read_write">Read &amp; Write</a> forward, where you can also
                trace each letter and write it from memory.</p>
             {% endif %}
