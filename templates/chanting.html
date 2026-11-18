@@ -343,7 +343,7 @@
 
 {% block content %}
 {% from "_page_banner.html" import page_banner %}
-<h1>Digital Chanting Book <span class="thai">บทสวดมนต์</span></h1>
+<h1>Digital Chanting Book <span class="thai" lang="th">บทสวดมนต์</span></h1>
 
 {{ page_banner('img/banners/chanting.webp', 'A golden Buddha image in the painted ordination hall of Wat Arun', 'Ordination hall of Wat Arun', 'Christophe95', 'CC BY-SA 4.0', 'https://creativecommons.org/licenses/by-sa/4.0', 'https://commons.wikimedia.org/wiki/File:Interior_of_the_ordination_hall_of_Wat_Arun.jpg') }}
 
@@ -463,7 +463,7 @@
     <summary>Chants for each day of the week
         <span class="guide-sub">The chant for the day you were born, and a simple daily practice</span></summary>
     <p>In Thai tradition each day of the week has its own number, the power of
-    the day (<span class="thai">กำลังวัน</span>, <em>kamlang wan</em>), and its
+    the day (<span class="thai" lang="th">กำลังวัน</span>, <em>kamlang wan</em>), and its
     own protection chant. The chant of the day you were born on is recited
     that number of times. The numbers come from Thai astrology and are a
     custom, not a requirement of the Buddha's teaching. Every chant below is
@@ -472,7 +472,7 @@
         <thead><tr><th>Day</th><th>Times</th><th>Chant</th><th>First line</th></tr></thead>
         <tbody>
         {% for d in day_chants %}
-        <tr><td>{{ d.day }}<br><span class="thai">{{ d.thai }}</span></td>
+        <tr><td>{{ d.day }}<br><span class="thai" lang="th">{{ d.thai }}</span></td>
             <td class="day-times">{{ d.times }}</td>
             <td>{% if d.chant in guide_chants %}<a href="{{ url_for('chanting_chant', chant_id=d.chant) }}">{{ d.name }}</a>{% else %}{{ d.name }}{% endif %}</td>
             <td><em>{{ d.first_line }}</em></td></tr>

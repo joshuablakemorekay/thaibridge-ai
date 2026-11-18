@@ -54,7 +54,7 @@
 {% block content %}
 <h1>
     Thai Language Register & Formality
-    <span class="thai">ระดับภาษาและความสุภาพ</span>
+    <span class="thai" lang="th">ระดับภาษาและความสุภาพ</span>
 </h1>
 
 <p style="text-align: center; color: #666; max-width: 900px; margin: 0 auto 2rem;">
@@ -93,7 +93,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.monastic.color }}; color: white;">Level {{ registers.monastic.level }}</div>
             <h2 style="margin: 0;">{{ registers.monastic.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.monastic.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.monastic.thai }}</p>
         </div>
     </div>
     
@@ -106,7 +106,7 @@
     <div class="example-grid">
         {% for ex in registers.monastic.examples %}
         <div class="example-item" style="border-left-color: {{ registers.monastic.color }};">
-            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;" lang="th">{{ ex.thai }}</p>
             <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
             <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
             <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
@@ -126,7 +126,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.royal.color }}; color: white;">Level {{ registers.royal.level }}</div>
             <h2 style="margin: 0;">{{ registers.royal.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.royal.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.royal.thai }}</p>
         </div>
     </div>
     
@@ -148,10 +148,10 @@
         <tbody>
             {% for ex in registers.royal.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
-                <td class="thai-text">{{ ex.standard }}</td>
+                <td class="thai-text" lang="th">{{ ex.standard }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -169,7 +169,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.obsolete.color }}; color: white;">Level {{ registers.obsolete.level }}</div>
             <h2 style="margin: 0;">{{ registers.obsolete.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.obsolete.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.obsolete.thai }}</p>
         </div>
     </div>
     
@@ -191,10 +191,10 @@
         <tbody>
             {% for ex in registers.obsolete.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
-                <td class="thai-text">{{ ex.modern }}</td>
+                <td class="thai-text" lang="th">{{ ex.modern }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -212,7 +212,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.literary.color }}; color: white;">Level {{ registers.literary.level }}</div>
             <h2 style="margin: 0;">{{ registers.literary.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.literary.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.literary.thai }}</p>
         </div>
     </div>
     
@@ -225,10 +225,10 @@
     <div class="example-grid">
         {% for ex in registers.literary.examples %}
         <div class="example-item" style="border-left-color: {{ registers.literary.color }};">
-            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;" lang="th">{{ ex.thai }}</p>
             <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
             <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
-            <p style="font-size: 0.9rem; color: #666;">Everyday: <span class="thai-text">{{ ex.everyday }}</span></p>
+            <p style="font-size: 0.9rem; color: #666;">Everyday: <span class="thai-text" lang="th">{{ ex.everyday }}</span></p>
         </div>
         {% endfor %}
     </div>
@@ -245,7 +245,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.technical.color }}; color: white;">Level {{ registers.technical.level }}</div>
             <h2 style="margin: 0;">{{ registers.technical.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.technical.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.technical.thai }}</p>
         </div>
     </div>
     
@@ -258,11 +258,11 @@
     <div class="example-grid">
         {% for ex in registers.technical.examples %}
         <div class="example-item" style="border-left-color: {{ registers.technical.color }};">
-            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;" lang="th">{{ ex.thai }}</p>
             <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
             <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
             {% if ex.simple %}
-            <p style="font-size: 0.9rem; color: #666;">Simpler: <span class="thai-text">{{ ex.simple }}</span></p>
+            <p style="font-size: 0.9rem; color: #666;">Simpler: <span class="thai-text" lang="th">{{ ex.simple }}</span></p>
             {% elif ex.note %}
             <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
             {% endif %}
@@ -282,7 +282,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.formal.color }}; color: white;">Level {{ registers.formal.level }}</div>
             <h2 style="margin: 0;">{{ registers.formal.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.formal.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.formal.thai }}</p>
         </div>
     </div>
     
@@ -304,10 +304,10 @@
         <tbody>
             {% for ex in registers.formal.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
-                <td class="thai-text">{{ ex.casual }}</td>
+                <td class="thai-text" lang="th">{{ ex.casual }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -325,7 +325,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.neutral.color }}; color: white;">Level {{ registers.neutral.level }} YOUR DEFAULT</div>
             <h2 style="margin: 0;">{{ registers.neutral.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.neutral.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.neutral.thai }}</p>
         </div>
     </div>
     
@@ -338,7 +338,7 @@
     <div class="example-grid">
         {% for ex in registers.neutral.examples %}
         <div class="example-item" style="border-left-color: {{ registers.neutral.color }};">
-            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;" lang="th">{{ ex.thai }}</p>
             <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
             <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
             <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
@@ -358,7 +358,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.casual.color }}; color: white;">Level {{ registers.casual.level }}</div>
             <h2 style="margin: 0;">{{ registers.casual.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.casual.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.casual.thai }}</p>
         </div>
     </div>
     
@@ -371,11 +371,11 @@
     <div class="example-grid">
         {% for ex in registers.casual.examples %}
         <div class="example-item" style="border-left-color: {{ registers.casual.color }};">
-            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;" lang="th">{{ ex.thai }}</p>
             <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
             <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
             {% if ex.polite %}
-            <p style="font-size: 0.9rem; color: #666;">Polite: <span class="thai-text">{{ ex.polite }}</span></p>
+            <p style="font-size: 0.9rem; color: #666;">Polite: <span class="thai-text" lang="th">{{ ex.polite }}</span></p>
             {% elif ex.note %}
             <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
             {% endif %}
@@ -414,7 +414,7 @@
         <div>
             <div class="level-badge" style="background: {{ registers.vulgar.color }}; color: white;">Level {{ registers.vulgar.level }} - EXTREME CAUTION</div>
             <h2 style="margin: 0; color: {{ registers.vulgar.color }};">{{ registers.vulgar.name }}</h2>
-            <p class="thai-text" style="margin: 0;">{{ registers.vulgar.thai }}</p>
+            <p class="thai-text" style="margin: 0;" lang="th">{{ registers.vulgar.thai }}</p>
         </div>
     </div>
     
@@ -442,7 +442,7 @@
         <tbody>
             {% for ex in registers.vulgar.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
                 <td><span style="color: #c62828; font-weight: bold;">{{ ex.severity }}</span></td>

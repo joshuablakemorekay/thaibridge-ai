@@ -326,16 +326,16 @@
         <div class="x2k-say">
             {% for phrase in m.say %}
             <div class="x2k-phrase">
-                <div class="thai-text">{{ phrase.thai }}</div>
+                <div class="thai-text" lang="th">{{ phrase.thai }}</div>
                 <div class="x2k-paiboon">{{ phrase.paiboon }}</div>
                 <div class="x2k-english">{{ phrase.english }}</div>
                 {% if phrase.note %}<div class="x2k-note">{{ phrase.note }}</div>{% endif %}
                 {% if phrase.particle %}
                 {# Both particles, always — same reasoning as Survival Thai. #}
                 <div class="x2k-particle">
-                    Add <span class="thai-text">{{ particle.male.thai }}</span>
+                    Add <span class="thai-text" lang="th">{{ particle.male.thai }}</span>
                     <em>({{ particle.male.paiboon }})</em> if you are male,
-                    <span class="thai-text">{{ particle.female.thai }}</span>
+                    <span class="thai-text" lang="th">{{ particle.female.thai }}</span>
                     <em>({{ particle.female.paiboon }})</em> if you are female.
                 </div>
                 {% endif %}

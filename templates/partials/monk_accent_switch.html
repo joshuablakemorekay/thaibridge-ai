@@ -2,7 +2,7 @@
    is reading Paiboon, not English respellings, so the switch would be noise. #}
 {% if monk_direction == 'learn_english' %}
 <div class="monk-accent-switch" role="group" aria-label="English accent">
-    <span class="monk-accent-label thai">สำเนียง / Accent</span>
+    <span class="monk-accent-label thai" lang="th">สำเนียง / Accent</span>
     <button class="monk-accent-btn{% if monk_accent == 'uk' %} active{% endif %}"
             data-on-click="setMonkAccent" data-args='["uk"]'>
         British

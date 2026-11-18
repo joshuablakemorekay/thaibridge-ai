@@ -258,7 +258,7 @@
 {% from "_page_banner.html" import page_banner %}
 <h1>
     Theravada Dhamma
-    <span class="thai">พระธรรมเถรวาท</span>
+    <span class="thai" lang="th">พระธรรมเถรวาท</span>
 </h1>
 
 {{ page_banner('img/banners/theravada.webp', 'The sala of Wat Pah Nanachat among forest trees', 'The Sala of Wat Pah Nanachat', 'International Forest Monastery', 'CC BY-SA 3.0', 'https://creativecommons.org/licenses/by-sa/3.0', 'https://commons.wikimedia.org/wiki/File:The_Sala_of_Wat_Pah_Nanachat.jpg') }}
@@ -315,7 +315,7 @@
 {% for sutta in teachings.key_suttas %}
 <div class="card sutta-card">
     <h3 class="pali-text" style="margin-bottom: 0.25rem;">{{ sutta.pali }}</h3>
-    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ sutta.thai }}</p>
+    <p class="thai-text" style="margin-bottom: 0.5rem;" lang="th">{{ sutta.thai }}</p>
     <p style="font-weight: bold; color: var(--royal-purple);">{{ sutta.english }}</p>
     
     <p style="margin: 1rem 0; line-height: 1.8;">{{ sutta.description }}</p>
@@ -345,7 +345,7 @@
 {% for concept in teachings.key_abhidhamma %}
 <div class="card abhidhamma-card">
     <h3 style="margin-bottom: 0.25rem;">{{ concept.topic }}</h3>
-    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ concept.thai }}</p>
+    <p class="thai-text" style="margin-bottom: 0.5rem;" lang="th">{{ concept.thai }}</p>
     
     <p style="margin: 1rem 0; line-height: 1.8;">{{ concept.description }}</p>
     
@@ -374,7 +374,7 @@
 {% for rule in teachings.key_vinaya %}
 <div class="card vinaya-card">
     <h3 style="margin-bottom: 0.25rem;">{{ rule.rule }}</h3>
-    <p class="thai-text" style="margin-bottom: 0.25rem;">{{ rule.thai }}</p>
+    <p class="thai-text" style="margin-bottom: 0.25rem;" lang="th">{{ rule.thai }}</p>
     {% if rule.paiboon %}
     <p class="paiboon" style="margin-bottom: 0.5rem;">{{ rule.paiboon }}</p>
     {% endif %}

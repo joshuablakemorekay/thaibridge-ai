@@ -161,7 +161,7 @@
 {% block content %}
 <h1>
     Thai Vowels & Syllables
-    <span class="thai">สระและพยางค์ไทย</span>
+    <span class="thai" lang="th">สระและพยางค์ไทย</span>
 </h1>
 
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
@@ -227,7 +227,7 @@
                     Example Word:
                 </div>
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
-                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;" lang="th">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
                         <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text);">
                             {{ vowel.example_word.paiboon }}
@@ -279,7 +279,7 @@
                     Example Word:
                 </div>
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
-                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;" lang="th">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
                         <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron-text);">
                             {{ vowel.example_word.paiboon }}
@@ -306,7 +306,7 @@
         <!-- Short Version -->
         <div style="text-align: center;">
             <div class="type-badge short" style="display: block; margin-bottom: 0.5rem;">SHORT</div>
-            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;" lang="th">
                 {{ pair.short.thai }}
             </div>
             {% if thai_audio_url(pair.short.thai) %}<button type="button" class="th-audio" style="margin-bottom: 0.5rem;" data-audio="{{ thai_audio_url(pair.short.thai) }}" aria-label="Play {{ pair.short.paiboon }}">🔊</button>{% endif %}
@@ -327,7 +327,7 @@
         <!-- Long Version -->
         <div style="text-align: center;">
             <div class="type-badge long" style="display: block; margin-bottom: 0.5rem;">LONG</div>
-            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;" lang="th">
                 {{ pair.long.thai }}
             </div>
             {% if thai_audio_url(pair.long.thai) %}<button type="button" class="th-audio" style="margin-bottom: 0.5rem;" data-audio="{{ thai_audio_url(pair.long.thai) }}" aria-label="Play {{ pair.long.paiboon }}">🔊</button>{% endif %}
@@ -376,7 +376,7 @@
     <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--bodhi-green);">
         <div style="display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center;">
             <div style="text-align: center;">
-                <div class="thai-text" style="font-size: 3rem; margin-bottom: 0.5rem;">
+                <div class="thai-text" style="font-size: 3rem; margin-bottom: 0.5rem;" lang="th">
                     {{ example.thai }}
                 </div>
                 <div class="paiboon" style="font-size: 1.5rem; color: var(--saffron-text);">
@@ -447,7 +447,7 @@
         </p>
         <div style="background: #e8eaf6; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
             <strong>Example:</strong><br>
-            <span class="thai-text" style="font-size: 1.3rem;">ภาษา</span>
+            <span class="thai-text" style="font-size: 1.3rem;" lang="th">ภาษา</span>
             <span class="paiboon" style="color: var(--saffron-text); font-size: 1.2rem;">paa-sǎa</span><br>
             <span style="color: #666;">Last syllable "sǎa" is stressed → pronounced clearly with its full rising tone</span>
         </div>
@@ -470,7 +470,7 @@
         </p>
         <div style="background: #fff8e1; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
             <strong>Example:</strong><br>
-            <span class="thai-text" style="font-size: 1.3rem;">สนาม</span>
+            <span class="thai-text" style="font-size: 1.3rem;" lang="th">สนาม</span>
             <span class="paiboon" style="color: var(--saffron-text); font-size: 1.2rem;">sà~nǎam</span><br>
             <span style="color: #666;">First syllable "sà" is unstressed → in natural speech its tone and vowel reduce</span>
         </div>
@@ -503,17 +503,17 @@
         <div style="background: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
             <strong>Examples of Live Syllables:</strong><br><br>
             <div style="margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 1.3rem;">ที</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">ที</span> 
                 <span class="paiboon" style="color: var(--bodhi-green);">tii</span> 
                 <span style="color: #666;">→ ends with long vowel "ii"</span>
             </div>
             <div style="margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 1.3rem;">สาม</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">สาม</span> 
                 <span class="paiboon" style="color: var(--bodhi-green);">sǎam</span> 
                 <span style="color: #666;">→ ends with "m" (sonorant)</span>
             </div>
             <div>
-                <span class="thai-text" style="font-size: 1.3rem;">เล่น</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">เล่น</span> 
                 <span class="paiboon" style="color: var(--bodhi-green);">lên</span> 
                 <span style="color: #666;">→ ends with "n" (sonorant)</span>
             </div>
@@ -536,17 +536,17 @@
         <div style="background: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
             <strong>Examples of Dead Syllables:</strong><br><br>
             <div style="margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 1.3rem;">นก</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">นก</span> 
                 <span class="paiboon" style="color: var(--temple-red);">nók</span> 
                 <span style="color: #666;">→ ends with "k" stop (bird)</span>
             </div>
             <div style="margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 1.3rem;">สบาย</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">สบาย</span> 
                 <span class="paiboon" style="color: var(--temple-red);">sà-baai</span> 
                 <span style="color: #666;">→ first syllable "sà" ends with glottal stop</span>
             </div>
             <div>
-                <span class="thai-text" style="font-size: 1.3rem;">จะ</span> 
+                <span class="thai-text" style="font-size: 1.3rem;" lang="th">จะ</span> 
                 <span class="paiboon" style="color: var(--temple-red);">jà</span> 
                 <span style="color: #666;">→ ends with short vowel "a", cut off sharply (will)</span>
             </div>
@@ -582,7 +582,7 @@
         <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #9c27b0;">Written (Careful Speech):</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">หนังสือ</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">หนังสือ</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">nǎŋ<span style="color: var(--saffron-text);">~</span>sʉ̌ʉ</span><br>
                 <span style="color: #666;">rising tone + rising tone (book)</span>
             </div>
@@ -596,7 +596,7 @@
         <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #9c27b0;">Written:</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">กระเทียม</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">กระเทียม</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">grà<span style="color: var(--saffron-text);">~</span>tiam</span><br>
                 <span style="color: #666;">low tone + mid tone (garlic)</span>
             </div>
@@ -622,7 +622,7 @@
         <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: var(--saffron-text);">Written (Careful Speech):</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">มหาวิทยาลัย</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">มหาวิทยาลัย</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">má<span style="color: var(--saffron-text);">~</span>hǎa-wít-tá<span style="color: var(--saffron-text);">~</span>yaa-lai</span><br>
                 <span style="color: #666;">university (6 syllables)</span>
             </div>
@@ -636,7 +636,7 @@
         <div style="background: #fff3e0; padding: 1rem; border-radius: 8px;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: var(--saffron-text);">Written:</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">ขอบคุณ</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">ขอบคุณ</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">kɔ̀ɔp-kun</span><br>
                 <span style="color: #666;">thank you (2 syllables)</span>
             </div>
@@ -662,7 +662,7 @@
         <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #2e7d32;">Written (Careful Speech):</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">แสดง</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">แสดง</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron-text);">~</span>dɛɛŋ</span><br>
                 <span style="color: #666;">to show/perform</span>
             </div>
@@ -677,7 +677,7 @@
         <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px;">
             <div style="margin-bottom: 1rem;">
                 <strong style="color: #2e7d32;">Written:</strong><br>
-                <span class="thai-text" style="font-size: 1.4rem;">คดี</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">คดี</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">ká<span style="color: var(--saffron-text);">~</span>dii</span><br>
                 <span style="color: #666;">law case</span>
             </div>
@@ -691,7 +691,7 @@
         <div style="background: #c8e6c9; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
             <strong style="color: #1b5e20;">Compare with DEAD SYLLABLE:</strong><br><br>
             <div style="background: white; padding: 0.75rem; border-radius: 5px;">
-                <span class="thai-text" style="font-size: 1.4rem;">สหภาพ</span> 
+                <span class="thai-text" style="font-size: 1.4rem;" lang="th">สหภาพ</span> 
                 <span class="paiboon" style="font-size: 1.3rem;">sà<span style="color: var(--saffron-text);">~</span>hà-pâap</span> 
                 <span style="color: #666;">(labour union)</span><br>
                 <span style="font-size: 0.95rem; color: #d84315;">

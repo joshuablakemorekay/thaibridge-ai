@@ -29,7 +29,7 @@
 {% block content %}
 <h1>
     Gender & Formality Guide
-    <span class="thai">คำสรรพนามตามเพศและความสุภาพ</span>
+    <span class="thai" lang="th">คำสรรพนามตามเพศและความสุภาพ</span>
 </h1>
 
 <p style="text-align: center; color: #666; margin-bottom: 2rem;">
@@ -67,8 +67,8 @@
             <h4 style="color: #1976D2;">1️⃣ First-Person Pronouns</h4>
             <p style="margin-top: 0.5rem;">The word for "I" changes based on your gender and formality:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> <span class="thai-text">ผม</span> (pǒm)</li>
-                <li><strong>Female:</strong> <span class="thai-text">ดิฉัน</span> (dì-chǎn) formal, <span class="thai-text">ฉัน</span> (chǎn) casual</li>
+                <li><strong>Male:</strong> <span class="thai-text" lang="th">ผม</span> (pǒm)</li>
+                <li><strong>Female:</strong> <span class="thai-text" lang="th">ดิฉัน</span> (dì-chǎn) formal, <span class="thai-text" lang="th">ฉัน</span> (chǎn) casual</li>
             </ul>
         </div>
         
@@ -76,8 +76,8 @@
             <h4 style="color: #C2185B;">2️⃣ Politeness Particles</h4>
             <p style="margin-top: 0.5rem;">Added at the end of sentences for politeness:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> <span class="thai-text">ครับ</span> (kráp)</li>
-                <li><strong>Female:</strong> <span class="thai-text">ค่ะ</span> (kâ) statements, <span class="thai-text">คะ</span> (ká) questions</li>
+                <li><strong>Male:</strong> <span class="thai-text" lang="th">ครับ</span> (kráp)</li>
+                <li><strong>Female:</strong> <span class="thai-text" lang="th">ค่ะ</span> (kâ) statements, <span class="thai-text" lang="th">คะ</span> (ká) questions</li>
             </ul>
         </div>
         
@@ -85,8 +85,8 @@
             <h4 style="color: #7B1FA2;">3️⃣ Complete Phrases</h4>
             <p style="margin-top: 0.5rem;">Greetings and common phrases include both:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> <span class="thai-text">สวัสดีครับ</span> (sà-wàt-dii kráp)</li>
-                <li><strong>Female:</strong> <span class="thai-text">สวัสดีค่ะ</span> (sà-wàt-dii kâ)</li>
+                <li><strong>Male:</strong> <span class="thai-text" lang="th">สวัสดีครับ</span> (sà-wàt-dii kráp)</li>
+                <li><strong>Female:</strong> <span class="thai-text" lang="th">สวัสดีค่ะ</span> (sà-wàt-dii kâ)</li>
             </ul>
         </div>
     </div>
@@ -124,16 +124,16 @@
                 <td><strong>{{ formality|title }}</strong></td>
                 {% if gender == 'neutral' %}
                     <td>
-                        <span class="thai-text">{{ gender_variants.pronouns.first_person.male[formality].thai }}</span><br>
+                        <span class="thai-text" lang="th">{{ gender_variants.pronouns.first_person.male[formality].thai }}</span><br>
                         <span class="paiboon">{{ gender_variants.pronouns.first_person.male[formality].paiboon }}</span>
                     </td>
                     <td>
-                        <span class="thai-text">{{ gender_variants.pronouns.first_person.female[formality].thai }}</span><br>
+                        <span class="thai-text" lang="th">{{ gender_variants.pronouns.first_person.female[formality].thai }}</span><br>
                         <span class="paiboon">{{ gender_variants.pronouns.first_person.female[formality].paiboon }}</span>
                     </td>
                 {% else %}
                     <td>
-                        <span class="thai-text">{{ gender_variants.pronouns.first_person[gender][formality].thai }}</span><br>
+                        <span class="thai-text" lang="th">{{ gender_variants.pronouns.first_person[gender][formality].thai }}</span><br>
                         <span class="paiboon">{{ gender_variants.pronouns.first_person[gender][formality].paiboon }}</span>
                     </td>
                 {% endif %}
@@ -162,7 +162,7 @@
         <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; border: 3px solid #2196F3;">
             <h4 style="color: #1976D2; text-align: center;">👨 Male Speaker</h4>
             <div style="margin-top: 1rem; text-align: center;">
-                <div class="thai-text" style="font-size: 2rem;">ครับ</div>
+                <div class="thai-text" style="font-size: 2rem;" lang="th">ครับ</div>
                 <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">kráp</div>
                 <p style="margin-top: 0.5rem; color: #666;">Use for both statements and questions</p>
             </div>
@@ -174,12 +174,12 @@
             <h4 style="color: #C2185B; text-align: center;">👩 Female Speaker</h4>
             <div style="margin-top: 1rem;">
                 <div style="text-align: center; margin-bottom: 1rem;">
-                    <div class="thai-text" style="font-size: 2rem;">ค่ะ</div>
+                    <div class="thai-text" style="font-size: 2rem;" lang="th">ค่ะ</div>
                     <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">kâ</div>
                     <p style="margin-top: 0.5rem; color: #666;">For statements</p>
                 </div>
                 <div style="text-align: center;">
-                    <div class="thai-text" style="font-size: 2rem;">คะ</div>
+                    <div class="thai-text" style="font-size: 2rem;" lang="th">คะ</div>
                     <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">ká</div>
                     <p style="margin-top: 0.5rem; color: #666;">For questions</p>
                 </div>
@@ -217,7 +217,7 @@
             {% for formality in ['formal', 'polite', 'casual'] %}
             <tr>
                 <td><strong>{{ formality|title }}</strong></td>
-                <td class="thai-text">{{ greetings[greeting_type][formality].thai }}</td>
+                <td class="thai-text" lang="th">{{ greetings[greeting_type][formality].thai }}</td>
                 <td class="paiboon">{{ greetings[greeting_type][formality].paiboon }}</td>
                 <td>{{ greetings[greeting_type][formality].english }}</td>
             </tr>
@@ -247,7 +247,7 @@
         
         {% for example_type, example in sentence_set.items() %}
         <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: {% if not loop.last %}0.75rem{% else %}0{% endif %};">
-            <div class="thai-text" style="font-size: 1.4rem;">{{ example.thai }}</div>
+            <div class="thai-text" style="font-size: 1.4rem;" lang="th">{{ example.thai }}</div>
             <div class="paiboon" style="font-size: 1.2rem; margin-top: 0.5rem; color: #666;">{{ example.paiboon }}</div>
             <div style="margin-top: 0.5rem; color: #666;">{{ example.english }}</div>
         </div>
@@ -320,7 +320,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
         <div style="background: white; padding: 1rem; border-radius: 8px;">
             <h4 style="color: var(--saffron-text);">How to say "I":</h4>
-            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;" lang="th">
                 {{ gender_variants.pronouns.first_person[gender if gender != 'neutral' else 'male'].polite.thai }}
             </div>
             <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
@@ -330,7 +330,7 @@
         
         <div style="background: white; padding: 1rem; border-radius: 8px;">
             <h4 style="color: var(--saffron-text);">Polite ending:</h4>
-            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;" lang="th">
                 {{ gender_variants.particles[gender if gender != 'neutral' else 'male'].statement.thai }}
             </div>
             <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
@@ -340,7 +340,7 @@
         
         <div style="background: white; padding: 1rem; border-radius: 8px;">
             <h4 style="color: var(--saffron-text);">Say "Hello":</h4>
-            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;" lang="th">
                 {{ greetings.hello.polite.thai }}
             </div>
             <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
@@ -410,11 +410,11 @@
             <tr>
                 <td><strong>I (polite)</strong></td>
                 <td style="background: #e3f2fd;">
-                    <span class="thai-text">ผม</span><br>
+                    <span class="thai-text" lang="th">ผม</span><br>
                     <span class="paiboon">pǒm</span>
                 </td>
                 <td style="background: #fce4ec;">
-                    <span class="thai-text">ดิฉัน</span><br>
+                    <span class="thai-text" lang="th">ดิฉัน</span><br>
                     <span class="paiboon">dì-chǎn</span>
                 </td>
                 <td>Most common polite "I"</td>
@@ -422,11 +422,11 @@
             <tr>
                 <td><strong>I (casual)</strong></td>
                 <td style="background: #e3f2fd;">
-                    <span class="thai-text">กู</span><br>
+                    <span class="thai-text" lang="th">กู</span><br>
                     <span class="paiboon">guu</span>
                 </td>
                 <td style="background: #fce4ec;">
-                    <span class="thai-text">ฉัน</span><br>
+                    <span class="thai-text" lang="th">ฉัน</span><br>
                     <span class="paiboon">chǎn</span>
                 </td>
                 <td>Informal with friends</td>
@@ -434,11 +434,11 @@
             <tr>
                 <td><strong>Polite particle (statement)</strong></td>
                 <td style="background: #e3f2fd;">
-                    <span class="thai-text">ครับ</span><br>
+                    <span class="thai-text" lang="th">ครับ</span><br>
                     <span class="paiboon">kráp</span>
                 </td>
                 <td style="background: #fce4ec;">
-                    <span class="thai-text">ค่ะ</span><br>
+                    <span class="thai-text" lang="th">ค่ะ</span><br>
                     <span class="paiboon">kâ</span>
                 </td>
                 <td>End of sentence</td>
@@ -446,11 +446,11 @@
             <tr>
                 <td><strong>Polite particle (question)</strong></td>
                 <td style="background: #e3f2fd;">
-                    <span class="thai-text">ครับ</span><br>
+                    <span class="thai-text" lang="th">ครับ</span><br>
                     <span class="paiboon">kráp</span>
                 </td>
                 <td style="background: #fce4ec;">
-                    <span class="thai-text">คะ</span><br>
+                    <span class="thai-text" lang="th">คะ</span><br>
                     <span class="paiboon">ká</span>
                 </td>
                 <td>Female form changes tone!</td>
@@ -458,7 +458,7 @@
             <tr>
                 <td><strong>You (same for all)</strong></td>
                 <td colspan="2" style="background: #f3e5f5; text-align: center;">
-                    <span class="thai-text">คุณ</span><br>
+                    <span class="thai-text" lang="th">คุณ</span><br>
                     <span class="paiboon">kun</span>
                 </td>
                 <td>No gender difference</td>
@@ -466,7 +466,7 @@
             <tr>
                 <td><strong>He/She/They (same for all)</strong></td>
                 <td colspan="2" style="background: #f3e5f5; text-align: center;">
-                    <span class="thai-text">เขา</span><br>
+                    <span class="thai-text" lang="th">เขา</span><br>
                     <span class="paiboon">kǎo</span>
                 </td>
                 <td>Gender-neutral!</td>

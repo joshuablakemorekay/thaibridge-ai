@@ -32,7 +32,7 @@
                 <p class="activity-where"><strong>Where:</strong> {{ a.where }}</p>
                 <ul class="activity-phrases">
                     {% for thai, paiboon, english in a.phrases %}
-                    <li><span class="thai-text">{{ thai }}</span>
+                    <li><span class="thai-text" lang="th">{{ thai }}</span>
                         <span class="vocab-paiboon">{{ paiboon }}</span>
                         <span class="activity-english">{{ english }}</span></li>
                     {% endfor %}

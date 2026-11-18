@@ -8,7 +8,7 @@
 {% block content %}
 <div class="container">
     <h1>Business Thai
-        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;">ภาษาไทยธุรกิจ</span>
+        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;" lang="th">ภาษาไทยธุรกิจ</span>
     </h1>
 
     <div class="info-banner">
@@ -43,7 +43,7 @@
         <div class="vocab-grid">
             {% for word in words %}
             <div class="vocab-card">
-                <span class="vocab-thai thai-text">{{ word.thai }}</span>
+                <span class="vocab-thai thai-text" lang="th">{{ word.thai }}</span>
                 <span class="vocab-paiboon">{{ word.paiboon }}</span>
                 <span class="vocab-english">{{ word.english }}</span>
                 <span class="vocab-note">{{ word.note }}</span>

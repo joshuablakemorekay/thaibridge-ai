@@ -64,12 +64,12 @@
             '<span class="tp-place">' + esc(t.place) + '</span>' +
             '<h3 class="tp-title">' + esc(t.title) + '</h3>' +
             '<p>' + esc(t.blurb) + '</p>' +
-            '<div class="tp-bubble"><span class="tp-intro-thai thai-text">' + esc(t.place_thai) + '</span>' +
+            '<div class="tp-bubble"><span class="tp-intro-thai thai-text" lang="th">' + esc(t.place_thai) + '</span>' +
             '<span class="tp-pb">' + esc(t.place_paiboon) + '</span><span class="tp-en">' + esc(t.place_english) + '</span></div>' +
             '<p class="tp-prompt">' + (state.voice ? 'Ready? Tap how you speak to set off.' : 'How do you speak? Thai polite endings depend on who is talking.') + '</p>' +
             '<div class="tp-voice">' +
-            '<button type="button" data-voice="male"' + (state.voice === 'male' ? ' class="chosen"' : '') + '><span class="thai">ครับ</span><span class="tp-pb">kráp</span><small>I speak as a man</small></button>' +
-            '<button type="button" data-voice="female"' + (state.voice === 'female' ? ' class="chosen"' : '') + '><span class="thai">ค่ะ / คะ</span><span class="tp-pb">kâ / ká</span><small>I speak as a woman</small></button>' +
+            '<button type="button" data-voice="male"' + (state.voice === 'male' ? ' class="chosen"' : '') + '><span class="thai" lang="th">ครับ</span><span class="tp-pb">kráp</span><small>I speak as a man</small></button>' +
+            '<button type="button" data-voice="female"' + (state.voice === 'female' ? ' class="chosen"' : '') + '><span class="thai" lang="th">ค่ะ / คะ</span><span class="tp-pb">kâ / ká</span><small>I speak as a woman</small></button>' +
             '</div></div>';
     }
 
@@ -81,7 +81,7 @@
             '<p>' + esc(sc.narration) + '</p>';
         if (sc.thai) {
             html += '<div class="tp-bubble"><span class="tp-who">' + esc(sc.who) + ' says</span>' +
-                '<span class="tp-said thai-text">' + esc(sc.thai) + '</span>' +
+                '<span class="tp-said thai-text" lang="th">' + esc(sc.thai) + '</span>' +
                 '<span class="tp-pb">' + esc(sc.paiboon) + '</span><span class="tp-en">' + esc(sc.english) + '</span></div>';
         }
         html += '<div class="tp-prompt-row"><span class="tp-prompt">' + esc(sc.prompt) + '</span>' +
@@ -90,7 +90,7 @@
         sc.choices.forEach(function (c, k) {
             var cls = (p !== null && k === p) ? ' picked ' + c.verdict : '';
             html += '<button type="button" class="tp-choice' + cls + '" data-pick="' + k + '"' + (p !== null ? ' disabled' : '') + '>' +
-                '<span class="thai">' + esc(fill(c.thai)) + '</span><span class="tp-pb">' + esc(fill(c.paiboon, true)) + '</span>' +
+                '<span class="thai" lang="th">' + esc(fill(c.thai)) + '</span><span class="tp-pb">' + esc(fill(c.paiboon, true)) + '</span>' +
                 '<span class="tp-en">' + esc(c.english) + '</span></button>';
         });
         html += '</div>';
@@ -99,7 +99,7 @@
             var label = { good: 'Nice', ok: 'That works, mostly', miss: 'Not quite' }[c.verdict];
             var last = state.i === t.scenes.length - 1;
             html += '<div class="tp-feedback ' + c.verdict + '" role="status"><span class="tp-verdict">' + label + '</span>' +
-                '<span class="tp-you-said">You said <span class="thai-text">' + esc(fill(c.thai)) + '</span></span>' +
+                '<span class="tp-you-said">You said <span class="thai-text" lang="th">' + esc(fill(c.thai)) + '</span></span>' +
                 '<p>' + esc(c.reply) + '</p></div>' +
                 '<div class="tp-tip"><strong>' + esc(sc.tip.title) + '</strong>' + esc(sc.tip.text) + '</div>' +
                 '<div class="tp-actions">' + (c.verdict === 'miss'
@@ -117,7 +117,7 @@
         if (got.indexOf(t.key) === -1) { got.push(t.key); save(STAMPS_KEY, got); }
         player.innerHTML = top(t) + route(t, t.stops.length) +
             '<div class="tp-stamp-wrap"><div class="tp-stamp"><div><small>' + esc(t.place.toUpperCase()) + '</small>' +
-            '<span class="thai">' + esc(t.stamp) + '</span><small>' + esc(date) + '</small></div></div></div>' +
+            '<span class="thai" lang="th">' + esc(t.stamp) + '</span><small>' + esc(date) + '</small></div></div></div>' +
             '<div class="tp-card"><h3 class="tp-title">Trip complete</h3>' +
             '<p>You got ' + state.firsts + ' of ' + t.scenes.length + ' stops right first time. ' +
             got.length + ' of ' + data.trips.length + ' stamps collected.</p>' +

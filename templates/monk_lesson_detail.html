@@ -11,7 +11,7 @@
     {# No Paiboon here on purpose: it exists to help a reader of the Latin alphabet pronounce Thai,
        and this reader already reads Thai. #}
     <div class="monk-entry-prompt">
-        <span class="thai">{{ e.thai }}</span>
+        <span class="thai" lang="th">{{ e.thai }}</span>
     </div>
     <div class="monk-entry-target">
         {# A few entries are different words per accent (aeroplane/airplane), so
@@ -44,7 +44,7 @@
         {% endif %}
     </div>
     {% if e.english_tip_th %}
-    <p class="monk-entry-tip thai">{{ e.english_tip_th }}</p>
+    <p class="monk-entry-tip thai" lang="th">{{ e.english_tip_th }}</p>
     {% endif %}
     {% else %}
     {# Monk learning Thai: prompt = English, target = Thai + paiboon #}
@@ -52,7 +52,7 @@
         <span class="monk-entry-word">{{ e.english }}</span>
     </div>
     <div class="monk-entry-target">
-        <span class="thai">{{ e.thai }}</span>
+        <span class="thai" lang="th">{{ e.thai }}</span>
         {# Native Thai voice, the same as the rest of the site. Drawn only when
            the clip exists, like the English side. #}
         {% set th_audio = thai_audio_url(e.thai) %}
@@ -68,8 +68,8 @@
         {% if direction == 'learn_english' %}
         {# Show the Thai gloss, never the English one — an English note is no use
            to someone who is here to learn English. #}
-        {% if e.note_th %}<span class="monk-entry-note thai">{{ e.note_th }}</span>{% endif %}
-        {% if e.context_th %}<span class="monk-entry-note thai">{{ e.context_th }}</span>{% endif %}
+        {% if e.note_th %}<span class="monk-entry-note thai" lang="th">{{ e.note_th }}</span>{% endif %}
+        {% if e.context_th %}<span class="monk-entry-note thai" lang="th">{{ e.context_th }}</span>{% endif %}
         {% else %}
         {% if e.note %}<span class="monk-entry-note">{{ e.note }}</span>{% endif %}
         {% if e.context %}<span class="monk-entry-note">{{ e.context }}</span>{% endif %}
@@ -83,7 +83,7 @@
 
 <h1>
     {% if direction == 'learn_english' %}{{ lesson.title.th }}{% else %}{{ lesson.title.en }}{% endif %}
-    <span class="thai">{% if direction == 'learn_english' %}{{ lesson.title.en }}{% else %}{{ lesson.title.th }}{% endif %}</span>
+    <span class="thai" lang="th">{% if direction == 'learn_english' %}{{ lesson.title.en }}{% else %}{{ lesson.title.th }}{% endif %}</span>
 </h1>
 
 <div class="card monk-card">
@@ -99,7 +99,7 @@
         <input type="checkbox" id="monkIpaToggle"> แสดงสัทอักษร IPA
         <span class="monk-ipa-toggle-sub">Show IPA (advanced)</span>
     </label>
-    <a class="monk-pron-link thai" href="/monk/pronunciation">
+    <a class="monk-pron-link thai" href="/monk/pronunciation" lang="th">
         วิธีอ่านคำอ่าน — How to read the pronunciation
     </a>
     {% endif %}
@@ -124,10 +124,10 @@
 {% if lesson.word_choices %}
 <h2>
     {% if direction == 'learn_english' %}{{ lesson.word_choices.title.th }}{% else %}{{ lesson.word_choices.title.en }}{% endif %}
-    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ lesson.word_choices.title.en }}{% else %}{{ lesson.word_choices.title.th }}{% endif %}</span>
+    <span class="thai monk-drill-subtitle" lang="th">{% if direction == 'learn_english' %}{{ lesson.word_choices.title.en }}{% else %}{{ lesson.word_choices.title.th }}{% endif %}</span>
 </h2>
 <div class="card monk-card">
-    <p class="thai">{{ lesson.word_choices.intro_th }}</p>
+    <p class="thai" lang="th">{{ lesson.word_choices.intro_th }}</p>
     <p>{{ lesson.word_choices.intro_en }}</p>
 </div>
 {% for set in lesson.word_choices.sets %}
@@ -156,7 +156,7 @@
                 {% endif %}
             </div>
             {% if o.nuance_th %}
-            <div class="monk-entry-meta"><span class="monk-entry-note thai">{{ o.nuance_th }}</span></div>
+            <div class="monk-entry-meta"><span class="monk-entry-note thai" lang="th">{{ o.nuance_th }}</span></div>
             {% endif %}
         </div>
         {% endfor %}
@@ -171,16 +171,16 @@
 {% if lesson.reading_guide %}
 <h2>
     {% if direction == 'learn_english' %}{{ lesson.reading_guide.title.th }}{% else %}{{ lesson.reading_guide.title.en }}{% endif %}
-    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ lesson.reading_guide.title.en }}{% else %}{{ lesson.reading_guide.title.th }}{% endif %}</span>
+    <span class="thai monk-drill-subtitle" lang="th">{% if direction == 'learn_english' %}{{ lesson.reading_guide.title.en }}{% else %}{{ lesson.reading_guide.title.th }}{% endif %}</span>
 </h2>
 <div class="card monk-card monk-reading-guide">
-    <p class="thai">{{ lesson.reading_guide.intro_th }}</p>
+    <p class="thai" lang="th">{{ lesson.reading_guide.intro_th }}</p>
     <p>{{ lesson.reading_guide.intro_en }}</p>
     <ol class="monk-reading-tips">
         {% for tip in lesson.reading_guide.tips %}
         <li>
             <span class="monk-reading-tip-en">{{ tip.en }}</span>
-            <span class="thai monk-reading-tip-th">{{ tip.th }}</span>
+            <span class="thai monk-reading-tip-th" lang="th">{{ tip.th }}</span>
         </li>
         {% endfor %}
     </ol>
@@ -194,10 +194,10 @@
 {% for sec in lesson.drill_sections %}
 <h2>
     {% if direction == 'learn_english' %}{{ sec.title.th }}{% else %}{{ sec.title.en }}{% endif %}
-    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ sec.title.en }}{% else %}{{ sec.title.th }}{% endif %}</span>
+    <span class="thai monk-drill-subtitle" lang="th">{% if direction == 'learn_english' %}{{ sec.title.en }}{% else %}{{ sec.title.th }}{% endif %}</span>
 </h2>
 <div class="card monk-card">
-    <p class="thai">{{ sec.intro_th }}</p>
+    <p class="thai" lang="th">{{ sec.intro_th }}</p>
     <p>{{ sec.intro_en }}</p>
 </div>
 <div class="monk-entry-list">
@@ -224,10 +224,10 @@
             {% endif %}
         </div>
         {% if d.english_tip_th %}
-        <p class="monk-entry-tip thai">{{ d.english_tip_th }}</p>
+        <p class="monk-entry-tip thai" lang="th">{{ d.english_tip_th }}</p>
         {% endif %}
         {% if d.meaning_th %}
-        <div class="monk-entry-meta"><span class="monk-entry-note thai">{{ d.meaning_th }}</span></div>
+        <div class="monk-entry-meta"><span class="monk-entry-note thai" lang="th">{{ d.meaning_th }}</span></div>
         {% endif %}
     </div>
     {% endfor %}
@@ -239,20 +239,20 @@
    aloud. The audio file is keyed off the passage id ('passage <id>'), not off
    its 200-word text — see scripts/generate_english_audio.py. #}
 {% if lesson.passages %}
-<h2>{% if direction == 'learn_english' %}บทอ่าน<span class="thai monk-drill-subtitle">Readings</span>{% else %}Readings{% endif %}</h2>
+<h2>{% if direction == 'learn_english' %}บทอ่าน<span class="thai monk-drill-subtitle" lang="th">Readings</span>{% else %}Readings{% endif %}</h2>
 {% for p in lesson.passages %}
 <div class="card monk-card monk-passage">
     <h3>
         {{ p.title.en }}
-        <span class="thai monk-passage-title-th">{{ p.title.th }}</span>
+        <span class="thai monk-passage-title-th" lang="th">{{ p.title.th }}</span>
     </h3>
-    {% if p.intro_th %}<p class="monk-entry-tip thai">{{ p.intro_th }}</p>{% endif %}
+    {% if p.intro_th %}<p class="monk-entry-tip thai" lang="th">{{ p.intro_th }}</p>{% endif %}
     {% set p_key = 'passage ' ~ p.id %}
     {% set p_audio = monk_audio_url(p_key) %}
     {% if p_audio %}
     <p>
         <button type="button" class="monk-audio-btn monk-passage-audio" data-audio="{{ p_audio }}">
-            🔊 <span class="thai">ฟังทั้งบท</span> — Listen to the whole passage
+            🔊 <span class="thai" lang="th">ฟังทั้งบท</span> — Listen to the whole passage
         </button>
         {% if monk_audio_is_fallback(p_key) %}
         <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>

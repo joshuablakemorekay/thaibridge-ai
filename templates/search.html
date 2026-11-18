@@ -83,7 +83,7 @@
         <div class="ss-words">
             {% for word in results.words %}
             <div class="ss-word">
-                <div class="ss-word-thai"><span class="thai">{{ word.thai }}</span> {{ listen(word.thai) }}</div>
+                <div class="ss-word-thai"><span class="thai" lang="th">{{ word.thai }}</span> {{ listen(word.thai) }}</div>
                 <div class="ss-word-paiboon">{{ word.paiboon }}</div>
                 {% if word.english %}<div class="ss-word-english">{{ word.english }}</div>{% endif %}
                 <div class="ss-word-source">

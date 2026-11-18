@@ -54,7 +54,7 @@
 {% block content %}
 <h1>
     Thai Grammar Guide
-    <span class="thai">ไวยากรณ์ภาษาไทย</span>
+    <span class="thai" lang="th">ไวยากรณ์ภาษาไทย</span>
 </h1>
 
 <p style="text-align: center; color: #666; margin-bottom: 2rem;">
@@ -125,7 +125,7 @@
                     <p style="margin: 0.25rem 0; color: #666;">{{ pattern.pattern }}</p>
                 </div>
                 <div>
-                    <div class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.25rem;">{{ pattern.thai }}</div>
+                    <div class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.25rem;" lang="th">{{ pattern.thai }}</div>
                     <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ pattern.paiboon }}</div>
                     <div><em>{{ pattern.english }}</em></div>
                 </div>
@@ -144,7 +144,7 @@
         {% for classifier in pos.people.classifiers %}
         <div style="background: #e3f2fd; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #1565c0;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -155,7 +155,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -170,7 +170,7 @@
         {% for classifier in pos.animals.classifiers %}
         <div style="background: #e8f5e9; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #2e7d32;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -181,7 +181,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -196,7 +196,7 @@
         {% for classifier in pos.objects.classifiers %}
         <div style="background: #fff3e0; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: var(--saffron-text);">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -207,7 +207,7 @@
             </div>
             <div style="background: #e8f5e9; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--bodhi-green);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -222,7 +222,7 @@
         {% for classifier in pos.vehicles.classifiers %}
         <div style="background: #f3e5f5; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #6a1b9a;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -233,7 +233,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -248,7 +248,7 @@
         {% for classifier in pos.containers.classifiers %}
         <div style="background: #e0f7fa; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #006064;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -259,7 +259,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -274,7 +274,7 @@
         {% for classifier in pos.media.classifiers %}
         <div style="background: #efebe9; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #4e342e;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -285,7 +285,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -300,7 +300,7 @@
         {% for classifier in pos.buildings.classifiers %}
         <div style="background: #eceff1; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #37474f;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -311,7 +311,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -326,7 +326,7 @@
         {% for classifier in pos.clothing.classifiers %}
         <div style="background: #fce4ec; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #ad1457;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -337,7 +337,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -352,7 +352,7 @@
         {% for classifier in pos.abstract.classifiers %}
         <div style="background: #ede7f6; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                <span class="thai-text" style="font-size: 2rem;">{{ classifier.thai }}</span>
+                <span class="thai-text" style="font-size: 2rem;" lang="th">{{ classifier.thai }}</span>
                 <div>
                     <span class="paiboon" style="font-size: 1.3rem; color: #4527a0;">{{ classifier.paiboon }}</span>
                     <p style="margin: 0.25rem 0 0 0; font-weight: 600;">{{ classifier.usage }}</p>
@@ -363,7 +363,7 @@
             </div>
             <div style="background: #fff9e6; padding: 0.75rem; border-radius: 6px; border-left: 3px solid var(--saffron);">
                 <strong style="color: var(--temple-red);">Example:</strong>
-                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;">{{ classifier.sample_sentence.thai }}</div>
+                <div class="thai-text" style="font-size: 1.3rem; margin: 0.5rem 0 0.25rem 0;" lang="th">{{ classifier.sample_sentence.thai }}</div>
                 <div class="paiboon" style="color: #666; margin-bottom: 0.25rem;">{{ classifier.sample_sentence.paiboon }}</div>
                 <div><em>"{{ classifier.sample_sentence.english }}"</em></div>
             </div>
@@ -396,7 +396,7 @@
             <tbody>
                 {% for entry in category.entries %}
                 <tr>
-                    <td class="thai-text">{{ entry.thai }}</td>
+                    <td class="thai-text" lang="th">{{ entry.thai }}</td>
                     <td class="paiboon">{{ entry.paiboon }}</td>
                     <td>
                         <span style="background: {% if entry.formality == 'royal' or entry.formality == 'monastic' %}#6B2D5C{% elif entry.formality == 'formal' %}#1976D2{% elif entry.formality == 'polite' %}#4CAF50{% elif entry.formality == 'neutral' %}#FF9800{% elif entry.formality == 'casual' %}#FFC107{% else %}#F44336{% endif %}; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">
@@ -434,7 +434,7 @@
             <tbody>
                 {% for entry in category.entries %}
                 <tr>
-                    <td class="thai-text">{{ entry.thai }}</td>
+                    <td class="thai-text" lang="th">{{ entry.thai }}</td>
                     <td class="paiboon">{{ entry.paiboon }}</td>
                     <td>
                         <span style="background: {% if entry.formality == 'formal' %}#1976D2{% elif entry.formality == 'polite' %}#4CAF50{% elif entry.formality == 'neutral' or entry.formality == 'friendly' %}#FF9800{% elif entry.formality == 'casual' %}#FFC107{% else %}#F44336{% endif %}; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">
@@ -472,7 +472,7 @@
             <tbody>
                 {% for entry in category.entries %}
                 <tr>
-                    <td class="thai-text">{{ entry.thai }}</td>
+                    <td class="thai-text" lang="th">{{ entry.thai }}</td>
                     <td class="paiboon">{{ entry.paiboon }}</td>
                     <td>
                         <span style="background: {% if entry.formality == 'formal' %}#1976D2{% elif entry.formality == 'polite' %}#4CAF50{% else %}#FF9800{% endif %}; color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem;">
@@ -509,7 +509,7 @@
             <tbody>
                 {% for entry in category.entries %}
                 <tr>
-                    <td class="thai-text">{{ entry.thai }}</td>
+                    <td class="thai-text" lang="th">{{ entry.thai }}</td>
                     <td class="paiboon">{{ entry.paiboon }}</td>
                     <td>{{ entry.context }}</td>
                     <td style="color: #666;">{{ entry.usage }}</td>
@@ -543,7 +543,7 @@
         <tbody>
             {% for ex in pos.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
             </tr>
@@ -587,7 +587,7 @@
         <tbody>
             {% for item in particle_group.entries %}
             <tr>
-                <td class="thai-text">{{ item.thai }}</td>
+                <td class="thai-text" lang="th">{{ item.thai }}</td>
                 <td class="paiboon">{{ item.paiboon }}</td>
                 <td>{{ item.english }}</td>
             </tr>
@@ -615,7 +615,7 @@
     
     {% for ex in grammar.sentence_structure.examples %}
     <div class="example-box">
-        <p class="thai-text">{{ ex.thai }}</p>
+        <p class="thai-text" lang="th">{{ ex.thai }}</p>
         <p class="paiboon">{{ ex.paiboon }}</p>
         <p>{{ ex.english }}</p>
     </div>
@@ -631,7 +631,7 @@
     
     {% for ex in grammar.sentence_structure.adj_examples %}
     <div class="example-box">
-        <p class="thai-text">{{ ex.thai }}</p>
+        <p class="thai-text" lang="th">{{ ex.thai }}</p>
         <p class="paiboon">{{ ex.paiboon }}</p>
         <p>{{ ex.english }}</p>
     </div>
@@ -657,13 +657,13 @@
     <ul style="margin: 0.5rem 0 1rem 2rem;">
         {% for marker in tense.markers %}
         <li>
-            <span class="thai-text">{{ marker.thai }}</span> 
+            <span class="thai-text" lang="th">{{ marker.thai }}</span> 
             (<span class="paiboon">{{ marker.paiboon }}</span>) - {{ marker.english }}
         </li>
         {% endfor %}
     </ul>
     <div class="example-box">
-        <p class="thai-text">{{ tense.example.thai }}</p>
+        <p class="thai-text" lang="th">{{ tense.example.thai }}</p>
         <p class="paiboon">{{ tense.example.paiboon }}</p>
         <p>{{ tense.example.english }}</p>
     </div>
@@ -694,9 +694,9 @@
             {% for q in grammar.questions %}
             <tr>
                 <td><strong>{{ q.type }}</strong></td>
-                <td class="thai-text">{{ q.thai }}</td>
+                <td class="thai-text" lang="th">{{ q.thai }}</td>
                 <td class="paiboon">{{ q.paiboon }}</td>
-                <td class="thai-text" style="font-size: 1rem;">{{ q.example }}</td>
+                <td class="thai-text" style="font-size: 1rem;" lang="th">{{ q.example }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -727,7 +727,7 @@
             {% for neg in grammar.negation %}
             <tr>
                 <td><strong>{{ neg.pattern }}</strong></td>
-                <td class="thai-text">{{ neg.thai }}</td>
+                <td class="thai-text" lang="th">{{ neg.thai }}</td>
                 <td class="paiboon">{{ neg.paiboon }}</td>
                 <td>{{ neg.example }}</td>
             </tr>
@@ -760,9 +760,9 @@
             {% for comp in grammar.comparison %}
             <tr>
                 <td><strong>{{ comp.pattern }}</strong></td>
-                <td class="thai-text">{{ comp.thai }}</td>
+                <td class="thai-text" lang="th">{{ comp.thai }}</td>
                 <td class="paiboon">{{ comp.paiboon }}</td>
-                <td class="thai-text" style="font-size: 1rem;">{{ comp.example }}</td>
+                <td class="thai-text" style="font-size: 1rem;" lang="th">{{ comp.example }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -796,7 +796,7 @@
         <tbody>
             {% for ex in grammar.classifier_counting.examples %}
             <tr>
-                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="thai-text" lang="th">{{ ex.thai }}</td>
                 <td class="paiboon">{{ ex.paiboon }}</td>
                 <td>{{ ex.english }}</td>
             </tr>
@@ -829,7 +829,7 @@
             <tr>
                 <td><strong>{{ pat.pattern }}</strong></td>
                 <td class="paiboon">{{ pat.paiboon }}</td>
-                <td class="thai-text" style="font-size: 1rem;">{{ pat.example }}</td>
+                <td class="thai-text" style="font-size: 1rem;" lang="th">{{ pat.example }}</td>
             </tr>
             {% endfor %}
         </tbody>
