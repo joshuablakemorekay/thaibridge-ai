@@ -435,6 +435,12 @@ import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live si
 security_headers.init_app(app)
 import json_only  # noqa: E402  (every POST must be JSON, except Stripe's webhook)
 json_only.init_app(app)
+import seo  # noqa: E402  (sitemap, robots.txt, noindex on private pages, static caching)
+# A function, not a list: the journal and Dhamma talks are loaded further down
+# this file, and are read fresh each time the sitemap is asked for.
+seo.init_app(app, dynamic_paths=lambda: (
+    ['/journal/' + e['slug'] for e in JOURNAL_ENTRIES if e.get('slug')]
+    + ['/dhamma-talk/' + t['slug'] for t in DHAMMA_TALKS]))
 
 
 def _go_to(url):

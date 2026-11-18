@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ThaiBridge AI{% endblock %}</title>
 
+    {# Search and sharing. A page sets {% block description %} to say what IT
+       is about (shown under the link in Google and in link previews); pages
+       that don't, fall back to the site-wide line below. canonical_url and
+       social_image_url come from seo.py. A page that must stay out of search
+       (e.g. the locked-section notice) adds a robots tag in {% block robots %}. #}
+    {% set page_description %}{% block description %}Learn Thai and the Buddha's teachings in one course: lessons checked by a native Thai teacher, tap-to-hear audio, ThaiBridge Spelling and an AI tutor. Start free.{% endblock %}{% endset %}
+    <meta name="description" content="{{ page_description|striptags|trim }}">
+    {% block robots %}{% endblock %}
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta property="og:site_name" content="ThaiBridge">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ self.title()|striptags|trim }}">
+    <meta property="og:description" content="{{ page_description|striptags|trim }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:image" content="{{ social_image_url }}">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="icon" type="image/png" sizes="32x32" href="{{ static_v('img/brand/favicon-32.png') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ static_v('img/brand/icon-192.png') }}">
     <link rel="apple-touch-icon" href="{{ static_v('img/brand/apple-touch-icon.png') }}">
