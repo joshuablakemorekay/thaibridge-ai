@@ -43,6 +43,7 @@
             <div class="hero-buttons">
                 <a href="#start-here" class="btn btn-primary">Find your starting point</a>
                 <a href="/survival" class="btn btn-secondary">Start speaking Thai</a>
+                <a href="/login" class="btn btn-secondary">Log in to continue learning</a>
             </div>
         </div>
     </div>
@@ -158,40 +159,6 @@
         </details>
     </div>
 
-    <!-- Quick Access Cards -->
-    <div class="quick-access">
-        <h2>Quick Access</h2>
-        <div class="card-grid">
-
-            <a href="/learn" class="feature-card vocab-card">
-                <h3>Vocabulary</h3>
-                <p>6 themed categories with cultural context and authentic usage</p>
-            </a>
-
-            <a href="/dictionary" class="feature-card culture-card">
-                <h3>Dictionary</h3>
-                <p>Look up any word — Thai ↔ English with ThaiBridge Spelling</p>
-            </a>
-
-            {# Deliberately after the course cards: the AI is the helper inside
-               the course, not the product (feedback 2026-11-18). #}
-            <a href="/chat" class="feature-card grammar-card">
-                <h3>AI Tutor</h3>
-                <p>Answers grounded in the Dhamma and Thai culture, not generic ones. Choose a Universal, Thai-culture or culturally neutral view.</p>
-            </a>
-
-            <a href="/theravada" class="feature-card dharma-card">
-                <h3>Buddhism &amp; Meditation</h3>
-                <p>Theravada teachings, suttas, and a Samatha &amp; Vipassana timer</p>
-            </a>
-
-            <a href="/premium" class="feature-card progress-card">
-                <h3>Plans &amp; Pricing</h3>
-                <p>Start FREE, or unlock more content and AI tools with a plan</p>
-            </a>
-        </div>
-    </div>
-
     <!-- Learning Path -->
     <div class="learning-path">
         <h2>The Thai Language Path</h2>
@@ -260,12 +227,6 @@
             </div>
             <div class="feature-item">
                 <div>
-                    <h4>Cultural Context</h4>
-                    <p>Learn language through authentic Thai cultural situations</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div>
                     <h4>Buddhism in its own right</h4>
                     <p>Theravada teachings, suttas and meditation — FREE, and studied in English</p>
                 </div>
@@ -280,24 +241,6 @@
                 <div>
                     <h4>Monk Mode</h4>
                     <p>Exclusive access for monks: a free lesson track written for monastic life, from the alms round to giving a Dhamma talk</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div>
-                    <h4>Gamified Learning</h4>
-                    <p>Level up, earn XP, and unlock new content as you progress</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div>
-                    <h4>Isan Dialect</h4>
-                    <p>Northeast Thai vocabulary and regional expressions</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <div>
-                    <h4>Structured Path</h4>
-                    <p>Clear progression from the basics to advanced conversations</p>
                 </div>
             </div>
         </div>
@@ -557,88 +500,6 @@
         transform: translateY(-3px);
     }
 
-    .quick-access {
-        margin: 3rem 0;
-    }
-
-    .quick-access h2 {
-        color: var(--royal-purple);
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
-    }
-
-    .feature-card {
-        background: white;
-        border-radius: 20px;
-        padding: 2rem;
-        text-decoration: none;
-        color: inherit;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .vocab-card {
-        border-top: 5px solid var(--bodhi-green);
-    }
-
-    .grammar-card {
-        border-top: 5px solid var(--royal-purple);
-    }
-
-    .culture-card {
-        border-top: 5px solid var(--temple-orange);
-    }
-
-    .dharma-card {
-        border-top: 5px solid var(--monk-saffron);
-    }
-
-    .progress-card {
-        border-top: 5px solid var(--lotus-pink);
-    }
-
-    .card-icon {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    .feature-card h3 {
-        color: var(--royal-purple);
-        margin-bottom: 0.5rem;
-        font-size: 1.5rem;
-    }
-
-    .feature-card p {
-        color: #666;
-        line-height: 1.6;
-    }
-
-    .card-badge {
-        display: inline-block;
-        background: var(--royal-gold);
-        color: var(--dark-text);
-        padding: 0.3rem 0.8rem;
-        border-radius: 15px;
-        font-size: 0.85rem;
-        font-weight: bold;
-        margin-top: 1rem;
-    }
-
     .learning-path {
         background: linear-gradient(135deg, rgba(34, 139, 34, 0.1) 0%, rgba(107, 142, 35, 0.1) 100%);
         border-radius: 20px;
@@ -713,7 +574,7 @@
 
     .features-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem;
     }
 
@@ -761,10 +622,6 @@
 
         .hero-section {
             padding: 2rem 1rem;
-        }
-
-        .card-grid {
-            grid-template-columns: 1fr;
         }
 
         .path-steps {
