@@ -21,6 +21,7 @@ Registered from app.py with init_app(app, dynamic_paths), where dynamic_paths
 is a function returning extra public addresses (journal entries, Dhamma talks)
 — passed in rather than imported, so this module never imports app.py.
 """
+import json
 import os
 
 from flask import Blueprint, Response, request, url_for
@@ -58,6 +59,8 @@ ROBOTS_DISALLOW = ('/api/', '/stripe/', '/paypal/', '/subscribe/', '/set-')
 
 YEAR_IN_SECONDS = 365 * 24 * 60 * 60
 
+DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'sitemap_dates.json')
+
 _dynamic_paths = lambda: []  # noqa: E731 — replaced by init_app
 
 
@@ -83,12 +86,29 @@ def robots_txt():
     return Response('\n'.join(lines), mimetype='text/plain')
 
 
+def page_dates():
+    """When each sitemap page last changed, from sitemap_dates.json.
+
+    Never today's date for every page: that claims the whole site changes
+    daily, and Google learns to ignore a lastmod that lies. The file holds the
+    git date of each page's own source files instead — see
+    scripts/update_sitemap_dates.py. A page missing from it simply gets no
+    <lastmod>, which is honest too.
+    """
+    try:
+        with open(DATES_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
 @bp.route('/sitemap.xml')
 def sitemap_xml():
-    # No <lastmod>: stamping every page with today's date would claim the whole
-    # site changes daily, and Google learns to ignore a lastmod that lies.
-    urls = ''.join('  <url><loc>{}{}</loc></url>\n'.format(SITE_URL, p)
-                   for p in sitemap_paths())
+    dates = page_dates()
+    urls = ''
+    for p in sitemap_paths():
+        lastmod = '<lastmod>{}</lastmod>'.format(dates[p]) if p in dates else ''
+        urls += '  <url><loc>{}{}</loc>{}</url>\n'.format(SITE_URL, p, lastmod)
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
            + urls + '</urlset>\n')

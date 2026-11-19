@@ -146,3 +146,51 @@ def test_journal_entries_and_talks_are_articles_with_authors(client):
     talk = app_module.DHAMMA_TALKS[0]
     (article,) = _ld_blocks(client, '/dhamma-talk/' + talk['slug'])
     assert article['@type'] == 'Article' and article['author']['name'] == talk['speaker']
+
+
+# ── <lastmod> dates ───────────────────────────────────────────────────────
+
+import datetime  # noqa: E402
+import shutil  # noqa: E402
+import subprocess  # noqa: E402
+import sys  # noqa: E402
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scripts'))
+import update_sitemap_dates  # noqa: E402
+
+
+def test_sitemap_gives_each_page_its_own_last_changed_date(client):
+    body = client.get('/sitemap.xml').get_data(as_text=True)
+    dates = seo.page_dates()
+    for path in seo.sitemap_paths():
+        assert path in dates, path + ' has no date: run scripts/update_sitemap_dates.py'
+        assert ('<loc>' + seo.SITE_URL + path + '</loc><lastmod>' + dates[path]
+                + '</lastmod>') in body
+
+
+def _git_history_available():
+    if not shutil.which('git'):
+        return False
+    try:
+        shallow = update_sitemap_dates._git('rev-parse', '--is-shallow-repository')
+    except subprocess.CalledProcessError:
+        return False
+    return shallow == 'false'
+
+
+@pytest.mark.skipif(not _git_history_available(), reason='needs full git history')
+def test_sitemap_dates_match_git():
+    # A date older than the page's last change tells Google not to bother
+    # coming back. Three days' leeway covers dating an edit "today" and
+    # committing it a day or two later; anything further means someone
+    # changed a page without re-running the script.
+    expected = update_sitemap_dates.compute_dates(app_module.app)
+    stored = seo.page_dates()
+    stale = []
+    for path, date in expected.items():
+        have = stored.get(path)
+        if have is None or (datetime.date.fromisoformat(date)
+                            - datetime.date.fromisoformat(have)).days > 3:
+            stale.append('{} (saved {}, changed {})'.format(path, have, date))
+    assert not stale, ('Out-of-date sitemap dates — run '
+                       'python scripts/update_sitemap_dates.py:\n' + '\n'.join(stale))
