@@ -7,6 +7,11 @@ short story off a topic page.
 Data only — no Flask and no imports — moved out of app.py so that any module
 (a Blueprint, a script, a test) can use it without importing app.py, which
 would be a circular import. app.py imports these names back unchanged.
+
+A word may carry an optional 'emoji': a picture that helps the word stick,
+shown beside the English in the word table. Only for things you can picture
+(animals, fruit, weather) — never abstract, Buddhist or royal words. It stays
+out of 'english' so quiz answers are unchanged.
 """
 
 VOCABULARY = {
@@ -57,26 +62,26 @@ VOCABULARY = {
     ],
     
     'nature': [
-        {'thai': 'ดอกบัว', 'paiboon': 'dɔ̀ɔk bua', 'english': 'Lotus flower', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดอกบัว', 'paiboon': 'dɔ̀ɔk bua', 'english': 'Lotus flower', 'emoji': '🪷', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'ต้นโพธิ์', 'paiboon': 'dtôn poo', 'english': 'Bodhi tree', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ช้าง', 'paiboon': 'cháaŋ', 'english': 'Elephant', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'มะพร้าว', 'paiboon': 'má-práao', 'english': 'Coconut', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ช้าง', 'paiboon': 'cháaŋ', 'english': 'Elephant', 'emoji': '🐘', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'มะพร้าว', 'paiboon': 'má-práao', 'english': 'Coconut', 'emoji': '🥥', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'น้ำตก', 'paiboon': 'nám dtòk', 'english': 'Waterfall', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ภูเขา', 'paiboon': 'puu-kǎo', 'english': 'Mountain', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ภูเขา', 'paiboon': 'puu-kǎo', 'english': 'Mountain', 'emoji': '⛰️', 'category': 'nature', 'formality': 'neutral'},
         {'thai': 'แม่น้ำ', 'paiboon': 'mɛ̂ɛ náam', 'english': 'River', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ทะเล', 'paiboon': 'tá-lee', 'english': 'Sea/Ocean', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ป่า', 'paiboon': 'bpàa', 'english': 'Forest', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ดอกไม้', 'paiboon': 'dɔ̀ɔk mái', 'english': 'Flower', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ต้นไม้', 'paiboon': 'dtôn mái', 'english': 'Tree', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'นก', 'paiboon': 'nók', 'english': 'Bird', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ปลา', 'paiboon': 'bplaa', 'english': 'Fish', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ผีเสื้อ', 'paiboon': 'pǐi sʉ̂a', 'english': 'Butterfly', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ดวงจันทร์', 'paiboon': 'duaŋ jan', 'english': 'Moon', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ดวงอาทิตย์', 'paiboon': 'duaŋ aa-tít', 'english': 'Sun', 'category': 'nature', 'formality': 'literary'},
-        {'thai': 'ดาว', 'paiboon': 'daao', 'english': 'Star', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ฝน', 'paiboon': 'fǒn', 'english': 'Rain', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'ลม', 'paiboon': 'lom', 'english': 'Wind', 'category': 'nature', 'formality': 'neutral'},
-        {'thai': 'เมฆ', 'paiboon': 'mêek', 'english': 'Cloud', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ทะเล', 'paiboon': 'tá-lee', 'english': 'Sea/Ocean', 'emoji': '🌊', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ป่า', 'paiboon': 'bpàa', 'english': 'Forest', 'emoji': '🌲', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดอกไม้', 'paiboon': 'dɔ̀ɔk mái', 'english': 'Flower', 'emoji': '🌸', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ต้นไม้', 'paiboon': 'dtôn mái', 'english': 'Tree', 'emoji': '🌳', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'นก', 'paiboon': 'nók', 'english': 'Bird', 'emoji': '🐦', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ปลา', 'paiboon': 'bplaa', 'english': 'Fish', 'emoji': '🐟', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ผีเสื้อ', 'paiboon': 'pǐi sʉ̂a', 'english': 'Butterfly', 'emoji': '🦋', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดวงจันทร์', 'paiboon': 'duaŋ jan', 'english': 'Moon', 'emoji': '🌙', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ดวงอาทิตย์', 'paiboon': 'duaŋ aa-tít', 'english': 'Sun', 'emoji': '☀️', 'category': 'nature', 'formality': 'literary'},
+        {'thai': 'ดาว', 'paiboon': 'daao', 'english': 'Star', 'emoji': '⭐', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ฝน', 'paiboon': 'fǒn', 'english': 'Rain', 'emoji': '🌧️', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'ลม', 'paiboon': 'lom', 'english': 'Wind', 'emoji': '🌬️', 'category': 'nature', 'formality': 'neutral'},
+        {'thai': 'เมฆ', 'paiboon': 'mêek', 'english': 'Cloud', 'emoji': '☁️', 'category': 'nature', 'formality': 'neutral'},
     ],
     
     'buddhist_formal': [
@@ -136,12 +141,12 @@ VOCABULARY = {
         {'thai': 'อร่อย', 'paiboon': 'à-rɔ̀y', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ร้อน', 'paiboon': 'rɔ́ɔn', 'english': 'Hot', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เย็น', 'paiboon': 'yen', 'english': 'Cold/Cool', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'น้ำ', 'paiboon': 'náam', 'english': 'Water', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'ข้าว', 'paiboon': 'kâao', 'english': 'Rice/Food', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'บ้าน', 'paiboon': 'bâan', 'english': 'House/Home', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'รถ', 'paiboon': 'rót', 'english': 'Car/Vehicle', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'น้ำ', 'paiboon': 'náam', 'english': 'Water', 'emoji': '💧', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'ข้าว', 'paiboon': 'kâao', 'english': 'Rice/Food', 'emoji': '🍚', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'บ้าน', 'paiboon': 'bâan', 'english': 'House/Home', 'emoji': '🏠', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'รถ', 'paiboon': 'rót', 'english': 'Car/Vehicle', 'emoji': '🚗', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'คน', 'paiboon': 'kon', 'english': 'Person', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'เงิน', 'paiboon': 'ŋəən', 'english': 'Money', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'เงิน', 'paiboon': 'ŋəən', 'english': 'Money', 'emoji': '💵', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'วันนี้', 'paiboon': 'wan níi', 'english': 'Today', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'พรุ่งนี้', 'paiboon': 'prûŋ níi', 'english': 'Tomorrow', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เมื่อวาน', 'paiboon': 'mʉ̂a waan', 'english': 'Yesterday', 'category': 'everyday', 'formality': 'neutral'},
