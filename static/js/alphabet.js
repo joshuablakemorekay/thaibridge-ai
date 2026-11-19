@@ -562,7 +562,7 @@
         var passed = score >= CONFIG.passMark;
         var verdict = byId('result-verdict');
         verdict.className = 'abc-result-verdict ' + (passed ? 'is-pass' : 'is-fail');
-        verdict.textContent = passed ? 'Passed!' : 'Not passed yet';
+        verdict.textContent = passed ? 'Passed! 🎉' : 'Not passed yet';
 
         var message = byId('result-message');
         message.textContent = 'Saving your result…';

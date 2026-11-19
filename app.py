@@ -2602,23 +2602,23 @@ GRAMMAR = {
             
             'key_insights': [
                 {
-                    'title': '🎯 KEY INSIGHT #1: No Gender in Third Person',
+                    'title': 'No Gender in Third Person',
                     'explanation': 'Thai เขา (kǎo) means "he", "she", OR "they" - context determines meaning! This is VERY different from English.'
                 },
                 {
-                    'title': '🎯 KEY INSIGHT #2: Kinship Terms = Pronouns',
+                    'title': 'Kinship Terms = Pronouns',
                     'explanation': 'Thais often use พี่ (pîi - older sibling) and น้อง (nɔ́ɔŋ - younger sibling) as "you" based on relative age, even with strangers!'
                 },
                 {
-                    'title': '🎯 KEY INSIGHT #3: Name as Pronoun',
+                    'title': 'Name as Pronoun',
                     'explanation': 'It\'s common to use "Khun + Name" instead of "you" - sounds more polite and personal.'
                 },
                 {
-                    'title': '🎯 KEY INSIGHT #4: Speaker Gender Matters',
+                    'title': 'Speaker Gender Matters',
                     'explanation': 'Only first-person ("I") changes with speaker gender. Second and third person are the same for everyone!'
                 },
                 {
-                    'title': '🎯 KEY INSIGHT #5: Context is Everything',
+                    'title': 'Context is Everything',
                     'explanation': 'The same pronoun can be polite or rude depending on context, tone, and relationship. Listen and observe!'
                 }
             ]

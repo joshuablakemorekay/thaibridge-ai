@@ -9,7 +9,7 @@
     <!-- Developer Badge -->
     {% if user.is_developer %}
     <div class="developer-badge">
-        <h3>👨‍💻 DEVELOPER MODE ACTIVE</h3>
+        <h3>DEVELOPER MODE ACTIVE</h3>
         <p>You have access to all sections</p>
         <a href="/developer-logout" class="btn btn-warning">Exit Developer Mode</a>
     </div>
@@ -99,7 +99,7 @@
             <p>Accuracy</p>
         </div>
         <div class="stat-card">
-            <h4>{{ user.login_streak }}</h4>
+            <h4>{{ user.login_streak }}{% if user.login_streak >= 3 %} <span aria-hidden="true">🔥</span>{% endif %}</h4>
             <p>Day Streak</p>
         </div>
     </div>
@@ -329,7 +329,7 @@
             <ul class="path-targets">
                 {% for t in targets %}
                 <li class="{{ 'is-met' if t.met else '' }}">
-                    <span class="path-tick">{{ '✅' if t.met else '⬜' }}</span>
+                    <span class="path-tick" aria-hidden="true">{{ '✓' if t.met else '○' }}</span><span class="visually-hidden">{{ 'Done:' if t.met else 'Not done yet:' }}</span>
                     {% if t.url %}<a href="{{ t.url }}">{{ t.label }}</a>{% else %}{{ t.label }}{% endif %}
                     <span class="path-detail">{{ t.detail }}</span>
                 </li>
@@ -389,7 +389,7 @@
         <ol class="path-list">
             {% for s in path %}
             <li class="path-step is-{{ s.state }}">
-                <span class="path-icon">{{ {'done': '✅', 'next': '▶️', 'open': '○', 'locked': '🔒'}[s.state] }}</span>
+                <span class="path-icon" aria-hidden="true">{{ {'done': '✓', 'next': '▶︎', 'open': '○', 'locked': '🔒'}[s.state] }}</span><span class="visually-hidden">{{ {'done': 'Done:', 'next': 'Next:', 'open': 'Open:', 'locked': 'Locked:'}[s.state] }}</span>
                 {% if s.state == 'locked' %}{{ s.title }}{% else %}<a href="{{ s.url }}">{{ s.title }}</a>{% endif %}
                 {% if s.state == 'next' %}<span class="path-flag">Next up</span>{% endif %}
                 <span class="path-detail">Level {{ s.level }}{% if s.why_locked %} · {{ s.why_locked }}{% endif %}</span>

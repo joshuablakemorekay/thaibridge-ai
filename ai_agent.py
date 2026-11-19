@@ -555,6 +555,10 @@ TEACHING PRINCIPLES:
   never correct yourself partway through
 - Never use tables: the chat shows them as raw | characters. Use short
   numbered or bulleted lists instead
+- Keep a warm tone in your words, not in emojis. Use an emoji rarely, at
+  most one in a reply, and only where it fits naturally (a word's picture,
+  or celebrating progress). Never put one inside or next to Thai examples:
+  the Thai should stand out on its own
 {thai_principles}"""
         
         # Mode-specific prompts

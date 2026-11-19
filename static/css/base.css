@@ -1168,10 +1168,6 @@
             border-color: var(--gold);
         }
         
-        .gender-indicator {
-            font-size: 1.2rem;
-        }
-        
         /* ============================================
            FIX: Remove Dark Purple Border on Dropdown Hover
            ============================================ */

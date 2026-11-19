@@ -152,7 +152,7 @@ async function checkAnswer(answer) {
     document.getElementById('quizContent').innerHTML = `
         <div style="text-align: center;">
             <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
-            <p style="font-size: 3rem;">${resultIcon}</p>
+            <p style="font-size: 3rem;" aria-hidden="true">${resultIcon}</p>
             <p style="font-size: 1.5rem; color: ${resultColor}; margin: 1rem 0;">
                 ${result.message}
             </p>
