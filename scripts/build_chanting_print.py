@@ -17,7 +17,7 @@ with an index of every chant. `--volumes` prints the same chants, in the
 same order, as _print/chanting-volume-1/2/3.pdf, following the plan in
 chanting_volumes.py — which Part goes in which volume is one number there,
 so the abbot's decision is a one-line change. Both editions carry the
-occasion guide, the day-of-the-week chants, the Amaravati reflections
+occasion guide, the day-of-the-week chants, the Part 18 reflections
 (chanting_amaravati.py) and the indexes.
 
 Every chant in book order, with all five layers and a short commentary, laid
@@ -64,7 +64,7 @@ import chanting  # noqa: E402
 from chanting_print_short import SHORT  # noqa: E402
 from chanting_owen import OWEN_BOOK, OWEN_CHANTS, OWEN_GLOSSARY  # noqa: E402
 from chanting_amaravati import (  # noqa: E402
-    AMARAVATI_BOOK, AMARAVATI_BOOK_FULL, AMARAVATI_CHANTS, AMARAVATI_LICENCE)
+    AMARAVATI_CHANTS, PART_TITLE as AMARAVATI_PART_TITLE)
 from chanting_volumes import (  # noqa: E402
     AMARAVATI_VOLUME, CHANT_VOLUME, DAILY_ORDER, DAY_CHANTS, OCCASIONS, OWEN_VOLUME,
     PART_VOLUME, SPLITS, VOLUMES)
@@ -315,8 +315,7 @@ def index_entries(books):
 
 
 def first_line_entries(book):
-    """This book's chants by the first line of their Pali, as the Amaravati
-    book indexes them. A chant with no romanised Pali (an order of service in
+    """This book's chants by the first line of their Pali. A chant with no romanised Pali (an order of service in
     Thai) has no first line to index."""
     lines = []
     for part in book['parts']:
@@ -447,9 +446,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
         glossary=OWEN_GLOSSARY,
         owen_part=book['owen_part'],
         amaravati_chants=book['amaravati_chants'],
-        amaravati_book=AMARAVATI_BOOK,
-        amaravati_book_full=AMARAVATI_BOOK_FULL,
-        amaravati_licence=AMARAVATI_LICENCE,
+        amaravati_part_title=AMARAVATI_PART_TITLE,
         amaravati_part=book['amaravati_part'],
         occasions=OCCASIONS,
         photo_url=('file:///' + PHOTO.replace(os.sep, '/')) if os.path.exists(PHOTO) else None,

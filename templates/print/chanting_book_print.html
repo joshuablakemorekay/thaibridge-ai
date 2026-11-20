@@ -725,7 +725,7 @@
     </div>
     {% endif %}
     {% if amaravati_chants %}
-    <div class="toc-part"><span class="toc-part-no">Part {{ amaravati_part }}</span> From {{ amaravati_book }}</div>
+    <div class="toc-part"><span class="toc-part-no">Part {{ amaravati_part }}</span> {{ amaravati_part_title }}</div>
     {% for chant in amaravati_chants %}
     <div class="toc-entry">
         <span class="toc-no">{{ loop.index }}.</span>
@@ -949,21 +949,19 @@
 </section>
 {% endif %}
 
-{# ── Part 18: from the Amaravati chanting book (chanting_amaravati.py) ──
-   Pali and English as that book prints them, with a Thai-script line made
-   like Ajarn Owen's. Where the book sets the Pali and a chanted English
-   version on facing pages, they face each other here too. #}
+{# ── Part 18: reflections after morning and evening chanting
+   (chanting_amaravati.py) ── romanised Pali with this edition's own English,
+   and a Thai-script line made like Ajarn Owen's. #}
 {% if amaravati_chants %}
 <div class="part-heading">
     <span class="part-no">Part {{ amaravati_part }}</span>
-    <span class="en owen-title">From {{ amaravati_book }}</span>
+    <span class="en owen-title">{{ amaravati_part_title }}</span>
     <span class="orn"></span>
     <p class="owen-note">Reflections commonly chanted after morning and evening
-    chanting that the Wat Mahathat United Kingdom book does not include, from
-    <em>{{ amaravati_book_full }}</em>, in romanised Pali and English as that
-    book prints them, unaltered. The Thai-script line is this edition's own
-    transliteration, for a monk to check.</p>
-    <p class="owen-note am-licence">{{ amaravati_licence }}</p>
+    chanting that the Wat Mahathat United Kingdom book does not include. The
+    Pali is given in Thai script and in romanised form; the English translation
+    and the Thai-script transliteration are this edition's own, for a monk to
+    check.</p>
 </div>
 {% for chant in amaravati_chants %}
 <article class="chant owen-chant{% if chant.id in tight_chants %} tight{% endif %}">
@@ -971,7 +969,6 @@
         <span class="locator">{{ locator(chant.id) }}</span>
         <span class="title-pali">{{ chant.title }}</span>
         <span class="title-english">{{ chant.title_english }}</span>
-        <div class="meta">The Amaravati chanting book, page{% if '–' in chant.source_pages %}s{% endif %} {{ chant.source_pages }}</div>
     </header>
     <div class="the-chant-label">The chant</div>
     <div class="am-leader">
@@ -989,15 +986,14 @@
         <div class="am-english">{% for line in group.english %}<p class="l-english">{{ line }}</p>{% endfor %}</div>
     </div>
     {% endfor %}
-    {% if chant.continues %}<p class="am-continues">This chant continues on pages {{ chant.continues }} of {{ amaravati_book }}, which are still to be added to this edition.</p>{% endif %}
+    {% if chant.continues %}<p class="am-continues">This chant continues beyond what is printed here, and the rest is still to be added to this edition.</p>{% endif %}
 </article>
 {% endfor %}
 {% endif %}
 
 {# ── Indexes ── Pra Kru Bob asked for an index of every chant in each
    volume. The index of chants covers the whole edition (so in volumes it
-   names the volume); the index of first lines is this book's own, like the
-   Amaravati book's "List of First Lines". #}
+   names the volume); the index of first lines is this book's own. #}
 <section class="index">
     <span class="locator">{{ locator('index-chants') }}</span>
     <h1 class="front-heading">Index of chants{% if volumes %}, all three volumes{% endif %}</h1>

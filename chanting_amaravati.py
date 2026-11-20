@@ -1,51 +1,39 @@
-"""Chants from the Amaravati chanting book, printed as their own Part
-(Josh, 2026-11-12).
+"""Reflections chanted after morning and evening chanting, printed as their
+own Part (Josh, 2026-11-12).
 
 Why a separate file: `chanting.py` is the Wat Mahathat United Kingdom
 chanting book, page for page, and nothing from another book is mixed into it
-(the same rule as chanting_owen.py). These are the reflections that are
-commonly chanted after morning and evening chanting but that the temple book
-does not print.
+(the same rule as chanting_owen.py). These are reflections that are commonly
+chanted after morning and evening chanting but that the temple book does not
+print.
 
-Source: "Chanting, Volume One: Morning and Evening Chanting (Pūjā) and
-Reflections", Pāli | English, Amaravati Buddhist Monastery, 2015. Typed from
-Josh's photographs of pages 40-41, 49, 85-90 and 115-119
-(Downloads/IMG_1250-1254 and IMG_1257-1265). Accent marks were read from
-photographs and need proofreading against the printed book. Spelling is the
-book's own, including where it is not consistent (mayam/mayaṃ,
-tranquillizing/tranquilizing).
+The Pali lines were first typed from Josh's photographs of another
+monastery's chanting book (Downloads/IMG_1250-1254 and IMG_1257-1265).
+Accent marks were read from photographs and need proofreading. Spelling
+follows those pages, including where it is not consistent (mayam/mayaṃ).
 
-LICENCE: the book is CC BY-NC-ND 3.0 (its page 146, IMG_1266-1267). Free
-copying and distribution are allowed with credit, not for commercial use, and
-with NO alterations. So the text is printed exactly as the book has it, the
-credit and licence are printed with it, and it is NOT put in the paid app.
-The Thai-script line is our addition, not theirs: whether that counts as an
-alteration is a question for Amaravati Publications (publications@amaravati.org).
+ENGLISH: this edition's own translation, made directly from the Pali
+(Josh, 2026-11-20). It replaced the other book's English so that this Part
+no longer reproduces anyone else's translation, and the book prints no
+credit or licence for it. It is a DRAFT and needs checking by a teacher or
+a monk, like every other English line marked as this edition's.
 
-The Amaravati book prints romanised Pali and English only. The Thai-script
-line is made by scripts/pali_to_thai.py, like Ajarn Owen's chants, and needs
-a monk's check.
+The Thai-script line is made by scripts/pali_to_thai.py, like Ajarn Owen's
+chants, and also needs a monk's check.
+
+The module and chant ids keep the name `amaravati` only so that the volume
+plan, the guides and the tests do not all have to change; nothing printed
+uses it.
 
 Shape of a chant:
-    id, title, title_english, source_pages, first_line
-    leader: the bracketed line the leader chants alone ("Handa mayaṃ ...")
-    groups: list of {'pali': [roman lines], 'english': [lines]}
-        Where the book sets Pali and English line by line, each group is one
-        Pali line and its English. Where it sets the Pali on one page and a
-        chanted English version on the facing page (Universal Well-Being),
-        a group is one stanza of each.
+    id, title, title_english, first_line
+    leader: the line the leader chants alone ("Handa mayaṃ ...")
+    groups: list of {'pali': [roman lines], 'english': [lines]}, one Pali
+        line and its English per group.
     continues: pages not yet entered, or None (all are entered now)
 """
 
-AMARAVATI_BOOK = 'the Amaravati chanting book'
-AMARAVATI_LICENCE = ('Chanting, Volume One, © 2015 Amaravati Buddhist Monastery, '
-                     'Amaravati Publications. Licensed under Creative Commons '
-                     'Attribution-NonCommercial-NoDerivs 3.0 Unported, '
-                     'creativecommons.org/licenses/by-nc-nd/3.0/. Offered for free '
-                     'distribution; please do not sell. Also available free from '
-                     'forestsanghapublications.org.')
-AMARAVATI_BOOK_FULL = ('Chanting, Volume One: Morning and Evening Chanting (Pūjā) '
-                       'and Reflections, Amaravati Buddhist Monastery')
+PART_TITLE = 'Reflections after morning and evening chanting'
 
 
 def _pairs(*rows):
@@ -56,63 +44,57 @@ def _pairs(*rows):
 UNIVERSAL_WELL_BEING = {
     'id': 'amaravati-universal-well-being',
     'title': 'Mettāpharaṇa',
-    'title_english': 'Reflection on Universal Well-Being',
-    'source_pages': '40–41',
+    'title_english': 'Spreading Loving-Kindness',
     'leader': {
         'pali_roman': 'Handa mayam mettāpharaṇaṃ karomase',
-        'english': 'Now let us chant the reflections on universal well-being.',
+        'english': 'Now let us spread loving-kindness.',
     },
-    # The Pali (page 40) and a chanted English version (page 41) face each
-    # other; they are paired here stanza by stanza, as the pages are set.
-    'groups': [
-        {'pali': ['Ahaṃ sukhito homi', 'Niddukkho homi', 'Avero homi',
-                  'Abyāpajjho homi', 'Anīgho homi', 'Sukhī attānaṃ pariharāmi'],
-         'english': ['May I abide in well-being,', 'In freedom from affliction,',
-                     'In freedom from hostility,', 'In freedom from ill-will,',
-                     'In freedom from anxiety,', 'And may I maintain well-being in myself.']},
-        {'pali': ['Sabbe sattā sukhitā hontu', 'Sabbe sattā averā hontu',
-                  'Sabbe sattā abyāpajjhā hontu', 'Sabbe sattā anīghā hontu',
-                  'Sabbe sattā sukhī attānaṃ pariharantu'],
-         'english': ['May everyone abide in well-being,', 'In freedom from hostility,',
-                     'In freedom from ill-will,', 'In freedom from anxiety, and may they',
-                     'Maintain well-being in themselves.']},
-        {'pali': ['Sabbe sattā sabbadukkhā pamuccantu'],
-         'english': ['May all beings be released from all suffering.']},
-        {'pali': ['Sabbe sattā laddha-sampattito mā vigacchantu'],
-         'english': ['And may they not be parted from the good fortune they have attained.']},
-        {'pali': ['Sabbe sattā kammassakā kammadāyādā kammayonī',
-                  'kammabandhū kammapaṭisaraṇā',
-                  'Yaṃ kammaṃ karissanti', 'Kalyāṇaṃ vā pāpakaṃ vā',
-                  'Tassa dāyādā bhavissanti'],
-         'english': ['When they act upon intention,',
-                     'All beings are the owners of their action and inherit its results.',
-                     'Their future is born from such action, companion to such action,',
-                     'And its results will be their home.',
-                     'All actions with intention,', 'Be they skilful or harmful —',
-                     'Of such acts they will be the heirs.']},
-    ],
+    'groups': _pairs(
+        ('Ahaṃ sukhito homi', 'May I be happy.'),
+        ('Niddukkho homi', 'May I be free from suffering.'),
+        ('Avero homi', 'May I be free from enmity.'),
+        ('Abyāpajjho homi', 'May I be free from ill will.'),
+        ('Anīgho homi', 'May I be free from trouble.'),
+        ('Sukhī attānaṃ pariharāmi', 'May I look after myself with ease.'),
+        ('Sabbe sattā sukhitā hontu', 'May all beings be happy.'),
+        ('Sabbe sattā averā hontu', 'May all beings be free from enmity.'),
+        ('Sabbe sattā abyāpajjhā hontu', 'May all beings be free from ill will.'),
+        ('Sabbe sattā anīghā hontu', 'May all beings be free from trouble.'),
+        ('Sabbe sattā sukhī attānaṃ pariharantu',
+         'May all beings look after themselves with ease.'),
+        ('Sabbe sattā sabbadukkhā pamuccantu',
+         'May all beings be freed from every kind of suffering.'),
+        ('Sabbe sattā laddha-sampattito mā vigacchantu',
+         'May all beings not lose the good things they have gained.'),
+        ('Sabbe sattā kammassakā kammadāyādā kammayonī',
+         'All beings own their kamma, are heirs to their kamma, are born of their kamma,'),
+        ('kammabandhū kammapaṭisaraṇā',
+         'are bound to their kamma, and have their kamma as their refuge.'),
+        ('Yaṃ kammaṃ karissanti', 'Whatever kamma they do,'),
+        ('Kalyāṇaṃ vā pāpakaṃ vā', 'whether good or bad,'),
+        ('Tassa dāyādā bhavissanti', 'of that they will be the heirs.'),
+    ),
     'continues': None,
 }
 
 UNCONDITIONED = {
     'id': 'amaravati-unconditioned',
     'title': 'Nibbāna Sutta',
-    'title_english': 'Reflection on the Unconditioned',
-    'source_pages': '49',
+    'title_english': 'The Discourse on Nibbāna',
     'leader': {'pali_roman': 'Handa mayaṃ nibbāna-sutta-pāṭhaṃ bhaṇāmase'},
     'groups': _pairs(
         ('Atthi bhikkhave ajātaṃ abhūtaṃ akataṃ asaṅkhataṃ',
-         'There is an Unborn, Unoriginated, Uncreated and Unformed.'),
+         'Monks, there is that which is not born, not come to be, not made, not conditioned.'),
         ('No cetaṃ bhikkhave abhavissa ajātaṃ abhūtaṃ akataṃ asaṅkhataṃ',
-         'If there was not this Unborn, this Unoriginated, this Uncreated, this Unformed,'),
+         'Monks, if there were not that which is not born, not come to be, not made, '
+         'not conditioned,'),
         ('Na yidaṃ jātassa bhūtassa katassa saṅkhatassa nissaraṇaṃ paññāyetha',
-         'Freedom from the world of the born, the originated, the created, the formed '
-         'would not be possible.'),
+         'no way out would be known here from what is born, come to be, made and conditioned.'),
         ('Yasmā ca kho bhikkhave atthi ajātaṃ abhūtaṃ akataṃ asaṅkhataṃ',
-         'But since there is an Unborn, Unoriginated, Uncreated and Unformed,'),
+         'But because, monks, there is that which is not born, not come to be, not made, '
+         'not conditioned,'),
         ('Tasmā jātassa bhūtassa katassa saṅkhatassa nissaraṇaṃ paññāyati',
-         'Therefore is freedom possible from the world of the born, the originated, '
-         'the created and the formed.'),
+         'a way out is known from what is born, come to be, made and conditioned.'),
     ),
     'continues': None,
 }
@@ -120,103 +102,102 @@ UNCONDITIONED = {
 MINDFULNESS_OF_BREATHING = {
     'id': 'amaravati-mindfulness-of-breathing',
     'title': 'Ānāpānassati Sutta',
-    'title_english': 'The Teaching on Mindfulness of Breathing',
-    'source_pages': '85–90',
+    'title_english': 'The Discourse on Mindfulness of Breathing',
     'leader': {'pali_roman': 'Handa mayam ānāpānassati-sutta-pāṭham bhaṇāmase'},
-    # The book prints "tranquillizing" for the bodily formations and
-    # "tranquilizing" for the mental ones; both kept as printed.
     'groups': _pairs(
         ('Ānāpānassati bhikkhave bhāvitā bahulīkatā',
-         'Bhikkhus, when mindfulness of breathing is developed and cultivated'),
-        ('Mahapphalā hoti mahānisaṃsā', 'It is of great fruit and great benefit;'),
+         'Monks, mindfulness of breathing, when developed and practised often,'),
+        ('Mahapphalā hoti mahānisaṃsā', 'brings great fruit and great reward.'),
         ('Ānāpānassati bhikkhave bhāvitā bahulīkatā',
-         'When mindfulness of breathing is developed and cultivated'),
-        ('Cattāro satipaṭṭhāne paripūreti', 'It fulfills the Four Foundations of Mindfulness;'),
+         'Monks, mindfulness of breathing, when developed and practised often,'),
+        ('Cattāro satipaṭṭhāne paripūreti',
+         'brings the four foundations of mindfulness to completion.'),
         ('Cattāro satipaṭṭhānā bhāvitā bahulīkatā',
-         'When the Four Foundations of Mindfulness are developed and cultivated'),
-        ('Satta-bojjhaṅge paripūrenti', 'They fulfill the Seven Factors of Awakening;'),
+         'The four foundations of mindfulness, when developed and practised often,'),
+        ('Satta-bojjhaṅge paripūrenti',
+         'bring the seven factors of awakening to completion.'),
         ('Satta-bojjhaṅgā bhāvitā bahulīkatā',
-         'When the Seven Factors of Awakening are developed and cultivated'),
-        ('Vijjā-vimuttiṃ paripūrenti', 'They fulfill true knowledge and deliverance.'),
+         'The seven factors of awakening, when developed and practised often,'),
+        ('Vijjā-vimuttiṃ paripūrenti', 'bring true knowledge and release to completion.'),
         ('Kathaṃ bhāvitā ca bhikkhave ānāpānassati kathaṃ bahulīkatā',
-         'And how, bhikkhus, is mindfulness of breathing developed and cultivated'),
-        ('Mahapphalā hoti mahānisaṃsā', 'So that it is of great fruit and great benefit?'),
-        ('Idha bhikkhave bhikkhu', 'Here, bhikkhus, a bhikkhu,'),
-        ('Arañña-gato vā', 'Gone to the forest,'),
-        ('Rukkha-mūla-gato vā', 'To the foot of a tree'),
-        ('Suññāgāra-gato vā', 'Or to an empty hut.'),
-        ('Nisīdati pallaṅkaṃ ābhujitvā', 'Sits down having crossed his legs,'),
+         'And how, monks, is mindfulness of breathing developed, how is it practised often,'),
+        ('Mahapphalā hoti mahānisaṃsā', 'so that it brings great fruit and great reward?'),
+        ('Idha bhikkhave bhikkhu', 'Here, monks, a monk'),
+        ('Arañña-gato vā', 'who has gone into the forest,'),
+        ('Rukkha-mūla-gato vā', 'or to the root of a tree,'),
+        ('Suññāgāra-gato vā', 'or to an empty dwelling,'),
+        ('Nisīdati pallaṅkaṃ ābhujitvā', 'sits down with his legs folded crosswise,'),
         ('Ujuṃ kāyaṃ paṇidhāya parimukhaṃ satiṃ upaṭṭhapetvā',
-         'Sets his body erect, having established mindfulness in front of him.'),
+         'holds his body upright, and sets mindfulness to the fore.'),
         ('So sato’va assasati sato’va passasati',
-         'Ever mindful he breathes in; mindful he breathes out.'),
+         'Simply mindful, he breathes in; simply mindful, he breathes out.'),
         ('Dīghaṃ vā assasanto dīghaṃ assasāmī’ti pajānāti',
-         'Breathing in long, he knows ‘I breathe in long’;'),
+         'Breathing in a long breath, he understands, ‘I am breathing in a long breath’;'),
         ('Dīghaṃ vā passasanto dīghaṃ passasāmī’ti pajānāti',
-         'Breathing out long, he knows ‘I breathe out long’;'),
+         'breathing out a long breath, he understands, ‘I am breathing out a long breath’;'),
         ('Rassaṃ vā assasanto rassaṃ assasāmī’ti pajānāti',
-         'Breathing in short, he knows ‘I breathe in short’;'),
+         'breathing in a short breath, he understands, ‘I am breathing in a short breath’;'),
         ('Rassaṃ vā passasanto rassaṃ passasāmī’ti pajānāti',
-         'Breathing out short, he knows ‘I breathe out short’.'),
+         'breathing out a short breath, he understands, ‘I am breathing out a short breath’.'),
         ('Sabba-kāya-paṭisaṃvedī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in experiencing the whole body’.'),
+         'He trains: ‘Feeling the whole body, I will breathe in’;'),
         ('Sabba-kāya-paṭisaṃvedī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out experiencing the whole body’.'),
+         'he trains: ‘Feeling the whole body, I will breathe out’.'),
         ('Passambhayaṃ kāya-saṅkhāraṃ assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in tranquillizing the bodily formations’.'),
+         'He trains: ‘Calming the activity of the body, I will breathe in’;'),
         ('Passambhayaṃ kāya-saṅkhāraṃ passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out tranquillizing the bodily formations’.'),
+         'he trains: ‘Calming the activity of the body, I will breathe out’.'),
         ('Pīti-paṭisaṃvedī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in experiencing rapture’.'),
+         'He trains: ‘Feeling joy, I will breathe in’;'),
         ('Pīti-paṭisaṃvedī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out experiencing rapture’.'),
+         'he trains: ‘Feeling joy, I will breathe out’.'),
         ('Sukha-paṭisaṃvedī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in experiencing pleasure’'),
+         'He trains: ‘Feeling happiness, I will breathe in’;'),
         ('Sukha-paṭisaṃvedī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out experiencing pleasure’.'),
+         'he trains: ‘Feeling happiness, I will breathe out’.'),
         ('Citta-saṅkhāra-paṭisaṃvedī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in experiencing the mental formations’.'),
+         'He trains: ‘Feeling the activity of the mind, I will breathe in’;'),
         ('Citta-saṅkhāra-paṭisaṃvedī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out experiencing the mental formations’.'),
+         'he trains: ‘Feeling the activity of the mind, I will breathe out’.'),
         ('Passambhayaṃ citta-saṅkhāraṃ assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in tranquilizing the mental formations’.'),
+         'He trains: ‘Calming the activity of the mind, I will breathe in’;'),
         ('Passambhayaṃ citta-saṅkhāraṃ passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out tranquilizing the mental formations’.'),
+         'he trains: ‘Calming the activity of the mind, I will breathe out’.'),
         ('Citta-paṭisaṃvedī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in experiencing the mind’.'),
+         'He trains: ‘Feeling the mind, I will breathe in’;'),
         ('Citta-paṭisaṃvedī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out experiencing the mind’.'),
+         'he trains: ‘Feeling the mind, I will breathe out’.'),
         ('Abhippamodayaṃ cittaṃ assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in gladdening the mind’.'),
+         'He trains: ‘Making the mind glad, I will breathe in’;'),
         ('Abhippamodayaṃ cittaṃ passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out gladdening the mind’.'),
+         'he trains: ‘Making the mind glad, I will breathe out’.'),
         ('Samādahaṃ cittaṃ assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in concentrating the mind’'),
+         'He trains: ‘Steadying the mind, I will breathe in’;'),
         ('Samādahaṃ cittaṃ passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out concentrating the mind’.'),
+         'he trains: ‘Steadying the mind, I will breathe out’.'),
         ('Vimocayaṃ cittaṃ assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in liberating the mind’.'),
+         'He trains: ‘Setting the mind free, I will breathe in’;'),
         ('Vimocayaṃ cittaṃ passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out liberating the mind’.'),
+         'he trains: ‘Setting the mind free, I will breathe out’.'),
         ('Aniccānupassī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in contemplating impermanence’.'),
+         'He trains: ‘Seeing impermanence, I will breathe in’;'),
         ('Aniccānupassī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out contemplating impermanence’.'),
+         'he trains: ‘Seeing impermanence, I will breathe out’.'),
         ('Virāgānupassī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in contemplating the fading away of passions’.'),
+         'He trains: ‘Seeing the fading of desire, I will breathe in’;'),
         ('Virāgānupassī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out contemplating the fading away of passions’.'),
+         'he trains: ‘Seeing the fading of desire, I will breathe out’.'),
         ('Nirodhānupassī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in contemplating cessation’.'),
+         'He trains: ‘Seeing ending, I will breathe in’;'),
         ('Nirodhānupassī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out contemplating cessation’.'),
+         'he trains: ‘Seeing ending, I will breathe out’.'),
         ('Paṭinissaggānupassī assasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe in contemplating relinquishment’.'),
+         'He trains: ‘Seeing letting go, I will breathe in’;'),
         ('Paṭinissaggānupassī passasissāmī’ti sikkhati',
-         'He trains thus: ‘I shall breathe out contemplating relinquishment’.'),
+         'he trains: ‘Seeing letting go, I will breathe out’.'),
         ('Evaṃ bhāvitā kho bhikkhave ānāpānassati evaṃ bahulīkatā',
-         'Bhikkhus, that is how mindfulness of breathing is developed and cultivated'),
-        ('Mahapphalā hoti mahānisaṃsā’ti', 'So that it is of great fruit and great benefit.'),
+         'It is in this way, monks, that mindfulness of breathing is developed and practised often'),
+        ('Mahapphalā hoti mahānisaṃsā’ti', 'so that it brings great fruit and great reward.'),
     ),
     'continues': None,
 }
@@ -224,67 +205,66 @@ MINDFULNESS_OF_BREATHING = {
 STRIVING = {
     'id': 'amaravati-striving',
     'title': 'Dhammapahaṃsāna Pāṭha',
-    'title_english': 'The Teaching on Striving According to Dhamma',
-    'source_pages': '115–119',
+    'title_english': 'Encouragement in the Dhamma',
     'leader': {'pali_roman': 'Handa mayaṃ dhamma-pahaṃsāna-pāṭham bhaṇāmase'},
     'groups': _pairs(
         ('Evaṃ svākkhāto bhikkhave mayā dhammo',
-         'Bhikkhus, the Dhamma has thus been well expounded by me,'),
-        ('Uttāno', 'Elucidated,'),
-        ('Vivaṭo', 'Disclosed,'),
-        ('Pakāsito', 'Revealed,'),
-        ('Chinna-pilotiko', 'And stripped of patchwork —'),
+         'Monks, in this way the Dhamma I have taught is well proclaimed:'),
+        ('Uttāno', 'made plain,'),
+        ('Vivaṭo', 'opened up,'),
+        ('Pakāsito', 'made known,'),
+        ('Chinna-pilotiko', 'with nothing patched or covered over.'),
         ('Alam-eva saddhā-pabbajitena kula-puttena viriyaṃ ārabhituṃ',
-         'This is enough for a clansman, who has gone forth out of faith, to arouse '
-         'his energy thus:'),
+         'So it is fitting for a son of good family who has gone forth in faith '
+         'to rouse up energy, thinking:'),
         ('Kāmaṃ taco ca nahāru ca aṭṭhi ca avasissatu',
-         '‘Willingly let only my skin, sinews and bones remain,'),
+         '‘Gladly, let only skin, sinew and bone be left;'),
         ('Sarīre upasussatu maṃsa-lohitaṃ',
-         'And let the flesh and blood in this body wither away.'),
-        ('Yaṃ taṃ', 'As long as whatever is to be attained'),
-        ('Purisa-thāmena', 'By human strength,'),
-        ('Purisa-viriyena', 'By human energy,'),
-        ('Purisa-parakkamena', 'By human effort,'),
-        ('Pattabbaṃ na taṃ apāpuṇitvā', 'Has not been attained,'),
-        ('Viriyassa saṇṭhānaṃ bhavissatī’ti', 'Let not my efforts stand still.’'),
-        ('Dukkhaṃ bhikkhave kusīto viharati', 'Bhikkhus, the lazy person dwells in suffering,'),
-        ('Vokiṇṇo pāpakehi akusalehi dhammehi', 'Soiled by evil, unwholesome states'),
-        ('Mahantañca sadatthaṃ parihāpeti', 'And great is the personal good that he neglects.'),
+         'let the flesh and blood dry up in my body;'),
+        ('Yaṃ taṃ', 'whatever can be reached'),
+        ('Purisa-thāmena', 'through human strength,'),
+        ('Purisa-viriyena', 'through human energy,'),
+        ('Purisa-parakkamena', 'through human striving,'),
+        ('Pattabbaṃ na taṃ apāpuṇitvā', 'until I have reached it,'),
+        ('Viriyassa saṇṭhānaṃ bhavissatī’ti', 'my energy will not come to rest.’'),
+        ('Dukkhaṃ bhikkhave kusīto viharati', 'Monks, the lazy person lives in suffering,'),
+        ('Vokiṇṇo pāpakehi akusalehi dhammehi', 'tangled up in bad, unwholesome things,'),
+        ('Mahantañca sadatthaṃ parihāpeti', 'and lets his own great good slip away.'),
         ('Āraddha-viriyo ca kho bhikkhave sukhaṃ viharati',
-         'The energetic person though dwells happily,'),
-        ('Pavivitto pāpakehi akusalehi dhammehi', 'Well withdrawn from unwholesome states'),
-        ('Mahantañca sadatthaṃ paripūreti', 'And great is the personal good that he achieves.'),
+         'But, monks, the person whose energy is roused lives in happiness,'),
+        ('Pavivitto pāpakehi akusalehi dhammehi', 'set apart from bad, unwholesome things,'),
+        ('Mahantañca sadatthaṃ paripūreti', 'and brings his own great good to fulfilment.'),
         ('Na bhikkhave hīnena aggassa patti hoti',
-         'Bhikkhus, it is not by lower means that the supreme is attained'),
+         'Monks, the highest is not reached by what is low;'),
         ('Aggena ca kho bhikkhave aggassa patti hoti',
-         'But, bhikkhus, it is by the supreme that the supreme is attained.'),
+         'monks, the highest is reached by what is highest.'),
         ('Maṇḍapeyyam-idaṃ bhikkhave brahmacariyaṃ',
-         'Bhikkhus, this holy life is like the cream of the milk:'),
-        ('Satthā sammukhī-bhūto', 'The Teacher is present,'),
+         'Monks, this holy life is like the finest cream, ready to drink;'),
+        ('Satthā sammukhī-bhūto', 'the Teacher is here before you.'),
         ('Tasmātiha bhikkhave viriyaṃ ārabhatha',
-         'Therefore, bhikkhus, start to arouse your energy'),
-        ('Appattassa pattiyā', 'For the attainment of the as yet unattained,'),
-        ('Anadhigatassa adhigamāya', 'For the achievement of the as yet unachieved,'),
-        ('Asacchikatassa sacchikiriyāya', 'For the realization of the as yet unrealized.'),
+         'So, monks, rouse up your energy'),
+        ('Appattassa pattiyā', 'to reach what is not yet reached,'),
+        ('Anadhigatassa adhigamāya', 'to gain what is not yet gained,'),
+        ('Asacchikatassa sacchikiriyāya', 'to realise what is not yet realised,'),
         ('Evaṃ no ayaṃ amhākaṃ pabbajjā avaṅkatā avañjhā bhavissati',
-         'Thinking, in such a way: ‘Our Going Forth will not be barren'),
-        ('Saphalā sa-udrayā', 'But will become fruitful and fertile,'),
+         'thinking: ‘In this way our going forth will not be wasted or barren,'),
+        ('Saphalā sa-udrayā', 'but fruitful and rewarding;'),
         ('Yesaṃ mayaṃ paribhuñjāma cīvara-piṇḍapāta-senāsana-'
          'gilānappaccaya-bhesajja-parikkhāraṃ tesaṃ te kārā amhesu',
-         'And all our use of robes, almsfood, lodgings, and medicinal requisites, '
-         'given by others for our support,'),
+         'and for those whose robes, almsfood, dwellings and medicines we use, '
+         'what they have done for us'),
         ('Mahapphalā bhavissanti mahānisaṃsā’ti',
-         'Will reward them with great fruit and great benefit.’'),
-        ('Evaṃ hi vo bhikkhave sikkhitabbaṃ', 'Bhikkhus, you should train yourselves thus:'),
-        ('Att’atthaṃ vā hi bhikkhave sampassamānena', 'Considering your own good,'),
+         'will bring great fruit and great reward.’'),
+        ('Evaṃ hi vo bhikkhave sikkhitabbaṃ', 'This, monks, is how you should train.'),
+        ('Att’atthaṃ vā hi bhikkhave sampassamānena', 'Monks, seeing your own good,'),
         ('Alam-eva appamādena sampādetuṃ',
-         'It is enough to strive for the goal without negligence;'),
-        ('Par’atthaṃ vā hi bhikkhave sampassamānena', 'Bhikkhus, considering the good of others,'),
+         'it is fitting to keep working with care;'),
+        ('Par’atthaṃ vā hi bhikkhave sampassamānena', 'monks, seeing the good of others,'),
         ('Alam-eva appamādena sampādetuṃ',
-         'It is enough to strive for the goal without negligence;'),
-        ('Ubhay’atthaṃ vā hi bhikkhave sampassamānena', 'Bhikkhus, considering the good of both,'),
+         'it is fitting to keep working with care;'),
+        ('Ubhay’atthaṃ vā hi bhikkhave sampassamānena', 'monks, seeing the good of both,'),
         ('Alam-eva appamādena sampādetun’ti',
-         'It is enough to strive for the goal without negligence.'),
+         'it is fitting to keep working with care.'),
     ),
     'continues': None,
 }
@@ -301,8 +281,8 @@ def _add_thai_script():
         sys.path.insert(0, scripts)
     from pali_to_thai import convert
     for chant in AMARAVATI_CHANTS:
-        # plain=True reads the book's word-final m (mayam, pāṭham) as ṃ, so
-        # the Thai line says มะยัง as every Thai temple chants it.
+        # plain=True reads the word-final m (mayam, pāṭham) as ṃ, so the
+        # Thai line says มะยัง as every Thai temple chants it.
         chant['leader']['pali'] = convert(chant['leader']['pali_roman'], plain=True)
         for group in chant['groups']:
             group['pali_thai'] = [convert(line) for line in group['pali']]
