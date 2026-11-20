@@ -5172,7 +5172,7 @@ def _guide_chants():
     """The chants the guides point to, by id, for their titles and links.
 
     Only chants the app holds: the daily practice also names one of the
-    Part 18 reflections (chanting_amaravati.py), which is printed in the
+    Part 18 reflections (chanting_reflections.py), which is printed in the
     book but not entered in the app, so that step shows without a link."""
     ids = set(chanting_volumes.occasion_chant_ids())
     ids |= {d['chant'] for d in chanting_volumes.DAY_CHANTS}

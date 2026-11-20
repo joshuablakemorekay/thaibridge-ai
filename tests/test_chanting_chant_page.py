@@ -220,21 +220,24 @@ def test_the_printed_books_guides_are_on_the_index(unlocked_client):
     assert 'Sammāsambuddhassa' in index
 
 
-def test_the_guides_never_link_the_amaravati_reflections(unlocked_client):
-    """Their licence is non-commercial, so they stay out of the paid app."""
+def test_the_guides_never_link_the_part_18_reflections(unlocked_client):
+    """They are printed in the book but not entered in the app, so no guide
+    may link to them."""
+    import chanting_reflections
     index = unlocked_client.get('/chanting').get_data(as_text=True)
-    assert 'amaravati' not in index.lower()
+    for chant in chanting_reflections.REFLECTION_CHANTS:
+        assert chant['id'] not in index
 
 
 def test_every_chant_a_guide_names_is_in_the_app():
     """A guide pointing at a chant the app lacks would be a dead end.
-    The one exception is the Amaravati reflection, kept out on purpose."""
+    The one exception is the Part 18 reflection, kept out on purpose."""
     import chanting_volumes
     ids = set(chanting_volumes.occasion_chant_ids())
     ids |= {d['chant'] for d in chanting_volumes.DAY_CHANTS}
     ids |= {c for _, step in chanting_volumes.DAILY_ORDER for c in step}
     missing = {c for c in ids if not chanting.get_chant(c)}
-    assert missing == {'amaravati-universal-well-being'}
+    assert missing == {'reflection-universal-well-being'}
 
 
 def test_the_preface_thanks_and_pronunciation_guide_are_on_the_index(unlocked_client):

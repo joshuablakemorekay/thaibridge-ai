@@ -17,7 +17,7 @@ Draft rule (Pra Kru Bob's note):
     Volume 1  the daily book: morning and evening chanting, the protection
               chants and blessings used most (Maṅgala, Bojjhaṅga, Jayamaṅgala,
               sharing of merit, the Mātikā), the day-of-the-week chants and
-              the Amaravati reflections
+              the Part 18 reflections
     Volume 2  more suttas: the evening discourses and the observance-day
               suttas, and the chanting with Thai translation
     Volume 3  the least used: the Sekhiya rules, formal requests,
@@ -56,7 +56,7 @@ PART_VOLUME = {
     16: 3,   # Other Chants
 }
 OWEN_VOLUME = 3        # Part 17, Ajarn Owen's chants and his word lists
-AMARAVATI_VOLUME = 1   # Part 18, the Amaravati reflections
+REFLECTIONS_VOLUME = 1   # Part 18, the Part 18 reflections
 
 # Part 7 holds the twelve protection chants (book pages 77-102) and then the
 # evening discourses (103-128). The protection chants are Volume 1; from the
@@ -104,7 +104,7 @@ DAILY_ORDER = [
     ('Chant the Namo three times', ['pubbabhaga-namakara']),
     ('Chant the Itipi so as many times as the power of the day', ['phra-phuttakhun']),
     ('Chant the chant for your day of birth, if you wish', []),
-    ('Chant loving-kindness for yourself and for all beings', ['amaravati-universal-well-being']),
+    ('Chant loving-kindness for yourself and for all beings', ['reflection-universal-well-being']),
     ('End with a moment of quiet meditation', []),
 ]
 

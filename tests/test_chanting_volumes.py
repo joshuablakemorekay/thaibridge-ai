@@ -1,10 +1,10 @@
 """Tests for the three-volume plan, the occasion and day guides, and the
-Amaravati chants (Pra Kru Bob's request, 2026-11-12).
+Part 18 reflections (Pra Kru Bob's request, 2026-11-12).
 
 What these protect: that splitting the book into volumes never loses or
 doubles a chant and never changes the temple book's order; that every chant
 a guide points to exists, so a reader is never sent to a missing page; and
-that the Amaravati chants stay out of chanting.CHANTS, which is the temple
+that the Part 18 reflections stay out of chanting.CHANTS, which is the temple
 book alone. None of this runs Chrome.
 """
 import os
@@ -14,11 +14,11 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scripts'))
 
 import chanting  # noqa: E402
-import chanting_amaravati  # noqa: E402
+import chanting_reflections  # noqa: E402
 import chanting_volumes as plan  # noqa: E402
 import build_chanting_print as build  # noqa: E402
 
-ALL_IDS = {c['id'] for c in chanting.CHANTS} | {c['id'] for c in chanting_amaravati.AMARAVATI_CHANTS}
+ALL_IDS = {c['id'] for c in chanting.CHANTS} | {c['id'] for c in chanting_reflections.REFLECTION_CHANTS}
 
 
 def _volume_books():
@@ -60,10 +60,10 @@ def test_pra_kru_bobs_chants_are_in_volume_one():
         assert cid in vol1, cid
 
 
-def test_owen_and_amaravati_each_in_one_volume():
+def test_owen_and_reflections_each_in_one_volume():
     books = _volume_books()
     assert sum(bool(b['owen_chants']) for b in books) == 1
-    assert sum(bool(b['amaravati_chants']) for b in books) == 1
+    assert sum(bool(b['reflection_chants']) for b in books) == 1
 
 
 def test_one_volume_edition_is_unchanged_in_order():
@@ -98,15 +98,15 @@ def test_every_occasion_names_its_source():
             assert item['chants'] and item['source'], item['occasion']
 
 
-def test_amaravati_chants_stay_out_of_the_temple_book():
+def test_reflections_stay_out_of_the_temple_book():
     temple = {c['id'] for c in chanting.CHANTS}
-    for chant in chanting_amaravati.AMARAVATI_CHANTS:
+    for chant in chanting_reflections.REFLECTION_CHANTS:
         assert chant['id'] not in temple
-        assert chant['id'].startswith('amaravati-')
+        assert chant['id'].startswith('reflection-')
 
 
-def test_amaravati_lines_have_thai_script():
-    for chant in chanting_amaravati.AMARAVATI_CHANTS:
+def test_reflection_lines_have_thai_script():
+    for chant in chanting_reflections.REFLECTION_CHANTS:
         assert '[?]' not in chant['leader']['pali']
         for group in chant['groups']:
             assert len(group['pali_thai']) == len(group['pali'])
@@ -117,7 +117,7 @@ def test_index_lists_every_chant_once():
     books = _volume_books()
     ids = [e['id'] for e in build.index_entries(books)]
     assert len(ids) == len(set(ids))
-    expected = len(chanting.CHANTS) + len(build.OWEN_CHANTS) + len(chanting_amaravati.AMARAVATI_CHANTS)
+    expected = len(chanting.CHANTS) + len(build.OWEN_CHANTS) + len(chanting_reflections.REFLECTION_CHANTS)
     assert len(ids) == expected
 
 

@@ -21,10 +21,6 @@ a monk, like every other English line marked as this edition's.
 The Thai-script line is made by scripts/pali_to_thai.py, like Ajarn Owen's
 chants, and also needs a monk's check.
 
-The module and chant ids keep the name `amaravati` only so that the volume
-plan, the guides and the tests do not all have to change; nothing printed
-uses it.
-
 Shape of a chant:
     id, title, title_english, first_line
     leader: the line the leader chants alone ("Handa mayaṃ ...")
@@ -42,7 +38,7 @@ def _pairs(*rows):
 
 
 UNIVERSAL_WELL_BEING = {
-    'id': 'amaravati-universal-well-being',
+    'id': 'reflection-universal-well-being',
     'title': 'Mettāpharaṇa',
     'title_english': 'Spreading Loving-Kindness',
     'leader': {
@@ -78,7 +74,7 @@ UNIVERSAL_WELL_BEING = {
 }
 
 UNCONDITIONED = {
-    'id': 'amaravati-unconditioned',
+    'id': 'reflection-unconditioned',
     'title': 'Nibbāna Sutta',
     'title_english': 'The Discourse on Nibbāna',
     'leader': {'pali_roman': 'Handa mayaṃ nibbāna-sutta-pāṭhaṃ bhaṇāmase'},
@@ -100,7 +96,7 @@ UNCONDITIONED = {
 }
 
 MINDFULNESS_OF_BREATHING = {
-    'id': 'amaravati-mindfulness-of-breathing',
+    'id': 'reflection-mindfulness-of-breathing',
     'title': 'Ānāpānassati Sutta',
     'title_english': 'The Discourse on Mindfulness of Breathing',
     'leader': {'pali_roman': 'Handa mayam ānāpānassati-sutta-pāṭham bhaṇāmase'},
@@ -203,7 +199,7 @@ MINDFULNESS_OF_BREATHING = {
 }
 
 STRIVING = {
-    'id': 'amaravati-striving',
+    'id': 'reflection-striving',
     'title': 'Dhammapahaṃsāna Pāṭha',
     'title_english': 'Encouragement in the Dhamma',
     'leader': {'pali_roman': 'Handa mayaṃ dhamma-pahaṃsāna-pāṭham bhaṇāmase'},
@@ -269,7 +265,7 @@ STRIVING = {
     'continues': None,
 }
 
-AMARAVATI_CHANTS = [UNIVERSAL_WELL_BEING, UNCONDITIONED, MINDFULNESS_OF_BREATHING, STRIVING]
+REFLECTION_CHANTS = [UNIVERSAL_WELL_BEING, UNCONDITIONED, MINDFULNESS_OF_BREATHING, STRIVING]
 
 
 def _add_thai_script():
@@ -280,7 +276,7 @@ def _add_thai_script():
     if scripts not in sys.path:
         sys.path.insert(0, scripts)
     from pali_to_thai import convert
-    for chant in AMARAVATI_CHANTS:
+    for chant in REFLECTION_CHANTS:
         # plain=True reads the word-final m (mayam, pāṭham) as ṃ, so the
         # Thai line says มะยัง as every Thai temple chants it.
         chant['leader']['pali'] = convert(chant['leader']['pali_roman'], plain=True)

@@ -18,7 +18,7 @@ same order, as _print/chanting-volume-1/2/3.pdf, following the plan in
 chanting_volumes.py — which Part goes in which volume is one number there,
 so the abbot's decision is a one-line change. Both editions carry the
 occasion guide, the day-of-the-week chants, the Part 18 reflections
-(chanting_amaravati.py) and the indexes.
+(chanting_reflections.py) and the indexes.
 
 Every chant in book order, with all five layers and a short commentary, laid
 out by templates/print/chanting_book_print.html and turned into a PDF by the
@@ -63,10 +63,10 @@ sys.path.insert(0, ROOT)
 import chanting  # noqa: E402
 from chanting_print_short import SHORT  # noqa: E402
 from chanting_owen import OWEN_BOOK, OWEN_CHANTS, OWEN_GLOSSARY  # noqa: E402
-from chanting_amaravati import (  # noqa: E402
-    AMARAVATI_CHANTS, PART_TITLE as AMARAVATI_PART_TITLE)
+from chanting_reflections import (  # noqa: E402
+    REFLECTION_CHANTS, PART_TITLE as REFLECTIONS_PART_TITLE)
 from chanting_volumes import (  # noqa: E402
-    AMARAVATI_VOLUME, CHANT_VOLUME, DAILY_ORDER, DAY_CHANTS, OCCASIONS, OWEN_VOLUME,
+    REFLECTIONS_VOLUME, CHANT_VOLUME, DAILY_ORDER, DAY_CHANTS, OCCASIONS, OWEN_VOLUME,
     PART_VOLUME, SPLITS, VOLUMES)
 
 CHROME_PATHS = [
@@ -96,7 +96,7 @@ PRINT_FONTS = os.path.join(ROOT, 'scripts', 'print_fonts')
 TIGHT_CHANTS = {
     'kham-kho-khama-phra-rattanatrai', 'mahacunda-bojjhanga-suttam',
     'dhatupatikula-paccavekkhana',
-    'amaravati-striving',
+    'reflection-striving',
 }
 
 
@@ -308,7 +308,7 @@ def index_entries(books):
                 entries.append({'id': c['id'], 'label': label,
                                 'roman': roman if roman != label else '',
                                 'thai': c.get('title_thai', '')})
-        for c in book['owen_chants'] + book['amaravati_chants']:
+        for c in book['owen_chants'] + book['reflection_chants']:
             entries.append({'id': c['id'], 'label': c['title_english'],
                             'roman': c['title'], 'thai': c.get('title_thai', '')})
     return sorted(entries, key=lambda e: _sort_key(e['label']))
@@ -328,7 +328,7 @@ def first_line_entries(book):
                       if ln.get('pali_roman')), '')
         if first:
             lines.append({'id': c['id'], 'line': _first_line(first)})
-    for c in book['amaravati_chants']:
+    for c in book['reflection_chants']:
         lines.append({'id': c['id'], 'line': _first_line(c['first_line'])})
     return sorted(lines, key=lambda e: _sort_key(e['line']))
 
@@ -337,10 +337,10 @@ def make_books(volumes):
     """The books to print: one, or the three volumes."""
     parts = number_parts(book_parts())
     owen_part = sum(1 for p in parts if p.get('number')) + 1
-    common = {'owen_part': owen_part, 'amaravati_part': owen_part + 1}
+    common = {'owen_part': owen_part, 'reflections_part': owen_part + 1}
     if not volumes:
         return [dict(common, key='one', volume=None, parts=parts, full_front=True, day_guide=True,
-                     owen_chants=OWEN_CHANTS, amaravati_chants=AMARAVATI_CHANTS,
+                     owen_chants=OWEN_CHANTS, reflection_chants=REFLECTION_CHANTS,
                      out=os.path.join(ROOT, '_print', 'chanting-book-a4.pdf'))]
     by_volume = split_into_volumes(parts)
     books = []
@@ -350,7 +350,7 @@ def make_books(volumes):
             common, key=f'volume-{n}', volume=v, parts=by_volume[n],
             full_front=(n == 1), day_guide=(n == 1),
             owen_chants=OWEN_CHANTS if OWEN_VOLUME == n else [],
-            amaravati_chants=AMARAVATI_CHANTS if AMARAVATI_VOLUME == n else [],
+            reflection_chants=REFLECTION_CHANTS if REFLECTIONS_VOLUME == n else [],
             out=os.path.join(ROOT, '_print', f'chanting-volume-{n}.pdf')))
     return books
 
@@ -361,7 +361,7 @@ def book_ids(book):
     ids += [c['id'] for c in book['owen_chants']]
     if book['owen_chants']:
         ids.append(OWEN_GLOSSARY['id'])
-    ids += [c['id'] for c in book['amaravati_chants']]
+    ids += [c['id'] for c in book['reflection_chants']]
     ids += [g for g in GUIDE_IDS if g != 'guide-days' or book['day_guide']]
     return ids
 
@@ -423,7 +423,7 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
         return f"Vol. {b['volume']['number']}, p. {n}" if many else f'p. {n}'
 
     chants_by_id = {c['id']: c for c in chanting.CHANTS}
-    chants_by_id.update({c['id']: dict(c, title_pali=c['title']) for c in OWEN_CHANTS + AMARAVATI_CHANTS})
+    chants_by_id.update({c['id']: dict(c, title_pali=c['title']) for c in OWEN_CHANTS + REFLECTION_CHANTS})
     return template.render(
         pad_blank=pad_blank,
         colour=colour,
@@ -445,9 +445,9 @@ def render_html(template, book, books, pages, proof, pad_blank=False, colour='mo
         owen_book=OWEN_BOOK,
         glossary=OWEN_GLOSSARY,
         owen_part=book['owen_part'],
-        amaravati_chants=book['amaravati_chants'],
-        amaravati_part_title=AMARAVATI_PART_TITLE,
-        amaravati_part=book['amaravati_part'],
+        reflection_chants=book['reflection_chants'],
+        reflections_part_title=REFLECTIONS_PART_TITLE,
+        reflections_part=book['reflections_part'],
         occasions=OCCASIONS,
         photo_url=('file:///' + PHOTO.replace(os.sep, '/')) if os.path.exists(PHOTO) else None,
         photo_caption=PHOTO_CAPTION,
@@ -583,8 +583,8 @@ def main():
     if sorted(temple_ids) != sorted(c['id'] for c in chanting.CHANTS):
         sys.exit('The edition does not hold every chant exactly once.')
     if sum(bool(b['owen_chants']) for b in books) != 1 or \
-            sum(bool(b['amaravati_chants']) for b in books) != 1:
-        sys.exit("Ajarn Owen's and the Amaravati chants must each be in exactly one book.")
+            sum(bool(b['reflection_chants']) for b in books) != 1:
+        sys.exit("Ajarn Owen's chants and the Part 18 reflections must each be in exactly one book.")
 
     # Every book is laid out once with placeholder numbers; only then are all
     # pages known, because the occasion guide and the index in one volume

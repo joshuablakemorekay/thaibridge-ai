@@ -724,9 +724,9 @@
         <span class="toc-page">{{ page(glossary.id) }}</span>
     </div>
     {% endif %}
-    {% if amaravati_chants %}
-    <div class="toc-part"><span class="toc-part-no">Part {{ amaravati_part }}</span> {{ amaravati_part_title }}</div>
-    {% for chant in amaravati_chants %}
+    {% if reflection_chants %}
+    <div class="toc-part"><span class="toc-part-no">Part {{ reflections_part }}</span> {{ reflections_part_title }}</div>
+    {% for chant in reflection_chants %}
     <div class="toc-entry">
         <span class="toc-no">{{ loop.index }}.</span>
         <span class="toc-title"><em>{{ chant.title }}</em>: {{ chant.title_english }}</span>
@@ -950,12 +950,12 @@
 {% endif %}
 
 {# ── Part 18: reflections after morning and evening chanting
-   (chanting_amaravati.py) ── romanised Pali with this edition's own English,
+   (chanting_reflections.py) ── romanised Pali with this edition's own English,
    and a Thai-script line made like Ajarn Owen's. #}
-{% if amaravati_chants %}
+{% if reflection_chants %}
 <div class="part-heading">
-    <span class="part-no">Part {{ amaravati_part }}</span>
-    <span class="en owen-title">{{ amaravati_part_title }}</span>
+    <span class="part-no">Part {{ reflections_part }}</span>
+    <span class="en owen-title">{{ reflections_part_title }}</span>
     <span class="orn"></span>
     <p class="owen-note">Reflections commonly chanted after morning and evening
     chanting that the Wat Mahathat United Kingdom book does not include. The
@@ -963,7 +963,7 @@
     and the Thai-script transliteration are this edition's own, for a monk to
     check.</p>
 </div>
-{% for chant in amaravati_chants %}
+{% for chant in reflection_chants %}
 <article class="chant owen-chant{% if chant.id in tight_chants %} tight{% endif %}">
     <header class="chant-head">
         <span class="locator">{{ locator(chant.id) }}</span>
