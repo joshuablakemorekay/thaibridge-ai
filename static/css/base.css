@@ -566,12 +566,73 @@
             nav ul.active {
                 display: flex;
             }
-            
+
+            /* Phone menu open (class set by setMobileMenuOpen in base.js).
+               An open menu taller than the screen used to run off the
+               bottom with no way to reach it: on iPhones the swipe moved the
+               page behind instead (tester Max, 2026-11-21). So while it is
+               open the nav becomes a full-screen layer that scrolls by
+               itself, and the page behind is frozen in place (base.js puts
+               the scroll position back on close). */
+            html.mobile-menu-open body {
+                position: fixed;
+                left: 0;
+                right: 0;
+                width: 100%;
+                overflow: hidden;
+            }
+            html.mobile-menu-open nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                height: 100dvh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                overscroll-behavior: contain;
+                padding-bottom: 3rem;
+            }
+
+            /* Big, well-spaced tap targets: "Pricing" and "About" sat so
+               close together they were hard to hit with a thumb. 48px tall,
+               a gap between each, and a faint gold line so each item reads
+               as its own button. */
+            #main-nav > li {
+                border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+                padding: 0.3rem 0;
+            }
+            #main-nav > li:last-child {
+                border-bottom: none;
+            }
+            #main-nav > li > a,
+            #main-nav > li > .dropdown-toggle,
+            #main-nav > li > .monk-mode-toggle {
+                display: flex;
+                align-items: center;
+                min-height: 48px;
+                width: 100%;
+                padding: 0.7rem 1rem;
+                font-size: 1.05rem;
+            }
+            nav .dropdown-content a {
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+            }
+
             nav .dropdown-content {
                 position: static;
                 box-shadow: none;
                 background: rgba(74, 26, 107, 0.95);
                 margin-left: 1rem;
+                /* On phones a dropdown opens INSIDE the menu, so it must not
+                   be a little scrolling box of its own: a swipe landing on it
+                   scrolled the box, not the menu, and Learning Support's
+                   "Full guide" link could never be reached. The whole menu
+                   scrolls as one instead. */
+                max-height: none;
+                overflow: visible;
             }
             
             .gender-selector {
@@ -1907,6 +1968,14 @@ body {
     min-width: 240px;
     padding: 0.5rem 0.4rem;
     max-height: min(85vh, 560px);
+}
+/* Phones: the panel opens inside the menu, which does the scrolling, so it
+   drops its own cap (see the nav .dropdown-content phone rule). */
+@media (max-width: 768px) {
+    nav .reading-support-panel {
+        max-height: none;
+        overflow: visible;
+    }
 }
 .reading-support-panel .rs-heading {
     margin: 0;

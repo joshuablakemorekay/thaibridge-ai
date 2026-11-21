@@ -26,7 +26,33 @@
         // Mobile menu toggle
         function toggleMobileMenu() {
             const nav = document.getElementById('main-nav');
-            const open = nav.classList.toggle('active');
+            setMobileMenuOpen(!nav.classList.contains('active'));
+        }
+
+        // Opens or closes the phone menu. While it is open, the page behind
+        // is frozen in place and the menu becomes a full-screen layer that
+        // scrolls by itself. iPhones (Safari) will not reliably scroll a menu
+        // inside a bar pinned to the top of the screen: the swipe moved the
+        // page behind instead, so Learning Support's "Full guide" link was
+        // out of reach (tester Max, 2026-11-21). Freezing the page with
+        // position: fixed, and putting back the scroll position on close,
+        // is the method that works on every iPhone.
+        let mobileMenuScrollY = 0;
+        function setMobileMenuOpen(open) {
+            const nav = document.getElementById('main-nav');
+            if (!nav) return;
+            const root = document.documentElement;
+            const wasOpen = root.classList.contains('mobile-menu-open');
+            nav.classList.toggle('active', open);
+            if (open && !wasOpen) {
+                mobileMenuScrollY = window.scrollY;
+                document.body.style.top = '-' + mobileMenuScrollY + 'px';
+                root.classList.add('mobile-menu-open');
+            } else if (!open && wasOpen) {
+                root.classList.remove('mobile-menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, mobileMenuScrollY);
+            }
             // Tell screen readers whether the menu is now open or closed.
             const button = document.querySelector('.mobile-menu-toggle');
             if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -518,8 +544,7 @@
                 document.querySelectorAll('.dropdown').forEach(function (d) {
                     d.classList.remove('active');
                 });
-                var nav = document.getElementById('main-nav');
-                if (nav) nav.classList.remove('active');
+                setMobileMenuOpen(false);
             }
             function onPick(event) {
                 if (event.target.closest('.reading-support')) return;   // panel clicks pass through
