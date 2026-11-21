@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Progress Dashboard - ThaiBridge AI{% endblock %}
+{% block title %}Progress Dashboard - Jaiway{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -109,7 +109,7 @@
        Answers are kept privately. Nothing here is shown on the site. #}
     {% if ask_for_review %}
     <div class="review-prompt" id="review-prompt">
-        <h2>How's ThaiBridge going for you?</h2>
+        <h2>How's Jaiway going for you?</h2>
         <p class="review-intro">You've reached Level {{ user.level }}, so you've seen a fair bit of it.
             An honest rating, good or bad, helps me make it better.</p>
         <form id="review-form">
@@ -127,7 +127,7 @@
                       placeholder="What's helped you most? What's missing or frustrating?"></textarea>
             <label class="review-check">
                 <input type="checkbox" id="review-can-publish">
-                You can show my review on the ThaiBridge website
+                You can show my review on the Jaiway website
             </label>
             <div id="review-name-wrap" hidden>
                 <label for="review-name">Name to show beside it <span class="review-optional">(e.g. "Sarah, Bangkok")</span></label>
@@ -241,7 +241,7 @@
             Deleting your account now ends it today.</p>
         {% endif %}
         <form action="/delete-account" method="post" class="change-password-form" data-json-post
-              data-confirm="Delete your ThaiBridge account for good? This can't be undone.">
+              data-confirm="Delete your Jaiway account for good? This can't be undone.">
             <label for="delete-password">Your password</label>
             <input type="password" id="delete-password" name="password" autocomplete="current-password" required>
             <label for="delete-confirm">Type DELETE to confirm</label>

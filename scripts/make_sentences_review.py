@@ -37,7 +37,7 @@ import sentence_builder  # noqa: E402
 BLANK = "______________________________________________"
 
 INTRO = """# ขอความช่วยเหลือตรวจประโยคภาษาไทยครับ
-## Sentences page — new Thai to check · ThaiBridge AI · {date}
+## Sentences page — new Thai to check · Jaiway · {date}
 
 เรียน อาจารย์ครับ 🙏
 
@@ -52,7 +52,7 @@ INTRO = """# ขอความช่วยเหลือตรวจประ�
 > ถ้าผิดหรือไม่เป็นธรรมชาติ เขียนแบบที่ถูกตรงบรรทัด **ตอบ:** ครับ
 > ถ้าข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ
 
-ตัวเอียงข้างหลังภาษาไทยคือ **คำอ่านแบบ ThaiBridge Spelling** ที่ผู้เรียนใช้อ่านออกเสียง
+ตัวเอียงข้างหลังภาษาไทยคือ **คำอ่านแบบ JaiScript** ที่ผู้เรียนใช้อ่านออกเสียง
 (ปรับมาจากระบบ Paiboon) ถ้า **วรรณยุกต์หรือเสียงในคำอ่านผิด** ช่วยบอกด้วยนะครับ
 
 *I teach Thai to foreigners through an app. I've added three things to its
@@ -60,7 +60,7 @@ Sentences page: how to answer questions, longer sentences that join two ideas,
 and a drill where learners put Thai words in the right order. I drafted every
 line myself and no Thai speaker has checked them yet. Please mark each one ✓ if
 it's correct and natural, or write the better version. The italic line after
-each Thai sentence is its ThaiBridge Spelling (the app's romanisation, based on
+each Thai sentence is its JaiScript (the app's romanisation, based on
 Paiboon) — please flag any wrong tone or sound in it too. About 30 minutes —
 skip anything you're unsure of.*
 

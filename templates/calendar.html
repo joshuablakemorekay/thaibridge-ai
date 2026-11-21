@@ -2,7 +2,7 @@
 
 {% set buddhist = view == 'buddhist' %}
 {% set year_layout = layout == 'year' %}
-{% block title %}{% if buddhist %}Buddhist calendar {{ cal.be_year }}{% else %}Calendar {{ cal.year }}{% endif %} — ThaiBridge{% endblock %}
+{% block title %}{% if buddhist %}Buddhist calendar {{ cal.be_year }}{% else %}Calendar {{ cal.year }}{% endif %} — Jaiway{% endblock %}
 {% block description %}The Thai and Buddhist calendar: Gregorian and Buddhist Era dates side by side, Thai public holidays and the Buddhist holy days that follow the moon.{% endblock %}
 
 {% block extra_css %}
@@ -78,7 +78,7 @@
     .cal-when { font-weight: 700; }
     .cal-when small { font-weight: 400; color: var(--saffron-text); }
     .cal-name .thai { font-size: 1.15rem; }
-    .cal-paiboon { font-family: 'ThaiBridge Spelling', monospace; color: var(--royal-purple, #4A1A6B); font-weight: bold; }
+    .cal-paiboon { font-family: 'JaiScript', monospace; color: var(--royal-purple, #4A1A6B); font-weight: bold; }
     .cal-note { color: #555; font-size: 0.9rem; margin-top: 0.15rem; }
     .cal-source { color: #555; font-size: 0.85rem; margin-top: 2rem; }
 

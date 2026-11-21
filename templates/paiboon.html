@@ -3,8 +3,8 @@
 {% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
 {% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
 
-{% block title %}ThaiBridge Spelling: Thai in English letters{% endblock %}
-{% block description %}ThaiBridge Spelling: how Thai is written in English letters, with tones marked, so you can say each word properly. Look up any Thai word's spelling.{% endblock %}
+{% block title %}JaiScript: Thai in English letters{% endblock %}
+{% block description %}JaiScript: how Thai is written in English letters, with tones marked, so you can say each word properly. Look up any Thai word's spelling.{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -62,7 +62,7 @@
     /* The romanisation is the answer the visitor came for, so it is the thing
        that stands out — full tone marks and all. */
     .pb-result-paiboon {
-        font-family: 'ThaiBridge Spelling', monospace;
+        font-family: 'JaiScript', monospace;
         font-size: 1.05rem;
         color: var(--royal-purple, #6A1B9A);
         font-weight: bold;
@@ -97,7 +97,7 @@
 {% macro listen_url(url) %}{% if url %}<button type="button" class="th-audio pb-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
 {% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
 <h1>
-    ThaiBridge Spelling Guide
+    JaiScript Guide
     <span class="thai" lang="th">ระบบถอดเสียงไพบูลย์</span>
 </h1>
 
@@ -150,7 +150,7 @@
            than a guessed tone mark the learner has no way to catch. #}
         <p class="pb-lookup-empty">
             No match for <strong>{{ query }}</strong>. This searches the
-            {{ corpus_size }} words and phrases taught on ThaiBridge, so it will
+            {{ corpus_size }} words and phrases taught on Jaiway, so it will
             not have every Thai word — try a shorter spelling, or ask the
             <a href="/chat">AI tutor</a>.
         </p>
@@ -226,7 +226,7 @@
 <h2 id="consonants">Consonants</h2>
 
 <p style="margin-bottom: 1rem;">
-    Thai has 44 consonant letters, but many share the same sound. Here are the ThaiBridge Spelling romanizations:
+    Thai has 44 consonant letters, but many share the same sound. Here are the JaiScript romanizations:
 </p>
 
 <div class="card">
@@ -234,7 +234,7 @@
         <thead>
             <tr>
                 <th>Thai</th>
-                <th>ThaiBridge Spelling</th>
+                <th>JaiScript</th>
                 <th>Sound Description</th>
             </tr>
         </thead>
@@ -274,7 +274,7 @@
         <thead>
             <tr>
                 <th>Thai</th>
-                <th>ThaiBridge Spelling</th>
+                <th>JaiScript</th>
                 <th>Sound Description</th>
             </tr>
         </thead>
@@ -305,13 +305,13 @@
         next one - see <a href="#stress">Stressed &amp; Soft Syllables</a> below.
     </p>
     <p style="margin-top: 1rem; font-style: italic; color: #666;">
-        Note: The (!) symbol is shown here for learning purposes - it's not part of standard ThaiBridge Spelling.
+        Note: The (!) symbol is shown here for learning purposes - it's not part of standard JaiScript.
     </p>
 </div>
 
 <div class="card" style="border-left-color: var(--lotus-pink);">
     <h3>Short vs. Long Vowels</h3>
-    <p>In ThaiBridge Spelling, <strong>doubled letters = long vowels</strong>:</p>
+    <p>In JaiScript, <strong>doubled letters = long vowels</strong>:</p>
     <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
         <li><span class="paiboon">a</span> (short) vs. <span class="paiboon">aa</span> (long)</li>
         <li><span class="paiboon">i</span> (short) vs. <span class="paiboon">ii</span> (long)</li>
@@ -346,7 +346,7 @@
         - "má" and "tá" are soft, the rest are stressed.
     </p>
     <p style="margin-top: 1rem; font-style: italic; color: #666;">
-        Across ThaiBridge's lessons every syllable is joined with a plain <strong>-</strong> to keep things simple,
+        Across Jaiway's lessons every syllable is joined with a plain <strong>-</strong> to keep things simple,
         so there it only separates syllables and doesn't mark stress. The <strong>~</strong> is taught here and on
         <a href="/vowels_syllables">Vowels &amp; Syllables</a>.
     </p>
@@ -383,7 +383,7 @@
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--gold);">
     <h3>Reference</h3>
     <p>
-        The ThaiBridge Spelling system used in this app is based on the 
+        The JaiScript system used in this app is based on the 
         <strong><a href="/dictionary">Thai-English English-Thai Dictionary</a></strong> 
         by Benjawan Poomsan Becker (Paiboon Publishing).
     </p>

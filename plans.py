@@ -99,7 +99,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Dhamma talks, in Thai and English wherever a translation exists',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
-            '✓ ThaiBridge Spelling guide',
+            '✓ JaiScript guide',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,

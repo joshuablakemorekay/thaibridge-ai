@@ -1,6 +1,6 @@
 # Architecture & Codebase Guide
 
-This is the developer's-eye view of ThaiBridge AI. It covers what the code is, how it's
+This is the developer's-eye view of Jaiway. It covers what the code is, how it's
 put together, how it runs, and the design decisions (and a few "gotchas") behind it.
 It was written by reading the real source files, so it describes what's actually in
 the repo, not what we hoped to build.
@@ -17,7 +17,7 @@ If you just want to *use* the app, start with the root `README.md`. If you want 
 
 ## The one-paragraph summary
 
-ThaiBridge is a **Flask web app** (Flask is a Python toolkit that turns Python functions
+Jaiway is a **Flask web app** (Flask is a Python toolkit that turns Python functions
 into web pages) for learning Thai through its culture and Theravada Buddhism. The live
 site is https://thaibridge.smoald.com. `app.py` is still the hub, holding most of the pages
 and the billing. Around it sit about 40 smaller modules, each owning one job: accounts,
@@ -198,7 +198,7 @@ A class called `ThaiLearningAI` that wraps Claude.
   from Haiku in October 2026 because the cheaper model taught wrong Thai.
 - **Seven chat modes:** `conversation`, `tutor`, `generator`, `cultural`, `buddhist`,
   `helper` and `translator`. Translator is Pro only and can read a photo of Thai text.
-- **A shared rulebook** at the top of every prompt holds the **ThaiBridge Spelling** rules
+- **A shared rulebook** at the top of every prompt holds the **JaiScript** rules
   (the app's romanisation, based on Paiboon+), so pronunciation is written the same way
   everywhere.
 - **A spelling lookup tool.** The tutor can look up a word's confirmed spelling before
@@ -218,7 +218,7 @@ Learning content lives as Python data in its own files: `vocabulary.py`,
 `content/` holds Markdown for the journal, Monk Mode lessons and Dhamma talks.
 
 **The chanting book** is the biggest piece by far. `chanting.py` (~80,000 lines) holds 305
-chants in Pali, Thai, ThaiBridge Spelling and English, verse by verse, transcribed from a
+chants in Pali, Thai, JaiScript and English, verse by verse, transcribed from a
 printed book. `chanting_layout.py`, `chanting_volumes.py` and `scripts/build_chanting_print.py`
 turn the same data into the printed edition.
 

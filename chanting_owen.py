@@ -1,5 +1,5 @@
 """Chants from Ajarn Owen's chanting book, printed as a separate Part at the
-end of the ThaiBridge chanting book (Josh, 2026-11-06).
+end of the Jaiway chanting book (Josh, 2026-11-06).
 
 Why a separate file: `chanting.py` is the Wat Mahathat United Kingdom
 chanting book, transcribed page by page, and everything there is checked

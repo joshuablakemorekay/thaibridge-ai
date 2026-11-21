@@ -149,7 +149,7 @@ def strip_commentary(chants):
     return [{k: v for k, v in c.items() if k not in COMMENTARY_KEYS} for c in chants]
 
 
-# Paiboon+ writes a long diphthong doubled (riian, tuua, rʉ̂ʉa); ThaiBridge
+# Paiboon+ writes a long diphthong doubled (riian, tuua, rʉ̂ʉa); Jaiway
 # Spelling writes Paiboon's ia/ua/ʉa for both lengths. The book was converted
 # to the app's standard on 2026-10-14, after its baseline was taken.
 _LONG_DIPHTHONG = re.compile('([uiʉ])([̀́̂̌]?)\\1([̀́̂̌]?)a')
@@ -202,7 +202,7 @@ BOOK_CORRECTIONS = [
 ]
 
 
-# Translation lines given ThaiBridge Spelling on 2026-11-06. Their `paiboon`
+# Translation lines given JaiScript on 2026-11-06. Their `paiboon`
 # was empty in the baseline, left so on purpose until a dedicated pass (see
 # the page-306 note in chanting.py). Only `paiboon` on these verses is
 # excused; their Thai, Pali and English are still compared. The two

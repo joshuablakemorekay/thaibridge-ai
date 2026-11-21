@@ -100,7 +100,7 @@ def checklist():
     add("Read & Write Script", "Vowel positions and Dhamma words", "/read_write")
     for story in thai_reading.STORIES:
         add("Read & Write Script", "Story: " + story.get("title_en", story.get("key", "")), "/read_write")
-    add("ThaiBridge Spelling", "Whole page", "/paiboon", "The tone and sound rules")
+    add("JaiScript", "Whole page", "/paiboon", "The tone and sound rules")
     add("Dictionary", "Reference part only", "/dictionary",
         "The search results come from a published dictionary (Yaitron), no need to check those")
     add("Thai Culture", "Every topic and story", "/culture")
@@ -219,7 +219,7 @@ def all_lines():
 FINDING_PAGES = [
     "Alphabet", "Survival Thai", "Vocabulary", "Lessons", "Sentences & Conversations",
     "Grammar Guide", "Formality Levels", "Gender Guide", "Tones & Consonant Classes",
-    "Vowels & Syllables", "Read & Write Script", "ThaiBridge Spelling", "Dictionary",
+    "Vowels & Syllables", "Read & Write Script", "JaiScript", "Dictionary",
     "Thai Culture", "Theravada Dhamma", "Meditation", "Tour Guide Thai", "Business Thai",
     "Expat2000", "Monk Mode", "AI Tutor", "Other pages",
 ]
@@ -228,7 +228,7 @@ TYPES = ["1. Wrong / ผิด", "2. Unnatural / ไม่เป็นธรร�
 STATUS = ["To do", "Fixed", "Question for the reviewer", "Not changing"]
 
 HOW_TO = [
-    ("ThaiBridge AI: Thai review", "title"),
+    ("Jaiway: Thai review", "title"),
     ("", ""),
     ("English", "bold"),
     ("Thank you for checking the Thai! There are three tabs to use:", ""),
@@ -319,7 +319,7 @@ def build(out):
     lines = all_lines()
     ws = wb.create_sheet("All Thai lines")
     header(ws, [("#", 6), ("Page\nหน้า", 26), ("Link\nลิงก์", 30), ("Where on the page\nส่วน", 28),
-                ("Thai\nภาษาไทย", 44), ("ThaiBridge Spelling", 30), ("Meaning\nความหมาย", 34),
+                ("Thai\nภาษาไทย", 44), ("JaiScript", 30), ("Meaning\nความหมาย", 34),
                 ("OK?\nผล", 8), ("Correction\nแก้เป็น", 36), ("Comment\nหมายเหตุ", 28),
                 ("Status (Josh)\nสถานะ", 16)])
     for n, row in enumerate(lines, start=1):

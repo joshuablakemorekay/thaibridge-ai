@@ -1,7 +1,7 @@
 """The five Thai tones and the consonant-class tone rules.
 
 TONE_REFERENCE is the one set of real example words both the Tones page and the
-ThaiBridge Spelling guide teach from. TONES_AND_CLASSES is everything on
+JaiScript guide teach from. TONES_AND_CLASSES is everything on
 /tones-classes, including the drills /api/drill/<kind> deals from.
 
 Data only, moved out of app.py so other modules can use it without importing
@@ -9,7 +9,7 @@ app.py. app.py imports these names back unchanged.
 """
 
 # The five tones, taught with ONE set of real words. Both the Tones page and the
-# ThaiBridge Spelling guide read this, so they cannot drift apart again (they
+# JaiScript guide read this, so they cannot drift apart again (they
 # had: one said the rising tone starts "mid-low", the other "low"). The words
 # are the classic kh- set — same consonant sound, same vowel, five different
 # words — so the only thing that changes when you play them is the tone. The

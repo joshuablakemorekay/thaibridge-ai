@@ -184,7 +184,7 @@ def test_reset_and_change_both_tell_the_owner(user, outbox):
     c.post("/change-password", json={"current_password": NEW_PASSWORD,
                                      "new_password": "Third789x",
                                      "confirm_password": "Third789x"})
-    notices = [m for m in outbox if m[1] == "Your ThaiBridge AI password was changed"]
+    notices = [m for m in outbox if m[1] == "Your Jaiway password was changed"]
     assert len(notices) == 2 and all(m[0] == user["email"] for m in notices)
     assert "/forgot-password" in notices[0][2]
 

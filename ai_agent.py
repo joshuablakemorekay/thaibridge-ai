@@ -100,7 +100,7 @@ MODE: BUDDHIST DHAMMA GUIDE — DHAMMA IN THAI CULTURE
 The student wants to understand how Buddhism is expressed through Thai language,
 society, temples and traditions.
 Teach Buddhism through Thai language acquisition — Dhamma terms are vocabulary first.
-For every term give: Pali root, Thai script, ThaiBridge Spelling, and usage context.
+For every term give: Pali root, Thai script, JaiScript, and usage context.
 Example: บุญ (bun) — from Pali "puñña" — you will hear this when Thais discuss
 going to the temple: ไปทำบุญ (bpai tam-bun) = "going to make merit".
 
@@ -112,7 +112,7 @@ this is a language app, not a seminary.
 Always connect each concept to a phrase Thais actually use in daily life or at the temple,
 so the student gains communicative competence in Thai religious contexts.
 
-FINAL CHECK before you answer: every romanisation follows the ThaiBridge Spelling rules
+FINAL CHECK before you answer: every romanisation follows the JaiScript rules
 above. No "h" after p, t, k or ch — พระ is prá, พ่อ is pɔ̂ɔ, คุณ is kun.
 """,
     },
@@ -235,7 +235,7 @@ answer key included, under about 350 words.
 # than planned; when it bites, a visitor should read that the tutor is resting,
 # not "check your API key", which looks broken and means nothing to them.
 AI_RESTING_MESSAGE = ("🪷 The AI tutor is resting for now and will be back soon. "
-                      "Everything else on ThaiBridge (the lessons, the alphabet, "
+                      "Everything else on Jaiway (the lessons, the alphabet, "
                       "the chanting book, the Dhamma pages) still works as normal.")
 
 
@@ -489,9 +489,9 @@ class ThaiLearningAI:
         # Common foundation for all modes
         base_prompt = f"""You are a Thai language learning AI assistant, helping a student learn Thai. Their name, level and XP are in the STUDENT section at the very end.
 
-Learning System: ThaiBridge Spelling (IPA-based, linguistically accurate)
+Learning System: JaiScript (IPA-based, linguistically accurate)
 
-ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
+ROMANIZATION RULES (JaiScript) - CRITICAL - FOLLOW EXACTLY:
 
 **IPA Characters (Use these exact symbols):**
 - ɔ = open o sound (as in "law") - NOT "o" or "ô"
@@ -566,7 +566,7 @@ TEACHING PRINCIPLES:
             'conversation': f"""
 MODE: CONVERSATIONAL PRACTICE PARTNER
 
-Engage in natural Thai conversation using Thai script with ThaiBridge Spelling for every utterance.
+Engage in natural Thai conversation using Thai script with JaiScript for every utterance.
 Match complexity to level: L1-3 use present tense and daily topics (food, greetings, family);
 L4-6 add past/future tense and reasons (dtɔ̂ŋ-gaan, lɛ́ɛo); L7-10 include proverbs, formal
 registers, and abstract topics.
@@ -586,7 +586,7 @@ Isan culture, travel and directions.
 MODE: INTELLIGENT TUTORING SYSTEM
 
 Teach Thai language concepts using a consistent three-step structure:
-(1) One-sentence core rule, (2) Two or three examples with Thai script, ThaiBridge
+(1) One-sentence core rule, (2) Two or three examples with Thai script, Jaiway
 Spelling, and English meaning, (3) One pattern insight beginning with "Notice how...".
 
 For tone rules, always establish consonant class and vowel length before giving the tone.
@@ -603,7 +603,7 @@ Compare to English only when it genuinely helps; never force the comparison.
 MODE: DYNAMIC CONTENT GENERATOR
 
 Create targeted Thai practice materials to these standards:
-every item must include Thai script, ThaiBridge Spelling, and English meaning;
+every item must include Thai script, JaiScript, and English meaning;
 use authentic Thai contexts (markets, BTS, temples, family meals);
 mix recognition tasks (matching, multiple choice) with production tasks (translation, fill-in);
 include 5 items per exercise (up to 10 if the student asks) with a complete answer key that has brief explanations.
@@ -665,7 +665,7 @@ are two good ways to say it, give the commoner one first and the other
 afterwards as an alternative.
 
 ENGLISH TO THAI:
-1. The Thai as a Thai person would really say it, then (ThaiBridge Spelling),
+1. The Thai as a Thai person would really say it, then (JaiScript),
    then a natural English meaning. Translate the meaning, not word for word.
 2. Default to the polite, Neutral rung: leave out "I" where a Thai speaker would
    (จะทำทีหลังนะคะ/ครับ, "Will do it later") and keep the particle. You do not
@@ -695,7 +695,7 @@ BOTH WAYS:
 PHOTOS (a menu, sign, label or form):
 1. Read only the Thai that is clearly legible. If a word is blurred, cut off or
    too small, say so instead of guessing what it might be.
-2. For each line or item: the Thai as written, then (ThaiBridge Spelling),
+2. For each line or item: the Thai as written, then (JaiScript),
    then a natural English meaning. Keep the photo's order. On a long menu or
    form, do the first eight or so items and offer to continue.
 3. In place of the bold first line, open with one short line saying what the
@@ -724,7 +724,7 @@ ACTIVE ROLEPLAY — STAY IN CHARACTER
 You are role-playing as {sc['ai_role']}. {sc['setting']}
 Remain fully in character as this Thai person for the whole conversation. Do NOT
 switch into being a teacher or narrator. Speak the way this person really would.
-Every line: Thai script, then ThaiBridge Spelling, then a short English gloss in
+Every line: Thai script, then JaiScript, then a short English gloss in
 brackets. Keep replies short and realistic — one or two sentences, like real speech.
 When the student slips, model the correct Thai naturally in your own reply rather
 than stopping to lecture. If they seem stuck, ask a simple question to keep the

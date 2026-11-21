@@ -1,8 +1,8 @@
-"""Download the ThaiBridge Spelling font into static/fonts/.
+"""Download the JaiScript font into static/fonts/.
 
     python scripts/fetch_spelling_font.py
 
-ThaiBridge Spelling needs letters beyond plain English: ɛ ɔ ʉ ə ŋ, the
+JaiScript needs letters beyond plain English: ɛ ɔ ʉ ə ŋ, the
 rising-tone ǎ ǐ ǒ ǔ ě, and tone marks sitting on ɛ ɔ ʉ ə. Roboto Mono, which
 the app used to set the spelling in, does not contain ɛ ɔ ʉ ǎ at all, so the
 browser borrowed them from Consolas or whatever the phone had — mid-word, in
@@ -11,7 +11,7 @@ a different typeface, with the tone marks set badly.
 Noto Sans Mono has every one of them (checked against the font's own
 character map, not Google's CSS, which claims letters a font does not have).
 It is cut to exactly the characters below (`text=`) — about 10KB — and saved
-here, then served by the app as its own family, 'ThaiBridge Spelling'. The
+here, then served by the app as its own family, 'JaiScript'. The
 print build (scripts/build_chanting_print.py) uses the same file, so screen
 and paper draw the spelling from one font.
 
@@ -35,7 +35,7 @@ from fontTools.ttLib import TTFont
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_PATH = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
 
-# Everything ThaiBridge Spelling can contain: printable ASCII, the
+# Everything JaiScript can contain: printable ASCII, the
 # tone-marked vowels as single characters, the extra vowels and ŋ in both
 # cases, and the four tone marks as combining characters.
 CHARS = (

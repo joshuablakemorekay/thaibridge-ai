@@ -62,7 +62,7 @@ INTRO_EN = [
     "matter most.",
 ]
 
-HEADERS = ["#", "หน้า · Page", "ภาษาไทย · Thai", "ThaiBridge Spelling", "วรรณยุกต์ · Tone",
+HEADERS = ["#", "หน้า · Page", "ภาษาไทย · Thai", "JaiScript", "วรรณยุกต์ · Tone",
            "พูดผิดเป็น · Say it wrongly as", "คะแนนตอนพูดถูก · Score said right",
            "คะแนนตอนพูดผิด · Score said wrong", "ยุติธรรมไหม · Fair?", "หมายเหตุ · Note"]
 WIDTHS = [6, 26, 16, 18, 16, 22, 16, 16, 12, 40]
@@ -107,7 +107,7 @@ def build(out_path):
     intro = wb.active
     intro.title = "อ่านก่อน · Read me"
     intro.column_dimensions["A"].width = 110
-    intro.append(["ทดลอง 🎤 Say it · ThaiBridge AI · Pronunciation Analysis test"])
+    intro.append(["ทดลอง 🎤 Say it · Jaiway · Pronunciation Analysis test"])
     intro["A1"].font = Font(name=THAI_FONT, size=16, bold=True, color="7A3B00")
     intro.append([])
     for para in INTRO_TH + [""] + INTRO_EN + ["", "{} words to try.".format(len(rows))]:

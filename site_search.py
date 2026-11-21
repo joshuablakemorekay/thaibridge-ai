@@ -74,7 +74,7 @@ OTHER_PAGES = [
     {'title': 'Thai & Buddhist Calendar', 'url': '/calendar',
      'keywords': 'calendar dates holidays festivals wan phra holy days moon '
                  'buddhist era songkran christmas easter'},
-    {'title': 'About ThaiBridge AI', 'url': '/about', 'keywords': 'about'},
+    {'title': 'About Jaiway', 'url': '/about', 'keywords': 'about'},
     {'title': 'Contact', 'url': '/contact',
      'keywords': 'contact email feedback report'},
     {'title': 'Privacy', 'url': '/privacy', 'keywords': 'privacy data cookies'},

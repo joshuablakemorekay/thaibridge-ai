@@ -1,4 +1,4 @@
-# render.yaml — Render Blueprint for ThaiBridge AI (free tier)
+# render.yaml — Render Blueprint for Jaiway (free tier)
 # Render reads this file automatically when you create a Blueprint from the repo.
 
 services:

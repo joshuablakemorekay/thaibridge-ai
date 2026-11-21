@@ -16,7 +16,7 @@ section teaches too.
 
 AFFILIATE LINKS
 ---------------
-Booking links can earn ThaiBridge a commission. Every partner programme lives
+Booking links can earn Jaiway a commission. Every partner programme lives
 in AFFILIATES below, and that is the ONLY place an affiliate id goes. While an
 id is empty the link is a normal link, with no label. Once an id is pasted in,
 every link to that partner carries it, and the page labels the link and shows

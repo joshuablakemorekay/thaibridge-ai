@@ -82,7 +82,7 @@ PAGES = [
     ("Reading & writing: vowel positions", "/read_write", thai_reading.VOWEL_POSITIONS),
     ("Reading & writing: Dhamma words", "/read_write", thai_reading.DHARMA_WORDS),
     ("Reading & writing: stories", "/read_write", thai_reading.STORIES),
-    ("ThaiBridge Spelling guide", "/paiboon", app.PAIBOON_GUIDE),
+    ("JaiScript guide", "/paiboon", app.PAIBOON_GUIDE),
     ("Culture", "/culture", app.CULTURAL_INFO),
     ("Culture: stories", "/culture", app.CULTURAL_STORIES),
     ("Culture: feature stories", "/culture", app.CULTURAL_FEATURE_STORIES),
@@ -217,13 +217,13 @@ def template_rows(sheet):
 
 INTRO_TH = [
     "เรียน อาจารย์ครับ 🙏",
-    "นี่คือภาษาไทยทั้งหมดในส่วนเรียนหลักของแอป ThaiBridge AI (ชุดที่ 1) "
+    "นี่คือภาษาไทยทั้งหมดในส่วนเรียนหลักของแอป Jaiway (ชุดที่ 1) "
     "เช่น หน้า Survival, คำศัพท์, ประโยค, ไวยากรณ์, วรรณยุกต์, สระ, พยัญชนะ, การอ่าน, วัฒนธรรม",
     "ประโยคส่วนใหญ่ผมร่างเอง ยังไม่มีคนไทยตรวจ ขอให้อาจารย์ช่วยดูว่าถูกต้อง "
     "เป็นธรรมชาติ และสุภาพพอดีไหมครับ",
     "วิธีตรวจ: ในแผ่นงาน \"ตรวจ\" ช่อง ผล ให้เลือก ✓ ถ้าถูกแล้ว ✗ ถ้าต้องแก้ "
     "แล้วเขียนแบบที่ถูกในช่อง แก้เป็น หรือ ? ถ้าไม่แน่ใจ ข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ",
-    "คำอ่านตัวอักษรโรมันเรียกว่า ThaiBridge Spelling (พัฒนาจากระบบ Paiboon+) "
+    "คำอ่านตัวอักษรโรมันเรียกว่า JaiScript (พัฒนาจากระบบ Paiboon+) "
     "ถ้าวรรณยุกต์หรือเสียงในคำอ่านผิด ช่วยบอกด้วยครับ",
     "แถวที่เขียนว่า (note) เป็นคำอธิบายภาษาอังกฤษที่มีคำไทยอยู่ข้างใน ช่วยตรวจเฉพาะคำไทยครับ",
     "ส่วนใหญ่แสดงแบบผู้ชาย (ครับ / ผม) แอปเปลี่ยนเป็น ค่ะ / คะ / ดิฉัน ให้ผู้หญิงเอง "
@@ -237,7 +237,7 @@ INTRO_EN = [
     "each line is correct, natural and polite enough.",
     "How: on the review sheet, choose ✓ if a line is fine, ✗ if it needs changing (and "
     "write the better version under Correction), or ? if unsure. Skip anything you like.",
-    "The romanised line is ThaiBridge Spelling (based on Paiboon+). Please flag any "
+    "The romanised line is JaiScript (based on Paiboon+). Please flag any "
     "wrong tone or sound in it too.",
     "Rows marked (note) are English explanations with Thai words inside: only the Thai needs checking.",
     "Lines are mostly shown as a man says them (ครับ / ผม). The app switches to ค่ะ / คะ / ดิฉัน "
@@ -246,7 +246,7 @@ INTRO_EN = [
 ]
 
 HEADERS = ["#", "หน้า · Page", "ที่อยู่ · Address", "ส่วน · Where on the page",
-           "ภาษาไทย · Thai", "ThaiBridge Spelling", "ความหมาย · Meaning",
+           "ภาษาไทย · Thai", "JaiScript", "ความหมาย · Meaning",
            "ผล · Result", "แก้เป็น · Correction", "หมายเหตุ · Comment"]
 WIDTHS = [6, 24, 18, 30, 40, 30, 34, 10, 36, 30]
 THAI_FONT = "Leelawadee UI"
@@ -268,7 +268,7 @@ def build(out_path):
     intro = wb.active
     intro.title = "อ่านก่อน · Read me"
     intro.column_dimensions["A"].width = 110
-    intro.append(["ตรวจภาษาไทย ชุดที่ 1 · ThaiBridge AI · Batch 1 Thai review"])
+    intro.append(["ตรวจภาษาไทย ชุดที่ 1 · Jaiway · Batch 1 Thai review"])
     intro["A1"].font = Font(name=THAI_FONT, size=16, bold=True, color="7A3B00")
     intro.append([])
     for para in INTRO_TH:

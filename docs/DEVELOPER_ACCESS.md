@@ -1,6 +1,6 @@
 # Developer access
 
-How to switch on **developer mode**, which opens every section of ThaiBridge in
+How to switch on **developer mode**, which opens every section of Jaiway in
 your browser, whatever your level or plan, so you can check any page.
 
 The page is deliberately **not linked from the menu**: visitors kept seeing

@@ -99,7 +99,7 @@
            the loopless "modern" Thai looks too much like Latin to learn from.
            Noto Sans also draws every tone-marked vowel the romanisation needs
            (ǎ ǐ ǔ ɔ̌). Testers found the old mix of five fonts looked
-           inconsistent; keep it to this pair plus the ThaiBridge Spelling
+           inconsistent; keep it to this pair plus the JaiScript
            face for romanisation (Noto Sans Mono, the same family again). */
         body {
             font-family: 'Noto Sans', 'Noto Sans Thai Looped', sans-serif;
@@ -120,14 +120,14 @@
             position: relative;
         }
         
-        /* ThaiBridge Spelling's own font: Noto Sans Mono, cut to the
+        /* JaiScript's own font: Noto Sans Mono, cut to the
            spelling's letters and kept in static/fonts by
            scripts/fetch_spelling_font.py. Roboto Mono, used here before, has
            no ɛ ɔ ʉ ǎ at all, so those letters were borrowed from Consolas (or
            whatever the phone had), mid-word, with the tone marks set badly.
            One face: italic spelling is slanted from it by the browser. */
         @font-face {
-            font-family: 'ThaiBridge Spelling';
+            font-family: 'JaiScript';
             font-style: normal;
             font-weight: 400;
             font-display: swap;
@@ -137,7 +137,7 @@
         /* Romanization text - FIXED WIDTH SOLUTION */
         .paiboon, .romanized, .paiboon-text, 
         [class*="paiboon"], [class*="romaniz"] {
-            font-family: 'ThaiBridge Spelling', 'Consolas', 'Monaco', monospace !important;
+            font-family: 'JaiScript', 'Consolas', 'Monaco', monospace !important;
             font-weight: 400 !important;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -1738,7 +1738,7 @@ body {
 .monk-entry-word { font-size: 1.15rem; }
 .monk-entry-pron {
     display: block;
-    font-family: 'ThaiBridge Spelling', monospace;
+    font-family: 'JaiScript', monospace;
     font-size: 0.9rem;
     color: #1565c0;
 }
@@ -1761,7 +1761,7 @@ body {
    be the real anchor, with the respelling as the memory aid.) */
 .monk-entry-respell {
     display: block;
-    font-family: 'ThaiBridge Spelling', monospace;
+    font-family: 'JaiScript', monospace;
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -1837,7 +1837,7 @@ body {
     opacity: 0.7;
 }
 .monk-pron-table code {
-    font-family: 'ThaiBridge Spelling', monospace;
+    font-family: 'JaiScript', monospace;
     font-weight: 600;
     color: #1565c0;
 }
@@ -2083,7 +2083,7 @@ html.rs-colour {
     --cb-good-bg: #E3EFFA;
     --cb-bad: #A84300;
     --cb-bad-bg: #FCE9D9;
-    /* Chanting book: ThaiBridge Spelling layer (see CHANT_LAYERS in chanting.py) */
+    /* Chanting book: JaiScript layer (see CHANT_LAYERS in chanting.py) */
     --cb-paiboon: #005A9C;
 }
 

@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}ThaiBridge — Learn Thai and the Dhamma, free to start{% endblock %}
+{% block title %}Jaiway — Learn Thai and the Dhamma, free to start{% endblock %}
 {% block description %}A full course in Thai language, culture and Buddhist teachings. Thai checked by a native Thai teacher, tap-to-hear audio and an AI tutor. Buddhist teachings are free.{% endblock %}
 {% block structured_data %}
-{% set org = {"@type": "Organization", "@id": site_url ~ "/#organization", "name": "ThaiBridge",
+{% set org = {"@type": "Organization", "@id": site_url ~ "/#organization", "name": "Jaiway",
               "url": site_url ~ "/", "logo": site_url ~ url_for('static', filename='img/brand/logo-large.png'),
               "email": "joshua@smoald.com",
               "parentOrganization": {"@type": "Organization", "name": "SMOALD", "url": "https://smoald.com"}} %}
-{% set site = {"@type": "WebSite", "@id": site_url ~ "/#website", "name": "ThaiBridge", "url": site_url ~ "/",
+{% set site = {"@type": "WebSite", "@id": site_url ~ "/#website", "name": "Jaiway", "url": site_url ~ "/",
                "publisher": {"@id": site_url ~ "/#organization"}, "inLanguage": "en",
                "potentialAction": {"@type": "SearchAction",
                                    "target": site_url ~ "/search?q={search_term_string}",
@@ -21,17 +21,17 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1 class="main-title">
-                <span class="brand-title"><img src="{{ static_v('img/brand/logo-large.png') }}" alt="ThaiBridge AI" width="655" height="100"></span>
+                <span class="brand-title"><img src="{{ static_v('img/brand/logo-large.png') }}" alt="Jaiway" width="321" height="100"></span>
                 <span class="brand-strapline">Learn the Dhamma. Learn Thai. Find Your Own Path.</span>
                 <span class="brand-tagline">ศึกษาพระธรรม เรียนภาษาไทย พบหนทางของตนเอง</span>
             </h1>
             <p class="hero-subtitle">
                 A full course in Buddhist teachings, chanting and Thai language &amp; culture.
                 The Thai is checked by a native Thai teacher, with tap-to-hear audio and
-                ThaiBridge Spelling, and an AI tutor is there when you get stuck.
+                JaiScript, and an AI tutor is there when you get stuck.
             </p>
             <p class="hero-note">
-                Welcome to ThaiBridge AI, where the Buddhist teachings are free and
+                Welcome to Jaiway, where the Buddhist teachings are free and
                 open to everyone — no Thai needed. Thai heritage is honoured, respected
                 and preserved here; not required. Study the Dhamma as the Theravada tradition
                 preserves it and Thai language, temples and traditions express it — or study
@@ -130,7 +130,7 @@
                      alt="A handwritten Pali manuscript in Khom Thai script" loading="lazy" width="640" height="400">
                 <h3>Chanting &amp; texts</h3>
                 <p>
-                    The Digital Chanting Book — Pali, romanised Pali, Thai, ThaiBridge Spelling and
+                    The Digital Chanting Book — Pali, romanised Pali, Thai, JaiScript and
                     English in layers. Read only the layers you want.
                 </p>
                 <span class="track-badge track-badge-free">FREE · no Thai needed</span>
@@ -233,7 +233,7 @@
             </div>
             <div class="feature-item">
                 <div>
-                    <h4>ThaiBridge Spelling</h4>
+                    <h4>JaiScript</h4>
                     <p>Based on Paiboon romanization, which accurately represents Thai pronunciation for English speakers.</p>
                 </div>
             </div>

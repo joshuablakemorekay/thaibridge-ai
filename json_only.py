@@ -1,11 +1,11 @@
 """Every POST must be JSON: a site-wide rule against forged requests from other websites.
 
 A form on someone else's website can make a learner's browser POST to
-ThaiBridge. That's a "cross-site request forgery" (CSRF). Ordinary forms can
+Jaiway. That's a "cross-site request forgery" (CSRF). Ordinary forms can
 only send a few simple formats, though. To send `Content-Type: application/json`
-from another site, the browser must ask ThaiBridge's permission first (a "CORS
-preflight"), and ThaiBridge never gives it. So a POST that arrives as JSON came
-from ThaiBridge's own pages.
+from another site, the browser must ask Jaiway's permission first (a "CORS
+preflight"), and Jaiway never gives it. So a POST that arrives as JSON came
+from Jaiway's own pages.
 
 That makes this one rule a second lock on every action, on top of the
 SameSite=Lax login cookie (see the COOKIE SETTINGS block in app.py). Before it
@@ -37,7 +37,7 @@ def refuse_non_json():
         return None
     return jsonify({
         'success': False,
-        'message': 'This request needs to come from a ThaiBridge page. '
+        'message': 'This request needs to come from a Jaiway page. '
                    'Please reload the page and try again.',
     }), 415
 

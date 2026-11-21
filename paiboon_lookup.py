@@ -98,7 +98,7 @@ def fold(text):
         if ch in '-– _.,:;!?()/':
             continue                      # separators and stray punctuation
         out.append(ch)
-    # ThaiBridge Spelling writes a final ย as y (dûay, à-rɔ̀y), but learners
+    # JaiScript writes a final ย as y (dûay, à-rɔ̀y), but learners
     # type it either way ("aroi", "aroy"). A y after a vowel and not before
     # one is folded to i, so both spellings reach the same row.
     return _FINAL_Y.sub('i', ''.join(out))

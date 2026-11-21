@@ -1,6 +1,6 @@
 """The snapshot that feeds the MCP spelling checker (mcp-server/thaibridge_spelling).
 
-The checker trusts this file as "what ThaiBridge has reviewed", so it must hold
+The checker trusts this file as "what Jaiway has reviewed", so it must hold
 exactly that: every reviewed source, never the draft chanting book, and every
 spelling variant kept apart so the consistency report can find them.
 """

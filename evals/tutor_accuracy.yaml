@@ -12,7 +12,7 @@
 #   no_thai_script    the answer must contain no Thai letters at all.
 #
 # Two checks run on every case without being listed: the answer must not be
-# cut off mid-sentence, and every romanisation must follow ThaiBridge Spelling
+# cut off mid-sentence, and every romanisation must follow JaiScript
 # (no "h" after p, t, k or ch; ŋ not "ng"; ʉ not "ue").
 #
 # `why` records where the case came from. Most are mistakes a model really
@@ -160,7 +160,7 @@ cases:
     must_include: [kun]
     must_not_include: [(khun)]
     why: >
-      ThaiBridge Spelling never adds h after k. Haiku 5.5 wrote "khun" and
+      JaiScript never adds h after k. Haiku 5.5 wrote "khun" and
       "phrá" even with the rules in its instructions.
 
   - id: give-to-monk-register

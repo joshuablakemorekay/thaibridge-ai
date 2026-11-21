@@ -42,7 +42,7 @@ def test_a_learner_gets_their_own_home(learner):
     client, name = learner
     html = client.get('/').get_data(as_text=True)
     assert 'Welcome back, ' + name in html
-    assert '<title>Continue learning — ThaiBridge</title>' in html
+    assert '<title>Continue learning — Jaiway</title>' in html
     assert 'Your next step' in html
     assert 'Learn the Dhamma. Learn Thai.' not in html
 

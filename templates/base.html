@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}ThaiBridge AI{% endblock %}</title>
+    <title>{% block title %}Jaiway{% endblock %}</title>
 
     {# Search and sharing. A page sets {% block description %} to say what IT
        is about (shown under the link in Google and in link previews); pages
        that don't, fall back to the site-wide line below. canonical_url and
        social_image_url come from seo.py. A page that must stay out of search
        (e.g. the locked-section notice) adds a robots tag in {% block robots %}. #}
-    {% set page_description %}{% block description %}Learn Thai and the Buddha's teachings in one course: lessons checked by a native Thai teacher, tap-to-hear audio, ThaiBridge Spelling and an AI tutor. Start free.{% endblock %}{% endset %}
+    {% set page_description %}{% block description %}Learn Thai and the Buddha's teachings in one course: lessons checked by a native Thai teacher, tap-to-hear audio, JaiScript and an AI tutor. Start free.{% endblock %}{% endset %}
     <meta name="description" content="{{ page_description|striptags|trim }}">
     {% block robots %}{% endblock %}
     <link rel="canonical" href="{{ canonical_url }}">
-    <meta property="og:site_name" content="ThaiBridge">
+    <meta property="og:site_name" content="Jaiway">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ self.title()|striptags|trim }}">
     <meta property="og:description" content="{{ page_description|striptags|trim }}">
@@ -51,7 +51,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo"><img src="{{ static_v('img/brand/logo.png') }}" alt="ThaiBridge AI" width="315" height="48"></a>
+            <a href="/" class="logo"><img src="{{ static_v('img/brand/logo.png') }}" alt="Jaiway" width="154" height="48"></a>
             
             <button class="mobile-menu-toggle" data-on-click="toggleMobileMenu"
                     aria-label="Menu" aria-controls="main-nav" aria-expanded="false">☰</button>
@@ -79,7 +79,7 @@
          A plain GET form, so it works with JavaScript off. Not sticky: the
          menu above already is, and two sticky bars eat a phone screen. -->
     <form class="site-search" action="/search" method="get" role="search">
-        <label for="site-search-q" class="visually-hidden">Search ThaiBridge AI</label>
+        <label for="site-search-q" class="visually-hidden">Search Jaiway</label>
         <span class="site-search-icon" aria-hidden="true">🔍</span>
         <input type="search" id="site-search-q" name="q" maxlength="100"
                value="{{ query if request.path == '/search' else '' }}"
@@ -102,9 +102,9 @@
     </div>
     
     <footer>
-        <p>ThaiBridge AI</p>
+        <p>Jaiway</p>
         <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/policies">Policies</a> • <a href="/privacy">Privacy</a>{% if meta_pixel_id %} • <a href="#" data-on-click="tbCookieChoices">Cookie choices</a>{% endif %} • <a href="/premium#dana">Give dāna</a></p>
-        <p>Using <a href="/paiboon">ThaiBridge Spelling</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
+        <p>Using <a href="/paiboon">JaiScript</a> (based on Paiboon+) • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ · May your practice bring wisdom and peace</p>
     </footer>
     

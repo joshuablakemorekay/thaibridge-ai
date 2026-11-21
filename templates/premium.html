@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Thai Course Plans & Prices — ThaiBridge{% endblock %}
-{% block description %}ThaiBridge plans and prices: start free, then unlock the full Thai course, extra lessons and more AI tutor help whenever you are ready. Cancel any time.{% endblock %}
+{% block title %}Thai Course Plans & Prices — Jaiway{% endblock %}
+{% block description %}Jaiway plans and prices: start free, then unlock the full Thai course, extra lessons and more AI tutor help whenever you are ready. Cancel any time.{% endblock %}
 {% block structured_data %}
 {% set course = {"@context": "https://schema.org", "@type": "Course",
-                 "name": "The Full ThaiBridge Course",
-                 "description": "A full course in Thai language and culture, with Thai checked by a native Thai teacher, tap-to-hear audio, ThaiBridge Spelling and an AI tutor.",
+                 "name": "The Full Jaiway Course",
+                 "description": "A full course in Thai language and culture, with Thai checked by a native Thai teacher, tap-to-hear audio, JaiScript and an AI tutor.",
                  "url": canonical_url, "inLanguage": ["en", "th"],
-                 "provider": {"@type": "Organization", "name": "ThaiBridge", "url": site_url ~ "/"}} %}
+                 "provider": {"@type": "Organization", "name": "Jaiway", "url": site_url ~ "/"}} %}
 <script type="application/ld+json">{{ course|tojson }}</script>
 {% endblock %}
 
@@ -16,13 +16,13 @@
    ChatGPT exists?"). No Thai line under the heading until the teacher has
    checked one. #}
 <h1 style="text-align:center;">
-    The Full ThaiBridge Course
+    The Full Jaiway Course
 </h1>
 
 <p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
     A full course in Thai language and culture. The Thai is checked by a native
     Thai teacher (<a href="/about#reviewers">who they are</a>), with tap-to-hear
-    audio and ThaiBridge Spelling. Start FREE and
+    audio and JaiScript. Start FREE and
     upgrade whenever you're ready: paid plans unlock more of the course, the AI
     tools and a points multiplier.
 </p>
@@ -36,7 +36,7 @@
 </h2>
 <p style="text-align:center; color:#666; font-size:0.92rem; margin:0 auto 1.8rem; max-width:640px;">
     This isn't a generic chatbot. The AI is grounded in the Dhamma and Thai
-    culture, and it checks its Thai against ThaiBridge Spelling.
+    culture, and it checks its Thai against JaiScript.
     The AI Tutor comes with <strong>Thai Reader</strong> — up to
     {{ basic_ai_daily_limit }} messages a day, plus
     {{ free_dhamma_daily_limit }} Dhamma questions on their own separate
@@ -58,7 +58,7 @@
         <h4>Personal AI Tutor</h4>
         <p>Ask anything about Thai — grammar, vocabulary, tones — and get clear,
            beginner-friendly explanations on demand, with Thai checked against
-           ThaiBridge Spelling, not guessed.</p>
+           JaiScript, not guessed.</p>
     </div>
 
     <div class="feature-card">
@@ -345,7 +345,7 @@
 <div class="card" style="text-align:center; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); margin-top:2.5rem;">
     <h2 style="margin-top:0; color:#1976D2;">Our Mission</h2>
     <p style="max-width:620px; margin:0 auto 1rem; color:#444;">
-        I named it ThaiBridge AI because it builds the bridge that integrates English
+        I named it Jaiway because it builds the bridge that integrates English
         speaking communities with Thais &mdash; so we can all work well together and
         flourish through mutual respect and understanding, as well as loving-kindness
         amongst other Buddhist values.

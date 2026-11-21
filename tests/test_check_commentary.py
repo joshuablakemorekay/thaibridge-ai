@@ -142,7 +142,7 @@ def test_the_real_book_is_unchanged_since_before_stage_3():
     long diphthongs (riian, tuua) moved to the app's ia/ua standard, plus the
     single-word fixes in BOOK_CORRECTIONS. Those are applied to both sides, so
     anything else that moved still fails. Since 2026-11-06 the 168 translation
-    lines in SPELLING_ADDED also carry ThaiBridge Spelling that was empty in
+    lines in SPELLING_ADDED also carry JaiScript that was empty in
     the baseline; only that one field on those verses is excused.
     """
     import chanting

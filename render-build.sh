@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# render-build.sh — robust build step for ThaiBridge AI on Render.
+# render-build.sh — robust build step for Jaiway on Render.
 #
 # Why this exists: `pip freeze` on Windows can capture Windows-only packages
 # (pywin32, etc.) and local file-path entries that DO NOT exist on Render's Linux

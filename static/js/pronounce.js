@@ -9,7 +9,7 @@
    tap, for at most RECORD_MS, and switched off straight after. The pitch line
    is worked out here, on the device. The word check uses the browser's own
    speech service (Google in Chrome and Edge, Apple in Safari), which receives
-   that short recording; ThaiBridge never receives or stores it. Browsers
+   that short recording; Jaiway never receives or stores it. Browsers
    without speech recognition (Firefox) still get the pitch line. */
 (function () {
     'use strict';
@@ -170,7 +170,7 @@
             '🔒 Tapping 🎤 records you for 3 seconds, then the microphone turns off. ' +
             'Your pitch line is worked out on this device. To check the word, your ' +
             'browser\'s speech service (Google in Chrome and Edge, Apple in Safari) ' +
-            'hears that recording. ThaiBridge never receives or keeps it. ');
+            'hears that recording. Jaiway never receives or keeps it. ');
         var more = el('a', '', 'More in the privacy notice.');
         more.href = '/privacy#microphone';
         privacy.appendChild(more);

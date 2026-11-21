@@ -96,7 +96,7 @@ def trip_rows(trip):
 
 INTRO_TH = (
     'เรียน อาจารย์ครับ 🙏\n\n'
-    'ผมทำหน้า **"Tour Guide"** ในแอป ThaiBridge ใหม่ ตอนนี้เป็น **การเดินทาง 7 เส้นทาง** '
+    'ผมทำหน้า **"Tour Guide"** ในแอป Jaiway ใหม่ ตอนนี้เป็น **การเดินทาง 7 เส้นทาง** '
     'ทั่วประเทศไทย ในแต่ละจุด จะมีคนไทยพูดกับผู้เรียน แล้วผู้เรียนเลือกคำตอบเป็นภาษาไทย\n\n'
     'ประโยคภาษาไทยทั้งหมด **ยังเป็นฉบับร่าง** ผมอยากขอให้อาจารย์ช่วยตรวจว่า '
     'ถูกต้อง เป็นธรรมชาติ และสุภาพพอดีไหมครับ'
@@ -111,9 +111,9 @@ HOW_TH = ('**ส่วน ก** มี 9 คำถามที่ผมไม่
 HOW_EN = ('Part A is nine questions I am unsure about (about 10 minutes). Part B is every '
           'line: tick it if it is fine, or write the correction. Skip anything you are unsure of.')
 # The learner-facing name since 2026-10-09; the Paiboon+ credit stays.
-SPELLING_TH = ('คำอ่านที่เขียนเป็นตัวอักษรโรมันในแอป เรียกว่า **ThaiBridge Spelling** '
+SPELLING_TH = ('คำอ่านที่เขียนเป็นตัวอักษรโรมันในแอป เรียกว่า **JaiScript** '
                '(พัฒนาจากระบบ Paiboon+) ถ้าคำอ่านตรงไหนผิด ช่วยแก้ได้เลยครับ')
-SPELLING_EN = ('The romanised pronunciation in the app is called ThaiBridge Spelling '
+SPELLING_EN = ('The romanised pronunciation in the app is called JaiScript '
                '(based on Paiboon+). Please correct a reading too if it is wrong.')
 PARTICLE_TH = ('ประโยคของผู้เรียนเขียนไว้ 2 แบบ คือ **ผู้ชาย / ผู้หญิง** '
                '(ผู้หญิงใช้ "คะ" เวลาถาม และ "ค่ะ" เวลาบอก)')
@@ -123,7 +123,7 @@ PARTICLE_EN = ('Learner lines are shown twice: as a man says it / as a woman say
 
 def build_md():
     out = ['# ขอความช่วยเหลือตรวจภาษาไทยในหน้า Tour Guide ครับ',
-           '## Tour Guide trips: Thai review · ThaiBridge AI · 2026-10-09', '',
+           '## Tour Guide trips: Thai review · Jaiway · 2026-10-09', '',
            INTRO_TH, '', '*' + INTRO_EN + '*', '', '> ' + HOW_TH, '>', '> *' + HOW_EN + '*', '', SPELLING_TH, '', '*' + SPELLING_EN + '*', '',
            '---', '', '# ก. คำถามที่ผมไม่แน่ใจ', '## A. Questions I am unsure about', '']
     for n, (thai, pb, en, q_th, q_en) in enumerate(QUESTIONS, 1):
@@ -137,7 +137,7 @@ def build_md():
             PARTICLE_TH, '', '*' + PARTICLE_EN + '*', '']
     for n, trip in enumerate(tour_trips.TRIPS, 1):
         out += ['### {}. {} ({})'.format(n, trip['title'], trip['place']), '',
-                '| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |', '|---|---|---|---|---|']
+                '| ใครพูด | ภาษาไทย | JaiScript | ความหมาย | ✓ / แก้เป็น |', '|---|---|---|---|---|']
         for who, thai, pb, en in trip_rows(trip):
             out.append('| {} | {} | {} | {} | |'.format(who, thai, pb, en))
         out.append('')
@@ -154,10 +154,10 @@ def md_inline(text):
 def build_html():
     e = html.escape
     out = ['<!DOCTYPE html>', '<html lang="th">', '<head>', '<meta charset="utf-8">',
-           '<title>ตรวจภาษาไทยในหน้า Tour Guide — ThaiBridge AI</title>', '<style>', CSS, '</style>',
+           '<title>ตรวจภาษาไทยในหน้า Tour Guide — Jaiway</title>', '<style>', CSS, '</style>',
            '</head>', '<body>',
            '<h1>ขอความช่วยเหลือตรวจภาษาไทยในหน้า Tour Guide ครับ</h1>',
-           '<p class="sub">Tour Guide trips: Thai review · ThaiBridge AI · 2026-10-09</p>',
+           '<p class="sub">Tour Guide trips: Thai review · Jaiway · 2026-10-09</p>',
            '<div class="intro">']
     for para in INTRO_TH.split('\n\n'):
         out.append('<p>{}</p>'.format(md_inline(para)))
@@ -177,7 +177,7 @@ def build_html():
     for n, trip in enumerate(tour_trips.TRIPS, 1):
         out += ['<h3 class="trip">{}. {} <span class="place">({})</span></h3>'.format(
                     n, e(trip['title']), e(trip['place'])),
-                '<table>', '<tr><th>ใครพูด</th><th>ภาษาไทย</th><th>ThaiBridge Spelling</th>'
+                '<table>', '<tr><th>ใครพูด</th><th>ภาษาไทย</th><th>JaiScript</th>'
                 '<th>ความหมาย</th><th class="mark">✓ / แก้เป็น</th></tr>']
         for who, thai, pb, en in trip_rows(trip):
             out.append('<tr><td class="who">{}</td><td class="thai">{}</td><td class="pb">{}</td>'

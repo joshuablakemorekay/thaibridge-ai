@@ -421,7 +421,7 @@ def render_html(sections, base_ref, review_all):
          '<title>ตรวจเนื้อหาใหม่ — Monk Mode English</title>',
          '<style>' + HTML_CSS + '</style>', '</head>', '<body>']
     L.append('<h1>ตรวจเนื้อหาใหม่ — Monk Mode English</h1>')
-    L.append('<p class="sub">Review of new material · {} · ThaiBridge AI</p>'
+    L.append('<p class="sub">Review of new material · {} · Jaiway</p>'
              .format(TODAY))
     L.append('<div class="notice">')
     L.append('<strong>{}</strong><br>{}<br><br>'.format(INTRO_TH, INTRO_EN))

@@ -98,7 +98,7 @@ class TestPhotosAndPhrases:
         for thai, paiboon, english in a['phrases']:
             assert _HAS_THAI.search(thai) and not _HAS_THAI.search(paiboon), thai
             assert paiboon.strip() and english.strip(), thai
-            assert 'ng' not in paiboon, 'ThaiBridge Spelling writes ŋ, not ng'
+            assert 'ng' not in paiboon, 'JaiScript writes ŋ, not ng'
 
 
 class TestThePage:

@@ -293,7 +293,7 @@ def footer(canvas, doc):
     canvas.saveState()
     canvas.setFont('Body', 7.5)
     canvas.setFillColor(GREY)
-    canvas.drawString(2 * cm, 1.2 * cm, 'ThaiBridge AI — Digital Chanting Book')
+    canvas.drawString(2 * cm, 1.2 * cm, 'Jaiway — Digital Chanting Book')
     canvas.drawRightString(19 * cm, 1.2 * cm, f'Page {doc.page}')
     canvas.restoreState()
 

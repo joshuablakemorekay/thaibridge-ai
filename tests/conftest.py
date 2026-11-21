@@ -1,4 +1,4 @@
-"""Pytest configuration for ThaiBridge AI.
+"""Pytest configuration for Jaiway.
 
 Pins the whole test suite to the local SQLite database, and switches off rate
 limiting, whatever the environment says.

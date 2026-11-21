@@ -10,7 +10,7 @@
                   "headline": talk.title, "url": canonical_url, "inLanguage": ["th", "en"],
                   "author": {"@type": "Person", "name": talk.speaker},
                   "isAccessibleForFree": true,
-                  "publisher": {"@type": "Organization", "name": "ThaiBridge", "url": site_url ~ "/"}} %}
+                  "publisher": {"@type": "Organization", "name": "Jaiway", "url": site_url ~ "/"}} %}
 {% if talk.date %}{% set _ = article.update({"datePublished": talk.date}) %}{% endif %}
 <script type="application/ld+json">{{ article|tojson }}</script>
 {% endblock %}

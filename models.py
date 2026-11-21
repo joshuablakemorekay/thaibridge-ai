@@ -163,7 +163,7 @@ class User(UserMixin, db.Model):
 # ============================================
 
 class AppReview(db.Model):
-    """One learner's review of ThaiBridge: a star rating and, if they like, a few words.
+    """One learner's review of Jaiway: a star rating and, if they like, a few words.
 
     Collected PRIVATELY first. Nothing here is shown on the site. Some reviews
     may later go on the site as quotes, but only ones whose writer ticked

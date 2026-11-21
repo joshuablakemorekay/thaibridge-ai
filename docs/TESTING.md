@@ -1,6 +1,6 @@
 # Testing Guide
 
-How ThaiBridge AI is tested: how to run the suite, how it's organised, how it stays away
+How Jaiway is tested: how to run the suite, how it's organised, how it stays away
 from the live database, and the habits that keep a green tick meaningful.
 
 *Last checked: 13 November 2026, 74 test files, 2,847 tests passing (3 skipped).*
@@ -91,7 +91,7 @@ One file per feature, named after it. Broadly:
 | **Payments** | `test_payments.py`, `test_billing_period.py`, `test_payment_mode.py`, `test_dana.py`, `test_vat_display.py` | Every way money moves leaves exactly one record; duplicates from Stripe are ignored; cancellations end at the right time |
 | **XP & progress** | `test_calculator.py`, `test_drill_cap.py`, `test_learning_path.py` | Level maths, the daily drill cap, signed answers, the learning path |
 | **AI tutor** | `test_ai_usage.py`, `test_ai_streaming.py`, `test_translator_mode.py`, `test_spelling_tool.py`, `test_tutor_eval.py` | Usage logging (never the message text), allowances, streaming, the spelling tool, the accuracy exam's format |
-| **Thai accuracy** | `test_thai_romanisation.py`, `test_registers.py`, `test_thai_tones.py`, `test_spelling_snapshot.py` | The ThaiBridge Spelling rules across every Thai string in the app |
+| **Thai accuracy** | `test_thai_romanisation.py`, `test_registers.py`, `test_thai_tones.py`, `test_spelling_snapshot.py` | The JaiScript rules across every Thai string in the app |
 | **Chanting book** | `test_chanting_*.py`, `test_check_pages.py`, `test_check_batch.py`, `test_apply_batch.py` | Verified verses never change; pages show exactly what the printed book shows |
 | **Pages & content** | `test_survival.py`, `test_expat2000.py`, `test_tour_trips.py`, `test_site_search.py`, `test_curriculum.py` | Each page renders and its content is complete |
 | **Security headers & scripts** | `test_security_headers.py`, `test_js_syntax.py`, `test_cookie_and_monk_limits.py`, `test_json_only.py` | Headers on every response; no inline scripts or handlers creep back in; every script file parses; every POST route refuses a plain form |

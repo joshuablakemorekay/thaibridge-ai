@@ -94,7 +94,7 @@ def test_a_locked_section_with_a_preview_is_a_real_page(client):
     # With a preview the page says what the section teaches, has its own
     # title and description, and is listed for search.
     html = client.get('/lessons').get_data(as_text=True)
-    assert '<title>Structured Lessons — ThaiBridge Thai course</title>' in html
+    assert '<title>Structured Lessons — Jaiway Thai course</title>' in html
     assert 'class="section-preview"' in html and 'Section Locked' in html
     assert 'noindex' not in html
     assert '/lessons' in seo.sitemap_paths()
@@ -104,7 +104,7 @@ def test_social_preview_tags_point_at_a_real_image(client):
     html = client.get('/').get_data(as_text=True)
     assert '<meta property="og:image" content="' + seo.SITE_URL + '/static/img/brand/social-preview.png">' in html
     assert os.path.exists(os.path.join(app_module.app.static_folder, 'img', 'brand', 'social-preview.png'))
-    assert '<meta property="og:title" content="ThaiBridge — Learn Thai and the Dhamma, free to start">' in html
+    assert '<meta property="og:title" content="Jaiway — Learn Thai and the Dhamma, free to start">' in html
 
 
 def test_version_stamped_static_files_are_cached_for_a_year(client):
@@ -135,7 +135,7 @@ def test_home_page_describes_the_organisation_and_site_search(client):
 
 def test_pricing_page_describes_the_course(client):
     (data,) = _ld_blocks(client, '/premium')
-    assert data['@type'] == 'Course' and data['provider']['name'] == 'ThaiBridge'
+    assert data['@type'] == 'Course' and data['provider']['name'] == 'Jaiway'
 
 
 def test_journal_entries_and_talks_are_articles_with_authors(client):

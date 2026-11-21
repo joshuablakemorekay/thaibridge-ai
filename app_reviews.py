@@ -1,4 +1,4 @@
-"""The in-app review prompt: ask learners how ThaiBridge is going, and keep the answers privately.
+"""The in-app review prompt: ask learners how Jaiway is going, and keep the answers privately.
 
 Who gets asked: signed-in learners who have reached Level 3 (REVIEW_MIN_LEVEL).
 By then they have used the app properly, so the answer means something. A
