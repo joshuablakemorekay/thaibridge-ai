@@ -566,7 +566,45 @@
             nav ul.active {
                 display: flex;
             }
-            
+
+            /* The nav bar is "sticky", so an open menu taller than the phone
+               screen used to run off the bottom with no way to reach it:
+               swiping moved the page behind instead (tester Max, 2026-11-21).
+               While the menu is open, the bar becomes its own scrolling box
+               no taller than the screen, and the page behind stays still.
+               :has() keeps this in step with every bit of code that opens or
+               closes the menu, with no extra JavaScript. */
+            nav:has(#main-nav.active) {
+                max-height: 100vh;
+                max-height: 100dvh;
+                overflow-y: auto;
+                overscroll-behavior: contain;
+            }
+            body:has(#main-nav.active) {
+                overflow: hidden;
+            }
+
+            /* Bigger, well-spaced tap targets: "Pricing" and "About" sat so
+               close together they were hard to hit with a thumb. 44px is the
+               usual minimum for something you tap. */
+            #main-nav > li > a,
+            #main-nav > li > .dropdown-toggle,
+            #main-nav > li > .monk-mode-toggle {
+                display: flex;
+                align-items: center;
+                min-height: 44px;
+                width: 100%;
+                padding: 0.6rem 1rem;
+            }
+            #main-nav > li + li {
+                margin-top: 0.35rem;
+            }
+            nav .dropdown-content a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
             nav .dropdown-content {
                 position: static;
                 box-shadow: none;
