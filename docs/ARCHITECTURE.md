@@ -282,7 +282,7 @@ Every section has a rule in `access.py`: a minimum **level**, a **tier**, and of
 **"finish the alphabet first"**. `require_access()` enforces it on the page.
 
 - **Tiers and prices** (`plans.py`): Free; **Thai Reader** £9.99/month or £99/year; **Thai
-  Master** £19.99/month or £199/year. Pro has a fair-use cap of 75 AI messages a day.
+  Master** £19.99/month or £199/year. Pro has a fair-use cap of 40 AI messages a day. The AI is for paying plans only (since 2026-11-21).
 - **The Instant Access Pass** is a one-off purchase that skips the level gates
   (`User.full_unlock`).
 - **Monk Mode** opens the monk learning track with a code from `MONK_MODE_CODES`. Since

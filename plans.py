@@ -55,16 +55,20 @@ FREE_DHAMMA_DAILY_LIMIT = 5
 # without a ceiling, one subscriber could run up more in API costs than they pay.
 # Was 150 on Haiku 4.5 at 0.285p a message. Sonnet 5.5 (2026-10-09) costs about
 # 0.85p for a fresh message and 0.3p for a cached follow-up in the same chat, so
-# 150 a day could cost more than the £16.58 a month annual Pro brings in. At 75,
-# a learner who maxes it out every day costs about £10 a month on a realistic mix
-# of fresh and follow-up messages, so Pro stays profitable. 75 is also the floor
-# test_the_ceiling_is_far_above_the_free_allowance sets (five times free), so
-# Pro stays clearly worth paying for. The Anthropic Console spend limit is the
-# hard backstop if anyone ever finds a pattern that costs more.
+# 150 a day could cost more than the £16.58 a month annual Pro brings in. 75
+# (2026-10-09) cost about £10 a month on a realistic mix of fresh and follow-up
+# messages, but someone sending 75 fresh messages every day cost about £19,
+# which is a loss on the annual plan. Cut to 40 with Josh on 2026-11-21: even
+# that worst case (40 x 30 days x 0.85p) is about £10, so every Pro subscriber
+# is profitable however they use it. 40 is still double Thai Reader's whole
+# daily allowance (15 tutor + 5 Dhamma), so Pro stays clearly worth paying for
+# (test_the_ceiling_is_well_above_the_thai_reader_allowance). The Anthropic
+# Console spend limit is the hard backstop if anyone ever finds a pattern that
+# costs more.
 #
 # Anyone who reaches it is not studying, and the reply says so kindly and
 # invites them to get in touch rather than treating them as an abuser.
-PRO_FAIR_USE_DAILY = 75
+PRO_FAIR_USE_DAILY = 40
 
 
 # Pronunciation Analysis (🎤 Say it) is built but HIDDEN until a native speaker
