@@ -97,7 +97,7 @@ def test_a_past_question_is_rebuilt_exactly_as_first_sent(agent):
     assert sent(agent)[0]['content'] == first
 
 
-def test_the_route_passes_the_pages_history_through(monkeypatch):
+def test_the_route_passes_the_pages_history_through(monkeypatch, ai_client):
     seen = {}
 
     class Fake:
@@ -109,12 +109,12 @@ def test_the_route_passes_the_pages_history_through(monkeypatch):
 
     monkeypatch.setattr(appmod, 'ai_agent', Fake())
     history = [{'role': 'user', 'content': 'q'}, {'role': 'assistant', 'content': 'a'}]
-    app.test_client().post('/api/ai/chat', json={'message': 'm', 'mode': 'tutor',
-                                                 'history': history})
+    ai_client('basic').post('/api/ai/chat', json={'message': 'm', 'mode': 'tutor',
+                                                  'history': history})
     assert seen['history'] == history
 
 
-def test_a_page_sending_no_history_falls_back(monkeypatch):
+def test_a_page_sending_no_history_falls_back(monkeypatch, ai_client):
     seen = {}
 
     class Fake:
@@ -125,5 +125,5 @@ def test_a_page_sending_no_history_falls_back(monkeypatch):
             return {'success': True, 'response': 'ok', 'tokens_used': {'input': 1, 'output': 1}}
 
     monkeypatch.setattr(appmod, 'ai_agent', Fake())
-    app.test_client().post('/api/ai/chat', json={'message': 'm', 'mode': 'tutor'})
+    ai_client('basic').post('/api/ai/chat', json={'message': 'm', 'mode': 'tutor'})
     assert seen['history'] is None

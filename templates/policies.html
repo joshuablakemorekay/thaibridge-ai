@@ -57,10 +57,8 @@
         <li><strong>The Digital Chanting Book</strong></li>
         <li><strong>Meditation</strong> — guided sessions, the timer and every technique guide</li>
         <li><strong>Dhamma & Culture</strong> and <strong>Practising Anywhere</strong></li>
-        <li><strong>Dhamma questions to the AI</strong> — {{ free_dhamma_daily_limit }} a day, on their own allowance</li>
         <li><strong>The Thai alphabet</strong> — chart, flashcards and quiz</li>
         <li><strong>Survival Thai</strong> and the <strong>ThaiBridge Spelling guide</strong></li>
-        <li><strong>AI Thai tutor</strong> — {{ tiers.free_ai }} messages a day to try it properly</li>
     </ul>
     <p class="pol-why">
         Why: the Dhamma and meditation are practice, not a product, and charging for them would
@@ -79,7 +77,7 @@
                 <td><strong>{{ tiers.basic.name }}</strong></td>
                 <td>£{{ '%.2f'|format(tiers.basic.price) }} a month<br>or £{{ '%.0f'|format(tiers.basic.price_year) }} a year</td>
                 <td>Every Thai lesson: reading and writing, tones, vocabulary, grammar, sentences with audio,
-                    culture and register guides, Tour Guide and Business Thai — plus {{ tiers.basic_ai }} AI tutor messages a day.</td>
+                    culture and register guides, Tour Guide and Business Thai — plus {{ tiers.basic_ai }} AI tutor messages and {{ free_dhamma_daily_limit }} AI Dhamma questions a day.</td>
             </tr>
             <tr>
                 <td><strong>{{ tiers.pro.name }}</strong></td>

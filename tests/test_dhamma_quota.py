@@ -7,6 +7,9 @@ vocabulary all morning and then asked about the precepts was told to come back
 tomorrow or upgrade. The paywall was never in front of the teaching — it had
 just grown a side door.
 
+Since 2026-11-21 the AI (Dhamma questions included) is for paying plans only,
+so these tests run as a signed-in Thai Reader; the Dhamma PAGES stay free.
+
 These tests hold that door shut. The one that matters most is
 `test_the_tutor_cannot_eat_the_dhamma_allowance`: everything else is detail.
 """
@@ -46,16 +49,21 @@ def agent(monkeypatch):
     return fake
 
 
+@pytest.fixture
+def reader(ai_client):
+    return ai_client("basic")
+
+
 def send(client, mode="tutor", message="hello"):
     return client.post("/api/ai/chat", json={"message": message, "mode": mode})
 
 
 class TestThePoolsAreSeparate:
-    def test_the_tutor_cannot_eat_the_dhamma_allowance(self, agent, monkeypatch):
+    def test_the_tutor_cannot_eat_the_dhamma_allowance(self, agent, monkeypatch, reader):
         """The whole point. Spend every tutor message, then ask a Dhamma
         question — it must be answered, not refused."""
-        monkeypatch.setattr(appmod, "FREE_AI_DAILY_LIMIT", 2)
-        client = app.test_client()
+        monkeypatch.setattr(appmod, "BASIC_AI_DAILY_LIMIT", 2)
+        client = reader
 
         for _ in range(3):
             send(client, mode="tutor")          # 2 answered, 1 refused
@@ -65,22 +73,22 @@ class TestThePoolsAreSeparate:
             "a Dhamma question was refused because the Thai tutor had spent the "
             "day's messages — this is the bug the split exists to prevent")
 
-    def test_the_dhamma_cannot_eat_the_tutor_allowance(self, agent, monkeypatch):
+    def test_the_dhamma_cannot_eat_the_tutor_allowance(self, agent, monkeypatch, reader):
         # The mirror. The pools are independent in both directions, otherwise
         # the fix just moves the problem.
         monkeypatch.setattr(appmod, "FREE_DHAMMA_DAILY_LIMIT", 1)
-        client = app.test_client()
+        client = reader
 
         for _ in range(3):
             send(client, mode="buddhist")
 
         assert send(client, mode="tutor").get_json()["success"] is True
 
-    def test_the_dhamma_pool_still_has_a_ceiling(self, agent, monkeypatch):
-        """Free does not mean unmetered. The cap is the honest cost of running
-        the model; it is the UPSELL that has no place here, not the limit."""
+    def test_the_dhamma_pool_still_has_a_ceiling(self, agent, monkeypatch, reader):
+        """Not unmetered. The cap is the honest cost of running the model; it
+        is the UPSELL that has no place here, not the limit."""
         monkeypatch.setattr(appmod, "FREE_DHAMMA_DAILY_LIMIT", 2)
-        client = app.test_client()
+        client = reader
 
         outcomes = [send(client, mode="buddhist").get_json()["success"]
                     for _ in range(3)]
@@ -90,11 +98,11 @@ class TestThePoolsAreSeparate:
         """The Dhamma pool is added on top, not carved out. Nobody should lose
         something so the site can keep a promise it had already made.
 
-        The tutor allowance itself was later cut from 15 to 5 for Free
-        (2026-10-14) on running cost alone; that is a pricing decision and has
-        nothing to do with the Dhamma, which keeps its own separate pool."""
+        Free's tutor allowance was later cut to 5 (2026-10-14) and then to none
+        (2026-11-21, AI for paying plans only) on running cost alone; pricing
+        decisions with nothing to do with the Dhamma's own separate pool."""
         assert appmod.AI_POOLS['tutor']['key'] != appmod.AI_POOLS['dhamma']['key']
-        assert appmod.FREE_AI_DAILY_LIMIT == 5
+        assert appmod.FREE_AI_DAILY_LIMIT == 0
         assert appmod.BASIC_AI_DAILY_LIMIT == 15
 
     def test_thai_reader_gets_more_tutor_than_free_but_the_same_dhamma(self):
@@ -104,11 +112,11 @@ class TestThePoolsAreSeparate:
 
 class TestWhatTheLearnerIsTold:
     def test_running_out_of_dhamma_questions_does_not_sell_anything(
-            self, agent, monkeypatch):
+            self, agent, monkeypatch, reader):
         """An upsell here would be the site charging for the Dhamma in all but
         name. The refusal may explain the cost; it may not ask for money."""
         monkeypatch.setattr(appmod, "FREE_DHAMMA_DAILY_LIMIT", 1)
-        client = app.test_client()
+        client = reader
         send(client, mode="buddhist")
 
         body = send(client, mode="buddhist").get_json()
@@ -119,11 +127,11 @@ class TestWhatTheLearnerIsTold:
         assert "pro" not in message.split()
 
     def test_running_out_of_tutor_messages_points_at_the_dhamma_first(
-            self, agent, monkeypatch):
+            self, agent, monkeypatch, reader):
         """Someone with Dhamma questions still in hand should be told so before
         being shown a price — otherwise the nudge reads as a trick."""
-        monkeypatch.setattr(appmod, "FREE_AI_DAILY_LIMIT", 1)
-        client = app.test_client()
+        monkeypatch.setattr(appmod, "BASIC_AI_DAILY_LIMIT", 1)
+        client = reader
         send(client, mode="tutor")
 
         message = send(client, mode="tutor").get_json()["message"]
@@ -132,31 +140,24 @@ class TestWhatTheLearnerIsTold:
 
 
 class TestTheCountersThemselves:
-    def test_each_pool_counts_in_its_own_session_key(self, agent):
-        client = app.test_client()
-        send(client, mode="tutor")
-        send(client, mode="buddhist")
+    def test_each_pool_counts_separately(self, agent, reader):
+        send(reader, mode="tutor")
+        body = send(reader, mode="buddhist").get_json()
+        assert body["pools"]["tutor"]["used"] == 1
+        assert body["pools"]["dhamma"]["used"] == 1
 
-        with client.session_transaction() as session:
-            usage = session["ai_usage"]
-        assert usage["count"] == 1     # tutor
-        assert usage["dhamma"] == 1
-
-    def test_a_session_from_before_the_split_still_works(self, agent):
-        """An old session has no 'dhamma' key. It must not KeyError, and the
-        learner must not lose the tutor tally they have already spent today."""
-        client = app.test_client()
-        with client.session_transaction() as session:
-            session["ai_usage"] = {
-                "date": appmod.datetime.now().strftime("%Y-%m-%d"),
-                "count": 4,
-            }
-
-        assert send(client, mode="buddhist").get_json()["success"] is True
-        with client.session_transaction() as session:
-            usage = session["ai_usage"]
-        assert usage["count"] == 4, "today's tutor tally was reset"
-        assert usage["dhamma"] == 1
+    def test_clearing_cookies_gives_no_fresh_allowance(
+            self, agent, monkeypatch, reader, client_for):
+        """The hole this replaced: the count lived in the session cookie, so a
+        new browser (or cleared cookies) meant a new day's allowance. It is
+        counted per account in the database now."""
+        monkeypatch.setattr(appmod, "BASIC_AI_DAILY_LIMIT", 2)
+        send(reader)
+        send(reader)
+        fresh = client_for(reader)          # same account, no old cookies
+        body = send(fresh).get_json()
+        assert body["success"] is False and body["gate"] == "daily_limit"
+        assert agent.calls == 2
 
     def test_the_limits_are_read_from_the_constants_not_a_copy(self, monkeypatch):
         """AI_POOLS stores the constant's NAME, not its value. Storing the
@@ -167,10 +168,12 @@ class TestTheCountersThemselves:
 
 class TestWhatThePageIsToldUpFront:
     def test_the_status_reports_both_pools(self):
+        """Signed out: no plan, so both pools read zero and the page is told."""
         with app.test_request_context():
             status = appmod.ai_limits_status()
-        assert status["pools"]["tutor"]["limit"] == appmod.FREE_AI_DAILY_LIMIT
-        assert status["pools"]["dhamma"]["limit"] == appmod.FREE_DHAMMA_DAILY_LIMIT
+        assert status["pools"]["tutor"]["limit"] == 0
+        assert status["pools"]["dhamma"]["limit"] == 0
+        assert status["plan_required"] is True
 
     def test_the_superseded_flat_keys_are_gone(self):
         """The first cut kept daily_limit/used_today/remaining alongside the

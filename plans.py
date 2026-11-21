@@ -11,23 +11,21 @@ which modes are free) stays in app.py, which imports these names back.
 import os
 
 
-# Freemium AI limits. Free & Basic get the Tutor mode plus Dhamma, capped at a
-# few messages a day between them. Pro unlocks every mode with no cap. Dhamma is
-# free because the teachings on this site are free — charging for the follow-up
-# question would be selling the Dhamma, the same line we refused to cross when
-# Meditation went back to the free tier. The daily cap isn't a toll on the
-# teaching, it's the honest cost of running the model. The daily counter lives in
-# the SESSION (not the DB) on purpose — it needs no schema change and also works
-# for logged-out visitors. It's a soft limit (a determined user could clear
-# cookies to reset it), which is fine for a portfolio/demo app. Defined here,
-# above SUBSCRIPTION_TIERS, so the Free tier's feature list can quote the real
-# number instead of a hardcoded one that goes stale.
-# 15 was set on 2026-06-06, when the tutor ran on Haiku. On Sonnet 5.5 a
-# message costs about three times as much, and Thai Reader subscribers were
-# getting exactly what Free got — paying bought no extra tutor at all. Free is
-# now a real taste (5), and Thai Reader keeps the old 15. Settled with Josh
-# 2026-10-14. Dhamma questions are a separate pool and are not affected.
-FREE_AI_DAILY_LIMIT = 5                        # tutor messages/day, free tier
+# AI limits. Since 2026-11-21 the AI is for PAYING plans only: Thai Reader gets
+# the Tutor and Dhamma modes with a daily allowance, Pro gets every mode up to a
+# fair-use ceiling. Free gets none. Every reply is paid for out of Josh's own
+# pocket, there were no subscribers yet to cover it, and the old free taste
+# (5 tutor + 5 Dhamma a day, counted in the session cookie) could be reset by
+# clearing cookies, so it was an open tap on the API bill. Settled with Josh
+# 2026-11-21. The Dhamma PAGES stay free to everyone; only asking the AI a
+# question needs a plan.
+#
+# The allowances are counted in the ai_usage table per account now, not in
+# the session (app._ai_usage_today), so clearing cookies resets nothing.
+#
+# History: Thai Reader's 15 was set on 2026-06-06 on Haiku; Free was a taste of
+# 5 from 2026-10-14 until it was removed.
+FREE_AI_DAILY_LIMIT = 0                        # Free has no AI (see above)
 
 
 BASIC_AI_DAILY_LIMIT = 15                      # tutor messages/day, Thai Reader
@@ -47,6 +45,9 @@ BASIC_AI_DAILY_LIMIT = 15                      # tutor messages/day, Thai Reader
 # fix for a promise we had already made; nobody should lose something so that
 # we can keep our word. At about 0.85p a message on Sonnet 5.5 it is about 4p
 # a day for someone who exhausts it daily, which almost nobody will.
+#
+# The name is older than the paid-only rule: this is now the daily Dhamma
+# allowance for Thai Reader. (Pro has no pools, just the fair-use ceiling.)
 FREE_DHAMMA_DAILY_LIMIT = 5
 
 
@@ -94,8 +95,6 @@ SUBSCRIPTION_TIERS = {
             '✓ Dhamma talks, in Thai and English wherever a translation exists',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
-            f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
-            f'✓ Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
             '✓ ThaiBridge Spelling guide',
             '✓ Progress tracking & levelling',
         ],
@@ -118,6 +117,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Themed exercise sets',
             '✓ Tour Guide & Business Thai',
             f'✓ AI Thai tutor — {BASIC_AI_DAILY_LIMIT} messages a day',
+            f'✓ AI Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
             '✓ 2x points multiplier',
         ],
         'max_level_access': 7,

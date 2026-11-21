@@ -25,9 +25,9 @@ ROUTES_ON_2026_11_18 = [
     '/alphabet',
     '/api/ai/chat',
     '/api/ai/clear',
-    '/api/ai/explain',
-    '/api/ai/generate',
-    '/api/ai/hint',
+    # /api/ai/explain, /generate and /hint removed 2026-11-21 on purpose: unused
+    # by any page and unguarded spend (see the note in app.py). POST-only, so
+    # no bookmark or search result ever pointed at them.
     '/api/ai/status',
     '/api/beginner_convert',
     '/api/cancel-reason',

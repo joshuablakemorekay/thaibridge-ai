@@ -79,8 +79,8 @@ def send(client, message="hello", mode="tutor"):
 # The spend
 # ---------------------------------------------------------------------------
 
-def test_a_successful_call_records_its_tokens(agent):
-    send(app.test_client())
+def test_a_successful_call_records_its_tokens(agent, ai_client):
+    send(ai_client("basic"))
     r = rows()
     assert len(r) == 1
     assert r[0].outcome == "ok"
@@ -91,10 +91,10 @@ def test_a_successful_call_records_its_tokens(agent):
     assert r[0].mode == "tutor"
 
 
-def test_cost_can_be_worked_out_from_what_is_stored(agent):
+def test_cost_can_be_worked_out_from_what_is_stored(agent, ai_client):
     """The point of storing tokens and the model rather than a cash figure:
     the sum is done at read time, so old rows stay correct when prices move."""
-    c = app.test_client()
+    c = ai_client("basic")
     for _ in range(3):
         send(c)
     with app.app_context():
@@ -140,10 +140,10 @@ def test_a_signed_in_user_is_attributed(agent):
 # The conversion question
 # ---------------------------------------------------------------------------
 
-def test_a_blocked_mode_is_recorded_with_no_cost(agent):
+def test_a_blocked_mode_is_recorded_with_no_cost(agent, ai_client):
     """Blocked requests are the conversion data. Logging only successes would
     lose the answer to 'do people who hit a wall upgrade?'"""
-    send(app.test_client(), mode="cultural")      # Pro-only
+    send(ai_client("basic"), mode="cultural")      # Pro-only
     r = rows()
     assert len(r) == 1
     assert r[0].outcome == "blocked_mode"
@@ -151,9 +151,9 @@ def test_a_blocked_mode_is_recorded_with_no_cost(agent):
     assert agent.calls == 0, "a blocked request must never reach the model"
 
 
-def test_hitting_the_daily_cap_is_recorded(agent, monkeypatch):
-    monkeypatch.setattr(appmod, "FREE_AI_DAILY_LIMIT", 2)
-    c = app.test_client()
+def test_hitting_the_daily_cap_is_recorded(agent, monkeypatch, ai_client):
+    monkeypatch.setattr(appmod, "BASIC_AI_DAILY_LIMIT", 2)
+    c = ai_client("basic")
     for _ in range(4):
         send(c)
     outcomes = [r.outcome for r in rows()]
@@ -170,11 +170,11 @@ def test_the_tier_is_recorded_as_it_was_at_the_time(agent):
 # Reliability
 # ---------------------------------------------------------------------------
 
-def test_a_failed_call_is_recorded(monkeypatch):
+def test_a_failed_call_is_recorded(monkeypatch, ai_client):
     """The agent catches its own API errors and returns them, so no exception
     reaches the route. Without an explicit branch these vanish from the record."""
     monkeypatch.setattr(appmod, "ai_agent", FakeAgent(success=False))
-    send(app.test_client())
+    send(ai_client("basic"))
     r = rows()
     assert len(r) == 1 and r[0].outcome == "error"
 
@@ -183,18 +183,18 @@ def test_a_failed_call_is_recorded(monkeypatch):
 # The two rules that matter most
 # ---------------------------------------------------------------------------
 
-def test_nothing_the_user_typed_is_stored(agent):
+def test_nothing_the_user_typed_is_stored(agent, ai_client):
     """No question, no answer. Someone asking about their own practice in the
     Dhamma mode should not have it filed away."""
     secret = "please never store this sentence"
-    send(app.test_client(), message=secret)
+    send(ai_client("basic"), message=secret)
     row = rows()[0]
     stored = " ".join(str(getattr(row, c.name)) for c in AiUsage.__table__.columns)
     assert secret not in stored
     assert "stubbed reply" not in stored
 
 
-def test_a_database_failure_never_breaks_the_reply(agent, monkeypatch):
+def test_a_database_failure_never_breaks_the_reply(agent, monkeypatch, ai_client):
     """The reply has already been generated and paid for by this point. Losing a
     row is cheap; turning a billed answer into a 500 is not.
 
@@ -203,11 +203,14 @@ def test_a_database_failure_never_breaks_the_reply(agent, monkeypatch):
     the very try/except it was meant to exercise and 'failed' against a scenario
     that cannot happen.
     """
+    client = ai_client("basic")   # made BEFORE the database breaks
+
     def explode(*a, **k):
         raise RuntimeError("database on fire")
-    monkeypatch.setattr(db.session, "commit", explode)
-
-    response = send(app.test_client())
+    # Scoped, so the database works again before the test account is tidied up.
+    with monkeypatch.context() as m:
+        m.setattr(db.session, "commit", explode)
+        response = send(client)
     assert response.status_code == 200
     assert response.get_json()["success"] is True
 
@@ -337,13 +340,14 @@ def test_another_users_messages_do_not_count(agent, pro_account):
             db.session.commit()
 
 
-def test_the_ceiling_is_far_above_the_free_allowance(agent):
+def test_the_ceiling_is_far_above_the_thai_reader_allowance(agent):
     """A sanity check on the number itself: if these ever converge, Pro has
-    stopped being worth paying for."""
-    assert appmod.PRO_FAIR_USE_DAILY >= appmod.FREE_AI_DAILY_LIMIT * 5
+    stopped being worth paying for. (Compared with Thai Reader since Free lost
+    its AI allowance on 2026-11-21.)"""
+    assert appmod.PRO_FAIR_USE_DAILY >= appmod.BASIC_AI_DAILY_LIMIT * 5
 
 
-def test_cached_tokens_are_recorded(monkeypatch):
+def test_cached_tokens_are_recorded(monkeypatch, ai_client):
     """Caching moves most of a Sonnet message's input out of input_tokens; a
     log without these columns under-counted the cost several times over."""
     fake = FakeAgent()
@@ -352,6 +356,6 @@ def test_cached_tokens_are_recorded(monkeypatch):
         "tokens_used": {"input": 4, "output": 300, "cache_write": 415, "cache_read": 2256},
     }
     monkeypatch.setattr(appmod, "ai_agent", fake)
-    send(app.test_client())
+    send(ai_client("basic"))
     [row] = rows()
     assert (row.input_tokens, row.cache_write_tokens, row.cache_read_tokens) == (4, 415, 2256)

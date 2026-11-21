@@ -28,16 +28,24 @@ def test_translator_is_not_on_the_free_list():
     assert 'translator' not in appmod.FREE_AI_ALLOWED_MODES
 
 
-@pytest.mark.parametrize('tier', ['free', 'basic'])
-def test_free_and_basic_are_shown_the_lock(tier):
+def test_thai_reader_is_shown_the_lock(monkeypatch):
+    # The plan check is tested on its own; here, only the mode lock.
+    monkeypatch.setattr(appmod, 'ai_plan_required', lambda: False)
     with app.test_request_context('/api/ai/chat'):
-        blocked = appmod._ai_chat_gate(tier, 'translator')
+        blocked = appmod._ai_chat_gate('basic', 'translator')
         body = blocked.get_json()
     assert body['gate'] == 'mode_locked'
     assert 'Translator' in body['message']
 
 
-def test_pro_gets_through():
+def test_free_is_told_the_ai_needs_a_plan():
+    with app.test_request_context('/api/ai/chat'):
+        body = appmod._ai_chat_gate('free', 'translator').get_json()
+    assert body['gate'] == 'plan_required'
+
+
+def test_pro_gets_through(monkeypatch):
+    monkeypatch.setattr(appmod, 'ai_plan_required', lambda: False)
     with app.test_request_context('/api/ai/chat'):
         assert appmod._ai_chat_gate('pro', 'translator') is None
 
@@ -135,15 +143,15 @@ class FakeAgent:
 
 
 @pytest.fixture
-def pro_route(monkeypatch):
+def pro_route(monkeypatch, ai_client):
     fake = FakeAgent()
     monkeypatch.setattr(appmod, 'ai_agent', fake)
-    monkeypatch.setattr(appmod, 'active_tier', lambda: 'pro')
+    fake.client = ai_client('pro')   # a signed-in Pro subscriber
     return fake
 
 
 def test_the_route_sends_a_photo_with_more_room_to_answer(pro_route):
-    r = app.test_client().post('/api/ai/chat', json={
+    r = pro_route.client.post('/api/ai/chat', json={
         'message': '', 'mode': 'translator',
         'photo': {'media_type': 'image/jpeg', 'data': JPEG}})
     assert r.status_code == 200
@@ -153,13 +161,13 @@ def test_the_route_sends_a_photo_with_more_room_to_answer(pro_route):
 
 
 def test_a_typed_message_keeps_the_usual_limit(pro_route):
-    app.test_client().post('/api/ai/chat', json={'message': 'hello', 'mode': 'translator'})
+    pro_route.client.post('/api/ai/chat', json={'message': 'hello', 'mode': 'translator'})
     assert pro_route.kwargs['photo'] is None
     assert pro_route.kwargs['max_tokens'] == appmod.AI_REPLY_TOKENS
 
 
 def test_the_route_refuses_a_photo_outside_the_translator(pro_route):
-    r = app.test_client().post('/api/ai/chat', json={
+    r = pro_route.client.post('/api/ai/chat', json={
         'message': 'hi', 'mode': 'tutor',
         'photo': {'media_type': 'image/jpeg', 'data': JPEG}})
     assert r.status_code == 400
@@ -167,16 +175,15 @@ def test_the_route_refuses_a_photo_outside_the_translator(pro_route):
 
 
 def test_the_route_refuses_a_broken_photo(pro_route):
-    r = app.test_client().post('/api/ai/chat', json={
+    r = pro_route.client.post('/api/ai/chat', json={
         'message': '', 'mode': 'translator',
         'photo': {'media_type': 'image/png', 'data': JPEG}})
     assert r.status_code == 400
     assert pro_route.kwargs is None
 
 
-def test_free_users_see_the_pro_lock_not_a_photo_error(monkeypatch):
-    monkeypatch.setattr(appmod, 'active_tier', lambda: 'free')
-    r = app.test_client().post('/api/ai/chat', json={
+def test_thai_reader_sees_the_pro_lock_not_a_photo_error(ai_client):
+    r = ai_client('basic').post('/api/ai/chat', json={
         'message': '', 'mode': 'translator',
         'photo': {'media_type': 'image/jpeg', 'data': JPEG}})
     assert r.get_json()['gate'] == 'mode_locked'

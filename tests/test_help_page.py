@@ -14,7 +14,6 @@ from app import (
     ALPHABET_QUIZ_PASS_MARK,
     BASIC_AI_DAILY_LIMIT,
     EARNED_UNLOCK_LEVEL,
-    FREE_AI_DAILY_LIMIT,
     FREE_DHAMMA_DAILY_LIMIT,
     INSTANT_ACCESS_ADDON,
     PRO_FAIR_USE_DAILY,
@@ -87,8 +86,7 @@ def test_prices_come_from_the_tiers(page):
 
 
 def test_limits_and_levels_come_from_the_app(page):
-    assert f"Free {FREE_AI_DAILY_LIMIT} a day" in page
-    assert f"Thai Reader {BASIC_AI_DAILY_LIMIT} a day" in page
+    assert f"Thai Reader ({BASIC_AI_DAILY_LIMIT} a day)" in page
     assert f"{FREE_DHAMMA_DAILY_LIMIT} questions a day" in page
     assert f"up to\n        {PRO_FAIR_USE_DAILY} messages a day" in page
     assert f"Level {EARNED_UNLOCK_LEVEL}</strong>" in page
@@ -97,9 +95,15 @@ def test_limits_and_levels_come_from_the_app(page):
 
 
 def test_a_changed_limit_shows_up_without_editing_the_template(monkeypatch):
-    monkeypatch.setattr(app_module, "FREE_AI_DAILY_LIMIT", 9)
+    monkeypatch.setattr(app_module, "BASIC_AI_DAILY_LIMIT", 9)
     body = app.test_client().get("/instructions").get_data(as_text=True)
-    assert "Free 9 a day" in body
+    assert "Thai Reader (9 a day)" in body
+
+
+def test_the_guide_no_longer_offers_free_ai(page):
+    """Free lost its AI allowance on 2026-11-21; the guide must not promise it."""
+    assert "Survival Thai, AI tutor" not in page
+    assert "All plans:" not in page
 
 
 def test_learning_path_levels_and_plans_match_the_gates(page):
