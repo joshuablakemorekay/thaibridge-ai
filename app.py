@@ -7473,82 +7473,10 @@ def ai_chat():
             'error': 'API error occurred. Please check your API key and try again.'
         }), 500
 
-@app.route('/api/ai/hint', methods=['POST'])
-@limiter.limit("30 per hour; 200 per day", key_func=rate_limit_key)
-def ai_hint():
-    """Get a progressive hint for a quiz question"""
-    if not ai_agent:
-        return jsonify({'error': 'AI not available'}), 503
-    
-    try:
-        data = request.json
-        question = data.get('question', '')
-        context = data.get('context', '')
-        hint_level = data.get('hint_level', 1)
-        
-        response = ai_agent.get_quick_hint(
-            question=question,
-            context=context,
-            hint_level=hint_level
-        )
-        
-        return jsonify(response)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/ai/explain', methods=['POST'])
-@limiter.limit("30 per hour; 200 per day", key_func=rate_limit_key)
-def ai_explain():
-    """Explain why an answer is correct/incorrect"""
-    if not ai_agent:
-        return jsonify({'error': 'AI not available'}), 503
-    
-    try:
-        data = request.json
-        question = data.get('question', '')
-        user_answer = data.get('user_answer', '')
-        correct_answer = data.get('correct_answer', '')
-        
-        response = ai_agent.explain_answer(
-            question=question,
-            user_answer=user_answer,
-            correct_answer=correct_answer
-        )
-        
-        return jsonify(response)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/ai/generate', methods=['POST'])
-# Tighter than the rest on purpose: the exercise generator runs to 3,000 output
-# tokens, roughly six times a chat reply, making it the most expensive call in
-# the app by some distance.
-@limiter.limit("10 per hour; 40 per day", key_func=rate_limit_key)
-def ai_generate():
-    """Generate custom content (quizzes, flashcards, etc.)"""
-    if not ai_agent:
-        return jsonify({'error': 'AI not available'}), 503
-    
-    try:
-        data = request.json
-        content_type = data.get('type', 'quiz')
-        topic = data.get('topic', '')
-        difficulty = data.get('difficulty', 'medium')
-        
-        user_context = {
-            'level': session.get('level', 1)
-        }
-        
-        response = ai_agent.generate_content(
-            content_type=content_type,
-            topic=topic,
-            difficulty=difficulty,
-            user_context=user_context
-        )
-        
-        return jsonify(response)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+# /api/ai/hint, /api/ai/explain and /api/ai/generate were removed on 2026-11-21.
+# No page called them, and they reached the AI with no plan check at all, so
+# anyone could script them and spend the API budget. The ai_agent methods
+# behind them are kept; a future feature should go through _ai_chat_gate.
 
 @app.route('/api/ai/clear', methods=['POST'])
 def ai_clear():
