@@ -79,7 +79,7 @@ CHROME_PATHS = [
 # heading that says so rather than being guessed into a part.
 UNPLACED = {'title': '', 'title_english': 'Chants not yet placed on a page of the book'}
 
-# The app's own ThaiBridge Spelling font, so paper and screen draw the
+# The app's own JaiScript font, so paper and screen draw the
 # spelling from one file. See scripts/fetch_spelling_font.py for why the
 # spelling has a font of its own.
 SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
@@ -161,7 +161,7 @@ _PLAIN_FINAL_Y = {'dooy', 'kuy', 'rooy', 'ooy'}
 
 
 def book_spelling(text):
-    """ThaiBridge Spelling as the printed book shows it: final ย as i."""
+    """JaiScript as the printed book shows it: final ย as i."""
     if not text:
         return text
 

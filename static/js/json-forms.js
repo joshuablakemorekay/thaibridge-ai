@@ -1,7 +1,7 @@
 // Sends any <form data-json-post> as JSON instead of as an ordinary form.
 //
-// Every POST to ThaiBridge must be JSON (see json_only.py): a form on another
-// website can't send JSON without the browser asking ThaiBridge first, so this
+// Every POST to Jaiway must be JSON (see json_only.py): a form on another
+// website can't send JSON without the browser asking Jaiway first, so this
 // shuts out forged requests. The older forms (Monk Mode, dāna, claiming the
 // earned unlock, cancelling a subscription) keep their plain HTML and gain the
 // one attribute:

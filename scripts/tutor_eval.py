@@ -42,7 +42,7 @@ REPLY_TOKENS_BY_MODE = {'generator': 1500}
 THAI = re.compile(r'[฀-๿]')
 # A romanisation is the bracket straight after Thai script: ครับ (kráp)
 ROMANISATION = re.compile(r'[฀-๿][฀-๿\s\-/]*\**\s*\(([^)]{1,60})\)')
-# ThaiBridge Spelling: no h after p, t, k or ch; ŋ not "ng"; ʉ not "ue".
+# JaiScript: no h after p, t, k or ch; ŋ not "ng"; ʉ not "ue".
 ASPIRATED = re.compile(r'(?<![a-z])(ph|th|kh|chh)', re.I)
 NG_OR_UE = re.compile(r'ng|ue', re.I)
 # "ng" and "ue" are common in plain English ("(hungry)", "(blue)"), so they
@@ -58,7 +58,7 @@ ENGLISH_ASIDE = {'the', 'a', 'an', 'this', 'that', 'these', 'those', 'is', 'of',
 
 
 def spelling_breaks(text):
-    """Romanisations in `text` that break ThaiBridge Spelling."""
+    """Romanisations in `text` that break JaiScript."""
     found = []
     for rom in ROMANISATION.findall(text):
         # A bracket holding Thai, a quote, a comma-separated aside or any

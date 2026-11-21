@@ -128,7 +128,7 @@ def writing_lines(n):
 story.append(Spacer(1, 45 * mm))
 P("Thinking Ahead", "cover_t")
 story.append(Spacer(1, 4))
-P("Independent-thinking lessons from building ThaiBridge AI, start to finish", "cover_s")
+P("Independent-thinking lessons from building Jaiway, start to finish", "cover_s")
 story.append(Spacer(1, 10 * mm))
 P("A personal study guide for Joshua Kay", "body")
 P("Built from 1,075 commits (22 Feb 2026 to 28 Oct 2026) and the project journal", "small")
@@ -146,7 +146,7 @@ story.append(PageBreak())
 
 # ---------------------------------------------------------------- how to use
 P("How to use this guide", "h1")
-P("ThaiBridge wasn't built from a perfect plan. It was built the way real projects "
+P("Jaiway wasn't built from a perfect plan. It was built the way real projects "
   "usually are: a rough idea, a first version, then a long run of surprises. The good "
   "news is that every surprise can be turned into a lesson. Looking back over finished work "
   "and asking <i>\u201cwhat could I have seen coming?\u201d</i> is one of the fastest ways "
@@ -154,7 +154,7 @@ P("ThaiBridge wasn't built from a perfect plan. It was built the way real projec
 P("Read it in three passes:")
 bullets([
     "<b>Pass 1 - the big picture (pages 3-5).</b> The six questions every project should "
-    "answer, answered for ThaiBridge now that we know how things turned out.",
+    "answer, answered for Jaiway now that we know how things turned out.",
     "<b>Pass 2 - the journey (pages 6-7).</b> Each stage from November 2025 to now: what was "
     "built, what went wrong, and the thinking skill it taught.",
     "<b>Pass 3 - practise (pages 8-11).</b> Real incidents set out as puzzles. "
@@ -170,7 +170,7 @@ box("The one question to carry everywhere",
 
 P("The four thinking moves", "h2")
 grid([
-    ["Move", "What it means", "The ThaiBridge habit"],
+    ["Move", "What it means", "The Jaiway habit"],
     ["1. Zoom out", "Before acting, ask what the thing is <i>for</i> and who relies on it.",
      "\u201cThe alphabet is the way in, so it has to be free.\u201d"],
     ["2. Look ahead", "Run the clock forward: after this, then what? Then what?",
@@ -214,7 +214,7 @@ bullets([
 
 P("3. What is the simplest appropriate technical solution?", "h2")
 grid([
-    ["Part", "What ThaiBridge uses", "Why this is the simple choice"],
+    ["Part", "What Jaiway uses", "Why this is the simple choice"],
     ["Web app", "Flask (Python)", "One language for everything; small and easy to understand."],
     ["Pages", "HTML templates + CSS", "No heavy front-end framework needed for a content site."],
     ["Database", "SQLite locally, Neon Postgres live",
@@ -334,7 +334,7 @@ story.append(PageBreak())
 
 # ---------------------------------------------------------------- cases
 P("Part 3 - Predict before you read", "h1")
-P("Each case is a real moment from ThaiBridge. <b>Cover everything below \u201cPause and "
+P("Each case is a real moment from Jaiway. <b>Cover everything below \u201cPause and "
   "predict\u201d</b>, write your answer in the margin, then uncover. The aim isn't to get it "
   "right. It's to build the reflex of <i>predicting</i> before reacting.", "small")
 
@@ -412,7 +412,7 @@ P("Run through this <b>before</b> building or changing anything, whether it's a 
   "a business offer or a job on the farm. It comes from the reusable prompt, put into "
   "plain words.")
 grid([
-    ["Ask yourself", "ThaiBridge example"],
+    ["Ask yourself", "Jaiway example"],
     ["What happens straight after this is used?", "After payment, the webhook must unlock the right plan."],
     ["What depends on this?", "Twenty sections depend on the alphabet quiz being passed."],
     ["What could go wrong?", "The quiz result is stored in a cookie and gets cleared."],
@@ -467,7 +467,7 @@ bullets([
 
 P("Working with Claude Code this way", "h2")
 P("You don't need to start a project from scratch to use the reusable prompt. For "
-  "ThaiBridge, try opening a session with one of these:")
+  "Jaiway, try opening a session with one of these:")
 bullets([
     "\u201cBefore you build this, ask me to predict what could go wrong, then tell me what I missed.\u201d",
     "\u201cGive me two ways to do this, the trade-off between them, and your recommendation.\u201d",
@@ -504,14 +504,14 @@ def on_page(c, doc):
         c.line(20 * mm, 14 * mm, A4[0] - 20 * mm, 14 * mm)
         c.setFont("Body", 8.5)
         c.setFillColor(MUTED)
-        c.drawString(20 * mm, 9 * mm, "Thinking Ahead - ThaiBridge AI study guide")
+        c.drawString(20 * mm, 9 * mm, "Thinking Ahead - Jaiway study guide")
         c.drawRightString(A4[0] - 20 * mm, 9 * mm, str(doc.page))
     c.restoreState()
 
 
 doc = BaseDocTemplate(OUT, pagesize=A4, leftMargin=20 * mm, rightMargin=20 * mm,
                       topMargin=18 * mm, bottomMargin=20 * mm,
-                      title="Thinking Ahead - ThaiBridge AI study guide",
+                      title="Thinking Ahead - Jaiway study guide",
                       author="Joshua Kay")
 frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="f")
 doc.addPageTemplates([PageTemplate(id="p", frames=[frame], onPage=on_page)])

@@ -47,7 +47,7 @@ async function loadQuiz() {
                 <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
                 <p class="thai-text" style="font-size: 2.5rem; margin: 1rem 0;" lang="th">${data.thai}</p>
                 <p style="font-size: 1.2rem; color: #666;">${data.english}</p>
-                <p style="margin-top: 1rem; color: var(--royal-purple);">Select the correct ThaiBridge Spelling:</p>
+                <p style="margin-top: 1rem; color: var(--royal-purple);">Select the correct JaiScript:</p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 500px; margin: 0 auto;">
         `;

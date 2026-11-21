@@ -34,7 +34,7 @@ MM_PER_INCH = 25.4
 
 # The emblem for the front of the three volumes (Josh, 2026-11-12). Kept
 # OUTSIDE the repository, in the chanting book's OneDrive folder, because it
-# is an emblem, not ThaiBridge artwork. With no emblem file the cover keeps
+# is an emblem, not Jaiway artwork. With no emblem file the cover keeps
 # the drawn Dhamma wheel.
 DEFAULT_EMBLEM = os.path.join(os.path.expanduser('~'), 'OneDrive', 'Documents', 'Documents',
                               'SMOALD', 'ThaiBridge', 'Digital Chanting Book', 'Cover emblem.png')

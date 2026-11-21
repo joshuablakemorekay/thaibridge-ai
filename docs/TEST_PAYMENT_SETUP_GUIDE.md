@@ -1,4 +1,4 @@
-# Test-Payment Setup Guide — ThaiBridge AI
+# Test-Payment Setup Guide — Jaiway
 
 How to run subscription payments in **test/sandbox mode** (no real money), and
 what to change when you eventually go live.

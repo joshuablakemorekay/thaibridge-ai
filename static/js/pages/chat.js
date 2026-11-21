@@ -480,7 +480,7 @@ function clearChat() {
 
 function exportChat() {
     const messages = document.querySelectorAll('.message');
-    let transcript = `ThaiBridge AI Chat - ${new Date().toLocaleDateString()}\n`;
+    let transcript = `Jaiway Chat - ${new Date().toLocaleDateString()}\n`;
     transcript += `Mode: ${currentMode}\n`;
     transcript += '='.repeat(60) + '\n\n';
 

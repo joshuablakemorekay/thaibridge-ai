@@ -1,6 +1,6 @@
 """Phase 0 safety net for the website work: no page address may disappear.
 
-ThaiBridge is about to gain a public "website" layout alongside the learner
+Jaiway is about to gain a public "website" layout alongside the learner
 "app" layout. Every address below is somebody's bookmark, a Google result, a
 link in an ad or a Stripe return page, so moving or deleting one silently is
 the most expensive mistake that work could make.

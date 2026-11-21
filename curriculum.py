@@ -2,7 +2,7 @@
 
 WHY IT IS PUBLIC
 ----------------
-Most of ThaiBridge is paid, and until now the only way to find out what "Thai
+Most of Jaiway is paid, and until now the only way to find out what "Thai
 Reader (Basic)" actually contains was to buy it. A tier's feature list gave
 eight bullet points for twenty-odd sections. People pay more readily when they
 can see what they are buying, and the sections themselves are the strongest

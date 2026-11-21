@@ -4651,7 +4651,7 @@ def home():
     if 'user_gender' not in session:
         session['user_gender'] = 'neutral'
     # Same address, two audiences: a visitor gets the website's front page
-    # (what ThaiBridge is, what's free, why to sign up); a logged-in learner
+    # (what Jaiway is, what's free, why to sign up); a logged-in learner
     # already knows all that and gets "continue where you left off" instead.
     # Search engines only ever see the visitor version.
     if current_user.is_authenticated:
@@ -5759,7 +5759,7 @@ def policies():
 
 @app.route('/instructions')
 def instructions():
-    """Help: how to use ThaiBridge AI — the user guide.
+    """Help: how to use Jaiway — the user guide.
 
     The guide sections were ADDED around the page's original cards, which are
     kept word for word (tests/test_help_page.py holds them to it): the guide
@@ -6257,7 +6257,7 @@ def subscribe_stripe(tier):
                 'tax_behavior': 'inclusive',
                 'recurring': {'interval': period_noun},
                 'product_data': {
-                    'name': f"ThaiBridge AI — {tier_info['name']} ({period_adj})",
+                    'name': f"Jaiway — {tier_info['name']} ({period_adj})",
                     'tax_code': TAX_CODE_COURSE,
                 },
             },
@@ -6347,7 +6347,7 @@ def addon_instant_access_stripe():
                 'unit_amount': int(round(INSTANT_ACCESS_ADDON['price'] * 100)),  # pence
                 'tax_behavior': 'inclusive',   # the price shown is the price paid
                 'product_data': {
-                    'name': f"ThaiBridge AI — {INSTANT_ACCESS_ADDON['name']}",
+                    'name': f"Jaiway — {INSTANT_ACCESS_ADDON['name']}",
                     # The pass unlocks the same course, so it is the same thing
                     # being sold — just paid for once instead of monthly.
                     'tax_code': TAX_CODE_COURSE,
@@ -6425,7 +6425,7 @@ def dana_stripe():
     price_data = {
         'currency': 'gbp',
         'product_data': {
-            'name': 'ThaiBridge AI — dāna (a gift, not a purchase)',
+            'name': 'Jaiway — dāna (a gift, not a purchase)',
             # Not the course code: a gift buys nothing, and Stripe has a tax
             # code that says exactly that.
             'tax_code': TAX_CODE_DONATION,
@@ -6494,13 +6494,13 @@ def subscribe_paypal(tier):
                         "currency_code": "GBP",
                         "value": f"{amount:.2f}",
                     },
-                    "description": f"ThaiBridge AI — {tier_info['name']} ({period_adj})",
+                    "description": f"Jaiway — {tier_info['name']} ({period_adj})",
                     # Tie the order to the logged-in user (and tier) so the
                     # return handler can update the right account.
                     "custom_id": f"{current_user.id}:{tier}",
                 }],
                 "application_context": {
-                    "brand_name": "ThaiBridge AI",
+                    "brand_name": "Jaiway",
                     "user_action": "PAY_NOW",
                     "shipping_preference": "NO_SHIPPING",
                     "return_url": f"{base_url}/paypal/success",
@@ -7586,9 +7586,9 @@ curriculum.assert_outline_is_complete(sys.modules[__name__])
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("🪷 ThaiBridge AI v3.0 GAMIFIED")
+    print("🪷 Jaiway v3.0 GAMIFIED")
     print("=" * 60)
-    print("🪷 ThaiBridge AI v3.0 + AI")
+    print("🪷 Jaiway v3.0 + AI")
     print("=" * 60)
     print("Features:")
     print("  • 6 Vocabulary Categories (20 words each)")

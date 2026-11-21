@@ -43,7 +43,7 @@ CLASS_ORDER = (thai_consonants.CLASS_MIDDLE, thai_consonants.CLASS_HIGH,
 
 def consonant_classes():
     """All 44 consonants by class, straight from the Alphabet page's data."""
-    lines = ["CONSONANT CLASSES (checked, from ThaiBridge's Alphabet page). "
+    lines = ["CONSONANT CLASSES (checked, from Jaiway's Alphabet page). "
              "These are facts: never contradict them."]
     for cls in CLASS_ORDER:
         letters = ' '.join(c['char'] for c in thai_consonants.by_class(cls))
@@ -118,7 +118,7 @@ def reference_for(question, index=None):
     # Matching is by word, so an entry can be beside the point ("hand" the verb
     # finds มือ, the body part). Worded as a spelling list, not a word list, so
     # an irrelevant hit is ignored rather than worked into the answer.
-    lines = ["REFERENCE (checked entries from ThaiBridge's own lessons, found by "
+    lines = ["REFERENCE (checked entries from Jaiway's own lessons, found by "
              "matching words in the question). If your answer uses any of these "
              "words, write the Thai, romanisation and meaning exactly as listed, "
              "over your memory. Ignore any that are not relevant, and never "
@@ -143,8 +143,8 @@ MAX_TOOL_WORDS = 30
 SPELLING_TOOL = {
     'name': SPELLING_TOOL_NAME,
     'description': (
-        "Look up Thai words in ThaiBridge's reviewed lessons before you write "
-        "them. Returns the checked ThaiBridge Spelling and meaning for each "
+        "Look up Thai words in Jaiway's reviewed lessons before you write "
+        "them. Returns the checked JaiScript and meaning for each "
         "word the lessons contain. For a word they do not contain, returns the "
         "known pieces inside it and every consonant's class, so you can work "
         "out the tones yourself. Call it ONCE, before writing your answer, with "

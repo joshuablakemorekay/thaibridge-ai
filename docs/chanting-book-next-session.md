@@ -1125,7 +1125,7 @@ now hold `thai` and `paiboon` only, with `pali` empty. The page, chant and
 print templates all show a closing when `pali OR thai` is set, and print the
 pali line only when there is one. Verified 2026-11-06: each line appears ONCE on
 its book page (38, 39, 40, 41, 43, 47) and once in its chant view, with its
-ThaiBridge Spelling. Josh confirmed the spelling stays: it is Thai the book
+JaiScript. Josh confirmed the spelling stays: it is Thai the book
 prints.
 
 The other 41 closings are Pali (`…นิฏฐิตา`) with `thai` empty, and are correct.

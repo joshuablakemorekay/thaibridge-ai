@@ -117,7 +117,7 @@ def test_every_recoloured_selector_is_still_real(selector, source):
 
 
 def test_chanting_spelling_layer_turns_blue_in_colour_blind_mode():
-    """Green ThaiBridge Spelling and clay Pali (Romanised) are both italic
+    """Green JaiScript and clay Pali (Romanised) are both italic
     Latin text, and look almost the same with red-green colour blindness."""
     import chanting
     layer = next(l for l in chanting.CHANT_LAYERS if l["key"] == "paiboon")

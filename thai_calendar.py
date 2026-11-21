@@ -521,7 +521,7 @@ def year_view(year, mode):
 
 
 def spellings(event_list):
-    """{thai: ThaiBridge Spelling} for the events' Thai names that the site
+    """{thai: JaiScript} for the events' Thai names that the site
     already teaches. Names it doesn't teach get no romanisation rather than
     an unreviewed one."""
     import paiboon_lookup                 # late: it indexes the whole app

@@ -1,6 +1,6 @@
-<p align="center"><img src="static/img/brand/logo-large.png" alt="ThaiBridge AI logo" width="520"></p>
+<p align="center"><img src="static/img/brand/logo-large.png" alt="Jaiway logo" width="420"></p>
 
-# ThaiBridge AI
+# Jaiway
 
 **Building a live, paid, AI-powered language-learning SaaS as my first web app — and proving every risky part actually works.**
 
@@ -18,7 +18,7 @@
 > *Heads-up for visitors: the demo runs on a free host that "sleeps" when idle, so the first page can take ~30 seconds to wake. The fastest thing to try is the [AI tutor](https://thaibridge.smoald.com/chat) — no install or sign-up needed.*
 
 <p align="center">
-  <img src="./docs/screenshots/home-desktop.jpg" alt="ThaiBridge AI — a Theravada Buddhism page showing the three-column layout, navigation, and dictionary search" width="100%">
+  <img src="./docs/screenshots/home-desktop.jpg" alt="Jaiway — a Theravada Buddhism page showing the three-column layout, navigation, and dictionary search" width="100%">
 </p>
 
 ---
@@ -42,7 +42,7 @@
 
 Thai is notoriously hard for English speakers, and the reasons pile up. It's **tonal**, so the same sound can mean five different things depending on pitch. It has its **own script**, written with no spaces between words. **How polite you are changes the words themselves**, not just your tone. And much of everyday speech is rooted in **Thai culture and Buddhism**, so learning the words isn't enough without the meaning behind them. The popular apps teach Thai thinly, and none of them connect the language to its culture, which in Thai is half the language.
 
-**What made Thai learnable for me was the Paiboon romanisation system**: a way of writing Thai sounds, tones included, in English letters, so you can say a word correctly before you can read the script. ThaiBridge AI is built around it, with an AI tutor that answers *your* questions at *your* pace, so every learner gets lessons shaped to them rather than one fixed course. The aim is a working system for practical Thai: a bridge between Thai people and the English speakers living among them.
+**What made Thai learnable for me was the Paiboon romanisation system**: a way of writing Thai sounds, tones included, in English letters, so you can say a word correctly before you can read the script. Jaiway is built around it, with an AI tutor that answers *your* questions at *your* pace, so every learner gets lessons shaped to them rather than one fixed course. The aim is a working system for practical Thai: a bridge between Thai people and the English speakers living among them.
 
 It's personal, too. I'm of Thai and English heritage, and this is where my interest in AI and my own Thai roots meet.
 
@@ -64,7 +64,7 @@ I worked in public, kept an honest build journal, and made a few deliberate call
 
 ## What I built
 
-ThaiBridge AI is a server-rendered Flask app with:
+Jaiway is a server-rendered Flask app with:
 
 - 🔍 **[Site search](https://thaibridge.smoald.com/search?q=hello)** *(new · free)* — a search strip under the top menu on every page. It finds pages by name, and Thai words by English, Thai script or loose romanisation ("hello", "sawatdii" or สวัสดี), each linking to the page that teaches it. It reuses the section list and word lookup the site already has, so new content is searchable the day it ships. Locked pages show which plan opens them, and word results are only what the free lookup already shows.
 - 📊 **[Personalized Learning Path (IEP)](https://thaibridge.smoald.com/progress#path)** *(new · free)* — built like a real school IEP rather than borrowing the name: a six-question **starting check**, two or three **measurable weekly targets** ("score 80% over 10 Festival Vocabulary answers"), and a **weekly review** that records the week and sets the next. The rules are pure functions in `learning_path.py` with no AI, so it costs nothing to run, gives the same plan for the same record, and is tested with plain dicts. The card's original "learning style" promise became "how you like to practise", because learning styles aren't backed by research.
@@ -275,6 +275,6 @@ This is the part I care about most — not "I built it," but "here's the proof i
 
 ---
 
-*ThaiBridge AI is my first web app and an ongoing learning project. It's live, the core is verified, and I'm still building it in the open. The full build story — every win and mistake — is in [`JOURNAL.md`](./JOURNAL.md).*
+*Jaiway is my first web app and an ongoing learning project. It's live, the core is verified, and I'm still building it in the open. The full build story — every win and mistake — is in [`JOURNAL.md`](./JOURNAL.md).*
 
 <p align="center"><em>🙏 May your practice bring wisdom and peace.</em></p>

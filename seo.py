@@ -1,4 +1,4 @@
-"""Search-engine plumbing for the public side of ThaiBridge.
+"""Search-engine plumbing for the public side of Jaiway.
 
 Everything a search engine needs that is not page content lives here, so the
 page templates stay about the page:

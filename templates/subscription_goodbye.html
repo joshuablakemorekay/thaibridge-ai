@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Subscription Cancelled - ThaiBridge AI{% endblock %}
+{% block title %}Subscription Cancelled - Jaiway{% endblock %}
 
 {% block content %}
 <div class="container">
@@ -12,14 +12,14 @@
             {% if current_user.current_period_end %}You keep full access until
             {{ current_user.current_period_end.strftime('%d %B %Y').lstrip('0') }} — the time you've
             already paid for is yours.{% endif %}
-            Thank you so much for supporting ThaiBridge AI — it genuinely means a lot.
+            Thank you so much for supporting Jaiway — it genuinely means a lot.
         </p>
         <p class="metta">May you be happy!</p>
 
         {% if not current_user.cancel_reason %}
         <form class="cancel-reason" data-json-post action="/api/cancel-reason">
             <h2>Would you tell us why? <span class="optional">(optional)</span></h2>
-            <p class="hint">One tap is plenty. It helps make ThaiBridge better for the next learner.</p>
+            <p class="hint">One tap is plenty. It helps make Jaiway better for the next learner.</p>
             {% for key, words in cancel_reasons.items() %}
             <label class="reason-option">
                 <input type="radio" name="reason" value="{{ key }}" required> {{ words }}

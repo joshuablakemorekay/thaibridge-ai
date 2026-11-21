@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{% if query %}Search: {{ query }}{% else %}Search{% endif %} - ThaiBridge AI{% endblock %}
+{% block title %}{% if query %}Search: {{ query }}{% else %}Search{% endif %} - Jaiway{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -34,7 +34,7 @@
     .ss-word { border: 1px solid #eee; border-radius: 8px; padding: 0.75rem 0.9rem; background: #fafafa; }
     .ss-word-thai { font-size: 1.35rem; margin-bottom: 0.2rem; }
     .ss-word-paiboon {
-        font-family: 'ThaiBridge Spelling', monospace; font-size: 1.05rem;
+        font-family: 'JaiScript', monospace; font-size: 1.05rem;
         color: var(--royal-purple, #4A1A6B); font-weight: bold;
     }
     .ss-word-english { color: #555; margin-top: 0.2rem; }
@@ -94,11 +94,11 @@
             {% endfor %}
         </div>
         <p class="ss-more">Want every match? The
-            <a href="/paiboon?q={{ query|urlencode }}">ThaiBridge Spelling lookup</a>
+            <a href="/paiboon?q={{ query|urlencode }}">JaiScript lookup</a>
             lists them all.</p>
         {% else %}
         <p class="ss-empty">No Thai words match <strong>{{ query }}</strong>. This
-            searches the words taught on ThaiBridge, not every Thai word. Try a
+            searches the words taught on Jaiway, not every Thai word. Try a
             shorter spelling, or ask the <a href="/chat">AI tutor</a>.</p>
         {% endif %}
     </section>

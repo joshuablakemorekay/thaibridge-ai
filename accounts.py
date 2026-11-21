@@ -103,7 +103,7 @@ def send_email(to, subject, text):
         log.warning("RESEND_API_KEY not set; email to %s not sent.\n%s\n\n%s",
                     to, subject, text)
         return
-    sender = os.environ.get('PASSWORD_RESET_FROM', 'ThaiBridge AI <no-reply@smoald.com>')
+    sender = os.environ.get('PASSWORD_RESET_FROM', 'Jaiway <no-reply@smoald.com>')
     try:
         resp = httpx.post(
             "https://api.resend.com/emails",
@@ -128,41 +128,41 @@ def send_in_background(to, subject, text):
 
 
 def send_reset_email(user, link):
-    send_in_background(user.email, "Reset your ThaiBridge AI password", (
+    send_in_background(user.email, "Reset your Jaiway password", (
         f"Hi {user.username},\n\n"
-        "Someone asked to reset the password for your ThaiBridge AI account. "
+        "Someone asked to reset the password for your Jaiway account. "
         "If that was you, choose a new password here:\n\n"
         f"{link}\n\n"
         "The link works once and expires in 30 minutes.\n\n"
         "If you didn't ask for this, you can ignore this email. "
         "Your password hasn't changed.\n\n"
-        "ThaiBridge AI"
+        "Jaiway"
     ))
 
 
 def send_deleted_email(email, username):
     """Confirm a deletion to the address it belonged to. Takes the email and
     name rather than the user, because by the time this runs the row is gone."""
-    send_in_background(email, "Your ThaiBridge AI account has been deleted", (
+    send_in_background(email, "Your Jaiway account has been deleted", (
         f"Hi {username},\n\n"
-        "Your ThaiBridge AI account has been deleted, as you asked. Your progress, "
+        "Your Jaiway account has been deleted, as you asked. Your progress, "
         "settings and any review you left have been removed.\n\n"
         "Records of past payments are kept, with your account details taken off "
         "them, because UK tax law requires it.\n\n"
         "If you didn't do this, please email joshua@smoald.com straight away.\n\n"
         "Thank you for learning with us. You're always welcome back.\n\n"
-        "ThaiBridge AI"
+        "Jaiway"
     ))
 
 
 def send_changed_email(user, forgot_link):
     """Tell the owner their password changed, so a change they didn't make is
     noticed by the one person able to act on it."""
-    send_in_background(user.email, "Your ThaiBridge AI password was changed", (
+    send_in_background(user.email, "Your Jaiway password was changed", (
         f"Hi {user.username},\n\n"
-        "The password for your ThaiBridge AI account was just changed.\n\n"
+        "The password for your Jaiway account was just changed.\n\n"
         "If that was you, there's nothing more to do.\n\n"
         f"If it wasn't, reset it now at {forgot_link} "
         "and email joshua@smoald.com so we can help.\n\n"
-        "ThaiBridge AI"
+        "Jaiway"
     ))

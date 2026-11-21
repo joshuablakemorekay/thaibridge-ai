@@ -47,7 +47,7 @@ THAI_FONT = "Leelawadee UI"
 
 INTRO_TH = [
     "สวัสดีครับ 🙏",
-    "ชุดนี้เป็นการตรวจ \"เสียง\" ในแบบฝึกฟังของแอป ThaiBridge AI ไม่ใช่ตรวจตัวหนังสือ",
+    "ชุดนี้เป็นการตรวจ \"เสียง\" ในแบบฝึกฟังของแอป Jaiway ไม่ใช่ตรวจตัวหนังสือ",
     "เสียงทั้งหมดเป็นเสียงคอมพิวเตอร์ ไม่ใช่คนไทยอ่าน จึงอาจอ่านวรรณยุกต์ผิด สระสั้นยาวผิด "
     "หรือฟังดูไม่เป็นธรรมชาติ ขอให้ช่วยฟังแต่ละคำว่าออกเสียงถูกไหมครับ",
     "วิธีตรวจ: ในแผ่นงาน \"ฟังเสียง\" กดลิงก์ในช่อง ฟัง เพื่อฟังเสียง แล้วในช่อง ผล เลือก ✓ ถ้าถูก "
@@ -69,7 +69,7 @@ INTRO_EN = [
     "that no other choice could also be right.",
 ]
 
-AUDIO_HEADERS = ["#", "หน้า · Page", "ภาษาไทย · Thai", "ThaiBridge Spelling",
+AUDIO_HEADERS = ["#", "หน้า · Page", "ภาษาไทย · Thai", "JaiScript",
                  "ความหมาย · Meaning", "ฟัง · Listen", "ผล · Result",
                  "หมายเหตุ · Note (what is wrong)"]
 AUDIO_WIDTHS = [6, 30, 36, 30, 34, 12, 10, 40]
@@ -142,7 +142,7 @@ def build(out_path):
     intro = wb.active
     intro.title = "อ่านก่อน · Read me"
     intro.column_dimensions["A"].width = 110
-    intro.append(["ตรวจเสียงแบบฝึกฟัง · ThaiBridge AI · Listening review"])
+    intro.append(["ตรวจเสียงแบบฝึกฟัง · Jaiway · Listening review"])
     intro["A1"].font = Font(name=THAI_FONT, size=16, bold=True, color="7A3B00")
     intro.append([])
     for para in INTRO_TH + [""] + INTRO_EN + [""]:

@@ -1,6 +1,6 @@
 # Security
 
-How ThaiBridge AI protects learners' accounts, payments and data, and what it costs to run.
+How Jaiway protects learners' accounts, payments and data, and what it costs to run.
 Also covers how to report a problem, and the known gaps still on the list.
 
 *Last checked against the code: 13 November 2026.*
@@ -70,7 +70,7 @@ Please don't test against other people's accounts or try to access data that isn
 
 ## Payments and paid access
 
-- **Card details never reach ThaiBridge.** Payment happens on Stripe's (or PayPal's) own
+- **Card details never reach Jaiway.** Payment happens on Stripe's (or PayPal's) own
   pages.
 - **The Stripe webhook checks Stripe's signature** on every event before acting on it.
   Paid access is granted only there (and by the matching success-page check), never by
@@ -107,8 +107,8 @@ Please don't test against other people's accounts or try to access data that isn
 ## Web safety
 
 - **Every POST must be JSON** (`json_only.py`). A form on another website can make a
-  learner's browser post to ThaiBridge, but it can't send `Content-Type: application/json`
-  without the browser asking ThaiBridge's permission first, and ThaiBridge never gives it.
+  learner's browser post to Jaiway, but it can't send `Content-Type: application/json`
+  without the browser asking Jaiway's permission first, and Jaiway never gives it.
   So one site-wide rule refuses any POST that isn't JSON, which blocks forged requests
   from other sites (CSRF) on top of the `SameSite=Lax` cookie. The only exception is
   Stripe's webhook, which is checked by Stripe's signature instead. The older HTML forms
@@ -122,7 +122,7 @@ Please don't test against other people's accounts or try to access data that isn
   missing columns at start-up, using fixed names from the code.
 - **The app only redirects to its own pages.** Where it sends someone back to the page
   they came from (after claiming the earned unlock), it checks the address belongs to
-  ThaiBridge first.
+  Jaiway first.
 - **The old domain** (`thaibridge-ai.smoald.com`) redirects permanently to
   `thaibridge.smoald.com`.
 - **Security headers on every response** (`security_headers.py`): `nosniff` (the browser
@@ -132,7 +132,7 @@ Please don't test against other people's accounts or try to access data that isn
   the payment API (the microphone stays allowed for pronunciation practice), and, on the
   live site, `Strict-Transport-Security` so browsers use HTTPS for a year after a visit.
 - **Only the site's own scripts can run.** The Content-Security-Policy allows scripts from
-  ThaiBridge's own files and Meta's Pixel loader, and nothing else. Inline `<script>`
+  Jaiway's own files and Meta's Pixel loader, and nothing else. Inline `<script>`
   blocks and `onclick="..."` attributes are refused, so even if someone managed to slip
   HTML into a page, any script inside it wouldn't run. Every page script lives in
   `static/js/`, values from the server arrive as JSON data blocks, and buttons use

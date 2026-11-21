@@ -6,7 +6,7 @@ Each one closes a door the browser would otherwise leave open:
         Use the file type the server states. Without it a browser may "sniff" an
         uploaded or mislabelled file and decide it's a script.
   * X-Frame-Options: DENY  +  CSP frame-ancestors 'none'
-        No other website may show ThaiBridge inside a frame. That stops
+        No other website may show Jaiway inside a frame. That stops
         "clickjacking": an invisible copy of the site laid over a fake button,
         so a learner clicks "Cancel subscription" thinking they clicked
         something else. Two headers because older browsers only know the first.

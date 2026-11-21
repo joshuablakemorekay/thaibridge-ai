@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}How to use ThaiBridge{% endblock %}
-{% block description %}How to use ThaiBridge: where to start, how lessons, the dictionary, the AI tutor and progress work, and the Learning Support options.{% endblock %}
+{% block title %}How to use Jaiway{% endblock %}
+{% block description %}How to use Jaiway: where to start, how lessons, the dictionary, the AI tutor and progress work, and the Learning Support options.{% endblock %}
 
 {% block content %}
 {# Every section after the overview follows the same four parts — what it's
@@ -19,24 +19,24 @@
 </style>
 
 <h1>
-    How to use ThaiBridge AI
+    How to use Jaiway
     <span class="thai" lang="th">วิธีใช้งาน</span>
 </h1>
 
 <p style="text-align:center; color:#666; max-width:720px; margin:0 auto 2rem;">
-    A quick guide to finding your way around. ThaiBridge AI teaches the Thai
+    A quick guide to finding your way around. Jaiway teaches the Thai
     language through Thai culture and Theravada Buddhism — with an AI tutor,
     a dictionary, structured lessons and a meditation timer.
 </p>
 
 <!-- OVERVIEW: the whole guide in one minute -->
 <div class="card" id="approach">
-    <h2 style="margin-top:0;">How to approach ThaiBridge AI</h2>
+    <h2 style="margin-top:0;">How to approach Jaiway</h2>
 
     <p class="guide-part">How to approach it</p>
     <p>Start with what you need first. If you go to the temple, that's the
         chanting book. If you want to speak, that's the alphabet and
-        ThaiBridge Spelling. A few minutes a day goes further than a long
+        JaiScript. A few minutes a day goes further than a long
         session once a week.</p>
 
     <p class="guide-part">Where to start</p>
@@ -48,14 +48,14 @@
         <li><strong>Follow a chant</strong> in the chanting book, in Thai, Pali and English.</li>
         <li><strong>Make a free account</strong> with <a href="/signup">Sign up</a>
             (no card), so your progress is saved.</li>
-        <li><strong>Learn the alphabet and ThaiBridge Spelling</strong>, so you can
+        <li><strong>Learn the alphabet and JaiScript</strong>, so you can
             read and say Thai words correctly.</li>
         <li><strong>Follow the learning path</strong> below, one section at a time,
             and ask the <a href="/chat">AI tutor</a> whenever you're stuck.</li>
     </ol>
 
     <div class="guide-short"><strong>In short:</strong> chanting book first, then a
-        free account, the alphabet and ThaiBridge Spelling, then the learning path.</div>
+        free account, the alphabet and JaiScript, then the learning path.</div>
 
     <p class="guide-part">In this guide</p>
     <ul class="guide-contents">
@@ -78,7 +78,7 @@
     <h2 style="margin-top:0;">Getting started in 3 steps</h2>
     <ol>
         <li><strong>Pick a starting point.</strong> Use the <strong>Learn</strong>
-            menu — the Alphabet and ThaiBridge Spelling are good
+            menu — the Alphabet and JaiScript are good
             places to begin.</li>
         <li><strong>Explore a topic.</strong> Use the <strong>Learn</strong> menu
             for vocabulary, grammar, lessons and more — or dip into
@@ -110,7 +110,7 @@
 <div class="card">
     <h2 style="margin-top:0;">What you can do</h2>
     <ul>
-        <li><strong>Learn the script</strong> — vowels and ThaiBridge Spelling</li>
+        <li><strong>Learn the script</strong> — vowels and JaiScript</li>
         <li><strong>Build vocabulary</strong> — themed word sets with practice quizzes</li>
         <li><strong>Look up words</strong> — the Thai ↔ English dictionary</li>
         <li><strong>Chat with the AI tutor</strong> — seven modes of help</li>
@@ -140,7 +140,7 @@
             <em>As the book prints it</em> shows only what the printed page shows.</li>
         <li><strong>Choose your layers.</strong> There are five: the Pali in Thai
             script, the Pali in Roman letters, the Thai translation, the Thai in
-            ThaiBridge Spelling, and the English meaning. Untick any you don't need.</li>
+            JaiScript, and the English meaning. Untick any you don't need.</li>
         <li><strong>Search</strong> for a chant by its name in Thai, Pali or English,
             or browse the contents.</li>
         <li><strong>Read about the chant.</strong> Each one explains when it's
@@ -186,7 +186,7 @@
 
     <p class="guide-part">Where to start</p>
     <p>The <a href="/alphabet">Alphabet</a> and
-        <a href="/paiboon">ThaiBridge Spelling</a>, both free. ThaiBridge Spelling
+        <a href="/paiboon">JaiScript</a>, both free. JaiScript
         writes Thai sounds in English letters, so you can say Thai words correctly
         from the first day.</p>
 
@@ -194,7 +194,7 @@
     <ol>
         <li><strong>Pass the alphabet quiz</strong> ({{ alphabet_pass_mark }} of the
             44 consonants). It opens the rest of the Learn menu.</li>
-        <li><strong>Learn ThaiBridge Spelling</strong> and try
+        <li><strong>Learn JaiScript</strong> and try
             <a href="/survival">Survival Thai</a>, the free starter phrases.</li>
         <li><strong>Work down the path below.</strong> Each section opens at its
             level, as you earn XP.</li>
@@ -203,7 +203,7 @@
     {% set plan_name = {'free': 'Free', 'basic': 'Thai Reader', 'pro': 'Thai Master'} %}
     {% set path = [
         ('alphabet', 'Alphabet', '/alphabet'),
-        ('paiboon', 'ThaiBridge Spelling', '/paiboon'),
+        ('paiboon', 'JaiScript', '/paiboon'),
         ('survival', 'Survival Thai', '/survival'),
         ('learn', 'Vocabulary', '/learn'),
         ('vowels_syllables', 'Vowels & Syllables', '/vowels_syllables'),
@@ -234,7 +234,7 @@
         </tbody>
     </table>
 
-    <div class="guide-short"><strong>In short:</strong> alphabet and ThaiBridge
+    <div class="guide-short"><strong>In short:</strong> alphabet and Jaiway
         Spelling first, then down the table as your level rises.</div>
 </div>
 
@@ -358,7 +358,7 @@
         </thead>
         <tbody>
             <tr><td>{{ tiers.free.name.split(' (')[0] }}</td><td>Free, no card</td>
-                <td>Chanting book, all Buddhism content, alphabet, ThaiBridge Spelling,
+                <td>Chanting book, all Buddhism content, alphabet, JaiScript,
                     Survival Thai</td></tr>
             <tr><td>{{ tiers.basic.name.split(' (')[0] }}</td>
                 <td>£{{ '%.2f' % tiers.basic.price }} a month, or £{{ '%.0f' % tiers.basic.price_year }} a year</td>
@@ -424,7 +424,7 @@
             <strong>blue for right</strong> and <strong>orange for wrong</strong>,
             and gives wrong answers a dashed border. Answers also show a ✓, a ✗
             or a written verdict, so you never have to rely on colour alone.
-            It also turns the chanting book's ThaiBridge Spelling line blue, so
+            It also turns the chanting book's JaiScript line blue, so
             it stands apart from the Pali line, and marks Christian dates on the
             calendar with a hollow ring instead of a dot.</li>
         <li><strong>Quiz sounds</strong> — a short chime for a right answer, a soft
@@ -474,7 +474,7 @@
 <div class="card">
     <h2 style="margin-top:0;">How the pages are laid out</h2>
     <p>
-        ThaiBridge AI doesn't force one layout on every page. Instead, each page
+        Jaiway doesn't force one layout on every page. Instead, each page
         uses the <strong>shape that fits its job</strong> — which is why a reading
         page looks different from a tool or a short info page. There are four:
     </p>

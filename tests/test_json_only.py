@@ -1,7 +1,7 @@
 """Every POST must be JSON (json_only.py, added 2026-11-13).
 
 A form on another website can make a learner's browser POST here, but it can't
-send JSON without ThaiBridge's permission. So refusing anything that isn't JSON
+send JSON without Jaiway's permission. So refusing anything that isn't JSON
 shuts out forged requests from other sites, on top of the SameSite cookie.
 
 Run with:  pytest tests/test_json_only.py -v

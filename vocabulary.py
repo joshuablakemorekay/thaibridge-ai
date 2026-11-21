@@ -208,7 +208,7 @@ eventually attaining enlightenment.''',
         # be inventing Thai. The story is really about the ə / əə vowels, so it
         # points at the page that actually teaches them.
         'practice': {'href': '/paiboon',
-                     'label': 'The ThaiBridge Spelling guide — the ə / əə vowels'},
+                     'label': 'The JaiScript guide — the ə / əə vowels'},
         'title': 'Modern Thailand and Global Connection',
         'story': '''Modern Thai has absorbed many English loanwords, especially in technology, business, and 
 education. These words often use the schwa sound (ə/əə) - that "uh" sound from English. When foreign monks 

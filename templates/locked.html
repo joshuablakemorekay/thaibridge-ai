@@ -3,7 +3,7 @@
 {# With a preview (section_previews.py) this page says what the section
    teaches and is worth listing in search. Without one it is the same bare
    notice at many addresses, so it stays out of search. #}
-{% block title %}{% if preview %}{{ preview.name }} — ThaiBridge Thai course{% else %}Section Locked - ThaiBridge AI{% endif %}{% endblock %}
+{% block title %}{% if preview %}{{ preview.name }} — Jaiway Thai course{% else %}Section Locked - Jaiway{% endif %}{% endblock %}
 {% block description %}{% if preview %}{{ preview.summary }}{% else %}{{ super() }}{% endif %}{% endblock %}
 {% block robots %}{% if not preview %}<meta name="robots" content="noindex, follow">{% endif %}{% endblock %}
 
@@ -11,7 +11,7 @@
 <div class="container">
     {% if preview %}
     <section class="section-preview">
-        <p class="section-preview-kicker">Part of the ThaiBridge course</p>
+        <p class="section-preview-kicker">Part of the Jaiway course</p>
         <h1>{{ preview.name }}</h1>
         <p class="section-preview-summary">{{ preview.summary }}</p>
         <h2>In this section</h2>

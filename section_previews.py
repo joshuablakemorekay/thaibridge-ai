@@ -22,16 +22,16 @@ SECTION_PREVIEWS = {
         'points': [
             'A clear order to follow, so you always know what comes next',
             'Objectives, vocabulary and a grammar point in every lesson',
-            'Example sentences in Thai script with ThaiBridge Spelling and English',
+            'Example sentences in Thai script with JaiScript and English',
         ],
     },
     'learn': {
         'path': '/learn',
         'name': 'Vocabulary',
-        'summary': 'Themed Thai vocabulary sets, each with 20 words in Thai script, ThaiBridge Spelling and English, plus practice quizzes and tap-to-hear audio.',
+        'summary': 'Themed Thai vocabulary sets, each with 20 words in Thai script, JaiScript and English, plus practice quizzes and tap-to-hear audio.',
         'points': [
             'Six themed categories, from everyday words to festivals and the Dhamma',
-            'Every word in Thai script, ThaiBridge Spelling and English',
+            'Every word in Thai script, JaiScript and English',
             'A practice quiz for each category',
         ],
     },

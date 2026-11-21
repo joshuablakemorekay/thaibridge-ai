@@ -1,4 +1,4 @@
-# ThaiBridge AI — Site Outline
+# Jaiway — Site Outline
 
 The skeleton of the site: every page, grouped the way a visitor meets it.
 Written *after* the site was built (2026-09-13), read straight off the routes in

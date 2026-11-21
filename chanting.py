@@ -78,7 +78,7 @@ Each verse carries up to five layers, and they are NOT interchangeable:
                    and is never chanted; it is there for meaning.
   * `paiboon`    — Paiboon romanisation of `thai` ONLY. It helps an English
                    speaker read the Thai translation aloud. It is a
-                   ThaiBridge addition, not a standard chanting-book layer.
+                   Jaiway addition, not a standard chanting-book layer.
   * `english`    — the meaning in English.
 
 Both chanted layers (`pali`, `pali_roman`) keep their couplet line break as a
@@ -32181,7 +32181,7 @@ CHANTS = [
         ),
 
         'background': [
-            "This is one of two chants in this book printed in ROMAN Pali rather than Thai script. It sits in the appendix at the back, where the layers a reader meets are the romanised Pali and the English — the Thai script and ThaiBridge Spelling columns are empty because the page has none.",
+            "This is one of two chants in this book printed in ROMAN Pali rather than Thai script. It sits in the appendix at the back, where the layers a reader meets are the romanised Pali and the English — the Thai script and JaiScript columns are empty because the page has none.",
 
             "At a hundred and ninety-two verses it is the longest chant in the book. The Mahāsamaya is a catalogue: deva after deva, host after host, named and placed.",
         ],
@@ -34354,7 +34354,7 @@ CHANTS = [
         ),
 
         'background': [
-            "The second of the two chants this book prints in ROMAN Pali rather than Thai script, in the appendix at the back. The Thai and ThaiBridge Spelling layers are empty because the printed page has none.",
+            "The second of the two chants this book prints in ROMAN Pali rather than Thai script, in the appendix at the back. The Thai and JaiScript layers are empty because the printed page has none.",
 
             "Its title claims a great deal — the peak, or summit, of the Tipitaka — and the chant works by compression: the standard recollections first in full, then progressively reduced.",
         ],
@@ -35997,7 +35997,7 @@ CHANTS = [
         ),
 
         'background': [
-            "One verse, nine words of Pali, and the shortest chant in the book. It is printed in the roman-script appendix, so the Thai and ThaiBridge Spelling layers are empty.",
+            "One verse, nine words of Pali, and the shortest chant in the book. It is printed in the roman-script appendix, so the Thai and JaiScript layers are empty.",
 
             "Its title in the book is given as VIPASSIT, set in capitals, and no Thai-script title is printed for it at all.",
         ],
@@ -74645,7 +74645,7 @@ CHANTS = [
 # scripts); the three meaning layers are cool or neutral, so a glance tells you
 # whether you are looking at something to chant or something to understand.
 #
-# ThaiBridge Spelling reads through --cb-paiboon first. That variable only
+# JaiScript reads through --cb-paiboon first. That variable only
 # exists while Learning Support's colour-blind option is on, and it turns the
 # layer blue: in green it looked almost the same as the clay Pali (Romanised)
 # line to red-green colour-blind readers, and both are italic Latin text.
@@ -74673,7 +74673,7 @@ CHANT_LAYERS = [
         ),
     },
     {
-        'key': 'paiboon', 'label': 'Thai (ThaiBridge Spelling)',
+        'key': 'paiboon', 'label': 'Thai (JaiScript)',
         'note': 'Read the Thai aloud', 'colour': 'var(--cb-paiboon, var(--bodhi-green))',
         'description': (
             'The Thai translation romanised for readers who cannot yet read '
