@@ -340,11 +340,21 @@ def test_another_users_messages_do_not_count(agent, pro_account):
             db.session.commit()
 
 
-def test_the_ceiling_is_far_above_the_thai_reader_allowance(agent):
+def test_the_ceiling_is_well_above_the_thai_reader_allowance(agent):
     """A sanity check on the number itself: if these ever converge, Pro has
-    stopped being worth paying for. (Compared with Thai Reader since Free lost
-    its AI allowance on 2026-11-21.)"""
-    assert appmod.PRO_FAIR_USE_DAILY >= appmod.BASIC_AI_DAILY_LIMIT * 5
+    stopped being worth paying for. Pro's ceiling must be at least double
+    everything Thai Reader gets in a day (tutor + Dhamma)."""
+    reader_total = appmod.BASIC_AI_DAILY_LIMIT + appmod.FREE_DHAMMA_DAILY_LIMIT
+    assert appmod.PRO_FAIR_USE_DAILY >= reader_total * 2
+
+
+def test_a_pro_subscriber_can_never_cost_more_than_a_month_of_pro(agent):
+    """The worst case: the ceiling every day, every message a fresh one at
+    about 0.85p on Sonnet 5.5. It must stay under the cheapest month of Pro
+    (the annual plan, £199 / 12), or a heavy user is a loss."""
+    worst_case_pence = appmod.PRO_FAIR_USE_DAILY * 31 * 0.85
+    cheapest_month_pence = 19900 / 12
+    assert worst_case_pence < cheapest_month_pence
 
 
 def test_cached_tokens_are_recorded(monkeypatch, ai_client):

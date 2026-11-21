@@ -90,9 +90,9 @@ Please don't test against other people's accounts or try to access data that isn
 ## The AI tutor and its costs
 
 - **The AI routes are rate limited** per visitor, on top of each plan's daily message
-  allowance. The allowance is counted in the session cookie, so the rate limit is the
-  real floor for anyone who clears cookies or uses a script. Pro's fair-use ceiling of 75
-  messages a day is counted from the database, so clearing cookies doesn't reset it.
+  allowance. Since 2026-11-21 the AI needs a paid plan and a signed-in account: Thai
+  Reader's allowance and Pro's fair-use ceiling of 40 messages a day are both counted
+  per account in the database, so clearing cookies resets nothing.
 - **The Anthropic account has a hard monthly spending limit** and its own API key, so a bad
   day can't run up an unlimited bill, and the key can be revoked on its own. If the credit
   runs out, the tutor shows a calm "resting" message instead of an error.
