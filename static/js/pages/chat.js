@@ -512,6 +512,23 @@ function currentPool() {
 function updateLimitHint() {
     const hint = document.getElementById('limit-hint');
     if (!hint || AI_LIMITS.unlimited || !AI_LIMITS.pools) return;
+    if (AI_LIMITS.plan_required) {
+        // No AI on the free plan (every reply costs real money to run), so say
+        // so up front and switch the box off, rather than let someone type a
+        // message only to have it refused.
+        hint.innerHTML = '🔒 The AI tutor is part of the Thai Reader and Pro plans · '
+            + (AI_LIMITS.signed_in ? '' : '<a href="/login">Sign in</a> · ')
+            + '<a href="/premium">See plans →</a>';
+        hint.style.display = 'block';
+        const input = document.getElementById('user-input');
+        if (input) {
+            input.disabled = true;
+            input.placeholder = 'Available on Thai Reader and Pro';
+        }
+        const send = document.getElementById('send-btn');
+        if (send) send.disabled = true;
+        return;
+    }
     const pool = currentPool();
     const left = AI_LIMITS.pools[pool].remaining;
     // The Dhamma line carries no upsell in EITHER state. A "go Pro" beside
@@ -521,14 +538,14 @@ function updateLimitHint() {
     if (left > 0 && pool === 'dhamma') {
         hint.innerHTML = `<strong>${left}</strong> Dhamma question${left === 1 ? '' : 's'} left today`;
     } else if (left > 0) {
-        hint.innerHTML = `FREE taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
-            + `<a href="/premium">Go Pro for unlimited →</a>`;
+        hint.innerHTML = `<strong>${left}</strong> tutor message${left === 1 ? '' : 's'} left today · `
+            + `<a href="/premium">Go Pro for more →</a>`;
     } else if (pool === 'dhamma') {
-        // No upsell: the teaching is free, and the cap is a running cost.
-        hint.innerHTML = `That’s today’s Dhamma questions — the teaching is free, `
-            + `the model isn’t. Back tomorrow.`;
+        // No upsell: the Dhamma pages are free, and the cap is a running cost.
+        hint.innerHTML = `That’s today’s Dhamma questions — the Dhamma pages are free, `
+            + `the AI isn’t. Back tomorrow.`;
     } else {
-        hint.innerHTML = `🔒 You’ve used today’s free AI messages · `
+        hint.innerHTML = `🔒 You’ve used today’s tutor messages · `
             + `<a href="/premium">Upgrade to Pro for unlimited →</a>`;
     }
     hint.style.display = 'block';

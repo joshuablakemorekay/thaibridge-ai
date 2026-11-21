@@ -740,9 +740,12 @@ def log_ai_usage(feature, outcome, *, mode=None, model=None,
     waiting for has already been generated and paid for — dropping the whole
     response because a logging INSERT failed would turn a working, billed answer
     into a 500. One lost row is the cheaper failure by a wide margin.
+
+    Returns the new row's id (or None if it couldn't be written), so a streamed
+    reply can fill in its token counts once the answer is finished.
     """
     try:
-        db.session.add(AiUsage(
+        row = AiUsage(
             user_id=current_user.id if current_user.is_authenticated else None,
             # Groups a signed-out visitor's messages without identifying them.
             session_key=(session.get('session_id') or '')[:64] or None,
@@ -759,11 +762,29 @@ def log_ai_usage(feature, outcome, *, mode=None, model=None,
             tier=active_tier(),
             outcome=outcome,
             error_type=error_type,
-        ))
+        )
+        db.session.add(row)
         db.session.commit()
+        return row.id
     except Exception:
         db.session.rollback()
         app.logger.exception('Could not log AI usage')
+        return None
+
+
+def _update_ai_usage(row_id, **fields):
+    """Change an ai_usage row written earlier. Never raises, like log_ai_usage."""
+    if row_id is None:
+        return
+    try:
+        row = db.session.get(AiUsage, row_id)
+        if row is not None:
+            for name, value in fields.items():
+                setattr(row, name, (value or 0) if name.endswith('_tokens') else value)
+            db.session.commit()
+    except Exception:
+        db.session.rollback()
+        app.logger.exception('Could not update AI usage')
 
 
 
@@ -1077,17 +1098,45 @@ def inject_monk_mode():
 # of step with what the API actually enforces.
 
 def _ai_usage_today():
-    """Return today's AI-usage record from the session, resetting at midnight."""
-    today = datetime.now().strftime('%Y-%m-%d')
-    usage = session.get('ai_usage')
-    if not usage or usage.get('date') != today:
-        usage = {'date': today, 'count': 0, 'dhamma': 0}
-        session['ai_usage'] = usage
-    # A session opened before the Dhamma pool existed has no 'dhamma' key. Fill
-    # it rather than letting .get() default at every call site, so the record
-    # always has the same shape whoever reads it.
-    usage.setdefault('dhamma', 0)
+    """How many AI messages this account has had today, per pool.
+
+    Counted from the ai_usage table, keyed on the account, since 2026-11-21.
+    It used to live in the session cookie, and clearing cookies handed out a
+    fresh allowance every time, which is a hole straight into Josh's API bill.
+    The keys ('count' for the tutor, 'dhamma') keep their old names so every
+    reader of this dict stays the same.
+
+    A signed-out visitor has no allowance to spend (the AI needs a paid plan),
+    so they read as zero. Uses UTC midnight, matching _pro_messages_today().
+    """
+    usage = {'count': 0, 'dhamma': 0}
+    if not current_user.is_authenticated:
+        return usage
+    start_of_day = utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    rows = db.session.query(AiUsage.mode, db.func.count(AiUsage.id)).filter(
+        AiUsage.user_id == current_user.id,
+        AiUsage.feature == 'chat',
+        AiUsage.outcome == 'ok',
+        AiUsage.created_at >= start_of_day,
+    ).group_by(AiUsage.mode).all()
+    for mode, n in rows:
+        usage[AI_POOLS[ai_pool_for(mode)]['key']] += n
     return usage
+
+
+# Plans that include the AI. Free has none since 2026-11-21: every reply is
+# paid for out of Josh's own pocket, and with no subscribers yet a free
+# allowance was pure cost and an open door for anyone clearing cookies.
+AI_PLANS = {'basic', 'pro'}
+
+
+def ai_plan_required():
+    """True when this visitor can't use the AI at all: signed out, or on Free.
+
+    Signed-out visitors are refused even if their session claims a paid tier,
+    because a cookie is not an account and anything kept in one can be reset.
+    """
+    return not current_user.is_authenticated or active_tier() not in AI_PLANS
 
 
 
@@ -1095,15 +1144,19 @@ def ai_limits_status():
     """Describe the current visitor's AI access — used by both the template and
     the API gate so the two never disagree."""
     tier = active_tier()
-    if tier == 'pro':
+    plan_required = ai_plan_required()
+    signed_in = current_user.is_authenticated
+    if tier == 'pro' and not plan_required:
         return {
             'tier': tier, 'unlimited': True, 'allowed_modes': None,
             'pools': None, 'dhamma_modes': sorted(DHAMMA_AI_MODES),
+            'plan_required': False, 'signed_in': True,
         }
     usage = _ai_usage_today()
     pools = {}
     for name, pool in AI_POOLS.items():
-        limit = ai_pool_limit(name, tier)
+        # No plan, no allowance, whatever the session's tier says.
+        limit = 0 if plan_required else ai_pool_limit(name, tier)
         used = usage.get(pool['key'], 0)
         pools[name] = {
             'limit': limit,
@@ -1114,6 +1167,8 @@ def ai_limits_status():
         'tier': tier, 'unlimited': False,
         'allowed_modes': sorted(FREE_AI_ALLOWED_MODES),
         'pools': pools,
+        # The page shows a "needs a plan" note and disables the box when true.
+        'plan_required': plan_required, 'signed_in': signed_in,
         # Sent so the page can tell which pool the chosen mode spends from
         # without hardcoding the word "buddhist" in JavaScript too.
         'dhamma_modes': sorted(DHAMMA_AI_MODES),
@@ -5664,6 +5719,7 @@ def premium():
                            pronunciation_live=PRONUNCIATION_LIVE,
                            dana=DANA,
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
+                           basic_ai_daily_limit=BASIC_AI_DAILY_LIMIT,
                            free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,
                            # Everything the site teaches, locked pages
                            # included. Shown to everyone, signed in or not:
@@ -7209,7 +7265,26 @@ def _ai_chat_gate(tier, mode):
     Shared by the one-piece and streamed replies so both enforce the same
     allowances.
     """
-    # --- Freemium gate: free & basic get a taste, Pro a fair-use ceiling ---
+    # --- No plan, no AI. Checked first so nothing below can spend money. ---
+    if ai_plan_required():
+        # Logged for the same reason as blocked_mode below: it costs nothing,
+        # and it answers "do people who hit this wall go on to subscribe?"
+        log_ai_usage('chat', 'blocked_plan', mode=mode)
+        if current_user.is_authenticated:
+            message = ("The AI tutor is part of the Thai Reader and Pro plans. "
+                       "Everything else on your free account (the lessons, the "
+                       "alphabet, the chanting book, the Dhamma pages) is still yours.")
+        else:
+            message = ("The AI tutor is part of the Thai Reader and Pro plans. "
+                       "Please sign in, or see the plans to get started.")
+        return jsonify({
+            'success': False,
+            'gate': 'plan_required',
+            'signed_in': current_user.is_authenticated,
+            'message': message,
+        })
+
+    # --- Thai Reader gets a daily allowance, Pro a fair-use ceiling ---
     if tier != 'pro':
         if mode not in FREE_AI_ALLOWED_MODES:
             # Logged even though it cost nothing: a blocked request is the
@@ -7231,13 +7306,13 @@ def _ai_chat_gate(tier, mode):
         if usage.get(pool['key'], 0) >= pool_limit:
             log_ai_usage('chat', 'blocked_cap', mode=mode)
             if pool_name == 'dhamma':
-                # No upsell here. The teaching is free, and the only honest
+                # No upsell here. The Dhamma pages are free, and the only honest
                 # thing to say is that the day's questions are used up and
                 # the cap is a running cost, not a price on the Dhamma.
                 message = (f"That’s today’s {pool_limit} Dhamma questions. "
-                           "The teaching here is free and always will be — this "
-                           "limit is only what it costs us to run the model. "
-                           "Please come back tomorrow.")
+                           "The Dhamma pages here are free to read and always "
+                           "will be — this limit is only what it costs us to run "
+                           "the AI. Please come back tomorrow.")
             else:
                 # Point at the Dhamma before pointing at the price. Someone
                 # out of tutor messages still has their Dhamma questions,
@@ -7245,8 +7320,7 @@ def _ai_chat_gate(tier, mode):
                 # left is the kind of nudge that reads as a trick.
                 dhamma_left = max(0, ai_pool_limit('dhamma')
                                   - usage.get(AI_POOLS['dhamma']['key'], 0))
-                message = (f"You’ve used your {pool_limit} "
-                           f"{'' if tier == 'basic' else 'free '}Thai tutor "
+                message = (f"You’ve used your {pool_limit} Thai tutor "
                            "messages for today. ")
                 if dhamma_left:
                     message += (f"You still have {dhamma_left} Dhamma question"
@@ -7280,18 +7354,13 @@ def _ai_chat_gate(tier, mode):
 
 
 def _count_ai_message(mode):
-    """Spend one message from a free or basic visitor's daily allowance.
+    """Today's allowances after a message, for the page to redraw.
 
-    Returns both pools, not just the one spent, so the page can redraw
-    either allowance without a second request. An earlier cut also sent
-    `pool` and `remaining` for the pool just used; the page reads neither,
-    so they were dead weight on every reply.
+    Nothing is written here any more. The message was already counted by the
+    'ok' row in ai_usage (see _ai_usage_today), so this only reads the totals
+    back. Returns both pools so the page can redraw either allowance without
+    a second request.
     """
-    usage = _ai_usage_today()
-    pool = AI_POOLS[ai_pool_for(mode)]
-    usage[pool['key']] = usage.get(pool['key'], 0) + 1
-    session['ai_usage'] = usage
-    session.modified = True
     return ai_limits_status()['pools']
 
 
@@ -7330,6 +7399,11 @@ def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, le
                      error_type=failure.get('error_type'))
         return jsonify(failure)
 
+    # Count the message NOW, as the stream opens, not when it finishes. A reply
+    # takes several seconds, and counting at the end let someone send a burst
+    # of messages at once and have them all pass the allowance check before
+    # any had been counted. The row's tokens are filled in when it's done.
+    row_id = log_ai_usage('chat', 'ok', mode=mode, model=model)
     pools = _count_ai_message(mode) if tier != 'pro' else None
 
     def lines():
@@ -7337,17 +7411,18 @@ def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, le
             for event in events:
                 if event['type'] == 'done':
                     tokens = event.get('tokens_used') or {}
-                    log_ai_usage('chat', 'ok', mode=mode, model=event.get('model') or model,
-                                 input_tokens=tokens.get('input', 0),
-                                 output_tokens=tokens.get('output', 0),
-                                 cache_write_tokens=tokens.get('cache_write', 0),
-                                 cache_read_tokens=tokens.get('cache_read', 0))
+                    _update_ai_usage(row_id, model=event.get('model') or model,
+                                     input_tokens=tokens.get('input', 0),
+                                     output_tokens=tokens.get('output', 0),
+                                     cache_write_tokens=tokens.get('cache_write', 0),
+                                     cache_read_tokens=tokens.get('cache_read', 0))
                     event = {**event, 'pools': pools}
                 yield json.dumps(event, ensure_ascii=False) + '\n'
         except Exception as e:
             app.logger.exception('AI stream broke partway')
-            log_ai_usage('chat', 'error', mode=mode, model=model,
-                         error_type=type(e).__name__)
+            # Hand the message back: an answer cut off halfway shouldn't cost
+            # the learner part of their allowance.
+            _update_ai_usage(row_id, outcome='error', error_type=type(e).__name__)
             yield json.dumps({'type': 'error',
                               'message': 'The answer was interrupted. Please try again.'}) + '\n'
 

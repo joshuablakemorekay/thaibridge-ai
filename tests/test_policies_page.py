@@ -5,8 +5,10 @@ import app as appmod
 def test_policies_page_quotes_the_numbers_the_app_enforces():
     body = appmod.app.test_client().get('/policies').get_data(as_text=True)
     tiers = appmod.SUBSCRIPTION_TIERS
-    assert f"{appmod.FREE_AI_DAILY_LIMIT} messages a day" in body
-    assert f"{appmod.BASIC_AI_DAILY_LIMIT} AI tutor messages a day" in body
+    assert (f"{appmod.BASIC_AI_DAILY_LIMIT} AI tutor messages and "
+            f"{appmod.FREE_DHAMMA_DAILY_LIMIT} AI Dhamma questions a day") in body
+    # Free has no AI since 2026-11-21, and the terms must not say otherwise.
+    assert "to try it properly" not in body
     assert f"{appmod.PRO_FAIR_USE_DAILY} messages a day" in body
     assert f"£{tiers['basic']['price']:.2f} a month" in body
     assert f"£{tiers['pro']['price']:.2f} a month" in body

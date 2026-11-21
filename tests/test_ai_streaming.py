@@ -48,61 +48,77 @@ class FakeAgent:
 
 
 @pytest.fixture
-def logged(monkeypatch):
-    calls = []
-    monkeypatch.setattr(appmod, 'log_ai_usage', lambda *a, **kw: calls.append((a, kw)))
-    return calls
+def reader(ai_client):
+    """A signed-in Thai Reader: the AI is for paying plans only (2026-11-21)."""
+    return ai_client('basic')
 
 
-def ask(agent, monkeypatch, mode='tutor'):
+def ask(agent, monkeypatch, client, mode='tutor'):
     monkeypatch.setattr(appmod, 'ai_agent', agent)
-    client = app.test_client()
     r = client.post('/api/ai/chat', json={'message': 'hi', 'mode': mode, 'stream': True})
-    return client, r
+    return r
 
 
 def lines(response):
     return [json.loads(l) for l in response.get_data(as_text=True).splitlines() if l.strip()]
 
 
-def test_the_reply_arrives_as_lines(monkeypatch, logged):
-    _, r = ask(FakeAgent(), monkeypatch)
+def usage_rows(client):
+    with app.app_context():
+        return appmod.AiUsage.query.filter_by(user_id=client.user_id).all()
+
+
+def test_the_reply_arrives_as_lines(monkeypatch, reader):
+    r = ask(FakeAgent(), monkeypatch, reader)
     assert r.mimetype == 'application/x-ndjson'
     events = lines(r)
     assert [e['text'] for e in events if e['type'] == 'text'] == ['Hello ', 'there']
     assert events[-1]['type'] == 'done' and 'pools' in events[-1]
 
 
-def test_one_message_is_spent_and_logged_with_its_cache_tokens(monkeypatch, logged):
-    client, r = ask(FakeAgent(), monkeypatch)
-    lines(r)  # the stream has to be read for the 'done' line to run
-    with client.session_transaction() as s:
-        assert s['ai_usage']['count'] == 1
-    ok = [kw for a, kw in logged if a[1] == 'ok']
-    assert ok and ok[0]['cache_read_tokens'] == 20 and ok[0]['model'] == 'claude-sonnet-5-5'
+def test_one_message_is_spent_and_logged_with_its_cache_tokens(monkeypatch, reader):
+    r = ask(FakeAgent(), monkeypatch, reader)
+    events = lines(r)  # the stream has to be read for the 'done' line to run
+    assert events[-1]['pools']['tutor']['used'] == 1
+    [row] = usage_rows(reader)
+    assert row.outcome == 'ok'
+    assert row.cache_read_tokens == 20 and row.model == 'claude-sonnet-5-5'
 
 
-def test_a_refusal_is_an_ordinary_answer_and_costs_nothing(monkeypatch, logged):
+def test_the_message_is_counted_before_the_answer_finishes(monkeypatch, reader):
+    """Counted when the stream opens, so a burst of messages sent at once can't
+    all pass the allowance check before any of them has been counted."""
+    r = ask(FakeAgent(), monkeypatch, reader)
+    # Nothing read from the stream yet, but the message is already spent.
+    assert [row.outcome for row in usage_rows(reader)] == ['ok']
+    lines(r)
+
+
+def test_a_refusal_is_an_ordinary_answer_and_costs_nothing(monkeypatch, reader):
     refused = {'success': False, 'gate': 'ai_resting', 'error_type': 'out_of_budget',
                'message': ai_agent.AI_RESTING_MESSAGE}
-    client, r = ask(FakeAgent(failure=refused), monkeypatch)
+    r = ask(FakeAgent(failure=refused), monkeypatch, reader)
     assert r.is_json and r.get_json()['gate'] == 'ai_resting'
-    with client.session_transaction() as s:
-        assert s.get('ai_usage', {}).get('count', 0) == 0
+    assert [row.outcome for row in usage_rows(reader)] == ['error']
 
 
-def test_a_dropped_connection_says_so(monkeypatch, logged):
-    _, r = ask(FakeAgent(break_midway=True), monkeypatch)
+def test_a_dropped_connection_says_so_and_gives_the_message_back(monkeypatch, reader):
+    r = ask(FakeAgent(break_midway=True), monkeypatch, reader)
     events = lines(r)
     assert events[0] == {'type': 'text', 'text': 'Hello '}
     assert events[-1]['type'] == 'error'
-    assert any(a[1] == 'error' for a, _ in logged)
+    assert [row.outcome for row in usage_rows(reader)] == ['error']
 
 
-def test_the_allowance_gates_still_apply(monkeypatch, logged):
-    """Streaming must not be a way round the free-tier mode lock."""
-    _, r = ask(FakeAgent(), monkeypatch, mode='generator')
+def test_the_allowance_gates_still_apply(monkeypatch, reader):
+    """Streaming must not be a way round the Thai Reader mode lock."""
+    r = ask(FakeAgent(), monkeypatch, reader, mode='generator')
     assert r.is_json and r.get_json()['gate'] == 'mode_locked'
+
+
+def test_streaming_is_no_way_round_the_plan(monkeypatch):
+    r = ask(FakeAgent(), monkeypatch, app.test_client())
+    assert r.is_json and r.get_json()['gate'] == 'plan_required'
 
 
 # ── The agent's side ──────────────────────────────────────────────────────

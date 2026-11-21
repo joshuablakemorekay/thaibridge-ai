@@ -87,10 +87,10 @@ class FakeAgent:
                 "mode": kwargs.get("mode"), "tokens_used": {"input": 1, "output": 1}}
 
 
-def test_the_route_passes_the_lens_to_the_tutor(monkeypatch):
+def test_the_route_passes_the_lens_to_the_tutor(monkeypatch, ai_client):
     fake = FakeAgent()
     monkeypatch.setattr(appmod, "ai_agent", fake)
-    client = app.test_client()
+    client = ai_client("basic")
     client.post("/api/ai/chat", json={"message": "What is mettā?",
                                       "mode": "buddhist", "lens": "neutral"})
     assert fake.kwargs["lens"] == "neutral"
@@ -189,7 +189,7 @@ def test_thinking_is_switched_off_the_way_each_model_accepts(model, expected):
     assert ai_agent.thinking_off(model) == expected
 
 
-def test_buddhist_mode_gets_room_to_finish_and_logs_the_right_model(monkeypatch):
+def test_buddhist_mode_gets_room_to_finish_and_logs_the_right_model(monkeypatch, ai_client):
     fake = FakeAgent()
     fake.chat = lambda **kw: (setattr(fake, "kwargs", kw) or
                               {"success": True, "response": "ok", "model": "claude-haiku-5-5",
@@ -198,7 +198,7 @@ def test_buddhist_mode_gets_room_to_finish_and_logs_the_right_model(monkeypatch)
     monkeypatch.setattr(appmod, "ai_agent", fake)
     monkeypatch.setattr(appmod, "log_ai_usage",
                         lambda *a, **kw: logged.update(kw) if a[1] == "ok" else None)
-    app.test_client().post("/api/ai/chat", json={"message": "q", "mode": "buddhist"})
+    ai_client("basic").post("/api/ai/chat", json={"message": "q", "mode": "buddhist"})
     assert fake.kwargs["max_tokens"] == appmod.AI_REPLY_TOKENS
     assert logged["model"] == "claude-haiku-5-5"
 
@@ -217,11 +217,10 @@ def test_long_answer_modes_are_asked_to_keep_it_short(agent, mode):
 
 
 @pytest.mark.parametrize("mode", ["tutor", "generator", "conversation"])
-def test_each_mode_gets_its_reply_limit(monkeypatch, mode):
+def test_each_mode_gets_its_reply_limit(monkeypatch, ai_client, mode):
     fake = FakeAgent()
     monkeypatch.setattr(appmod, "ai_agent", fake)
-    monkeypatch.setattr(appmod, "active_tier", lambda: "pro")
-    app.test_client().post("/api/ai/chat", json={"message": "q", "mode": mode})
+    ai_client("pro").post("/api/ai/chat", json={"message": "q", "mode": mode})
     assert fake.kwargs["max_tokens"] == appmod.AI_REPLY_TOKENS_BY_MODE.get(
         mode, appmod.AI_REPLY_TOKENS)
     assert appmod.AI_REPLY_TOKENS_BY_MODE["generator"] > appmod.AI_REPLY_TOKENS
