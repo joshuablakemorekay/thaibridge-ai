@@ -439,8 +439,18 @@
             max-width: 85%;
         }
 
+        /* Stack the box and buttons, each full width. Without `stretch`
+           the text box shrank to its own small default width, so the
+           placeholder was cut off mid-word ("...in Er") — Max, 2026-11-21. */
         .input-container {
             flex-direction: column;
+            align-items: stretch;
+        }
+
+        #user-input {
+            flex: none;
+            width: 100%;
+            padding: 0.9rem 1.2rem;
         }
 
         #send-btn,
@@ -717,7 +727,7 @@
             <input
                 type="text"
                 id="user-input"
-                placeholder="Type your message in English or Thai..."
+                placeholder="Type in English or Thai…"
                 data-on-keydown="sendMessage" data-key="Enter"
             >
             <button id="send-btn" data-on-click="sendMessage">Send</button>
