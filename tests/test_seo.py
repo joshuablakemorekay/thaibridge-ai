@@ -208,3 +208,12 @@ def test_google_logo_is_the_square_emblem():
     html = app_module.app.test_client().get('/').get_data(as_text=True)
     assert '/static/img/brand/emblem.png' in html
     assert 'sizes="48x48"' in html
+
+
+def test_favicon_addresses_are_stable():
+    # Google only shows a site's icon if its address doesn't keep changing.
+    # A ?v= stamp changes on every Render deploy, so icons must not carry one.
+    html = app_module.app.test_client().get('/').get_data(as_text=True)
+    assert 'href="/static/img/brand/favicon-48.png"' in html
+    assert 'favicon-48.png?v=' not in html
+    assert 'icon-192.png?v=' not in html
