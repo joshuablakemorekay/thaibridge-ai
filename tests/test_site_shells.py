@@ -1,4 +1,4 @@
-"""The menu: one classic tab-style menu for everyone.
+"""The menu: one classic tab-style menu for everyone, seven items in the top bar.
 
 Josh chose (2026-11-18) the classic tab menu from the protected tag
 webapp-classic-menu-2026-11-18 over both the grouped learner menu and the
@@ -62,7 +62,29 @@ def test_a_learner_gets_the_same_classic_menu(learner):
     client, name = learner
     nav = _nav(client.get('/').get_data(as_text=True))
     assert MENU_PAGES <= _hrefs(nav), sorted(MENU_PAGES - _hrefs(nav))
-    assert name in nav and 'href="/progress"' in nav and 'href="/logout"' in nav
+    assert 'href="/progress"' in nav and 'href="/logout"' in nav
+    # Josh's call (2026-11-22): the menu says "Account", never the username.
+    assert name not in nav and '>Account<' in nav
+
+
+# The top bar itself, not the dropdowns: kept short on purpose (2026-11-22).
+TOP_BAR = ['Home', 'Learn', 'Buddhism', 'More', 'AI Tutor', 'Help', 'Account', 'Learning Support']
+
+
+def _top_bar(nav):
+    items = re.findall(r'^    <li[^>]*>\s*<(?:a|button)[^>]*>([^<]+)<', nav, flags=re.M)
+    return [i.strip() for i in items]
+
+
+def test_the_top_bar_items_in_order():
+    nav = _nav(app.test_client().get('/').get_data(as_text=True))
+    assert _top_bar(nav) == TOP_BAR
+
+
+def test_premium_and_monk_mode_are_under_account():
+    nav = _nav(app.test_client().get('/').get_data(as_text=True))
+    account = nav.split('>Account<', 1)[1].split('</li>', 1)[0]
+    assert 'href="/premium"' in account and 'href="/monk-mode"' in account
 
 
 def test_the_retired_menus_are_gone():
