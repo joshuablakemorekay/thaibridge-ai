@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Live lessons interest (private) - Jaiway{% endblock %}
+
+{% block content %}
+{# Developer mode only (live_lessons.private_list). These people asked to be
+   told if live lessons start, and that is the ONLY thing to email them about. #}
+<div class="container">
+    <h1>Live lessons interest (private)</h1>
+
+    {% if not rows %}
+    <p>Nobody has registered yet. The box is on the <a href="/premium#live-lessons">pricing page</a>.</p>
+    {% else %}
+    <p class="ll-summary"><strong>{{ rows|length }} learner{{ 's' if rows|length != 1 }}</strong> interested
+        ({{ paying }} on a paying plan when they registered)
+        &nbsp;·&nbsp;
+        {% for label, n in by_format.items() %}{{ label }}: {{ n }}{{ ' · ' if not loop.last }}{% endfor %}
+    </p>
+    <p>Worth per hour: {% for label, n in by_price.items() %}{{ label }}: {{ n }}{{ ' · ' if not loop.last }}{% endfor %}</p>
+
+    <div class="ll-scroll">
+    <table class="ll-table">
+        <thead>
+            <tr>
+                <th scope="col">Date</th><th scope="col">Lesson type</th><th scope="col">Worth per hour</th><th scope="col">Note</th>
+                <th scope="col">Learner</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for r, username, email in rows %}
+            <tr>
+                <td>{{ r.created_at.strftime('%d %b %Y') }}</td>
+                <td>{{ formats.get(r.lesson_format, r.lesson_format) }}</td>
+                <td>{{ prices.get(r.price_band, '—') }}</td>
+                <td>{{ r.note or '—' }}</td>
+                <td>{{ username }}<br><small>{{ email }} · {{ r.tier_at_signup or '?' }}</small></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .ll-summary { font-size: 1.1rem; }
+    .ll-scroll { overflow-x: auto; }
+    .ll-table { width: 100%; border-collapse: collapse; background: white; }
+    .ll-table th, .ll-table td { padding: 0.6rem; border-bottom: 1px solid #eee; text-align: left; vertical-align: top; }
+    .ll-table td:nth-child(4) { white-space: pre-wrap; min-width: 14rem; }
+</style>
+{% endblock %}

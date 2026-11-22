@@ -429,6 +429,8 @@ progress.init_app(app)
 signup_source.init_app(app)
 import app_reviews  # noqa: E402  (the review prompt on /progress; needs the limiter)
 app_reviews.init_app(app)
+import live_lessons  # noqa: E402  (the live-lessons interest box on /premium; needs the limiter)
+live_lessons.init_app(app)
 import activity  # noqa: E402  (LTV tracking: last active day, Level 3 date, cancel reason)
 activity.init_app(app)
 import security_headers  # noqa: E402  (nosniff, no framing, HSTS on the live site)
@@ -5721,6 +5723,9 @@ def premium():
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
                            basic_ai_daily_limit=BASIC_AI_DAILY_LIMIT,
                            free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,
+                           live_lesson_interest=live_lessons.my_interest(),
+                           live_lesson_formats=live_lessons.FORMATS,
+                           live_lesson_prices=live_lessons.PRICE_BANDS,
                            # Everything the site teaches, locked pages
                            # included. Shown to everyone, signed in or not:
                            # the sections are the argument for the price, and
