@@ -6,6 +6,7 @@ page templates stay about the page:
   * /sitemap.xml — the pages worth finding, so Google does not have to guess
   * /robots.txt  — where crawlers should not bother going, and where the
     sitemap is
+  * /favicon.ico — the round emblem Google shows beside the site name
   * an X-Robots-Tag: noindex header on private pages (progress, checkout,
     login, search results...). A header rather than a meta tag so it covers
     every response under those addresses, including ones that never render
@@ -85,6 +86,14 @@ def robots_txt():
     lines += ['Disallow: ' + p for p in ROBOTS_DISALLOW]
     lines += ['', 'Sitemap: ' + SITE_URL + '/sitemap.xml', '']
     return Response('\n'.join(lines), mimetype='text/plain')
+
+
+@bp.route('/favicon.ico')
+def favicon():
+    # Google and browsers try /favicon.ico before reading the <link> tags. The
+    # 48px emblem is the size Google shows beside the site name in results.
+    # A PNG under an .ico name is fine: browsers go by the content type.
+    return current_app.send_static_file('img/brand/favicon-48.png')
 
 
 def page_dates():

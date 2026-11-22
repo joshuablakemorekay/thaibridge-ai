@@ -194,3 +194,17 @@ def test_sitemap_dates_match_git():
             stale.append('{} (saved {}, changed {})'.format(path, have, date))
     assert not stale, ('Out-of-date sitemap dates — run '
                        'python scripts/update_sitemap_dates.py:\n' + '\n'.join(stale))
+
+
+def test_favicon_ico_serves_the_round_emblem():
+    # Google looks at /favicon.ico for the icon beside the site name.
+    r = app_module.app.test_client().get('/favicon.ico')
+    assert r.status_code == 200
+    assert r.mimetype == 'image/png'
+    assert r.data[:8] == b'\x89PNG\r\n\x1a\n'
+
+
+def test_google_logo_is_the_square_emblem():
+    html = app_module.app.test_client().get('/').get_data(as_text=True)
+    assert '/static/img/brand/emblem.png' in html
+    assert 'sizes="48x48"' in html
