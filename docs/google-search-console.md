@@ -10,9 +10,9 @@ Google to come sooner:
 1. Open https://search.google.com/search-console and make sure you're signed
    in as **joshua@smoald.com**. Chrome tends to open the watmahathat account
    first, so switch with the account picker at the top right.
-2. In the property box at the top left, pick **thaibridge.smoald.com**.
+2. In the property box at the top left, pick **jaiway.smoald.com**.
 3. Click the search bar at the very top ("Inspect any URL").
-4. Paste the full page address, e.g. `https://thaibridge.smoald.com/premium`,
+4. Paste the full page address, e.g. `https://jaiway.smoald.com/premium`,
    and press Enter.
 5. Wait a few seconds for the result.
 6. Click **Request indexing**.
@@ -27,4 +27,4 @@ Google to come sooner:
   **Request indexing**.
 - Google's results usually catch up within a day or two of a request.
 - New public pages are added to the sitemap automatically
-  (`https://thaibridge.smoald.com/sitemap.xml`), so you never need to edit it.
+  (`https://jaiway.smoald.com/sitemap.xml`), so you never need to edit it.

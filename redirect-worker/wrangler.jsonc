@@ -1,0 +1,12 @@
+{
+  "name": "thaibridge-ai-redirect",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "account_id": "709dfa1ba244a9d4e780015aa4ea426c",
+  // Needs the DNS record for thaibridge-ai.smoald.com set to Proxied
+  // (orange cloud), or requests never reach Cloudflare's edge.
+  "routes": [
+    { "pattern": "thaibridge-ai.smoald.com/*", "zone_name": "smoald.com" }
+  ],
+  "workers_dev": false
+}

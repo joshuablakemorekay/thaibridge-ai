@@ -6,6 +6,7 @@ page templates stay about the page:
   * /sitemap.xml — the pages worth finding, so Google does not have to guess
   * /robots.txt  — where crawlers should not bother going, and where the
     sitemap is
+  * /favicon.ico — the round emblem Google shows beside the site name
   * an X-Robots-Tag: noindex header on private pages (progress, checkout,
     login, search results...). A header rather than a meta tag so it covers
     every response under those addresses, including ones that never render
@@ -24,14 +25,15 @@ is a function returning extra public addresses (journal entries, Dhamma talks)
 import json
 import os
 
-from flask import Blueprint, Response, request, url_for
+from flask import Blueprint, Response, current_app, request, url_for
 
 bp = Blueprint('seo', __name__)
 
 # The one public address. Pages can also be reached on the old
-# thaibridge-ai.smoald.com (which 301-redirects) or on Render's own URL; the
-# canonical link tells search engines which one to list.
-SITE_URL = os.environ.get('SITE_URL', 'https://thaibridge.smoald.com').rstrip('/')
+# thaibridge.smoald.com or thaibridge-ai.smoald.com (both 301-redirect)
+# or on Render's own URL; the canonical link tells search engines which
+# one to list.
+SITE_URL = os.environ.get('SITE_URL', 'https://jaiway.smoald.com').rstrip('/')
 
 # Public pages with real content for a logged-out visitor, in rough order of
 # importance. Locked course sections are deliberately NOT here: until they
@@ -84,6 +86,14 @@ def robots_txt():
     lines += ['Disallow: ' + p for p in ROBOTS_DISALLOW]
     lines += ['', 'Sitemap: ' + SITE_URL + '/sitemap.xml', '']
     return Response('\n'.join(lines), mimetype='text/plain')
+
+
+@bp.route('/favicon.ico')
+def favicon():
+    # Google and browsers try /favicon.ico before reading the <link> tags. The
+    # 48px emblem is the size Google shows beside the site name in results.
+    # A PNG under an .ico name is fine: browsers go by the content type.
+    return current_app.send_static_file('img/brand/favicon-48.png')
 
 
 def page_dates():

@@ -10,7 +10,7 @@ The page is deliberately **not linked from the menu**: visitors kept seeing
 
 | Where | Address |
 |---|---|
-| Live site | **https://thaibridge.smoald.com/developer-login** |
+| Live site | **https://jaiway.smoald.com/developer-login** |
 | On your PC (`flask run`) | http://127.0.0.1:5000/developer-login |
 
 Tip: bookmark the live link in your browser.

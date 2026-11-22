@@ -19,7 +19,7 @@ If you just want to *use* the app, start with the root `README.md`. If you want 
 
 Jaiway is a **Flask web app** (Flask is a Python toolkit that turns Python functions
 into web pages) for learning Thai through its culture and Theravada Buddhism. The live
-site is https://thaibridge.smoald.com. `app.py` is still the hub, holding most of the pages
+site is https://jaiway.smoald.com. `app.py` is still the hub, holding most of the pages
 and the billing. Around it sit about 40 smaller modules, each owning one job: accounts,
 access rules, progress, quizzes, the chanting book and so on. Learning content is written
 directly into Python as data, the way you'd fill in a spreadsheet. A Claude-powered tutor
@@ -127,8 +127,8 @@ hook into the app gets an `init_app(app)` function that `app.py` calls once.
 Organised top to bottom roughly like this:
 
 1. **Setup & secrets.** It loads `.env`, creates the Flask app, and *fails fast* if
-   `ANTHROPIC_API_KEY` or `FLASK_SECRET_KEY` is missing. It also redirects the old domain
-   (`thaibridge-ai.smoald.com`) to the new one with a permanent 301.
+   `ANTHROPIC_API_KEY` or `FLASK_SECRET_KEY` is missing. It also redirects the old domains
+   (`thaibridge-ai.smoald.com`, `thaibridge.smoald.com`) to the new one with a permanent 301.
 2. **Database setup.** Postgres when `DATABASE_URL` is set, otherwise SQLite. Two tables are
    defined here: `AiUsage` (one row per AI request) and `Payment` (one row per time money
    moved). Then `db.create_all()` and `ensure_user_columns()` bring any database up to date

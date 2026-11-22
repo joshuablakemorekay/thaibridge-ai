@@ -13,7 +13,7 @@ Each one closes a door the browser would otherwise leave open:
         Nothing on the site frames its own pages, so 'none' costs nothing.
   * Referrer-Policy: strict-origin-when-cross-origin
         When a learner follows a link to another site (Stripe, 12Go, Wikipedia),
-        that site learns only "thaibridge.smoald.com", not the full page address.
+        that site learns only "jaiway.smoald.com", not the full page address.
   * Permissions-Policy
         Turns off browser features the site never uses (camera API, location,
         payment API), so nothing loaded into a page can ask for them. The
