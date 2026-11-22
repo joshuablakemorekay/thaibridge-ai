@@ -254,7 +254,7 @@ PRINT_TITLE = {
 # Kept OUTSIDE the repository, in the chanting book's OneDrive folder, like
 # the cover emblem; with no file the book prints without the page.
 PHOTO = os.path.join(os.path.expanduser('~'), 'OneDrive', 'Documents', 'Documents', 'SMOALD',
-                     'ThaiBridge', 'Digital Chanting Book', 'Photos',
+                     'Jaiway', 'Digital Chanting Book', 'Photos',
                      'Parivasa at Wat Buddhapadipa 2026-07-10.png')
 PHOTO_CAPTION = 'Parivāsa at Wat Buddhapadipa, Wimbledon, 10 July 2026'
 
@@ -562,6 +562,12 @@ def main():
     unknown = sorted(set(SHORT) - {c['id'] for c in chanting.CHANTS})
     if unknown:
         sys.exit(f'chanting_print_short.py has entries for chants that do not exist: {unknown[:5]}')
+
+    # The book still builds without the photo, but it is then shorter and
+    # every later page number moves, so say so rather than drop it quietly.
+    # (2026-11-22: the OneDrive folder was renamed and this went unnoticed.)
+    if not os.path.exists(PHOTO):
+        print(f'WARNING: photo not found, printing without it: {PHOTO}', flush=True)
 
     chrome = find_chrome()
     env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')),

@@ -37,7 +37,7 @@ MM_PER_INCH = 25.4
 # is an emblem, not Jaiway artwork. With no emblem file the cover keeps
 # the drawn Dhamma wheel.
 DEFAULT_EMBLEM = os.path.join(os.path.expanduser('~'), 'OneDrive', 'Documents', 'Documents',
-                              'SMOALD', 'ThaiBridge', 'Digital Chanting Book', 'Cover emblem.png')
+                              'SMOALD', 'Jaiway', 'Digital Chanting Book', 'Cover emblem.png')
 
 
 def spine_width_mm(pages):
