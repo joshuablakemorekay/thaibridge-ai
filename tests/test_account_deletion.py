@@ -200,8 +200,8 @@ def test_progress_asks_a_subscriber_to_cancel_first():
 
 def test_every_table_that_points_at_an_account_is_handled():
     """On Postgres, deleting a user that another row still points at fails.
-    delete_account handles exactly these three tables. A new table with a link
+    delete_account handles exactly these tables. A new table with a link
     to users must be added there (unlink or delete), or this test fails."""
     linked = {table.name for table in db.metadata.tables.values()
               for fk in table.foreign_keys if fk.column.table.name == "users"}
-    assert linked == {"payments", "ai_usage", "app_reviews"}
+    assert linked == {"payments", "ai_usage", "app_reviews", "live_lesson_interest"}

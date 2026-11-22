@@ -263,8 +263,9 @@ def delete_account():
             db.session.execute(update(tables[name])
                                .where(tables[name].c.user_id == uid)
                                .values(user_id=None))
-        db.session.execute(delete(tables['app_reviews'])
-                           .where(tables['app_reviews'].c.user_id == uid))
+        for name in ('app_reviews', 'live_lesson_interest'):
+            db.session.execute(delete(tables[name])
+                               .where(tables[name].c.user_id == uid))
         db.session.delete(user)
         db.session.commit()
     except Exception:

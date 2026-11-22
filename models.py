@@ -198,6 +198,42 @@ class AppReview(db.Model):
     tier_at_review  = db.Column(db.String(20))
 
 
+# ============================================
+# LIVE LESSONS: REGISTERED INTEREST (see live_lessons.py)
+# ============================================
+
+class LiveLessonInterest(db.Model):
+    """A learner saying "I'd like live lessons with a real Thai teacher".
+
+    There are no live lessons yet. This measures demand before anyone is
+    recruited, and it doubles as the waiting list: if lessons do start, these
+    are the people Josh emails first (and the only thing they agreed to be
+    emailed about).
+
+    One row per account (user_id is UNIQUE), so clicking twice never counts
+    twice. "Take me off the list" deletes the row.
+    """
+    __tablename__ = 'live_lesson_interest'
+
+    id         = db.Column(db.Integer, primary_key=True)
+    created_at = db.Column(db.DateTime, default=utcnow, nullable=False, index=True)
+    updated_at = db.Column(db.DateTime, default=utcnow, onupdate=utcnow, nullable=False)
+    user_id    = db.Column(db.Integer, db.ForeignKey('users.id'),
+                           nullable=False, unique=True)
+
+    # 'one_to_one', 'group' or 'either' (see live_lessons.FORMATS). A monthly
+    # group session is far less work to run, so this answer matters.
+    lesson_format = db.Column(db.String(20), nullable=False, default='either')
+    note          = db.Column(db.Text)            # optional, capped in live_lessons.py
+    # What a one-hour lesson would be worth to them (live_lessons.PRICE_BANDS),
+    # or NULL if they skipped it. Wanting lessons only matters if it would
+    # cover a teacher's pay.
+    price_band    = db.Column(db.String(20))
+    # Their plan when they registered, kept as it was AT THE TIME: are the
+    # people asking for a human teacher the ones already paying?
+    tier_at_signup = db.Column(db.String(20))
+
+
 def ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
     exists, so add any missing ones by hand. Idempotent — each ALTER is skipped

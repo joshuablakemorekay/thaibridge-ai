@@ -263,6 +263,78 @@
 </div>
 
 <!-- ============================================================
+     LIVE LESSONS — register interest (live_lessons.py)
+
+     Not an offer: there are no live lessons yet. This measures demand
+     before a teacher is recruited, so the wording must not promise them.
+     ============================================================ -->
+<section id="live-lessons" class="card live-lessons">
+    <h2>Would you like lessons with a real Thai teacher?</h2>
+    <div class="live-lessons-body">
+        <p>
+            We don't offer live lessons yet. If enough learners would like them,
+            we'll look at adding lessons over Zoom with a native Thai teacher.
+            Register your interest and you'll be the first to hear. Nothing is
+            booked or charged, and we'll only email you about this.
+        </p>
+        {% if not current_user.is_authenticated %}
+        <p>
+            <a href="/signup" class="btn btn-saffron">Create a free account</a>
+            or <a href="/login">sign in</a> to register your interest.
+        </p>
+        {% elif live_lesson_interest %}
+        <p class="live-lessons-done">
+            ✓ You're on the list ({{ live_lesson_formats[live_lesson_interest.lesson_format]|lower }}).
+            You'll be the first to hear if live lessons start.
+        </p>
+        <button type="button" class="btn btn-secondary" id="live-lessons-withdraw">Take me off the list</button>
+        <p id="live-lessons-message" class="live-lessons-message" role="alert"></p>
+        {% else %}
+        <form id="live-lessons-form">
+            <fieldset class="live-lessons-formats">
+                <legend>What would suit you?</legend>
+                {% for key, label in live_lesson_formats.items() %}
+                <label>
+                    <input type="radio" name="lesson_format" value="{{ key }}" {{ 'checked' if key == 'either' }}>
+                    {{ label }}
+                </label>
+                {% endfor %}
+            </fieldset>
+            <fieldset class="live-lessons-formats">
+                <legend>What would a one-hour lesson be worth to you? <span class="live-lessons-optional">(optional)</span></legend>
+                {% for key, label in live_lesson_prices.items() %}
+                <label>
+                    <input type="radio" name="price_band" value="{{ key }}">
+                    {{ label }}
+                </label>
+                {% endfor %}
+            </fieldset>
+            <label for="live-lessons-note">Anything you'd want from them? <span class="live-lessons-optional">(optional)</span></label>
+            <textarea id="live-lessons-note" maxlength="500" rows="3"
+                      placeholder="e.g. speaking practice, help with temple Thai, evenings UK time"></textarea>
+            <button type="submit" class="btn btn-saffron" id="live-lessons-send">Register my interest</button>
+            <p id="live-lessons-message" class="live-lessons-message" role="alert"></p>
+        </form>
+        {% endif %}
+    </div>
+</section>
+<script src="{{ static_v('js/pages/live-lessons.js') }}"></script>
+
+<style>
+    .live-lessons { max-width: 640px; margin: 2.5rem auto 0; text-align: center; }
+    .live-lessons h2 { margin-top: 0; color: var(--royal-purple); }
+    .live-lessons p { color: #555; line-height: 1.7; }
+    .live-lessons form { display: flex; flex-direction: column; gap: 0.6rem; text-align: left; }
+    .live-lessons-formats { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+    .live-lessons-formats legend { font-weight: bold; margin-bottom: 0.3rem; }
+    .live-lessons textarea { width: 100%; box-sizing: border-box; padding: 0.6rem; border-radius: 8px; border: 1px solid #ccc; font: inherit; }
+    .live-lessons form .btn { align-self: center; }
+    .live-lessons-optional { color: #888; font-weight: normal; }
+    .live-lessons-done { font-weight: bold; color: #2e7d32; }
+    .live-lessons-message { color: #c0392b; margin: 0; min-height: 1em; }
+</style>
+
+<!-- ============================================================
      GENEROSITY — why the Dhamma, and asking about it, are free
      ============================================================ -->
 <div id="dana" class="card" style="text-align:center; background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); margin-top:2.5rem; border-left: 4px solid var(--saffron);">
