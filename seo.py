@@ -24,14 +24,15 @@ is a function returning extra public addresses (journal entries, Dhamma talks)
 import json
 import os
 
-from flask import Blueprint, Response, request, url_for
+from flask import Blueprint, Response, current_app, request, url_for
 
 bp = Blueprint('seo', __name__)
 
 # The one public address. Pages can also be reached on the old
-# thaibridge-ai.smoald.com (which 301-redirects) or on Render's own URL; the
-# canonical link tells search engines which one to list.
-SITE_URL = os.environ.get('SITE_URL', 'https://thaibridge.smoald.com').rstrip('/')
+# thaibridge.smoald.com or thaibridge-ai.smoald.com (both 301-redirect)
+# or on Render's own URL; the canonical link tells search engines which
+# one to list.
+SITE_URL = os.environ.get('SITE_URL', 'https://jaiway.smoald.com').rstrip('/')
 
 # Public pages with real content for a logged-out visitor, in rough order of
 # importance. Locked course sections are deliberately NOT here: until they

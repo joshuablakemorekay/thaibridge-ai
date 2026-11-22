@@ -125,15 +125,17 @@ app.config.update(
 # ============================================
 # OLD ADDRESS -> NEW ADDRESS
 # ============================================
-# The site moved from thaibridge-ai.smoald.com to thaibridge.smoald.com on
-# 2026-11-08. The old address stays live forever (ads, TikTok links and the
-# printed chanting-book proof all point at it), and this sends anyone who
-# arrives there to the same page on the new address.
+# The site has moved twice: thaibridge-ai.smoald.com -> thaibridge.smoald.com
+# (2026-11-08), then -> jaiway.smoald.com with the Jaiway rebrand
+# (2026-11-22). The old addresses stay live forever (ads, TikTok links and the
+# printed chanting-book proof point at them), and this sends anyone who
+# arrives on one to the same page on the new address. thaibridge-ai is also
+# forwarded by a Cloudflare redirect rule, so for it this is a backstop.
 #
 # Only GET/HEAD are moved. A POST (a form, or a Stripe webhook) can't safely
 # follow a redirect, so those are answered on whichever address they hit.
-OLD_HOSTS = {'thaibridge-ai.smoald.com'}
-NEW_HOST = 'thaibridge.smoald.com'
+OLD_HOSTS = {'thaibridge-ai.smoald.com', 'thaibridge.smoald.com'}
+NEW_HOST = 'jaiway.smoald.com'
 
 
 @app.before_request

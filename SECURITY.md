@@ -123,8 +123,8 @@ Please don't test against other people's accounts or try to access data that isn
 - **The app only redirects to its own pages.** Where it sends someone back to the page
   they came from (after claiming the earned unlock), it checks the address belongs to
   Jaiway first.
-- **The old domain** (`thaibridge-ai.smoald.com`) redirects permanently to
-  `thaibridge.smoald.com`.
+- **The old domains** (`thaibridge-ai.smoald.com` and `thaibridge.smoald.com`) redirect
+  permanently to `jaiway.smoald.com`.
 - **Security headers on every response** (`security_headers.py`): `nosniff` (the browser
   uses the file type it's told), no framing by other sites (`X-Frame-Options: DENY` and
   `frame-ancestors 'none'`, which stops clickjacking), a referrer policy that sends other
@@ -145,7 +145,7 @@ Please don't test against other people's accounts or try to access data that isn
 
 ## Data and privacy
 
-What's kept and why is set out for learners on the [privacy page](https://thaibridge.smoald.com/privacy).
+What's kept and why is set out for learners on the [privacy page](https://jaiway.smoald.com/privacy).
 In short: account details, learning progress, plan and payment records, AI usage counts
 (not content) and, if a learner chooses to leave one, their review.
 
