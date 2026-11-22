@@ -2332,3 +2332,15 @@ main:focus { outline: none; }
         font-size: max(16px, 1em) !important;
     }
 }
+
+/* ============================================
+   SEVEN-ITEM MENU (2026-11-22)
+   Account and Learning Support sit at the right of the top bar, so their
+   dropdowns open leftwards instead of running off the screen edge.
+   ============================================ */
+@media (min-width: 769px) {
+    #main-nav > li.dropdown-right > .dropdown-content {
+        right: 0;
+        left: auto;
+    }
+}
