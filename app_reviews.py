@@ -10,13 +10,21 @@ far they've come. That's a natural moment to ask.
 "Not now" hides the card for REVIEW_SNOOZE_DAYS. Once they've sent a review the
 card is gone for good. Nobody is asked twice.
 
-Nothing collected here appears on the site. Josh reads them at /reviews/private
-(developer mode only). Later, quotes may go on the home or pricing page, but
-only from reviews whose writer ticked "happy for you to show this".
+Josh reads every review at /reviews/private (developer mode only).
+
+The public page, /reviews, switches itself on once PUBLIC_MIN_QUOTES learners
+have ticked "You can show my review". Until then it is a 404 and nothing links
+to it. Once live it shows:
+  * the average and the star counts from EVERY review, low ones included.
+    UK law (DMCC Act 2024) bans showing only the good ones, and an honest
+    average is the point of the page anyway.
+  * the words of ONLY the learners who said yes, every one of them, newest
+    first. No hand-picking: a 2-star review they let us show is shown too.
 
 Like the other modules this never imports app.py. app.py calls init_app(app).
 """
 
+import time
 from datetime import date, timedelta
 
 from flask import Blueprint, abort, jsonify, render_template, request, session
@@ -32,6 +40,8 @@ REVIEW_MIN_LEVEL   = 3     # the same level that earns the free Thai Reader unlo
 REVIEW_SNOOZE_DAYS = 30    # how long "Not now" hides the card
 COMMENT_MAX        = 1000
 NAME_MAX           = 60
+PUBLIC_MIN_QUOTES  = 3     # showable reviews needed before /reviews goes live
+SUMMARY_CACHE_SECS = 600   # the footer link asks on every page, so remember for 10 min
 
 # Saved in the learner's progress (so it follows them to another device):
 # the date they last pressed "Not now", as YYYY-MM-DD.
@@ -110,6 +120,50 @@ def snooze_review():
     return jsonify({'success': True})
 
 
+def _summary(rows_ratings):
+    ratings = list(rows_ratings)
+    return {
+        'total':   len(ratings),
+        'average': round(sum(ratings) / len(ratings), 1) if ratings else None,
+        'counts':  {stars: ratings.count(stars) for stars in range(5, 0, -1)},
+    }
+
+
+_cache = {'at': 0.0, 'value': None}
+
+
+def public_summary():
+    """The headline numbers for the footer link, or None while /reviews is off.
+
+    Remembered for SUMMARY_CACHE_SECS so every page view doesn't query the
+    database. A new review can take up to 10 minutes to change the link.
+    """
+    now = time.monotonic()
+    if _cache['at'] and now - _cache['at'] < SUMMARY_CACHE_SECS:
+        return _cache['value']
+    showable = AppReview.query.filter_by(can_publish=True).count()
+    value = None
+    if showable >= PUBLIC_MIN_QUOTES:
+        value = _summary(r for (r,) in db.session.query(AppReview.rating))
+    _cache.update(at=now, value=value)
+    return value
+
+
+def clear_summary_cache():
+    _cache.update(at=0.0, value=None)
+
+
+@bp.route('/reviews')
+def public_reviews():
+    """What learners say: the honest average, and the quotes they let us show."""
+    shown = (AppReview.query.filter_by(can_publish=True)
+             .order_by(AppReview.created_at.desc()).all())
+    if len(shown) < PUBLIC_MIN_QUOTES:
+        abort(404)
+    summary = _summary(r for (r,) in db.session.query(AppReview.rating))
+    return render_template('reviews.html', shown=shown, **summary)
+
+
 @bp.route('/reviews/private')
 def private_reviews():
     """Every review, newest first, with the average. Developer mode only."""
@@ -127,3 +181,10 @@ def private_reviews():
 
 def init_app(app):
     app.register_blueprint(bp)
+
+    @app.context_processor
+    def _reviews_link():
+        try:
+            return {'reviews_summary': public_summary()}
+        except Exception:   # never let the footer take a page down
+            return {'reviews_summary': None}
