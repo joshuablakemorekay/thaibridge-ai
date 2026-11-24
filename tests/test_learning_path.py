@@ -11,6 +11,8 @@ from datetime import date, timedelta
 
 import pytest
 
+from tests.conftest import fresh_client_past_the_locks
+
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
@@ -193,7 +195,8 @@ def test_every_goal_names_only_real_sections():
 
 @pytest.fixture
 def client():
-    return app.test_client()
+    # The quiz/drill feeds are locked like their pages; see conftest.
+    return fresh_client_past_the_locks()
 
 
 def progress_of(client):

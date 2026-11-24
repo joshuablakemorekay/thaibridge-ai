@@ -49,7 +49,7 @@ from access import (SECTION_REQUIREMENTS, EARNED_UNLOCK_LEVEL, EARNED_UNLOCK_TIE
                     earned_unlock_spent_on, earned_unlock_status, earned_unlock_offer,
                     tier_still_owed, check_section_access)
 from rewards import POINT_REWARDS, DRILL_XP_DAILY_CAP, drill_xp_today, add_xp
-from beginner_mode import apply_beginner_mode, get_vocab_with_mode
+from beginner_mode import apply_beginner_mode
 from questions import issue_question, redeem_question, meaning_options, pay_drill_answer
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
@@ -5057,6 +5057,7 @@ def lessons():
 
 
 @app.route('/lesson/<int:lesson_id>')
+@require_access('lessons')   # same lock as the list: each lesson IS the paid content
 def lesson_detail(lesson_id):
     lesson = next((l for l in LESSONS if l['id'] == lesson_id), None)
     if not lesson:
@@ -5878,14 +5879,10 @@ def sentence_builder_check():
     })
 
 
-@app.route('/api/vocabulary/<category>')
-def get_vocabulary(category):
-    beginner_mode = request.args.get('beginner', 'false').lower() == 'true'
-    if category not in VOCABULARY:
-        return jsonify({'error': 'Invalid category'}), 400
-    
-    vocab = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
-    return jsonify({'category': category, 'vocabulary': vocab, 'count': len(vocab)})
+# /api/vocabulary/<category>, /api/grammar and /api/lessons were removed on
+# 2026-11-24. No page used them, and they handed the full paid vocabulary,
+# grammar guide and lessons to anyone, signed in or not, past every paywall.
+# The pages that show that content all go through @require_access instead.
 
 
 @app.route('/api/categories')
@@ -5905,16 +5902,6 @@ def beginner_convert():
     original = data['text']
     converted = apply_beginner_mode(original)
     return jsonify({'original': original, 'converted': converted, 'changed': original != converted})
-
-
-@app.route('/api/grammar')
-def get_grammar():
-    return jsonify(GRAMMAR)
-
-
-@app.route('/api/lessons')
-def get_lessons():
-    return jsonify({'lessons': LESSONS})
 
 
 @app.route('/api/theravada')
