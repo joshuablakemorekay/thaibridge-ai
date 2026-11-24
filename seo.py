@@ -50,7 +50,7 @@ PUBLIC_PATHS = [
 NOINDEX_PREFIXES = (
     '/progress', '/login', '/logout', '/forgot-password', '/reset-password',
     '/developer-login', '/account-deleted', '/subscribe', '/subscription-',
-    '/addon', '/paypal', '/stripe', '/dana/thanks', '/reviews', '/search',
+    '/addon', '/paypal', '/stripe', '/dana/thanks', '/reviews/private', '/search',
     '/api/', '/set-', '/chat', '/exercise/',
 )
 

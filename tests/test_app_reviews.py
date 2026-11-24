@@ -148,3 +148,69 @@ def test_private_list_shows_every_review_to_the_developer(account):
     page = client_for(is_developer=True).get("/reviews/private")
     assert page.status_code == 200
     assert b"Too hard" in page.data
+
+
+# --- the public page ----------------------------------------------------------
+
+from app_reviews import PUBLIC_MIN_QUOTES, clear_summary_cache
+
+
+@pytest.fixture
+def reviews():
+    """Make reviews from throwaway accounts: reviews([(rating, can_publish, comment), ...])."""
+    made = []
+
+    def make(specs):
+        with app.app_context():
+            for rating, can_publish, comment in specs:
+                tag = uuid.uuid4().hex[:8]
+                u = User(username=f"pub_{tag}", email=f"pub_{tag}@example.com", password_hash="x")
+                db.session.add(u)
+                db.session.flush()
+                db.session.add(AppReview(user_id=u.id, rating=rating, comment=comment,
+                                         can_publish=can_publish))
+                made.append(u.id)
+            db.session.commit()
+        clear_summary_cache()
+
+    yield make
+    with app.app_context():
+        AppReview.query.filter(AppReview.user_id.in_(made)).delete()
+        User.query.filter(User.id.in_(made)).delete()
+        db.session.commit()
+    clear_summary_cache()
+
+
+def visitor():
+    app.config["TESTING"] = True
+    return app.test_client()
+
+
+def test_public_page_is_off_until_enough_people_say_yes(reviews):
+    reviews([(5, True, "Lovely")] * (PUBLIC_MIN_QUOTES - 1) + [(5, False, "Private")])
+    assert visitor().get("/reviews").status_code == 404
+    assert b'href="/reviews"' not in visitor().get("/about").data
+    assert "/reviews" not in visitor().get("/sitemap.xml").get_data(as_text=True)
+
+
+def test_public_page_counts_everyone_but_quotes_only_yeses(reviews):
+    reviews([(5, True, "Great course")] * (PUBLIC_MIN_QUOTES - 1)
+            + [(2, True, "Too fast for me"), (1, False, "Keep this private")])
+    page = visitor().get("/reviews")
+    assert page.status_code == 200
+    text = page.get_data(as_text=True)
+    assert "Too fast for me" in text          # a low rating they let us show is shown
+    assert "Keep this private" not in text    # words only with permission
+    total = PUBLIC_MIN_QUOTES + 1
+    assert f"from {total} learner reviews" in text   # ...but every rating is counted
+
+
+def test_footer_link_and_sitemap_once_live(reviews):
+    reviews([(4, True, None)] * PUBLIC_MIN_QUOTES)
+    assert b'href="/reviews"' in visitor().get("/about").data
+    assert "/reviews</loc>" in visitor().get("/sitemap.xml").get_data(as_text=True)
+    assert "noindex" not in visitor().get("/reviews").headers.get("X-Robots-Tag", "")
+
+
+def test_private_list_is_still_noindexed():
+    assert "noindex" in visitor().get("/reviews/private").headers.get("X-Robots-Tag", "")

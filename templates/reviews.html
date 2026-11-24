@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Reviews - Jaiway{% endblock %}
+{% block description %}What Jaiway learners say: the average rating from every review, and the words of everyone who said we could share them.{% endblock %}
+
+{% block content %}
+{# Rules in app_reviews.py. The numbers count EVERY review, low ones included.
+   The quotes are ALL the reviews whose writers said yes, newest first.
+   Never hand-pick from this list or hide one. #}
+<div class="container rv-page">
+    <h1>What learners say</h1>
+
+    <p class="rv-headline">
+        <span class="rv-stars" aria-hidden="true">{{ '★' * (average|round|int) }}<span class="rv-dim">{{ '★' * (5 - average|round|int) }}</span></span>
+        <strong>{{ average }} out of 5</strong>
+        from {{ total }} learner review{{ 's' if total != 1 }}
+    </p>
+
+    <ul class="rv-counts" aria-label="How the ratings break down">
+        {% for stars, n in counts.items() %}
+        <li>
+            <span class="rv-count-label">{{ stars }} ★</span>
+            <span class="rv-bar"><span style="width: {{ (100 * n / total)|round|int }}%"></span></span>
+            <span class="rv-count-n">{{ n }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p class="rv-note">
+        Learners are asked once they reach Level 3, so they've used Jaiway
+        properly first. The average above counts every review we've received.
+        Below are the words of everyone who said we could share them, low
+        ratings included, newest first. We don't edit them.
+    </p>
+
+    {% for r in shown %}
+    <figure class="rv-quote">
+        <div class="rv-stars" aria-label="{{ r.rating }} out of 5 stars">{{ '★' * r.rating }}<span class="rv-dim">{{ '★' * (5 - r.rating) }}</span></div>
+        {% if r.comment %}<blockquote>{{ r.comment }}</blockquote>{% endif %}
+        <figcaption>{{ r.display_name or 'A Jaiway learner' }} · {{ r.created_at.strftime('%B %Y') }}</figcaption>
+    </figure>
+    {% endfor %}
+</div>
+
+<style>
+    .rv-page { max-width: 720px; }
+    .rv-headline { font-size: 1.2rem; }
+    .rv-stars { color: var(--saffron-text); letter-spacing: 0.1em; }
+    .rv-dim { color: #ccc; }
+    .rv-counts { list-style: none; padding: 0; margin: 1rem 0; max-width: 360px; }
+    .rv-counts li { display: flex; align-items: center; gap: 0.6rem; margin: 0.25rem 0; }
+    .rv-count-label { width: 2.5rem; white-space: nowrap; }
+    .rv-bar { flex: 1; height: 0.6rem; background: #eee; border-radius: 4px; overflow: hidden; }
+    .rv-bar span { display: block; height: 100%; background: var(--saffron-text); }
+    .rv-count-n { width: 2rem; text-align: right; }
+    .rv-note { color: #666; }
+    .rv-quote { background: white; border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .rv-quote blockquote { margin: 0.5rem 0; white-space: pre-wrap; }
+    .rv-quote figcaption { color: #666; font-size: 0.9rem; }
+</style>
+{% endblock %}

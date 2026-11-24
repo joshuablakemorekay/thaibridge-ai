@@ -165,11 +165,10 @@ class User(UserMixin, db.Model):
 class AppReview(db.Model):
     """One learner's review of Jaiway: a star rating and, if they like, a few words.
 
-    Collected PRIVATELY first. Nothing here is shown on the site. Some reviews
-    may later go on the site as quotes, but only ones whose writer ticked
-    can_publish. UK law (DMCC Act 2024) also bans showing only the good ones
-    and hiding the rest, so every rating is kept, low ones included, and never
-    edited.
+    The public /reviews page (app_reviews.py) quotes ONLY reviews whose writer
+    ticked can_publish, but its average counts every rating. UK law (DMCC Act
+    2024) bans showing only the good ones and hiding the rest, so every rating
+    is kept, low ones included, and never edited.
 
     One row per account (user_id is UNIQUE). Sending again updates that row
     instead of adding a second one, so a double-click or a change of heart

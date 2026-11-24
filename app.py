@@ -441,12 +441,22 @@ import json_only  # noqa: E402  (every POST must be JSON, except Stripe's webhoo
 json_only.init_app(app)
 import section_previews  # noqa: E402  (what a locked section teaches, shown on locked.html)
 import seo  # noqa: E402  (sitemap, robots.txt, noindex on private pages, static caching)
+
+
+def _reviews_sitemap_path():
+    # Only once /reviews has switched itself on (see app_reviews.py). Its own
+    # app context because the sitemap list is also read outside a request.
+    with app.app_context():
+        return ['/reviews'] if app_reviews.public_summary() else []
+
+
 # A function, not a list: the journal and Dhamma talks are loaded further down
 # this file, and are read fresh each time the sitemap is asked for.
 seo.init_app(app, dynamic_paths=lambda: (
     [p['path'] for p in section_previews.SECTION_PREVIEWS.values()]
     + ['/journal/' + e['slug'] for e in JOURNAL_ENTRIES if e.get('slug')]
-    + ['/dhamma-talk/' + t['slug'] for t in DHAMMA_TALKS]))
+    + ['/dhamma-talk/' + t['slug'] for t in DHAMMA_TALKS]
+    + _reviews_sitemap_path()))
 
 
 def _go_to(url):
