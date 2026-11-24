@@ -35,8 +35,9 @@ ROUTES_ON_2026_11_18 = [
     '/api/check_answer',
     '/api/complete_alphabet',
     '/api/drill/<kind>',
-    '/api/grammar',
-    '/api/lessons',
+    # /api/grammar, /api/lessons and /api/vocabulary/<category> removed
+    # 2026-11-24 on purpose: unused by any page, and they served paid content
+    # past the paywall (see the note in app.py). JSON only, never a bookmark.
     '/api/listening/<conv_id>',
     '/api/meditation',
     '/api/path/placement',
@@ -50,7 +51,6 @@ ROUTES_ON_2026_11_18 = [
     '/api/sentence-builder/check',
     '/api/theravada',
     '/api/user_stats',
-    '/api/vocabulary/<category>',
     '/bob-buddhism-overview',
     '/bob-fear-article',
     '/bob-writings',

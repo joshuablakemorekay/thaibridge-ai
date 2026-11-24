@@ -120,7 +120,11 @@ def get_quiz(category):
     
     if category not in VOCABULARY:
         return jsonify({'error': f'Invalid category: {category}'}), 400
-    
+    # Same lock as /exercise/<category>. Without it the questions (and the XP
+    # they pay) for every paid topic were open to anyone who knew the address.
+    if not check_section_access(exercise_section(category))[0]:
+        return jsonify({'error': 'This topic is locked.'}), 403
+
     vocab_list = get_vocab_with_mode(VOCABULARY[category], beginner_mode)
 
     if request.args.get('listen', 'false').lower() == 'true':
@@ -214,6 +218,9 @@ def get_drill_question(kind):
     /api/check_answer what the answer had been. Same flaw as the vocabulary
     quiz, so the same fix — the server picks the question and keeps the answer.
     """
+    # Same lock as the Tones & Consonant Classes page the drills live on.
+    if not check_section_access('tones_classes')[0]:
+        return jsonify({'error': 'These drills are locked.'}), 403
     drills = TONES_AND_CLASSES['drills']
 
     if kind == 'classid':

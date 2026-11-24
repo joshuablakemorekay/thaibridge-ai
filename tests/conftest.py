@@ -140,3 +140,25 @@ def client_for(make_client):
         _sign_in(client, existing.login)
         return client
     return _make
+
+
+def fresh_client_past_the_locks():
+    """A brand-new learner (0 XP, free plan) who can still open locked sections.
+
+    For tests about how quizzes and drills behave, not who may take them. Since
+    2026-11-24 the quiz and drill feeds carry the same lock as their pages, so
+    a bare test client is refused. is_developer opens the section locks and
+    changes nothing else: XP, the points multiplier and the daily cap all stay
+    a free learner's, which is what those tests measure.
+    """
+    from progress import init_user_progress
+    from flask import session as flask_session
+    flask_app.config["TESTING"] = True
+    client = flask_app.test_client()
+    with flask_app.test_request_context():
+        init_user_progress()
+        progress = dict(flask_session["user_progress"])
+    progress["is_developer"] = True
+    with client.session_transaction() as s:
+        s["user_progress"] = progress
+    return client
