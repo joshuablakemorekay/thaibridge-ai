@@ -40,7 +40,8 @@ REVIEW_MIN_LEVEL   = 3     # the same level that earns the free Thai Reader unlo
 REVIEW_SNOOZE_DAYS = 30    # how long "Not now" hides the card
 COMMENT_MAX        = 1000
 NAME_MAX           = 60
-PUBLIC_MIN_QUOTES  = 3     # showable reviews needed before /reviews goes live
+PUBLIC_MIN_QUOTES  = 10    # showable reviews needed before /reviews goes live: fewer
+                           # and one low rating swings the average, and the page looks thin
 SUMMARY_CACHE_SECS = 600   # the footer link asks on every page, so remember for 10 min
 
 # Saved in the learner's progress (so it follows them to another device):
