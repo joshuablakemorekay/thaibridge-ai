@@ -5736,6 +5736,7 @@ def premium():
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
                            basic_ai_daily_limit=BASIC_AI_DAILY_LIMIT,
                            free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,
+                           pro_fair_use_daily=PRO_FAIR_USE_DAILY,
                            live_lesson_interest=live_lessons.my_interest(),
                            live_lesson_formats=live_lessons.FORMATS,
                            live_lesson_prices=live_lessons.PRICE_BANDS,
@@ -7276,8 +7277,8 @@ def _ai_chat_gate(tier, mode):
         log_ai_usage('chat', 'blocked_plan', mode=mode)
         if current_user.is_authenticated:
             message = ("The AI tutor is part of the Thai Reader and Pro plans. "
-                       "Everything else on your free account (the lessons, the "
-                       "alphabet, the chanting book, the Dhamma pages) is still yours.")
+                       "Everything else on your free account (the alphabet, "
+                       "Survival Thai, the chanting book, the Dhamma pages) is still yours.")
         else:
             message = ("The AI tutor is part of the Thai Reader and Pro plans. "
                        "Please sign in, or see the plans to get started.")
@@ -7298,8 +7299,8 @@ def _ai_chat_gate(tier, mode):
             return jsonify({
                 'success': False,
                 'gate': 'mode_locked',
-                'message': "This AI mode is a Pro feature. Free and Basic plans "
-                           "include the Tutor and Dhamma modes — upgrade to Pro to "
+                'message': "This AI mode is a Pro feature. Thai Reader "
+                           "includes the Tutor and Dhamma modes — upgrade to Pro to "
                            "unlock Conversation, Culture, the Translator and the "
                            "Exercise Generator.",
             })
