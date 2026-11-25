@@ -38,6 +38,13 @@ class TestItIsActuallyFree:
     def test_the_home_page_points_at_it(self, client):
         assert 'href="/expat2000"' in client.get('/').get_data(as_text=True)
 
+    def test_getting_around_points_at_things_to_do(self, client):
+        # The free Things to do section on the Tour Guide page, so nomads
+        # planning trips can find the train, ferry and activity links.
+        body = client.get('/expat2000').get_data(as_text=True)
+        assert 'href="/tour-guide#things-to-do"' in body
+        assert 'id="things-to-do"' in client.get('/tour-guide').get_data(as_text=True)
+
     def test_it_is_in_the_top_menu_on_every_page(self, client):
         # The top menu lives in base.html, so any other page proves it.
         body = client.get('/survival').get_data(as_text=True)
