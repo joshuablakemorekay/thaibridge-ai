@@ -53,7 +53,7 @@ from urllib.parse import quote, urlencode, urlsplit, urlunsplit, parse_qsl
 # Paste each programme's id here once you are approved. Empty means "not yet".
 AFFILIATES = {
     'getyourguide': {'name': 'GetYourGuide', 'id': 'D6M90TM', 'param': 'partner_id'},
-    'klook':        {'name': 'Klook',        'id': '', 'param': 'aid'},
+    'klook':        {'name': 'Klook',        'id': '145076', 'param': 'aid'},
     '12go':         {'name': '12Go',         'id': '17263196', 'param': 'z'},
     'skyscanner':   {'name': 'Skyscanner',   'id': '', 'param': None},  # Impact tracking link
 }
