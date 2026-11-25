@@ -75,5 +75,24 @@ def counts(since=None, until=None):
     return sorted(rows, key=lambda r: (-r[2], r[0] or '', r[1] or ''))
 
 
+# Short addresses for places a link can't be tapped, like a TikTok caption.
+# Nobody will type a long ?utm_ link by hand, but jaiway.smoald.com/tiktok is
+# easy. Each one forwards to its page WITH the tag, so remember_tag() above
+# picks it up on arrival exactly as it would for an ad link. Point one at a
+# different page by changing its target here.
+SHORT_LINKS = {
+    'tiktok': '/tour-guide?utm_source=tiktok&utm_campaign=caption',
+}
+
+
 def init_app(app):
     app.before_request(remember_tag)
+
+    from flask import redirect
+
+    def short_link(name):
+        return redirect(SHORT_LINKS[name], code=302)
+
+    for name in SHORT_LINKS:
+        app.add_url_rule(f'/{name}', f'short_link_{name}', short_link,
+                         defaults={'name': name})

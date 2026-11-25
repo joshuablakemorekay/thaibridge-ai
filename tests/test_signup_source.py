@@ -86,3 +86,18 @@ def test_counts_groups_by_source_and_campaign():
     with app.app_context():
         rows = signup_source.counts(since=first.created_at)
     assert ("youtube-test-count", "c1", 2) in rows
+
+
+def test_tiktok_short_address_forwards_with_its_tag():
+    # Links in TikTok captions can't be tapped, so the caption gives the
+    # short, typeable jaiway.smoald.com/tiktok instead of a long ?utm_ link.
+    client = app.test_client()
+    response = client.get("/tiktok")
+    assert response.status_code == 302
+    assert response.headers["Location"].endswith(
+        "/tour-guide?utm_source=tiktok&utm_campaign=caption")
+    client.get(response.headers["Location"])
+    client.get("/signup")
+    user = sign_up(client)
+    assert user.signup_source == "tiktok"
+    assert user.signup_campaign == "caption"
